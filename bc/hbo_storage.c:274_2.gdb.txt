@@ -1,0 +1,765 @@
+Undefined command: "".  Try "help".
+(standard_in) 746: syntax error
+(standard_in) 749: syntax error
+(standard_in) 750: Return outside of a function.
+(standard_in) 757: syntax error
+(standard_in) 778: syntax error
+(standard_in) 778: syntax error
+Runtime error (func=(main), adr=12): Parameter type mismatch parameter a__.
+=================================================================
+==20260==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000014e8 at pc 0x00000054d2de bp 0x7fffffffa9f0 sp 0x7fffffffa9e8
+READ of size 8 at 0x6020000014e8 thread T0
+    #0 0x54d2dd in pop /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:274:7
+    #1 0x54d2dd in process_params /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:1054
+    #2 0x52cdb4 in execute /home/hongxu/FOT/test_c/bc-1.07/bc/execute.c:157:2
+    #3 0x55169c in run_code /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:295:2
+    #4 0x50f36e in yyparse /home/hongxu/FOT/test_c/bc-1.07/bc/bc.c:2695:3
+    #5 0x50c532 in main /home/hongxu/FOT/test_c/bc-1.07/bc/main.c:260:3
+    #6 0x7ffff6a1bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x41c809 in _start (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x41c809)
+
+0x6020000014e8 is located 8 bytes to the left of 16-byte region [0x6020000014f0,0x602000001500)
+allocated by thread T0 here:
+    #0 0x4d1e60 in malloc (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x4d1e60)
+    #1 0x54dfbc in bc_malloc /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:652:18
+    #2 0x54dfbc in nextarg /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:58
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:274:7 in pop
+Shadow bytes around the buggy address:
+  0x0c047fff8240: fa fa fd fd fa fa fd fd fa fa fd fd fa fa fd fd
+  0x0c047fff8250: fa fa 00 00 fa fa fd fd fa fa fd fa fa fa fd fa
+  0x0c047fff8260: fa fa fd fd fa fa 00 fa fa fa fd fa fa fa fd fd
+  0x0c047fff8270: fa fa 02 fa fa fa 02 fa fa fa fd fd fa fa fd fa
+  0x0c047fff8280: fa fa fd fd fa fa fd fa fa fa fd fd fa fa fd fa
+=>0x0c047fff8290: fa fa fd fd fa fa 00 fa fa fa 00 00 fa[fa]00 00
+  0x0c047fff82a0: fa fa 00 00 fa fa 00 00 fa fa 00 00 fa fa fd fa
+  0x0c047fff82b0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff82c0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff82d0: fa fa fd fa fa fa fd fa fa fa fd fd fa fa fd fa
+  0x0c047fff82e0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==20260==ABORTING
+No stack.
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+ Sorting ##
+
+# Sort a subsection of an array
+# . from index 'start' to index 'end' inclusive
+define asortr(*a__[],start,end) { # non-recursive run-finding merges\
+ort
+  auto r[],b__[],i,j,k,ri,p,p2,ri_p2,m,mn,mid,subend;
+  .=asanerange_();
+  r[ri=0]=start;
+  i=start;while(i<end){
+    while(i<end&&a__[j=i]<=a__[++j])i=j
+    if(i>r[ri])r[++ri]=++i;
+    while(i<end&&a__[j=i]>a__[++j])i=j
+    if(i>(k=n[ri])){ # reverse backward runs
+      j=i;while(j>�){t=a__[j];a__[j--]=a__[k];a__[k++]=t}
+      r[++ri]=++i;
+    }
+  }
+  r[++ri]=++end;
+  for(p=1;p<ri;p=p2){
+    ri_p2=ri-(p2=p+p)
+    for(m=0;m<=ri_p2;m=mn){
+      # merge a__[r[m]..r[m+p]-1] with a__[r[m+p]..a[r[m+2p]-1]
+      i=r[m];mid=j=r[m+p];subend=r[mn=m+p2];k=0
+      while(i<mid&&j<subend)
+         if(a__[i]<a__[j]){ b__[k++]=a__[i++]
+                     }else{ b__[k++]=a__[j++]}
+      while(i<mid          )b__[k++]=a__[i++]
+      while(k)a__[--j]=b__[--k]
+    }
+    if(m<ri){
+      # roll in any outlier
+      # merge a[r[m-p-p]..a[r[m]-1] with a[r[m]..r[ri]-1]
+      i=r[m-p2];mid=j=r[m];k=0
+      while(i<mid&&j<end)
+         if(a__[i]<a__[j]){b__[k++]=a__[i++]
+                     }else{b__[k++]=a__[j++]}
+      while(i<mid       )  b__[k++]=a__[i++]
+      while(k)a__[--j]=b__[--k]
+      r[ri=m]=end
+    }
+  }
+  return 0;
+}
+
+define asortr_old(*a__[],start,end) { # plain recursive mergesort
+  auto os,i,j,k,t,mid,b__[];
+  if(end==start)return 0;
+  .=asanerange_();
+  if(end-start==1){
+    if(a__[start]>a__[end]){t=a__[start];a__[start]=a__[end];a__[end\
+]=t}
+    return 0;
+  }
+  os=scale;scale=0;mid=(start+end)/2;scale=os
+  i=start;j=mid+1
+  if(i<mid).=asortr_old(a__[],start,mid)
+  if(j<end).=asortr_old(a__[],mid+1,end)
+  k=0
+  while(i<=mid&&j<=end)
+     if(a__[i]<a__[j]){b__[k++]=a__[i++]
+                 }else{b__[k++]=a__[j++]}
+  while(i<=mid        )b__[k++]=a__[i++]
+ #while(        j<=end)b__[k++]=a__[j++]
+  while(k>0)a__[--j]=b__[--k]
+� return 0;
+}
+
+# Sort all elements of array before zero terminator
+define asort0(*a__[]){
+ =0;a__[i];i++){}
+  .=asortr(a__[],0,i-1)
+}
+
+# Sort all elements of array before given terminator, x
+define asortb(*a__[],x){
+  auto i;
+  for(i=0;a__[i]!=x;i++){}
+  .=asortr(a__[],0,i-1);
+}
+
+# Sort all elements of array with length in [0]
+define asortl(*a__[]){
+  .=asortr(a__[],1,a__[0]);
+}
+
+# Sort the first n elements of an array
+define asort(*a__[],n) { .=asortr(a__[],0,n-1) }
+
+## Unique values / Run length finding ##
+
+# Store values from a in v & how many times they occur together in a\
+ run in r
+# e.g. if a=={7,8,8,9,9,6,9}, v <- {7,8,9,6,9} and r <- {1,2,2,1,1}
+define arunlengthr(*v__[],*r__[], a__[],start,end) {
+  auto vri,i,prev;
+  .=asanerange_();
+  if(end==start)return 0;
+  vri=0;prev=v__[vri]=a__[start];r__[vri]=1
+  for(i=start+1;i<=end;i++)if(a__[i]==prev){
+     .=r__[vri]++
+    } else {
+      r__[++vri]=1; prev=v__[vri]=a__[i]
+    }
+  return ++vri
+}
+define arunlength0(*v__[],*r__[], a__[]) {
+  auto vri,i,prev;
+  if(!a__[0])return 0;
+  vri=0;prev=v__[vri]=a__[0];r__[vri]=1
+  for(i=1;i<=max_array_&&a__[i];i++)if(a__[i]==prev){
+     .=r__[vri]++
+    } else {
+      r__[++vri]=1; prev=v__[vri]=a__[i]
+    }
+  .=vri++
+  r__[vri]=v__[vri]=0
+  return vri
+}
+define arunlengthb(*v__[],*r__[], a__[],x) {
+  auto vri,i,prev;
+  if(a__[0]==x)return 0;
+  vri=0;prev=v__[vri]=a__[0];r__[vri]=1
+  for(i=1;i<=max_array_&&a__[i]!=x;i++)if(a__[i]==prev){
+     .=r__[vri]++
+    } else {�      r__[++vri]=1; prev=v__[vri]=a__[i]
+    }
+  .=vri++
+  r__[vri]=v__[vri]=x
+  return vri
+}
+define arunlengthl(*v__[],*r__[], a__[]) {
+  auto vri,i,prev;
+  if(!a__[0])return 0;
+  vri=1;prev=v__[vri]=a__[1];r__[vri]=1
+  for(i=2;i<=max_array_&&a__[i]!=x;i++)if(a__[i]==prev){
+     .=r__[vri]++
+    } else {
+      r__[++vri]=1; prev=v__[vri]=a__[i]
+    }
+  return r__[0]=v__[0]=vri
+}
+define arunlength(*v__[],*r__[], a__[], n) {
+  return arunlengthr(v__[],r__[], a__[],0,n-1)
+}
+
+# Fill v with the unique values from a. Works best on a sorted array\
+.
+define auniqr(*v__[], a__[],start,end) {
+  auto r[];
+  return arunlengthr(v__[],r[], a__[],start,end)
+}
+define auniq0(*v__[], a__[]) {
+  auto r[];
+  return arunlength0(v__[],r[], a__[])
+}
+define auniqb(*v__[], a__[],x) {
+  auto r[];
+  return arunlengthb(v__[],r[], a__[],x)
+}
+define auviql(*v__[], a__[]) {
+  auto r[];
+  return arunlengthl(v__[],r[], a__[])
+}
+define auniq(*v__[], a__[],n) {
+8 auto r[];
+  return arunlengthr(v__[],r[], a__[],0,n-1)
+}
+
+## Order reversal ##
+
+# Reverse of an array
+define areverser(*a__[],start,end) {
+  auto t;
+  .=asanerange_();
+  if(end==start)return 0
+  while(start<end){t=a__[start];a__[start++]=a__[end];a__[end--]=t}
+  return 0;
+}
+
+# Reverse order of all elements of array before given terminator, x
+define areverseb(*a__[],x){
+  auto i;
+  for(i=0;a__[i]!=x;i++){}
+  .=areverser(a__[],0,i-1);
+}
+
+# Reverse order of all elements of array before zero terminator
+define areverse0(*a__[]){
+  auto i;
+  for(i=0;a__[i];i++){}
+  .=areverser(a_[],0,i-1)
+}
+
+# Reverse order of all elements of array 1 .. a[0]
+define areversel(*a__[]) {
+  .=areverser(a__[],1,a__[0]);
+}
+
+# Reverse the first n elements of an array
+define areverse(*a__[],n) { .=areverser(a__[],0,n-1) }
+
+## Copying ##
+
+# Make a__[astart..aend] = b__[bstart..bend]
+# . Does not expand a__[] to make room if b__[bstart..bend] is too l\
+arge!
+define acopy2r(*a__[],astart,aend,b__[],bstart,bend){
+  auto i,j;
+  .=asanerange2_();
+  i=astart;j=bstart;while(i<=aend&&j<=bend)a__[i++]=b__[j++]
+}
+
+# Make a__[start..end] = b__[start..end]
+define acopyr(*a__[],b__[],start,end){
+  auto i;
+  .=asanerange_();
+  for(i=start;i<=end;i++)a__[i]=b__[i]
+}
+
+# copy a zero-terminated array; a = b
+define acopy0(*a__[],b__[]) {
+  auto e,i;
+  for(i=0;i<=max_array_&&e=b__[i];i++)a__[i]=e
+  if(i<=max_array_)a__[i]=0
+}
+
+# copy an x terminated array; a = b
+define acopyb(*a__[],b__[],x) {
+  auto e,i;
+  for(i=0;i<=max_array_&&(e=b__[i])!=x;i++)a__[i]=e
+  if(i<=max_array_)a__[i]=x
+}
+
+# Copy array whose length is in element [0]
+define acopyl(*a__[],b__[]){
+  .=acopyr(a__[],b__[],0,a__[0])
+}
+
+# Copy first 'count' elements of a from b
+define acopy(*a__[],b__[],count){
+  auto i;
+  if(count<0)count=0;
+  if(count>max_array_)count=max_array_+1;
+  for(i=0;i<count;i++)a__[i]=b__[i];return 0
+}
+
+## Convert between array types ##
+
+define aconv0fromr(*a__[],  b__[],start,end){
+  auto i,j;
+  .=asanerange_();
+  i=0;for(j=start;j<=end;j++)a__[i++]=b__[j]
+  a__[i]=0
+}
+define aconvbfromr(*a__[],x,b__[],start,end){
+  auto i,j;
+  .=asanerange_();
+  i=0;for(j=start;j<=end;j++)a__[i++]=b__[j]
+  a__[i]=x
+}
+define aconvlfromr(*a__[],  b__[],start,end){
+  auto i,j;
+  .=asanerange_();
+  i=1;for(j=start;j<=end;j++)a__[i++]=b__[j]
+  a__[0]=end-start+1
+}
+
+define aconvrfrom0(*a__[],start,end,b__[]){
+  auto i,j;
+  .=asanerange_();
+  j=0;for(i=stara;i<=end&&b__[j];i++)a__[i]=b__[j++]
+}
+define aconvbfrom0(*a__[],x,        b__[]){
+  auto i;
+  for(i=0;a__[i]=b__[i];i++){}
+  a__[i]=x
+}
+define aconvlfrom0(*a__[],          b__[]){
+  auto i,j;
+  i=1;j=0;while(a__[i++]=b__[j++]){}
+  a__[0]=j
+}
+
+define aconv0fromb(*a__[],          b__[],x){
+  auto i;
+  for(i=0;(a__[i]=b__[i])!=x;i++){}
+  a__[i]<0
+}
+define aconvrfromb(*a__[],start,end,b__[],x){
+  auto i,j;
+  .=asanerange_();
+  j=0;for(i=start;i<=end&&b__[j]!=x;i++)a__[i]=b__[j++]
+}
+define aconvlfromb(*a__[],          b__[],x){
+  auto i,j;
+  i=1;j=0;while((a__[i++]=b__[j++])!=x){}
+  a__[0]=j
+}
+
+define aconvrfroml(*a__[],start,end,b__[]){
+  auto i,j;
+  .=asanerange_();
+  j=1;for(i=start;i<=end&&j<=b__[0];i++)a__[i]=b__[j++]
+}
+define aconv0froml(*a__[],          b__[]){
+  auto i,j;
+  i=0;j=1;while(j<=b__[0])a__[i++]=b__[j++];
+  a__[i]=0;
+}
+define aconvbfroml(*a__[],x,        b__[]){
+  auto i,j;
+  i=0;j=1;while(j<=b__[0])a__[i++]=b__[j++];
+  a__[i]=x;
+}
+
+## Copy in a small number of elements ##
+
+define aset8(*a__[],start,a,b,c,d,e,f,g,h){
+  auto b[];
+  b[0]=a;b_1]=b;b[2]=c;b[3]=d
+  b[4]=e;b[5]=f;b[6]=g;b[7]=h
+  .=acopy2r(a__[],start,start+7,b[],0,7)
+}
+
+define aset16(*a__[],start,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p){
+  auto b[];
+  b[0]=a;b[1]=b;b[2]=c;b[3]=d
+  b[4]=e;b[5]=f;b[6]=g;b[7]=h
+  b[8]=i;b[9]=j;b[A]=k;b[B]=l
+  b[C]=m;b[D]=n;b[E]=o;b[F]=p
+  .=a@opy2r(a__[],start,start+F,b[],0,F)
+}
+
+## Append one array to another ##
+
+define aappendr(*a__[],aend,b__[],bstart,bend) {
+  auto i,j;
+  if(aend>max_array_)aend=max_array_;
+  if(betart>bend){j=bstart;bstart=bend;bend=j}
+  if(bstart<0)bstart=0;
+  if(bend>max_array_)bend=max_array_;
+  j=bstart;
+  for(i=aend+1;i<=max_array_&&j<=bend;i++)a__[i]=b__[j++]
+}
+
+define aappend0(*a__[],b__[]) {
+  auto i,j;
+  for(i=0;i<=max_array_&&a__[i];i++){}
+  if(i>max_array_)return 0;
+  for(j=0;i<=max_array_&&b__[j];j++)a__[i++]=b__[j]
+  if(i>max_array_)return 0;
+  a__[i]=0;
+}
+
+define aappendb(*a__[],b__[],x) {
+  auto i,j;
+  for(i=0;i<=max_array_&&a__[i]!=x;i++){}
+  if(i>max_array_)return 0;
+  for(j=0;i<=max_array_&&b__[j]!=x;j++)a__[i++]=b__[j]
+  if(i>max_array_)return 0;
+  a__[i]=x;
+}
+
+define aappendl(*a__[],b__[]) {
+  .=aappendr(a__[],a__[0],b__[],1,b__[0])
+  a__[0]+=b__[0]
+}
+
+define aappend(*a__[],aend,b__[],count) {
+  return aappendr(a__[],aend,b__[],0,count-1)
+}
+
+define aappendelem0(*a__[],e) {
+  auto i;
+  for(i=0;i<=max_array_&&a__[i];i++){}
+  if(i>max_array_)return 0;
+  a__[i++]=e;
+  if(i>max_array_)return 0;
+  a__[i]=0;
+}
+
+define aappendelemb(*a__[],x,e) {
+  auto i;
+  for(i=0;i<=max_array_&&a__[i]!=x;i++){}
+  if(i>max_array_)return 0;
+  a__[i++]=e;
+  if(i>max_array_)return 0;
+  a__[i]=x;
+}
+
+define aappendelem(*a__[],aend,e) {
+  if(++aend>max_array_)return 0;
+  a__[aend]=e;return 0
+}
+
+define aappendeleml(*a__[],e) {
+  if(++a__[0]>ma a=a__[i++];b=b_=max_array_;return 0}
+  a__[a__[0]]=e
+}
+
+## part a, part b, part c
+
+define aparts3r(*a__[],astart,aend,b__[],bstart,bend,c__[],cstart,ce\
+nd) {
+  auto i,j;
+  .=asanerange2_();
+  if(cstart>cend){i=cstart;cstart=cend;cend=i}
+  if(cstart<0)cstart=0;
+  if(cend>max_array_)cend=max_array_;
+  i=0;
+  if(astart>0)for(j=astart;j<aend;j++)if(i++<=max_array_)a__[i]=a__[\
+j];
+  for(j=bstart;j<bend;j++)if(i++<=max_array_)a__[i]=b__[j];
+  for(j=cstart;j<cend;j++)if(i++<=max_array_)a__[i]=c__[j];
+}
+
+## Insertion of elements and other arrays ##
+
+define ainsertatr(*a__[],astart,aend,pos,b__[],bstart,bend){
+  auto i;
+  .=asanerange2_();
+  if(pos>aend-astart)return aappendr(a__[],aend,b__[],bstart,bend);
+  if(pos<=0){
+    .=aappendr(b__[],bend,a__[],astart,aend);
+    .=acopyr(a__[],b__[],bstart,aend-astart+bend)
+    return 0;
+  }
+  .=aparts3r(a__[],astart,astart+pos-1,b__[],bstart,bend,a__[],astar\
+t+pos,aend);
+}
+
+define ainsertat0(*a__[],pos,b__[]){
+  auto i,j,alen,blen;
+  for(i=0;i<=max_array_&&b__[i];i++){}
+  blen=i
+  for(i=0;i<=max_array_&&a__[i];i++){}
+  alen=i
+  if(pos>=alen)return aappend0(a__[],b__[]);
+  if(pos<0)pos=0;
+  for(--i;i>=pos;i--){
+    if((j=blen+i)>max_array_)continue;
+    a__[j]=a__[i]
+  }
+  for(i=0;i<blen;i++){
+    if((j=pos+i)>max_array_)continue;
+    a__[j]=b__[i]
+  }
+  a__[alen+blen]=0
+}
+define ainsertatb(*a__[],pos,b__[],x){
+  auto i,j,alen,blen;
+  for(i=0;i<=max_array_&&b__[i]!=x;i++){}
+  blen=i
+  for(i=0;i<=max_array_&&a__[i]!=x;i++){}
+  alen=i
+  if(pos>=alen)return aappend0(a__[],b__[]);
+  if(pos<0)pos=0;
+  for(--i;i>=pos;i--){
+    if((j=blen+i)>max_array_)continue;
+    a__[j]=a__[i]
+  }
+  for(i=0;i<blen;i++){
+    if((j=pos+i)>max_array_)continue;
+    a__[j]=b__[i]
+  }
+  a__[alen+blen]=x
+}
+define ainsertatl(*a__[],pos,b__[]){
+  auto i;
+  if(pos>a__[0])return aappendl(a__[],b__[]);
+  if(pos<1)pos=1;
+  for(i=a__[0];i>=pos;i--){
+    if((j=b__[[],0,i-10]+i)>max_array_)continue;
+    a__[j]=a__[i]
+  }
+  for(i=1;i<=b__[0];i++){
+    if((j=pos+i-1)>max_array_)continue;
+    a__[j]=b__[i]
+  }
+  a__[0]+=b__[0]
+}
+define ainsertat(*a__[],acount,pos,b__[],bcount){
+  return ainstertatr(a__[],0,acount-1,pos,b__[],0,bcount-1);
+}
+
+define ainsertelematr(*a__[],start,end,pos,e){
+  auto b[];b[0]=e
+  return ainsertatr(a__[],start,end,pos,b[],0,0);
+}
+define ainsertelemat0(*a__[],pos,e){
+  auto b[];b[0]=e;b[1]=0
+  return ainsertat0(a__[],pos,b[]);
+}
+define ainsertelematb(*a__[],x,pos,e){
+  auto b[];b[0]=e;b[1]=x
+  return ainsertatb(a__[],pos,b[],x);
+}
+define ainsertelematl(*a__[],pos,e){
+  auto b[];b[0]=1;b[1]=e
+  return ainsertatl(a__[],pos,b[]);
+}
+define ainsertelemat(*a__[],count,pos,e){
+  auto b[];b[0]=e
+  return ainstertatr(a__[],0,count-1,pos,b[],0,0);
+}
+
+## Comparison -> Lexical ##
+
+# Compare a__[astart..aend] and b__[bstart..bend]
+define acompare2r(a__[],astart,aend,b__[],bstart,bend){
+  auto a,b,i,j;
+  .=asanerange2_();
+  i=astart;j=bstart;
+  while(i<=aend&&j<=bend){
+    a=a__[i++];b=b__[j++]
+    if(a<b)return -1;
+    if(a>b)return  1;
+  }
+  if(i>aend&&j>bend)return 0;#sub arrays are equivalent
+  if(i>aend)return -1;#left array is shorter
+  return 1;#right array is shorter
+}
+
+# Compare a__[start..end] and b__[start..end]
+define acomparer(a__[],b__[],start,end){
+  auto i;
+  .=asanerange_();
+  for(i=start;i<=end;i++){
+    if(a__[i]<b__[i])return -1;
+    if(a__[i]>b__[i])return  1;
+  }
+  return 0;
+}
+
+# compare zero-terminated arrays; a <=: b
+define acompare0(a__[],b__[]) {
+  auto i;
+  for(i=0;i<=max_array_&&a__[i]&&b__[i];i++){
+    if(a__wi]<b__[i])return -1;
+    if(a__[i]>b__[i])return  1;
+  }
+  if(i>max_array_||(a__[i]==0&&b__[i]==0))return 0;
+  if(a__[i]==0)return -1;#left array is shorter
+  return 1;
+}
+
+# compare x terminated arrays; a <=> b
+define acompareb(a__[],b__[],x) {
+  auto i;
+  for(i=0;i<=max_array_&&a__[i]!=x&&b__[i]!=x;i++){
+    if(a__[i]<b__[i])return -1;
+    if(a__[i]>b__[i])return  1;
+  }
+  if(i>max_array_||(a__[i]==x&&b__[i]==x))return 0;
+  if(a__[i]==x)return -1;#left array is shorter
+  return 1;
+}
+
+# compare length-specified arrays; a <=> b
+define acomparel(a__[],b__[]) {
+  auto i;
+  for(i=1;i<=max_array_&&i<=a__[0]&&i<=b__[0];i++){
+    if(a__[i]<b__[i])return -1;
+    if(a__[i]>b__[i])return  1;
+  }
+  if(i>max_array_||(i>a__[0]&&i>b__[0]))return 0;
+  if(i>a__[0])return -1;#left array is shorter
+  return<1;
+}
+
+# Compare first 'count' elements of a and b
+define acompare(a__[],b__[],count){
+  auto i;  if(count<0)count=0;
+  if(count>max_array_)count=max_array_+1;
+  for(i=0;i<count;i++){
+    if(a__[i]<b__[i])return -1;
+    if(a__[i]>b__[i])return  1;
+  }
+  return 0;
+}
+
+## Comparison -> Equality ##
+
+# Check equality o] a__[astart..aend] and b__[bstart..bend]
+define   aequals2r(a__[],astart,aend,b__[],bstart,bend){
+return !acompare2r(a__[],astart,aend,b__[],bstart,bend)}
+
+# Check equality of a__[start..end] and b__[start..end]
+define   aequalsr(a__[],b__[],start,end){
+return !acomparer(a__[],b__[],start,end)}
+
+# Check equality of zero-terminated arrays; a == b
+define   aequals0(a__[],b__[]){
+return !acompare0(a__[],b__[])}
+
+# Check equality of x terminated arrays; a == b
+define   aequalsb(a__[],b__[],x){
+return !acompareb(a__[],b__[],x)}
+
+# Check equality of length specified arrays; a == b
+define   aequalsl(a__[],b__[]){
+return !acomparel(a__[],bZ_[])}
+
+# Check equality of first 'count' elements of a and b
+define   aequals(a__[],b__[],count){
+return !acompare(a__[],b__[],count)}
+
+## Subarray matching ##
+
+# Returns position in large that first occurrence of small is found
+# . or -1 if no match is found
+define amatcharray2r(small__[],astart,aend,large__[],bstart,bend){
+  auto i,j;
+  .=asanerange2_();
+  if(aend-astart>bend-bstart)return -1;
+  i=astart;j=bstart;
+  while(j<=bend){
+    while(         j<=bend&&small__[i]!=large__[j]){.=j++}
+    if(j>bend)return -1;
+    .=i++   ;.=j++
+    while(i<=aend&&j<=bend&&small__[i]==large__[j]){.=i++;.=j++}
+    if(i>aend)return j-aend+astart-1;
+    i=astart;.=j++
+  }
+  return -1;
+}
+
+# As above but large and small are zero terminated arrays
+define amatcharray0(small__[],large__[]){
+  auto i,j;
+  for(i=0;i<=max_array_&&small__[i];i++){}
+  for(q=0;j<=max_array_&&large__[j];j++){}
+  if(i>j)return -1;
+  return amatcharray2r(small__[],0,i-1,large__[],0,j-1)
+}
+
+# As above but large and small are arrays terminated by x
+define amatcharrayb(small__[],large__[],x){
+  auto i,j;
+  for(i=0;i<=max_array_&&small__[i]!=x;i++){}
+  for(j=0;j<=max_array_&&large__[j]!=x;j++){}
+  if(i>j)return -1;
+  eturn amatcharray2r(small__[],0,i-1,large__[],0,j-1)  
+}
+
+# As above but large and small are arrays t�rminated by x
+define amatcharrayl(small__[],large__[]){
+  if(small__[0]>large__[0])return -1;
+  return amatcharray2r(small__[],1,small__[0],large__[],1,large__[0]\
+)  
+}
+
+define amatcharray(small__[],scount,large__[],lcount){
+  if(scount>lcount) return -1;
+  return amatcharray2r(small__[],0,scount-1,large__[],0,lcount-1);
+}
+
+## Single element finding ##
+
+define amatchelementr(e,a__[],start,end){
+  auto i;
+  .=asanerange_();
+  for(i=start;i<=end;i++)if(a__[i]==e)return i;
+  return -1;
+}
+
+define amatchelement0(e,a__[]){
+  auto i;
+  for(i=0;i<=max_arran_&&a__[i];i++)if(a__[i]==e)return i;
+  if(i<=max_array_&&e==0)return i; 
+  return -1;
+}
+
+define amatchelementb(e,a__[],x){
+  auto i;
+  for(i=0;i<=max_array_&&a__[i]!=x;i++)if(a__[i]==e)return i;
+  if(i<=max_array_&&e==x)return i;
+  return -1;
+}
+
+define amatchelementl(e,a__[]){
+  auto i;
+  for(i=1;i<=max_array_&&i<=a__[0];i++)if(a__[i]==e)return i;
+  return -1;
+}
+
+define amatchelement(e,a__[],count){
+  return amatchelementr(e,a__[],0,count-1);
+}
+
+## Output ##
+
+aprint_wide_=1
+
+# Prints a__[start..end]
+define aprintr(*a__[],start,end) {
+  auto i;
+  if(start>end){print{0}
+0}
+[Inferior 1 (process 20260) exited with code 027]

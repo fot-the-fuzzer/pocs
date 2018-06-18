@@ -1,0 +1,22 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+(standard_in) 18: syntax error
+(standard_in) 22: syntax error
+(standard_in) 22: illegal character: |
+(standard_in) 22: illegal character: :
+Runtime error (func=(main), adr=11): 
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00000000004ed002 in __sanitizer::internal_strlen(char const*) ()
+#0  0x00000000004ed002 in __sanitizer::internal_strlen(char const*) ()
+#1  0x0000000000476c43 in printf_common(void*, char const*, __va_list_tag*) ()
+#2  0x000000000047769c in vfprintf ()
+#3  0x000000000055526b in rt_error (mesg=<optimized out>) at util.c:788
+#4  0x000000000054c9b3 in process_params (progctr=0x142ee68 <pc>, func=<optimized out>) at storage.c:1047
+#5  0x000000000052cdb5 in execute () at execute.c:157
+#6  0x000000000055169d in run_code () at util.c:295
+#7  0x000000000050f36f in yyparse () at bc.c:2695
+#8  0x000000000050c533 in main (argc=0x1, argv=<optimized out>) at main.c:260

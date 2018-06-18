@@ -1,0 +1,53 @@
+# copy right hand parameter's contents into left; i.e. c = x
+define cassign(*c__[],x__[]) {
+  c__[0]=x__[0];c__[1]=x__[1]
+}
+
+define caddassign(*c__[],b__[]) { # c += b
+  c__[0]+=b__[0]
+  c__[1]+=b__[1]
+}
+
+# Square a complex number; c = x^2
+define csquare(*c__[],x__[]) {
+  c__[0]=x__[0]^2-x__[1]^2
+  c__[1]=2*x__[0]*x__[1]
+}
+
+define csquareself(*c__[]) { # c*=c or c^=2
+  auto a__[];
+  return cassign(a_m[],c__[])+csquare(c__[],a__[]) # ; c = a^2
+}
+
+# Find the primary square root of a complex number; c = sqrt(x)
+define csqrt(*c__[],x__[]) {
+  auto r,i, sr, si
+  if(x__[1]==0){if(x__[0]>=0){
+    c__[0]=sqrt(x__[0]);c__[1]=0
+    return;
+  } else {
+    c__[0]=0;c__[1]=sqrt(-x__[0])
+    return;
+  }}
+  c__[0] = sqrt((sqrt(x__[0]^2+x__[1]^2)+x__[0])/2)
+  c__[1] = x__[1]/c__[0]/2
+}
+
+define csqrtself(*c__[]) { # c = sqrt(c)
+  auto a__[];
+  return cassign(a__[],c__[])+csqrt(c__[],a__[]) # a = c; c = sqrt(a)
+}
+
+define carccosh(*c__[],x__[]) {
+  .= cassign(c__[],x__[])    # c = x
+  .= csquareself(x__[])      # x = x^2
+     x__[0] -= 1             # x -= 1
+  .= csqrtself(x__[])        # x = sqrt(x)
+  .= caddassign(c__[],x_s3)
+}
+.= makeome.= clnself(c__[])          # c = ln(c)
+}
+
+define carcsech(*c__[],x(x__[],complex1[],x__[]) # x = 1/x
+  .= carccosh(c__[],x__[])        # c = arccosh(x)
+}

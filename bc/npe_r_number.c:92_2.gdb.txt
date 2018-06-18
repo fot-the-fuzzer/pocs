@@ -1,0 +1,169 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+(standard_in) 6: illegal character: ^@
+(standard_in) 6: illegal character: ^@
+(standard_in) 6: illegal character: ^D
+(standard_in) 6: illegal character: ^@
+(standard_in) 6: syntax error
+(standard_in) 13: illegal character: \213
+(standard_in) 13: syntax error
+(standard_in) 19: illegal character: \352
+(standard_in) 19: illegal character: \352
+(standard_in) 20: syntax error
+(standard_in) 23: illegal character: ^P
+(standard_in) 23: syntax error
+(standard_in) 43: illegal character: \365
+(standard_in) 43: syntax error
+(standard_in) 43: syntax error
+(standard_in) 46: Return outside of a function.
+Runtime error (func=(main), adr=6): Function or_ not defined.
+(standard_in) 56: syntax error
+(standard_in) 60: Return outside of a function.
+(standard_in) 60: syntax error
+(standard_in) 65: syntax error
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+Runtime warning (func=screen_plot, adr=16): ibase too small, set to 2
+(standard_in) 68: Return outside of a function.
+(standard_in) 68: syntax error
+(standard_in) 74: illegal character: \377
+(standard_in) 74: illegal character: ^@
+(standard_in) 74: illegal character: ^@
+(standard_in) 74: illegal character: ^@
+(standard_in) 74: illegal character: _
+(standard_in) 74: syntax error
+(standard_in) 74: syntax error
+(standard_in) 74: syntax error
+(standard_in) 76: syntax error
+(standard_in) 84: syntax error
+(standard_in) 90: syntax error
+(standard_in) 90: syntax error
+(standard_in) 104: syntax error
+(standard_in) 117: syntax error
+(standard_in) 124: syntax error
+(standard_in) 125: illegal character: ^K
+(standard_in) 129: syntax error
+(standard_in) 130: syntax error
+(standard_in) 131: illegal character: ^V
+(standard_in) 132: syntax error
+(standard_in) 142: syntax error
+(standard_in) 144: illegal character: \320
+(standard_in) 144: illegal character: _
+(standard_in) 147: syntax error
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: illegal character: '
+(standard_in) 155: syntax error
+(standard_in) 165: illegal character: '
+(standard_in) 165: syntax error
+(standard_in) 168: syntax error
+Runtime error (func=(main), adr=36): Parameter number mismatch
+(standard_in) 170: syntax error
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: illegal character: '
+(standard_in) 173: syntax error
+Runtime error (func=(main), adr=13): Array a__ subscript out of bounds.
+(standard_in) 176: Return outside of a function.
+(standard_in) 177: syntax error
+(standard_in) 183: illegal character: '
+(standard_in) 183: syntax error
+(standard_in) 186: syntax error
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0
+0
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000556df6 in bc_free_num (num=0xbebebebebebebebe) at number.c:92
+92	  if (*num == NULL) return;
+#0  0x0000000000556df6 in bc_free_num (num=0xbebebebebebebebe) at number.c:92
+#1  0x00000000005475f8 in store_var (var_name=<optimized out>) at storage.c:461
+#2  0x000000000052a3e9 in execute () at execute.c:339
+#3  0x000000000055169d in run_code () at util.c:295
+#4  0x000000000050f36f in yyparse () at bc.c:2695
+#5  0x000000000050c533 in main (argc=0x1, argv=<optimized out>) at main.c:260

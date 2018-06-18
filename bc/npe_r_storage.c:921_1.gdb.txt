@@ -1,0 +1,61 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+Runtime warning (func=(main), adr=4): ibase too small, set to 2
+Runtime warning (func=(main), adr=6): obase too small, set to 2
+(standard_in) 5: illegal character: \240
+(standard_in) 13: syntax error
+(standard_in) 42: syntax error
+(standard_in) 44: syntax error
+(standard_in) 57: syntax error
+(standard_in) 61: illegal character: ^@
+(standard_in) 62: Return outside of a function.
+(standard_in) 65: syntax error
+(standard_in) 66: Return outside of a function.
+(standard_in) 67: syntax error
+(standard_in) 68: Return outside of a function.
+(standard_in) 69: syntax error
+(standard_in) 109: syntax error
+(standard_in) 117: Return outside of a function.
+(standard_in) 118: syntax error
+(standard_in) 133: syntax error
+(standard_in) 141: syntax error
+(standard_in) 141: syntax error
+(standard_in) 150: Return outside of a function.
+(standard_in) 150: syntax error
+(standard_in) 162: syntax error
+Runtime error (func=cf_new, adr=5): Parameter number mismatch
+(standard_in) 166: Return outside of a function.
+(standard_in) 166: syntax error
+(standard_in) 172: illegal character: ^@
+(standard_in) 172: illegal character: \200
+(standard_in) 177: syntax error
+(standard_in) 191: syntax error
+(standard_in) 229: illegal character: \224
+(standard_in) 229: syntax error
+(standard_in) 229: illegal character: ^X
+(standard_in) 230: illegal character: \177
+(standard_in) 230: illegal character: \377
+(standard_in) 230: syntax error
+(standard_in) 232: syntax error
+(standard_in) 258: illegal character: \200
+(standard_in) 258: illegal character: ^@
+(standard_in) 258: illegal character: ^@
+(standard_in) 258: illegal character: ^@
+(standard_in) 258: syntax error
+(standard_in) 280: syntax error
+(standard_in) 282: syntax error
+Runtime error (func=cf_new, adr=5): Parameter number mismatch
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0
+cfn_new: scale is 1. Poor results likely.
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000054bcdb in pop_vars (list=0x6020000020d0) at storage.c:921
+921		      variables[ix] = v_temp->v_next;
+#0  0x000000000054bcdb in pop_vars (list=0x6020000020d0) at storage.c:921
+#1  0x0000000000530c7f in execute () at execute.c:538
+#2  0x000000000055169d in run_code () at util.c:295
+#3  0x000000000050f36f in yyparse () at bc.c:2695
+#4  0x000000000050c533 in main (argc=0x1, argv=<optimized out>) at main.c:260

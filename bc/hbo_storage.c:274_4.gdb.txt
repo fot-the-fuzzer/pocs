@@ -1,0 +1,63 @@
+Undefined command: "".  Try "help".
+(standard_in) 48: syntax error
+(standard_in) 49: syntax error
+(standard_in) 51: syntax error
+(standard_in) 51: syntax error
+Runtime error (func=carccosh, adr=51): Parameter type mismatch parameter b__.
+=================================================================
+==20759==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000468 at pc 0x00000054d2de bp 0x7fffffffa9f0 sp 0x7fffffffa9e8
+READ of size 8 at 0x602000000468 thread T0
+    #0 0x54d2dd in pop /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:274:7
+    #1 0x54d2dd in process_params /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:1054
+    #2 0x52cdb4 in execute /home/hongxu/FOT/test_c/bc-1.07/bc/execute.c:157:2
+    #3 0x55169c in run_code /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:295:2
+    #4 0x50f36e in yyparse /home/hongxu/FOT/test_c/bc-1.07/bc/bc.c:2695:3
+    #5 0x50c532 in main /home/hongxu/FOT/test_c/bc-1.07/bc/main.c:260:3
+    #6 0x7ffff6a1bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x41c809 in _start (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x41c809)
+
+0x602000000468 is located 8 bytes to the right of 16-byte region [0x602000000450,0x602000000460)
+allocated by thread T0 here:
+    #0 0x4d1e60 in malloc (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x4d1e60)
+    #1 0x54dfbc in bc_malloc /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:652:18
+    #2 0x54dfbc in nextarg /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:58
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:274:7 in pop
+Shadow bytes around the buggy address:
+  0x0c047fff8030: fa fa fd fa fa fa fd fa fa fa 00 fa fa fa 00 00
+  0x0c047fff8040: fa fa 00 00 fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff8050: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff8060: fa fa 00 03 fa fa fd fa fa fa fd fd fa fa 04 fa
+  0x0c047fff8070: fa fa 04 fa fa fa fd fd fa fa fd fa fa fa fd fa
+=>0x0c047fff8080: fa fa 00 03 fa fa 00 00 fa fa 00 00 fa[fa]fd fa
+  0x0c047fff8090: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff80a0: fa fa fd fa fa fa fd fa fa fa 00 fa fa fa fd fa
+  0x0c047fff80b0: fa fa fd fd fa fa fd fa fa fa fd fd fa fa fd fa
+  0x0c047fff80c0: fa fa fd fa fa fa 00 fa fa fa 00 00 fa fa 00 00
+  0x0c047fff80d0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==20759==ABORTING
+No stack.
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 20759) exited with code 027]

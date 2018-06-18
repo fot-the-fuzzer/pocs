@@ -1,0 +1,119 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+warning: /tmp/gdb_target_arch.gdb: No such file or directory
+(standard_in) 4: syntax error
+(standard_in) 8: illegal character: ^\
+(standard_in) 9: illegal character: \200
+(standard_in) 9: illegal character: ^@
+(standard_in) 9: illegal character: ^@
+(standard_in) 9: syntax error
+(standard_in) 9: syntax error
+(standard_in) 9: illegal character: \
+(standard_in) 18: NUL character in string.
+(standard_in) 36: syntax error
+(standard_in) 36: syntax error
+Runtime error (func=makeomega, adr=40): Parameter number mismatch
+(standard_in) 80: illegal character: \205
+(standard_in) 80: syntax error
+(standard_in) 109: NUL character in string.
+(standard_in) 110: illegal character: \
+(standard_in) 179: NUL character in string.
+(standard_in) 188: illegal character: \
+(standard_in) 208: syntax error
+(standard_in) 211: Return outside of a function.
+(standard_in) 215: illegal character: \343
+(standard_in) 216: syntax error
+(standard_in) 218: illegal character: ^]
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 222: illegal character: \234
+(standard_in) 230: illegal character: ^@
+(standard_in) 230: illegal character: ^@
+(standard_in) 230: syntax error
+(standard_in) 231: illegal character: \211
+(standard_in) 231: syntax error
+(standard_in) 231: syntax error
+(standard_in) 241: illegal character: @
+(standard_in) 247: syntax error
+(standard_in) 250: Return outside of a function.
+(standard_in) 255: syntax error
+(standard_in) 255: syntax error
+(standard_in) 255: Return outside of a function.
+(standard_in) 257: Return outside of a function.
+(standard_in) 260: Return outside of a function.
+(standard_in) 262: illegal character: \335
+(standard_in) 262: syntax error
+(standard_in) 264: illegal character: ^W
+(standard_in) 265: Return outside of a function.
+(standard_in) 271: Return outside of a function.
+(standard_in) 278: syntax error
+(standard_in) 278: syntax error
+(standard_in) 278: Return outside of a function.
+(standard_in) 285: syntax error
+(standard_in) 287: Return outside of a function.
+(standard_in) 288: illegal character: \205
+(standard_in) 288: Return outside of a function.
+(standard_in) 290: Return outside of a function.
+(standard_in) 292: Return outside of a function.
+(standard_in) 296: Return outside of a function.
+(standard_in) 298: illegal character: ^P
+(standard_in) 298: syntax error
+Runtime error (func=(main), adr=10): Function retudn not defined.
+(standard_in) 301: syntax error
+(standard_in) 308: syntax error
+(standard_in) 313: syntax error
+(standard_in) 316: syntax error
+(standard_in) 316: illegal character: ^L
+Runtime error (func=fac_store, adr=9): Function fac_sp_ not defined.
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000556df6 in bc_free_num (num=0xbebebebebebebebe) at number.c:92
+92	  if (*num == NULL) return;
+#0  0x0000000000556df6 in bc_free_num (num=0xbebebebebebebebe) at number.c:92
+#1  0x00000000005475f8 in store_var (var_name=<optimized out>) at storage.c:461
+#2  0x000000000052a3e9 in execute () at execute.c:339
+#3  0x000000000055169d in run_code () at util.c:295
+#4  0x000000000050f36f in yyparse () at bc.c:2695
+#5  0x000000000050c533 in main (argc=0x1, argv=<optimized out>) at main.c:260

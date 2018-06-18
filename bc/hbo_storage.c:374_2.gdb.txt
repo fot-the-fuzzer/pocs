@@ -1,0 +1,314 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+grep: /tmp/gdb_info_target: No such file or directory
+warning: /tmp/gdb_target_arch.gdb: No such file or directory
+(standard_in) 13: illegal character: \177
+(standard_in) 13: illegal character: ^@
+(standard_in) 13: syntax error
+Runtime error (func=(main), adr=3): Function e not defined.
+Runtime warning (func=(main), adr=6): ibase too large, set to 36
+(standard_in) 30: syntax error
+(standard_in) 32: syntax error
+(standard_in) 38: illegal character: ^@
+(standard_in) 38: illegal character: ^P
+(standard_in) 42: syntax error
+(standard_in) 42: syntax error
+(standard_in) 46: Return outside of a function.
+(standard_in) 58: illegal character: \202
+(standard_in) 58: syntax error
+(standard_in) 62: syntax error
+(standard_in) 66: syntax error
+(standard_in) 66: illegal character: \207
+(standard_in) 77: illegal character: \177
+(standard_in) 77: illegal character: ^@
+(standard_in) 77: syntax error
+(standard_in) 77: syntax error
+(standard_in) 78: illegal character: \377
+(standard_in) 78: syntax error
+(standard_in) 81: Return outside of a function.
+(standard_in) 84: syntax error
+(standard_in) 84: syntax error
+(standard_in) 91: Return outside of a function.
+(standard_in) 92: syntax error
+(standard_in) 92: syntax error
+(standard_in) 95: Return outside of a function.
+(standard_in) 99: Return outside of a function.
+(standard_in) 102: syntax error
+(standard_in) 102: syntax error
+(standard_in) 103: illegal character: @
+(standard_in) 111: Return outside of a function.
+(standard_in) 112: syntax error
+(standard_in) 112: syntax error
+(standard_in) 112: Return outside of a function.
+(standard_in) 115: syntax error
+(standard_in) 115: syntax error
+(standard_in) 117: illegal character: \200
+(standard_in) 117: illegal character: ^@
+(standard_in) 117: syntax error
+(standard_in) 118: Return outside of a function.
+(standard_in) 120: illegal character: \210
+(standard_in) 120: syntax error
+(standard_in) 124: syntax error
+(standard_in) 124: syntax error
+(standard_in) 129: Return outside of a function.
+(standard_in) 134: syntax error
+(standard_in) 134: illegal character: \200
+(standard_in) 134: syntax error
+(standard_in) 134: Return outside of a function.
+(standard_in) 136: syntax error
+(standard_in) 136: illegal character: `
+(standard_in) 136: syntax error
+(standard_in) 136: illegal character: ^Z
+(standard_in) 136: syntax error
+(standard_in) 137: syntax error
+(standard_in) 137: Return outside of a function.
+(standard_in) 138: syntax error
+(standard_in) 138: syntax error
+(standard_in) 138: Return outside of a function.
+(standard_in) 141: syntax error
+(standard_in) 141: Return outside of a function.
+(standard_in) 143: syntax error
+(standard_in) 143: syntax error
+(standard_in) 143: Return outside of a function.
+(standard_in) 145: syntax error
+(standard_in) 145: syntax error
+(standard_in) 145: illegal character: \332
+(standard_in) 145: syntax error
+(standard_in) 148: syntax error
+(standard_in) 148: syntax error
+(standard_in) 149: syntax error
+(standard_in) 151: syntax error
+(standard_in) 151: syntax error
+(standard_in) 151: Return outside of a function.
+(standard_in) 151: Return outside of a function.
+(standard_in) 154: illegal character: \365
+(standard_in) 154: syntax error
+(standard_in) 154: syntax error
+(standard_in) 154: Return outside of a function.
+(standard_in) 157: syntax error
+(standard_in) 157: syntax error
+(standard_in) 160: Return outside of a function.
+(standard_in) 162: Return outside of a function.
+(standard_in) 163: Return outside of a function.
+(standard_in) 166: syntax error
+(standard_in) 166: syntax error
+(standard_in) 168: syntax error
+(standard_in) 168: syntax error
+(standard_in) 168: Return outside of a function.
+(standard_in) 170: syntax error
+(standard_in) 170: syntax error
+(standard_in) 170: Return outside of a function.
+(standard_in) 172: syntax error
+(standard_in) 172: syntax error
+(standard_in) 172: syntax error
+(standard_in) 175: syntax error
+(standard_in) 175: illegal character: ^@
+(standard_in) 175: illegal character: ^A
+(standard_in) 175: Return outside of a function.
+(standard_in) 177: syntax error
+(standard_in) 177: syntax error
+(standard_in) 177: Return outside of a function.
+(standard_in) 179: syntax error
+(standard_in) 179: syntax error
+(standard_in) 179: illegal character: ^P
+(standard_in) 179: illegal character: ^@
+(standard_in) 179: illegal character: ^@
+(standard_in) 179: illegal character: ^@
+(standard_in) 179: syntax error
+(standard_in) 179: Return outside of a function.
+(standard_in) 182: syntax error
+(standard_in) 182: syntax error
+(standard_in) 182: illegal character: ^A
+(standard_in) 182: syntax error
+(standard_in) 182: illegal character: \217
+(standard_in) 184: syntax error
+(standard_in) 184: syntax error
+(standard_in) 184: Return outside of a function.
+(standard_in) 186: syntax error
+(standard_in) 186: syntax error
+(standard_in) 186: Return outside of a function.
+(standard_in) 189: illegal character: \200
+(standard_in) 189: syntax error
+(standard_in) 189: syntax error
+(standard_in) 189: syntax error
+(standard_in) 191: syntax error
+(standard_in) 191: Return outside of a function.
+(standard_in) 193: syntax error
+(standard_in) 193: syntax error
+(standard_in) 193: Return outside of a function.
+(standard_in) 196: syntax error
+(standard_in) 196: illegal character: \322
+(standard_in) 196: syntax error
+(standard_in) 196: illegal character: \377
+(standard_in) 196: syntax error
+(standard_in) 198: syntax error
+(standard_in) 198: Return outside of a function.
+(standard_in) 200: syntax error
+(standard_in) 200: syntax error
+(standard_in) 200: Return outside of a function.
+(standard_in) 203: syntax error
+(standard_in) 203: syntax error
+(standard_in) 204: syntax error
+(standard_in) 204: syntax error
+(standard_in) 204: syntax error
+(standard_in) 205: syntax error
+(standard_in) 210: Return outside of a function.
+(standard_in) 211: syntax error
+(standard_in) 213: Return outside of a function.
+(standard_in) 215: syntax error
+(standard_in) 215: illegal character: ^S
+(standard_in) 215: syntax error
+(standard_in) 215: illegal character: \377
+(standard_in) 215: illegal character: \177
+(standard_in) 227: Return outside of a function.
+(standard_in) 230: syntax error
+(standard_in) 230: syntax error
+(standard_in) 232: Return outside of a function.
+(standard_in) 233: syntax error
+(standard_in) 235: Return outside of a function.
+(standard_in) 235: Return outside of a function.
+(standard_in) 237: syntax error
+(standard_in) 238: syntax error
+(standard_in) 238: Return outside of a function.
+(standard_in) 241: syntax error
+(standard_in) 241: syntax error
+(standard_in) 243: syntax error
+(standard_in) 243: syntax error
+(standard_in) 247: Return outside of a function.
+(standard_in) 251: syntax error
+(standard_in) 251: syntax error
+(standard_in) 255: Return outside of a function.
+(standard_in) 256: Return outside of a function.
+(standard_in) 258: syntax error
+(standard_in) 258: syntax error
+(standard_in) 261: Return outside of a function.
+(standard_in) 262: Return outside of a function.
+(standard_in) 262: syntax error
+(standard_in) 265: Return outside of a function.
+(standard_in) 266: Return outside of a function.
+(standard_in) 268: Return outside of a function.
+(standard_in) 271: Return outside of a function.
+(standard_in) 273: Return outside of a function.
+(standard_in) 275: syntax error
+(standard_in) 276: syntax error
+(standard_in) 276: syntax error
+(standard_in) 276: Return outside of a function.
+(standard_in) 276: Return outside of a function.
+(standard_in) 277: Return outside of a function.
+(standard_in) 279: syntax error
+(standard_in) 279: syntax error
+(standard_in) 279: syntax error
+(standard_in) 279: illegal character: |
+(standard_in) 279: Return outside of a function.
+(standard_in) 285: Return outside of a function.
+(standard_in) 295: syntax error
+(standard_in) 298: illegal character: \206
+(standard_in) 298: syntax error
+(standard_in) 306: illegal character: \177
+(standard_in) 306: illegal character: \377
+(standard_in) 306: syntax error
+(standard_in) 307: illegal character: \200
+(standard_in) 307: syntax error
+(standard_in) 308: illegal character: \377
+(standard_in) 308: Return outside of a function.
+(standard_in) 308: illegal character: ^X
+(standard_in) 308: syntax error
+(standard_in) 313: illegal character: ^@
+(standard_in) 313: illegal character: \200
+(standard_in) 313: illegal character: _
+(standard_in) 326: illegal character: |
+(standard_in) 327: Return outside of a function.
+(standard_in) 327: syntax error
+(standard_in) 336: syntax error
+(standard_in) 338: illegal character: \207
+(standard_in) 338: syntax error
+(standard_in) 357: illegal character: \377
+(standard_in) 357: illegal character: \177
+(standard_in) 357: illegal character: ^@
+(standard_in) 357: illegal character: ^@
+(standard_in) 362: syntax error
+(standard_in) 362: syntax error
+(standard_in) 366: syntax error
+(standard_in) 366: syntax error
+(standard_in) 369: illegal character: \335
+(standard_in) 369: syntax error
+(standard_in) 371: illegal character: ^W
+(standard_in) 372: illegal character: \201
+(standard_in) 372: syntax error
+(standard_in) 372: syntax error
+(standard_in) 374: illegal character: \377
+(standard_in) 374: illegal character: \377
+(standard_in) 374: syntax error
+(standard_in) 391: syntax error
+(standard_in) 393: syntax error
+(standard_in) 395: Return outside of a function.
+(standard_in) 396: illegal character: \205
+(standard_in) 396: Return outside of a function.
+(standard_in) 398: syntax error
+(standard_in) 398: Return outside of a function.
+(standard_in) 400: Return outside of a function.
+(standard_in) 403: syntax error
+(standard_in) 404: Return outside of a function.
+(standard_in) 406: illegal character: ^P
+(standard_in) 406: syntax error
+Runtime error (func=(main), adr=10): Function retudn not defined.
+(standard_in) 409: syntax error
+(standard_in) 412: syntax error
+=================================================================
+==20264==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000520 at pc 0x0000005473d5 bp 0x7fffffffa8f0 sp 0x7fffffffa8e8
+READ of size 8 at 0x611000000520 thread T0
+    #0 0x5473d4 in get_array_num /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:374:13
+    #1 0x54c4d9 in process_params /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:1021:10
+    #2 0x52cdb4 in execute /home/hongxu/FOT/test_c/bc-1.07/bc/execute.c:157:2
+    #3 0x55169c in run_code /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:295:2
+    #4 0x50f36e in yyparse /home/hongxu/FOT/test_c/bc-1.07/bc/bc.c:2695:3
+    #5 0x50c532 in main /home/hongxu/FOT/test_c/bc-1.07/bc/main.c:260:3
+    #6 0x7ffff6a1bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x41c809 in _start (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x41c809)
+
+0x611000000520 is located 32 bytes to the left of 256-byte region [0x611000000540,0x611000000640)
+allocated by thread T0 here:
+    #0 0x4d1e60 in malloc (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x4d1e60)
+    #1 0x54df1d in bc_malloc /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:652:18
+    #2 0x7ffff6a1bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:374:13 in get_array_num
+Shadow bytes around the buggy address:
+  0x0c227fff8050: fa fa fa fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x0c227fff8060: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c227fff8070: fd fd fd fd fd fd fd fd fa fa fa fa fa fa fa fa
+  0x0c227fff8080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff8090: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c227fff80a0: fa fa fa fa[fa]fa fa fa 00 00 00 00 00 00 00 00
+  0x0c227fff80b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff80c0: 00 00 00 00 00 00 00 00 fa fa fa fa fa fa fa fa
+  0x0c227fff80d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff80e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff80f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==20264==ABORTING
+No stack.
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+ 19
+[Inferior 1 (process 20264) exited with code 027]

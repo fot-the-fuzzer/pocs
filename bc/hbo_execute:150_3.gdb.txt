@@ -1,0 +1,703 @@
+Undefined command: "".  Try "help".
+(standard_in) 13: illegal character: ^A
+(standard_in) 13: syntax error
+(standard_in) 13: syntax error
+(standard_in) 13: syntax error
+(standard_in) 13: Return outside of a function.
+(standard_in) 23: syntax error
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: illegal character: \233
+(standard_in) 29: syntax error
+(standard_in) 30: illegal character: \177
+(standard_in) 30: syntax error
+(standard_in) 31: syntax error
+(standard_in) 32: illegal character: \211
+(standard_in) 32: illegal character: \362
+(standard_in) 32: illegal character: \177
+(standard_in) 32: illegal character: ^@
+(standard_in) 32: illegal character: \177
+(standard_in) 32: illegal character: ^@
+(standard_in) 32: syntax error
+(standard_in) 33: syntax error
+(standard_in) 35: illegal character: \200
+(standard_in) 35: illegal character: \377
+(standard_in) 35: syntax error
+(standard_in) 35: illegal character: ^@
+(standard_in) 35: illegal character: ^D
+(standard_in) 35: illegal character: ^@
+(standard_in) 35: illegal character: ^@
+(standard_in) 35: illegal character: ^@
+(standard_in) 35: syntax error
+(standard_in) 37: Return outside of a function.
+(standard_in) 37: syntax error
+(standard_in) 41: syntax error
+(standard_in) 45: illegal character: ^@
+(standard_in) 45: illegal character: ^@
+(standard_in) 45: illegal character: \364
+(standard_in) 45: illegal character: \364
+(standard_in) 45: illegal character: \200
+(standard_in) 45: illegal character: \377
+(standard_in) 45: syntax error
+(standard_in) 46: illegal character: ^@
+(standard_in) 46: illegal character: ^P
+(standard_in) 46: syntax error
+(standard_in) 46: illegal character: \226
+(standard_in) 46: illegal character: ^G
+(standard_in) 46: illegal character: \232
+(standard_in) 48: illegal character: \307
+(standard_in) 48: illegal character: \272
+(standard_in) 48: syntax error
+Runtime error (func=(main), adr=246): exponent too large in raise
+Runtime error (func=(main), adr=7): Divide by zero
+(standard_in) 57: illegal character: ^R
+(standard_in) 57: syntax error
+(standard_in) 58: illegal character: \177
+(standard_in) 58: syntax error
+(standard_in) 59: syntax error
+(standard_in) 60: illegal character: \211
+(standard_in) 60: syntax error
+(standard_in) 60: syntax error
+(standard_in) 60: illegal character: '
+(standard_in) 62: syntax error
+(standard_in) 66: illegal character: ^@
+(standard_in) 66: illegal character: ^@
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \364
+(standard_in) 66: illegal character: \200
+(standard_in) 66: illegal character: \377
+(standard_in) 66: syntax error
+(standard_in) 67: illegal character: ^@
+(standard_in) 67: illegal character: ^P
+(standard_in) 67: syntax error
+(standard_in) 67: illegal character: ^G
+(standard_in) 67: illegal character: \232
+(standard_in) 69: illegal character: \307
+(standard_in) 69: illegal character: \272
+(standard_in) 69: syntax error
+Runtime error (func=(main), adr=224): exponent too large in raise
+(standard_in) 75: illegal character: \377
+(standard_in) 75: syntax error
+(standard_in) 75: illegal character: \177
+(standard_in) 75: illegal character: ^@
+(standard_in) 75: illegal character: ^@
+(standard_in) 75: illegal character: ^@
+(standard_in) 76: illegal character: \222
+(standard_in) 76: syntax error
+(standard_in) 77: syntax error
+(standard_in) 78: illegal character: ^@
+(standard_in) 78: syntax error
+(standard_in) 79: illegal character: \377
+(standard_in) 79: illegal character: \377
+(standard_in) 79: illegal character: ^@
+(standard_in) 79: illegal character: ^@
+(standard_in) 79: syntax error
+(standard_in) 80: illegal character: ?
+(standard_in) 80: syntax error
+(standard_in) 81: illegal character: ^]
+(standard_in) 81: syntax error
+(standard_in) 84: syntax error
+(standard_in) 85: syntax error
+(standard_in) 86: illegal character: \200
+(standard_in) 86: syntax error
+(standard_in) 87: syntax error
+(standard_in) 88: syntax error
+(standard_in) 88: illegal character: ^@
+(standard_in) 88: illegal character: ^A
+(standard_in) 88: illegal character: ^A
+(standard_in) 89: syntax error
+(standard_in) 90: syntax error
+(standard_in) 94: syntax error
+(standard_in) 94: illegal character: \305
+(standard_in) 94: illegal character: :
+(standard_in) 95: illegal character: :
+(standard_in) 95: syntax error
+(standard_in) 95: illegal character: ^W
+(standard_in) 95: illegal character: ^@
+(standard_in) 95: illegal character: \200
+(standard_in) 95: illegal character: \377
+(standard_in) 95: illegal character: \377
+(standard_in) 95: syntax error
+(standard_in) 96: illegal character: ?
+(standard_in) 98: illegal character: @
+(standard_in) 98: syntax error
+(standard_in) 100: illegal character: \177
+(standard_in) 100: syntax error
+(standard_in) 100: illegal character: ^@
+(standard_in) 100: illegal character: \200
+(standard_in) 100: illegal character: ^@
+(standard_in) 100: illegal character: ^@
+(standard_in) 101: illegal character: ^O
+(standard_in) 101: syntax error
+(standard_in) 103: illegal character: \377
+(standard_in) 103: illegal character: \200
+(standard_in) 103: syntax error
+(standard_in) 103: illegal character: \200
+(standard_in) 106: illegal character: ^P
+(standard_in) 106: syntax error
+(standard_in) 109: illegal character: ^@
+(standard_in) 109: syntax error
+(standard_in) 110: illegal character: ^@
+(standard_in) 110: illegal character: ^B
+(standard_in) 110: illegal character: ^@
+(standard_in) 110: illegal character: ^@
+(standard_in) 110: syntax error
+(standard_in) 112: illegal character: ?
+(standard_in) 114: illegal character: @
+(standard_in) 114: syntax error
+(standard_in) 117: syntax error
+Runtime warning (func=(main), adr=91): ibase too large, set to 36
+(standard_in) 121: illegal character: ^_
+(standard_in) 121: syntax error
+(standard_in) 122: syntax error
+(standard_in) 124: illegal character: ^@
+(standard_in) 124: syntax error
+(standard_in) 125: illegal character: \377
+(standard_in) 125: illegal character: ^@
+(standard_in) 125: illegal character: ^@
+(standard_in) 125: illegal character: ^@
+(standard_in) 125: syntax error
+(standard_in) 126: illegal character: ^@
+(standard_in) 126: illegal character: ^@
+(standard_in) 126: illegal character: ^@
+(standard_in) 126: illegal character: ^@
+(standard_in) 126: syntax error
+(standard_in) 128: illegal character: ^V
+(standard_in) 128: syntax error
+(standard_in) 130: illegal character: ^\
+(standard_in) 130: syntax error
+(standard_in) 130: illegal character: ^P
+(standard_in) 130: illegal character: ^@
+(standard_in) 131: illegal character: ^@
+(standard_in) 131: illegal character: ^@
+(standard_in) 131: illegal character: \377
+(standard_in) 131: illegal character: \377
+(standard_in) 131: syntax error
+(standard_in) 133: syntax error
+(standard_in) 134: syntax error
+(standard_in) 135: illegal character: \355
+(standard_in) 135: syntax error
+(standard_in) 136: illegal character: ^V
+(standard_in) 136: syntax error
+(standard_in) 138: illegal character: ^\
+(standard_in) 138: syntax error
+(standard_in) 138: illegal character: ^P
+(standard_in) 138: illegal character: ^@
+(standard_in) 138: illegal character: $
+(standard_in) 142: illegal character: `
+(standard_in) 142: syntax error
+(standard_in) 142: illegal character: \377
+(standard_in) 143: illegal character: \251
+(standard_in) 143: syntax error
+(standard_in) 144: illegal character: \347
+(standard_in) 144: syntax error
+(standard_in) 145: syntax error
+(standard_in) 147: illegal character: \271
+(standard_in) 147: syntax error
+(standard_in) 147: illegal character: \377
+(standard_in) 147: illegal character: \377
+(standard_in) 152: syntax error
+(standard_in) 152: illegal character: \351
+(standard_in) 154: illegal character: |
+(standard_in) 154: syntax error
+(standard_in) 155: illegal character: ^\
+(standard_in) 155: syntax error
+(standard_in) 156: syntax error
+(standard_in) 156: illegal character: \353
+(standard_in) 156: illegal character: \353
+(standard_in) 156: illegal character: \353
+(standard_in) 156: illegal character: \353
+(standard_in) 156: illegal character: \353
+(standard_in) 156: illegal character: \353
+(standard_in) 156: illegal character: \353
+(standard_in) 156: illegal character: \353
+(standard_in) 156: syntax error
+(standard_in) 157: illegal character: ^P
+(standard_in) 157: syntax error
+(standard_in) 157: illegal character: ^P
+(standard_in) 157: illegal character: ^@
+(standard_in) 158: illegal character: ^[
+(standard_in) 158: syntax error
+(standard_in) 158: illegal character: ^@
+(standard_in) 158: illegal character: ^A
+(standard_in) 160: illegal character: ^@
+(standard_in) 160: illegal character: ^@
+(standard_in) 160: illegal character: ^@
+(standard_in) 160: illegal character: ^A
+(standard_in) 160: syntax error
+(standard_in) 161: syntax error
+(standard_in) 161: illegal character: \377
+Runtime error (func=(main), adr=154): Array pd_ subscript out of bounds.
+(standard_in) 163: illegal character: \200
+(standard_in) 163: syntax error
+(standard_in) 168: illegal character: ^Y
+(standard_in) 168: syntax error
+(standard_in) 171: illegal character: \377
+(standard_in) 171: illegal character: ^@
+(standard_in) 171: illegal character: ^@
+(standard_in) 171: illegal character: ^@
+(standard_in) 171: syntax error
+(standard_in) 174: illegal character: @
+(standard_in) 174: syntax error
+(standard_in) 175: illegal character: ^@
+(standard_in) 175: syntax error
+(standard_in) 176: illegal character: ^@
+(standard_in) 176: illegal character: ^D
+(standard_in) 176: syntax error
+(standard_in) 176: illegal character: \202
+(standard_in) 176: illegal character: ^^
+(standard_in) 178: illegal character: ^A
+(standard_in) 178: syntax error
+(standard_in) 179: illegal character: ^W
+(standard_in) 179: syntax error
+(standard_in) 180: illegal character: \372
+(standard_in) 180: illegal character: ^@
+(standard_in) 180: illegal character: ^@
+(standard_in) 180: illegal character: \372
+(standard_in) 180: syntax error
+(standard_in) 181: illegal character: \
+(standard_in) 181: syntax error
+(standard_in) 182: illegal character: \270
+(standard_in) 182: syntax error
+(standard_in) 183: illegal character: \315
+(standard_in) 183: syntax error
+(standard_in) 191: syntax error
+(standard_in) 194: illegal character: ^W
+(standard_in) 194: syntax error
+(standard_in) 196: syntax error
+(standard_in) 197: illegal character: \377
+(standard_in) 197: illegal character: \177
+(standard_in) 197: illegal character: \377
+(standard_in) 197: illegal character: \377
+(standard_in) 197: syntax error
+(standard_in) 201: syntax error
+(standard_in) 203: illegal character: \177
+(standard_in) 203: syntax error
+(standard_in) 204: illegal character: ^A
+(standard_in) 204: illegal character: ^@
+(standard_in) 204: syntax error
+(standard_in) 205: syntax error
+(standard_in) 206: illegal character: ^\
+(standard_in) 206: syntax error
+(standard_in) 207: illegal character: ^O
+(standard_in) 207: illegal character: ^O
+(standard_in) 207: illegal character: ^O
+(standard_in) 207: illegal character: ^O
+(standard_in) 207: illegal character: ^O
+(standard_in) 207: syntax error
+(standard_in) 209: illegal character: \224
+(standard_in) 209: syntax error
+Runtime error (func=(main), adr=322): Stack error.
+Runtime error (func=(main), adr=7): Divide by zero
+(standard_in) 218: illegal character: ^R
+(standard_in) 218: syntax error
+(standard_in) 219: illegal character: \177
+(standard_in) 219: syntax error
+(standard_in) 220: syntax error
+(standard_in) 221: illegal character: \211
+(standard_in) 221: illegal character: \362
+(standard_in) 221: illegal character: \177
+(standard_in) 221: illegal character: ^@
+(standard_in) 222: illegal character: \211
+(standard_in) 222: illegal character: \362
+(standard_in) 222: illegal character: \177
+(standard_in) 222: illegal character: ^@
+(standard_in) 222: syntax error
+(standard_in) 223: syntax error
+(standard_in) 225: illegal character: \200
+(standard_in) 225: illegal character: \377
+(standard_in) 225: syntax error
+(standard_in) 225: illegal character: ^@
+(standard_in) 225: illegal character: ^D
+(standard_in) 226: syntax error
+(standard_in) 226: syntax error
+(standard_in) 228: syntax error
+(standard_in) 230: illegal character: \224
+(standard_in) 230: syntax error
+Runtime error (func=(main), adr=322): Stack error.
+Runtime error (func=(main), adr=7): Divide by zero
+(standard_in) 239: illegal character: ^R
+(standard_in) 239: syntax error
+(standard_in) 240: illegal character: \177
+(standard_in) 240: syntax error
+(standard_in) 241: syntax error
+(standard_in) 242: illegal character: \211
+(standard_in) 242: illegal character: \362
+(standard_in) 242: illegal character: \177
+(standard_in) 242: illegal character: ^@
+(standard_in) 243: illegal character: \211
+(standard_in) 243: illegal character: \362
+(standard_in) 243: illegal character: \177
+(standard_in) 243: illegal character: ^@
+(standard_in) 243: syntax error
+(standard_in) 244: syntax error
+(standard_in) 246: illegal character: \200
+(standard_in) 246: illegal character: \377
+(standard_in) 246: syntax error
+(standard_in) 246: illegal character: ^@
+(standard_in) 246: illegal character: ^D
+(standard_in) 247: syntax error
+(standard_in) 247: syntax error
+(standard_in) 249: syntax error
+(standard_in) 250: illegal character: ^@
+(standard_in) 250: illegal character: ^@
+(standard_in) 250: illegal character: ^@
+(standard_in) 250: illegal character: \377
+(standard_in) 250: syntax error
+(standard_in) 251: illegal character: ^@
+(standard_in) 251: syntax error
+(standard_in) 252: illegal character: ^M
+(standard_in) 252: syntax error
+(standard_in) 252: illegal character: \321
+(standard_in) 252: illegal character: ^Q
+(standard_in) 255: syntax error
+(standard_in) 255: illegal character: \350
+(standard_in) 255: illegal character: ^C
+(standard_in) 256: illegal character: \177
+(standard_in) 256: illegal character: \377
+(standard_in) 256: syntax error
+(standard_in) 257: illegal character: \266
+(standard_in) 257: syntax error
+(standard_in) 257: illegal character: ^B
+(standard_in) 257: illegal character: ^@
+(standard_in) 257: illegal character: ^P
+(standard_in) 258: illegal character: \200
+(standard_in) 258: illegal character: \377
+(standard_in) 258: syntax error
+(standard_in) 264: illegal character: @
+(standard_in) 264: syntax error
+(standard_in) 265: syntax error
+(standard_in) 265: illegal character: \177
+(standard_in) 265: illegal character: \377
+(standard_in) 265: syntax error
+(standard_in) 267: illegal character: \377
+(standard_in) 267: syntax error
+(standard_in) 269: syntax error
+(standard_in) 278: syntax error
+(standard_in) 279: syntax error
+(standard_in) 281: syntax error
+(standard_in) 283: illegal character: ^\
+(standard_in) 283: syntax error
+(standard_in) 284: illegal character: ^O
+(standard_in) 284: illegal character: ^O
+(standard_in) 284: illegal character: ^O
+(standard_in) 284: illegal character: ^O
+(standard_in) 284: illegal character: ^O
+(standard_in) 284: syntax error
+(standard_in) 286: illegal character: \224
+(standard_in) 286: syntax error
+(standard_in) 290: syntax error
+(standard_in) 291: syntax error
+(standard_in) 292: illegal character: \211
+(standard_in) 292: illegal character: \362
+(standard_in) 292: illegal character: \177
+(standard_in) 292: illegal character: ^@
+(standard_in) 292: syntax error
+(standard_in) 293: syntax error
+(standard_in) 295: illegal character: \200
+(standard_in) 295: illegal character: \377
+(standard_in) 295: syntax error
+(standard_in) 295: illegal character: ^@
+(standard_in) 295: illegal character: ^D
+(standard_in) 296: syntax error
+(standard_in) 296: syntax error
+(standard_in) 297: illegal character: ^X
+(standard_in) 297: syntax error
+(standard_in) 298: illegal character: ^Y
+(standard_in) 298: syntax error
+(standard_in) 299: syntax error
+(standard_in) 474: illegal character: :
+(standard_in) 474: syntax error
+(standard_in) 475: illegal character: ^@
+(standard_in) 475: syntax error
+(standard_in) 476: syntax error
+(standard_in) 476: illegal character: \305
+(standard_in) 476: illegal character: :
+(standard_in) 477: illegal character: :
+(standard_in) 477: syntax error
+(standard_in) 477: illegal character: ^W
+(standard_in) 477: illegal character: ^@
+(standard_in) 477: illegal character: \200
+(standard_in) 477: illegal character: \377
+(standard_in) 477: illegal character: \377
+(standard_in) 477: syntax error
+(standard_in) 478: illegal character: ?
+(standard_in) 480: illegal character: ^@
+(standard_in) 480: illegal character: ^D
+(standard_in) 480: illegal character: ^@
+(standard_in) 480: illegal character: ^@
+(standard_in) 480: syntax error
+(standard_in) 481: illegal character: ^\
+(standard_in) 481: syntax error
+(standard_in) 482: illegal character: ^O
+(standard_in) 482: illegal character: ^O
+(standard_in) 482: illegal character: ^O
+(standard_in) 482: illegal character: ^O
+(standard_in) 482: illegal character: ^O
+(standard_in) 482: syntax error
+(standard_in) 484: illegal character: \224
+(standard_in) 484: syntax error
+(standard_in) 486: syntax error
+(standard_in) 489: syntax error
+Runtime error (func=(main), adr=7): Divide by zero
+(standard_in) 493: illegal character: ^R
+(standard_in) 493: syntax error
+(standard_in) 494: illegal character: \177
+(standard_in) 494: syntax error
+(standard_in) 495: syntax error
+(standard_in) 496: illegal character: \211
+(standard_in) 496: illegal character: \362
+(standard_in) 496: illegal character: \177
+(standard_in) 496: illegal character: ^@
+(standard_in) 496: syntax error
+(standard_in) 496: illegal character: \362
+(standard_in) 496: illegal character: \177
+(standard_in) 496: illegal character: ^@
+(standard_in) 497: syntax error
+(standard_in) 499: illegal character: \200
+(standard_in) 499: illegal character: \377
+(standard_in) 499: syntax error
+(standard_in) 499: illegal character: ^@
+(standard_in) 499: illegal character: ^D
+(standard_in) 500: syntax error
+(standard_in) 500: syntax error
+(standard_in) 502: illegal character: @
+(standard_in) 502: syntax error
+(standard_in) 504: illegal character: \177
+(standard_in) 504: syntax error
+(standard_in) 504: illegal character: ^@
+(standard_in) 504: illegal character: \200
+(standard_in) 504: illegal character: ^@
+(standard_in) 504: illegal character: ^@
+(standard_in) 505: illegal character: ^O
+(standard_in) 505: syntax error
+(standard_in) 507: illegal character: \200
+(standard_in) 507: syntax error
+(standard_in) 514: NUL character in string.
+(standard_in) 514: syntax error
+(standard_in) 516: illegal character: \361
+(standard_in) 516: syntax error
+(standard_in) 516: illegal character: ^P
+(standard_in) 517: illegal character: \357
+(standard_in) 517: syntax error
+(standard_in) 517: illegal character: \377
+(standard_in) 517: illegal character: \177
+(standard_in) 517: illegal character: ^@
+(standard_in) 518: illegal character: ^H
+(standard_in) 519: syntax error
+(standard_in) 520: illegal character: ^^
+(standard_in) 520: syntax error
+(standard_in) 520: illegal character: ^@
+(standard_in) 520: illegal character: ^@
+(standard_in) 521: illegal character: ^@
+(standard_in) 521: illegal character: @
+(standard_in) 521: syntax error
+(standard_in) 522: illegal character: ^A
+(standard_in) 522: syntax error
+(standard_in) 524: syntax error
+Runtime warning (func=(main), adr=91): ibase too large, set to 36
+(standard_in) 529: syntax error
+(standard_in) 530: illegal character: ^W
+(standard_in) 530: syntax error
+(standard_in) 531: illegal character: ^@
+(standard_in) 531: syntax error
+(standard_in) 531: illegal character: \377
+(standard_in) 531: illegal character: \377
+(standard_in) 531: illegal character: ^@
+(standard_in) 531: illegal character: ^@
+(standard_in) 532: syntax error
+(standard_in) 534: illegal character: ^V
+(standard_in) 534: syntax error
+(standard_in) 534: illegal character: ^V
+(standard_in) 536: syntax error
+(standard_in) 536: illegal character: ^\
+(standard_in) 536: illegal character: ^P
+(standard_in) 536: illegal character: ^@
+(standard_in) 537: illegal character: ^@
+(standard_in) 537: illegal character: ^@
+(standard_in) 537: illegal character: \377
+(standard_in) 537: illegal character: \377
+(standard_in) 537: syntax error
+(standard_in) 539: syntax error
+(standard_in) 540: syntax error
+(standard_in) 542: illegal character: "
+(standard_in) 542: syntax error
+(standard_in) 542: illegal character: ^V
+(standard_in) 544: illegal character: \200
+(standard_in) 544: syntax error
+(standard_in) 544: illegal character: ^\
+(standard_in) 544: illegal character: ^P
+(standard_in) 544: illegal character: ^@
+(standard_in) 544: illegal character: $
+(standard_in) 548: illegal character: `
+(standard_in) 548: syntax error
+(standard_in) 548: illegal character: \377
+(standard_in) 549: illegal character: \251
+(standard_in) 549: syntax error
+(standard_in) 551: illegal character: \271
+(standard_in) 551: syntax error
+(standard_in) 551: illegal character: \377
+(standard_in) 551: illegal character: \377
+(standard_in) 557: syntax error
+(standard_in) 559: illegal character: ^\
+(standard_in) 559: syntax error
+(standard_in) 560: syntax error
+(standard_in) 560: illegal character: \353
+(standard_in) 560: illegal character: \353
+(standard_in) 560: illegal character: \353
+(standard_in) 560: illegal character: \353
+(standard_in) 560: illegal character: \353
+(standard_in) 560: illegal character: \353
+(standard_in) 560: illegal character: \353
+(standard_in) 560: illegal character: \353
+(standard_in) 560: syntax error
+(standard_in) 561: illegal character: ^P
+(standard_in) 561: syntax error
+(standard_in) 561: illegal character: ^P
+(standard_in) 561: illegal character: ^@
+(standard_in) 561: illegal character: ^@
+(standard_in) 562: illegal character: ^[
+(standard_in) 562: syntax error
+(standard_in) 564: illegal character: ^@
+(standard_in) 564: illegal character: ^@
+(standard_in) 564: illegal character: ^@
+(standard_in) 564: illegal character: ^A
+(standard_in) 564: syntax error
+(standard_in) 565: syntax error
+(standard_in) 565: illegal character: \377
+Runtime error (func=(main), adr=154): Array pd_ subscript out of bounds.
+(standard_in) 567: illegal character: \372
+(standard_in) 567: illegal character: ^@
+(standard_in) 567: illegal character: ^@
+(standard_in) 567: illegal character: \372
+(standard_in) 567: syntax error
+(standard_in) 568: illegal character: \200
+(standard_in) 568: syntax error
+(standard_in) 571: illegal character: ^X
+(standard_in) 571: syntax error
+(standard_in) 573: illegal character: ^Y
+(standard_in) 573: syntax error
+(standard_in) 576: illegal character: \377
+(standard_in) 576: illegal character: ^@
+(standard_in) 576: illegal character: ^@
+(standard_in) 576: illegal character: ^@
+(standard_in) 576: syntax error
+(standard_in) 578: illegal character: ^Q
+(standard_in) 578: syntax error
+(standard_in) 579: illegal character: @
+(standard_in) 579: syntax error
+(standard_in) 580: illegal character: ^@
+(standard_in) 580: syntax error
+(standard_in) 581: illegal character: ^@
+(standard_in) 581: illegal character: ^D
+(standard_in) 581: syntax error
+(standard_in) 582: illegal character: ^P
+(standard_in) 582: syntax error
+(standard_in) 586: illegal character: \
+(standard_in) 586: syntax error
+(standard_in) 588: illegal character: ^X
+(standard_in) 588: illegal character: \315
+(standard_in) 588: syntax error
+(standard_in) 596: syntax error
+(standard_in) 601: syntax error
+(standard_in) 602: illegal character: \377
+(standard_in) 602: illegal character: \177
+(standard_in) 602: illegal character: \377
+(standard_in) 602: illegal character: \377
+(standard_in) 602: syntax error
+Runtime error (func=(main), adr=138): Array pd_ subscript out of bounds.
+(standard_in) 605: syntax error
+(standard_in) 607: illegal character: \177
+(standard_in) 607: syntax error
+(standard_in) 608: illegal character: \350
+(standard_in) 608: illegal character: ^C
+(standard_in) 608: syntax error
+(standard_in) 609: syntax error
+=================================================================
+==20591==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61c0000009b0 at pc 0x000000532fc5 bp 0x7fffffffaa50 sp 0x7fffffffaa48
+READ of size 1 at 0x61c0000009b0 thread T0
+    #0 0x532fc4 in execute /home/hongxu/FOT/test_c/bc-1.07/bc/execute.c:150:27
+    #1 0x55169c in run_code /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:295:2
+    #2 0x50f36e in yyparse /home/hongxu/FOT/test_c/bc-1.07/bc/bc.c:2695:3
+    #3 0x50c532 in main /home/hongxu/FOT/test_c/bc-1.07/bc/main.c:260:3
+    #4 0x7ffff6a1bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #5 0x41c809 in _start (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x41c809)
+
+Address 0x61c0000009b0 is a wild pointer.
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/test_c/bc-1.07/bc/execute.c:150:27 in execute
+Shadow bytes around the buggy address:
+  0x0c387fff80e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c387fff80f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8110: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8120: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c387fff8130: fa fa fa fa fa fa[fa]fa fa fa fa fa fa fa fa fa
+  0x0c387fff8140: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8150: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8160: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8170: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==20591==ABORTING
+No stack.
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+1
+0
+67832970912298385536904142967167341196171699267861003795940624871081\
+291
+0
+[Inferior 1 (process 20591) exited with code 027]

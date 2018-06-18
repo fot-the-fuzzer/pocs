@@ -1,0 +1,4166 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+grep: /tmp/gdb_info_target: No such file or directory
+warning: /tmp/gdb_target_arch.gdb: No such file or directory
+Runtime error (func=(main), adr=7): Divide by zero
+(standard_in) 6: illegal character: ^R
+(standard_in) 6: syntax error
+(standard_in) 7: illegal character: \177
+(standard_in) 7: syntax error
+(standard_in) 8: syntax error
+(standard_in) 9: illegal character: \211
+(standard_in) 9: illegal character: \362
+(standard_in) 9: illegal character: \177
+(standard_in) 9: illegal character: ^@
+(standard_in) 9: syntax error
+(standard_in) 10: syntax error
+(standard_in) 12: illegal character: \200
+(standard_in) 12: illegal character: \377
+(standard_in) 12: syntax error
+(standard_in) 12: illegal character: ^@
+(standard_in) 12: illegal character: ^D
+(standard_in) 13: syntax error
+(standard_in) 14: Return outside of a function.
+(standard_in) 14: syntax error
+(standard_in) 18: syntax error
+(standard_in) 22: syntax error
+(standard_in) 23: illegal character: ^@
+(standard_in) 24: syntax error
+(standard_in) 25: syntax error
+(standard_in) 25: syntax error
+(standard_in) 29: syntax error
+(standard_in) 29: illegal character: $
+(standard_in) 30: illegal character: \377
+(standard_in) 30: illegal character: \377
+(standard_in) 31: syntax error
+(standard_in) 31: illegal character: \361
+(standard_in) 31: illegal character: ^B
+(standard_in) 31: illegal character: ^@
+(standard_in) 31: syntax error
+(standard_in) 31: NUL character in string.
+(standard_in) 31: syntax error
+(standard_in) 32: NUL character in string.
+(standard_in) 34: NUL character in string.
+(standard_in) 44: illegal character: |
+(standard_in) 45: syntax error
+(standard_in) 45: illegal character: \215
+(standard_in) 46: Return outside of a function.
+(standard_in) 46: syntax error
+(standard_in) 49: syntax error
+(standard_in) 49: illegal character: ^A
+(standard_in) 49: illegal character: ^@
+(standard_in) 49: syntax error
+(standard_in) 50: syntax error
+(standard_in) 52: illegal character: \370
+(standard_in) 52: illegal character: ^_
+(standard_in) 52: syntax error
+(standard_in) 54: syntax error
+(standard_in) 56: syntax error
+(standard_in) 59: syntax error
+(standard_in) 60: illegal character: |
+(standard_in) 63: illegal character: |
+(standard_in) 66: syntax error
+(standard_in) 66: illegal character: \377
+(standard_in) 66: illegal character: \177
+(standard_in) 67: syntax error
+(standard_in) 68: syntax error
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: illegal character: \246
+(standard_in) 69: syntax error
+(standard_in) 69: illegal character: '
+(standard_in) 69: illegal character: '
+(standard_in) 69: syntax error
+(standard_in) 69: illegal character: '
+(standard_in) 71: syntax error
+(standard_in) 75: syntax error
+(standard_in) 76: illegal character: ^@
+(standard_in) 77: syntax error
+(standard_in) 79: syntax error
+(standard_in) 79: illegal character: \353
+(standard_in) 79: illegal character: \353
+(standard_in) 79: illegal character: \353
+(standard_in) 79: illegal character: \353
+(standard_in) 79: illegal character: \353
+(standard_in) 79: illegal character: \353
+(standard_in) 79: illegal character: \353
+(standard_in) 79: illegal character: \353
+(standard_in) 79: syntax error
+(standard_in) 80: syntax error
+(standard_in) 81: illegal character: \177
+(standard_in) 81: syntax error
+(standard_in) 82: syntax error
+(standard_in) 83: illegal character: \211
+(standard_in) 83: illegal character: \362
+(standard_in) 83: illegal character: \177
+(standard_in) 83: illegal character: ^@
+(standard_in) 83: syntax error
+(standard_in) 84: syntax error
+(standard_in) 88: Return outside of a function.
+(standard_in) 89: Return outside of a function.
+(standard_in) 92: syntax error
+(standard_in) 92: syntax error
+(standard_in) 92: Return outside of a function.
+(standard_in) 94: syntax error
+(standard_in) 94: syntax error
+(standard_in) 107: NUL character in string.
+(standard_in) 112: syntax error
+(standard_in) 112: illegal character: ^P
+(standard_in) 112: illegal character: ^@
+(standard_in) 112: illegal character: ^@
+(standard_in) 112: illegal character: ^@
+(standard_in) 113: illegal character: ^@
+(standard_in) 113: syntax error
+(standard_in) 114: syntax error
+(standard_in) 116: syntax error
+(standard_in) 118: illegal character: ^@
+(standard_in) 118: illegal character: ^@
+(standard_in) 118: illegal character: ^D
+(standard_in) 118: illegal character: ^@
+(standard_in) 118: syntax error
+Runtime error (func=(main), adr=7): Divide by zero
+(standard_in) 127: illegal character: ^R
+(standard_in) 127: syntax error
+(standard_in) 128: illegal character: \177
+(standard_in) 128: syntax error
+(standard_in) 129: syntax error
+(standard_in) 130: illegal character: \211
+(standard_in) 130: illegal character: \362
+(standard_in) 130: illegal character: \177
+(standard_in) 130: illegal character: ^@
+(standard_in) 131: illegal character: \211
+(standard_in) 131: illegal character: \362
+(standard_in) 131: illegal character: \177
+(standard_in) 131: illegal character: ^@
+(standard_in) 131: syntax error
+(standard_in) 132: syntax error
+(standard_in) 134: illegal character: \200
+(standard_in) 134: illegal character: \377
+(standard_in) 134: syntax error
+(standard_in) 134: illegal character: ^@
+(standard_in) 134: illegal character: ^D
+(standard_in) 135: syntax error
+(standard_in) 135: syntax error
+(standard_in) 137: illegal character: ^\
+(standard_in) 137: syntax error
+(standard_in) 137: illegal character: ^P
+(standard_in) 137: illegal character: ^@
+(standard_in) 139: illegal character: ^T
+(standard_in) 139: syntax error
+(standard_in) 140: syntax error
+(standard_in) 141: syntax error
+(standard_in) 143: illegal character: \261
+(standard_in) 143: syntax error
+(standard_in) 145: illegal character: \377
+(standard_in) 145: illegal character: ^@
+(standard_in) 145: syntax error
+(standard_in) 147: illegal character: @
+(standard_in) 147: syntax error
+(standard_in) 149: illegal character: `
+(standard_in) 149: syntax error
+(standard_in) 151: illegal character: \347
+(standard_in) 151: syntax error
+(standard_in) 151: illegal character: ^E
+(standard_in) 151: illegal character: \377
+(standard_in) 151: illegal character: \377
+(standard_in) 151: illegal character: ^E
+(standard_in) 152: syntax error
+(standard_in) 154: illegal character: \377
+(standard_in) 154: illegal character: \377
+(standard_in) 154: syntax error
+(standard_in) 155: illegal character: ^A
+(standard_in) 155: syntax error
+(standard_in) 159: illegal character: @
+(standard_in) 159: illegal character: ^@
+(standard_in) 159: syntax error
+(standard_in) 159: illegal character: ^P
+(standard_in) 162: illegal character: ^\
+(standard_in) 162: syntax error
+(standard_in) 163: syntax error
+(standard_in) 163: illegal character: \353
+(standard_in) 163: illegal character: \353
+(standard_in) 163: illegal character: \353
+(standard_in) 163: illegal character: \353
+(standard_in) 163: illegal character: \353
+(standard_in) 163: illegal character: \353
+(standard_in) 163: illegal character: \353
+(standard_in) 163: illegal character: \353
+(standard_in) 163: syntax error
+(standard_in) 164: illegal character: ^P
+(standard_in) 164: syntax error
+(standard_in) 166: illegal character: ^@
+(standard_in) 166: illegal character: ^@
+(standard_in) 166: illegal character: ^@
+(standard_in) 166: illegal character: ^A
+(standard_in) 166: syntax error
+(standard_in) 167: illegal character: `
+(standard_in) 167: syntax error
+Runtime error (func=(main), adr=154): Array pd_ subscript out of bounds.
+(standard_in) 170: illegal character: ^P
+(standard_in) 170: syntax error
+(standard_in) 173: illegal character: @
+(standard_in) 173: syntax error
+(standard_in) 174: illegal character: ^@
+(standard_in) 174: syntax error
+(standard_in) 180: illegal character: ^@
+(standard_in) 180: illegal character: ^@
+(standard_in) 180: illegal character: ^@
+(standard_in) 180: syntax error
+(standard_in) 182: illegal character: $
+(standard_in) 182: syntax error
+(standard_in) 185: syntax error
+Runtime warning (func=(main), adr=69): ibase too large, set to 36
+(standard_in) 188: illegal character: \377
+(standard_in) 188: syntax error
+(standard_in) 188: illegal character: ^U
+(standard_in) 188: illegal character: \377
+(standard_in) 188: illegal character: \377
+(standard_in) 189: syntax error
+(standard_in) 189: illegal character: _
+(standard_in) 190: syntax error
+(standard_in) 192: syntax error
+(standard_in) 194: illegal character: \372
+(standard_in) 194: illegal character: ^@
+(standard_in) 194: illegal character: ^@
+(standard_in) 194: illegal character: \372
+(standard_in) 195: syntax error
+(standard_in) 200: illegal character: \372
+(standard_in) 200: illegal character: ^@
+(standard_in) 200: illegal character: ^@
+(standard_in) 200: illegal character: \372
+(standard_in) 200: syntax error
+(standard_in) 204: syntax error
+(standard_in) 205: illegal character: ^@
+(standard_in) 205: illegal character: @
+(standard_in) 208: syntax error
+(standard_in) 208: syntax error
+Runtime error (func=(main), adr=7): Divide by zero
+(standard_in) 212: illegal character: ^R
+(standard_in) 212: syntax error
+(standard_in) 213: illegal character: \177
+(standard_in) 213: syntax error
+(standard_in) 214: syntax error
+(standard_in) 215: illegal character: \211
+(standard_in) 215: illegal character: \362
+(standard_in) 215: illegal character: \177
+(standard_in) 215: illegal character: ^@
+(standard_in) 215: syntax error
+(standard_in) 215: illegal character: \362
+(standard_in) 215: illegal character: \177
+(standard_in) 215: illegal character: ^@
+(standard_in) 216: syntax error
+(standard_in) 218: illegal character: \200
+(standard_in) 218: illegal character: \377
+(standard_in) 218: syntax error
+(standard_in) 218: illegal character: ^@
+(standard_in) 218: illegal character: ^D
+(standard_in) 219: syntax error
+(standard_in) 220: Return outside of a function.
+(standard_in) 220: syntax error
+(standard_in) 224: syntax error
+(standard_in) 228: syntax error
+(standard_in) 229: illegal character: ^@
+(standard_in) 230: syntax error
+(standard_in) 232: syntax error
+(standard_in) 232: illegal character: \353
+(standard_in) 232: illegal character: \353
+(standard_in) 232: illegal character: \353
+(standard_in) 232: illegal character: \353
+(standard_in) 232: illegal character: \353
+(standard_in) 232: illegal character: \353
+(standard_in) 232: illegal character: \353
+(standard_in) 232: illegal character: \353
+(standard_in) 232: syntax error
+(standard_in) 233: syntax error
+(standard_in) 234: illegal character: \177
+(standard_in) 234: syntax error
+(standard_in) 235: syntax error
+(standard_in) 236: illegal character: \211
+(standard_in) 236: illegal character: \362
+(standard_in) 236: illegal character: \177
+(standard_in) 236: illegal character: ^@
+(standard_in) 236: syntax error
+(standard_in) 237: syntax error
+(standard_in) 241: Return outside of a function.
+(standard_in) 242: Return outside of a function.
+(standard_in) 245: syntax error
+(standard_in) 247: syntax error
+(standard_in) 248: syntax error
+(standard_in) 249: illegal character: @
+(standard_in) 249: syntax error
+(standard_in) 250: syntax error
+(standard_in) 253: illegal character: ^A
+(standard_in) 253: syntax error
+(standard_in) 256: illegal character: \200
+(standard_in) 256: syntax error
+(standard_in) 257: illegal character: ^P
+(standard_in) 257: illegal character: ^@
+(standard_in) 257: illegal character: ^@
+(standard_in) 257: illegal character: ^@
+(standard_in) 257: syntax error
+(standard_in) 259: illegal character: ^@
+(standard_in) 259: illegal character: \200
+(standard_in) 259: illegal character: ^@
+(standard_in) 259: illegal character: ^@
+(standard_in) 259: syntax error
+(standard_in) 261: illegal character: ^P
+(standard_in) 261: syntax error
+(standard_in) 264: illegal character: `
+(standard_in) 264: illegal character: _
+(standard_in) 265: illegal character: ^@
+(standard_in) 265: illegal character: \200
+(standard_in) 265: syntax error
+(standard_in) 266: syntax error
+(standard_in) 270: NUL character in string.
+(standard_in) 270: syntax error
+(standard_in) 296: NUL character in string.
+(standard_in) 296: syntax error
+(standard_in) 297: illegal character: @
+(standard_in) 297: syntax error
+(standard_in) 301: syntax error
+(standard_in) 303: syntax error
+(standard_in) 305: illegal character: ^P
+(standard_in) 305: syntax error
+(standard_in) 307: syntax error
+(standard_in) 307: syntax error
+(standard_in) 308: syntax error
+(standard_in) 309: syntax error
+(standard_in) 311: syntax error
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 311: illegal character: \245
+(standard_in) 314: syntax error
+(standard_in) 315: syntax error
+(standard_in) 319: syntax error
+(standard_in) 321: syntax error
+(standard_in) 321: illegal character: \377
+(standard_in) 321: illegal character: \177
+(standard_in) 322: syntax error
+(standard_in) 323: syntax error
+(standard_in) 325: illegal character: ^@
+(standard_in) 325: illegal character: ^@
+(standard_in) 326: syntax error
+(standard_in) 330: syntax error
+(standard_in) 330: illegal character: $
+(standard_in) 331: illegal character: \377
+(standard_in) 331: illegal character: \377
+(standard_in) 332: syntax error
+(standard_in) 332: illegal character: \361
+(standard_in) 332: illegal character: ^B
+(standard_in) 332: illegal character: ^@
+(standard_in) 332: syntax error
+(standard_in) 332: NUL character in string.
+(standard_in) 332: syntax error
+(standard_in) 333: NUL character in string.
+(standard_in) 335: NUL character in string.
+(standard_in) 345: illegal character: |
+(standard_in) 346: syntax error
+(standard_in) 346: illegal character: \215
+(standard_in) 347: Return outside of a function.
+(standard_in) 350: syntax error
+(standard_in) 350: illegal character: ^A
+(standard_in) 350: illegal character: ^@
+(standard_in) 350: syntax error
+(standard_in) 353: illegal character: \370
+(standard_in) 353: illegal character: ^_
+(standard_in) 353: syntax error
+(standard_in) 355: syntax error
+(standard_in) 357: syntax error
+(standard_in) 360: syntax error
+(standard_in) 361: illegal character: |
+(standard_in) 364: illegal character: |
+(standard_in) 365: syntax error
+(standard_in) 366: illegal character: \
+(standard_in) 366: syntax error
+(standard_in) 367: syntax error
+(standard_in) 367: illegal character: \377
+(standard_in) 367: illegal character: \177
+(standard_in) 368: syntax error
+(standard_in) 369: syntax error
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \246
+(standard_in) 370: illegal character: \377
+(standard_in) 370: illegal character: \177
+(standard_in) 370: syntax error
+(standard_in) 372: syntax error
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: illegal character: \246
+(standard_in) 373: syntax error
+(standard_in) 374: syntax error
+(standard_in) 375: syntax error
+(standard_in) 376: illegal character: ^P
+(standard_in) 376: syntax error
+(standard_in) 378: syntax error
+(standard_in) 378: illegal character: `
+(standard_in) 378: syntax error
+(standard_in) 378: syntax error
+(standard_in) 379: syntax error
+(standard_in) 380: syntax error
+(standard_in) 382: syntax error
+(standard_in) 382: illegal character: \377
+(standard_in) 382: illegal character: \177
+(standard_in) 383: syntax error
+(standard_in) 384: syntax error
+(standard_in) 384: illegal character: ^P
+(standard_in) 384: illegal character: ^@
+(standard_in) 384: illegal character: ^@
+(standard_in) 384: illegal character: ^@
+(standard_in) 385: syntax error
+(standard_in) 385: syntax error
+(standard_in) 386: syntax error
+(standard_in) 389: illegal character: \
+(standard_in) 389: syntax error
+(standard_in) 389: syntax error
+(standard_in) 389: illegal character: \
+(standard_in) 394: illegal character: |
+(standard_in) 399: illegal character: :
+(standard_in) 403: illegal character: ^_
+Runtime error (func=(main), adr=12): Divide by zero
+(standard_in) 406: syntax error
+(standard_in) 408: illegal character: ^@
+(standard_in) 409: syntax error
+(standard_in) 410: syntax error
+(standard_in) 412: syntax error
+(standard_in) 413: illegal character: |
+(standard_in) 418: illegal character: :
+(standard_in) 422: illegal character: ^_
+(standard_in) 422: illegal character: ^A
+(standard_in) 422: syntax error
+Runtime error (func=(main), adr=12): Divide by zero
+(standard_in) 425: syntax error
+(standard_in) 427: illegal character: ^@
+(standard_in) 428: syntax error
+(standard_in) 429: syntax error
+(standard_in) 431: syntax error
+(standard_in) 431: illegal character: \377
+(standard_in) 431: illegal character: \177
+(standard_in) 432: syntax error
+(standard_in) 433: syntax error
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: illegal character: \246
+(standard_in) 434: syntax error
+(standard_in) 434: syntax error
+(standard_in) 435: syntax error
+(standard_in) 438: illegal character: \324
+(standard_in) 438: syntax error
+(standard_in) 438: syntax error
+(standard_in) 438: syntax error
+(standard_in) 438: illegal character: ^_
+(standard_in) 438: illegal character: ^@
+(standard_in) 438: syntax error
+(standard_in) 438: illegal character: ^@
+(standard_in) 438: illegal character: ^@
+(standard_in) 443: syntax error
+(standard_in) 445: syntax error
+(standard_in) 445: syntax error
+(standard_in) 446: syntax error
+(standard_in) 446: syntax error
+(standard_in) 449: illegal character: \370
+(standard_in) 449: illegal character: ^_
+(standard_in) 449: syntax error
+(standard_in) 451: syntax error
+(standard_in) 453: syntax error
+(standard_in) 456: syntax error
+(standard_in) 462: NUL character in string.
+(standard_in) 463: syntax error
+(standard_in) 464: syntax error
+(standard_in) 465: syntax error
+(standard_in) 466: syntax error
+(standard_in) 466: illegal character: \377
+(standard_in) 466: illegal character: \177
+(standard_in) 468: syntax error
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \246
+(standard_in) 469: illegal character: \377
+(standard_in) 469: illegal character: \177
+(standard_in) 469: syntax error
+(standard_in) 471: syntax error
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: illegal character: \246
+(standard_in) 472: syntax error
+(standard_in) 475: syntax error
+(standard_in) 478: syntax error
+(standard_in) 478: syntax error
+(standard_in) 480: syntax error
+(standard_in) 482: syntax error
+(standard_in) 482: syntax error
+(standard_in) 483: syntax error
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: ^@
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: ^O
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \335
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: syntax error
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \366
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 486: illegal character: \246
+(standard_in) 487: syntax error
+(standard_in) 487: illegal character: \211
+(standard_in) 489: illegal character: ^P
+(standard_in) 489: syntax error
+(standard_in) 490: illegal character: @
+(standard_in) 491: syntax error
+(standard_in) 491: syntax error
+(standard_in) 492: syntax error
+(standard_in) 493: syntax error
+(standard_in) 495: syntax error
+(standard_in) 497: NUL character in string.
+(standard_in) 497: illegal character: |
+(standard_in) 498: NUL character in string.
+(standard_in) 502: NUL character in string.
+(standard_in) 503: illegal character: @
+(standard_in) 503: syntax error
+(standard_in) 507: syntax error
+(standard_in) 509: syntax error
+(standard_in) 511: illegal character: ^P
+(standard_in) 511: syntax error
+(standard_in) 513: syntax error
+(standard_in) 513: syntax error
+(standard_in) 514: syntax error
+(standard_in) 515: syntax error
+(standard_in) 517: syntax error
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 517: illegal character: \245
+(standard_in) 520: syntax error
+(standard_in) 521: syntax error
+(standard_in) 525: syntax error
+(standard_in) 527: syntax error
+(standard_in) 527: illegal character: \377
+(standard_in) 527: illegal character: \177
+(standard_in) 528: syntax error
+(standard_in) 529: syntax error
+(standard_in) 531: illegal character: ^@
+(standard_in) 531: illegal character: ^@
+(standard_in) 532: syntax error
+(standard_in) 533: syntax error
+(standard_in) 536: syntax error
+(standard_in) 536: illegal character: $
+(standard_in) 537: illegal character: \377
+(standard_in) 537: illegal character: \377
+(standard_in) 538: syntax error
+(standard_in) 538: illegal character: \361
+(standard_in) 538: illegal character: ^B
+(standard_in) 538: illegal character: ^@
+(standard_in) 538: syntax error
+(standard_in) 538: NUL character in string.
+(standard_in) 538: syntax error
+(standard_in) 539: NUL character in string.
+(standard_in) 541: NUL character in string.
+(standard_in) 551: illegal character: |
+(standard_in) 552: syntax error
+(standard_in) 552: illegal character: \215
+(standard_in) 553: Return outside of a function.
+(standard_in) 556: syntax error
+(standard_in) 556: illegal character: ^A
+(standard_in) 556: illegal character: ^@
+(standard_in) 556: syntax error
+(standard_in) 559: illegal character: \370
+(standard_in) 559: illegal character: ^_
+(standard_in) 559: syntax error
+(standard_in) 561: syntax error
+(standard_in) 563: syntax error
+(standard_in) 566: syntax error
+(standard_in) 567: illegal character: |
+(standard_in) 570: illegal character: |
+(standard_in) 573: syntax error
+(standard_in) 573: illegal character: \377
+(standard_in) 573: illegal character: \177
+(standard_in) 574: syntax error
+(standard_in) 575: syntax error
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \246
+(standard_in) 576: illegal character: \377
+(standard_in) 576: illegal character: \177
+(standard_in) 576: syntax error
+(standard_in) 578: syntax error
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: illegal character: \246
+(standard_in) 579: syntax error
+(standard_in) 580: syntax error
+(standard_in) 581: syntax error
+(standard_in) 582: illegal character: ^P
+(standard_in) 582: syntax error
+(standard_in) 584: syntax error
+(standard_in) 584: syntax error
+(standard_in) 585: syntax error
+(standard_in) 586: syntax error
+(standard_in) 588: syntax error
+(standard_in) 588: illegal character: \377
+(standard_in) 588: illegal character: \177
+(standard_in) 589: syntax error
+(standard_in) 590: syntax error
+(standard_in) 590: illegal character: ^P
+(standard_in) 590: illegal character: ^@
+(standard_in) 590: illegal character: ^@
+(standard_in) 590: illegal character: ^@
+(standard_in) 591: syntax error
+(standard_in) 592: syntax error
+(standard_in) 592: syntax error
+(standard_in) 592: syntax error
+(standard_in) 593: syntax error
+(standard_in) 596: illegal character: \
+(standard_in) 596: syntax error
+(standard_in) 596: syntax error
+(standard_in) 596: illegal character: \
+(standard_in) 601: illegal character: |
+(standard_in) 606: illegal character: :
+(standard_in) 610: illegal character: ^_
+Runtime error (func=(main), adr=12): Divide by zero
+(standard_in) 613: syntax error
+(standard_in) 614: syntax error
+(standard_in) 615: syntax error
+(standard_in) 616: syntax error
+(standard_in) 617: syntax error
+(standard_in) 618: syntax error
+(standard_in) 619: illegal character: |
+(standard_in) 624: illegal character: :
+(standard_in) 628: illegal character: ^_
+Runtime error (func=(main), adr=12): Divide by zero
+(standard_in) 631: syntax error
+(standard_in) 633: illegal character: ^@
+(standard_in) 634: syntax error
+(standard_in) 635: syntax error
+(standard_in) 637: syntax error
+(standard_in) 637: illegal character: \377
+(standard_in) 637: illegal character: \177
+(standard_in) 638: syntax error
+(standard_in) 639: syntax error
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: illegal character: \246
+(standard_in) 640: syntax error
+(standard_in) 640: syntax error
+(standard_in) 641: syntax error
+(standard_in) 644: illegal character: \324
+(standard_in) 644: syntax error
+(standard_in) 644: syntax error
+(standard_in) 644: syntax error
+(standard_in) 644: illegal character: ^_
+(standard_in) 644: illegal character: ^@
+(standard_in) 644: syntax error
+(standard_in) 644: illegal character: ^@
+(standard_in) 644: illegal character: ^@
+(standard_in) 649: syntax error
+(standard_in) 651: syntax error
+(standard_in) 653: illegal character: \377
+(standard_in) 653: illegal character: \177
+(standard_in) 653: syntax error
+(standard_in) 655: syntax error
+(standard_in) 655: illegal character: ^Z
+(standard_in) 655: illegal character: \377
+(standard_in) 655: illegal character: \177
+(standard_in) 655: syntax error
+(standard_in) 656: syntax error
+(standard_in) 656: illegal character: ^H
+(standard_in) 658: syntax error
+(standard_in) 659: syntax error
+(standard_in) 660: illegal character: ^F
+(standard_in) 663: syntax error
+(standard_in) 664: illegal character: ^_
+(standard_in) 664: illegal character: \377
+(standard_in) 666: illegal character: \377
+(standard_in) 666: syntax error
+(standard_in) 668: syntax error
+(standard_in) 669: illegal character: \
+(standard_in) 669: illegal character: \350
+(standard_in) 669: illegal character: ^C
+(standard_in) 669: syntax error
+(standard_in) 669: syntax error
+(standard_in) 669: illegal character: \
+(standard_in) 674: illegal character: |
+(standard_in) 679: illegal character: :
+(standard_in) 682: illegal character: ^_
+(standard_in) 685: syntax error
+(standard_in) 687: syntax error
+(standard_in) 688: syntax error
+(standard_in) 688: illegal character: \377
+(standard_in) 688: illegal character: ^@
+(standard_in) 688: syntax error
+(standard_in) 689: syntax error
+(standard_in) 690: syntax error
+(standard_in) 691: syntax error
+(standard_in) 692: syntax error
+(standard_in) 692: illegal character: \377
+(standard_in) 692: illegal character: \177
+(standard_in) 693: syntax error
+(standard_in) 694: syntax error
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \246
+(standard_in) 695: illegal character: \377
+(standard_in) 695: illegal character: \177
+(standard_in) 695: syntax error
+(standard_in) 697: syntax error
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: illegal character: \246
+(standard_in) 698: syntax error
+(standard_in) 701: syntax error
+(standard_in) 704: syntax error
+(standard_in) 704: syntax error
+(standard_in) 706: syntax error
+(standard_in) 708: syntax error
+(standard_in) 708: syntax error
+(standard_in) 709: syntax error
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: ^@
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \335
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: syntax error
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \366
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 712: illegal character: \246
+(standard_in) 713: syntax error
+(standard_in) 713: illegal character: \211
+(standard_in) 715: illegal character: ^P
+(standard_in) 715: syntax error
+(standard_in) 717: syntax error
+(standard_in) 717: syntax error
+(standard_in) 718: syntax error
+(standard_in) 719: syntax error
+(standard_in) 721: syntax error
+(standard_in) 723: NUL character in string.
+(standard_in) 723: illegal character: |
+(standard_in) 724: NUL character in string.
+(standard_in) 726: illegal character: :
+(standard_in) 726: illegal character: \
+(standard_in) 727: illegal character: :
+(standard_in) 728: illegal character: \
+(standard_in) 730: illegal character: |
+(standard_in) 734: illegal character: \310
+(standard_in) 734: syntax error
+(standard_in) 734: illegal character: ~
+(standard_in) 735: illegal character: ^N
+(standard_in) 735: syntax error
+(standard_in) 736: illegal character: ^P
+(standard_in) 737: syntax error
+(standard_in) 737: syntax error
+(standard_in) 740: illegal character: ^]
+(standard_in) 740: syntax error
+(standard_in) 741: illegal character: \324
+(standard_in) 741: illegal character: \205
+(standard_in) 741: syntax error
+(standard_in) 741: syntax error
+(standard_in) 741: syntax error
+(standard_in) 744: NUL character in string.
+(standard_in) 744: syntax error
+(standard_in) 745: NUL character in string.
+(standard_in) 748: illegal character: \204
+(standard_in) 748: syntax error
+(standard_in) 749: syntax error
+(standard_in) 749: illegal character: ^@
+(standard_in) 749: illegal character: ^@
+(standard_in) 749: illegal character: ^@
+(standard_in) 749: illegal character: \200
+(standard_in) 749: syntax error
+(standard_in) 749: syntax error
+(standard_in) 750: syntax error
+(standard_in) 754: syntax error
+(standard_in) 754: illegal character: ^P
+(standard_in) 754: illegal character: ^@
+(standard_in) 754: illegal character: ^@
+(standard_in) 754: illegal character: ^@
+(standard_in) 755: illegal character: ^@
+(standard_in) 755: syntax error
+(standard_in) 756: syntax error
+(standard_in) 758: syntax error
+(standard_in) 760: illegal character: ^@
+(standard_in) 760: illegal character: ^@
+(standard_in) 760: illegal character: ^D
+(standard_in) 760: illegal character: ^@
+(standard_in) 760: syntax error
+(standard_in) 761: syntax error
+(standard_in) 762: illegal character: \377
+(standard_in) 762: illegal character: \377
+(standard_in) 763: syntax error
+(standard_in) 764: NUL character in string.
+(standard_in) 764: syntax error
+(standard_in) 765: NUL character in string.
+(standard_in) 767: illegal character: \177
+(standard_in) 767: illegal character: \372
+(standard_in) 767: illegal character: ?
+(standard_in) 767: illegal character: ^@
+(standard_in) 767: illegal character: ^A
+(standard_in) 767: syntax error
+(standard_in) 767: illegal character: \271
+(standard_in) 767: illegal character: _
+(standard_in) 767: syntax error
+(standard_in) 768: illegal character: ^C
+(standard_in) 768: illegal character: \350
+(standard_in) 768: syntax error
+(standard_in) 769: syntax error
+(standard_in) 770: illegal character: \377
+(standard_in) 770: illegal character: \377
+(standard_in) 770: syntax error
+(standard_in) 770: illegal character: ^N
+(standard_in) 770: syntax error
+(standard_in) 771: illegal character: ^P
+(standard_in) 772: syntax error
+(standard_in) 772: syntax error
+(standard_in) 776: illegal character: \324
+(standard_in) 776: syntax error
+(standard_in) 776: syntax error
+(standard_in) 776: syntax error
+(standard_in) 777: illegal character: @
+(standard_in) 779: illegal character: ^A
+(standard_in) 779: syntax error
+(standard_in) 779: syntax error
+(standard_in) 779: syntax error
+(standard_in) 780: NUL character in string.
+(standard_in) 782: syntax error
+(standard_in) 783: illegal character: \204
+(standard_in) 783: syntax error
+(standard_in) 783: illegal character: ^C
+(standard_in) 784: illegal character: $
+(standard_in) 784: syntax error
+(standard_in) 784: illegal character: ^@
+(standard_in) 784: illegal character: ^@
+(standard_in) 784: illegal character: ^@
+(standard_in) 784: illegal character: \200
+(standard_in) 784: syntax error
+(standard_in) 784: syntax error
+(standard_in) 785: syntax error
+(standard_in) 792: syntax error
+(standard_in) 794: syntax error
+(standard_in) 794: illegal character: \377
+(standard_in) 794: illegal character: \177
+(standard_in) 796: syntax error
+(standard_in) 798: illegal character: ^@
+(standard_in) 798: illegal character: ^@
+(standard_in) 799: illegal character: \216
+(standard_in) 799: syntax error
+(standard_in) 799: illegal character: :
+(standard_in) 799: illegal character: \
+(standard_in) 800: illegal character: :
+(standard_in) 800: illegal character: \
+(standard_in) 806: NUL character in string.
+(standard_in) 806: illegal character: ^_
+(standard_in) 806: illegal character: ^@
+(standard_in) 807: illegal character: \177
+(standard_in) 807: illegal character: ^@
+(standard_in) 807: illegal character: ^@
+(standard_in) 807: illegal character: ^@
+(standard_in) 807: illegal character: ^@
+(standard_in) 807: syntax error
+(standard_in) 807: illegal character: \201
+(standard_in) 807: syntax error
+(standard_in) 809: syntax error
+(standard_in) 810: syntax error
+(standard_in) 811: syntax error
+(standard_in) 812: syntax error
+(standard_in) 812: illegal character: \
+(standard_in) 813: illegal character: :
+(standard_in) 814: illegal character: \
+(standard_in) 816: illegal character: |
+(standard_in) 820: syntax error
+(standard_in) 822: syntax error
+(standard_in) 822: syntax error
+(standard_in) 823: syntax error
+(standard_in) 823: illegal character: ^@
+(standard_in) 823: illegal character: ^@
+(standard_in) 823: illegal character: ^C
+(standard_in) 823: illegal character: \350
+(standard_in) 823: syntax error
+(standard_in) 824: syntax error
+(standard_in) 827: illegal character: \
+(standard_in) 827: syntax error
+(standard_in) 827: syntax error
+(standard_in) 827: illegal character: \
+(standard_in) 832: illegal character: |
+(standard_in) 837: illegal character: :
+(standard_in) 841: illegal character: ^_
+(standard_in) 844: syntax error
+(standard_in) 845: illegal character: ^@
+(standard_in) 846: syntax error
+(standard_in) 847: syntax error
+(standard_in) 849: syntax error
+(standard_in) 850: illegal character: |
+(standard_in) 852: illegal character: \216
+(standard_in) 852: illegal character: :
+(standard_in) 852: illegal character: \
+(standard_in) 858: illegal character: ^_
+(standard_in) 859: syntax error
+(standard_in) 859: illegal character: ^@
+(standard_in) 859: syntax error
+(standard_in) 859: syntax error
+(standard_in) 860: syntax error
+(standard_in) 862: illegal character: \204
+(standard_in) 862: syntax error
+(standard_in) 863: syntax error
+(standard_in) 863: illegal character: ^@
+(standard_in) 863: illegal character: ^@
+(standard_in) 863: illegal character: ^@
+(standard_in) 863: illegal character: \200
+(standard_in) 863: syntax error
+(standard_in) 863: syntax error
+(standard_in) 864: syntax error
+(standard_in) 867: syntax error
+(standard_in) 868: syntax error
+(standard_in) 872: syntax error
+(standard_in) 874: syntax error
+(standard_in) 874: illegal character: \377
+(standard_in) 874: illegal character: \177
+(standard_in) 876: syntax error
+(standard_in) 877: syntax error
+(standard_in) 878: syntax error
+(standard_in) 882: syntax error
+(standard_in) 882: illegal character: ^T
+(standard_in) 883: illegal character: \377
+(standard_in) 883: illegal character: \377
+(standard_in) 884: syntax error
+(standard_in) 885: illegal character: ^B
+(standard_in) 885: illegal character: ^@
+(standard_in) 885: syntax error
+(standard_in) 885: NUL character in string.
+(standard_in) 885: syntax error
+(standard_in) 886: NUL character in string.
+(standard_in) 888: syntax error
+(standard_in) 889: syntax error
+(standard_in) 889: syntax error
+(standard_in) 890: syntax error
+(standard_in) 891: illegal character: ^@
+(standard_in) 891: illegal character: ^B
+(standard_in) 891: illegal character: ^@
+(standard_in) 891: illegal character: ^@
+(standard_in) 891: syntax error
+(standard_in) 893: syntax error
+(standard_in) 895: syntax error
+(standard_in) 897: illegal character: \377
+(standard_in) 897: illegal character: \177
+(standard_in) 897: syntax error
+(standard_in) 899: syntax error
+(standard_in) 901: syntax error
+(standard_in) 901: syntax error
+(standard_in) 902: syntax error
+(standard_in) 902: syntax error
+(standard_in) 903: syntax error
+(standard_in) 906: illegal character: \
+(standard_in) 906: syntax error
+(standard_in) 906: illegal character: \377
+(standard_in) 906: illegal character: ^@
+(standard_in) 906: syntax error
+(standard_in) 906: illegal character: \
+(standard_in) 910: NUL character in string.
+(standard_in) 911: illegal character: |
+(standard_in) 916: illegal character: :
+(standard_in) 920: illegal character: ^_
+(standard_in) 923: syntax error
+(standard_in) 924: illegal character: ^@
+(standard_in) 925: syntax error
+(standard_in) 926: syntax error
+(standard_in) 928: syntax error
+(standard_in) 929: illegal character: |
+(standard_in) 934: illegal character: :
+(standard_in) 938: illegal character: ^_
+(standard_in) 939: illegal character: ^P
+(standard_in) 939: illegal character: ^@
+(standard_in) 941: syntax error
+(standard_in) 943: illegal character: ^@
+(standard_in) 951: NUL character in string.
+(standard_in) 951: syntax error
+(standard_in) 952: illegal character: @
+(standard_in) 952: syntax error
+(standard_in) 956: syntax error
+(standard_in) 958: syntax error
+(standard_in) 960: illegal character: ^P
+(standard_in) 960: syntax error
+(standard_in) 962: syntax error
+(standard_in) 962: syntax error
+(standard_in) 963: syntax error
+(standard_in) 964: syntax error
+(standard_in) 966: syntax error
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 966: illegal character: \245
+(standard_in) 969: syntax error
+(standard_in) 970: syntax error
+(standard_in) 974: syntax error
+(standard_in) 976: syntax error
+(standard_in) 976: illegal character: \377
+(standard_in) 976: illegal character: \177
+(standard_in) 977: syntax error
+(standard_in) 978: syntax error
+(standard_in) 980: illegal character: ^@
+(standard_in) 980: illegal character: ^@
+(standard_in) 981: syntax error
+(standard_in) 985: syntax error
+(standard_in) 985: illegal character: ^@
+(standard_in) 985: syntax error
+(standard_in) 986: illegal character: \370
+(standard_in) 986: illegal character: ^_
+(standard_in) 986: syntax error
+(standard_in) 987: illegal character: \177
+(standard_in) 987: illegal character: ^@
+(standard_in) 987: illegal character: ^@
+(standard_in) 987: illegal character: ^@
+(standard_in) 987: syntax error
+(standard_in) 990: syntax error
+(standard_in) 990: syntax error
+(standard_in) 992: syntax error
+(standard_in) 994: syntax error
+(standard_in) 994: syntax error
+(standard_in) 995: syntax error
+(standard_in) 998: illegal character: \
+(standard_in) 998: syntax error
+(standard_in) 998: syntax error
+(standard_in) 998: illegal character: \
+(standard_in) 1002: NUL character in string.
+(standard_in) 1003: illegal character: |
+(standard_in) 1008: illegal character: :
+(standard_in) 1012: illegal character: ^_
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: illegal character: \246
+(standard_in) 1013: syntax error
+(standard_in) 1013: illegal character: \224
+(standard_in) 1014: syntax error
+(standard_in) 1015: syntax error
+(standard_in) 1016: illegal character: \200
+(standard_in) 1016: illegal character: \377
+(standard_in) 1016: illegal character: \377
+(standard_in) 1016: illegal character: \377
+(standard_in) 1016: syntax error
+(standard_in) 1017: syntax error
+(standard_in) 1018: illegal character: \
+(standard_in) 1018: syntax error
+(standard_in) 1019: syntax error
+(standard_in) 1019: illegal character: \377
+(standard_in) 1019: illegal character: \177
+(standard_in) 1021: syntax error
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \246
+(standard_in) 1022: illegal character: \377
+(standard_in) 1022: illegal character: \177
+(standard_in) 1022: syntax error
+(standard_in) 1024: syntax error
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: illegal character: \246
+(standard_in) 1025: syntax error
+(standard_in) 1026: syntax error
+(standard_in) 1027: syntax error
+(standard_in) 1028: illegal character: ^P
+(standard_in) 1028: syntax error
+(standard_in) 1030: syntax error
+(standard_in) 1030: syntax error
+(standard_in) 1031: syntax error
+(standard_in) 1032: syntax error
+(standard_in) 1034: syntax error
+(standard_in) 1034: illegal character: \377
+(standard_in) 1034: illegal character: \177
+(standard_in) 1035: syntax error
+(standard_in) 1036: syntax error
+(standard_in) 1036: illegal character: ^P
+(standard_in) 1036: illegal character: ^@
+(standard_in) 1036: illegal character: ^@
+(standard_in) 1036: illegal character: ^@
+(standard_in) 1037: syntax error
+(standard_in) 1037: syntax error
+(standard_in) 1038: syntax error
+(standard_in) 1041: illegal character: \
+(standard_in) 1041: syntax error
+(standard_in) 1041: syntax error
+(standard_in) 1041: illegal character: \
+(standard_in) 1046: illegal character: |
+(standard_in) 1051: illegal character: :
+(standard_in) 1055: illegal character: ^_
+Runtime error (func=(main), adr=12): Divide by zero
+(standard_in) 1058: syntax error
+(standard_in) 1060: illegal character: ^@
+(standard_in) 1061: syntax error
+(standard_in) 1062: syntax error
+(standard_in) 1064: syntax error
+(standard_in) 1065: illegal character: |
+(standard_in) 1070: illegal character: :
+(standard_in) 1074: illegal character: ^_
+(standard_in) 1074: illegal character: ^A
+(standard_in) 1074: syntax error
+Runtime error (func=(main), adr=12): Divide by zero
+(standard_in) 1077: syntax error
+(standard_in) 1079: illegal character: ^@
+(standard_in) 1080: syntax error
+(standard_in) 1081: syntax error
+(standard_in) 1083: syntax error
+(standard_in) 1083: illegal character: \377
+(standard_in) 1083: illegal character: \177
+(standard_in) 1084: syntax error
+(standard_in) 1085: syntax error
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: illegal character: \246
+(standard_in) 1086: syntax error
+(standard_in) 1086: syntax error
+(standard_in) 1087: syntax error
+(standard_in) 1087: illegal character: ^@
+(standard_in) 1087: illegal character: ^@
+(standard_in) 1087: illegal character: ^@
+(standard_in) 1087: illegal character: ^P
+(standard_in) 1090: illegal character: \324
+(standard_in) 1090: syntax error
+(standard_in) 1090: syntax error
+(standard_in) 1090: syntax error
+(standard_in) 1090: illegal character: ^_
+(standard_in) 1090: illegal character: ^@
+(standard_in) 1090: syntax error
+(standard_in) 1090: illegal character: ^@
+(standard_in) 1090: illegal character: ^@
+(standard_in) 1094: syntax error
+(standard_in) 1096: syntax error
+(standard_in) 1098: illegal character: \377
+(standard_in) 1098: illegal character: \177
+(standard_in) 1098: syntax error
+(standard_in) 1100: syntax error
+(standard_in) 1100: illegal character: \377
+(standard_in) 1100: illegal character: \177
+(standard_in) 1100: syntax error
+(standard_in) 1101: syntax error
+(standard_in) 1101: illegal character: ^H
+(standard_in) 1103: syntax error
+(standard_in) 1104: syntax error
+(standard_in) 1105: illegal character: ^F
+(standard_in) 1108: syntax error
+(standard_in) 1109: illegal character: ^_
+(standard_in) 1109: illegal character: \377
+(standard_in) 1109: illegal character: \246
+(standard_in) 1109: illegal character: \246
+(standard_in) 1109: illegal character: \246
+(standard_in) 1109: illegal character: \246
+(standard_in) 1109: illegal character: \246
+(standard_in) 1109: illegal character: \246
+(standard_in) 1109: illegal character: \246
+(standard_in) 1109: illegal character: \246
+(standard_in) 1115: illegal character: '
+(standard_in) 1116: illegal character: $
+(standard_in) 1116: syntax error
+(standard_in) 1119: syntax error
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \366
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1119: illegal character: \246
+(standard_in) 1120: syntax error
+(standard_in) 1120: illegal character: \211
+(standard_in) 1122: illegal character: ^P
+(standard_in) 1122: syntax error
+(standard_in) 1124: syntax error
+(standard_in) 1124: syntax error
+(standard_in) 1125: syntax error
+(standard_in) 1126: syntax error
+(standard_in) 1128: syntax error
+(standard_in) 1130: NUL character in string.
+(standard_in) 1130: illegal character: |
+(standard_in) 1131: NUL character in string.
+(standard_in) 1133: illegal character: :
+(standard_in) 1133: illegal character: \
+(standard_in) 1134: illegal character: :
+(standard_in) 1135: illegal character: \
+(standard_in) 1137: illegal character: |
+(standard_in) 1141: illegal character: ~
+(standard_in) 1141: syntax error
+(standard_in) 1142: illegal character: ^N
+(standard_in) 1142: syntax error
+(standard_in) 1143: illegal character: ^P
+(standard_in) 1144: syntax error
+(standard_in) 1144: syntax error
+(standard_in) 1147: illegal character: ^]
+(standard_in) 1147: syntax error
+(standard_in) 1148: illegal character: \324
+(standard_in) 1148: illegal character: \205
+(standard_in) 1148: syntax error
+(standard_in) 1148: syntax error
+(standard_in) 1148: syntax error
+(standard_in) 1151: syntax error
+(standard_in) 1152: NUL character in string.
+(standard_in) 1155: illegal character: \204
+(standard_in) 1155: syntax error
+(standard_in) 1156: syntax error
+(standard_in) 1156: illegal character: ^@
+(standard_in) 1156: illegal character: ^@
+(standard_in) 1156: illegal character: ^@
+(standard_in) 1156: illegal character: \200
+(standard_in) 1156: syntax error
+(standard_in) 1156: syntax error
+(standard_in) 1157: syntax error
+(standard_in) 1160: illegal character: ^@
+(standard_in) 1160: illegal character: ^@
+(standard_in) 1160: illegal character: \200
+(standard_in) 1160: illegal character: ^@
+(standard_in) 1160: syntax error
+(standard_in) 1160: illegal character: ^P
+(standard_in) 1160: illegal character: ^@
+(standard_in) 1160: illegal character: ^@
+(standard_in) 1160: illegal character: ^@
+(standard_in) 1161: illegal character: ^@
+(standard_in) 1161: syntax error
+(standard_in) 1162: syntax error
+(standard_in) 1164: syntax error
+(standard_in) 1166: illegal character: ^@
+(standard_in) 1166: illegal character: ^@
+(standard_in) 1166: illegal character: ^D
+(standard_in) 1166: illegal character: ^@
+(standard_in) 1166: syntax error
+=================================================================
+==20563==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61c0000009b0 at pc 0x000000532fc5 bp 0x7fffffffaa50 sp 0x7fffffffaa48
+READ of size 1 at 0x61c0000009b0 thread T0
+    #0 0x532fc4 in execute /home/hongxu/FOT/test_c/bc-1.07/bc/execute.c:150:27
+    #1 0x55169c in run_code /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:295:2
+    #2 0x50f36e in yyparse /home/hongxu/FOT/test_c/bc-1.07/bc/bc.c:2695:3
+    #3 0x50c532 in main /home/hongxu/FOT/test_c/bc-1.07/bc/main.c:260:3
+    #4 0x7ffff6a1bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #5 0x41c809 in _start (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x41c809)
+
+Address 0x61c0000009b0 is a wild pointer.
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/test_c/bc-1.07/bc/execute.c:150:27 in execute
+Shadow bytes around the buggy address:
+  0x0c387fff80e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c387fff80f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8110: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8120: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c387fff8130: fa fa fa fa fa fa[fa]fa fa fa fa fa fa fa fa fa
+  0x0c387fff8140: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8150: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8160: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8170: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c387fff8180: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==20563==ABORTING
+No stack.
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+sub_x: 0
+sub_x: 855092589135929004988009890
+sub_x: 0
+|||||sub_x: 0
+|||||sub_x: 0
+sub_x: |||||sub_x: 0
+sub_x: [Inferior 1 (process 20563) exited with code 027]

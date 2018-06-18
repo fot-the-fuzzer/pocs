@@ -1,0 +1,1641 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+grep: /tmp/gdb_info_target: No such file or directory
+warning: /tmp/gdb_target_arch.gdb: No such file or directory
+(standard_in) 12: illegal character: ^@
+(standard_in) 12: syntax error
+(standard_in) 14: illegal character: \325
+(standard_in) 15: syntax error
+(standard_in) 16: illegal character: ^@
+(standard_in) 16: illegal character: ^@
+(standard_in) 16: illegal character: ^D
+(standard_in) 16: illegal character: ^@
+(standard_in) 16: syntax error
+(standard_in) 18: syntax error
+(standard_in) 26: syntax error
+(standard_in) 27: illegal character: @
+(standard_in) 27: syntax error
+(standard_in) 27: illegal character: ^@
+(standard_in) 27: illegal character: ^A
+(standard_in) 28: illegal character: ^B
+(standard_in) 28: illegal character: ^@
+(standard_in) 28: syntax error
+(standard_in) 31: illegal character: ^@
+(standard_in) 31: illegal character: ^@
+(standard_in) 31: illegal character: ^@
+(standard_in) 31: illegal character: ^@
+(standard_in) 31: syntax error
+(standard_in) 34: illegal character: ^Z
+(standard_in) 34: syntax error
+(standard_in) 36: illegal character: ^P
+(standard_in) 36: illegal character: ^@
+(standard_in) 36: syntax error
+(standard_in) 37: syntax error
+(standard_in) 39: illegal character: ^@
+(standard_in) 39: illegal character: ^A
+(standard_in) 39: syntax error
+(standard_in) 54: illegal character: ^@
+(standard_in) 54: illegal character: ^A
+(standard_in) 54: syntax error
+(standard_in) 58: illegal character: ^@
+(standard_in) 58: illegal character: ^A
+(standard_in) 58: illegal character: ^@
+(standard_in) 58: illegal character: ^@
+(standard_in) 58: syntax error
+(standard_in) 59: illegal character: ^E
+(standard_in) 59: illegal character: \377
+(standard_in) 59: illegal character: \377
+(standard_in) 59: illegal character: ^E
+(standard_in) 59: syntax error
+(standard_in) 62: illegal character: ^T
+(standard_in) 62: illegal character: ^T
+(standard_in) 62: syntax error
+(standard_in) 67: illegal character: ^@
+(standard_in) 67: illegal character: ^A
+(standard_in) 67: syntax error
+(standard_in) 67: illegal character: ^@
+(standard_in) 67: illegal character: ^@
+(standard_in) 67: illegal character: \200
+(standard_in) 67: illegal character: ^@
+(standard_in) 68: illegal character: :
+(standard_in) 68: syntax error
+(standard_in) 75: illegal character: \201
+(standard_in) 75: illegal character: _
+(standard_in) 75: illegal character: ^P
+(standard_in) 75: syntax error
+(standard_in) 76: illegal character: \206
+(standard_in) 77: illegal character: ^@
+(standard_in) 77: illegal character: \200
+(standard_in) 77: syntax error
+(standard_in) 79: illegal character: \350
+(standard_in) 79: illegal character: ^C
+(standard_in) 79: syntax error
+(standard_in) 80: illegal character: ^W
+(standard_in) 83: illegal character: \
+(standard_in) 86: syntax error
+(standard_in) 90: syntax error
+(standard_in) 92: illegal character: ^Q
+(standard_in) 92: syntax error
+(standard_in) 94: illegal character: \302
+(standard_in) 94: syntax error
+(standard_in) 94: illegal character: ^@
+(standard_in) 94: illegal character: ^A
+(standard_in) 94: illegal character: ^@
+(standard_in) 94: illegal character: ^@
+(standard_in) 96: illegal character: ^W
+(standard_in) 96: syntax error
+(standard_in) 97: syntax error
+(standard_in) 97: illegal character: ?
+(standard_in) 98: illegal character: ^_
+(standard_in) 98: syntax error
+(standard_in) 99: illegal character: ^P
+(standard_in) 99: syntax error
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: \245
+(standard_in) 99: illegal character: ^@
+(standard_in) 99: illegal character: \177
+(standard_in) 100: illegal character: $
+(standard_in) 100: syntax error
+(standard_in) 100: illegal character: ^M
+(standard_in) 103: illegal character: _
+(standard_in) 103: syntax error
+(standard_in) 103: illegal character: ^P
+(standard_in) 104: illegal character: ^@
+(standard_in) 104: illegal character: ^@
+(standard_in) 104: illegal character: ^@
+(standard_in) 104: syntax error
+(standard_in) 108: syntax error
+(standard_in) 114: syntax error
+(standard_in) 115: syntax error
+(standard_in) 116: syntax error
+(standard_in) 117: syntax error
+(standard_in) 117: Return outside of a function.
+(standard_in) 118: illegal character: \377
+(standard_in) 118: syntax error
+(standard_in) 118: syntax error
+(standard_in) 121: Return outside of a function.
+(standard_in) 127: syntax error
+Runtime error (func=(main), adr=4): Function e not defined.
+(standard_in) 132: illegal character: \
+(standard_in) 132: Return outside of a function.
+(standard_in) 132: syntax error
+(standard_in) 143: syntax error
+(standard_in) 143: illegal character: \214
+(standard_in) 150: syntax error
+(standard_in) 150: Return outside of a function.
+(standard_in) 152: Return outside of a function.
+(standard_in) 158: syntax error
+(standard_in) 162: illegal character: \200
+(standard_in) 162: syntax error
+(standard_in) 163: syntax error
+(standard_in) 163: illegal character: ^D
+(standard_in) 163: illegal character: ^@
+(standard_in) 165: Return outside of a function.
+(standard_in) 166: syntax error
+(standard_in) 168: syntax error
+(standard_in) 169: syntax error
+(standard_in) 177: Return outside of a function.
+(standard_in) 178: illegal character: \205
+(standard_in) 181: syntax error
+(standard_in) 185: syntax error
+(standard_in) 185: syntax error
+(standard_in) 186: syntax error
+(standard_in) 186: syntax error
+(standard_in) 186: syntax error
+(standard_in) 190: illegal character: \372
+(standard_in) 190: illegal character: ^@
+(standard_in) 190: illegal character: ^@
+(standard_in) 190: illegal character: \372
+(standard_in) 190: syntax error
+(standard_in) 190: illegal character: `
+(standard_in) 190: syntax error
+Runtime warning (func=(main), adr=9): ibase too small, set to 2
+(standard_in) 194: syntax error
+(standard_in) 195: syntax error
+(standard_in) 218: Return outside of a function.
+(standard_in) 219: Return outside of a function.
+(standard_in) 220: Return outside of a function.
+(standard_in) 220: syntax error
+(standard_in) 221: syntax error
+(standard_in) 221: Return outside of a function.
+(standard_in) 223: Return outside of a function.
+(standard_in) 225: syntax error
+(standard_in) 226: syntax error
+(standard_in) 229: Return outside of a function.
+(standard_in) 230: syntax error
+(standard_in) 233: syntax error
+(standard_in) 235: syntax error
+(standard_in) 236: illegal character: \377
+(standard_in) 236: syntax error
+Runtime error (func=(main), adr=6): Function int not defined.
+(standard_in) 238: Return outside of a function.
+(standard_in) 239: Return outside of a function.
+(standard_in) 245: Return outside of a function.
+(standard_in) 246: syntax error
+(standard_in) 249: syntax error
+(standard_in) 250: illegal character: \362
+(standard_in) 250: Break outside a for/while
+(standard_in) 251: syntax error
+(standard_in) 254: illegal character: ^@
+(standard_in) 254: illegal character: ^D
+(standard_in) 254: syntax error
+(standard_in) 254: Return outside of a function.
+(standard_in) 255: syntax error
+(standard_in) 256: illegal character: ^T
+(standard_in) 257: illegal character: \177
+Runtime error (func=(main), adr=6): Function fastintroot_ not defined.
+(standard_in) 260: illegal character: ^P
+(standard_in) 262: Return outside of a function.
+(standard_in) 262: syntax error
+Runtime error (func=(main), adr=24): Function fastfracpow_ not defined.
+(standard_in) 268: Return outside of a function.
+(standard_in) 269: syntax error
+(standard_in) 281: illegal character: \177
+(standard_in) 285: illegal character: ^H
+(standard_in) 285: illegal character: \
+(standard_in) 286: syntax error
+(standard_in) 298: illegal character: ^@
+(standard_in) 298: syntax error
+(standard_in) 300: illegal character: ^Y
+(standard_in) 300: syntax error
+(standard_in) 304: illegal character: \177
+(standard_in) 304: illegal character: ^@
+(standard_in) 304: syntax error
+(standard_in) 308: illegal character: ^@
+(standard_in) 308: illegal character: ^A
+(standard_in) 308: illegal character: ^@
+(standard_in) 308: illegal character: ^@
+(standard_in) 309: syntax error
+(standard_in) 313: syntax error
+(standard_in) 313: syntax error
+(standard_in) 314: syntax error
+(standard_in) 316: illegal character: ^B
+(standard_in) 316: syntax error
+(standard_in) 317: Return outside of a function.
+(standard_in) 318: Return outside of a function.
+(standard_in) 322: illegal character: \371
+(standard_in) 322: syntax error
+(standard_in) 322: syntax error
+(standard_in) 322: illegal character: \226
+(standard_in) 325: syntax error
+(standard_in) 326: syntax error
+(standard_in) 326: illegal character: \177
+(standard_in) 326: illegal character: \377
+(standard_in) 326: syntax error
+(standard_in) 327: illegal character: ^W
+(standard_in) 327: illegal character: \345
+(standard_in) 328: illegal character: \350
+(standard_in) 328: illegal character: ^C
+(standard_in) 332: illegal character: ^S
+(standard_in) 334: Return outside of a function.
+(standard_in) 336: syntax error
+(standard_in) 336: illegal character: ^@
+(standard_in) 336: illegal character: \200
+(standard_in) 336: illegal character: \377
+(standard_in) 336: illegal character: \377
+(standard_in) 336: Return outside of a function.
+(standard_in) 337: syntax error
+(standard_in) 338: Return outside of a function.
+(standard_in) 342: illegal character: ^T
+(standard_in) 343: illegal character: \177
+(standard_in) 346: illegal character: ^P
+(standard_in) 348: Return outside of a function.
+Runtime error (func=(main), adr=24): Function fastfracpow_ not defined.
+(standard_in) 354: Return outside of a function.
+(standard_in) 355: syntax error
+(standard_in) 367: illegal character: \177
+(standard_in) 371: illegal character: \
+(standard_in) 371: syntax error
+(standard_in) 373: syntax error
+(standard_in) 373: syntax error
+(standard_in) 373: illegal character: \
+(standard_in) 375: illegal character: \
+(standard_in) 376: illegal character: \
+(standard_in) 381: illegal character: :
+(standard_in) 381: illegal character: :
+(standard_in) 381: illegal character: :
+(standard_in) 381: illegal character: \
+(standard_in) 385: illegal character: :
+(standard_in) 385: syntax error
+(standard_in) 385: illegal character: \
+(standard_in) 387: syntax error
+(standard_in) 388: illegal character: ^C
+(standard_in) 388: syntax error
+(standard_in) 389: syntax error
+(standard_in) 393: illegal character: ^_
+(standard_in) 394: syntax error
+(standard_in) 395: syntax error
+(standard_in) 396: syntax error
+(standard_in) 398: NUL character in string.
+(standard_in) 407: syntax error
+(standard_in) 409: syntax error
+(standard_in) 414: syntax error
+(standard_in) 414: syntax error
+(standard_in) 416: illegal character: ^@
+(standard_in) 416: illegal character: ^A
+(standard_in) 416: syntax error
+(standard_in) 417: illegal character: \177
+(standard_in) 417: illegal character: ^@
+(standard_in) 417: illegal character: ^@
+(standard_in) 417: illegal character: ^@
+(standard_in) 417: syntax error
+(standard_in) 421: syntax error
+(standard_in) 422: syntax error
+(standard_in) 423: illegal character: \377
+(standard_in) 423: syntax error
+(standard_in) 423: syntax error
+(standard_in) 438: syntax error
+(standard_in) 447: syntax error
+(standard_in) 447: syntax error
+(standard_in) 457: syntax error
+(standard_in) 462: illegal character: \205
+(standard_in) 462: syntax error
+(standard_in) 470: syntax error
+(standard_in) 475: syntax error
+(standard_in) 480: syntax error
+(standard_in) 490: syntax error
+(standard_in) 496: syntax error
+(standard_in) 496: syntax error
+(standard_in) 498: Return outside of a function.
+(standard_in) 501: syntax error
+(standard_in) 501: syntax error
+(standard_in) 503: Return outside of a function.
+(standard_in) 507: syntax error
+(standard_in) 507: syntax error
+(standard_in) 508: syntax error
+(standard_in) 509: syntax error
+(standard_in) 514: syntax error
+(standard_in) 520: illegal character: ^@
+(standard_in) 520: illegal character: ^@
+(standard_in) 520: illegal character: ^@
+(standard_in) 520: illegal character: \377
+(standard_in) 520: syntax error
+(standard_in) 520: syntax error
+(standard_in) 522: Return outside of a function.
+(standard_in) 527: syntax error
+(standard_in) 532: syntax error
+(standard_in) 533: illegal character: _
+(standard_in) 533: syntax error
+(standard_in) 542: syntax error
+(standard_in) 548: syntax error
+(standard_in) 553: syntax error
+(standard_in) 553: syntax error
+(standard_in) 555: Return outside of a function.
+(standard_in) 555: syntax error
+(standard_in) 555: illegal character: ^@
+(standard_in) 555: illegal character: ^@
+(standard_in) 555: illegal character: \177
+(standard_in) 555: illegal character: \377
+(standard_in) 555: illegal character: _
+(standard_in) 555: illegal character: _
+(standard_in) 559: illegal character: _
+(standard_in) 561: Return outside of a function.
+(standard_in) 565: syntax error
+(standard_in) 565: syntax error
+(standard_in) 566: illegal character: \222
+(standard_in) 566: syntax error
+(standard_in) 568: Return outside of a function.
+(standard_in) 572: Return outside of a function.
+(standard_in) 577: syntax error
+(standard_in) 580: syntax error
+(standard_in) 580: syntax error
+(standard_in) 584: illegal character: ^^
+(standard_in) 587: illegal character: |
+(standard_in) 587: syntax error
+(standard_in) 589: illegal character: \206
+(standard_in) 589: syntax error
+(standard_in) 595: Return outside of a function.
+(standard_in) 598: syntax error
+(standard_in) 598: syntax error
+(standard_in) 600: Return outside of a function.
+(standard_in) 603: syntax error
+(standard_in) 603: Return outside of a function.
+(standard_in) 607: syntax error
+(standard_in) 607: syntax error
+(standard_in) 610: Return outside of a function.
+(standard_in) 610: illegal character: _
+(standard_in) 610: syntax error
+(standard_in) 617: syntax error
+(standard_in) 619: illegal character: \377
+(standard_in) 619: illegal character: \177
+(standard_in) 619: illegal character: \377
+(standard_in) 619: illegal character: \377
+(standard_in) 619: illegal character: _
+(standard_in) 622: Return outside of a function.
+(standard_in) 625: syntax error
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 635: illegal character: ^R
+(standard_in) 638: syntax error
+(standard_in) 638: syntax error
+(standard_in) 640: syntax error
+(standard_in) 641: Return outside of a function.
+(standard_in) 641: syntax error
+(standard_in) 641: illegal character: ^P
+(standard_in) 645: Return outside of a function.
+(standard_in) 645: syntax error
+(standard_in) 647: illegal character: ^P
+(standard_in) 647: syntax error
+(standard_in) 649: syntax error
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: illegal character: \303
+(standard_in) 653: syntax error
+(standard_in) 653: illegal character: ^@
+(standard_in) 653: illegal character: ^B
+(standard_in) 656: illegal character: ^A
+(standard_in) 656: syntax error
+(standard_in) 661: syntax error
+(standard_in) 662: syntax error
+(standard_in) 665: illegal character: ^@
+(standard_in) 665: syntax error
+(standard_in) 665: illegal character: ^@
+(standard_in) 665: illegal character: ^P
+(standard_in) 670: syntax error
+(standard_in) 670: illegal character: ^@
+(standard_in) 670: illegal character: ^@
+(standard_in) 670: illegal character: ^@
+(standard_in) 671: syntax error
+(standard_in) 672: illegal character: ^_
+(standard_in) 672: syntax error
+(standard_in) 674: illegal character: ^@
+(standard_in) 674: syntax error
+(standard_in) 676: illegal character: \325
+(standard_in) 677: syntax error
+(standard_in) 678: illegal character: ^@
+(standard_in) 678: illegal character: ^@
+(standard_in) 678: illegal character: ^D
+(standard_in) 678: illegal character: ^@
+(standard_in) 678: syntax error
+(standard_in) 680: syntax error
+(standard_in) 688: syntax error
+(standard_in) 689: illegal character: @
+(standard_in) 689: syntax error
+(standard_in) 689: illegal character: ^@
+(standard_in) 689: illegal character: ^A
+(standard_in) 690: illegal character: ^B
+(standard_in) 690: illegal character: ^@
+(standard_in) 690: syntax error
+(standard_in) 693: illegal character: ^@
+(standard_in) 693: illegal character: ^@
+(standard_in) 693: illegal character: ^@
+(standard_in) 693: illegal character: ^@
+(standard_in) 693: syntax error
+(standard_in) 696: illegal character: ^Z
+(standard_in) 696: syntax error
+(standard_in) 698: illegal character: ^P
+(standard_in) 698: illegal character: ^@
+(standard_in) 698: syntax error
+(standard_in) 699: syntax error
+(standard_in) 701: illegal character: ^@
+(standard_in) 701: illegal character: ^A
+(standard_in) 701: syntax error
+(standard_in) 720: illegal character: ^@
+(standard_in) 720: illegal character: ^A
+(standard_in) 720: illegal character: ^@
+(standard_in) 720: illegal character: ^@
+(standard_in) 720: syntax error
+(standard_in) 721: illegal character: ^E
+(standard_in) 721: illegal character: \377
+(standard_in) 721: illegal character: \377
+(standard_in) 721: illegal character: ^E
+(standard_in) 721: syntax error
+(standard_in) 724: illegal character: ^T
+(standard_in) 724: illegal character: ^T
+(standard_in) 724: syntax error
+(standard_in) 729: illegal character: ^@
+(standard_in) 729: illegal character: ^A
+(standard_in) 729: syntax error
+(standard_in) 729: illegal character: ^@
+(standard_in) 729: illegal character: ^@
+(standard_in) 729: illegal character: \200
+(standard_in) 729: illegal character: ^@
+(standard_in) 730: illegal character: :
+(standard_in) 730: syntax error
+(standard_in) 737: illegal character: \201
+(standard_in) 737: illegal character: _
+(standard_in) 737: illegal character: ^P
+(standard_in) 737: syntax error
+(standard_in) 738: illegal character: \206
+(standard_in) 739: illegal character: ^@
+(standard_in) 739: illegal character: \200
+(standard_in) 739: syntax error
+(standard_in) 741: illegal character: \350
+(standard_in) 741: illegal character: ^C
+(standard_in) 741: syntax error
+(standard_in) 742: illegal character: ^W
+(standard_in) 745: illegal character: \
+(standard_in) 748: syntax error
+(standard_in) 752: syntax error
+(standard_in) 754: illegal character: ^Q
+(standard_in) 754: syntax error
+(standard_in) 756: illegal character: \302
+(standard_in) 756: syntax error
+(standard_in) 756: illegal character: ^@
+(standard_in) 756: illegal character: ^A
+(standard_in) 756: illegal character: ^@
+(standard_in) 756: illegal character: ^@
+(standard_in) 758: illegal character: ^W
+(standard_in) 758: syntax error
+(standard_in) 759: syntax error
+(standard_in) 759: illegal character: ?
+(standard_in) 760: illegal character: ^_
+(standard_in) 760: syntax error
+(standard_in) 761: illegal character: ^P
+(standard_in) 761: syntax error
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: \245
+(standard_in) 761: illegal character: ^@
+(standard_in) 761: illegal character: \177
+(standard_in) 762: illegal character: $
+(standard_in) 762: syntax error
+(standard_in) 762: illegal character: ^M
+(standard_in) 765: illegal character: _
+(standard_in) 765: syntax error
+(standard_in) 765: illegal character: ^P
+(standard_in) 766: illegal character: ^@
+(standard_in) 766: illegal character: ^@
+(standard_in) 766: illegal character: ^@
+(standard_in) 766: syntax error
+(standard_in) 770: syntax error
+(standard_in) 776: syntax error
+(standard_in) 777: syntax error
+(standard_in) 778: syntax error
+(standard_in) 779: syntax error
+(standard_in) 779: Return outside of a function.
+(standard_in) 780: illegal character: \377
+(standard_in) 780: syntax error
+(standard_in) 780: syntax error
+(standard_in) 783: Return outside of a function.
+(standard_in) 789: syntax error
+(standard_in) 794: illegal character: \
+(standard_in) 794: Return outside of a function.
+(standard_in) 794: syntax error
+(standard_in) 805: syntax error
+(standard_in) 805: illegal character: \214
+(standard_in) 812: syntax error
+(standard_in) 812: Return outside of a function.
+(standard_in) 814: Return outside of a function.
+(standard_in) 819: syntax error
+(standard_in) 819: syntax error
+(standard_in) 820: syntax error
+(standard_in) 824: illegal character: \200
+(standard_in) 824: syntax error
+(standard_in) 825: syntax error
+(standard_in) 825: illegal character: ^D
+(standard_in) 825: illegal character: ^@
+(standard_in) 827: Return outside of a function.
+(standard_in) 828: syntax error
+(standard_in) 830: syntax error
+(standard_in) 831: syntax error
+(standard_in) 839: Return outside of a function.
+(standard_in) 840: illegal character: \205
+(standard_in) 843: syntax error
+(standard_in) 847: syntax error
+(standard_in) 847: syntax error
+(standard_in) 848: syntax error
+(standard_in) 848: syntax error
+(standard_in) 848: syntax error
+(standard_in) 852: illegal character: \372
+(standard_in) 852: illegal character: ^@
+(standard_in) 852: illegal character: ^@
+(standard_in) 852: illegal character: \372
+(standard_in) 852: syntax error
+(standard_in) 852: illegal character: `
+(standard_in) 852: syntax error
+(standard_in) 856: syntax error
+(standard_in) 864: syntax error
+(standard_in) 864: syntax error
+(standard_in) 867: Return outside of a function.
+(standard_in) 868: Return outside of a function.
+(standard_in) 871: Return outside of a function.
+(standard_in) 872: syntax error
+(standard_in) 872: syntax error
+(standard_in) 875: Return outside of a function.
+(standard_in) 880: Return outside of a function.
+(standard_in) 881: Return outside of a function.
+(standard_in) 882: Return outside of a function.
+(standard_in) 882: syntax error
+(standard_in) 883: syntax error
+(standard_in) 883: Return outside of a function.
+(standard_in) 885: Return outside of a function.
+(standard_in) 887: syntax error
+(standard_in) 891: Return outside of a function.
+(standard_in) 892: syntax error
+(standard_in) 895: syntax error
+(standard_in) 897: syntax error
+(standard_in) 898: illegal character: \377
+(standard_in) 898: syntax error
+Runtime error (func=(main), adr=6): Function int not defined.
+(standard_in) 900: Return outside of a function.
+(standard_in) 901: Return outside of a function.
+(standard_in) 907: Return outside of a function.
+(standard_in) 908: syntax error
+(standard_in) 911: syntax error
+(standard_in) 912: illegal character: \362
+(standard_in) 912: Break outside a for/while
+(standard_in) 913: syntax error
+(standard_in) 916: illegal character: ^@
+(standard_in) 916: illegal character: ^D
+(standard_in) 916: syntax error
+(standard_in) 916: Return outside of a function.
+(standard_in) 917: syntax error
+(standard_in) 918: illegal character: ^T
+(standard_in) 919: illegal character: \177
+Runtime error (func=(main), adr=6): Function fastintroot_ not defined.
+(standard_in) 922: illegal character: ^P
+(standard_in) 924: Return outside of a function.
+(standard_in) 924: syntax error
+Runtime error (func=(main), adr=24): Function fastfracpow_ not defined.
+(standard_in) 930: Return outside of a function.
+(standard_in) 931: syntax error
+(standard_in) 943: illegal character: \177
+(standard_in) 947: illegal character: ^H
+(standard_in) 947: illegal character: \
+(standard_in) 948: syntax error
+(standard_in) 960: illegal character: ^@
+(standard_in) 960: syntax error
+(standard_in) 962: illegal character: ^Y
+(standard_in) 962: syntax error
+(standard_in) 966: illegal character: \177
+(standard_in) 966: illegal character: ^@
+(standard_in) 966: syntax error
+(standard_in) 970: illegal character: ^@
+(standard_in) 970: illegal character: ^A
+(standard_in) 970: illegal character: ^@
+(standard_in) 970: illegal character: ^@
+(standard_in) 971: syntax error
+(standard_in) 975: syntax error
+(standard_in) 975: syntax error
+(standard_in) 976: syntax error
+(standard_in) 978: illegal character: ^B
+(standard_in) 978: syntax error
+(standard_in) 979: Return outside of a function.
+(standard_in) 980: Return outside of a function.
+(standard_in) 984: illegal character: \371
+(standard_in) 984: syntax error
+(standard_in) 984: syntax error
+(standard_in) 984: illegal character: \226
+(standard_in) 987: syntax error
+(standard_in) 988: syntax error
+(standard_in) 988: illegal character: \177
+(standard_in) 988: illegal character: \377
+(standard_in) 988: syntax error
+(standard_in) 989: illegal character: ^W
+(standard_in) 989: illegal character: \345
+(standard_in) 990: illegal character: \350
+(standard_in) 990: illegal character: ^C
+(standard_in) 994: illegal character: ^S
+(standard_in) 996: Return outside of a function.
+(standard_in) 998: syntax error
+(standard_in) 998: illegal character: ^@
+(standard_in) 998: illegal character: \200
+(standard_in) 998: illegal character: \377
+(standard_in) 998: illegal character: \377
+(standard_in) 998: Return outside of a function.
+(standard_in) 999: syntax error
+(standard_in) 1000: Return outside of a function.
+(standard_in) 1004: illegal character: ^T
+(standard_in) 1005: illegal character: \177
+(standard_in) 1008: illegal character: ^P
+(standard_in) 1010: Return outside of a function.
+Runtime error (func=(main), adr=24): Function fastfracpow_ not defined.
+(standard_in) 1016: Return outside of a function.
+(standard_in) 1017: syntax error
+(standard_in) 1029: illegal character: \177
+(standard_in) 1033: illegal character: \
+(standard_in) 1033: syntax error
+(standard_in) 1035: syntax error
+(standard_in) 1035: syntax error
+(standard_in) 1035: illegal character: \
+(standard_in) 1037: illegal character: \
+(standard_in) 1038: illegal character: \
+(standard_in) 1043: illegal character: :
+(standard_in) 1043: illegal character: :
+(standard_in) 1043: illegal character: :
+(standard_in) 1043: illegal character: \
+(standard_in) 1047: illegal character: :
+(standard_in) 1047: syntax error
+(standard_in) 1047: illegal character: \
+(standard_in) 1049: syntax error
+(standard_in) 1050: illegal character: ^C
+(standard_in) 1050: syntax error
+(standard_in) 1051: syntax error
+(standard_in) 1055: illegal character: ^_
+(standard_in) 1056: syntax error
+(standard_in) 1057: syntax error
+(standard_in) 1058: syntax error
+(standard_in) 1060: NUL character in string.
+(standard_in) 1069: syntax error
+(standard_in) 1071: syntax error
+(standard_in) 1076: syntax error
+(standard_in) 1076: syntax error
+(standard_in) 1078: illegal character: ^@
+(standard_in) 1078: illegal character: ^A
+(standard_in) 1078: syntax error
+(standard_in) 1079: illegal character: \177
+(standard_in) 1079: illegal character: ^@
+(standard_in) 1079: illegal character: ^@
+(standard_in) 1079: illegal character: ^@
+(standard_in) 1079: syntax error
+(standard_in) 1083: syntax error
+(standard_in) 1084: syntax error
+(standard_in) 1085: illegal character: \377
+(standard_in) 1085: syntax error
+(standard_in) 1085: syntax error
+(standard_in) 1088: Return outside of a function.
+(standard_in) 1093: illegal character: \350
+(standard_in) 1093: illegal character: ^C
+(standard_in) 1093: illegal character: ^@
+(standard_in) 1093: illegal character: ^@
+(standard_in) 1104: syntax error
+(standard_in) 1108: illegal character: \256
+(standard_in) 1108: syntax error
+(standard_in) 1110: syntax error
+(standard_in) 1110: syntax error
+(standard_in) 1115: illegal character: \322
+(standard_in) 1115: syntax error
+(standard_in) 1115: syntax error
+(standard_in) 1121: syntax error
+(standard_in) 1128: illegal character: $
+(standard_in) 1133: illegal character: @
+(standard_in) 1139: illegal character: \177
+(standard_in) 1141: syntax error
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1147: illegal character: \340
+(standard_in) 1153: illegal character: \211
+(standard_in) 1153: syntax error
+(standard_in) 1155: illegal character: \362
+(standard_in) 1155: Break outside a for/while
+(standard_in) 1157: syntax error
+(standard_in) 1157: syntax error
+(standard_in) 1163: illegal character: ^U
+(standard_in) 1163: syntax error
+(standard_in) 1163: syntax error
+(standard_in) 1165: syntax error
+(standard_in) 1167: illegal character: \200
+(standard_in) 1167: syntax error
+(standard_in) 1168: illegal character: ^@
+(standard_in) 1168: illegal character: ^@
+(standard_in) 1168: illegal character: ^@
+(standard_in) 1168: illegal character: ^P
+(standard_in) 1168: syntax error
+(standard_in) 1176: syntax error
+(standard_in) 1176: syntax error
+(standard_in) 1179: syntax error
+(standard_in) 1179: syntax error
+(standard_in) 1190: syntax error
+(standard_in) 1190: illegal character: :
+(standard_in) 1190: illegal character: \
+(standard_in) 1216: NUL character in string.
+(standard_in) 1216: illegal character: :
+(standard_in) 1221: syntax error
+(standard_in) 1221: illegal character: ^@
+(standard_in) 1221: illegal character: \200
+(standard_in) 1221: illegal character: \377
+(standard_in) 1221: illegal character: \377
+(standard_in) 1222: syntax error
+(standard_in) 1223: Return outside of a function.
+(standard_in) 1223: syntax error
+(standard_in) 1227: illegal character: ^T
+(standard_in) 1228: illegal character: \177
+(standard_in) 1231: illegal character: ^P
+(standard_in) 1233: Return outside of a function.
+Runtime error (func=(main), adr=24): Function fastfracpow_ not defined.
+(standard_in) 1239: Return outside of a function.
+(standard_in) 1240: syntax error
+(standard_in) 1252: illegal character: \177
+(standard_in) 1256: illegal character: \
+(standard_in) 1257: syntax error
+(standard_in) 1270: syntax error
+(standard_in) 1271: Return outside of a function.
+(standard_in) 1272: illegal character: \340
+(standard_in) 1272: Return outside of a function.
+(standard_in) 1272: syntax error
+(standard_in) 1273: Return outside of a function.
+(standard_in) 1274: syntax error
+(standard_in) 1274: illegal character: \
+(standard_in) 1274: illegal character: :
+(standard_in) 1274: syntax error
+(standard_in) 1274: syntax error
+(standard_in) 1274: illegal character: \
+(standard_in) 1289: NUL character in string.
+(standard_in) 1289: illegal character: :
+(standard_in) 1291: illegal character: \203
+(standard_in) 1295: syntax error
+(standard_in) 1295: illegal character: \214
+(standard_in) 1302: syntax error
+(standard_in) 1302: Return outside of a function.
+(standard_in) 1304: Return outside of a function.
+(standard_in) 1304: syntax error
+(standard_in) 1310: syntax error
+(standard_in) 1314: illegal character: \200
+(standard_in) 1315: syntax error
+(standard_in) 1315: illegal character: ^D
+(standard_in) 1315: illegal character: ^@
+(standard_in) 1317: Return outside of a function.
+(standard_in) 1318: syntax error
+(standard_in) 1320: syntax error
+(standard_in) 1321: syntax error
+(standard_in) 1329: Return outside of a function.
+(standard_in) 1330: illegal character: \205
+(standard_in) 1333: syntax error
+(standard_in) 1337: illegal character: ^]
+(standard_in) 1337: syntax error
+(standard_in) 1337: syntax error
+(standard_in) 1338: syntax error
+(standard_in) 1338: syntax error
+(standard_in) 1338: syntax error
+(standard_in) 1341: syntax error
+Runtime error (func=makeomega, adr=41): Parameter number mismatch
+(standard_in) 1380: illegal character: \205
+(standard_in) 1380: syntax error
+(standard_in) 1380: illegal character: \377
+(standard_in) 1380: syntax error
+Runtime error (func=(main), adr=6): Function int not defined.
+(standard_in) 1382: Return outside of a function.
+(standard_in) 1383: Return outside of a function.
+(standard_in) 1389: Return outside of a function.
+(standard_in) 1390: syntax error
+(standard_in) 1393: syntax error
+(standard_in) 1394: illegal character: \362
+(standard_in) 1394: Break outside a for/while
+(standard_in) 1395: syntax error
+(standard_in) 1398: illegal character: ^@
+(standard_in) 1398: illegal character: ^D
+(standard_in) 1398: syntax error
+(standard_in) 1398: Return outside of a function.
+(standard_in) 1399: illegal character: ^@
+(standard_in) 1399: illegal character: ^A
+(standard_in) 1399: Return outside of a function.
+(standard_in) 1399: syntax error
+(standard_in) 1402: illegal character: ^@
+(standard_in) 1402: syntax error
+(standard_in) 1404: illegal character: ^Y
+(standard_in) 1404: syntax error
+(standard_in) 1408: illegal character: \177
+(standard_in) 1408: illegal character: ^@
+(standard_in) 1408: syntax error
+(standard_in) 1412: illegal character: ^@
+(standard_in) 1412: illegal character: ^A
+(standard_in) 1412: illegal character: ^@
+(standard_in) 1412: illegal character: ^@
+(standard_in) 1413: syntax error
+(standard_in) 1417: syntax error
+(standard_in) 1417: syntax error
+(standard_in) 1418: syntax error
+(standard_in) 1420: illegal character: ^B
+(standard_in) 1420: syntax error
+(standard_in) 1421: Return outside of a function.
+(standard_in) 1422: Return outside of a function.
+(standard_in) 1426: illegal character: \371
+(standard_in) 1426: syntax error
+(standard_in) 1426: syntax error
+(standard_in) 1426: illegal character: \226
+(standard_in) 1429: syntax error
+(standard_in) 1430: syntax error
+(standard_in) 1430: illegal character: \177
+(standard_in) 1430: illegal character: \377
+(standard_in) 1430: syntax error
+(standard_in) 1431: illegal character: ^W
+(standard_in) 1431: illegal character: \345
+(standard_in) 1432: illegal character: \350
+(standard_in) 1432: illegal character: ^C
+(standard_in) 1436: illegal character: ^S
+(standard_in) 1438: Return outside of a function.
+(standard_in) 1440: syntax error
+(standard_in) 1440: illegal character: ^@
+(standard_in) 1440: illegal character: \200
+(standard_in) 1440: illegal character: \377
+(standard_in) 1440: illegal character: \377
+(standard_in) 1440: Return outside of a function.
+(standard_in) 1441: syntax error
+(standard_in) 1442: Return outside of a function.
+(standard_in) 1446: illegal character: ^T
+(standard_in) 1447: illegal character: \177
+(standard_in) 1450: illegal character: ^P
+(standard_in) 1452: Return outside of a function.
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000054acd9 in incr_var (var_name=<optimized out>) at storage.c:816
+816		bc_add (var_ptr->v_value, _one_, &var_ptr->v_value, 0);
+#0  0x000000000054acd9 in incr_var (var_name=<optimized out>) at storage.c:816
+#1  0x000000000052dd3d in execute () at execute.c:317
+#2  0x000000000055169d in run_code () at util.c:295
+#3  0x000000000050f36f in yyparse () at bc.c:2695
+#4  0x000000000050c533 in main (argc=0x1, argv=<optimized out>) at main.c:260

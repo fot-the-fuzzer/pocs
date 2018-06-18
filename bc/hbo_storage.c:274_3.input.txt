@@ -1,0 +1,22 @@
+define aparts3r(*a__[],astart,aend,b__[],bstart,bend,c__[],cstart,cend) {
+  auto i,j;
+  .=asanerange2_();
+  if(cstart>cend){i=cstart;cstart=cend;cend=i}
+  if(cstart<0)cstart=0;
+  if(cend>max_array_)cend=max_array_;
+  i=0;
+  if(astart>0)for(j=astart;j<aend;j++)if(i++<=max_array_)a__[i]=a__[j];
+  for(j=bstart;j<bend;j++)if(i++<=max_array_)a__[i]=b__[j];
+  for(j=cstart;j<cend;j++)if(i++<=max_array_)a__[i]=c__[j];
+}
+
+  auto i;
+  .=asanerange2_();
+  if(pos>aend-astart)return aappendr(a__[],aend,b__[],bstart,bend);
+  if(pos<=0){
+    .=aappendr(b__[],bend,a__[],astart,aend);
+  r(a__[],b__[],bstart,aend-astart+bend)
+    return 0;
+  }
+  .=aparts3r(a__[],astart,astart+pos-1,b__[],bstart,bend,a__[],astart+pos+aend);
+}

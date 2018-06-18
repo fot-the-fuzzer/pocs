@@ -1,0 +1,75 @@
+Undefined command: "".  Try "help".
+(standard_in) 75: syntax error
+(standard_in) 180: syntax error
+(standard_in) 183: Return outside of a function.
+(standard_in) 183: syntax error
+(standard_in) 184: syntax error
+(standard_in) 184: syntax error
+(standard_in) 186: Return outside of a function.
+(standard_in) 191: illegal character: \276
+(standard_in) 194: Return outside of a function.
+(standard_in) 399: syntax error
+(standard_in) 400: syntax error
+(standard_in) 402: Return outside of a function.
+(standard_in) 404: syntax error
+(standard_in) 467: syntax error
+(standard_in) 469: Return outside of a function.
+(standard_in) 473: Return outside of a function.
+Runtime error (func=(main), adr=34): Parameter type mismatch, parameter cend.
+=================================================================
+==20248==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000011928 at pc 0x00000054d2de bp 0x7fffffffa9f0 sp 0x7fffffffa9e8
+READ of size 8 at 0x602000011928 thread T0
+    #0 0x54d2dd in pop /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:274:7
+    #1 0x54d2dd in process_params /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:1054
+    #2 0x52cdb4 in execute /home/hongxu/FOT/test_c/bc-1.07/bc/execute.c:157:2
+    #3 0x55169c in run_code /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:295:2
+    #4 0x50f36e in yyparse /home/hongxu/FOT/test_c/bc-1.07/bc/bc.c:2695:3
+    #5 0x50c532 in main /home/hongxu/FOT/test_c/bc-1.07/bc/main.c:260:3
+    #6 0x7ffff6a1bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x41c809 in _start (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x41c809)
+
+0x602000011928 is located 8 bytes to the left of 16-byte region [0x602000011930,0x602000011940)
+allocated by thread T0 here:
+    #0 0x4d1e60 in malloc (/home/hongxu/FOT/test_c/bc-1.07/install/bin/bc+0x4d1e60)
+    #1 0x54dfbc in bc_malloc /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:652:18
+    #2 0x54dfbc in nextarg /home/hongxu/FOT/test_c/bc-1.07/bc/util.c:58
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/test_c/bc-1.07/bc/storage.c:274:7 in pop
+Shadow bytes around the buggy address:
+  0x0c047fffa2d0: fa fa 04 fa fa fa fd fd fa fa 07 fa fa fa 07 fa
+  0x0c047fffa2e0: fa fa fd fd fa fa 05 fa fa fa 05 fa fa fa fd fd
+  0x0c047fffa2f0: fa fa fd fa fa fa fd fd fa fa fd fa fa fa fd fd
+  0x0c047fffa300: fa fa 00 01 fa fa 00 00 fa fa 00 00 fa fa 00 00
+  0x0c047fffa310: fa fa 00 00 fa fa 00 00 fa fa 00 00 fa fa 00 00
+=>0x0c047fffa320: fa fa 00 00 fa[fa]00 00 fa fa 00 00 fa fa 00 00
+  0x0c047fffa330: fa fa fd fd fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fffa340: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fffa350: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fffa360: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fffa370: fa fa fd fa fa fa fd fd fa fa fd fa fa fa fd fd
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==20248==ABORTING
+No stack.
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 20248) exited with code 027]

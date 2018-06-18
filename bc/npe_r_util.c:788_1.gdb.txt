@@ -1,0 +1,69 @@
+Undefined command: "".  Try "help".
+(standard_in) 3: illegal character: ^Q
+(standard_in) 6: syntax error
+(standard_in) 6: illegal character: \215
+(standard_in) 8: syntax error
+(standard_in) 9: illegal character: ^A
+(standard_in) 9: syntax error
+(standard_in) 9: illegal character: ^W
+(standard_in) 9: syntax error
+(standard_in) 9: syntax error
+(standard_in) 9: illegal character: ^P
+(standard_in) 9: illegal character: ^@
+(standard_in) 11: syntax error
+(standard_in) 12: syntax error
+(standard_in) 12: illegal character: ^[
+(standard_in) 12: illegal character: \377
+(standard_in) 12: illegal character: \177
+(standard_in) 12: illegal character: ^@
+(standard_in) 12: illegal character: ^@
+(standard_in) 12: illegal character: \177
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \232
+(standard_in) 12: illegal character: \177
+(standard_in) 12: illegal character: ^@
+(standard_in) 12: illegal character: ^@
+(standard_in) 12: illegal character: ^@
+(standard_in) 12: illegal character: \177
+(standard_in) 14: syntax error
+(standard_in) 14: illegal character: \275
+(standard_in) 14: syntax error
+(standard_in) 20: illegal character: \201
+(standard_in) 21: syntax error
+(standard_in) 23: illegal character: ^D
+(standard_in) 23: illegal character: ^@
+(standard_in) 23: syntax error
+(standard_in) 25: syntax error
+(standard_in) 25: illegal character: ^P
+(standard_in) 25: illegal character: ^@
+(standard_in) 25: syntax error
+Runtime error (func=(main), adr=9): Function srand not defined.
+(standard_in) 28: illegal character: ^P
+(standard_in) 28: illegal character: ^@
+(standard_in) 28: illegal character: _
+(standard_in) 28: syntax error
+Runtime error (func=(main), adr=8): 
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00000000004ed002 in __sanitizer::internal_strlen(char const*) ()
+#0  0x00000000004ed002 in __sanitizer::internal_strlen(char const*) ()
+#1  0x0000000000476c43 in printf_common(void*, char const*, __va_list_tag*) ()
+#2  0x000000000047769c in vfprintf ()
+#3  0x000000000055526b in rt_error (mesg=<optimized out>) at util.c:788
+#4  0x000000000054c9b3 in process_params (progctr=0x142ee68 <pc>, func=<optimized out>) at storage.c:1047
+#5  0x000000000052cdb5 in execute () at execute.c:157
+#6  0x000000000055169d in run_code () at util.c:295
+#7  0x000000000050f36f in yyparse () at bc.c:2695
+#8  0x000000000050c533 in main (argc=0x1, argv=<optimized out>) at main.c:260

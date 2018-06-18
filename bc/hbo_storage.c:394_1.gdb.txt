@@ -1,0 +1,1034 @@
+Undefined command: "".  Try "help".
+warning: /tmp/gdb_target_arch.gdb: No such file or directory
+(standard_in) 1: syntax error
+(standard_in) 1: illegal character: :
+(standard_in) 2: illegal character: :
+(standard_in) 2: illegal character: :
+(standard_in) 2: syntax error
+(standard_in) 3: illegal character: :
+(standard_in) 3: syntax error
+(standard_in) 3: illegal character: :
+(standard_in) 4: syntax error
+(standard_in) 4: illegal character: :
+(standard_in) 4: illegal character: :
+(standard_in) 5: syntax error
+(standard_in) 5: illegal character: :
+(standard_in) 6: syntax error
+(standard_in) 6: illegal character: :
+(standard_in) 7: syntax error
+(standard_in) 7: illegal character: :
+(standard_in) 8: syntax error
+(standard_in) 8: illegal character: :
+(standard_in) 9: syntax error
+(standard_in) 9: illegal character: :
+(standard_in) 10: syntax error
+(standard_in) 10: illegal character: :
+(standard_in) 11: syntax error
+(standard_in) 11: illegal character: :
+(standard_in) 11: illegal character: :
+(standard_in) 11: illegal character: _
+(standard_in) 12: syntax error
+(standard_in) 12: illegal character: :
+(standard_in) 13: syntax error
+(standard_in) 13: illegal character: :
+(standard_in) 14: syntax error
+(standard_in) 14: illegal character: :
+(standard_in) 15: syntax error
+(standard_in) 15: illegal character: :
+(standard_in) 16: syntax error
+(standard_in) 16: illegal character: :
+(standard_in) 17: syntax error
+(standard_in) 17: illegal character: :
+(standard_in) 17: syntax error
+(standard_in) 18: syntax error
+(standard_in) 18: illegal character: :
+(standard_in) 19: syntax error
+(standard_in) 19: illegal character: :
+(standard_in) 20: syntax error
+(standard_in) 20: illegal character: :
+(standard_in) 21: syntax error
+(standard_in) 21: illegal character: :
+(standard_in) 22: syntax error
+(standard_in) 22: illegal character: :
+(standard_in) 22: syntax error
+(standard_in) 23: syntax error
+(standard_in) 23: illegal character: :
+(standard_in) 23: syntax error
+(standard_in) 24: syntax error
+(standard_in) 24: illegal character: :
+(standard_in) 25: syntax error
+(standard_in) 25: illegal character: :
+(standard_in) 26: syntax error
+(standard_in) 26: illegal character: :
+(standard_in) 27: syntax error
+(standard_in) 27: illegal character: :
+(standard_in) 28: syntax error
+(standard_in) 28: illegal character: :
+(standard_in) 28: illegal character: :
+(standard_in) 28: illegal character: _
+(standard_in) 29: syntax error
+(standard_in) 29: illegal character: :
+(standard_in) 30: syntax error
+(standard_in) 30: illegal character: :
+(standard_in) 31: syntax error
+(standard_in) 31: illegal character: :
+(standard_in) 32: syntax error
+(standard_in) 32: illegal character: :
+(standard_in) 33: syntax error
+(standard_in) 33: illegal character: :
+(standard_in) 33: illegal character: :
+(standard_in) 33: illegal character: @
+(standard_in) 34: syntax error
+(standard_in) 34: illegal character: :
+(standard_in) 34: illegal character: :
+(standard_in) 34: illegal character: :
+(standard_in) 35: syntax error
+(standard_in) 35: illegal character: :
+(standard_in) 36: syntax error
+(standard_in) 36: illegal character: :
+(standard_in) 37: syntax error
+(standard_in) 37: illegal character: :
+(standard_in) 37: illegal character: :
+(standard_in) 37: illegal character: \
+(standard_in) 38: syntax error
+(standard_in) 38: illegal character: :
+(standard_in) 39: syntax error
+(standard_in) 39: illegal character: :
+(standard_in) 39: illegal character: :
+(standard_in) 39: illegal character: @
+(standard_in) 40: syntax error
+(standard_in) 40: illegal character: :
+(standard_in) 41: syntax error
+(standard_in) 41: illegal character: :
+(standard_in) 41: illegal character: :
+(standard_in) 41: illegal character: \
+(standard_in) 42: syntax error
+(standard_in) 42: illegal character: :
+(standard_in) 43: syntax error
+(standard_in) 43: illegal character: :
+(standard_in) 44: syntax error
+(standard_in) 44: illegal character: :
+(standard_in) 45: syntax error
+(standard_in) 45: illegal character: :
+(standard_in) 46: syntax error
+(standard_in) 46: illegal character: :
+(standard_in) 46: illegal character: :
+(standard_in) 46: illegal character: '
+(standard_in) 47: syntax error
+(standard_in) 47: illegal character: :
+(standard_in) 47: illegal character: :
+(standard_in) 47: illegal character: $
+(standard_in) 48: syntax error
+(standard_in) 48: illegal character: :
+(standard_in) 49: syntax error
+(standard_in) 49: illegal character: :
+(standard_in) 50: syntax error
+(standard_in) 50: illegal character: :
+(standard_in) 50: illegal character: :
+(standard_in) 50: illegal character: \
+(standard_in) 51: syntax error
+(standard_in) 51: illegal character: :
+(standard_in) 52: syntax error
+(standard_in) 52: illegal character: :
+(standard_in) 52: illegal character: :
+(standard_in) 53: syntax error
+(standard_in) 53: illegal character: :
+(standard_in) 53: illegal character: :
+(standard_in) 53: illegal character: \
+(standard_in) 54: syntax error
+(standard_in) 54: illegal character: :
+(standard_in) 54: illegal character: :
+(standard_in) 54: illegal character: \
+(standard_in) 55: syntax error
+(standard_in) 55: illegal character: :
+(standard_in) 55: illegal character: :
+(standard_in) 55: illegal character: \
+(standard_in) 56: syntax error
+(standard_in) 56: illegal character: :
+(standard_in) 57: syntax error
+(standard_in) 57: illegal character: :
+(standard_in) 57: illegal character: :
+(standard_in) 57: illegal character: _
+(standard_in) 58: syntax error
+(standard_in) 58: illegal character: :
+(standard_in) 59: syntax error
+(standard_in) 59: illegal character: :
+(standard_in) 60: syntax error
+(standard_in) 60: illegal character: :
+(standard_in) 60: illegal character: :
+(standard_in) 60: illegal character: \
+(standard_in) 61: syntax error
+(standard_in) 61: illegal character: :
+(standard_in) 61: illegal character: :
+(standard_in) 61: illegal character: @
+(standard_in) 62: syntax error
+(standard_in) 62: illegal character: :
+(standard_in) 62: illegal character: :
+(standard_in) 62: illegal character: @
+(standard_in) 63: syntax error
+(standard_in) 63: illegal character: :
+(standard_in) 63: illegal character: :
+(standard_in) 63: illegal character: \
+(standard_in) 64: syntax error
+(standard_in) 64: illegal character: :
+(standard_in) 64: illegal character: :
+(standard_in) 64: illegal character: ?
+(standard_in) 65: syntax error
+(standard_in) 65: illegal character: :
+(standard_in) 66: syntax error
+(standard_in) 66: illegal character: :
+(standard_in) 66: illegal character: :
+(standard_in) 66: illegal character: :
+(standard_in) 67: syntax error
+(standard_in) 67: illegal character: :
+(standard_in) 68: syntax error
+(standard_in) 68: illegal character: :
+(standard_in) 68: illegal character: :
+(standard_in) 68: illegal character: \
+(standard_in) 69: syntax error
+(standard_in) 69: illegal character: :
+(standard_in) 70: syntax error
+(standard_in) 70: illegal character: :
+(standard_in) 70: illegal character: :
+(standard_in) 70: illegal character: \
+(standard_in) 71: syntax error
+(standard_in) 71: illegal character: :
+(standard_in) 71: illegal character: :
+(standard_in) 71: illegal character: @
+(standard_in) 72: syntax error
+(standard_in) 72: illegal character: :
+(standard_in) 72: illegal character: :
+(standard_in) 72: illegal character: @
+(standard_in) 73: syntax error
+(standard_in) 73: illegal character: :
+(standard_in) 73: illegal character: :
+(standard_in) 73: illegal character: \
+(standard_in) 74: syntax error
+(standard_in) 74: illegal character: :
+(standard_in) 75: syntax error
+(standard_in) 75: illegal character: :
+(standard_in) 76: syntax error
+(standard_in) 76: illegal character: :
+(standard_in) 77: syntax error
+(standard_in) 77: illegal character: :
+(standard_in) 77: illegal character: :
+(standard_in) 78: syntax error
+(standard_in) 78: illegal character: :
+(standard_in) 79: syntax error
+(standard_in) 79: illegal character: :
+(standard_in) 79: illegal character: :
+(standard_in) 79: illegal character: \
+(standard_in) 80: syntax error
+(standard_in) 80: illegal character: :
+(standard_in) 81: syntax error
+(standard_in) 81: illegal character: :
+(standard_in) 82: syntax error
+(standard_in) 82: illegal character: :
+(standard_in) 82: illegal character: :
+(standard_in) 82: illegal character: \
+(standard_in) 83: syntax error
+(standard_in) 83: illegal character: :
+(standard_in) 83: illegal character: :
+(standard_in) 83: illegal character: \
+(standard_in) 84: syntax error
+(standard_in) 84: illegal character: :
+(standard_in) 84: illegal character: :
+(standard_in) 84: illegal character: \
+(standard_in) 85: syntax error
+(standard_in) 85: illegal character: :
+(standard_in) 85: illegal character: :
+(standard_in) 85: illegal character: @
+(standard_in) 86: syntax error
+(standard_in) 86: illegal character: :
+(standard_in) 87: syntax error
+(standard_in) 87: illegal character: :
+(standard_in) 87: illegal character: :
+(standard_in) 87: illegal character: \
+(standard_in) 88: syntax error
+(standard_in) 88: illegal character: :
+(standard_in) 88: illegal character: :
+(standard_in) 88: illegal character: \
+(standard_in) 89: syntax error
+(standard_in) 89: illegal character: :
+(standard_in) 89: illegal character: :
+(standard_in) 89: illegal character: @
+(standard_in) 90: syntax error
+(standard_in) 90: illegal character: :
+(standard_in) 91: syntax error
+(standard_in) 91: illegal character: :
+(standard_in) 91: illegal character: :
+(standard_in) 91: illegal character: \
+(standard_in) 92: syntax error
+(standard_in) 92: illegal character: :
+(standard_in) 92: illegal character: :
+(standard_in) 92: illegal character: \
+(standard_in) 93: syntax error
+(standard_in) 93: illegal character: :
+(standard_in) 94: syntax error
+(standard_in) 94: illegal character: :
+(standard_in) 94: illegal character: :
+(standard_in) 94: illegal character: @
+(standard_in) 95: syntax error
+(standard_in) 95: illegal character: :
+(standard_in) 95: illegal character: :
+(standard_in) 96: syntax error
+(standard_in) 96: illegal character: :
+(standard_in) 97: syntax error
+(standard_in) 97: illegal character: :
+(standard_in) 98: syntax error
+(standard_in) 98: illegal character: :
+(standard_in) 99: syntax error
+(standard_in) 99: illegal character: :
+(standard_in) 99: illegal character: :
+(standard_in) 99: illegal character: @
+(standard_in) 100: syntax error
+(standard_in) 100: illegal character: :
+(standard_in) 101: syntax error
+(standard_in) 101: illegal character: :
+(standard_in) 102: syntax error
+(standard_in) 102: illegal character: :
+(standard_in) 102: illegal character: :
+(standard_in) 102: illegal character: \
+(standard_in) 103: syntax error
+(standard_in) 103: illegal character: :
+(standard_in) 103: illegal character: :
+(standard_in) 103: illegal character: \
+(standard_in) 104: syntax error
+(standard_in) 104: illegal character: :
+(standard_in) 104: illegal character: :
+(standard_in) 104: illegal character: \
+(standard_in) 105: syntax error
+(standard_in) 105: illegal character: :
+(standard_in) 105: illegal character: :
+(standard_in) 105: illegal character: \
+(standard_in) 106: syntax error
+(standard_in) 106: illegal character: :
+(standard_in) 106: illegal character: :
+(standard_in) 106: illegal character: \
+(standard_in) 107: syntax error
+(standard_in) 107: illegal character: :
+(standard_in) 107: illegal character: :
+(standard_in) 107: illegal character: \
+(standard_in) 108: syntax error
+(standard_in) 108: illegal character: :
+(standard_in) 108: illegal character: :
+(standard_in) 108: illegal character: \
+(standard_in) 109: syntax error
+(standard_in) 109: illegal character: :
+(standard_in) 109: illegal character: :
+(standard_in) 109: illegal character: \
+(standard_in) 110: syntax error
+(standard_in) 110: illegal character: :
+(standard_in) 111: syntax error
+(standard_in) 111: illegal character: :
+(standard_in) 112: syntax error
+(standard_in) 112: illegal character: :
+(standard_in) 112: illegal character: :
+(standard_in) 112: illegal character: \
+(standard_in) 113: syntax error
+(standard_in) 113: illegal character: :
+(standard_in) 114: syntax error
+(standard_in) 114: illegal character: :
+(standard_in) 115: syntax error
+(standard_in) 115: illegal character: :
+(standard_in) 115: illegal character: :
+(standard_in) 115: illegal character: \
+(standard_in) 116: syntax error
+(standard_in) 116: illegal character: :
+(standard_in) 116: illegal character: :
+(standard_in) 116: illegal character: \
+(standard_in) 117: syntax error
+(standard_in) 117: illegal character: :
+(standard_in) 117: illegal character: :
+(standard_in) 117: illegal character: \
+(standard_in) 118: syntax error
+(standard_in) 118: illegal character: :
+(standard_in) 118: illegal character: :
+(standard_in) 118: illegal character: @
+(standard_in) 119: syntax error
+(standard_in) 119: illegal character: :
+(standard_in) 120: syntax error
+(standard_in) 120: illegal character: :
+(standard_in) 121: syntax error
+(standard_in) 121: illegal character: :
+(standard_in) 122: syntax error
+(standard_in) 122: illegal character: :
+(standard_in) 122: illegal character: :
+(standard_in) 122: illegal character: \
+(standard_in) 123: syntax error
+(standard_in) 123: illegal character: :
+(standard_in) 124: syntax error
+(standard_in) 124: illegal character: :
+(standard_in) 124: illegal character: :
+(standard_in) 125: syntax error
+(standard_in) 125: illegal character: :
+(standard_in) 125: illegal character: :
+(standard_in) 125: illegal character: @
+(standard_in) 126: syntax error
+(standard_in) 126: illegal character: :
+(standard_in) 126: illegal character: :
+(standard_in) 126: illegal character: @
+(standard_in) 127: syntax error
+(standard_in) 127: illegal character: :
+(standard_in) 127: illegal character: :
+(standard_in) 127: illegal character: @
+(standard_in) 128: syntax error
+(standard_in) 128: illegal character: :
+(standard_in) 129: syntax error
+(standard_in) 129: illegal character: :
+(standard_in) 129: illegal character: :
+(standard_in) 130: syntax error
+(standard_in) 130: illegal character: :
+(standard_in) 130: illegal character: :
+(standard_in) 130: illegal character: @
+(standard_in) 131: syntax error
+(standard_in) 131: illegal character: :
+(standard_in) 131: illegal character: :
+(standard_in) 131: illegal character: \
+(standard_in) 132: syntax error
+(standard_in) 132: illegal character: :
+(standard_in) 132: illegal character: :
+(standard_in) 132: illegal character: @
+(standard_in) 133: syntax error
+(standard_in) 133: illegal character: :
+(standard_in) 133: illegal character: :
+(standard_in) 133: illegal character: @
+(standard_in) 134: syntax error
+(standard_in) 134: illegal character: :
+(standard_in) 135: syntax error
+(standard_in) 135: illegal character: :
+(standard_in) 135: illegal character: :
+(standard_in) 136: syntax error
+(standard_in) 136: illegal character: :
+(standard_in) 137: syntax error
+(standard_in) 137: illegal character: :
+(standard_in) 137: illegal character: :
+(standard_in) 137: illegal character: `
+(standard_in) 138: syntax error
+(standard_in) 138: illegal character: :
+(standard_in) 138: illegal character: :
+(standard_in) 138: illegal character: _
+(standard_in) 139: syntax error
+(standard_in) 139: illegal character: :
+(standard_in) 139: illegal character: :
+(standard_in) 139: illegal character: @
+(standard_in) 140: syntax error
+(standard_in) 140: illegal character: :
+(standard_in) 140: illegal character: :
+(standard_in) 140: illegal character: \
+(standard_in) 141: syntax error
+(standard_in) 141: illegal character: :
+(standard_in) 142: syntax error
+(standard_in) 142: illegal character: :
+(standard_in) 143: syntax error
+(standard_in) 143: illegal character: :
+(standard_in) 143: illegal character: :
+(standard_in) 143: illegal character: @
+(standard_in) 144: syntax error
+(standard_in) 144: illegal character: :
+(standard_in) 144: illegal character: :
+(standard_in) 145: syntax error
+(standard_in) 145: illegal character: :
+(standard_in) 145: illegal character: :
+(standard_in) 145: illegal character: @
+(standard_in) 146: syntax error
+(standard_in) 146: illegal character: :
+(standard_in) 146: illegal character: :
+(standard_in) 146: illegal character: @
+(standard_in) 147: syntax error
+(standard_in) 147: illegal character: :
+(standard_in) 148: syntax error
+(standard_in) 148: illegal character: :
+(standard_in) 148: illegal character: :
+(standard_in) 148: illegal character: \
+(standard_in) 149: syntax error
+(standard_in) 149: illegal character: :
+(standard_in) 149: illegal character: :
+(standard_in) 149: illegal character: \
+(standard_in) 150: syntax error
+(standard_in) 150: illegal character: :
+(standard_in) 150: illegal character: :
+(standard_in) 150: illegal character: \
+(standard_in) 151: syntax error
+(standard_in) 151: illegal character: :
+(standard_in) 151: illegal character: :
+(standard_in) 151: illegal character: \
+(standard_in) 152: syntax error
+(standard_in) 152: illegal character: :
+(standard_in) 153: syntax error
+(standard_in) 153: illegal character: :
+(standard_in) 154: syntax error
+(standard_in) 154: illegal character: :
+(standard_in) 155: syntax error
+(standard_in) 155: illegal character: :
+(standard_in) 155: illegal character: :
+(standard_in) 156: syntax error
+(standard_in) 156: illegal character: :
+(standard_in) 157: syntax error
+(standard_in) 157: illegal character: :
+(standard_in) 158: syntax error
+(standard_in) 158: illegal character: :
+(standard_in) 158: illegal character: :
+(standard_in) 159: syntax error
+(standard_in) 159: illegal character: :
+(standard_in) 160: syntax error
+(standard_in) 160: illegal character: :
+(standard_in) 160: illegal character: :
+(standard_in) 161: syntax error
+(standard_in) 161: illegal character: :
+(standard_in) 161: illegal character: :
+(standard_in) 162: syntax error
+(standard_in) 162: illegal character: :
+(standard_in) 162: illegal character: :
+(standard_in) 163: syntax error
+(standard_in) 163: illegal character: :
+(standard_in) 163: illegal character: :
+(standard_in) 164: syntax error
+(standard_in) 164: illegal character: :
+(standard_in) 164: illegal character: :
+(standard_in) 165: syntax error
+(standard_in) 165: illegal character: :
+(standard_in) 166: syntax error
+(standard_in) 166: illegal character: :
+(standard_in) 166: illegal character: :
+(standard_in) 166: illegal character: \
+(standard_in) 167: syntax error
+(standard_in) 167: illegal character: :
+(standard_in) 167: illegal character: :
+(standard_in) 167: illegal character: @
+(standard_in) 168: syntax error
+(standard_in) 168: illegal character: :
+(standard_in) 168: illegal character: :
+(standard_in) 168: illegal character: @
+(standard_in) 169: syntax error
+(standard_in) 169: illegal character: :
+(standard_in) 169: illegal character: :
+(standard_in) 169: illegal character: @
+(standard_in) 170: syntax error
+(standard_in) 170: illegal character: :
+(standard_in) 171: syntax error
+(standard_in) 171: illegal character: :
+(standard_in) 172: syntax error
+(standard_in) 172: illegal character: :
+(standard_in) 173: syntax error
+(standard_in) 173: illegal character: :
+(standard_in) 173: illegal character: :
+(standard_in) 174: syntax error
+(standard_in) 174: illegal character: :
+(standard_in) 174: illegal character: :
+(standard_in) 174: illegal character: @
+(standard_in) 175: syntax error
+(standard_in) 175: illegal character: :
+(standard_in) 175: illegal character: :
+(standard_in) 175: illegal character: @
+(standard_in) 176: syntax error
+(standard_in) 176: illegal character: :
+(standard_in) 176: illegal character: :
+(standard_in) 176: illegal character: @
+(standard_in) 177: syntax error
+(standard_in) 177: illegal character: :
+(standard_in) 177: illegal character: :
+(standard_in) 177: illegal character: @
+(standard_in) 178: syntax error
+(standard_in) 178: illegal character: :
+(standard_in) 179: syntax error
+(standard_in) 179: illegal character: :
+(standard_in) 180: syntax error
+(standard_in) 180: illegal character: :
+(standard_in) 181: syntax error
+(standard_in) 181: illegal character: :
+(standard_in) 181: illegal character: :
+(standard_in) 181: illegal character: @
+(standard_in) 182: syntax error
+(standard_in) 182: illegal character: :
+(standard_in) 182: illegal character: :
+(standard_in) 182: illegal character: @
+(standard_in) 183: syntax error
+(standard_in) 183: illegal character: :
+(standard_in) 183: illegal character: :
+(standard_in) 184: syntax error
+(standard_in) 184: illegal character: :
+(standard_in) 184: illegal character: :
+(standard_in) 184: illegal character: @
+(standard_in) 185: syntax error
+(standard_in) 185: illegal character: :
+(standard_in) 186: syntax error
+(standard_in) 186: illegal character: :
+(standard_in) 186: syntax error
+(standard_in) 187: syntax error
+(standard_in) 187: illegal character: :
+(standard_in) 187: illegal character: :
+(standard_in) 188: syntax error
+(standard_in) 188: illegal character: :
+(standard_in) 189: syntax error
+(standard_in) 189: illegal character: :
+(standard_in) 189: illegal character: :
+(standard_in) 189: illegal character: \
+(standard_in) 190: syntax error
+(standard_in) 190: illegal character: :
+(standard_in) 191: syntax error
+(standard_in) 191: illegal character: :
+(standard_in) 192: syntax error
+(standard_in) 192: illegal character: :
+(standard_in) 192: illegal character: :
+(standard_in) 192: illegal character: \
+(standard_in) 193: syntax error
+(standard_in) 193: illegal character: :
+(standard_in) 193: illegal character: :
+(standard_in) 193: illegal character: \
+(standard_in) 194: syntax error
+(standard_in) 194: illegal character: :
+(standard_in) 194: illegal character: :
+(standard_in) 194: illegal character: \
+(standard_in) 195: syntax error
+(standard_in) 195: illegal character: :
+(standard_in) 195: illegal character: :
+(standard_in) 195: illegal character: @
+(standard_in) 196: syntax error
+(standard_in) 196: illegal character: :
+(standard_in) 196: illegal character: :
+(standard_in) 196: illegal character: \
+(standard_in) 197: syntax error
+(standard_in) 197: illegal character: :
+(standard_in) 197: illegal character: :
+(standard_in) 197: illegal character: \
+(standard_in) 198: syntax error
+(standard_in) 198: illegal character: :
+(standard_in) 198: illegal character: :
+(standard_in) 198: illegal character: \
+(standard_in) 199: syntax error
+(standard_in) 199: illegal character: :
+(standard_in) 199: illegal character: :
+(standard_in) 199: illegal character: @
+(standard_in) 200: syntax error
+(standard_in) 200: illegal character: :
+(standard_in) 201: syntax error
+(standard_in) 201: illegal character: :
+(standard_in) 202: syntax error
+(standard_in) 202: illegal character: :
+(standard_in) 202: illegal character: :
+(standard_in) 202: illegal character: \
+(standard_in) 203: syntax error
+(standard_in) 203: illegal character: :
+(standard_in) 203: illegal character: :
+(standard_in) 203: illegal character: \
+(standard_in) 204: syntax error
+(standard_in) 204: illegal character: :
+(standard_in) 205: syntax error
+(standard_in) 205: illegal character: :
+(standard_in) 205: illegal character: :
+(standard_in) 205: illegal character: @
+(standard_in) 206: syntax error
+(standard_in) 206: illegal character: :
+(standard_in) 206: illegal character: :
+(standard_in) 207: syntax error
+(standard_in) 207: illegal character: :
+(standard_in) 208: syntax error
+(standard_in) 208: illegal character: :
+(standard_in) 209: syntax error
+(standard_in) 209: illegal character: :
+(standard_in) 209: illegal character: :
+(standard_in) 210: syntax error
+(standard_in) 210: illegal character: :
+(standard_in) 210: illegal character: :
+(standard_in) 211: syntax error
+(standard_in) 211: illegal character: :
+(standard_in) 212: syntax error
+(standard_in) 212: illegal character: :
+(standard_in) 212: illegal character: :
+(standard_in) 213: syntax error
+(standard_in) 213: illegal character: :
+(standard_in) 213: illegal character: :
+(standard_in) 213: illegal character: @
+(standard_in) 214: syntax error
+(standard_in) 214: illegal character: :
+(standard_in) 214: illegal character: :
+(standard_in) 215: syntax error
+(standard_in) 215: illegal character: :
+(standard_in) 216: syntax error
+(standard_in) 216: illegal character: :
+(standard_in) 217: syntax error
+(standard_in) 217: illegal character: :
+(standard_in) 218: syntax error
+(standard_in) 218: illegal character: :
+(standard_in) 218: illegal character: :
+(standard_in) 218: illegal character: \
+(standard_in) 219: syntax error
+(standard_in) 219: illegal character: :
+(standard_in) 220: syntax error
+(standard_in) 220: illegal character: :
+(standard_in) 220: illegal character: :
+(standard_in) 220: illegal character: \
+(standard_in) 221: syntax error
+(standard_in) 221: illegal character: :
+(standard_in) 221: illegal character: :
+(standard_in) 221: illegal character: @
+(standard_in) 222: syntax error
+(standard_in) 222: illegal character: :
+(standard_in) 223: syntax error
+(standard_in) 223: illegal character: :
+(standard_in) 223: illegal character: :
+(standard_in) 223: illegal character: @
+(standard_in) 224: syntax error
+(standard_in) 224: illegal character: :
+(standard_in) 225: syntax error
+(standard_in) 225: illegal character: :
+(standard_in) 225: illegal character: :
+(standard_in) 225: illegal character: `
+(standard_in) 226: syntax error
+(standard_in) 226: illegal character: :
+(standard_in) 227: syntax error
+(standard_in) 227: illegal character: :
+(standard_in) 227: illegal character: :
+(standard_in) 227: illegal character: \
+(standard_in) 228: syntax error
+(standard_in) 228: illegal character: :
+(standard_in) 229: syntax error
+(standard_in) 229: illegal character: :
+(standard_in) 229: illegal character: :
+(standard_in) 230: syntax error
+(standard_in) 230: illegal character: :
+(standard_in) 230: illegal character: :
+(standard_in) 230: illegal character: \
+(standard_in) 231: syntax error
+(standard_in) 231: illegal character: :
+(standard_in) 231: illegal character: :
+(standard_in) 231: illegal character: \
+(standard_in) 232: syntax error
+(standard_in) 232: illegal character: :
+(standard_in) 232: illegal character: :
+(standard_in) 233: syntax error
+(standard_in) 233: illegal character: :
+(standard_in) 234: syntax error
+(standard_in) 234: illegal character: :
+(standard_in) 234: illegal character: :
+(standard_in) 234: illegal character: \
+(standard_in) 235: syntax error
+(standard_in) 235: illegal character: :
+(standard_in) 235: illegal character: :
+(standard_in) 235: illegal character: \
+(standard_in) 236: syntax error
+(standard_in) 236: illegal character: :
+(standard_in) 237: syntax error
+(standard_in) 237: illegal character: :
+(standard_in) 237: illegal character: :
+(standard_in) 238: syntax error
+(standard_in) 238: illegal character: :
+(standard_in) 239: syntax error
+(standard_in) 239: illegal character: :
+(standard_in) 239: illegal character: :
+(standard_in) 239: illegal character: @
+(standard_in) 240: syntax error
+(standard_in) 240: illegal character: :
+(standard_in) 240: illegal character: :
+(standard_in) 240: illegal character: @
+(standard_in) 241: syntax error
+(standard_in) 241: illegal character: :
+(standard_in) 242: syntax error
+(standard_in) 242: illegal character: :
+(standard_in) 242: illegal character: :
+(standard_in) 243: syntax error
+(standard_in) 243: illegal character: :
+(standard_in) 243: illegal character: :
+(standard_in) 244: syntax error
+(standard_in) 244: illegal character: :
+(standard_in) 245: syntax error
+(standard_in) 245: illegal character: :
+(standard_in) 246: syntax error
+(standard_in) 246: illegal character: :
+(standard_in) 246: illegal character: :
+(standard_in) 246: illegal character: \
+(standard_in) 247: syntax error
+(standard_in) 247: illegal character: :
+(standard_in) 247: illegal character: :
+(standard_in) 247: illegal character: \
+(standard_in) 248: syntax error
+(standard_in) 248: illegal character: :
+(standard_in) 248: illegal character: :
+(standard_in) 248: illegal character: \
+(standard_in) 249: syntax error
+(standard_in) 249: illegal character: :
+(standard_in) 249: illegal character: :
+(standard_in) 249: illegal character: \
+(standard_in) 250: syntax error
+(standard_in) 250: illegal character: :
+(standard_in) 250: illegal character: :
+(standard_in) 250: illegal character: \
+(standard_in) 251: syntax error
+(standard_in) 251: illegal character: :
+(standard_in) 251: illegal character: :
+(standard_in) 251: illegal character: \
+(standard_in) 252: syntax error
+(standard_in) 252: illegal character: :
+(standard_in) 252: illegal character: :
+(standard_in) 252: illegal character: \
+(standard_in) 253: syntax error
+(standard_in) 253: illegal character: :
+(standard_in) 253: illegal character: :
+(standard_in) 253: illegal character: \
+(standard_in) 254: syntax error
+(standard_in) 254: illegal character: :
+(standard_in) 255: syntax error
+(standard_in) 255: illegal character: :
+(standard_in) 255: illegal character: :
+(standard_in) 256: syntax error
+(standard_in) 256: illegal character: :
+(standard_in) 257: syntax error
+(standard_in) 257: illegal character: :
+(standard_in) 257: illegal character: :
+(standard_in) 257: illegal character: @
+(standard_in) 258: syntax error
+(standard_in) 258: illegal character: :
+(standard_in) 258: illegal character: :
+(standard_in) 258: illegal character: @
+(standard_in) 259: syntax error
+(standard_in) 259: illegal character: :
+(standard_in) 259: illegal character: :
+(standard_in) 259: illegal character: @
+(standard_in) 260: syntax error
+(standard_in) 260: illegal character: :
+(standard_in) 260: illegal character: :
+(standard_in) 261: syntax error
+(standard_in) 261: illegal character: :
+(standard_in) 262: syntax error
+(standard_in) 262: illegal character: :
+(standard_in) 262: illegal character: :
+(standard_in) 262: illegal character: \
+(standard_in) 263: syntax error
+(standard_in) 263: illegal character: :
+(standard_in) 263: illegal character: :
+(standard_in) 263: illegal character: `
+(standard_in) 264: syntax error
+(standard_in) 264: illegal character: :
+(standard_in) 265: syntax error
+(standard_in) 265: illegal character: :
+(standard_in) 265: syntax error
+(standard_in) 266: syntax error
+(standard_in) 266: illegal character: :
+(standard_in) 266: illegal character: :
+(standard_in) 266: illegal character: @
+(standard_in) 267: syntax error
+(standard_in) 267: illegal character: :
+(standard_in) 268: syntax error
+(standard_in) 268: illegal character: :
+(standard_in) 268: illegal character: :
+(standard_in) 268: illegal character: @
+(standard_in) 269: syntax error
+(standard_in) 269: illegal character: :
+(standard_in) 270: syntax error
+(standard_in) 270: illegal character: :
+(standard_in) 270: illegal character: :
+(standard_in) 270: illegal character: @
+(standard_in) 271: syntax error
+(standard_in) 271: illegal character: :
+(standard_in) 271: illegal character: :
+(standard_in) 271: illegal character: @
+(standard_in) 272: syntax error
+(standard_in) 272: illegal character: :
+(standard_in) 272: illegal character: :
+(standard_in) 272: illegal character: @
+(standard_in) 273: syntax error
+(standard_in) 273: illegal character: :
+(standard_in) 274: syntax error
+(standard_in) 274: illegal character: :
+(standard_in) 274: illegal character: :
+(standard_in) 274: illegal character: $
+(standard_in) 275: syntax error
+(standard_in) 275: illegal character: :
+(standard_in) 276: syntax error
+(standard_in) 276: illegal character: :
+(standard_in) 277: syntax error
+(standard_in) 277: illegal character: :
+(standard_in) 277: syntax error
+(standard_in) 278: syntax error
+(standard_in) 278: illegal character: :
+(standard_in) 278: illegal character: :
+(standard_in) 278: illegal character: \
+(standard_in) 279: syntax error
+(standard_in) 279: illegal character: :
+(standard_in) 280: syntax error
+(standard_in) 280: illegal character: :
+(standard_in) 280: illegal character: :
+(standard_in) 281: syntax error
+(standard_in) 281: illegal character: :
+(standard_in) 281: illegal character: :
+(standard_in) 281: illegal character: \
+(standard_in) 282: syntax error
+(standard_in) 282: illegal character: :
+(standard_in) 282: illegal character: :
+(standard_in) 282: illegal character: \
+(standard_in) 283: syntax error
+(standard_in) 283: illegal character: :
+(standard_in) 284: syntax error
+(standard_in) 284: illegal character: :
+(standard_in) 284: illegal character: :
+(standard_in) 284: illegal character: _
+(standard_in) 285: syntax error
+(standard_in) 285: illegal character: :
+(standard_in) 286: syntax error
+(standard_in) 286: illegal character: :
+(standard_in) 287: syntax error
+(standard_in) 287: illegal character: :
+(standard_in) 287: illegal character: :
+(standard_in) 287: illegal character: \
+(standard_in) 288: syntax error
+(standard_in) 288: illegal character: :
+(standard_in) 288: illegal character: :
+(standard_in) 288: illegal character: @
+(standard_in) 289: syntax error
+(standard_in) 289: illegal character: :
+(standard_in) 289: illegal character: :
+(standard_in) 289: illegal character: @
+(standard_in) 290: syntax error
+(standard_in) 290: illegal character: :
+(standard_in) 290: illegal character: :
+(standard_in) 290: illegal character: \
+(standard_in) 291: syntax error
+(standard_in) 291: illegal character: :
+(standard_in) 292: syntax error
+(standard_in) 292: illegal character: :
+(standard_in) 293: syntax error
+(standard_in) 293: illegal character: :
+(standard_in) 294: syntax error
+(standard_in) 294: illegal character: :
+(standard_in) 294: illegal character: :
+(standard_in) 295: syntax error
+(standard_in) 295: illegal character: :
+(standard_in) 295: illegal character: :
+(standard_in) 295: illegal character: @
+(standard_in) 296: syntax error
+(standard_in) 296: illegal character: :
+(standard_in) 296: illegal character: :
+(standard_in) 297: syntax error
+(standard_in) 297: illegal character: :
+(standard_in) 297: illegal character: :
+(standard_in) 297: illegal character: @
+(standard_in) 298: syntax error
+(standard_in) 298: illegal character: :
+(standard_in) 298: illegal character: :
+(standard_in) 298: illegal character: @
+(standard_in) 299: syntax error
+(standard_in) 299: illegal character: :
+(standard_in) 300: syntax error
+(standard_in) 300: illegal character: :
+(standard_in) 300: illegal character: :
+(standard_in) 300: illegal character: \
+(standard_in) 301: syntax error
+(standard_in) 301: illegal character: :
+(standard_in) 301: illegal character: :
+(standard_in) 301: illegal character: \
+(standard_in) 302: syntax error
+(standard_in) 302: illegal character: :
+(standard_in) 302: illegal character: :
+(standard_in) 302: illegal character: \
+(standard_in) 303: syntax error
+(standard_in) 303: illegal character: :
+(standard_in) 303: illegal character: :
+(standard_in) 303: illegal character: \
+(standard_in) 304: syntax error
+(standard_in) 304: illegal character: :
+(standard_in) 305: syntax error
+(standard_in) 305: illegal character: :
+(standard_in) 305: illegal character: :
+(standard_in) 305: illegal character: `
+(standard_in) 306: syntax error
+(standard_in) 306: illegal character: :
+(standard_in) 306: illegal character: :
+(standard_in) 306: illegal character: _
+(standard_in) 307: syntax error
+(standard_in) 307: illegal character: :
+(standard_in) 307: illegal character: :
+(standard_in) 307: illegal character: @
+(standard_in) 308: syntax error
+(standard_in) 308: illegal character: :
+(standard_in) 308: illegal character: :
+(standard_in) 308: illegal character: \
+(standard_in) 309: syntax error
+(standard_in) 309: illegal character: :
+(standard_in) 310: syntax error
+(standard_in) 310: illegal character: :
+(standard_in) 310: illegal character: :
+(standard_in) 310: illegal character: @
+(standard_in) 311: syntax error
+(standard_in) 311: illegal character: :
+(standard_in) 311: illegal character: :
+(standard_in) 312: syntax error
+(standard_in) 312: illegal character: :
+(standard_in) 312: illegal character: :
+(standard_in) 312: illegal character: @
+(standard_in) 313: syntax error
+(standard_in) 313: illegal character: :
+(standard_in) 313: illegal character: :
+(standard_in) 313: illegal character: @
+(standard_in) 314: syntax error
+(standard_in) 314: illegal character: :
+(standard_in) 315: syntax error
+(standard_in) 315: illegal character: :
+(standard_in) 315: illegal character: :
+(standard_in) 315: illegal character: \
+(standard_in) 316: syntax error
+(standard_in) 316: illegal character: :
+(standard_in) 316: illegal character: :
+(standard_in) 316: illegal character: \
+(standard_in) 317: syntax error
+(standard_in) 317: illegal character: :
+(standard_in) 317: illegal character: :
+(standard_in) 317: illegal character: \
+(standard_in) 318: syntax error
+(standard_in) 318: illegal character: :
+(standard_in) 318: illegal character: :
+(standard_in) 318: illegal character: \
+(standard_in) 319: syntax error
+(standard_in) 319: illegal character: :
+(standard_in) 320: syntax error
+(standard_in) 320: illegal character: :
+(standard_in) 320: illegal character: :
+(standard_in) 320: illegal character: \
+(standard_in) 321: syntax error
+(standard_in) 321: illegal character: :
+(standard_in) 322: syntax error
+(standard_in) 322: illegal character: :
+(standard_in) 322: illegal character: :
+(standard_in) 323: syntax error
+(standard_in) 323: illegal character: :
+(standard_in) 324: syntax error
+(standard_in) 324: illegal character: :
+(standard_in) 324: illegal character: :
+(standard_in) 325: syntax error
+(standard_in) 325: illegal character: :
+(standard_in) 325: illegal character: :
+(standard_in) 326: syntax error
+(standard_in) 326: illegal character: :
+(standard_in) 326: illegal character: :
+(standard_in) 327: syntax error
+(standard_in) 327: illegal character: :
+(standard_in) 327: illegal character: :
+(standard_in) 328: syntax error
+(standard_in) 328: illegal character: :
+(standard_in) 328: illegal character: :
+(standard_in) 329: syntax error
+(standard_in) 329: illegal character: :
+(standard_in) 331: syntax error
+(standard_in) 331: illegal character: :
+(standard_in) 332: syntax error
+(standard_in) 333: syntax error
+(standard_in) 334: illegal character: :
+(standard_in) 334: syntax error
+(standard_in) 335: illegal character: :
+(standard_in) 335: syntax error
+(standard_in) 337: syntax error
+(standard_in) 338: syntax error
+(standard_in) 338: syntax error
+(standard_in) 338: syntax error
+(standard_in) 338: illegal character: :
+(standard_in) 339: syntax error
+(standard_in) 339: syntax error
+==20865==LeakSanitizer has encountered a fatal error.
+==20865==HINT: For debugging, try setting environment variable LSAN_OPTIONS=verbosity=1:log_threads=1
+==20865==HINT: LeakSanitizer does not work under ptrace (strace, gdb, etc)
+No stack.
+
+Starting program: /home/hongxu/FOT/test_c/bc-1.07/install/bin/bc 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 20865) exited with code 027]
