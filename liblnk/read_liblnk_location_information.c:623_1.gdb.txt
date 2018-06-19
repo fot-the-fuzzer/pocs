@@ -1,0 +1,80 @@
+Undefined command: "".  Try "help".
+No stack.
+
+Starting program: /home/exp/FOT/liblnk/install/bin/lnkinfo liblnk-pocs/crashes/read_liblnk_location_information.c:623_1.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a description string
+	Contains an icon location string
+
+Link information:
+	Creation time			: Not set (0)
+	Modification time		: Not set (0)
+	Access time			: Not set (0)
+	File size			: 0 bytes
+	Icon index			: 0
+	Show Window value		: 0x00000000
+	Hot Key value			: 0
+	File attribute flags		: 0x00000000
+	Description			: @%
+	Icon location			: %%\Microsoft
+
+Link target identifier:
+	Shell item list
+		Number of items		: 2
+
+	Shell item: 1
+		Item type		: Root folder
+		Class type indicator	: 0x1f (Root folder)
+		Shell folder identifier	: 871c5380-42a0-1069-a2ea-08002b30309d
+		Shell folder name	: Internet Explorer (Homepage)
+
+	Shell item: 2
+		Item type		: URI
+		Class type indicator	: 0x61 (URI)
+	Extension block: 1
+		Signature		: 0xbeef0014
+
+
+
+[Inferior 1 (process 15938) exited normally]
+
+Undefined command: "".  Try "help".
+
+Starting program: /home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo liblnk-pocs/crashes/read_liblnk_location_information.c:623_1.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a description string
+	Contains an icon location string
+
+Link information:
+	Creation time			: Not set (0)
+	Modification time		: Not set (0)
+	Access time			: Not set (0)
+	File size			: 0 bytes
+	Icon index			: 0
+	Show Window value		: 0x00000000
+	Hot Key value			: 0
+	File attribute flags		: 0x00000000
+	Description			: @%
+	Icon location			: %%\Microsoft
+
+Link target identifier:
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000055e75a in libfwsi_uri_values_read_data (uri_values=<optimized out>, data=0x614000000254 "\206\001a\200)", data_size=0x186, ascii_codepage=<optimized out>, error=0x7fffffffc2e0) at libfwsi_uri_values.c:402
+402			byte_stream_copy_to_uint32_little_endian(
+#0  0x000000000055e75a in libfwsi_uri_values_read_data (uri_values=<optimized out>, data=0x614000000254 "\206\001a\200)", data_size=0x186, ascii_codepage=<optimized out>, error=0x7fffffffc2e0) at libfwsi_uri_values.c:402
+#1  0x000000000054ef09 in libfwsi_item_copy_from_byte_stream (item=0x6060000000e0, byte_stream=0x614000000254 "\206\001a\200)", byte_stream_size=<optimized out>, ascii_codepage=0x4e4, error=<optimized out>) at libfwsi_item.c:1072
+#2  0x0000000000553984 in libfwsi_item_list_copy_from_byte_stream (item_list=<optimized out>, byte_stream=<optimized out>, byte_stream_size=<optimized out>, ascii_codepage=0x4e4, error=0x7fffffffc2e0) at libfwsi_item_list.c:334
+#3  0x000000000052f9bd in info_handle_link_target_identifier_fprint (info_handle=0x603000000010, error=0x7fffffffc2e0) at info_handle.c:2207
+#4  0x0000000000530c1d in info_handle_file_fprint (info_handle=0x603000000010, error=0x7fffffffc2e0) at info_handle.c:2667
+#5  0x0000000000532185 in main (argc=0x2, argv=<optimized out>) at lnkinfo.c:277

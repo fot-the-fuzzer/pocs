@@ -1,0 +1,215 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+No stack.
+
+Starting program: /home/exp/FOT/liblnk/install/bin/lnkinfo liblnk-pocs/crashes/hbo_info_handle.c:1978_2.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a relative path string
+	Contains a working directory string
+	Contains a command line arguments string
+	Contains an icon location string
+	Contains an icon location block
+
+Link information:
+	Creation time			: Dec 25, 2015 02:43:50.518753400 UTC
+	Modification time		: Jan 21, 2016 16:44:42.198674000 UTC
+	Access time			: Dec 25, 2015 02:43:50.518753400 UTC
+	File size			: 253008 bytes
+	Icon index			: -1005
+	Show Window value		: 0x0003dc50
+	Hot Key value			: 56400
+	File attribute flags		: 0x00000020
+		Should be archived (FILE_ATTRIBUTE_ARCHIVE)
+	Drive type			: Unknown (268435456)
+	Drive serial number		: 0x6a228faa
+	Volume label			: 
+	Local path			: C:\Program F les (x86)\Siber Systems\AI RoboForm\identities.exe
+	Relative path			: ..\..\.\..\..\..\Program Files (x86)ú切iber Systems\AI RoboForm\identitiesᬮexe
+	Working directory		: Cᘺ\Program Files (x86)\Siber Systems\AI RoboForm
+	Command line arguments		: -s
+	Icon location			: ���������������� Fi������������������龎샙����������������������������������
+
+Link target identifier:
+	Shell item list
+		Number of items		: 6
+
+	Shell item: 1
+		Item type		: Root folder
+		Class type indicator	: 0x1f (Root folder)
+		Shell folder identifier	: 20d04fe0-3aea-1069-a2d8-08002b30309d
+		Shell folder name	: My Computer
+
+	Shell item: 2
+		Item type		: Volume
+		Class type indicator	: 0x2f (Volume)
+		Volume name		: C:\
+
+	Shell item: 3
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: PROGRA~2
+		Modification time	: Dec 25, 2015 03:09:56
+		File attribute flags	: 0x00000011
+			Is read-only (FILE_ATTRIBUTE_READ_ONLY)
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Program Files (x86)
+		Localized name		: @shell32.dll,-21817
+		Creation time		: Oct 30, 2015 06:28:32
+		Access time		: Dec 25, 2015 03:09:56
+		NTFS file reference	: MFT entry: 1302, sequence: 1
+
+	Shell item: 4
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: SIBERS~1
+		Modification time	: Dec 25, 2015 02:43:42
+		File attribute flags	: 0x00000010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Siber Systems
+		Creation time		: Dec 25, 2015 02:43:42
+		Access time		: Dec 25, 2015 02:43:42
+		NTFS file reference	: MFT entry: 108523, sequence: 2
+
+	Shell item: 5
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: AIROBO~1
+		Modification time	: Jan 21, 2016 13:05:04
+		File attribute flags	: 0x00000010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: AI RoboForm
+		Creation time		: Dec 25, 2015 02:43:42
+		Access time		: Jan 21, 2016 16:45:04
+		NTFS file reference	: MFT entry: 108524, sequence: 1
+
+	Shell item: 6
+		Item type		: File entry
+		Class type indicator	: 0x32 (File entry: File)
+		Name			: IDENTI~1.EXE
+		Modification time	: Jan 21, 2016 16:44:44
+		File attribute flags	: 0x00000020
+			Should be archived (FILE_ATTRIBUTE_ARCHIVE)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: identities.exe
+		Creation time		: Dec 25, 2015 02:43:52
+		Access time		: Dec 25, 2015 02:43:52
+		NTFS file reference	: MFT entry: 16361014, sequence: 2
+
+
+
+[Inferior 1 (process 15420) exited normally]
+
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+grep: /tmp/gdb_info_target: No such file or directory
+warning: /tmp/gdb_target_arch.gdb: No such file or directory
+=================================================================
+==5625==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000115 at pc 0x00000045be37 bp 0x7fffffffc0a0 sp 0x7fffffffb850
+READ of size 214 at 0x611000000115 thread T0
+    #0 0x45be36 in printf_common(void*, char const*, __va_list_tag*) (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x45be36)
+    #1 0x45ca7b in __interceptor_vfprintf (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x45ca7b)
+    #2 0x45cb46 in __interceptor_fprintf (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x45cb46)
+    #3 0x52ed80 in info_handle_icon_location_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:1978:3
+    #4 0x530b96 in info_handle_file_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2637:6
+    #5 0x532184 in main /home/exp/FOT/liblnk-fuzz/lnktools/lnkinfo.c:277:6
+    #6 0x7ffff6870b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x4301c9 in _start (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4301c9)
+
+0x611000000115 is located 0 bytes to the right of 213-byte region [0x611000000040,0x611000000115)
+allocated by thread T0 here:
+    #0 0x4f0080 in malloc (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4f0080)
+    #1 0x52ed0c in info_handle_icon_location_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:1940:18
+    #2 0x530b96 in info_handle_file_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2637:6
+    #3 0x7ffff6870b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x45be36) in printf_common(void*, char const*, __va_list_tag*)
+Shadow bytes around the buggy address:
+  0x0c227fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff8000: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c227fff8010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c227fff8020: 00 00[05]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==5625==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo liblnk-pocs/crashes/hbo_info_handle.c:1978_2.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a relative path string
+	Contains a working directory string
+	Contains a command line arguments string
+	Contains an icon location string
+	Contains an icon location block
+
+Link information:
+	Creation time			: Dec 25, 2015 02:43:50.518753400 UTC
+	Modification time		: Jan 21, 2016 16:44:42.198674000 UTC
+	Access time			: Dec 25, 2015 02:43:50.518753400 UTC
+	File size			: 253008 bytes
+	Icon index			: -1005
+	Show Window value		: 0x0003dc50
+	Hot Key value			: 56400
+	File attribute flags		: 0x00000020
+		Should be archived (FILE_ATTRIBUTE_ARCHIVE)
+	Drive type			: Unknown (268435456)
+	Drive serial number		: 0x6a228faa
+	Volume label			: 
+	Local path			: C:\Program F les (x86)\Siber Systems\AI RoboForm\identities.exe
+	Relative path			: ..\..\.\..\..\..\Program Files (x86)ú切iber Systems\AI RoboForm\identitiesᬮexe
+	Working directory		: Cᘺ\Program Files (x86)\Siber Systems\AI RoboForm
+	Command line arguments		: -s
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff688f801 in __GI_abort () at abort.c:79
+#2  0x00000000005196fb in __sanitizer::Abort() ()
+#3  0x0000000000516a28 in __sanitizer::Die() ()
+#4  0x00000000004f8cad in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x000000000045be56 in printf_common(void*, char const*, __va_list_tag*) ()
+#6  0x000000000045ca7c in vfprintf ()
+#7  0x000000000045cb47 in fprintf ()
+#8  0x000000000052ed81 in info_handle_icon_location_fprint (info_handle=0x603000000010, error=0x7fffffffc300) at info_handle.c:1978
+#9  0x0000000000530b97 in info_handle_file_fprint (info_handle=0x603000000010, error=0x7fffffffc300) at info_handle.c:2637
+#10 0x0000000000532185 in main (argc=0x2, argv=<optimized out>) at lnkinfo.c:277

@@ -1,0 +1,97 @@
+Undefined command: "".  Try "help".
+Unable to open: liblnk-pocs/crashes/hbo_liblnk_location_information.c:1037_2.txt.
+liblnk_location_information_read_data: network share name offset exceeds network share information data.
+liblnk_location_information_read: unable to read location information.
+liblnk_file_open_read: unable to read location information.
+liblnk_file_open_file_io_handle: unable to read from file IO handle.
+liblnk_file_open: unable to open file: liblnk-pocs/crashes/hbo_liblnk_location_information.c:1037_2.txt.
+info_handle_open_input: unable to open input file.
+No stack.
+
+Starting program: /home/exp/FOT/liblnk/install/bin/lnkinfo liblnk-pocs/crashes/hbo_liblnk_location_information.c:1037_2.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+[Inferior 1 (process 18348) exited with code 01]
+
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+grep: /tmp/gdb_info_target: No such file or directory
+warning: /tmp/gdb_target_arch.gdb: No such file or directory
+=================================================================
+==7702==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60700000022f at pc 0x7ffff78e61f0 bp 0x7fffffffbe80 sp 0x7fffffffbe78
+READ of size 1 at 0x60700000022f thread T0
+    #0 0x7ffff78e61ef in liblnk_location_information_read_data /home/exp/FOT/liblnk-fuzz/liblnk/liblnk_location_information.c:1037:3
+    #1 0x7ffff78e6fe3 in liblnk_location_information_read /home/exp/FOT/liblnk-fuzz/liblnk/liblnk_location_information.c:1907:6
+    #2 0x7ffff78c71e7 in liblnk_file_open_read /home/exp/FOT/liblnk-fuzz/liblnk/liblnk_file.c:1149:16
+    #3 0x7ffff78c66d9 in liblnk_file_open_file_io_handle /home/exp/FOT/liblnk-fuzz/liblnk/liblnk_file.c:627:6
+    #4 0x7ffff78c5e69 in liblnk_file_open /home/exp/FOT/liblnk-fuzz/liblnk/liblnk_file.c:345:6
+    #5 0x529792 in info_handle_open_input /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:415:6
+    #6 0x53216c in main /home/exp/FOT/liblnk-fuzz/lnktools/lnkinfo.c:265:6
+    #7 0x7ffff6870b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #8 0x4301c9 in _start (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4301c9)
+
+0x60700000022f is located 0 bytes to the right of 79-byte region [0x6070000001e0,0x60700000022f)
+allocated by thread T0 here:
+    #0 0x4f0080 in malloc (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4f0080)
+    #1 0x7ffff78e6f9f in liblnk_location_information_read /home/exp/FOT/liblnk-fuzz/liblnk/liblnk_location_information.c:1876:42
+    #2 0x7ffff78c71e7 in liblnk_file_open_read /home/exp/FOT/liblnk-fuzz/liblnk/liblnk_file.c:1149:16
+    #3 0x7ffff78c66d9 in liblnk_file_open_file_io_handle /home/exp/FOT/liblnk-fuzz/liblnk/liblnk_file.c:627:6
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/liblnk-fuzz/liblnk/liblnk_location_information.c:1037:3 in liblnk_location_information_read_data
+Shadow bytes around the buggy address:
+  0x0c0e7fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c0e7fff8000: fa fa fa fa fd fd fd fd fd fd fd fd fd fd fa fa
+  0x0c0e7fff8010: fa fa 00 00 00 00 00 00 00 00 00 00 fa fa fa fa
+  0x0c0e7fff8020: fd fd fd fd fd fd fd fd fd fa fa fa fa fa 00 00
+  0x0c0e7fff8030: 00 00 00 00 00 00 00 fa fa fa fa fa 00 00 00 00
+=>0x0c0e7fff8040: 00 00 00 00 00[07]fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7702==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo liblnk-pocs/crashes/hbo_liblnk_location_information.c:1037_2.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff688f801 in __GI_abort () at abort.c:79
+#2  0x00000000005196fb in __sanitizer::Abort() ()
+#3  0x0000000000516a28 in __sanitizer::Die() ()
+#4  0x00000000004f8cad in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x00000000004f9378 in __asan_report_load1 ()
+#6  0x00007ffff78e61f0 in liblnk_location_information_read_data (location_information=0x60b0000000f0, io_handle=<optimized out>, data=0x6070000001e0 "\034", data_size=0x4f, error=0x7fffffffc2e0) at liblnk_location_information.c:1037
+#7  0x00007ffff78e6fe4 in liblnk_location_information_read (location_information=<optimized out>, io_handle=<optimized out>, file_io_handle=0x6070000001e0, location_information_offset=<optimized out>, error=<optimized out>) at liblnk_location_information.c:1907
+#8  0x00007ffff78c71e8 in liblnk_file_open_read (internal_file=0x60c000000040, file_io_handle=0x60e000000040, error=0x7fffffffc2e0) at liblnk_file.c:1149
+#9  0x00007ffff78c66da in liblnk_file_open_file_io_handle (file=0x60c000000040, file_io_handle=0x60e000000040, access_flags=<optimized out>, error=0x7fffffffc2e0) at liblnk_file.c:627
+#10 0x00007ffff78c5e6a in liblnk_file_open (file=0x60c000000040, filename=0x7fffffffc9e8 "liblnk-pocs/crashes/hbo_liblnk_location_information.c:1037_2.txt", access_flags=0x1, error=<optimized out>) at liblnk_file.c:345
+#11 0x0000000000529793 in info_handle_open_input (info_handle=<optimized out>, filename=0x7fffffffc9e8 "liblnk-pocs/crashes/hbo_liblnk_location_information.c:1037_2.txt", error=0x7fffffffc2e0) at info_handle.c:415
+#12 0x000000000053216d in main (argc=0x2, argv=<optimized out>) at lnkinfo.c:265

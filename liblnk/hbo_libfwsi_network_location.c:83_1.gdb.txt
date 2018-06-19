@@ -1,0 +1,165 @@
+Undefined command: "".  Try "help".
+Unable to print file information.
+libuna_utf8_string_size_from_byte_stream: invalid byte stream.
+libfwsi_network_location_get_utf8_location_size: unable to determine size of UTF-8 string.
+shell_items_network_location_fprint: unable to retrieve location size.
+shell_items_item_fprint: unable to print network location shell item.
+shell_items_item_list_fprint: unable to print shell item: 2.
+info_handle_link_target_identifier_fprint: unable to print shell item list.
+info_handle_file_fprint: unable to print link target identifier data.
+No stack.
+
+Starting program: /home/exp/FOT/liblnk/install/bin/lnkinfo liblnk-pocs/crashes/hbo_libfwsi_network_location.c:83_1.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a description string
+	Contains an icon location string
+
+Link information:
+	Creation time			: Not set (0)
+	Modification time		: (0x80ffff00 0x00000000) UTC
+	Access time			: Nov 22, 1601 18:44:57.664512000 UTC
+	File size			: 0 bytes
+	Icon index			: -209
+	Show Window value		: 0x00000000
+	Hot Key value			: 0
+	File attribute flags		: 0x00000000
+	Description			: USEN/101722
+	Icon location			: %SystemRoot%\system32\gameux.dll
+
+Link target identifier:
+	Shell item list
+		Number of items		: 3
+
+	Shell item: 1
+		Item type		: Root folder
+		Class type indicator	: 0x1f (Root folder)
+		Shell folder identifier	: 031a4780-7259-a73f-4489-c55595fe6b30
+		Shell folder name	: Unknown
+
+	Shell item: 2
+		Item type		: URI
+		Class type indicator	: 0x61 (URI)
+
+	Shell item: 3
+		Item type		: Network location
+		Class type indicator	: 0x46 (Network location)
+[Inferior 1 (process 18881) exited with code 01]
+
+Undefined command: "".  Try "help".
+=================================================================
+==10349==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000190 at pc 0x000000556a67 bp 0x7fffffffbe00 sp 0x7fffffffbdf8
+READ of size 8 at 0x602000000190 thread T0
+    #0 0x556a66 in libfwsi_network_location_get_utf8_location_size /home/exp/FOT/liblnk-fuzz/libfwsi/libfwsi_network_location.c:83:32
+    #1 0x537ab3 in shell_items_network_location_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:1443:11
+    #2 0x536632 in shell_items_item_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:844:8
+    #3 0x538fd0 in shell_items_item_list_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:1726:7
+    #4 0x52fa37 in info_handle_link_target_identifier_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2223:7
+    #5 0x530c1c in info_handle_file_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2667:6
+    #6 0x532184 in main /home/exp/FOT/liblnk-fuzz/lnktools/lnkinfo.c:277:6
+    #7 0x7ffff6870b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #8 0x4301c9 in _start (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4301c9)
+
+0x602000000194 is located 0 bytes to the right of 4-byte region [0x602000000190,0x602000000194)
+allocated by thread T0 here:
+    #0 0x4f0080 in malloc (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4f0080)
+    #1 0x55f2da in libfwsi_uri_sub_values_initialize /home/exp/FOT/liblnk-fuzz/libfwsi/libfwsi_uri_sub_values.c:65:20
+    #2 0x553983 in libfwsi_item_list_copy_from_byte_stream /home/exp/FOT/liblnk-fuzz/libfwsi/libfwsi_item_list.c:334:7
+    #3 0x52f9bc in info_handle_link_target_identifier_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2207:7
+    #4 0x530c1c in info_handle_file_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2667:6
+    #5 0x7ffff6870b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/liblnk-fuzz/libfwsi/libfwsi_network_location.c:83:32 in libfwsi_network_location_get_utf8_location_size
+Shadow bytes around the buggy address:
+  0x0c047fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff8000: fa fa fd fd fa fa 00 00 fa fa fd fa fa fa fd fa
+  0x0c047fff8010: fa fa fd fa fa fa fd fa fa fa 00 00 fa fa 00 00
+  0x0c047fff8020: fa fa 00 00 fa fa 00 00 fa fa 04 fa fa fa 00 00
+=>0x0c047fff8030: fa fa[04]fa fa fa fd fd fa fa fa fa fa fa fa fa
+  0x0c047fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==10349==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo liblnk-pocs/crashes/hbo_libfwsi_network_location.c:83_1.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a description string
+	Contains an icon location string
+
+Link information:
+	Creation time			: Not set (0)
+	Modification time		: (0x80ffff00 0x00000000) UTC
+	Access time			: Nov 22, 1601 18:44:57.664512000 UTC
+	File size			: 0 bytes
+	Icon index			: -209
+	Show Window value		: 0x00000000
+	Hot Key value			: 0
+	File attribute flags		: 0x00000000
+	Description			: USEN/101722
+	Icon location			: %SystemRoot%\system32\gameux.dll
+
+Link target identifier:
+	Shell item list
+		Number of items		: 3
+
+	Shell item: 1
+		Item type		: Root folder
+		Class type indicator	: 0x1f (Root folder)
+		Shell folder identifier	: 031a4780-7259-a73f-4489-c55595fe6b30
+		Shell folder name	: Unknown
+
+	Shell item: 2
+		Item type		: URI
+		Class type indicator	: 0x61 (URI)
+
+	Shell item: 3
+		Item type		: Network location
+		Class type indicator	: 0x46 (Network location)
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff688f801 in __GI_abort () at abort.c:79
+#2  0x00000000005196fb in __sanitizer::Abort() ()
+#3  0x0000000000516a28 in __sanitizer::Die() ()
+#4  0x00000000004f8cad in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x00000000004f9528 in __asan_report_load8 ()
+#6  0x0000000000556a67 in libfwsi_network_location_get_utf8_location_size (item=<optimized out>, utf8_string_size=0x0, error=0x7fffffffc2e0) at libfwsi_network_location.c:83
+#7  0x0000000000537ab4 in shell_items_network_location_fprint (shell_item=0x606000000260, notify_stream=0x7ffff6c3b760 <_IO_2_1_stdout_>, error=0x7fffffffc2e0) at shell_items.c:1443
+#8  0x0000000000536633 in shell_items_item_fprint (shell_item=0x606000000260, shell_item_index=<optimized out>, notify_stream=0x7ffff6c3b760 <_IO_2_1_stdout_>, error=0x7fffffffc2e0) at shell_items.c:844
+#9  0x0000000000538fd1 in shell_items_item_list_fprint (shell_item_list=0x603000000220, notify_stream=<optimized out>, error=0x7fffffffc2e0) at shell_items.c:1726
+#10 0x000000000052fa38 in info_handle_link_target_identifier_fprint (info_handle=0x603000000010, error=0x7fffffffc2e0) at info_handle.c:2223
+#11 0x0000000000530c1d in info_handle_file_fprint (info_handle=0x603000000010, error=0x7fffffffc2e0) at info_handle.c:2667
+#12 0x0000000000532185 in main (argc=0x2, argv=<optimized out>) at lnkinfo.c:277

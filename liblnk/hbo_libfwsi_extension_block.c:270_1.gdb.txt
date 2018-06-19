@@ -1,0 +1,170 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+No stack.
+
+Starting program: /home/exp/FOT/liblnk/install/bin/lnkinfo liblnk-pocs/crashes/hbo_libfwsi_extension_block.c:270_1.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a relative path string
+
+Link information:
+	Creation time			: Aug 20, 2004 01:16:19.590000000 UTC
+	Modification time		: Aug 20, 2004 01:16:48.000000000 UTC
+	Access time			: Aug 19, 2004 12:00:00.000000000 UTC
+	File size			: 0 bytes
+	Icon index			: 0
+	Show Window value		: 0x00000000
+	Hot Key value			: 0
+	File attribute flags		: 0x00000011
+		Is read-only (FILE_ATTRIBUTE_READ_ONLY)
+		Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Drive type			: Fixed (3)
+	Drive serial number		: 0xb832ef92
+	Volume label			: 
+	Local path			: C:\Documents and Settings\All Users\Documen
+	Relative path			: .䄮氀氀 唀猀攀爀猀尀䐀Ѐ挀甀洀攀渀琀猀尀䴀愀 洀甀猀椀焀甀攀尀준挟栀愀渀琀椀氀氀漀渀猀 搀攀 洀甀猀椀焀甀攀က
+
+Link target identifier:
+	Shell item list
+		Number of items		: 4
+
+	Shell item: 1
+		Item type		: Root folder
+		Class type indicator	: 0x1f (Root folder)
+		Shell folder identifier	: 20d04fe0-3aea-1069-a2d8-08002b30309d
+		Shell folder name	: My Computer
+
+	Shell item: 2
+		Item type		: Delegate
+
+	Shell item: 3
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: MAMUSI~1
+		Modification time	: Aug 20, 2004 01:15:06
+		File attribute flags	: 0x00000011
+			Is read-only (FILE_ATTRIBUTE_READ_ONLY)
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+
+	Shell item: 4
+		Item type		: File entry
+		Class type indicator	: 0x35 (File entry: Directory)
+		Name			: 猀椀焀甀攀
+		Modification time	: (0x2000 0x6d00)
+		File attribute flags	: 0x00007500
+			Is temporary (FILE_ATTRIBUTE_TEMPORARY)
+			Is a reparse point or symbolic link (FILE_ATTRIBUTE_FLAG_REPARSE_POINT)
+			Is offline (FILE_ATTRIBUTE_OFFLINE)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+			Is encrypted (FILE_ATTRIBUTE_ENCRYPTED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Échantillons de musiq⁵
+		Creation time		: Aug 20, 2004 01:16:20
+		Access time		: Aug 19, 2004 12:00:00
+
+
+
+[Inferior 1 (process 16822) exited normally]
+
+Undefined command: "".  Try "help".
+=================================================================
+==10709==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6120000002c7 at pc 0x00000053b22f bp 0x7fffffffbeb0 sp 0x7fffffffbea8
+READ of size 1 at 0x6120000002c7 thread T0
+    #0 0x53b22e in libfwsi_extension_block_copy_from_byte_stream /home/exp/FOT/liblnk-fuzz/libfwsi/libfwsi_extension_block.c:270:2
+    #1 0x54e8e4 in libfwsi_item_copy_from_byte_stream /home/exp/FOT/liblnk-fuzz/libfwsi/libfwsi_item.c:1243:13
+    #2 0x553983 in libfwsi_item_list_copy_from_byte_stream /home/exp/FOT/liblnk-fuzz/libfwsi/libfwsi_item_list.c:334:7
+    #3 0x52f9bc in info_handle_link_target_identifier_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2207:7
+    #4 0x530c1c in info_handle_file_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2667:6
+    #5 0x532184 in main /home/exp/FOT/liblnk-fuzz/lnktools/lnkinfo.c:277:6
+    #6 0x7ffff6870b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x4301c9 in _start (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4301c9)
+
+0x6120000002c7 is located 1 bytes to the right of 262-byte region [0x6120000001c0,0x6120000002c6)
+allocated by thread T0 here:
+    #0 0x4f0080 in malloc (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4f0080)
+    #1 0x52f7ad in info_handle_link_target_identifier_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2159:45
+    #2 0x530c1c in info_handle_file_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2667:6
+    #3 0x7ffff6870b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/liblnk-fuzz/libfwsi/libfwsi_extension_block.c:270:2 in libfwsi_extension_block_copy_from_byte_stream
+Shadow bytes around the buggy address:
+  0x0c247fff8000: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c247fff8010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c247fff8020: 00 00 00 00 00 00 00 00 06 fa fa fa fa fa fa fa
+  0x0c247fff8030: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c247fff8040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c247fff8050: 00 00 00 00 00 00 00 00[06]fa fa fa fa fa fa fa
+  0x0c247fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c247fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c247fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c247fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c247fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==10709==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo liblnk-pocs/crashes/hbo_libfwsi_extension_block.c:270_1.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a relative path string
+
+Link information:
+	Creation time			: Aug 20, 2004 01:16:19.590000000 UTC
+	Modification time		: Aug 20, 2004 01:16:48.000000000 UTC
+	Access time			: Aug 19, 2004 12:00:00.000000000 UTC
+	File size			: 0 bytes
+	Icon index			: 0
+	Show Window value		: 0x00000000
+	Hot Key value			: 0
+	File attribute flags		: 0x00000011
+		Is read-only (FILE_ATTRIBUTE_READ_ONLY)
+		Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Drive type			: Fixed (3)
+	Drive serial number		: 0xb832ef92
+	Volume label			: 
+	Local path			: C:\Documents and Settings\All Users\Documen
+	Relative path			: .䄮氀氀 唀猀攀爀猀尀䐀Ѐ挀甀洀攀渀琀猀尀䴀愀 洀甀猀椀焀甀攀尀준挟栀愀渀琀椀氀氀漀渀猀 搀攀 洀甀猀椀焀甀攀က
+
+Link target identifier:
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff688f801 in __GI_abort () at abort.c:79
+#2  0x00000000005196fb in __sanitizer::Abort() ()
+#3  0x0000000000516a28 in __sanitizer::Die() ()
+#4  0x00000000004f8cad in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x00000000004f9378 in __asan_report_load1 ()
+#6  0x000000000053b22f in libfwsi_extension_block_copy_from_byte_stream (internal_extension_block=0x603000000220, byte_stream=0x6120000002c0 "\177\355 ", byte_stream_size=0x0, ascii_codepage=0x4e4, error=0x7fffffffc2e0) at libfwsi_extension_block.c:270
+#7  0x000000000054e8e5 in libfwsi_item_copy_from_byte_stream (item=0x606000000200, byte_stream=0x61200000025e "f", byte_stream_size=<optimized out>, ascii_codepage=0x4e4, error=<optimized out>) at libfwsi_item.c:1243
+#8  0x0000000000553984 in libfwsi_item_list_copy_from_byte_stream (item_list=<optimized out>, byte_stream=<optimized out>, byte_stream_size=<optimized out>, ascii_codepage=0x4e4, error=0x7fffffffc2e0) at libfwsi_item_list.c:334
+#9  0x000000000052f9bd in info_handle_link_target_identifier_fprint (info_handle=0x603000000010, error=0x7fffffffc2e0) at info_handle.c:2207
+#10 0x0000000000530c1d in info_handle_file_fprint (info_handle=0x603000000010, error=0x7fffffffc2e0) at info_handle.c:2667
+#11 0x0000000000532185 in main (argc=0x2, argv=<optimized out>) at lnkinfo.c:277

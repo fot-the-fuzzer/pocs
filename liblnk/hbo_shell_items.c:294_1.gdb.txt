@@ -1,0 +1,415 @@
+Undefined command: "".  Try "help".
+No stack.
+
+Starting program: /home/exp/FOT/liblnk/install/bin/lnkinfo liblnk-pocs/crashes/hbo_shell_items.c:294_1.txt
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a relative path string
+	Contains a working directory string
+
+Link information:
+	Creation time			: Jan 26, 2016 15:57:55.922889200 UTC
+	Modification time		: Jan 27, 2016 21:22:18.558676400 UTC
+	Access time			: Jan 27, 2016 21:22:18.555666700 UTC
+	File size			: 59810 bytes
+	Icon index			: 0
+	Show Window value		: 0x0000e9a2
+	Hot Key value			: 59810
+	File attribute flags		: 0x00000020
+		Should be archived (FILE_ATTRIBUTE_ARCHIVE)
+	Drive type			: Fixed (3)
+	Drive serial number		: 0x6a228faa
+	Volume label			: ÿÿ
+	Local path			: ÿÿUserM\e\AppData\Local\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\AC\MicrosoftEdge\User\Default\DataStore\Data\nouser1\120712-0049\DBStore\spar²an.edb
+	Relative path			: ..\..\..\..\Local\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\AC\MicrosoftEdge\User\Default\DataStore\Data\nouser1\120712-0049\DBStore\spartan(edb
+	Working directory		: C:\Users\e\AppDatw\Lo愀氀尀倀愀挀欀愀最攀猀尀䴀椀挀爀漀猀漀昀琀⸀䴀椀挀爀漀猀漀昀琀䔀搀最攀开㠀眀攀欀礀戀㌀搀㠀戀戀眀攀尀䄀䌀尀䴀椀挀爀漀猀漀昀琀䔀搀最攀尀唀猀攀爀尀䐀攀替愀甀氀琀尀䐀愀琀愀匀琀漀爀攀尀䐀愀琀愀尀渀漀甀猀攀爀㄀尀㄀㈀　㜀㄀㈀ⴀ　　㐀㤀尀䐀䈀匀琀漀爀攀
+
+Link target identifier:
+	Shell item list
+		Number of items		: 15
+
+	Shell item: 1
+		Item type		: Root folder
+		Class type indicator	: 0x1f (Root folder)
+		Shell folder identifier	: 59031a47-1d72-44a7-89c5-5595fe6b30ee
+		Shell folder name	: Unknown
+	Extension block: 1
+		Signature		: 0xbeef0025
+
+	Shell item: 2
+		Item type		: Unknown 0x74
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: AppData
+		Creation time		: Dec 25, 2015 00:47:30
+		Access time		: Dec 25, 2015 00:47:30
+		NTFS file reference	: MFT entry: 84451, sequence: 1
+
+	Shell item: 3
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: Local
+		Modification time	: Feb 04, 2016 12:45:02
+		File attribute flags	: 0x00000010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Local
+		Creation time		: Dec 25, 2015 00:47:30
+		Access time		: Feb 04, 2016 12:45:02
+		NTFS file reference	: MFT entry: 84469, sequence: 1
+
+	Shell item: 4
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: Packages
+		Modification time	: Jan 24, 2016 18:14:12
+		File attribute flags	: 0x00000010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Packages
+		Creation time		: Dec 25, 2015 00:47:38
+		Access time		: Jan 24, 2016 18:14:12
+		NTFS file reference	: MFT entry: 84652, sequence: 1
+
+	Shell item: 5
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: MICROS~1.MIC
+		Modification time	: Dec 25, 2015 00:47:40
+		File attribute flags	: 0x00000010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Mi�U
+		Creation time		: Dec 25, 2015 00:47:40
+		Access time		: Dec 25, 2015 00:47:40
+		NTFS file reference	: MFT entry: 84984, sequence: 1
+
+	Shell item: 6
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: AC
+		Modification time	: Jan 26, 2016 19:01:12
+		File attribute flags	: 0x00002010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: AC
+		Creation time		: Dec 25, 2015 00:47:40
+		Access time		: Feb 16, 2016 19:01:12
+		NTFS file reference	: MFT entry: 84990, sequence: 2
+
+	Shell item: 7
+		Item type		: File entry
+		Class type indicator	: 0x35 (File entry: Directory)
+		Name			: 䥍剃协㉾
+		Modification time	: Dec 25, 2015 02:20:38
+		File attribute flags	: 0x00002010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: MicrosoftEdge
+		Creation time		: Dec 25, 2015 02:17:24
+		Access time		: Dec 25, 2015 02:20:38
+		NTFS file reference	: MFT entry: 90623, sequence: 3
+
+	Shell item: 8
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: User
+		Modification time	: Dec 25, 2015 02:17:24
+		File attribute flags	: 0x00002010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: User
+		Creation time		: Dec 25, 2015 02:17:24
+		Access time		: Dec 25, 2015 02:17:24
+		NTFS file reference	: MFT entry: 90665, sequence: 10
+
+	Shell item: 9
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: Default
+		Modification time	: Dec 25, 2015 02:20:36
+		File attribute flags	: 0x00002010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Default
+		Creation time		: Dec 25, 2015 02:17:24
+		Access time		: Dec 25, 2015 02:20:36
+		NTFS file reference	: MFT entry: 90867, sequence: 15
+
+	Shell item: 10
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: DATAST~1
+		Modification time	: Dec 25, 2015 02:17:24
+		File attribute flags	: 0x00002010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: DataStoe
+		Creation time		: Dec 25, 2015 02:17:24
+		Access time		: Dec 25, 2015 02:17:24
+		NTFS file reference	: MFT entry: 90910, sequence: 4
+
+	Shell item: 11
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: Data
+		Modification time	: Dec 25, 2015 02:17:24
+		File attribute flags	: 0x00002010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Data
+		Creation time		: Dec 25, 2015 02:17:24
+		Access time		: Dec 25, 2015 02:17:24
+		NTFS file reference	: MFT entry: 90911, sequence: 5
+
+	Shell item: 12
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: nouser1
+		Modification time	: Dec 25, 2015 02:17:24
+		File attribute flags	: 0x00002010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: nouser1
+		Creation time		: Dec 25, 2015 02:17:24
+		Access time		: Dec 25, 2015 02:17:24
+		NTFS file reference	: MFT entry: 90912, sequence: 4
+
+	Shell item: 13
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: 120712~1
+		Modification time	: Dec 25, 2015 02:17:24
+		File attribute flags	: 0x00002010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: 120712-0049က
+		Creation time		: Dec 25, 2015 02:17:24
+		Access time		: Dec 25, 2015 02:17:24
+		NTFS file reference	: MFT entry: 90913, sequence: 4
+
+	Shell item: 14
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: DBStore
+		Modification time	: Dec 25, 2015 02:17:26
+		File attribute flags	: 0x00002010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: DBStore
+		Creation time		: Dec 25, 2015 02:17:24
+		Access time		: Dec 25, 2015 02:17:26
+		NTFS file reference	: MFT entry: 90934, sequence: 1
+
+	Shell item: 15
+		Item type		: File entry
+		Class type indicator	: 0x32 (File entry: File)
+		Name			: spartan.edb
+		Modification time	: Feb 04, 2016 22:08:26
+		File attribute flags	: 0x00002020
+			Should be archived (FILE_ATTRIBUTE_ARCHIVE)
+			Content should not be indexed (FILE_ATTRIBUTE_NOT_CONTENT_INDEXED)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: 䠸釆慐正条獥
+		Localized name		: edb
+		Creation time		: Dec 25, 2015 02:17:26
+		Access time		: Dec 25, 2015 02:17:26
+		NTFS file reference	: MFT entry: 326434477395, sequence: 111
+
+
+
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[Inferior 1 (process 13223) exited normally]
+
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+=================================================================
+==5656==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000815 at pc 0x00000045be37 bp 0x7fffffffbb40 sp 0x7fffffffb2f0
+READ of size 6 at 0x602000000815 thread T0
+    #0 0x45be36 in printf_common(void*, char const*, __va_list_tag*) (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x45be36)
+    #1 0x45ca7b in __interceptor_vfprintf (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x45ca7b)
+    #2 0x45cb46 in __interceptor_fprintf (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x45cb46)
+    #3 0x534eb2 in shell_items_file_entry_extension_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:294:3
+    #4 0x534763 in shell_items_extension_block_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:191:8
+    #5 0x5367a3 in shell_items_item_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:938:7
+    #6 0x538fd0 in shell_items_item_list_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:1726:7
+    #7 0x52fa37 in info_handle_link_target_identifier_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2223:7
+    #8 0x530c1c in info_handle_file_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2667:6
+    #9 0x532184 in main /home/exp/FOT/liblnk-fuzz/lnktools/lnkinfo.c:277:6
+    #10 0x7ffff6870b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #11 0x4301c9 in _start (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4301c9)
+
+0x602000000815 is located 0 bytes to the right of 5-byte region [0x602000000810,0x602000000815)
+allocated by thread T0 here:
+    #0 0x4f0080 in malloc (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x4f0080)
+    #1 0x534e6f in shell_items_file_entry_extension_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:256:18
+    #2 0x534763 in shell_items_extension_block_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:191:8
+    #3 0x5367a3 in shell_items_item_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:938:7
+    #4 0x538fd0 in shell_items_item_list_fprint /home/exp/FOT/liblnk-fuzz/lnktools/shell_items.c:1726:7
+    #5 0x52fa37 in info_handle_link_target_identifier_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2223:7
+    #6 0x530c1c in info_handle_file_fprint /home/exp/FOT/liblnk-fuzz/lnktools/info_handle.c:2667:6
+    #7 0x7ffff6870b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo+0x45be36) in printf_common(void*, char const*, __va_list_tag*)
+Shadow bytes around the buggy address:
+  0x0c047fff80b0: fa fa 00 00 fa fa 00 fa fa fa 00 00 fa fa 00 00
+  0x0c047fff80c0: fa fa 00 04 fa fa 00 00 fa fa 00 fa fa fa fd fd
+  0x0c047fff80d0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff80e0: fa fa fd fa fa fa fd fa fa fa fd fd fa fa fd fa
+  0x0c047fff80f0: fa fa fd fd fa fa fd fa fa fa fd fd fa fa fd fa
+=>0x0c047fff8100: fa fa[05]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8110: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8120: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8130: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8140: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8150: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==5656==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/exp/FOT/liblnk-fuzz/install/bin/lnkinfo liblnk-pocs/crashes/hbo_shell_items.c:294_1.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+lnkinfo 20180419
+
+Windows Shortcut information:
+	Contains a link target identifier
+	Contains a relative path string
+	Contains a working directory string
+
+Link information:
+	Creation time			: Jan 26, 2016 15:57:55.922889200 UTC
+	Modification time		: Jan 27, 2016 21:22:18.558676400 UTC
+	Access time			: Jan 27, 2016 21:22:18.555666700 UTC
+	File size			: 59810 bytes
+	Icon index			: 0
+	Show Window value		: 0x0000e9a2
+	Hot Key value			: 59810
+	File attribute flags		: 0x00000020
+		Should be archived (FILE_ATTRIBUTE_ARCHIVE)
+	Drive type			: Fixed (3)
+	Drive serial number		: 0x6a228faa
+	Volume label			: ÿÿ
+	Local path			: ÿÿUserM\e\AppData\Local\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\AC\MicrosoftEdge\User\Default\DataStore\Data\nouser1\120712-0049\DBStore\spar²an.edb
+	Relative path			: ..\..\..\..\Local\Packages\Microsoft.MicrosoftEdge_8wekyb3d8bbwe\AC\MicrosoftEdge\User\Default\DataStore\Data\nouser1\120712-0049\DBStore\spartan(edb
+	Working directory		: C:\Users\e\AppDatw\Lo愀氀尀倀愀挀欀愀最攀猀尀䴀椀挀爀漀猀漀昀琀⸀䴀椀挀爀漀猀漀昀琀䔀搀最攀开㠀眀攀欀礀戀㌀搀㠀戀戀眀攀尀䄀䌀尀䴀椀挀爀漀猀漀昀琀䔀搀最攀尀唀猀攀爀尀䐀攀替愀甀氀琀尀䐀愀琀愀匀琀漀爀攀尀䐀愀琀愀尀渀漀甀猀攀爀㄀尀㄀㈀　㜀㄀㈀ⴀ　　㐀㤀尀䐀䈀匀琀漀爀攀
+
+Link target identifier:
+	Shell item list
+		Number of items		: 15
+
+	Shell item: 1
+		Item type		: Root folder
+		Class type indicator	: 0x1f (Root folder)
+		Shell folder identifier	: 59031a47-1d72-44a7-89c5-5595fe6b30ee
+		Shell folder name	: Unknown
+	Extension block: 1
+		Signature		: 0xbeef0025
+
+	Shell item: 2
+		Item type		: Unknown 0x74
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: AppData
+		Creation time		: Dec 25, 2015 00:47:30
+		Access time		: Dec 25, 2015 00:47:30
+		NTFS file reference	: MFT entry: 84451, sequence: 1
+
+	Shell item: 3
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: Local
+		Modification time	: Feb 04, 2016 12:45:02
+		File attribute flags	: 0x00000010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Local
+		Creation time		: Dec 25, 2015 00:47:30
+		Access time		: Feb 04, 2016 12:45:02
+		NTFS file reference	: MFT entry: 84469, sequence: 1
+
+	Shell item: 4
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: Packages
+		Modification time	: Jan 24, 2016 18:14:12
+		File attribute flags	: 0x00000010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+		Long name		: Packages
+		Creation time		: Dec 25, 2015 00:47:38
+		Access time		: Jan 24, 2016 18:14:12
+		NTFS file reference	: MFT entry: 84652, sequence: 1
+
+	Shell item: 5
+		Item type		: File entry
+		Class type indicator	: 0x31 (File entry: Directory)
+		Name			: MICROS~1.MIC
+		Modification time	: Dec 25, 2015 00:47:40
+		File attribute flags	: 0x00000010
+			Is directory (FILE_ATTRIBUTE_DIRECTORY)
+	Extension block: 1
+		Signature		: 0xbeef0004 (File entry extension)
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff688f801 in __GI_abort () at abort.c:79
+#2  0x00000000005196fb in __sanitizer::Abort() ()
+#3  0x0000000000516a28 in __sanitizer::Die() ()
+#4  0x00000000004f8cad in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x000000000045be56 in printf_common(void*, char const*, __va_list_tag*) ()
+#6  0x000000000045ca7c in vfprintf ()
+#7  0x000000000045cb47 in fprintf ()
+#8  0x0000000000534eb3 in shell_items_file_entry_extension_fprint (extension_block=0x603000000310, notify_stream=0x7ffff6c3b760 <_IO_2_1_stdout_>, error=<optimized out>) at shell_items.c:294
+#9  0x0000000000534764 in shell_items_extension_block_fprint (extension_block=0x603000000310, extension_block_index=<optimized out>, notify_stream=0x7ffff6c3b760 <_IO_2_1_stdout_>, error=0x7fffffffc300) at shell_items.c:191
+#10 0x00000000005367a4 in shell_items_item_fprint (shell_item=0x606000000380, shell_item_index=<optimized out>, notify_stream=0x7ffff6c3b760 <_IO_2_1_stdout_>, error=0x7fffffffc300) at shell_items.c:938
+#11 0x0000000000538fd1 in shell_items_item_list_fprint (shell_item_list=0x6030000001f0, notify_stream=<optimized out>, error=0x7fffffffc300) at shell_items.c:1726
+#12 0x000000000052fa38 in info_handle_link_target_identifier_fprint (info_handle=0x603000000010, error=0x7fffffffc300) at info_handle.c:2223
+#13 0x0000000000530c1d in info_handle_file_fprint (info_handle=0x603000000010, error=0x7fffffffc300) at info_handle.c:2667
+#14 0x0000000000532185 in main (argc=0x2, argv=<optimized out>) at lnkinfo.c:277
