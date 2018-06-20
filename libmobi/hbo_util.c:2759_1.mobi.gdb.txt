@@ -1,0 +1,73 @@
+Undefined command: "".  Try "help".
+=================================================================
+==15891==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000612 at pc 0x0000004b429b bp 0x7fffffffacc0 sp 0x7fffffffa470
+READ of size 8 at 0x602000000612 thread T0
+    #0 0x4b429a in __interceptor_memcmp.part.283 (/home/exp/FOT/libmobi-asan/install/bin/mobitool+0x4b429a)
+    #1 0x7ffff7b7ea4e in mobi_get_kf8boundary_seqnumber /home/exp/FOT/libmobi-asan/src/util.c:2759:16
+    #2 0x7ffff7b6a731 in mobi_load_file /home/exp/FOT/libmobi-asan/src/read.c:868:44
+    #3 0x51f44b in loadfilename /home/exp/FOT/libmobi-asan/tools/mobitool.c:734:16
+    #4 0x52072d in main /home/exp/FOT/libmobi-asan/tools/mobitool.c:955:11
+    #5 0x7ffff6b7ab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #6 0x41aeb9 in _start (/home/exp/FOT/libmobi-asan/install/bin/mobitool+0x41aeb9)
+
+0x602000000612 is located 0 bytes to the right of 2-byte region [0x602000000610,0x602000000612)
+allocated by thread T0 here:
+    #0 0x4dad70 in __interceptor_malloc (/home/exp/FOT/libmobi-asan/install/bin/mobitool+0x4dad70)
+    #1 0x7ffff7b641e5 in mobi_load_recdata /home/exp/FOT/libmobi-asan/src/read.c:180:17
+    #2 0x7ffff7b640b1 in mobi_load_rec /home/exp/FOT/libmobi-asan/src/read.c:156:15
+    #3 0x7ffff7b6a5d9 in mobi_load_file /home/exp/FOT/libmobi-asan/src/read.c:853:11
+    #4 0x51f44b in loadfilename /home/exp/FOT/libmobi-asan/tools/mobitool.c:734:16
+    #5 0x52072d in main /home/exp/FOT/libmobi-asan/tools/mobitool.c:955:11
+    #6 0x7ffff6b7ab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/exp/FOT/libmobi-asan/install/bin/mobitool+0x4b429a) in __interceptor_memcmp.part.283
+Shadow bytes around the buggy address:
+  0x0c047fff8070: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff8080: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff8090: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff80a0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff80b0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa 02 fa
+=>0x0c047fff80c0: fa fa[02]fa fa fa 01 fa fa fa 00 00 fa fa 04 fa
+  0x0c047fff80d0: fa fa 04 fa fa fa 04 fa fa fa 04 fa fa fa 04 fa
+  0x0c047fff80e0: fa fa 04 fa fa fa 04 fa fa fa 04 fa fa fa 04 fa
+  0x0c047fff80f0: fa fa 04 fa fa fa 04 fa fa fa 04 fa fa fa 04 fa
+  0x0c047fff8100: fa fa 04 fa fa fa 04 fa fa fa 04 fa fa fa 04 fa
+  0x0c047fff8110: fa fa 04 fa fa fa 04 fa fa fa 04 fa fa fa 04 fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==15891==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/exp/FOT/libmobi-asan/install/bin/mobitool -i7m libmobi-pocs/crashes/hbo_util.c:2759_1.mobi
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6b99801 in __GI_abort () at abort.c:79
+#2  0x00000000005043eb in __sanitizer::Abort() ()
+#3  0x0000000000501718 in __sanitizer::Die() ()
+#4  0x00000000004e399d in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x00000000004b42ba in __interceptor_memcmp.part.283 ()
+#6  0x00007ffff7b7ea4f in mobi_get_kf8boundary_seqnumber (m=0x606000000020) at util.c:2759
+#7  0x00007ffff7b6a732 in mobi_load_file (m=0x606000000020, file=0x616000000080) at read.c:868
+#8  0x000000000051f44c in loadfilename (fullpath=0x7fffffffaf60 "libmobi-pocs/crashes/hbo_util.c:2759_1.mobi") at mobitool.c:734
+#9  0x000000000052072e in main (argc=0x3, argv=0x7fffffffc418) at mobitool.c:955
