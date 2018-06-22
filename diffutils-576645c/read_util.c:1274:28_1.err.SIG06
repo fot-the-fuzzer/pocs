@@ -1,0 +1,20 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==8313==ERROR: AddressSanitizer: SEGV on unknown address 0x6210000100d4 (pc 0x7f367ca57c40 bp 0x000000000400 sp 0x7ffeebd7e358 T0)
+==8313==The signal is caused by a READ memory access.
+    #0 0x7f367ca57c3f  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:370
+    #1 0x7f367c954993 in _IO_file_xsputn /build/glibc-OTsEL5/glibc-2.27/libio/fileops.c:1258
+    #2 0x7f367c95351f in fwrite_unlocked /build/glibc-OTsEL5/glibc-2.27/libio/iofwrite_u.c:43
+    #3 0x551dc4 in output_1_line /home/hongxu/FOT/diffutils-fuzz/src/util.c:1274:28
+    #4 0x550d24 in print_1_line_nl /home/hongxu/FOT/diffutils-fuzz/src/util.c:1249:3
+    #5 0x544366 in print_normal_hunk /home/hongxu/FOT/diffutils-fuzz/src/normal.c:66:11
+    #6 0x550883 in print_script /home/hongxu/FOT/diffutils-fuzz/src/util.c:1195:7
+    #7 0x51351f in diff_2_files /home/hongxu/FOT/diffutils-fuzz/src/analyze.c:665:5
+    #8 0x5297a7 in compare_files /home/hongxu/FOT/diffutils-fuzz/src/diff.c:1434:11
+    #9 0x52546a in main /home/hongxu/FOT/diffutils-fuzz/src/diff.c:800:18
+    #10 0x7f367c8eab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #11 0x41d709 in _start (/home/hongxu/FOT/diffutils-fuzz/install/bin/diff+0x41d709)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:370 
+==8313==ABORTING
