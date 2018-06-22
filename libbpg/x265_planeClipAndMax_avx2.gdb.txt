@@ -1,0 +1,36 @@
+gdb --args ./bpgenc ~/Desktop/input/display-im6.q16.png                                                                     1   master 
+GNU gdb (Ubuntu 8.1-0ubuntu3) 8.1.0.20180409-git
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./bpgenc...done.
+(gdb) run
+Starting program: /home/gqy/Desktop/libbpg-fuzz/libbpg/bpgenc /home/gqy/Desktop/input/display-im6.q16.png
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff38ff700 (LWP 29325)]
+
+Thread 1 "bpgenc" received signal SIGSEGV, Segmentation fault.
+0x0000000001102ec8 in x265_planeClipAndMax_avx2 ()
+(gdb) bt
+#0  0x0000000001102ec8 in x265_planeClipAndMax_avx2 ()
+#1  0x0000000000fc709c in x265::PicYuv::copyFromPicture (this=<optimized out>, pic=..., param=..., padx=8, pady=<optimized out>)
+    at /home/gqy/Desktop/libbpg-fuzz/libbpg/x265/source/common/picyuv.cpp:260
+#2  0x0000000000f32a7f in x265::Encoder::encode (this=<optimized out>, pic_in=0x617000000b00, pic_out=<optimized out>)
+    at /home/gqy/Desktop/libbpg-fuzz/libbpg/x265/source/encoder/encoder.cpp:536
+#3  0x000000000054baf4 in x265_encoder_encode (enc=0x631000014800, pp_nal=0x7fffffffd450, pi_nal=0x7fffffffd440, pic_in=0x8, pic_out=<optimized out>)
+    at /home/gqy/Desktop/libbpg-fuzz/libbpg/x265/source/encoder/api.cpp:193
+#4  0x0000000000548963 in x265_encode (s=<optimized out>, img=<optimized out>) at x265_glue.c:168
+#5  0x000000000052e65f in bpg_encoder_encode (s=<optimized out>, img=0x607000000100, write_func=0x536100 <my_write_func>, opaque=0x616000000080) at bpgenc.c:2573
+#6  0x0000000000534056 in main (argc=2, argv=0x7fffffffdeb8) at bpgenc.c:2964
+
