@@ -1,0 +1,22 @@
+Undefined command: "".  Try "help".
+test_tinyexr: ./tinyexr.h:7759: void tinyexr::DecompressRle(unsigned char *, const unsigned long, const unsigned char *, unsigned long): Assertion `ret == static_cast<int>(uncompressed_size)' failed.
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/hongxu/FOT/tinyexr-fuzz/test_tinyexr ./tinyexr-pocs/crashes/assert_tinyexr.h:7759_1.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6ab5801 in __GI_abort () at abort.c:79
+#2  0x00007ffff6aa539a in __assert_fail_base (fmt=0x7ffff6c2c7d8 "%s%s%s:%u: %s%sAssertion `%s' failed.\n%n", assertion=assertion@entry=0x611000 <.str> "ret == static_cast<int>(uncompressed_size)", file=file@entry=0x60d2e0 <.str> "./tinyexr.h", line=line@entry=0x1e4f, function=function@entry=0x611060 <__PRETTY_FUNCTION__._ZN7tinyexrL13DecompressRleEPhmPKhm> "void tinyexr::DecompressRle(unsigned char *, const unsigned long, const unsigned char *, unsigned long)") at assert.c:92
+#3  0x00007ffff6aa5412 in __GI___assert_fail (assertion=0x611000 <.str> "ret == static_cast<int>(uncompressed_size)", file=0x60d2e0 <.str> "./tinyexr.h", line=0x1e4f, function=0x611060 <__PRETTY_FUNCTION__._ZN7tinyexrL13DecompressRleEPhmPKhm> "void tinyexr::DecompressRle(unsigned char *, const unsigned long, const unsigned char *, unsigned long)") at assert.c:101
+#4  0x00000000005cb686 in tinyexr::DecompressRle (src_size=<optimized out>, dst=<optimized out>, uncompressed_size=<optimized out>, src=<optimized out>) at ./tinyexr.h:7759
+#5  tinyexr::DecodePixelData (out_images=<optimized out>, requested_pixel_types=<optimized out>, data_ptr=<optimized out>, data_len=<optimized out>, compression_type=<optimized out>, line_order=<optimized out>, width=<optimized out>, height=<optimized out>, x_stride=<optimized out>, y=<optimized out>, line_no=<optimized out>, num_lines=<optimized out>, pixel_data_size=<optimized out>, num_attributes=0x0, attributes=<optimized out>, num_channels=<optimized out>, channels=<optimized out>, channel_offset_list=...) at ./tinyexr.h:9852
+#6  0x00000000005a00e5 in tinyexr::DecodeChunk (exr_image=<optimized out>, exr_header=<optimized out>, offsets=..., head=0x62a000006200 "v/1\001\002", size=0x5155) at ./tinyexr.h:10781
+#7  0x0000000000565ece in tinyexr::DecodeEXRImage (exr_image=<optimized out>, exr_header=<optimized out>, head=<optimized out>, size=<optimized out>, err=0x7fffffffb940, marker=<optimized out>) at ./tinyexr.h:10967
+#8  LoadEXRImageFromMemory (exr_image=0x7fffffffb5a0, exr_header=0x7fffffffb5e0, memory=<optimized out>, size=0x5155, err=<optimized out>) at ./tinyexr.h:11339
+#9  0x000000000054f933 in LoadEXRImageFromFile (exr_image=0x7fffffffb5a0, exr_header=0x7fffffffb5e0, filename=<optimized out>, err=0x7fffffffb940) at ./tinyexr.h:11317
+#10 0x0000000000544654 in LoadEXR (out_rgba=0x7fffffffb980, width=0x7fffffffb960, height=0x7fffffffb970, filename=0x7fffffffc1ae "./tinyexr-pocs/crashes/assert_tinyexr.h:7759_1.txt", err=0x7fffffffb940) at ./tinyexr.h:11013
+#11 0x00000000005a7951 in main (argc=<optimized out>, argv=<optimized out>) at test_tinyexr.cc:130

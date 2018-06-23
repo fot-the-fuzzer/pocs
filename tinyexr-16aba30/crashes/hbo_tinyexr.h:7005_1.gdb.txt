@@ -1,0 +1,83 @@
+Undefined command: "".  Try "help".
+=================================================================
+==27561==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x620000001f1e at pc 0x0000005db5c6 bp 0x7fffffffa690 sp 0x7fffffffa688
+READ of size 1 at 0x620000001f1e thread T0
+    #0 0x5db5c5 in tinyexr::cpy4(float*, float const*) /home/hongxu/FOT/tinyexr-fuzz/./tinyexr.h:7005:12
+    #1 0x5db5c5 in tinyexr::DecodePixelData(unsigned char**, int const*, unsigned char const*, unsigned long, int, int, int, int, int, int, int, int, unsigned long, unsigned long, _EXRAttribute const*, unsigned long, _EXRChannelInfo const*, std::vector<unsigned long, std::allocator<unsigned long> > const&) /home/hongxu/FOT/tinyexr-fuzz/./tinyexr.h:10109
+    #2 0x5a00e4 in tinyexr::DecodeChunk(_EXRImage*, _EXRHeader const*, std::vector<unsigned long, std::allocator<unsigned long> > const&, unsigned char const*, unsigned long) /home/hongxu/FOT/tinyexr-fuzz/./tinyexr.h:10781:20
+    #3 0x565ecd in LoadEXRImageFromMemory /home/hongxu/FOT/tinyexr-fuzz/./tinyexr.h:10967:10
+    #4 0x54f932 in LoadEXRImageFromFile /home/hongxu/FOT/tinyexr-fuzz/./tinyexr.h:11317:10
+    #5 0x544653 in LoadEXR /home/hongxu/FOT/tinyexr-fuzz/./tinyexr.h:11013:15
+    #6 0x5a7950 in main /home/hongxu/FOT/tinyexr-fuzz/test_tinyexr.cc:130:13
+    #7 0x7ffff6a96b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #8 0x41b1e9 in _start (/home/hongxu/FOT/tinyexr-fuzz/test_tinyexr+0x41b1e9)
+
+0x620000001f1e is located 0 bytes to the right of 3742-byte region [0x620000001080,0x620000001f1e)
+allocated by thread T0 here:
+    #0 0x513650 in operator new(unsigned long) (/home/hongxu/FOT/tinyexr-fuzz/test_tinyexr+0x513650)
+    #1 0x54f8e5 in __gnu_cxx::new_allocator<unsigned char>::allocate(unsigned long, void const*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/ext/new_allocator.h:111:27
+    #2 0x54f8e5 in std::allocator_traits<std::allocator<unsigned char> >::allocate(std::allocator<unsigned char>&, unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/alloc_traits.h:436
+    #3 0x54f8e5 in std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/stl_vector.h:296
+    #4 0x54f8e5 in std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage(unsigned long) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/stl_vector.h:311
+    #5 0x54f8e5 in std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base(unsigned long, std::allocator<unsigned char> const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/stl_vector.h:260
+    #6 0x54f8e5 in std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/stl_vector.h:416
+    #7 0x54f8e5 in LoadEXRImageFromFile /home/hongxu/FOT/tinyexr-fuzz/./tinyexr.h:11308
+    #8 0x544653 in LoadEXR /home/hongxu/FOT/tinyexr-fuzz/./tinyexr.h:11013:15
+    #9 0x5a7950 in main /home/hongxu/FOT/tinyexr-fuzz/test_tinyexr.cc:130:13
+    #10 0x7ffff6a96b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/tinyexr-fuzz/./tinyexr.h:7005:12 in tinyexr::cpy4(float*, float const*)
+Shadow bytes around the buggy address:
+  0x0c407fff8390: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c407fff83a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c407fff83b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c407fff83c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c407fff83d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c407fff83e0: 00 00 00[06]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c407fff83f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c407fff8400: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c407fff8410: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c407fff8420: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c407fff8430: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==27561==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/hongxu/FOT/tinyexr-fuzz/test_tinyexr ./tinyexr-pocs/crashes/hbo_tinyexr.h:7005_1.txt
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6ab5801 in __GI_abort () at abort.c:79
+#2  0x000000000050471b in __sanitizer::Abort() ()
+#3  0x0000000000501a48 in __sanitizer::Die() ()
+#4  0x00000000004e3ccd in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x00000000004e4398 in __asan_report_load1 ()
+#6  0x00000000005db5c6 in tinyexr::cpy4 (src_val=<optimized out>, dst_val=<optimized out>) at ./tinyexr.h:7005
+#7  tinyexr::DecodePixelData (out_images=<optimized out>, requested_pixel_types=<optimized out>, data_ptr=<optimized out>, data_len=<optimized out>, compression_type=<optimized out>, line_order=<optimized out>, width=<optimized out>, height=<optimized out>, x_stride=<optimized out>, y=<optimized out>, line_no=<optimized out>, num_lines=<optimized out>, pixel_data_size=<optimized out>, num_attributes=0x0, attributes=<optimized out>, num_channels=<optimized out>, channels=<optimized out>, channel_offset_list=...) at ./tinyexr.h:10109
+#8  0x00000000005a00e5 in tinyexr::DecodeChunk (exr_image=<optimized out>, exr_header=<optimized out>, offsets=..., head=0x620000001080 "v/1\001\002", size=0xe9e) at ./tinyexr.h:10781
+#9  0x0000000000565ece in tinyexr::DecodeEXRImage (exr_image=<optimized out>, exr_header=<optimized out>, head=<optimized out>, size=<optimized out>, err=0x7fffffffb940, marker=<optimized out>) at ./tinyexr.h:10967
+#10 LoadEXRImageFromMemory (exr_image=0x7fffffffb5a0, exr_header=0x7fffffffb5e0, memory=<optimized out>, size=0xe9e, err=<optimized out>) at ./tinyexr.h:11339
+#11 0x000000000054f933 in LoadEXRImageFromFile (exr_image=0x7fffffffb5a0, exr_header=0x7fffffffb5e0, filename=<optimized out>, err=0x7fffffffb940) at ./tinyexr.h:11317
+#12 0x0000000000544654 in LoadEXR (out_rgba=0x7fffffffb980, width=0x7fffffffb960, height=0x7fffffffb970, filename=0x7fffffffc1b1 "./tinyexr-pocs/crashes/hbo_tinyexr.h:7005_1.txt", err=0x7fffffffb940) at ./tinyexr.h:11013
+#13 0x00000000005a7951 in main (argc=<optimized out>, argv=<optimized out>) at test_tinyexr.cc:130

@@ -1,0 +1,28 @@
+Reading symbols from ../../../tinyexr/test_tinyexr...done.
+Starting program: /home/hongxu/FOT/tinyexr/test_tinyexr ./id:000000,sig:06,src:000013,op:havoc,rep:64.input.txt
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff70e0801 in __GI_abort () at abort.c:79
+#2  0x00007ffff7ad38fb in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#3  0x00007ffff7ad9d3a in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#4  0x00007ffff7ad9d95 in std::terminate() () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff7ad9fe8 in __cxa_throw () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007ffff7ada594 in operator new(unsigned long) () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#7  0x00000000004249b7 in __gnu_cxx::new_allocator<unsigned char>::allocate (this=0x7fffffffb130, __n=0xffffffff40012c00) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/ext/new_allocator.h:111
+#8  0x000000000042495c in std::allocator_traits<std::allocator<unsigned char> >::allocate (__a=..., __n=0xffffffff40012c00) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/alloc_traits.h:436
+#9  0x0000000000424673 in std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_allocate (this=0x7fffffffb130, __n=0xffffffff40012c00) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/stl_vector.h:296
+#10 0x000000000042bdaf in std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_M_create_storage (this=0x7fffffffb130, __n=0xffffffff40012c00) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/stl_vector.h:311
+#11 0x000000000042bc55 in std::_Vector_base<unsigned char, std::allocator<unsigned char> >::_Vector_base (this=0x7fffffffb130, __n=0xffffffff40012c00, __a=...) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/stl_vector.h:260
+#12 0x0000000000421b07 in std::vector<unsigned char, std::allocator<unsigned char> >::vector (this=0x7fffffffb130, __n=0xffffffff40012c00, __a=...) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.0.1/../../../../include/c++/8.0.1/bits/stl_vector.h:416
+#13 0x000000000041d695 in tinyexr::DecodePixelData (out_images=0x655660, requested_pixel_types=0x655280, data_ptr=0x656781 "\200\a", data_len=0x92d, compression_type=0x4, line_order=0x0, width=0x7f000190, height=0x12c, x_stride=0x7f000190, y=0x0, line_no=0x0, num_lines=0x20, pixel_data_size=0x6, num_attributes=0x0, attributes=0x0, num_channels=0x3, channels=0x6552a0, channel_offset_list=std::vector of length 3, capacity 3 = {...}) at ./tinyexr.h:9581
+#14 0x0000000000417e4d in tinyexr::DecodeChunk (exr_image=0x7fffffffba68, exr_header=0x7fffffffb9e0, offsets=std::vector of length 10, capacity 10 = {...}, head=0x6565f0 "v/1\001\002", size=0x5107) at ./tinyexr.h:10781
+#15 0x000000000040f8ea in tinyexr::DecodeEXRImage (exr_image=0x7fffffffba68, exr_header=0x7fffffffb9e0, head=0x6565f0 "v/1\001\002", marker=0x656779 "", size=0x5107, err=0x7fffffffbb40) at ./tinyexr.h:10967
+#16 0x000000000040efe6 in LoadEXRImageFromMemory (exr_image=0x7fffffffba68, exr_header=0x7fffffffb9e0, memory=0x6565f0 "v/1\001\002", size=0x5107, err=0x7fffffffbb40) at ./tinyexr.h:11339
+#17 0x000000000040c859 in LoadEXRImageFromFile (exr_image=0x7fffffffba68, exr_header=0x7fffffffb9e0, filename=0x7fffffffc2c1 "./id:000000,sig:06,src:000013,op:havoc,rep:64.input.txt", err=0x7fffffffbb40) at ./tinyexr.h:11317
+#18 0x000000000040b2db in LoadEXR (out_rgba=0x7fffffffbb30, width=0x7fffffffbb3c, height=0x7fffffffbb38, filename=0x7fffffffc2c1 "./id:000000,sig:06,src:000013,op:havoc,rep:64.input.txt", err=0x7fffffffbb40) at ./tinyexr.h:11013
+#19 0x0000000000418caf in main (argc=0x2, argv=0x7fffffffbc48) at test_tinyexr.cc:130
