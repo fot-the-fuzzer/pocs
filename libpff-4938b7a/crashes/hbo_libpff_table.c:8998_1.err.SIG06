@@ -1,0 +1,52 @@
+=================================================================
+==9033==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61300000d4c5 at pc 0x000000579cbc bp 0x7ffedf071d70 sp 0x7ffedf071d68
+READ of size 1 at 0x61300000d4c5 thread T0
+    #0 0x579cbb in libpff_table_read_entry_value /home/hongxu/FOT/libpff/libpff/libpff_table.c:8998:3
+    #1 0x571f22 in libpff_table_read_values_array /home/hongxu/FOT/libpff/libpff/libpff_table.c:8709:9
+    #2 0x56812d in libpff_table_read_7c_values /home/hongxu/FOT/libpff/libpff/libpff_table.c:3964:7
+    #3 0x5649cf in libpff_table_read_values /home/hongxu/FOT/libpff/libpff/libpff_table.c:3291:13
+    #4 0x5631ed in libpff_table_read /home/hongxu/FOT/libpff/libpff/libpff_table.c:2427:6
+    #5 0x53462e in libpff_item_values_read /home/hongxu/FOT/libpff/libpff/libpff_item_values.c:289:6
+    #6 0x53653b in libpff_name_to_id_map_read /home/hongxu/FOT/libpff/libpff/libpff_name_to_id_map.c:292:6
+    #7 0x519c6f in libpff_file_open_read /home/hongxu/FOT/libpff/libpff/libpff_file.c:1081:11
+    #8 0x518e2e in libpff_file_open_file_io_handle /home/hongxu/FOT/libpff/libpff/libpff_file.c:580:6
+    #9 0x5189ee in libpff_file_open /home/hongxu/FOT/libpff/libpff/libpff_file.c:322:6
+    #10 0x512dcf in info_handle_open_input /home/hongxu/FOT/libpff/pfftools/info_handle.c:298:6
+    #11 0x516afc in main /home/hongxu/FOT/libpff/pfftools/pffinfo.c:284:6
+    #12 0x7fecbe6b8b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #13 0x41a1f9 in _start (/home/hongxu/FOT/libpff/install/bin/pffinfo+0x41a1f9)
+
+Address 0x61300000d4c5 is a wild pointer.
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/libpff/libpff/libpff_table.c:8998:3 in libpff_table_read_entry_value
+Shadow bytes around the buggy address:
+  0x0c267fff9a40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fff9a50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fff9a60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fff9a70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fff9a80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c267fff9a90: fa fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa fa
+  0x0c267fff9aa0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fff9ab0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fff9ac0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fff9ad0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fff9ae0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==9033==ABORTING

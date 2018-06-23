@@ -1,0 +1,65 @@
+=================================================================
+==9039==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61a00000171f at pc 0x000000537aca bp 0x7ffd09d8cbf0 sp 0x7ffd09d8cbe8
+READ of size 1 at 0x61a00000171f thread T0
+    #0 0x537ac9 in libpff_name_to_id_map_entry_read /home/hongxu/FOT/libpff/libpff/libpff_name_to_id_map.c:801:3
+    #1 0x536eb8 in libpff_name_to_id_map_read /home/hongxu/FOT/libpff/libpff/libpff_name_to_id_map.c:498:7
+    #2 0x519c6f in libpff_file_open_read /home/hongxu/FOT/libpff/libpff/libpff_file.c:1081:11
+    #3 0x518e2e in libpff_file_open_file_io_handle /home/hongxu/FOT/libpff/libpff/libpff_file.c:580:6
+    #4 0x5189ee in libpff_file_open /home/hongxu/FOT/libpff/libpff/libpff_file.c:322:6
+    #5 0x512dcf in info_handle_open_input /home/hongxu/FOT/libpff/pfftools/info_handle.c:298:6
+    #6 0x516afc in main /home/hongxu/FOT/libpff/pfftools/pffinfo.c:284:6
+    #7 0x7f754cae9b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #8 0x41a1f9 in _start (/home/hongxu/FOT/libpff/install/bin/pffinfo+0x41a1f9)
+
+0x61a00000171f is located 3 bytes to the right of 1180-byte region [0x61a000001280,0x61a00000171c)
+allocated by thread T0 here:
+    #0 0x4da0b0 in malloc (/home/hongxu/FOT/libpff/install/bin/pffinfo+0x4da0b0)
+    #1 0x53d71a in libpff_record_entry_set_value_data_from_stream /home/hongxu/FOT/libpff/libpff/libpff_record_entry.c:789:51
+    #2 0x53d1b7 in libpff_record_entry_set_value_data_from_list /home/hongxu/FOT/libpff/libpff/libpff_record_entry.c:668:6
+    #3 0x57b84c in libpff_table_read_entry_value /home/hongxu/FOT/libpff/libpff/libpff_table.c:9635:13
+    #4 0x578def in libpff_table_read_bc_record_entries /home/hongxu/FOT/libpff/libpff/libpff_table.c:7734:9
+    #5 0x56c607 in libpff_table_read_bc_values /home/hongxu/FOT/libpff/libpff/libpff_table.c:4955:6
+    #6 0x564a8e in libpff_table_read_values /home/hongxu/FOT/libpff/libpff/libpff_table.c:3340:13
+    #7 0x5631ed in libpff_table_read /home/hongxu/FOT/libpff/libpff/libpff_table.c:2427:6
+    #8 0x53462e in libpff_item_values_read /home/hongxu/FOT/libpff/libpff/libpff_item_values.c:289:6
+    #9 0x53653b in libpff_name_to_id_map_read /home/hongxu/FOT/libpff/libpff/libpff_name_to_id_map.c:292:6
+    #10 0x519c6f in libpff_file_open_read /home/hongxu/FOT/libpff/libpff/libpff_file.c:1081:11
+    #11 0x518e2e in libpff_file_open_file_io_handle /home/hongxu/FOT/libpff/libpff/libpff_file.c:580:6
+    #12 0x5189ee in libpff_file_open /home/hongxu/FOT/libpff/libpff/libpff_file.c:322:6
+    #13 0x512dcf in info_handle_open_input /home/hongxu/FOT/libpff/pfftools/info_handle.c:298:6
+    #14 0x516afc in main /home/hongxu/FOT/libpff/pfftools/pffinfo.c:284:6
+    #15 0x7f754cae9b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/libpff/libpff/libpff_name_to_id_map.c:801:3 in libpff_name_to_id_map_entry_read
+Shadow bytes around the buggy address:
+  0x0c347fff8290: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c347fff82a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c347fff82b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c347fff82c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c347fff82d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c347fff82e0: 00 00 00[04]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c347fff82f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c347fff8300: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c347fff8310: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c347fff8320: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c347fff8330: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==9039==ABORTING
