@@ -1,0 +1,83 @@
+Reading symbols from r2...done.
+Starting program: /usr/bin/r2 -A -Q ./radare2-tests/20d271ffbed87736ac66adaa2f3e5532d3e803db
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Checksum: 0x0824
+ProductCode: 128348
+Console: Sega Master System
+Region: Export
+RomSize: 256KB
+[ ] Analyze all flags starting with sym. and entry0 (aa)[[x] Analyze all flags starting with sym. and entry0 (aa)
+[0K[ ] 
+Analyze value pointers (aav)[Value from 0x00000000 to 0x00005334
+aav: 0x00000000-0x00005334 in 0x0-0x5334
+[ ] Analyze function calls (aac)[=================================================================
+==25722==ERROR: AddressSanitizer: global-buffer-overflow on address 0x7ffff5538dd0 at pc 0x7ffff48d5c50 bp 0x7fffffff9f70 sp 0x7fffffff9f68
+READ of size 4 at 0x7ffff5538dd0 thread T0
+    #0 0x7ffff48d5c4f  (/usr/lib/libr_anal.so+0x66dc4f)
+    #1 0x7ffff48e82dc  (/usr/lib/libr_anal.so+0x6802dc)
+    #2 0x7ffff7546553  (/usr/lib/libr_core.so+0x390553)
+    #3 0x7ffff75456c8  (/usr/lib/libr_core.so+0x38f6c8)
+    #4 0x7ffff741d3b2  (/usr/lib/libr_core.so+0x2673b2)
+    #5 0x7ffff76a676e  (/usr/lib/libr_core.so+0x4f076e)
+    #6 0x7ffff73d0467  (/usr/lib/libr_core.so+0x21a467)
+    #7 0x7ffff73c1b72  (/usr/lib/libr_core.so+0x20bb72)
+    #8 0x55555566cae4  (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0x118ae4)
+    #9 0x7fffef869b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #10 0x5555555794c9  (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0x254c9)
+
+0x7ffff5538dd0 is located 8 bytes to the right of global variable 'ed' defined in '/home/hongxu/FOT/radare2-fuzz/libr/..//libr/anal/p/../../asm/arch/z80/z80_tab.h:933:19' (0x7ffff5538840) of size 1416
+SUMMARY: AddressSanitizer: global-buffer-overflow (/usr/lib/libr_anal.so+0x66dc4f) 
+Shadow bytes around the buggy address:
+  0x10007ea9f160: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007ea9f170: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007ea9f180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007ea9f190: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007ea9f1a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x10007ea9f1b0: 00 00 00 00 00 00 00 00 00 f9[f9]f9 f9 f9 f9 f9
+  0x10007ea9f1c0: f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9
+  0x10007ea9f1d0: f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9
+  0x10007ea9f1e0: f9 f9 f9 f9 f9 f9 f9 f9 00 00 00 00 00 00 00 00
+  0x10007ea9f1f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007ea9f200: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==25722==ABORTING
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007fffef888801 in __GI_abort () at abort.c:79
+#2  0x000055555565ab1b in __sanitizer::Abort() ()
+#3  0x0000555555653868 in __sanitizer::Die() ()
+#4  0x00005555556376c5 in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x00005555556382d8 in __asan_report_load4 ()
+#6  0x00007ffff48d5c50 in z80_anal_op (anal=<optimized out>, op=0x7fffffffa0e0, addr=0x2143, data=0x621000037261 "\355t 1\333\017\037\204", len=0x0) at /home/hongxu/FOT/radare2-fuzz/libr/..//libr/anal/p/anal_z80.c:57
+#7  0x00007ffff48e82dd in r_anal_op (anal=0x625000014100, op=0x7fffffffa0e0, addr=0x2143, data=0x621000037261 "\355t 1\333\017\037\204", len=0xe9f, mask=<optimized out>) at op.c:106
+#8  0x00007ffff7546554 in _anal_calls (core=0x555556514d40 <r>, addr=0x2143, addr_end=0x5334) at ./cmd_anal.c:4808
+#9  0x00007ffff75456c9 in cmd_anal_calls (core=0x555556514d40 <r>, input=<optimized out>, only_print_flag=<optimized out>) at ./cmd_anal.c:4895
+#10 0x00007ffff741d3b3 in cmd_anal_all (core=<optimized out>, input=<optimized out>) at ./cmd_anal.c:6724
+#11 cmd_anal (data=<optimized out>, input=<optimized out>) at ./cmd_anal.c:7086
+#12 0x00007ffff76a676f in r_cmd_call (cmd=<optimized out>, input=<optimized out>) at cmd_api.c:237
+#13 0x00007ffff73d0468 in r_core_cmd_subst_i (cmd=<optimized out>, tmpseek=<optimized out>, core=<optimized out>, colon=<optimized out>) at cmd.c:2844
+#14 r_core_cmd_subst (core=0x555556514d40 <r>, cmd=<optimized out>) at cmd.c:1873
+#15 0x00007ffff73c1b73 in r_core_cmd (core=0x555556514d40 <r>, cstr=<optimized out>, log=<optimized out>) at cmd.c:3539
+#16 0x000055555566cae5 in main (argc=0x2, argv=0x607000001130, envp=<optimized out>) at radare2.c:1294
