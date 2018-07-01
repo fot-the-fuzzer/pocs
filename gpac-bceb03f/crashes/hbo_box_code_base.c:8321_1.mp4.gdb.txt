@@ -1,0 +1,106 @@
+Undefined command: "".  Try "help".
+[33m[iso file] Unknown box type ..ee
+[0m=================================================================
+==21268==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000258 at pc 0x000000441135 bp 0x7ffffffefa00 sp 0x7ffffffef1b0
+READ of size 9 at 0x602000000258 thread T0
+    #0 0x441134  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x441134)
+    #1 0x7ffff7620864  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x4f864)
+    #2 0x7ffff77ca2ec  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1f92ec)
+    #3 0x7ffff77f2b8a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221b8a)
+    #4 0x7ffff77f2412  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221412)
+    #5 0x7ffff77f2ccf  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221ccf)
+    #6 0x7ffff77f2c86  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221c86)
+    #7 0x7ffff77b1958  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1e0958)
+    #8 0x7ffff77f2b8a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221b8a)
+    #9 0x7ffff77f2412  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221412)
+    #10 0x7ffff77f1d77  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x220d77)
+    #11 0x7ffff77fac68  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x229c68)
+    #12 0x7ffff77fc25a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22b25a)
+    #13 0x7ffff77fec66  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22dc66)
+    #14 0x52cac6  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x52cac6)
+    #15 0x5326a1  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x5326a1)
+    #16 0x7ffff6620b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #17 0x424989  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+0x602000000258 is located 0 bytes to the right of 8-byte region [0x602000000250,0x602000000258)
+allocated by thread T0 here:
+    #0 0x4e4840  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e4840)
+    #1 0x7ffff76207c4  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x4f7c4)
+    #2 0x7ffff77ca258  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1f9258)
+    #3 0x7ffff77f2b8a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221b8a)
+    #4 0x7ffff77f2412  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221412)
+    #5 0x7ffff77f2ccf  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221ccf)
+    #6 0x7ffff77f2c86  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221c86)
+    #7 0x7ffff77b1958  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1e0958)
+    #8 0x7ffff77f2b8a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221b8a)
+    #9 0x7ffff77f2412  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221412)
+    #10 0x7ffff77f1d77  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x220d77)
+    #11 0x7ffff77fac68  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x229c68)
+    #12 0x7ffff77fc25a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22b25a)
+    #13 0x7ffff77fec66  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22dc66)
+    #14 0x52cac6  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x52cac6)
+    #15 0x5326a1  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x5326a1)
+    #16 0x7ffff6620b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x441134) 
+Shadow bytes around the buggy address:
+  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff8000: fa fa 00 00 fa fa 00 07 fa fa 00 00 fa fa 00 00
+  0x0c047fff8010: fa fa 00 05 fa fa 00 00 fa fa 00 04 fa fa 00 07
+  0x0c047fff8020: fa fa 00 00 fa fa 00 00 fa fa 00 07 fa fa 00 07
+  0x0c047fff8030: fa fa 00 04 fa fa 00 02 fa fa 00 01 fa fa 00 00
+=>0x0c047fff8040: fa fa 00 fa fa fa 00 00 fa fa 00[fa]fa fa fa fa
+  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==21268==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/hongxu/FOT/gpac/install/bin/MP4Box -diso ALL/gpac-bceb03f/crashes/hbo_box_code_base.c:8321_1.mp4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff663f801 in __GI_abort () at abort.c:79
+#2  0x000000000050debb in __sanitizer::Abort() ()
+#3  0x000000000050b1e8 in __sanitizer::Die() ()
+#4  0x00000000004ed46d in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x0000000000441150 in strdup ()
+#6  0x00007ffff7620865 in gf_strdup (str=0x602000000250 "\376\367Է̲\360 ") at utils/alloc.c:170
+#7  0x00007ffff77ca2ed in metx_Read (s=0x60b0000000f0, bs=0x6070000002c0) at isomedia/box_code_base.c:8321
+#8  0x00007ffff77f2b8b in gf_isom_box_read (a=0x60b0000000f0, bs=0x6070000002c0) at isomedia/box_funcs.c:1349
+#9  0x00007ffff77f2413 in gf_isom_box_parse_ex (outBox=0x7ffffffefb80, bs=0x6070000002c0, parent_type=0x0, is_root_box=GF_FALSE) at isomedia/box_funcs.c:199
+#10 0x00007ffff77f2cd0 in gf_isom_box_array_read_ex (parent=0x604000000010, bs=0x6070000002c0, add_box=0x7ffff77f3820 <gf_isom_box_add_default>, parent_type=0x0) at isomedia/box_funcs.c:1241
+#11 0x00007ffff77f2c87 in gf_isom_box_array_read (parent=0x604000000010, bs=0x6070000002c0, add_box=0x7ffff77f3820 <gf_isom_box_add_default>) at isomedia/box_funcs.c:262
+#12 0x00007ffff77b1959 in unkn_Read (s=0x604000000010, bs=0x6070000001e0) at isomedia/box_code_base.c:755
+#13 0x00007ffff77f2b8b in gf_isom_box_read (a=0x604000000010, bs=0x6070000001e0) at isomedia/box_funcs.c:1349
+#14 0x00007ffff77f2413 in gf_isom_box_parse_ex (outBox=0x7ffffffefe18, bs=0x6070000001e0, parent_type=0x0, is_root_box=GF_TRUE) at isomedia/box_funcs.c:199
+#15 0x00007ffff77f1d78 in gf_isom_parse_root_box (outBox=0x7ffffffefe18, bs=0x6070000001e0, bytesExpected=0x7ffffffefe70, progressive_mode=GF_FALSE) at isomedia/box_funcs.c:42
+#16 0x00007ffff77fac69 in gf_isom_parse_movie_boxes (mov=0x611000000040, bytesMissing=0x7ffffffefe70, progressive_mode=GF_FALSE) at isomedia/isom_intern.c:206
+#17 0x00007ffff77fc25b in gf_isom_open_file (fileName=0x7fffffffc9bf "ALL/gpac-bceb03f/crashes/hbo_box_code_base.c:8321_1.mp4", OpenMode=0x0, tmp_dir=0x0) at isomedia/isom_intern.c:615
+#18 0x00007ffff77fec67 in gf_isom_open (fileName=0x7fffffffc9bf "ALL/gpac-bceb03f/crashes/hbo_box_code_base.c:8321_1.mp4", OpenMode=0x0, tmp_dir=0x0) at isomedia/isom_read.c:414
+#19 0x000000000052cac7 in mp4boxMain (argc=0x3, argv=0x7fffffffc438) at main.c:4339
+#20 0x00000000005326a2 in main (argc=0x3, argv=0x7fffffffc438) at main.c:5489

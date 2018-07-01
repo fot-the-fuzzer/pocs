@@ -1,0 +1,92 @@
+Undefined command: "".  Try "help".
+[33m[iso file] Unknown box type ..v.
+[0m[33m[iso file] extra box nmhd found in minf, deleting
+[0m[33m[iso file] Unknown box type ..iK
+[0m[31m[iso file] Missing DataInformationBox
+[0m[33m[iso file] Unknown box type a...
+[0m[31m[iso file] Incomplete box UNKN
+[0m[31m[iso file] Incomplete file while reading for dump - aborting parsing
+[0m=================================================================
+==14266==ERROR: AddressSanitizer: attempting double-free on 0x604000000090 in thread T0:
+    #0 0x4e4670  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e4670)
+    #1 0x7ffff7620844  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x4f844)
+    #2 0x7ffff77bdfcf  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1ecfcf)
+    #3 0x7ffff77f2736  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221736)
+    #4 0x7ffff77f2c2e  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221c2e)
+    #5 0x7ffff77f2770  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221770)
+    #6 0x7ffff77f2c2e  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221c2e)
+    #7 0x7ffff77fc38f  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22b38f)
+    #8 0x7ffff77fc2cc  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22b2cc)
+    #9 0x7ffff77fec66  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22dc66)
+    #10 0x52cac6  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x52cac6)
+    #11 0x5326a1  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x5326a1)
+    #12 0x7ffff6620b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #13 0x424989  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+0x604000000090 is located 0 bytes inside of 40-byte region [0x604000000090,0x6040000000b8)
+freed by thread T0 here:
+    #0 0x4e4670  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e4670)
+    #1 0x7ffff7620844  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x4f844)
+    #2 0x7ffff77bdfcf  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1ecfcf)
+    #3 0x7ffff77f2736  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221736)
+    #4 0x7ffff77b94ca  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1e84ca)
+    #5 0x7ffff77f2f92  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221f92)
+    #6 0x7ffff77f2c86  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221c86)
+    #7 0x7ffff77b96ab  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1e86ab)
+    #8 0x7ffff77f2b8a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221b8a)
+    #9 0x7ffff77f2412  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221412)
+    #10 0x7ffff77f1d77  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x220d77)
+    #11 0x7ffff77fac68  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x229c68)
+    #12 0x7ffff77fc25a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22b25a)
+    #13 0x7ffff77fec66  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22dc66)
+    #14 0x52cac6  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x52cac6)
+    #15 0x5326a1  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x5326a1)
+    #16 0x7ffff6620b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+previously allocated by thread T0 here:
+    #0 0x4e4840  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e4840)
+    #1 0x7ffff76207c4  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x4f7c4)
+    #2 0x7ffff77be003  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1ed003)
+    #3 0x7ffff77f2a02  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221a02)
+    #4 0x7ffff77f22f9  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x2212f9)
+    #5 0x7ffff77f2ccf  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221ccf)
+    #6 0x7ffff77f2c86  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221c86)
+    #7 0x7ffff77b96ab  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x1e86ab)
+    #8 0x7ffff77f2b8a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221b8a)
+    #9 0x7ffff77f2412  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x221412)
+    #10 0x7ffff77f1d77  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x220d77)
+    #11 0x7ffff77fac68  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x229c68)
+    #12 0x7ffff77fc25a  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22b25a)
+    #13 0x7ffff77fec66  (/home/hongxu/FOT/gpac/install/bin/../lib/libgpac.so.7+0x22dc66)
+    #14 0x52cac6  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x52cac6)
+    #15 0x5326a1  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x5326a1)
+    #16 0x7ffff6620b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: double-free (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e4670) 
+==14266==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/hongxu/FOT/gpac/install/bin/MP4Box -diso ALL/gpac-bceb03f/crashes/df_box_code_base.c:4679_1.mp4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff663f801 in __GI_abort () at abort.c:79
+#2  0x000000000050debb in __sanitizer::Abort() ()
+#3  0x000000000050b1e8 in __sanitizer::Die() ()
+#4  0x00000000004ea7ec in __asan::ReportDoubleFree(unsigned long, __sanitizer::BufferedStackTrace*) ()
+#5  0x000000000043018d in __asan::asan_free(void*, __sanitizer::BufferedStackTrace*, __asan::AllocType) ()
+#6  0x00000000004e464b in free ()
+#7  0x00007ffff7620845 in gf_free (ptr=0x604000000090) at utils/alloc.c:165
+#8  0x00007ffff77bdfd0 in nmhd_del (s=0x604000000090) at isomedia/box_code_base.c:4679
+#9  0x00007ffff77f2737 in gf_isom_box_del (a=0x604000000090) at isomedia/box_funcs.c:1329
+#10 0x00007ffff77f2c2f in gf_isom_box_array_del (other_boxes=0x602000000230) at isomedia/box_funcs.c:254
+#11 0x00007ffff77f2771 in gf_isom_box_del (a=0x6070000002c0) at isomedia/box_funcs.c:1337
+#12 0x00007ffff77f2c2f in gf_isom_box_array_del (other_boxes=0x6020000001f0) at isomedia/box_funcs.c:254
+#13 0x00007ffff77fc390 in gf_isom_delete_movie (mov=0x611000000040) at isomedia/isom_intern.c:657
+#14 0x00007ffff77fc2cd in gf_isom_open_file (fileName=0x7fffffffc9c0 "ALL/gpac-bceb03f/crashes/df_box_code_base.c:4679_1.mp4", OpenMode=0x0, tmp_dir=0x0) at isomedia/isom_intern.c:624
+#15 0x00007ffff77fec67 in gf_isom_open (fileName=0x7fffffffc9c0 "ALL/gpac-bceb03f/crashes/df_box_code_base.c:4679_1.mp4", OpenMode=0x0, tmp_dir=0x0) at isomedia/isom_read.c:414
+#16 0x000000000052cac7 in mp4boxMain (argc=0x3, argv=0x7fffffffc438) at main.c:4339
+#17 0x00000000005326a2 in main (argc=0x3, argv=0x7fffffffc438) at main.c:5489
