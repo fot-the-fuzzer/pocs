@@ -1,0 +1,38 @@
+Undefined command: "".  Try "help".
+Invalid tag '38' at offset 0x000001d0
+Annotation Default Attribute Information:
+   Attribute Offset: 0x000001ee
+   Attribute Name Index: 8 (AnnotationDefault)
+   Attribute Length: 3
+Element Value information:
+   EV Pair File Offset: 0x000001f4
+   EV Value Type (101): Enum
+   EV Value Enum Constant Value Const Name Index: 0xf301
+   EV Value Enum Constant Value Type Name Index: 0x09
+   EV Value Enum Constant Value Const CP Information:
+
+Starting program: /home/exp/FOT/radare2/binr/radare2/radare2 -A -Q ALL/radare2-18630/crashes/npe_r_class.c:6284_2.class
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff63a1529 in r_bin_java_print_element_value_summary (element_value=0x606000005e40) at class.c:6284
+6284			((RBinJavaCPTypeMetas *) obj->metas->type_info)->allocs->print_summary (obj);
+#0  0x00007ffff63a1529 in r_bin_java_print_element_value_summary (element_value=0x606000005e40) at class.c:6284
+#1  0x00007ffff63a3df1 in r_bin_java_annotation_default_attr_new (buffer=<optimized out>, sz=<optimized out>, buf_offset=<optimized out>) at class.c:6404
+#2  0x00007ffff6359971 in r_bin_java_read_next_attr_from_buffer (buffer=0x61e000000080 "", sz=0xae7, buf_offset=0x1ee) at class.c:2100
+#3  0x00007ffff634fa22 in r_bin_java_read_next_attr (bin=<optimized out>, offset=0x1ee, buf=<optimized out>, buf_len=0xcd5) at class.c:2058
+#4  0x00007ffff6351c49 in r_bin_java_read_next_field (bin=0x613000007580, offset=0x1e6, buffer=0x61f000007080 "\312\376\272\276", len=0xcd5) at class.c:1533
+#5  0x00007ffff635ce3b in r_bin_java_parse_fields (bin=<optimized out>, offset=0x1dc, buf=0x61f000007080 "\312\376\272\276", len=0xcd5) at class.c:2231
+#6  0x00007ffff635f8b5 in r_bin_java_load_bin (bin=0x613000007580, buf=0x61f000007080 "\312\376\272\276", buf_sz=0xcd5) at class.c:2377
+#7  0x00007ffff636bbed in r_bin_java_new_bin (bin=<optimized out>, loadaddr=<optimized out>, kv=<optimized out>, buf=0x61f000007080 "\312\376\272\276", len=0xcd5) at class.c:2337
+#8  r_bin_java_new_buf (buf=0x60b000000e00, loadaddr=0x0, kv=<optimized out>) at class.c:3112
+#9  0x00007ffff5f79924 in load_bytes (bf=0x60e000000f20, buf=0x61f000006280 "\312\376\272\276", sz=0xcd5, loadaddr=<optimized out>, sdb=<optimized out>) at /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86
+#10 0x00007ffff5d7935b in r_bin_object_new (binfile=0x60e000000f20, plugin=<optimized out>, baseaddr=0xffffffffffffffff, loadaddr=<optimized out>, offset=<optimized out>, sz=<optimized out>) at obj.c:58
+#11 0x00007ffff5d6bafc in r_bin_file_new_from_bytes (bin=0x614000000040, file=<optimized out>, bytes=<optimized out>, sz=0xcd5, file_sz=<optimized out>, rawstr=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>, fd=<optimized out>, pluginname=<optimized out>, xtrname=<optimized out>, offset=<optimized out>, steal_ptr=<optimized out>) at file.c:514
+#12 0x00007ffff5d3aa0c in r_bin_load_io_at_offset_as_sz (bin=<optimized out>, fd=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>, xtr_idx=<optimized out>, offset=<optimized out>, name=<optimized out>, sz=0xcd5) at bin.c:463
+#13 0x00007ffff5d3954b in r_bin_load_io_at_offset_as (bin=0x0, fd=0xefb658b0, baseaddr=0x0, loadaddr=0x7fffef888154, xtr_idx=0x0, offset=0x0, name=0x0) at bin.c:480
+#14 r_bin_load_io (bin=0x0, fd=0xefb658b0, baseaddr=0x0, loadaddr=0x7fffef888154, xtr_idx=0x0) at bin.c:360
+#15 0x00007ffff759aa81 in r_core_file_do_load_for_io_plugin (r=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>) at file.c:412
+#16 r_core_bin_load (r=0x55555651bb40 <r>, filenameuri=0x606000005d20 "ALL/radare2-18630/crashes/npe_r_class.c:6284_2.class", baddr=0xffffffffffffffff) at file.c:569
+#17 0x00005555556733e4 in main (argc=0x4, argv=0x7fffffffc418, envp=0x7fffffffc440) at radare2.c:1070

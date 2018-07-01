@@ -1,0 +1,93 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+=================================================================
+==4835==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000029d07 at pc 0x7ffff637372c bp 0x7fffffffa8b0 sp 0x7fffffffa8a8
+READ of size 16 at 0x602000029d07 thread T0
+    #0 0x7ffff637372b in r_bin_java_exceptions_attr_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3652:55
+    #1 0x7ffff6359970 in r_bin_java_read_next_attr_from_buffer /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2100:15
+    #2 0x7ffff634fa21 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #3 0x7ffff635d4f1 in r_bin_java_parse_attrs /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2264:29
+    #4 0x7ffff635f9d4 in r_bin_java_load_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2387:9
+    #5 0x7ffff636bbec in r_bin_java_new_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2337:9
+    #6 0x7ffff636bbec in r_bin_java_new_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3112
+    #7 0x7ffff5f79923 in load_bytes /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #8 0x7ffff5d7935a in r_bin_object_new /home/exp/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #9 0x7ffff5d6bafb in r_bin_file_new_from_bytes /home/exp/FOT/radare2-fuzz/libr/bin/file.c:514:6
+    #10 0x7ffff5d3aa0b in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:463:14
+    #11 0x7ffff5d3954a in r_bin_load_io_at_offset_as /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:480:12
+    #12 0x7ffff5d3954a in r_bin_load_io /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:360
+    #13 0x7ffff759aa80 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2-fuzz/libr/core/file.c:412:7
+    #14 0x7ffff759aa80 in r_core_bin_load /home/exp/FOT/radare2-fuzz/libr/core/file.c:569
+    #15 0x5555556733e3 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #16 0x7fffef799b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #17 0x555555576f29 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22f29)
+
+0x602000029d07 is located 14 bytes to the right of 9-byte region [0x602000029cf0,0x602000029cf9)
+allocated by thread T0 here:
+    #0 0x555555637028 in calloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3028)
+    #1 0x7ffff634f977 in r_bin_java_get_attr_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7ffff634f977 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2055
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3652:55 in r_bin_java_exceptions_attr_new
+Shadow bytes around the buggy address:
+  0x0c047fffd350: fa fa 00 01 fa fa 06 fa fa fa fd fd fa fa 06 fa
+  0x0c047fffd360: fa fa 00 04 fa fa 06 fa fa fa fd fd fa fa 06 fa
+  0x0c047fffd370: fa fa 00 03 fa fa 06 fa fa fa fd fd fa fa 06 fa
+  0x0c047fffd380: fa fa 00 03 fa fa fd fa fa fa 06 fa fa fa 06 fa
+  0x0c047fffd390: fa fa 06 fa fa fa 07 fa fa fa 00 fa fa fa 00 01
+=>0x0c047fffd3a0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd3b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd3c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd3d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd3e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd3f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==4835==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/exp/FOT/radare2/binr/radare2/radare2 -A -Q ALL/radare2-18630/crashes/hbo_class.c:3652_1.class
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007fffef7b8801 in __GI_abort () at abort.c:79
+#2  0x000055555566047b in __sanitizer::Abort() ()
+#3  0x000055555565d7a8 in __sanitizer::Die() ()
+#4  0x000055555563fa2d in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x0000555555640695 in __asan_report_load_n ()
+#6  0x00007ffff637372c in r_bin_java_exceptions_attr_new (buffer=0x602000029cf0 "", sz=<optimized out>, buf_offset=<optimized out>) at class.c:3652
+#7  0x00007ffff6359971 in r_bin_java_read_next_attr_from_buffer (buffer=0x602000029cf0 "", sz=0x8, buf_offset=0x164) at class.c:2100
+#8  0x00007ffff634fa22 in r_bin_java_read_next_attr (bin=<optimized out>, offset=0x164, buf=<optimized out>, buf_len=0x16c) at class.c:2058
+#9  0x00007ffff635d4f2 in r_bin_java_parse_attrs (bin=<optimized out>, offset=0x162, buf=0x613000007740 "\312\376\272\276", len=<optimized out>) at class.c:2264
+#10 0x00007ffff635f9d5 in r_bin_java_load_bin (bin=0x613000007900, buf=0x613000007740 "\312\376\272\276", buf_sz=0x16c) at class.c:2387
+#11 0x00007ffff636bbed in r_bin_java_new_bin (bin=<optimized out>, loadaddr=<optimized out>, kv=<optimized out>, buf=0x613000007740 "\312\376\272\276", len=0x16c) at class.c:2337
+#12 r_bin_java_new_buf (buf=0x60b000000e00, loadaddr=0x0, kv=<optimized out>) at class.c:3112
+#13 0x00007ffff5f79924 in load_bytes (bf=0x60e000000f20, buf=0x613000007580 "\312\376\272\276", sz=0x16c, loadaddr=<optimized out>, sdb=<optimized out>) at /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86
+#14 0x00007ffff5d7935b in r_bin_object_new (binfile=0x60e000000f20, plugin=<optimized out>, baseaddr=0xffffffffffffffff, loadaddr=<optimized out>, offset=<optimized out>, sz=<optimized out>) at obj.c:58
+#15 0x00007ffff5d6bafc in r_bin_file_new_from_bytes (bin=0x614000000040, file=<optimized out>, bytes=<optimized out>, sz=0x16c, file_sz=<optimized out>, rawstr=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>, fd=<optimized out>, pluginname=<optimized out>, xtrname=<optimized out>, offset=<optimized out>, steal_ptr=<optimized out>) at file.c:514
+#16 0x00007ffff5d3aa0c in r_bin_load_io_at_offset_as_sz (bin=<optimized out>, fd=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>, xtr_idx=<optimized out>, offset=<optimized out>, name=<optimized out>, sz=0x16c) at bin.c:463
+#17 0x00007ffff5d3954b in r_bin_load_io_at_offset_as (bin=0x2, fd=0xffff9900, baseaddr=0x0, loadaddr=0x7fffef7b6e97, xtr_idx=0x0, offset=0x0, name=0x7fffffff9900 "") at bin.c:480
+#18 r_bin_load_io (bin=0x2, fd=0xffff9900, baseaddr=0x0, loadaddr=0x7fffef7b6e97, xtr_idx=0x0) at bin.c:360
+#19 0x00007ffff759aa81 in r_core_file_do_load_for_io_plugin (r=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>) at file.c:412
+#20 r_core_bin_load (r=0x55555651bb40 <r>, filenameuri=0x606000005d20 "ALL/radare2-18630/crashes/hbo_class.c:3652_1.class", baddr=0xffffffffffffffff) at file.c:569
+#21 0x00005555556733e4 in main (argc=0x4, argv=0x7fffffffc418, envp=0x7fffffffc440) at radare2.c:1070
