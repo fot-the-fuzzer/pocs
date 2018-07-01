@@ -1,0 +1,22 @@
+Reading symbols from /home/hongxu/FOT/gpac/install/bin/MP4Box...done.
+Starting program: /home/hongxu/FOT/gpac/install/bin/MP4Box -diso assert_box_funcs.c:1310_2.mp4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[33m[iso file] Unknown box type Pdd.
+[0m[31m[iso file] Read Box type .stt (0x00737474) has size 0 but is not at root/file level, skipping
+[0m
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff72bcaec in gf_isom_box_add_default (a=<optimized out>, subbox=<optimized out>) at isomedia/box_funcs.c:1310
+1310		assert(subbox->type);
+#0  0x00007ffff72bcaec in gf_isom_box_add_default (a=<optimized out>, subbox=<optimized out>) at isomedia/box_funcs.c:1310
+#1  gf_isom_box_add_for_dump_mode (parent=0x60e000000040, a=0x0) at isomedia/box_funcs.c:1232
+#2  0x00007ffff722c87f in audio_sample_entry_AddBox (s=0x60e000000040, a=0x604000000010) at isomedia/box_code_base.c:3925
+#3  0x00007ffff72ba68d in gf_isom_box_array_read_ex (parent=0x60e000000040, bs=<optimized out>, add_box=<optimized out>, parent_type=<optimized out>) at isomedia/box_funcs.c:1291
+#4  0x00007ffff722caf6 in audio_sample_entry_Read (s=0x60e000000040, bs=0x6070000001e0) at isomedia/box_code_base.c:3953
+#5  0x00007ffff72b7b8d in gf_isom_box_read (bs=0x6070000001e0, a=<optimized out>) at isomedia/box_funcs.c:1349
+#6  gf_isom_box_parse_ex (outBox=<optimized out>, bs=0x6070000001e0, parent_type=<optimized out>, is_root_box=<optimized out>) at isomedia/box_funcs.c:199
+#7  0x00007ffff72b68ac in gf_isom_parse_root_box (outBox=0x7ffffffeffc0, bs=0x6070000001e0, bytesExpected=0x7fffffff0038, progressive_mode=GF_FALSE) at isomedia/box_funcs.c:42
+#8  0x00007ffff72d93a5 in gf_isom_parse_movie_boxes (mov=0x611000000040, bytesMissing=0x7fffffff0038, progressive_mode=<optimized out>) at isomedia/isom_intern.c:206
+#9  0x00007ffff72da955 in gf_isom_open_file (fileName=0x7fffffffcaf9 "assert_box_funcs.c:1310_2.mp4", OpenMode=0x0, tmp_dir=0x0) at isomedia/isom_intern.c:615
+#10 0x000000000052cac7 in mp4boxMain (argc=0x3, argv=0x7fffffffc5a8) at main.c:4339
+#11 0x00000000005326a2 in main (argc=0x3, argv=0x7fffffffc5a8) at main.c:5489

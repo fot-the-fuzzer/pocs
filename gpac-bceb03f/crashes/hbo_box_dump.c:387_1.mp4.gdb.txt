@@ -1,0 +1,108 @@
+Reading symbols from /home/hongxu/FOT/gpac/install/bin/MP4Box...done.
+Starting program: /home/hongxu/FOT/gpac/install/bin/MP4Box -diso hbo_box_dump.c:387_1.mp4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[33m[iso file] Box "mvhd" is invalid in container moof
+[0m[33m[iso file] Box "tkhd" is invalid in container moof
+[0m[33m[iso file] Unknown box type md..
+[0m[33m[iso file] Box "UNKN" is larger than container box
+[0m[33m[iso file] Box "hinf" size 52 invalid (read 622)
+[0m[33m[iso file] Box "hinf" is larger than container box
+[0m[33m[iso file] Box "hinf" is invalid in container moof
+[0m[33m[iso file] Box "moof" size 256 invalid (read 260)
+[0m[33m[iso file] Movie fragment but no moov (yet) - possibly broken parsing!
+[0m[33m[iso file] Box "urn " is larger than container box
+[0m[33m[iso file] Box "dref" size 28 invalid (read 42)
+[0m[33m[iso file] Unknown box type ....
+[0m[31m[iso file] Incomplete box UNKN
+[0m[31m[iso file] Incomplete file while reading for dump - aborting parsing
+[0m=================================================================
+==23536==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000002dd at pc 0x0000004505f7 bp 0x7ffffffef880 sp 0x7ffffffef030
+READ of size 14 at 0x6020000002dd thread T0
+    #0 0x4505f6  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4505f6)
+    #1 0x45123b  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x45123b)
+    #2 0x451306  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x451306)
+    #3 0x7ffff728a5b4  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x4505b4)
+    #4 0x7ffff72bdea0  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x483ea0)
+    #5 0x7ffff7287e34  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x44de34)
+    #6 0x7ffff72be177  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x484177)
+    #7 0x7ffff728dfab  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x453fab)
+    #8 0x7ffff72bdea0  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x483ea0)
+    #9 0x7ffff7287e34  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x44de34)
+    #10 0x7ffff72be177  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x484177)
+    #11 0x7ffff728a1f9  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x4501f9)
+    #12 0x7ffff72bdea0  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x483ea0)
+    #13 0x7ffff7288214  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x44e214)
+    #14 0x53948f  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x53948f)
+    #15 0x52d84d  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x52d84d)
+    #16 0x5326a1  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x5326a1)
+    #17 0x7ffff5e89b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #18 0x424989  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+0x6020000002dd is located 0 bytes to the right of 13-byte region [0x6020000002d0,0x6020000002dd)
+allocated by thread T0 here:
+    #0 0x4e4840  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e4840)
+    #1 0x7ffff7215f2f  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x3dbf2f)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4505f6) 
+Shadow bytes around the buggy address:
+  0x0c047fff8000: fa fa 00 00 fa fa 00 07 fa fa 00 00 fa fa 00 00
+  0x0c047fff8010: fa fa 00 05 fa fa 00 00 fa fa 00 04 fa fa 00 07
+  0x0c047fff8020: fa fa 00 00 fa fa 00 00 fa fa 00 07 fa fa 00 07
+  0x0c047fff8030: fa fa 00 04 fa fa 00 02 fa fa 00 01 fa fa 00 00
+  0x0c047fff8040: fa fa 00 fa fa fa 00 00 fa fa 00 00 fa fa 00 00
+=>0x0c047fff8050: fa fa fd fd fa fa 01 fa fa fa 00[05]fa fa 00 00
+  0x0c047fff8060: fa fa 00 00 fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==23536==ABORTING
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff5ea8801 in __GI_abort () at abort.c:79
+#2  0x000000000050debb in __sanitizer::Abort() ()
+#3  0x000000000050b1e8 in __sanitizer::Die() ()
+#4  0x00000000004ed46d in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x0000000000450616 in printf_common(void*, char const*, __va_list_tag*) ()
+#6  0x000000000045123c in vfprintf ()
+#7  0x0000000000451307 in fprintf ()
+#8  0x00007ffff728a5b5 in urn_dump (a=0x606000000140, trace=0x616000001280) at isomedia/box_dump.c:387
+#9  0x00007ffff72bdea1 in gf_isom_box_dump_ex (ptr=0x606000000140, trace=0x616000001280, box_4cc=0x0) at isomedia/box_funcs.c:1537
+#10 0x00007ffff7287e35 in gf_isom_box_dump (ptr=0x0, trace=0x616000001280) at isomedia/box_dump.c:96
+#11 gf_isom_box_array_dump (list=0x6020000002f0, trace=0x616000001280) at isomedia/box_dump.c:106
+#12 0x00007ffff72be178 in gf_isom_box_dump_done (name=0x7ffff7b2e40c "DataReferenceBox", ptr=<optimized out>, trace=0x616000001280) at isomedia/box_funcs.c:1546
+#13 0x00007ffff728dfac in dref_dump (a=0x604000000110, trace=0x616000001280) at isomedia/box_dump.c:786
+#14 0x00007ffff72bdea1 in gf_isom_box_dump_ex (ptr=0x604000000110, trace=0x616000001280, box_4cc=0x0) at isomedia/box_funcs.c:1537
+#15 0x00007ffff7287e35 in gf_isom_box_dump (ptr=0x0, trace=0x616000001280) at isomedia/box_dump.c:96
+#16 gf_isom_box_array_dump (list=0x602000000310, trace=0x616000001280) at isomedia/box_dump.c:106
+#17 0x00007ffff72be178 in gf_isom_box_dump_done (name=0x7ffff7b2dd40 "DataInformationBox", ptr=<optimized out>, trace=0x616000001280) at isomedia/box_funcs.c:1546
+#18 0x00007ffff728a1fa in dinf_dump (a=0x6040000000d0, trace=0x616000001280) at isomedia/box_dump.c:354
+#19 0x00007ffff72bdea1 in gf_isom_box_dump_ex (ptr=0x6040000000d0, trace=0x616000001280, box_4cc=0x0) at isomedia/box_funcs.c:1537
+#20 0x00007ffff7288215 in gf_isom_box_dump (ptr=<optimized out>, trace=0x616000001280) at isomedia/box_dump.c:96
+#21 gf_isom_dump (mov=0x611000000040, trace=0x616000001280) at isomedia/box_dump.c:133
+#22 0x0000000000539490 in dump_isom_xml (file=0x611000000040, inName=0x1401c10 <outfile> "hbo_box_dump.c:387_1", is_final_name=GF_FALSE, do_track_dump=GF_FALSE) at filedump.c:1643
+#23 0x000000000052d84e in mp4boxMain (argc=0x3, argv=0x7fffffffc5a8) at main.c:4543
+#24 0x00000000005326a2 in main (argc=0x3, argv=0x7fffffffc5a8) at main.c:5489

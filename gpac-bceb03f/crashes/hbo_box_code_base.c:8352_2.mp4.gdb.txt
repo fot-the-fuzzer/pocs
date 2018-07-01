@@ -1,0 +1,74 @@
+Reading symbols from /home/hongxu/FOT/gpac/install/bin/MP4Box...done.
+Starting program: /home/hongxu/FOT/gpac/install/bin/MP4Box -diso hbo_box_code_base.c:8352_2.mp4
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+=================================================================
+==9056==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000278 at pc 0x000000441135 bp 0x7ffffffefea0 sp 0x7ffffffef650
+READ of size 9 at 0x602000000278 thread T0
+    #0 0x441134  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x441134)
+    #1 0x7ffff725310a  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x41910a)
+    #2 0x7ffff72b7b8c  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x47db8c)
+    #3 0x7ffff72b68ab  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x47c8ab)
+    #4 0x7ffff72d93a4  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x49f3a4)
+    #5 0x7ffff72da954  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x4a0954)
+    #6 0x52cac6  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x52cac6)
+    #7 0x5326a1  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x5326a1)
+    #8 0x7ffff5e89b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #9 0x424989  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+0x602000000278 is located 0 bytes to the right of 8-byte region [0x602000000270,0x602000000278)
+allocated by thread T0 here:
+    #0 0x4e4840  (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e4840)
+    #1 0x7ffff7252906  (/home/hongxu/FOT/gpac-fuzz/install/bin/../lib/libgpac.so.7+0x418906)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x441134) 
+Shadow bytes around the buggy address:
+  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff8000: fa fa 00 00 fa fa 00 07 fa fa 00 00 fa fa 00 00
+  0x0c047fff8010: fa fa 00 05 fa fa 00 00 fa fa 00 04 fa fa 00 07
+  0x0c047fff8020: fa fa 00 00 fa fa 00 00 fa fa 00 07 fa fa 00 07
+  0x0c047fff8030: fa fa 00 04 fa fa 00 02 fa fa 00 01 fa fa 00 00
+=>0x0c047fff8040: fa fa 00 fa fa fa 00 00 fa fa 00 00 fa fa 00[fa]
+  0x0c047fff8050: fa fa 02 fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==9056==ABORTING
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff5ea8801 in __GI_abort () at abort.c:79
+#2  0x000000000050debb in __sanitizer::Abort() ()
+#3  0x000000000050b1e8 in __sanitizer::Die() ()
+#4  0x00000000004ed46d in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x0000000000441150 in strdup ()
+#6  0x00007ffff725310b in metx_Read (s=<optimized out>, bs=0x6070000001e0) at isomedia/box_code_base.c:8352
+#7  0x00007ffff72b7b8d in gf_isom_box_read (bs=0x6070000001e0, a=<optimized out>) at isomedia/box_funcs.c:1349
+#8  gf_isom_box_parse_ex (outBox=<optimized out>, bs=0x6070000001e0, parent_type=<optimized out>, is_root_box=<optimized out>) at isomedia/box_funcs.c:199
+#9  0x00007ffff72b68ac in gf_isom_parse_root_box (outBox=0x7ffffffeffc0, bs=0x6070000001e0, bytesExpected=0x7fffffff0038, progressive_mode=GF_FALSE) at isomedia/box_funcs.c:42
+#10 0x00007ffff72d93a5 in gf_isom_parse_movie_boxes (mov=0x611000000040, bytesMissing=0x7fffffff0038, progressive_mode=<optimized out>) at isomedia/isom_intern.c:206
+#11 0x00007ffff72da955 in gf_isom_open_file (fileName=0x7fffffffcaf8 "hbo_box_code_base.c:8352_2.mp4", OpenMode=0x0, tmp_dir=0x0) at isomedia/isom_intern.c:615
+#12 0x000000000052cac7 in mp4boxMain (argc=0x3, argv=0x7fffffffc5a8) at main.c:4339
+#13 0x00000000005326a2 in main (argc=0x3, argv=0x7fffffffc5a8) at main.c:5489

@@ -1,0 +1,17 @@
+[33m[iso file] Unknown box type mhd.
+[0m[31m[iso file] Read Box type mehd (0x6D656864) has size 0 but is not at root/file level, skipping
+[0mAddressSanitizer:DEADLYSIGNAL
+=================================================================
+==18542==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000020 (pc 0x7f9b06132be3 bp 0x000000000000 sp 0x7ffe6a2273f0 T0)
+==18542==The signal is caused by a READ memory access.
+==18542==Hint: address points to the zero page.
+    #0 0x7f9b06132be2 in gf_isom_parse_movie_boxes /home/hongxu/FOT/gpac-fuzz/src/isomedia/isom_intern.c:388:74
+    #1 0x7f9b06134954 in gf_isom_open_file /home/hongxu/FOT/gpac-fuzz/src/isomedia/isom_intern.c:615:19
+    #2 0x52cac6 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339:11
+    #3 0x5326a1 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489:9
+    #4 0x7f9b04ce3b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #5 0x424989 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/gpac-fuzz/src/isomedia/isom_intern.c:388:74 in gf_isom_parse_movie_boxes
+==18542==ABORTING

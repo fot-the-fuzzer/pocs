@@ -1,0 +1,84 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+[33m[iso file] Unknown box type l..2
+[0m[33m[iso file] Movie fragment but no moov (yet) - possibly broken parsing!
+[0m[33m[iso file] Unknown box type ....
+[0m[31m[iso file] Incomplete box UNKN
+[0m[31m[iso file] Incomplete file while reading for dump - aborting parsing
+[0m=================================================================
+==32062==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200000029c at pc 0x0000004505f7 bp 0x7ffffffef850 sp 0x7ffffffef000
+READ of size 13 at 0x60200000029c thread T0
+    #0 0x4505f6 in printf_common(void*, char const*, __va_list_tag*) (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4505f6)
+    #1 0x45123b in vfprintf (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x45123b)
+    #2 0x451306 in __interceptor_fprintf (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x451306)
+    #3 0x7ffff728a5b4 in urn_dump /home/hongxu/FOT/gpac-fuzz/src/isomedia/box_dump.c:387:19
+    #4 0x7ffff72bdea0 in gf_isom_box_dump_ex /home/hongxu/FOT/gpac-fuzz/src/isomedia/box_funcs.c:1537:2
+    #5 0x7ffff7288214 in gf_isom_box_dump /home/hongxu/FOT/gpac-fuzz/src/isomedia/box_dump.c:96:9
+    #6 0x7ffff7288214 in gf_isom_dump /home/hongxu/FOT/gpac-fuzz/src/isomedia/box_dump.c:133
+    #7 0x53948f in dump_isom_xml /home/hongxu/FOT/gpac/applications/mp4box/filedump.c:1643:6
+    #8 0x52d84d in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4543:7
+    #9 0x5326a1 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489:9
+    #10 0x7ffff5e89b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #11 0x424989 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+0x60200000029c is located 0 bytes to the right of 12-byte region [0x602000000290,0x60200000029c)
+allocated by thread T0 here:
+    #0 0x4e4840 in __interceptor_malloc (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e4840)
+    #1 0x7ffff7215f2f in urn_Read /home/hongxu/FOT/gpac-fuzz/src/isomedia/box_code_base.c:655:25
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4505f6) in printf_common(void*, char const*, __va_list_tag*)
+Shadow bytes around the buggy address:
+  0x0c047fff8000: fa fa 00 00 fa fa 00 07 fa fa 00 00 fa fa 00 00
+  0x0c047fff8010: fa fa 00 05 fa fa 00 00 fa fa 00 04 fa fa 00 07
+  0x0c047fff8020: fa fa 00 00 fa fa 00 00 fa fa 00 07 fa fa 00 07
+  0x0c047fff8030: fa fa 00 04 fa fa 00 02 fa fa 00 01 fa fa 00 00
+  0x0c047fff8040: fa fa 00 00 fa fa 00 00 fa fa fd fd fa fa 02 fa
+=>0x0c047fff8050: fa fa 00[04]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==32062==ABORTING
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/hongxu/FOT/gpac/install/bin/MP4Box -diso /media/fuzz/mp4box/s7/crashes/id:000109,sig:06,src:012695+008266,op:splice,rep:2
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff5ea8801 in __GI_abort () at abort.c:79
+#2  0x000000000050debb in __sanitizer::Abort() ()
+#3  0x000000000050b1e8 in __sanitizer::Die() ()
+#4  0x00000000004ed46d in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x0000000000450616 in printf_common(void*, char const*, __va_list_tag*) ()
+#6  0x000000000045123c in vfprintf ()
+#7  0x0000000000451307 in fprintf ()
+#8  0x00007ffff728a5b5 in urn_dump (a=0x6060000000e0, trace=0x616000001280) at isomedia/box_dump.c:387
+#9  0x00007ffff72bdea1 in gf_isom_box_dump_ex (ptr=0x6060000000e0, trace=0x616000001280, box_4cc=0x0) at isomedia/box_funcs.c:1537
+#10 0x00007ffff7288215 in gf_isom_box_dump (ptr=<optimized out>, trace=0x616000001280) at isomedia/box_dump.c:96
+#11 gf_isom_dump (mov=0x611000000040, trace=0x616000001280) at isomedia/box_dump.c:133
+#12 0x0000000000539490 in dump_isom_xml (file=0x611000000040, inName=0x1401c10 <outfile> "/media/fuzz/mp4box/s7/crashes/id:000109,sig:06,src:012695+008266,op:splice,rep:2", is_final_name=GF_FALSE, do_track_dump=GF_FALSE) at filedump.c:1643
+#13 0x000000000052d84e in mp4boxMain (argc=0x3, argv=0x7fffffffc458) at main.c:4543
+#14 0x00000000005326a2 in main (argc=0x3, argv=0x7fffffffc458) at main.c:5489
