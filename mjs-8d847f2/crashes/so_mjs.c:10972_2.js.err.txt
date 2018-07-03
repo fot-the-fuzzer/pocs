@@ -1,5 +1,0 @@
-AddressSanitizer:DEADLYSIGNAL
-=================================================================
-==5853==ERROR: AddressSanitizer: stack-overflow on address 0x0000664c30f0 (pc 0x0000005366af bp 0x0000664c30f8 sp 0x0000664c30f0 T0)
-AddressSanitizer:DEADLYSIGNAL
-AddressSanitizer: nested bug in the same thread, aborting.

@@ -1,14 +1,11 @@
 Undefined command: "".  Try "help".
 
-Starting program: /home/hongxu/FOT/mjs-asan/mjs.out ./ALL/mjs-8d847f2/new/crashes/so_mjs.c:10972_1.js
+Starting program: /home/hongxu/FOT/mjs-asan/mjs.out ./ALL/mjs-8d847f2/new/crashes/so_mjs.c:10972_2.js
 [Thread debugging using libthread_db enabled]
 Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 
 Program received signal SIGSEGV, Segmentation fault.
-0x0000000000546cae in mjs_next (mjs=0x615000000080, obj=0xfff160e0000000c0, iterator=0x60d000000610) at mjs.c:12878
-12878	    p = ((struct mjs_property *) get_ptr(*iterator))->next;
-#0  0x0000000000546cae in mjs_next (mjs=0x615000000080, obj=0xfff160e0000000c0, iterator=0x60d000000610) at mjs.c:12878
-#1  0x000000000053f604 in mjs_execute (mjs=0x615000000080, off=0x0, res=0x7fffffffb5c0) at mjs.c:9901
-#2  0x000000000053a709 in mjs_exec_internal (mjs=0x615000000080, path=0x7fffffffc1c2 "./ALL/mjs-8d847f2/new/crashes/so_mjs.c:10972_1.js", src=0x61f000000080 "let s = '', sum = 0, o = {a: 1, b: 2, bbbbdbbbbbbbT", 'b' <repeats 38 times>, 'f' <repeats 19 times>, "T", 'f' <repeats 12 times>, 'b' <repeats 49 times>, "c: 3};\nfor (let k in o) {\n\ts ="..., generate_jsc=0x0, res=0x7fffffffb720) at mjs.c:10212
-#3  0x000000000053aa2e in mjs_exec_file (mjs=0x615000000080, path=0x7fffffffc1c2 "./ALL/mjs-8d847f2/new/crashes/so_mjs.c:10972_1.js", res=0x7fffffffb880) at mjs.c:10235
-#4  0x000000000054310e in main (argc=0x2, argv=0x7fffffffbb38) at mjs.c:12607
+0x00000000005366af in mjs_ffi_call (mjs=0x615000000080) at mjs.c:10972
+10972	  return e;
+#0  0x00000000005366af in mjs_ffi_call (mjs=0x615000000080) at mjs.c:10972
+#1  0x0000000000000000 in ?? ()

@@ -1,16 +1,5 @@
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==5858==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x000000546cae bp 0x7ffe20cbed90 sp 0x7ffe20cbed20 T0)
-==5858==The signal is caused by a READ memory access.
-==5858==Hint: address points to the zero page.
-    #0 0x546cad in mjs_next /home/hongxu/FOT/mjs-asan/mjs.c:12878:55
-    #1 0x53f603 in mjs_execute /home/hongxu/FOT/mjs-asan/mjs.c:9901:27
-    #2 0x53a708 in mjs_exec_internal /home/hongxu/FOT/mjs-asan/mjs.c:10212:5
-    #3 0x53aa2d in mjs_exec_file /home/hongxu/FOT/mjs-asan/mjs.c:10235:11
-    #4 0x54310d in main /home/hongxu/FOT/mjs-asan/mjs.c:12607:11
-    #5 0x7f110c49ab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
-    #6 0x41a129 in _start (/home/hongxu/FOT/mjs-asan/mjs.out+0x41a129)
-
-AddressSanitizer can not provide additional info.
-SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/mjs-asan/mjs.c:12878:55 in mjs_next
-==5858==ABORTING
+==5853==ERROR: AddressSanitizer: stack-overflow on address 0x0000664c30f0 (pc 0x0000005366af bp 0x0000664c30f8 sp 0x0000664c30f0 T0)
+AddressSanitizer:DEADLYSIGNAL
+AddressSanitizer: nested bug in the same thread, aborting.
