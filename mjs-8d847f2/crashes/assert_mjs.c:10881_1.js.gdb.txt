@@ -1,0 +1,21 @@
+Undefined command: "".  Try "help".
+mjs.out: mjs.c:10881: ffi_fn_t *get_cb_impl_by_signature(const mjs_ffi_sig_t *): Assertion `userdata_idx > 0' failed.
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+
+Starting program: /home/hongxu/FOT/mjs-asan/mjs.out ./ALL/mjs-8d847f2/new/crashes/assert_mjs.c:10881_1.js
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6e43801 in __GI_abort () at abort.c:79
+#2  0x00007ffff6e3339a in __assert_fail_base (fmt=0x7ffff6fba7d8 "%s%s%s:%u: %s%sAssertion `%s' failed.\n%n", assertion=assertion@entry=0x59bd80 <.str> "userdata_idx > 0", file=file@entry=0x596ba0 <.str> "mjs.c", line=line@entry=0x2a81, function=function@entry=0x59bd20 <__PRETTY_FUNCTION__.get_cb_impl_by_signature> "ffi_fn_t *get_cb_impl_by_signature(const mjs_ffi_sig_t *)") at assert.c:92
+#3  0x00007ffff6e33412 in __GI___assert_fail (assertion=0x59bd80 <.str> "userdata_idx > 0", file=0x596ba0 <.str> "mjs.c", line=0x2a81, function=0x59bd20 <__PRETTY_FUNCTION__.get_cb_impl_by_signature> "ffi_fn_t *get_cb_impl_by_signature(const mjs_ffi_sig_t *)") at assert.c:101
+#4  0x0000000000574685 in get_cb_impl_by_signature (sig=0x6160000002e0) at mjs.c:10881
+#5  0x0000000000572617 in mjs_parse_ffi_signature (mjs=0x615000000080, s=0x6120000001fb "int (int),,,   \377\377\377\200", ' ' <repeats 57 times>, "\026         \026      3", ' ' <repeats 41 times>, "\006  (int)", sig_len=0x8f, sig=0x6160000002e0, sig_type=FFI_SIG_FUNC) at mjs.c:10615
+#6  0x0000000000536605 in mjs_ffi_call (mjs=0x615000000080) at mjs.c:10966
+#7  0x000000000053fdb4 in mjs_execute (mjs=0x615000000080, off=0x0, res=0x7fffffffb5a0) at mjs.c:9994
+#8  0x000000000053a709 in mjs_exec_internal (mjs=0x615000000080, path=0x7fffffffc1be "./ALL/mjs-8d847f2/new/crashes/assert_mjs.c:10881_1.js", src=0x610000000040 "let o = {\n  q: 1,\n  foo: ffi('int (int),,,   \377\377\377\200", ' ' <repeats 57 times>, "\026         \026      3", ' ' <repeats 41 times>, "\006  (int)'),\n};\n", generate_jsc=0x0, res=0x7fffffffb700) at mjs.c:10212
+#9  0x000000000053aa2e in mjs_exec_file (mjs=0x615000000080, path=0x7fffffffc1be "./ALL/mjs-8d847f2/new/crashes/assert_mjs.c:10881_1.js", res=0x7fffffffb860) at mjs.c:10235
+#10 0x000000000054310e in main (argc=0x2, argv=0x7fffffffbb28) at mjs.c:12607

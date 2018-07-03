@@ -1,0 +1,10 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==5856==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x000000000000 bp 0x000000000000 sp 0x00008f9f10a8 T0)
+==5856==Hint: pc points to the zero page.
+==5856==The signal is caused by a READ memory access.
+==5856==Hint: address points to the zero page.
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (<unknown module>) 
+==5856==ABORTING

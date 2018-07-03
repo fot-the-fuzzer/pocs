@@ -1,0 +1,5 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==5859==ERROR: AddressSanitizer: stack-overflow on address 0x0000fec18810 (pc 0x0000005375cf bp 0x0000fec18818 sp 0x0000fec18810 T0)
+AddressSanitizer:DEADLYSIGNAL
+AddressSanitizer: nested bug in the same thread, aborting.

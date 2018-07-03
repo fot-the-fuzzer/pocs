@@ -1,0 +1,17 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+grep: /tmp/gdb_info_target: No such file or directory
+warning: /tmp/gdb_target_arch.gdb: No such file or directory
+
+Starting program: /home/hongxu/FOT/mjs-asan/mjs.out ./ALL/mjs-8d847f2/new/crashes/write_mjs.c:9490_2.js
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000056b6aa in exec_expr (mjs=0x615000000080, op=0x5) at mjs.c:9490
+9490	          *(ptr + ikey) = (uint8_t) ival;
+#0  0x000000000056b6aa in exec_expr (mjs=0x615000000080, op=0x5) at mjs.c:9490
+#1  0x00000000005402eb in mjs_execute (mjs=0x615000000080, off=0x0, res=0x7fffffffb5a0) at mjs.c:10029
+#2  0x000000000053a709 in mjs_exec_internal (mjs=0x615000000080, path=0x7fffffffc1c0 "./ALL/mjs-8d847f2/new/crashes/write_mjs.c:9490_2.js", src=0x612000000040 "let s ;\nlet o = (s);\nlet z = JSON.parse[3] =", '2' <repeats 23 times>, " ", generate_jsc=0x0, res=0x7fffffffb700) at mjs.c:10212
+#3  0x000000000053aa2e in mjs_exec_file (mjs=0x615000000080, path=0x7fffffffc1c0 "./ALL/mjs-8d847f2/new/crashes/write_mjs.c:9490_2.js", res=0x7fffffffb860) at mjs.c:10235
+#4  0x000000000054310e in main (argc=0x2, argv=0x7fffffffbb28) at mjs.c:12607

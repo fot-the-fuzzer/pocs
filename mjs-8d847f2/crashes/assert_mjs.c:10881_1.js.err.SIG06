@@ -1,0 +1,1 @@
+mjs.out: mjs.c:10881: ffi_fn_t *get_cb_impl_by_signature(const mjs_ffi_sig_t *): Assertion `userdata_idx > 0' failed.

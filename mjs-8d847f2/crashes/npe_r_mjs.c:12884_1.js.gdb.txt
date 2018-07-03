@@ -1,0 +1,15 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+
+Starting program: /home/hongxu/FOT/mjs-asan/mjs.out ./ALL/mjs-8d847f2/new/crashes/npe_r_mjs.c:12884_1.js
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000546d0a in mjs_next (mjs=0x615000000080, obj=0xfff160e0000000c0, iterator=0x60d000000558) at mjs.c:12884
+12884	    key = p->name;
+#0  0x0000000000546d0a in mjs_next (mjs=0x615000000080, obj=0xfff160e0000000c0, iterator=0x60d000000558) at mjs.c:12884
+#1  0x000000000053f604 in mjs_execute (mjs=0x615000000080, off=0x0, res=0x7fffffffb5a0) at mjs.c:9901
+#2  0x000000000053a709 in mjs_exec_internal (mjs=0x615000000080, path=0x7fffffffc1bf "./ALL/mjs-8d847f2/new/crashes/npe_r_mjs.c:12884_1.js", src=0x620000000080 "let s = '', sum = 0, o = {a: 1, b: 2, bbbbdbbbbbbbT", 'b' <repeats 18 times>, "G", 'b' <repeats 19 times>, 'f' <repeats 19 times>, "T", 'f' <repeats 12 times>, 'b' <repeats 49 times>, "c: 3};\nfor (let k in o) {\n\ts ="..., generate_jsc=0x0, res=0x7fffffffb700) at mjs.c:10212
+#3  0x000000000053aa2e in mjs_exec_file (mjs=0x615000000080, path=0x7fffffffc1bf "./ALL/mjs-8d847f2/new/crashes/npe_r_mjs.c:12884_1.js", res=0x7fffffffb860) at mjs.c:10235
+#4  0x000000000054310e in main (argc=0x2, argv=0x7fffffffbb28) at mjs.c:12607

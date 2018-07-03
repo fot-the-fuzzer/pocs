@@ -1,0 +1,14 @@
+Undefined command: "".  Try "help".
+grep: /tmp/gdb_info_target: No such file or directory
+grep: /tmp/gdb_info_target: No such file or directory
+warning: /tmp/gdb_target_arch.gdb: No such file or directory
+
+Starting program: /home/hongxu/FOT/mjs-asan/mjs.out ./ALL/mjs-8d847f2/new/crashes/so_mjs.c:12557_1.js
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00000000005375cf in mjs_op_json_parse (mjs=0x615000000080) at mjs.c:12557
+12557	}
+#0  0x00000000005375cf in mjs_op_json_parse (mjs=0x615000000080) at mjs.c:12557
+#1  0x0000000000000000 in ?? ()
