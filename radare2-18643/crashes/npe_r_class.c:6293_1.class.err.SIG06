@@ -1,0 +1,61 @@
+Invalid tag '29' at offset 0x00000033
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6c617379) + offset (0x4f) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+...
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6a617667) + offset (0x209) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x672f6174) + offset (0x211) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x74696f74) + offset (0x219) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6f74617a) + offset (0x221) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x1000106) + offset (0x229) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x3000006) + offset (0x231) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x4000506) + offset (0x239) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x360) + offset (0x241) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x8000f) + offset (0x249) exceeds length of buffer (0x292).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+Annotation Default Attribute Information:
+   Attribute Offset: 0x00000251
+   Attribute Name Index: 6 (AnnotationDefault)
+   Attribute Length: 3
+Element Value information:
+   EV Pair File Offset: 0x00000257
+   EV Value Type (99): Class
+   EV Value Class Info Index: 0x0a
+   EV Value Class Info CP Information:
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==3342==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f05b98217a7 bp 0x606000006150 sp 0x7ffc62f68e90 T0)
+==3342==The signal is caused by a READ memory access.
+==3342==Hint: address points to the zero page.
+    #0 0x7f05b98217a6 in r_bin_java_print_element_value_summary /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6293:33
+    #1 0x7f05b9823df0 in r_bin_java_annotation_default_attr_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6404:2
+    #2 0x7f05b97d9970 in r_bin_java_read_next_attr_from_buffer /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2100:15
+    #3 0x7f05b97cfa21 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #4 0x7f05b97cd07a in r_bin_java_read_next_method /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1430:11
+    #5 0x7f05b97ddd7e in r_bin_java_parse_methods /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2301:12
+    #6 0x7f05b97df8ff in r_bin_java_load_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2382:9
+    #7 0x7f05b97ebbec in r_bin_java_new_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2337:9
+    #8 0x7f05b97ebbec in r_bin_java_new_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3112
+    #9 0x7f05b93f9923 in load_bytes /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #10 0x7f05b91f935a in r_bin_object_new /home/exp/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #11 0x7f05b91ebafb in r_bin_file_new_from_bytes /home/exp/FOT/radare2-fuzz/libr/bin/file.c:514:6
+    #12 0x7f05b91baa0b in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:463:14
+    #13 0x7f05b91b954a in r_bin_load_io_at_offset_as /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:480:12
+    #14 0x7f05b91b954a in r_bin_load_io /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:360
+    #15 0x7f05baa1aa80 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2-fuzz/libr/core/file.c:412:7
+    #16 0x7f05baa1aa80 in r_core_bin_load /home/exp/FOT/radare2-fuzz/libr/core/file.c:569
+    #17 0x55e4e2cf03e3 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #18 0x7f05b2c19b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #19 0x55e4e2bf3f29 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22f29)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6293:33 in r_bin_java_print_element_value_summary
+==3342==ABORTING

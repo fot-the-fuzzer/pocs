@@ -1,0 +1,62 @@
+=================================================================
+==2544==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60300003c95f at pc 0x7f7c14d92579 bp 0x7fff34f07570 sp 0x7fff34f07568
+READ of size 1 at 0x60300003c95f thread T0
+    #0 0x7f7c14d92578 in r_bin_java_line_number_table_attr_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3794:25
+    #1 0x7f7c14d75970 in r_bin_java_read_next_attr_from_buffer /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2100:15
+    #2 0x7f7c14d6ba21 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #3 0x7f7c14d6dc48 in r_bin_java_read_next_field /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1533:11
+    #4 0x7f7c14d78e3a in r_bin_java_parse_fields /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2231:12
+    #5 0x7f7c14d7b8b4 in r_bin_java_load_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2377:9
+    #6 0x7f7c14d87bec in r_bin_java_new_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2337:9
+    #7 0x7f7c14d87bec in r_bin_java_new_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3112
+    #8 0x7f7c14995923 in load_bytes /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #9 0x7f7c1479535a in r_bin_object_new /home/exp/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #10 0x7f7c14787afb in r_bin_file_new_from_bytes /home/exp/FOT/radare2-fuzz/libr/bin/file.c:514:6
+    #11 0x7f7c14756a0b in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:463:14
+    #12 0x7f7c1475554a in r_bin_load_io_at_offset_as /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:480:12
+    #13 0x7f7c1475554a in r_bin_load_io /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:360
+    #14 0x7f7c15fb6a80 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2-fuzz/libr/core/file.c:412:7
+    #15 0x7f7c15fb6a80 in r_core_bin_load /home/exp/FOT/radare2-fuzz/libr/core/file.c:569
+    #16 0x5563cbc9f3e3 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #17 0x7f7c0e1b5b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x5563cbba2f29 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22f29)
+
+0x60300003c95f is located 0 bytes to the right of 31-byte region [0x60300003c940,0x60300003c95f)
+allocated by thread T0 here:
+    #0 0x5563cbc63028 in calloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3028)
+    #1 0x7f7c14d6b977 in r_bin_java_get_attr_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7f7c14d6b977 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2055
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3794:25 in r_bin_java_line_number_table_attr_new
+Shadow bytes around the buggy address:
+  0x0c067ffff8d0: 00 fa fa fa 00 00 00 fa fa fa 00 00 00 fa fa fa
+  0x0c067ffff8e0: 00 00 00 fa fa fa 00 00 00 fa fa fa 00 00 00 fa
+  0x0c067ffff8f0: fa fa 00 00 00 fa fa fa 00 00 00 fa fa fa 00 00
+  0x0c067ffff900: 00 fa fa fa 00 00 00 00 fa fa 00 00 00 fa fa fa
+  0x0c067ffff910: 00 00 00 00 fa fa 00 00 05 fa fa fa 00 00 00 fa
+=>0x0c067ffff920: fa fa 00 00 00 fa fa fa 00 00 00[07]fa fa 00 00
+  0x0c067ffff930: 00 fa fa fa 00 00 00 00 fa fa 00 00 00 fa fa fa
+  0x0c067ffff940: 00 00 00 fa fa fa 00 00 00 fa fa fa 00 00 00 fa
+  0x0c067ffff950: fa fa 00 00 00 fa fa fa 00 00 00 fa fa fa 00 00
+  0x0c067ffff960: 00 fa fa fa 00 00 00 fa fa fa 00 00 00 fa fa fa
+  0x0c067ffff970: 00 00 00 fa fa fa 00 00 00 fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==2544==ABORTING

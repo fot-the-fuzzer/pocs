@@ -1,0 +1,58 @@
+This DEX is probably corrupted. Chopping DM from 5216 to 4KB
+=================================================================
+==2448==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x626000068dee at pc 0x7f1758848ddd bp 0x7ffc9be5a290 sp 0x7ffc9be5a288
+READ of size 1 at 0x626000068dee thread T0
+    #0 0x7f1758848ddc in dex_parse_debug_item /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_dex.c:596:16
+    #1 0x7f1758848ddc in parse_dex_class_method /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_dex.c:1357
+    #2 0x7f17588325dd in dex_loadcode /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_dex.c:1549:7
+    #3 0x7f1758824108 in entries /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_dex.c:1786:3
+    #4 0x7f175875a418 in r_bin_object_set_items /home/exp/FOT/radare2-fuzz/libr/bin/obj.c:153:16
+    #5 0x7f17587597a6 in r_bin_object_new /home/exp/FOT/radare2-fuzz/libr/bin/obj.c:95:2
+    #6 0x7f175874bafb in r_bin_file_new_from_bytes /home/exp/FOT/radare2-fuzz/libr/bin/file.c:514:6
+    #7 0x7f175871aa0b in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:463:14
+    #8 0x7f175871954a in r_bin_load_io_at_offset_as /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:480:12
+    #9 0x7f175871954a in r_bin_load_io /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:360
+    #10 0x7f1759f7aa80 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2-fuzz/libr/core/file.c:412:7
+    #11 0x7f1759f7aa80 in r_core_bin_load /home/exp/FOT/radare2-fuzz/libr/core/file.c:569
+    #12 0x56064539a3e3 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #13 0x7f1752179b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #14 0x56064529df29 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22f29)
+
+0x626000068dee is located 0 bytes to the right of 11502-byte region [0x626000066100,0x626000068dee)
+allocated by thread T0 here:
+    #0 0x56064535e028 in calloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3028)
+    #1 0x7f175871a329 in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:418:15
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_dex.c:596:16 in dex_parse_debug_item
+Shadow bytes around the buggy address:
+  0x0c4c80005160: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c4c80005170: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c4c80005180: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c4c80005190: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c4c800051a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c4c800051b0: 00 00 00 00 00 00 00 00 00 00 00 00 00[06]fa fa
+  0x0c4c800051c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4c800051d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4c800051e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4c800051f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4c80005200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==2448==ABORTING

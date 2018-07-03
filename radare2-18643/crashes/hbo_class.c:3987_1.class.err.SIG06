@@ -1,0 +1,609 @@
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x10026) + offset (0x6c3) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x10026) + offset (0x6c3) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x10026) + offset (0x6c3) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x10026) + offset (0x6c3) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x10026) + offset (0x6c3) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x10026) + offset (0x6c3) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x10026) + offset (0x6c3) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x10026) + offset (0x6c3) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+r_bin_java_default_attr_new: Unable to find the name for 2 index.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x73756e35) + offset (0x739) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 1.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x696e746b) + offset (0x741) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x2f777335) + offset (0x749) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x63792f56) + offset (0x751) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x79537568) + offset (0x759) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x7005312) + offset (0x761) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x7005612) + offset (0x769) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x1003f69) + offset (0x771) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x756e2f7e) + offset (0x779) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6e746578) + offset (0x781) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x77732f76) + offset (0x789) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x792f6a67) + offset (0x791) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x42756972) + offset (0x799) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x616e6472) + offset (0x7a1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x72766969) + offset (0x7a9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x70650106) + offset (0x7b1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x2f737574) + offset (0x7b9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x2f696e7a) + offset (0x7c1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6c2f7779) + offset (0x7c9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x69637935) + offset (0x7d1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x732f577b) + offset (0x7d9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x72486174) + offset (0x7e1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x1002b69) + offset (0x7e9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x756e2f7e) + offset (0x7f1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6e746578) + offset (0x7f9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x77732f76) + offset (0x801) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x792f5075) + offset (0x809) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x61746f78) + offset (0x811) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6f6d2f79) + offset (0x819) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6d6c2f6f) + offset (0x821) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6e616c35) + offset (0x829) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6f6c6969) + offset (0x831) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6c69637f) + offset (0x839) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x70746975) + offset (0x841) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x284c6a67) + offset (0x849) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x74696c35) + offset (0x851) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6563746f) + offset (0x859) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6a617667) + offset (0x861) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6c2f4d67) + offset (0x869) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x61766135) + offset (0x871) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x2f4f6270) + offset (0x879) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x29560106) + offset (0x881) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x2f737574) + offset (0x889) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x2f696e7a) + offset (0x891) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6c2f7779) + offset (0x899) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x69637935) + offset (0x8a1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x63794d67) + offset (0x8a9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x63726567) + offset (0x8b1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x646c536b) + offset (0x8b9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x65536375) + offset (0x8c1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x79010050) + offset (0x8c9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x76617835) + offset (0x8d1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6e616d6b) + offset (0x8d9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x652f5154) + offset (0x8e1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x294c6375) + offset (0x8e9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6e2f7873) + offset (0x8f1) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x74657274) + offset (0x8f9) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x732f7075) + offset (0x901) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x2f506f72) + offset (0x909) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x61704b6b) + offset (0x911) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x1167657a) + offset (0x919) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6379537b) + offset (0x921) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x74730106) + offset (0x929) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6a617667) + offset (0x931) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6c2f4375) + offset (0x939) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x74696f74) + offset (0x941) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6a617667) + offset (0x949) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6c2f4375) + offset (0x951) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x74696f74) + offset (0x959) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x74657267) + offset (0x961) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x42849) + offset (0x969) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x428492f) + offset (0x971) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x284a295c) + offset (0x979) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x46295607) + offset (0x981) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x29560026) + offset (0x989) exceeds length of buffer (0x11bb).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 29697 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 27745 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 28263 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 29755 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 22113 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 29289 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 28773 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 21601 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 3 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 10795 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 7351 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8192 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8704 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 8448 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8704 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 9472 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1024 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 22826 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1200 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 4 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 10934 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 5 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 8192 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 10752 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8960 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 9216 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 7936 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1322 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 48896 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1536 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1024 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 11008 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 11264 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 9984 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1024 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 8 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10932 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2988 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 45 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10795 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 58 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 901 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 44288 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1536 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 8960 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 12544 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 7936 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 19809 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 28747 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 24950 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 24879 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 29797 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 29281 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 25455 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 27951 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 27695 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 26990 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 12151 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 29487 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 12112 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 28524 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 25968 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 29801 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 19562 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 24950 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 12099 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 28524 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 28219 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 19562 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 26988 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 12109 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 30305 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 12140 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 27237 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 25460 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 25455 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 27951 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 27695 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 26990 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 12151 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 29487 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 12112 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 28524 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 6499 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 29540 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 27731 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 21347 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 28528 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 18984 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 19562 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 28012 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 12142 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 25445 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 12113 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 19555 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 28525 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 28012 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 12137 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 27695 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 30579 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 31023 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 20591 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 28747 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 25977 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 29776 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 28524 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 27237 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 25460 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 19562 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 24950 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 12099 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 28524 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 28219 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 30068 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 26988 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 25460 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 26991 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 25970 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 24922 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 17193 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 22017 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1064 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 10310 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10582 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 22016 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8192 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 48896 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1536 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1024 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 9984 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10240 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 7424 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1727 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 5 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10934 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8192 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 12800 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 9216 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 7936 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 9 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10932 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 4 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 940 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 7 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10795 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1024 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 12800 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 3 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 34478 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 51 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 7 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10795 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1024 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 13824 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1280 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 768 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 3225 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 50944 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2090 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 39168 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 9 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10932 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 4243 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 39168 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 9 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10932 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 4790 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 45312 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 12800 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1792 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 19712 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 20480 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 5376 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 12800 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 21504 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 22272 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 20224 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 21760 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 23296 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1036 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2077 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1536 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 14592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 14848 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 8704 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 7184 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 19 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 8192 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 24576 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1280 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1536 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 15104 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 15360 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 9216 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 768 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 11036 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 37814 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8192 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 26112 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1536 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 15616 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8704 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1578 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 7350 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 8192 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 27648 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 1536 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 256 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 16128 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 18688 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 7210 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 46080 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 5810 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 10932 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 10 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 512 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 1024 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 3072 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 29952 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 768 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 65 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 66 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 10780 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 123 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 5 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 67 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 68 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 3 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 10784 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 129 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 5 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 69 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 70 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 10788 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 135 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 5 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 71 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 72 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 3 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 10792 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 46592 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 141 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 5 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 6 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 2 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the name for 73 index.
+r_bin_java_local_variable_type_table_attr_new: Unable to find the descriptor for 0 index.
+=================================================================
+==2527==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61d000026aab at pc 0x7fea414a7762 bp 0x7fff73cfd8e0 sp 0x7fff73cfd8d8
+READ of size 1 at 0x61d000026aab thread T0
+    #0 0x7fea414a7761 in r_bin_java_local_variable_type_table_attr_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3987:20
+    #1 0x7fea41487970 in r_bin_java_read_next_attr_from_buffer /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2100:15
+    #2 0x7fea4147da21 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #3 0x7fea4147b07a in r_bin_java_read_next_method /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1430:11
+    #4 0x7fea4148bd7e in r_bin_java_parse_methods /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2301:12
+    #5 0x7fea4148d8ff in r_bin_java_load_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2382:9
+    #6 0x7fea41499bec in r_bin_java_new_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2337:9
+    #7 0x7fea41499bec in r_bin_java_new_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3112
+    #8 0x7fea410a7923 in load_bytes /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #9 0x7fea40ea735a in r_bin_object_new /home/exp/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #10 0x7fea40e99afb in r_bin_file_new_from_bytes /home/exp/FOT/radare2-fuzz/libr/bin/file.c:514:6
+    #11 0x7fea40e68a0b in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:463:14
+    #12 0x7fea40e6754a in r_bin_load_io_at_offset_as /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:480:12
+    #13 0x7fea40e6754a in r_bin_load_io /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:360
+    #14 0x7fea426c8a80 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2-fuzz/libr/core/file.c:412:7
+    #15 0x7fea426c8a80 in r_core_bin_load /home/exp/FOT/radare2-fuzz/libr/core/file.c:569
+    #16 0x5578f06fb3e3 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #17 0x7fea3a8c7b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x5578f05fef29 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22f29)
+
+0x61d000026aab is located 0 bytes to the right of 2091-byte region [0x61d000026280,0x61d000026aab)
+allocated by thread T0 here:
+    #0 0x5578f06bf028 in calloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3028)
+    #1 0x7fea4147d977 in r_bin_java_get_attr_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7fea4147d977 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2055
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3987:20 in r_bin_java_local_variable_type_table_attr_new
+Shadow bytes around the buggy address:
+  0x0c3a7fffcd00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fffcd10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fffcd20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fffcd30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3a7fffcd40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c3a7fffcd50: 00 00 00 00 00[03]fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fffcd60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fffcd70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fffcd80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fffcd90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3a7fffcda0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==2527==ABORTING

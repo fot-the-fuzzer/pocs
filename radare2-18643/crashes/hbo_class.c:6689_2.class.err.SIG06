@@ -1,0 +1,296 @@
+ElementValue Name is invalid.
+=================================================================
+==2017==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6290000279d5 at pc 0x7f11d40fe491 bp 0x7ffd58f35850 sp 0x7ffd58f35848
+READ of size 1 at 0x6290000279d5 thread T0
+    #0 0x7f11d40fe490 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6689:49
+    #1 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #2 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #3 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #4 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #5 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #6 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #7 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #8 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #9 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #10 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #11 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #12 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #13 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #14 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #15 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #16 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #17 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #18 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #19 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #20 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #21 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #22 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #23 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #24 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #25 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #26 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #27 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #28 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #29 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #30 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #31 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #32 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #33 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #34 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #35 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #36 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #37 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #38 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #39 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #40 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #41 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #42 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #43 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #44 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #45 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #46 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #47 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #48 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #49 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #50 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #51 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #52 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #53 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #54 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #55 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #56 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #57 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #58 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #59 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #60 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #61 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #62 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #63 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #64 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #65 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #66 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #67 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #68 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #69 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #70 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #71 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #72 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #73 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #74 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #75 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #76 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #77 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #78 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #79 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #80 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #81 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #82 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #83 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #84 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #85 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #86 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #87 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #88 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #89 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #90 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #91 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #92 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #93 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #94 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #95 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #96 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #97 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #98 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #99 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #100 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #101 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #102 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #103 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #104 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #105 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #106 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #107 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #108 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #109 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #110 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #111 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #112 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #113 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #114 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #115 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #116 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #117 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #118 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #119 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #120 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #121 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #122 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #123 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #124 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #125 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #126 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #127 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #128 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #129 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #130 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #131 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #132 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #133 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #134 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #135 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #136 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #137 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #138 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #139 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #140 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #141 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #142 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #143 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #144 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #145 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #146 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #147 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #148 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #149 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #150 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #151 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #152 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #153 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #154 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #155 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #156 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #157 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #158 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #159 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #160 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #161 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #162 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #163 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #164 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #165 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #166 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #167 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #168 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #169 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #170 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #171 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #172 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #173 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #174 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #175 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #176 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #177 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #178 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #179 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #180 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #181 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #182 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #183 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #184 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #185 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #186 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #187 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #188 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #189 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #190 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #191 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #192 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #193 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #194 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #195 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #196 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #197 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #198 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #199 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #200 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #201 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #202 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #203 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #204 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #205 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #206 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #207 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #208 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #209 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #210 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #211 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #212 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #213 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #214 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #215 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #216 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #217 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #218 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #219 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #220 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #221 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #222 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #223 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #224 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #225 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #226 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #227 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #228 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #229 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #230 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #231 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #232 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #233 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #234 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #235 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #236 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #237 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #238 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #239 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #240 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #241 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #242 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #243 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #244 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #245 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #246 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #247 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #248 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #249 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #250 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+    #251 0x7f11d40fd979 in r_bin_java_element_value_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6697:39
+
+0x6290000279d5 is located 0 bytes to the right of 18389-byte region [0x629000023200,0x6290000279d5)
+allocated by thread T0 here:
+    #0 0x564c9fa61028 in calloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3028)
+    #1 0x7f11d40ad977 in r_bin_java_get_attr_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7f11d40ad977 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2055
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/radare2-fuzz/shlr/java/class.c:6689:49 in r_bin_java_element_value_new
+Shadow bytes around the buggy address:
+  0x0c527fffcee0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c527fffcef0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c527fffcf00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c527fffcf10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c527fffcf20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c527fffcf30: 00 00 00 00 00 00 00 00 00 00[05]fa fa fa fa fa
+  0x0c527fffcf40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c527fffcf50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c527fffcf60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c527fffcf70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c527fffcf80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==2017==ABORTING

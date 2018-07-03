@@ -1,0 +1,63 @@
+r_bin_java_default_attr_new: Unable to find the name for 68 index.
+r_bin_java_default_attr_new: Unable to find the name for 72 index.
+=================================================================
+==2023==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x603000040641 at pc 0x7f473923183f bp 0x7ffe85379cf0 sp 0x7ffe85379ce8
+READ of size 1 at 0x603000040641 thread T0
+    #0 0x7f473923183e in r_bin_java_local_variable_type_table_attr_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3993:19
+    #1 0x7f4739211970 in r_bin_java_read_next_attr_from_buffer /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2100:15
+    #2 0x7f4739207a21 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #3 0x7f47392154f1 in r_bin_java_parse_attrs /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2264:29
+    #4 0x7f47392179d4 in r_bin_java_load_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2387:9
+    #5 0x7f4739223bec in r_bin_java_new_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2337:9
+    #6 0x7f4739223bec in r_bin_java_new_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3112
+    #7 0x7f4738e31923 in load_bytes /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #8 0x7f4738c3135a in r_bin_object_new /home/exp/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #9 0x7f4738c23afb in r_bin_file_new_from_bytes /home/exp/FOT/radare2-fuzz/libr/bin/file.c:514:6
+    #10 0x7f4738bf2a0b in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:463:14
+    #11 0x7f4738bf154a in r_bin_load_io_at_offset_as /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:480:12
+    #12 0x7f4738bf154a in r_bin_load_io /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:360
+    #13 0x7f473a452a80 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2-fuzz/libr/core/file.c:412:7
+    #14 0x7f473a452a80 in r_core_bin_load /home/exp/FOT/radare2-fuzz/libr/core/file.c:569
+    #15 0x5648569493e3 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #16 0x7f4732651b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #17 0x56485684cf29 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22f29)
+
+0x603000040641 is located 0 bytes to the right of 17-byte region [0x603000040630,0x603000040641)
+allocated by thread T0 here:
+    #0 0x56485690d028 in calloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3028)
+    #1 0x7f4739207977 in r_bin_java_get_attr_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7f4739207977 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2055
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3993:19 in r_bin_java_local_variable_type_table_attr_new
+Shadow bytes around the buggy address:
+  0x0c0680000070: fa fa 00 00 00 fa fa fa 00 00 00 01 fa fa 00 00
+  0x0c0680000080: 00 00 fa fa 00 00 00 fa fa fa 00 00 00 fa fa fa
+  0x0c0680000090: 00 00 00 fa fa fa 00 00 00 00 fa fa 00 00 00 fa
+  0x0c06800000a0: fa fa 00 00 00 fa fa fa 00 00 00 fa fa fa 00 00
+  0x0c06800000b0: 00 fa fa fa fd fd fd fd fa fa 00 00 00 fa fa fa
+=>0x0c06800000c0: 00 00 00 fa fa fa 00 00[01]fa fa fa 00 00 00 fa
+  0x0c06800000d0: fa fa 00 00 00 00 fa fa fa fa fa fa fa fa fa fa
+  0x0c06800000e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c06800000f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0680000100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0680000110: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==2023==ABORTING

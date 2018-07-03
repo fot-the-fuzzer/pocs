@@ -1,0 +1,69 @@
+r_bin_java_default_attr_new: Unable to find the name for 9 index.
+r_bin_java_default_attr_new: Unable to find the name for 9 index.
+r_bin_java_default_attr_new: Unable to find the name for 9 index.
+r_bin_java_default_attr_new: Unable to find the name for 9 index.
+r_bin_java_default_attr_new: Unable to find the name for 9 index.
+r_bin_java_default_attr_new: Unable to find the name for 9 index.
+r_bin_java_default_attr_new: Unable to find the name for 9 index.
+=================================================================
+==2020==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x606000005cf1 at pc 0x7fe1d648c531 bp 0x7ffd186eece0 sp 0x7ffd186eecd8
+READ of size 1 at 0x606000005cf1 thread T0
+    #0 0x7fe1d648c530 in r_bin_java_line_number_table_attr_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3792:22
+    #1 0x7fe1d646f970 in r_bin_java_read_next_attr_from_buffer /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2100:15
+    #2 0x7fe1d6465a21 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #3 0x7fe1d646307a in r_bin_java_read_next_method /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1430:11
+    #4 0x7fe1d6473d7e in r_bin_java_parse_methods /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2301:12
+    #5 0x7fe1d64758ff in r_bin_java_load_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2382:9
+    #6 0x7fe1d6481bec in r_bin_java_new_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2337:9
+    #7 0x7fe1d6481bec in r_bin_java_new_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3112
+    #8 0x7fe1d608f923 in load_bytes /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #9 0x7fe1d5e8f35a in r_bin_object_new /home/exp/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #10 0x7fe1d5e81afb in r_bin_file_new_from_bytes /home/exp/FOT/radare2-fuzz/libr/bin/file.c:514:6
+    #11 0x7fe1d5e50a0b in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:463:14
+    #12 0x7fe1d5e4f54a in r_bin_load_io_at_offset_as /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:480:12
+    #13 0x7fe1d5e4f54a in r_bin_load_io /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:360
+    #14 0x7fe1d76b0a80 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2-fuzz/libr/core/file.c:412:7
+    #15 0x7fe1d76b0a80 in r_core_bin_load /home/exp/FOT/radare2-fuzz/libr/core/file.c:569
+    #16 0x5602c8ee03e3 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #17 0x7fe1cf8afb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x5602c8de3f29 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22f29)
+
+0x606000005cf1 is located 0 bytes to the right of 49-byte region [0x606000005cc0,0x606000005cf1)
+allocated by thread T0 here:
+    #0 0x5602c8ea4028 in calloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3028)
+    #1 0x7fe1d6465977 in r_bin_java_get_attr_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7fe1d6465977 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2055
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3792:22 in r_bin_java_line_number_table_attr_new
+Shadow bytes around the buggy address:
+  0x0c0c7fff8b40: fa fa fa fa 00 00 00 00 00 00 03 fa fa fa fa fa
+  0x0c0c7fff8b50: fd fd fd fd fd fd fd fa fa fa fa fa fd fd fd fd
+  0x0c0c7fff8b60: fd fd fd fa fa fa fa fa 00 00 00 00 00 00 03 fa
+  0x0c0c7fff8b70: fa fa fa fa 00 00 00 00 00 00 03 fa fa fa fa fa
+  0x0c0c7fff8b80: 00 00 00 00 00 00 00 00 fa fa fa fa 00 00 00 00
+=>0x0c0c7fff8b90: 00 00 03 fa fa fa fa fa 00 00 00 00 00 00[01]fa
+  0x0c0c7fff8ba0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8bb0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8bc0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8bd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8be0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==2020==ABORTING

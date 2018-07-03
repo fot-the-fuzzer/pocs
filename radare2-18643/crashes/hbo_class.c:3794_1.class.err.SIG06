@@ -1,0 +1,70 @@
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x61637449) + offset (0x128) exceeds length of buffer (0x3a4).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x61637449) + offset (0x128) exceeds length of buffer (0x3a4).
+...
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x37002c) + offset (0x2b2) exceeds length of buffer (0x3a4).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x17001e) + offset (0x2ba) exceeds length of buffer (0x3a4).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+=================================================================
+==2027==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60700000275f at pc 0x7f14c6cf5579 bp 0x7ffd00dc8060 sp 0x7ffd00dc8058
+READ of size 1 at 0x60700000275f thread T0
+    #0 0x7f14c6cf5578 in r_bin_java_line_number_table_attr_new /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3794:25
+    #1 0x7f14c6cd8970 in r_bin_java_read_next_attr_from_buffer /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2100:15
+    #2 0x7f14c6ccea21 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #3 0x7f14c6ccc07a in r_bin_java_read_next_method /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1430:11
+    #4 0x7f14c6cdcd7e in r_bin_java_parse_methods /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2301:12
+    #5 0x7f14c6cde8ff in r_bin_java_load_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2382:9
+    #6 0x7f14c6ceabec in r_bin_java_new_bin /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2337:9
+    #7 0x7f14c6ceabec in r_bin_java_new_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3112
+    #8 0x7f14c68f8923 in load_bytes /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #9 0x7f14c66f835a in r_bin_object_new /home/exp/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #10 0x7f14c66eaafb in r_bin_file_new_from_bytes /home/exp/FOT/radare2-fuzz/libr/bin/file.c:514:6
+    #11 0x7f14c66b9a0b in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:463:14
+    #12 0x7f14c66b854a in r_bin_load_io_at_offset_as /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:480:12
+    #13 0x7f14c66b854a in r_bin_load_io /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:360
+    #14 0x7f14c7f19a80 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2-fuzz/libr/core/file.c:412:7
+    #15 0x7f14c7f19a80 in r_core_bin_load /home/exp/FOT/radare2-fuzz/libr/core/file.c:569
+    #16 0x558fc5b873e3 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #17 0x7f14c0118b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x558fc5a8af29 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22f29)
+
+0x60700000275f is located 1 bytes to the right of 78-byte region [0x607000002710,0x60700000275e)
+allocated by thread T0 here:
+    #0 0x558fc5b4b028 in calloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3028)
+    #1 0x7f14c6cce977 in r_bin_java_get_attr_buf /home/exp/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7f14c6cce977 in r_bin_java_read_next_attr /home/exp/FOT/radare2-fuzz/shlr/java/class.c:2055
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/radare2-fuzz/shlr/java/class.c:3794:25 in r_bin_java_line_number_table_attr_new
+Shadow bytes around the buggy address:
+  0x0c0e7fff8490: 00 00 00 00 00 00 02 fa fa fa fa fa 00 00 00 00
+  0x0c0e7fff84a0: 00 00 00 00 06 fa fa fa fa fa 00 00 00 00 00 00
+  0x0c0e7fff84b0: 00 00 04 fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c0e7fff84c0: 00 03 fa fa fa fa 00 00 00 00 00 00 00 00 00 02
+  0x0c0e7fff84d0: fa fa fa fa 00 00 00 00 00 00 00 00 00 01 fa fa
+=>0x0c0e7fff84e0: fa fa 00 00 00 00 00 00 00 00 00[06]fa fa fa fa
+  0x0c0e7fff84f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8500: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8510: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8520: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8530: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==2027==ABORTING
