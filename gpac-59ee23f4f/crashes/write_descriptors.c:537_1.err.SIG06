@@ -1,0 +1,32 @@
+[33m[iso file] Unknown box type fhee
+[0m[33m[iso file] extra box avcC found in avc1, deleting
+[0m[33m[iso file] more than one stts entry at the end of the track with sample_delta=0 - forbidden ! Fixing to 1
+[0m[33m[iso file] Box "stts" is invalid in container avc1
+[0m[33m[iso file] Box "ctts" is invalid in container avc1
+[0m[33m[iso file] Unknown box type ....
+[0m[31m[iso file] Incomplete box avc1
+[0mASAN:DEADLYSIGNAL
+=================================================================
+==18133==ERROR: AddressSanitizer: SEGV on unknown address 0x607031fffff1 (pc 0x7f94a27b8525 bp 0x7ffdf9d5b910 sp 0x7ffdf9d5b8c0 T0)
+==18133==The signal is caused by a WRITE memory access.
+    #0 0x7f94a27b8524  (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x26524)
+    #1 0x7f94a2870782 in __interceptor_free (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xde782)
+    #2 0x7f94a1ff2bc7 in gf_free utils/alloc.c:165
+    #3 0x7f94a1fee668 in gf_list_del utils/list.c:615
+    #4 0x7f94a21f0eeb in gf_odf_avc_cfg_del odf/descriptors.c:537
+    #5 0x7f94a2157a4c in avcc_del isomedia/avc_ext.c:2067
+    #6 0x7f94a219dd0c in gf_isom_box_del isomedia/box_funcs.c:1329
+    #7 0x7f94a219cfdf in gf_isom_box_array_del isomedia/box_funcs.c:254
+    #8 0x7f94a219dd40 in gf_isom_box_del isomedia/box_funcs.c:1337
+    #9 0x7f94a219c68a in gf_isom_parse_root_box isomedia/box_funcs.c:52
+    #10 0x7f94a21a47f3 in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #11 0x7f94a21a5895 in gf_isom_open_file isomedia/isom_intern.c:615
+    #12 0x7f94a21a8002 in gf_isom_open isomedia/isom_read.c:414
+    #13 0x559698b05e73 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339
+    #14 0x559698b0a832 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489
+    #15 0x7f94a1bd4b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #16 0x559698af5679 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0xc679)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x26524) 
+==18133==ABORTING

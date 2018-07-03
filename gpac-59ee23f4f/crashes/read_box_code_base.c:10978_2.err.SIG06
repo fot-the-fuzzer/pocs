@@ -1,0 +1,21 @@
+[31m[iso file] Read Box type trex (0x74726578) has size 0 but is not at root/file level, skipping
+[0mASAN:DEADLYSIGNAL
+=================================================================
+==18140==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000008 (pc 0x7f599a0fe121 bp 0x7ffdd3174360 sp 0x7ffdd3174340 T0)
+==18140==The signal is caused by a READ memory access.
+==18140==Hint: address points to the zero page.
+    #0 0x7f599a0fe120 in extr_Read isomedia/box_code_base.c:10978
+    #1 0x7f599a11bdd9 in gf_isom_box_read isomedia/box_funcs.c:1349
+    #2 0x7f599a11ad22 in gf_isom_box_parse_ex isomedia/box_funcs.c:199
+    #3 0x7f599a11a587 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #4 0x7f599a1227f3 in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #5 0x7f599a123895 in gf_isom_open_file isomedia/isom_intern.c:615
+    #6 0x7f599a126002 in gf_isom_open isomedia/isom_read.c:414
+    #7 0x56084771fe73 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339
+    #8 0x560847724832 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489
+    #9 0x7f5999b52b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #10 0x56084770f679 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0xc679)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV isomedia/box_code_base.c:10978 in extr_Read
+==18140==ABORTING

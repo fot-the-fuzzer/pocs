@@ -1,0 +1,26 @@
+[33m[iso file] Unknown box type ]soN
+[0m[33m[iso file] Box "edts" is invalid in container ]soN
+[0m[33m[iso file] Box "UNKN" is larger than container box
+[0m[33m[iso file] Box "moof" size 16 invalid (read 36)
+[0m[33m[iso file] Movie fragment but no moov (yet) - possibly broken parsing!
+[0m[31m[iso file] Invalid number of entries 241 in segr
+[0mASAN:DEADLYSIGNAL
+=================================================================
+==18138==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000008 (pc 0x7f26b52d5a0e bp 0x7fff3e157c50 sp 0x7fff3e157c30 T0)
+==18138==The signal is caused by a READ memory access.
+==18138==Hint: address points to the zero page.
+    #0 0x7f26b52d5a0d in segr_del isomedia/box_code_base.c:10689
+    #1 0x7f26b52f4d0c in gf_isom_box_del isomedia/box_funcs.c:1329
+    #2 0x7f26b52f3d86 in gf_isom_box_parse_ex isomedia/box_funcs.c:210
+    #3 0x7f26b52f3587 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #4 0x7f26b52fb7f3 in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #5 0x7f26b52fc895 in gf_isom_open_file isomedia/isom_intern.c:615
+    #6 0x7f26b52ff002 in gf_isom_open isomedia/isom_read.c:414
+    #7 0x55b23f5a7e73 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339
+    #8 0x55b23f5ac832 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489
+    #9 0x7f26b4d2bb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #10 0x55b23f597679 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0xc679)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV isomedia/box_code_base.c:10689 in segr_del
+==18138==ABORTING

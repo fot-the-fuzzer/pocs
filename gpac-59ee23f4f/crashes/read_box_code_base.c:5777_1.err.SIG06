@@ -1,0 +1,32 @@
+[33m[iso file] Box "REFI" is larger than container box
+[0m[33m[iso file] Box "iref" size 28 invalid (read 62)
+[0m[33m[iso file] Box "iref" is invalid in container minf
+[0m[33m[iso file] Unknown box type ....
+[0m[31m[iso file] Missing DataInformationBox
+[0m[33m[iso file] Unknown box type 
+[0m[33m[iso file] Box "stsh" size 162 invalid (read 232)
+[0m[33m[iso file] extra box stsh found in stbl, deleting
+[0m[33m[iso file] Unknown box type ....
+[0m[31m[iso file] Incomplete box stbl
+[0mASAN:DEADLYSIGNAL
+=================================================================
+==18134==ERROR: AddressSanitizer: SEGV on unknown address 0x60707d000001 (pc 0x7f4cd32737ba bp 0x7ffcfa9ff5a0 sp 0x7ffcfa9ff5a0 T0)
+==18134==The signal is caused by a READ memory access.
+    #0 0x7f4cd32737b9 in gf_list_get utils/list.c:648
+    #1 0x7f4cd3273afd in gf_list_enum utils/list.c:730
+    #2 0x7f4cd33f3c00 in stsh_del isomedia/box_code_base.c:5777
+    #3 0x7f4cd3422d0c in gf_isom_box_del isomedia/box_funcs.c:1329
+    #4 0x7f4cd3421fdf in gf_isom_box_array_del isomedia/box_funcs.c:254
+    #5 0x7f4cd3422d40 in gf_isom_box_del isomedia/box_funcs.c:1337
+    #6 0x7f4cd342168a in gf_isom_parse_root_box isomedia/box_funcs.c:52
+    #7 0x7f4cd34297f3 in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #8 0x7f4cd342a895 in gf_isom_open_file isomedia/isom_intern.c:615
+    #9 0x7f4cd342d002 in gf_isom_open isomedia/isom_read.c:414
+    #10 0x55a5bceb7e73 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339
+    #11 0x55a5bcebc832 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489
+    #12 0x7f4cd2e59b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #13 0x55a5bcea7679 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0xc679)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV utils/list.c:648 in gf_list_get
+==18134==ABORTING

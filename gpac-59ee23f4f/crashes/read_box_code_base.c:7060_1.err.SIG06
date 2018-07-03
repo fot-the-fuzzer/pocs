@@ -1,0 +1,34 @@
+[31m[iso file] Read Box type .... (0x0000001C) has size 0 but is not at root/file level, skipping
+[0m[33m[iso file] Box "mdhd" is invalid in container trak
+[0m[33m[iso file] Box "hdlr" is invalid in container trak
+[0m[33m[iso file] Box "styl" size 458 invalid (read 562)
+[0m[33m[iso file] Box "styl" is invalid in container minf
+[0m[33m[iso file] Unknown box type ..st
+[0m[31m[iso file] Missing DataInformationBox
+[0m[33m[iso file] Box "minf" is invalid in container trak
+[0m[33m[iso file] Track with no media box !
+[0mASAN:DEADLYSIGNAL
+=================================================================
+==18136==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000028 (pc 0x7fdda8d961cb bp 0x7ffc26a9aad0 sp 0x7ffc26a9aaa0 T0)
+==18136==The signal is caused by a READ memory access.
+==18136==Hint: address points to the zero page.
+    #0 0x7fdda8d961ca in trak_Read isomedia/box_code_base.c:7060
+    #1 0x7fdda8dc0dd9 in gf_isom_box_read isomedia/box_funcs.c:1349
+    #2 0x7fdda8dbfd22 in gf_isom_box_parse_ex isomedia/box_funcs.c:199
+    #3 0x7fdda8dc08b9 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1241
+    #4 0x7fdda8dc0029 in gf_isom_box_array_read isomedia/box_funcs.c:262
+    #5 0x7fdda8d8cf5a in video_sample_entry_Read isomedia/box_code_base.c:4240
+    #6 0x7fdda8dc0dd9 in gf_isom_box_read isomedia/box_funcs.c:1349
+    #7 0x7fdda8dbfd22 in gf_isom_box_parse_ex isomedia/box_funcs.c:199
+    #8 0x7fdda8dbf587 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #9 0x7fdda8dc77f3 in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #10 0x7fdda8dc8895 in gf_isom_open_file isomedia/isom_intern.c:615
+    #11 0x7fdda8dcb002 in gf_isom_open isomedia/isom_read.c:414
+    #12 0x5624b6f28e73 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339
+    #13 0x5624b6f2d832 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489
+    #14 0x7fdda87f7b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #15 0x5624b6f18679 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0xc679)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV isomedia/box_code_base.c:7060 in trak_Read
+==18136==ABORTING
