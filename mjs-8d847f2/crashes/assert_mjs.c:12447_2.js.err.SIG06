@@ -1,0 +1,1 @@
+mjs.out: mjs.c:12447: void frozen_cb(void *, const char *, size_t, const char *, const struct json_token *): Assertion `ctx->frame == NULL' failed.

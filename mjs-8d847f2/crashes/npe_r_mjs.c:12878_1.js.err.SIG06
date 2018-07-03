@@ -1,0 +1,16 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==31961==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x000000546cae bp 0x7fff490d42d0 sp 0x7fff490d4260 T0)
+==31961==The signal is caused by a READ memory access.
+==31961==Hint: address points to the zero page.
+    #0 0x546cad in mjs_next /home/hongxu/FOT/mjs-asan/mjs.c:12878:55
+    #1 0x53f603 in mjs_execute /home/hongxu/FOT/mjs-asan/mjs.c:9901:27
+    #2 0x53a708 in mjs_exec_internal /home/hongxu/FOT/mjs-asan/mjs.c:10212:5
+    #3 0x53aa2d in mjs_exec_file /home/hongxu/FOT/mjs-asan/mjs.c:10235:11
+    #4 0x54310d in main /home/hongxu/FOT/mjs-asan/mjs.c:12607:11
+    #5 0x7f60753d0b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #6 0x41a129 in _start (/home/hongxu/FOT/mjs-asan/mjs.out+0x41a129)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/mjs-asan/mjs.c:12878:55 in mjs_next
+==31961==ABORTING
