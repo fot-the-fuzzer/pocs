@@ -1,0 +1,9 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==30431==ERROR: AddressSanitizer: SEGV on unknown address 0x00000053641d (pc 0x00000053641d bp 0x7ffe7a5c7a50 sp 0x7ffe7a5c70f8 T0)
+==30431==The signal is caused by a WRITE memory access.
+    #0 0x53641c  /home/hongxu/FOT/mjs-asan/mjs.c:8423:1
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/mjs-asan/mjs.c:8423:1 
+==30431==ABORTING

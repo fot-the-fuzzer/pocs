@@ -1,0 +1,16 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==30564==ERROR: AddressSanitizer: SEGV on unknown address 0x00001431b665 (pc 0x00000056d080 bp 0x7ffdd4f4b710 sp 0x7ffdd4f4b5e0 T0)
+==30564==The signal is caused by a READ memory access.
+    #0 0x56d07f in getprop_builtin_foreign /home/hongxu/FOT/mjs-asan/mjs.c:9644:31
+    #1 0x56ade0 in getprop_builtin /home/hongxu/FOT/mjs-asan/mjs.c:9681:17
+    #2 0x53ee4a in mjs_execute /home/hongxu/FOT/mjs-asan/mjs.c:9831:14
+    #3 0x53a708 in mjs_exec_internal /home/hongxu/FOT/mjs-asan/mjs.c:10212:5
+    #4 0x53aa2d in mjs_exec_file /home/hongxu/FOT/mjs-asan/mjs.c:10235:11
+    #5 0x54310d in main /home/hongxu/FOT/mjs-asan/mjs.c:12607:11
+    #6 0x7fa019f05b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x41a129 in _start (/home/hongxu/FOT/mjs-asan/mjs.out+0x41a129)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/mjs-asan/mjs.c:9644:31 in getprop_builtin_foreign
+==30564==ABORTING

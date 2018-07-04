@@ -1,0 +1,13 @@
+Reading symbols from ../../mjs-asan/mjs.out...done.
+Starting program: /home/hongxu/FOT/mjs-asan/mjs.out ii_mjs.c:8423_1.js
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGILL, Illegal instruction.
+0x0000000000536419 in ?? () at mjs.c:8423
+8423	}
+#0  0x0000000000536419 in ?? () at mjs.c:8423
+#1  0x000000000053fdb4 in mjs_execute (mjs=0x615000000080, off=0x0, res=0x7fffffffb720) at mjs.c:9994
+#2  0x000000000053a709 in mjs_exec_internal (mjs=0x615000000080, path=0x7fffffffc31a "ii_mjs.c:8423_1.js", src=0x60e000000120 "ffi\r--ffi\r---ffi--ffi\r---ffi\r---ffi--ffi\r---ffi\r('foo')\"s_get_int(mjs, res), 0);\n  ASSERT_EX/C_OK(mjw_exec(mjs, \"'foo bar'.indexOf('bZr')\", &ress", generate_jsc=0x0, res=0x7fffffffb880) at mjs.c:10212
+#3  0x000000000053aa2e in mjs_exec_file (mjs=0x615000000080, path=0x7fffffffc31a "ii_mjs.c:8423_1.js", res=0x7fffffffb9e0) at mjs.c:10235
+#4  0x000000000054310e in main (argc=0x2, argv=0x7fffffffbca8) at mjs.c:12607
