@@ -1,0 +1,43 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==15994==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x00000043dd2f bp 0x7fff4bcc9bb0 sp 0x7fff4bcc9328 T0)
+==15994==The signal is caused by a READ memory access.
+==15994==Hint: address points to the zero page.
+    #0 0x43dd2e in __asan::QuickCheckForUnpoisonedRegion(unsigned long, unsigned long) (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x43dd2e)
+    #1 0x44323b in __interceptor_memcpy.part.40 (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x44323b)
+    #2 0x7ffb44634f31 in gf_bs_read_data /home/hongxu/FOT/gpac/src/utils/bitstream.c:458:4
+    #3 0x7ffb44876a7d in gf_odf_parse_qos /home/hongxu/FOT/gpac/src/odf/qos.c:254:3
+    #4 0x7ffb44876c8c in gf_odf_read_qos /home/hongxu/FOT/gpac/src/odf/qos.c:382:7
+    #5 0x7ffb44864081 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:338:10
+    #6 0x7ffb448653e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #7 0x7ffb4487291a in gf_odf_read_ipmp_tool_list /home/hongxu/FOT/gpac/src/odf/odf_code.c:3224:7
+    #8 0x7ffb44864123 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:351:10
+    #9 0x7ffb448653e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #10 0x7ffb4486ac41 in gf_odf_read_od /home/hongxu/FOT/gpac/src/odf/odf_code.c:674:7
+    #11 0x7ffb44863e14 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:283:10
+    #12 0x7ffb448653e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #13 0x7ffb4486a3c9 in gf_odf_read_iod /home/hongxu/FOT/gpac/src/odf/odf_code.c:505:7
+    #14 0x7ffb44863da8 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:275:10
+    #15 0x7ffb448653e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #16 0x7ffb4487291a in gf_odf_read_ipmp_tool_list /home/hongxu/FOT/gpac/src/odf/odf_code.c:3224:7
+    #17 0x7ffb44864123 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:351:10
+    #18 0x7ffb448653e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #19 0x7ffb4486ac41 in gf_odf_read_od /home/hongxu/FOT/gpac/src/odf/odf_code.c:674:7
+    #20 0x7ffb44863e14 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:283:10
+    #21 0x7ffb448653e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #22 0x7ffb448738c6 in gf_odf_desc_read /home/hongxu/FOT/gpac/src/odf/odf_codec.c:302:6
+    #23 0x7ffb447cafeb in esds_Read /home/hongxu/FOT/gpac/src/isomedia/box_code_base.c:1263:7
+    #24 0x7ffb4480b00a in gf_isom_box_read /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1349:9
+    #25 0x7ffb4480a892 in gf_isom_box_parse_ex /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:199:15
+    #26 0x7ffb4480a1f7 in gf_isom_parse_root_box /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:42:8
+    #27 0x7ffb448130f8 in gf_isom_parse_movie_boxes /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:206:7
+    #28 0x7ffb4481470a in gf_isom_open_file /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:615:19
+    #29 0x7ffb44817116 in gf_isom_open /home/hongxu/FOT/gpac/src/isomedia/isom_read.c:414:11
+    #30 0x52cac6 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339:11
+    #31 0x5326a1 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489:9
+    #32 0x7ffb43638b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #33 0x424989 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x43dd2e) in __asan::QuickCheckForUnpoisonedRegion(unsigned long, unsigned long)
+==15994==ABORTING

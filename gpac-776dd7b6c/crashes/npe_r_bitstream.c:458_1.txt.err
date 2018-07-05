@@ -1,0 +1,29 @@
+[33m[iso file] Movie fragment but no moov (yet) - possibly broken parsing!
+[0mAddressSanitizer:DEADLYSIGNAL
+=================================================================
+==15992==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x00000043dd2f bp 0x7fff8137a3e0 sp 0x7fff81379b58 T0)
+==15992==The signal is caused by a READ memory access.
+==15992==Hint: address points to the zero page.
+    #0 0x43dd2e in __asan::QuickCheckForUnpoisonedRegion(unsigned long, unsigned long) (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x43dd2e)
+    #1 0x44323b in __interceptor_memcpy.part.40 (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x44323b)
+    #2 0x7f5e55727f31 in gf_bs_read_data /home/hongxu/FOT/gpac/src/utils/bitstream.c:458:4
+    #3 0x7f5e55969a7d in gf_odf_parse_qos /home/hongxu/FOT/gpac/src/odf/qos.c:254:3
+    #4 0x7f5e55969c8c in gf_odf_read_qos /home/hongxu/FOT/gpac/src/odf/qos.c:382:7
+    #5 0x7f5e55957081 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:338:10
+    #6 0x7f5e559583e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #7 0x7f5e559668c6 in gf_odf_desc_read /home/hongxu/FOT/gpac/src/odf/odf_codec.c:302:6
+    #8 0x7f5e558bdfeb in esds_Read /home/hongxu/FOT/gpac/src/isomedia/box_code_base.c:1263:7
+    #9 0x7f5e558fe00a in gf_isom_box_read /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1349:9
+    #10 0x7f5e558fd892 in gf_isom_box_parse_ex /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:199:15
+    #11 0x7f5e558fd1f7 in gf_isom_parse_root_box /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:42:8
+    #12 0x7f5e559060f8 in gf_isom_parse_movie_boxes /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:206:7
+    #13 0x7f5e5590770a in gf_isom_open_file /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:615:19
+    #14 0x7f5e5590a116 in gf_isom_open /home/hongxu/FOT/gpac/src/isomedia/isom_read.c:414:11
+    #15 0x52cac6 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339:11
+    #16 0x5326a1 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489:9
+    #17 0x7f5e5472bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x424989 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x43dd2e) in __asan::QuickCheckForUnpoisonedRegion(unsigned long, unsigned long)
+==15992==ABORTING

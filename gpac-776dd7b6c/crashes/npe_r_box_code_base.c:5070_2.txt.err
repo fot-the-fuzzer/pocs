@@ -1,0 +1,29 @@
+[33m[iso file] Unknown box type ....
+[0mAddressSanitizer:DEADLYSIGNAL
+=================================================================
+==15998==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7fd71a944a08 bp 0x7ffd58201690 sp 0x7ffd58201490 T0)
+==15998==The signal is caused by a READ memory access.
+==15998==Hint: address points to the zero page.
+    #0 0x7fd71a944a07 in stbl_AddBox /home/hongxu/FOT/gpac/src/isomedia/box_code_base.c:5070:8
+    #1 0x7fd71a978412 in gf_isom_box_array_read_ex /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1291:7
+    #2 0x7fd71a978106 in gf_isom_box_array_read /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:262:9
+    #3 0x7fd71a944bcb in stbl_Read /home/hongxu/FOT/gpac/src/isomedia/box_code_base.c:5109:6
+    #4 0x7fd71a97800a in gf_isom_box_read /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1349:9
+    #5 0x7fd71a977892 in gf_isom_box_parse_ex /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:199:15
+    #6 0x7fd71a97814f in gf_isom_box_array_read_ex /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1241:7
+    #7 0x7fd71a978106 in gf_isom_box_array_read /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:262:9
+    #8 0x7fd71a93edf3 in moof_Read /home/hongxu/FOT/gpac/src/isomedia/box_code_base.c:3639:9
+    #9 0x7fd71a97800a in gf_isom_box_read /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1349:9
+    #10 0x7fd71a977892 in gf_isom_box_parse_ex /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:199:15
+    #11 0x7fd71a9771f7 in gf_isom_parse_root_box /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:42:8
+    #12 0x7fd71a9800f8 in gf_isom_parse_movie_boxes /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:206:7
+    #13 0x7fd71a98170a in gf_isom_open_file /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:615:19
+    #14 0x7fd71a984116 in gf_isom_open /home/hongxu/FOT/gpac/src/isomedia/isom_read.c:414:11
+    #15 0x52cac6 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339:11
+    #16 0x5326a1 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489:9
+    #17 0x7fd7197a5b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x424989 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/gpac/src/isomedia/box_code_base.c:5070:8 in stbl_AddBox
+==15998==ABORTING

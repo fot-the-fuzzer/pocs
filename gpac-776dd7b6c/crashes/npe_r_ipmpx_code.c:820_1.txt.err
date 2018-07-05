@@ -1,0 +1,35 @@
+[33m[iso file] Unknown box type srpy
+[0m[33m[iso file] Box "UNKN" is larger than container box
+[0m[33m[iso file] Box "moof" size 24 invalid (read 44)
+[0m[33m[iso file] Movie fragment but no moov (yet) - possibly broken parsing!
+[0mAddressSanitizer:DEADLYSIGNAL
+=================================================================
+==16000==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7fa86fb1474b bp 0x7fff24ff99d0 sp 0x7fff24ff99b0 T0)
+==16000==The signal is caused by a READ memory access.
+==16000==Hint: address points to the zero page.
+    #0 0x7fa86fb1474a in gf_list_add /home/hongxu/FOT/gpac/src/utils/list.c:629:6
+    #1 0x7fa86fd5c3a8 in ReadGF_IPMPX_ParametricDescription /home/hongxu/FOT/gpac/src/odf/ipmpx_code.c:820:3
+    #2 0x7fa86fd5a6ad in GF_IPMPX_ReadData /home/hongxu/FOT/gpac/src/odf/ipmpx_code.c:1987:10
+    #3 0x7fa86fd5a115 in gf_ipmpx_data_parse /home/hongxu/FOT/gpac/src/odf/ipmpx_code.c:293:6
+    #4 0x7fa86fd5122f in gf_odf_read_ipmp /home/hongxu/FOT/gpac/src/odf/odf_code.c:2421:8
+    #5 0x7fa86fd44f22 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:310:10
+    #6 0x7fa86fd463e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #7 0x7fa86fd4a778 in gf_odf_read_esd /home/hongxu/FOT/gpac/src/odf/odf_code.c:277:7
+    #8 0x7fa86fd44dc3 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:277:10
+    #9 0x7fa86fd463e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #10 0x7fa86fd548c6 in gf_odf_desc_read /home/hongxu/FOT/gpac/src/odf/odf_codec.c:302:6
+    #11 0x7fa86fcabfeb in esds_Read /home/hongxu/FOT/gpac/src/isomedia/box_code_base.c:1263:7
+    #12 0x7fa86fcec00a in gf_isom_box_read /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1349:9
+    #13 0x7fa86fceb892 in gf_isom_box_parse_ex /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:199:15
+    #14 0x7fa86fceb1f7 in gf_isom_parse_root_box /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:42:8
+    #15 0x7fa86fcf40f8 in gf_isom_parse_movie_boxes /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:206:7
+    #16 0x7fa86fcf570a in gf_isom_open_file /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:615:19
+    #17 0x7fa86fcf8116 in gf_isom_open /home/hongxu/FOT/gpac/src/isomedia/isom_read.c:414:11
+    #18 0x52cac6 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339:11
+    #19 0x5326a1 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489:9
+    #20 0x7fa86eb19b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #21 0x424989 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/gpac/src/utils/list.c:629:6 in gf_list_add
+==16000==ABORTING

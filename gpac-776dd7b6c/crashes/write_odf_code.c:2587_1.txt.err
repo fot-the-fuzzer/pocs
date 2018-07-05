@@ -1,0 +1,33 @@
+[31m[ODF] Error reading descriptor (tag 65 size 65): Invalid MPEG-4 Descriptor
+[0mAddressSanitizer:DEADLYSIGNAL
+=================================================================
+==16021==ERROR: AddressSanitizer: SEGV on unknown address 0x602052fffff1 (pc 0x00000042fe93 bp 0x7ffea64640f0 sp 0x7ffea64640a0 T0)
+==16021==The signal is caused by a WRITE memory access.
+    #0 0x42fe92 in __asan::asan_free(void*, __sanitizer::BufferedStackTrace*, __asan::AllocType) (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x42fe92)
+    #1 0x4e464a in __interceptor_free.localalias.0 (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e464a)
+    #2 0x7f96f5542844 in gf_free /home/hongxu/FOT/gpac/src/utils/alloc.c:165:2
+    #3 0x7f96f577aae5 in gf_odf_del_kw /home/hongxu/FOT/gpac/src/odf/odf_code.c:2587:22
+    #4 0x7f96f576dc49 in gf_odf_delete_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:232:10
+    #5 0x7f96f576f4b5 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:176:3
+    #6 0x7f96f577c91a in gf_odf_read_ipmp_tool_list /home/hongxu/FOT/gpac/src/odf/odf_code.c:3224:7
+    #7 0x7f96f576e123 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:351:10
+    #8 0x7f96f576f3e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #9 0x7f96f5774c41 in gf_odf_read_od /home/hongxu/FOT/gpac/src/odf/odf_code.c:674:7
+    #10 0x7f96f576de14 in gf_odf_read_descriptor /home/hongxu/FOT/gpac/src/odf/desc_private.c:283:10
+    #11 0x7f96f576f3e2 in gf_odf_parse_descriptor /home/hongxu/FOT/gpac/src/odf/descriptors.c:159:8
+    #12 0x7f96f577d8c6 in gf_odf_desc_read /home/hongxu/FOT/gpac/src/odf/odf_codec.c:302:6
+    #13 0x7f96f56d4feb in esds_Read /home/hongxu/FOT/gpac/src/isomedia/box_code_base.c:1263:7
+    #14 0x7f96f571500a in gf_isom_box_read /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1349:9
+    #15 0x7f96f5714892 in gf_isom_box_parse_ex /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:199:15
+    #16 0x7f96f57141f7 in gf_isom_parse_root_box /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:42:8
+    #17 0x7f96f571d0f8 in gf_isom_parse_movie_boxes /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:206:7
+    #18 0x7f96f571e70a in gf_isom_open_file /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:615:19
+    #19 0x7f96f5721116 in gf_isom_open /home/hongxu/FOT/gpac/src/isomedia/isom_read.c:414:11
+    #20 0x52cac6 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339:11
+    #21 0x5326a1 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489:9
+    #22 0x7f96f4542b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #23 0x424989 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x42fe92) in __asan::asan_free(void*, __sanitizer::BufferedStackTrace*, __asan::AllocType)
+==16021==ABORTING

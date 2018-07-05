@@ -1,0 +1,31 @@
+[33m[iso file] Unknown box type sRri
+[0m[33m[iso file] Unknown box type sRri
+[0m[31m[iso file] Read Box type ...t (0x00008174) has size 0 but is not at root/file level, skipping
+[0m[33m[iso file] extra box mvex found in moov, deleting
+[0m[31m[iso file] Missing MovieHeaderBox
+[0mAddressSanitizer:DEADLYSIGNAL
+=================================================================
+==16014==ERROR: AddressSanitizer: SEGV on unknown address 0x0000607ffff1 (pc 0x00000042fe93 bp 0x7ffc4fb60980 sp 0x7ffc4fb60930 T0)
+==16014==The signal is caused by a WRITE memory access.
+    #0 0x42fe92 in __asan::asan_free(void*, __sanitizer::BufferedStackTrace*, __asan::AllocType) (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x42fe92)
+    #1 0x4e464a in __interceptor_free.localalias.0 (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x4e464a)
+    #2 0x7f3eeae29844 in gf_free /home/hongxu/FOT/gpac/src/utils/alloc.c:165:2
+    #3 0x7f3eeae2470a in gf_list_del /home/hongxu/FOT/gpac/src/utils/list.c:615:2
+    #4 0x7f3eeaffc0ca in gf_isom_box_array_del /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:256:2
+    #5 0x7f3eeafc64df in mvex_del /home/hongxu/FOT/gpac/src/isomedia/box_code_base.c:4426:2
+    #6 0x7f3eeaffbbb6 in gf_isom_box_del /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1329:4
+    #7 0x7f3eeaffc0ae in gf_isom_box_array_del /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:254:10
+    #8 0x7f3eeaffbbf0 in gf_isom_box_del /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:1337:3
+    #9 0x7f3eeaffb8f0 in gf_isom_box_parse_ex /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:210:3
+    #10 0x7f3eeaffb1f7 in gf_isom_parse_root_box /home/hongxu/FOT/gpac/src/isomedia/box_funcs.c:42:8
+    #11 0x7f3eeb0040f8 in gf_isom_parse_movie_boxes /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:206:7
+    #12 0x7f3eeb00570a in gf_isom_open_file /home/hongxu/FOT/gpac/src/isomedia/isom_intern.c:615:19
+    #13 0x7f3eeb008116 in gf_isom_open /home/hongxu/FOT/gpac/src/isomedia/isom_read.c:414:11
+    #14 0x52cac6 in mp4boxMain /home/hongxu/FOT/gpac/applications/mp4box/main.c:4339:11
+    #15 0x5326a1 in main /home/hongxu/FOT/gpac/applications/mp4box/main.c:5489:9
+    #16 0x7f3ee9e29b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #17 0x424989 in _start (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x424989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/hongxu/FOT/gpac/install/bin/MP4Box+0x42fe92) in __asan::asan_free(void*, __sanitizer::BufferedStackTrace*, __asan::AllocType)
+==16014==ABORTING
