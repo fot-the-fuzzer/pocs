@@ -1,0 +1,21 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==5757==ERROR: AddressSanitizer: SEGV on unknown address 0x61a080017a7f (pc 0x7fe55322758f bp 0x7ffda4ea9110 sp 0x7ffda4ea8898 T0)
+==5757==The signal is caused by a READ memory access.
+    #0 0x7fe55322758e  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:303
+    #1 0x55b09ae1186d in __asan_memcpy (/home/hongxu/FOT/radare2/binr/radare2/radare2+0xe186d)
+    #2 0x7fe5594d27a4 in checkHeader /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_xtr_fatmach0.c:22:4
+    #3 0x7fe5594d1612 in check_bytes /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_xtr_fatmach0.c:38:9
+    #4 0x7fe559219279 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:457:15
+    #5 0x7fe559217c26 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:504:12
+    #6 0x7fe559217a1f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:384:9
+    #7 0x7fe55a6178f2 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:424:7
+    #8 0x7fe55a613169 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:581:4
+    #9 0x55b09ae4f3e3 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #10 0x7fe55318db96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #11 0x55b09ad52f29 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22f29)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/memmove-vec-unaligned-erms.S:303 
+==5757==ABORTING
+Aborted
