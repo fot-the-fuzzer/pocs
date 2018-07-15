@@ -1,0 +1,68 @@
+Invalid segment index for symbol 
+Invalid segment index for symbol 
+=================================================================
+==11704==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200002a358 at pc 0x7ff96d195757 bp 0x7ffdf267ccc0 sp 0x7ffdf267ccb8
+READ of size 8 at 0x60200002a358 thread T0
+    #0 0x7ff96d195756 in r_bin_omf_get_paddr_sym /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/../format/omf/omf.c:756:19
+    #1 0x7ff96d19226b in symbols /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_omf.c:114:16
+    #2 0x7ff96cfad506 in r_bin_object_set_items /home/hongxu/FOT/radare2-fuzz/libr/bin/obj.c:173:17
+    #3 0x7ff96cfac23b in r_bin_object_new /home/hongxu/FOT/radare2-fuzz/libr/bin/obj.c:95:2
+    #4 0x7ff96cfa386e in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2-fuzz/libr/bin/file.c:515:6
+    #5 0x7ff96cf7c841 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:486:13
+    #6 0x7ff96cf7ac26 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:500:12
+    #7 0x7ff96cf7aa1f in r_bin_load_io /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:384:9
+    #8 0x7ff96e37d282 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:425:7
+    #9 0x7ff96e378a99 in r_core_bin_load /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:583:4
+    #10 0x5610003cf3e3 in main /home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2.c:1072:15
+    #11 0x7ff966eedb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #12 0x5610002d2f29 in _start (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0x22f29)
+
+0x60200002a358 is located 0 bytes to the right of 8-byte region [0x60200002a350,0x60200002a358)
+allocated by thread T0 here:
+    #0 0x561000393028 in calloc (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0xe3028)
+    #1 0x7ff96d1940b7 in get_omf_infos /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/../format/omf/omf.c:559:25
+    #2 0x7ff96d193bc2 in r_bin_internal_omf_load /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/../format/omf/omf.c:670:7
+    #3 0x7ff96d191756 in load_bytes /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_omf.c:13:9
+    #4 0x7ff96cfabcad in r_bin_object_new /home/hongxu/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #5 0x7ff96cfa386e in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2-fuzz/libr/bin/file.c:515:6
+    #6 0x7ff96cf7c841 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:486:13
+    #7 0x7ff96cf7ac26 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:500:12
+    #8 0x7ff96cf7aa1f in r_bin_load_io /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:384:9
+    #9 0x7ff96e37d282 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:425:7
+    #10 0x7ff96e378a99 in r_core_bin_load /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:583:4
+    #11 0x5610003cf3e3 in main /home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2.c:1072:15
+    #12 0x7ff966eedb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/../format/omf/omf.c:756:19 in r_bin_omf_get_paddr_sym
+Shadow bytes around the buggy address:
+  0x0c047fffd410: fa fa fd fa fa fa 02 fa fa fa 05 fa fa fa 05 fa
+  0x0c047fffd420: fa fa 06 fa fa fa 00 03 fa fa 00 01 fa fa 00 01
+  0x0c047fffd430: fa fa 04 fa fa fa fd fa fa fa fd fd fa fa fd fd
+  0x0c047fffd440: fa fa 01 fa fa fa fd fd fa fa fd fd fa fa 01 fa
+  0x0c047fffd450: fa fa fd fd fa fa fd fd fa fa fd fd fa fa 01 fa
+=>0x0c047fffd460: fa fa fd fd fa fa fd fd fa fa 00[fa]fa fa 00 00
+  0x0c047fffd470: fa fa 01 fa fa fa 00 00 fa fa 01 fa fa fa 00 00
+  0x0c047fffd480: fa fa 01 fa fa fa 01 fa fa fa 00 00 fa fa 05 fa
+  0x0c047fffd490: fa fa 01 fa fa fa 01 fa fa fa fa fa fa fa fa fa
+  0x0c047fffd4a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd4b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==11704==ABORTING

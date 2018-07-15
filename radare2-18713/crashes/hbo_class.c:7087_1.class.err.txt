@@ -1,0 +1,75 @@
+=================================================================
+==11698==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200002a4b7 at pc 0x7f91e58131b8 bp 0x7ffeec55ba70 sp 0x7ffeec55ba68
+READ of size 1 at 0x60200002a4b7 thread T0
+    #0 0x7f91e58131b7 in r_bin_java_rtv_annotations_attr_new /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:7087:49
+    #1 0x7f91e57dd770 in r_bin_java_read_next_attr_from_buffer /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2099:15
+    #2 0x7f91e57d80c7 in r_bin_java_read_next_attr /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #3 0x7f91e57dfbcd in r_bin_java_parse_attrs /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2263:29
+    #4 0x7f91e57e1003 in r_bin_java_load_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2386:9
+    #5 0x7f91e57e09a4 in r_bin_java_new_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2336:9
+    #6 0x7f91e57e7dbd in r_bin_java_new_buf /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:3111:7
+    #7 0x7f91e5601026 in load_bytes /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #8 0x7f91e54f8cad in r_bin_object_new /home/hongxu/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #9 0x7f91e54f086e in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2-fuzz/libr/bin/file.c:515:6
+    #10 0x7f91e54c9841 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:486:13
+    #11 0x7f91e54c7c26 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:500:12
+    #12 0x7f91e54c7a1f in r_bin_load_io /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:384:9
+    #13 0x7f91e68ca282 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:425:7
+    #14 0x7f91e68c5a99 in r_core_bin_load /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:583:4
+    #15 0x560f7f69c3e3 in main /home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2.c:1072:15
+    #16 0x7f91df43ab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #17 0x560f7f59ff29 in _start (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0x22f29)
+
+0x60200002a4b7 is located 0 bytes to the right of 7-byte region [0x60200002a4b0,0x60200002a4b7)
+allocated by thread T0 here:
+    #0 0x560f7f660028 in calloc (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0xe3028)
+    #1 0x7f91e57dc7e5 in r_bin_java_get_attr_buf /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7f91e57d809d in r_bin_java_read_next_attr /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2055:11
+    #3 0x7f91e57dfbcd in r_bin_java_parse_attrs /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2263:29
+    #4 0x7f91e57e1003 in r_bin_java_load_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2386:9
+    #5 0x7f91e57e09a4 in r_bin_java_new_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2336:9
+    #6 0x7f91e57e7dbd in r_bin_java_new_buf /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:3111:7
+    #7 0x7f91e5601026 in load_bytes /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #8 0x7f91e54f8cad in r_bin_object_new /home/hongxu/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #9 0x7f91e54f086e in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2-fuzz/libr/bin/file.c:515:6
+    #10 0x7f91e54c9841 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:486:13
+    #11 0x7f91e54c7c26 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:500:12
+    #12 0x7f91e54c7a1f in r_bin_load_io /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:384:9
+    #13 0x7f91e68ca282 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:425:7
+    #14 0x7f91e68c5a99 in r_core_bin_load /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:583:4
+    #15 0x560f7f69c3e3 in main /home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2.c:1072:15
+    #16 0x7f91df43ab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:7087:49 in r_bin_java_rtv_annotations_attr_new
+Shadow bytes around the buggy address:
+  0x0c047fffd440: fa fa fd fa fa fa 06 fa fa fa 00 07 fa fa 06 fa
+  0x0c047fffd450: fa fa fd fd fa fa 06 fa fa fa 00 01 fa fa 06 fa
+  0x0c047fffd460: fa fa fd fd fa fa 06 fa fa fa 00 03 fa fa fd fd
+  0x0c047fffd470: fa fa 06 fa fa fa 00 04 fa fa 06 fa fa fa 06 fa
+  0x0c047fffd480: fa fa 00 07 fa fa 06 fa fa fa 06 fa fa fa 06 fa
+=>0x0c047fffd490: fa fa fd fd fa fa[07]fa fa fa fa fa fa fa fa fa
+  0x0c047fffd4a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd4b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd4c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd4d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffd4e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==11698==ABORTING

@@ -1,0 +1,90 @@
+Invalid tag '116' at offset 0x0000014f
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x6c61746f) + offset (0x183) exceeds length of buffer (0x23b).
+...
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x1b10006) + offset (0x1dd) exceeds length of buffer (0x23b).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+Annotation Default Attribute Information:
+   Attribute Offset: 0x000001e5
+   Attribute Name Index: 13 (AnnotationDefault)
+   Attribute Length: 10
+Element Value information:
+   EV Pair File Offset: 0x000001eb
+   EV Value Type (0): Unknown
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x110006) + offset (0x22d) exceeds length of buffer (0x23b).
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+=================================================================
+==11690==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000054b5d at pc 0x7fe4c1363666 bp 0x7ffeacce6720 sp 0x7ffeacce6718
+READ of size 1 at 0x602000054b5d thread T0
+    #0 0x7fe4c1363665 in r_bin_java_bootstrap_method_new /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:6882:30
+    #1 0x7fe4c1364765 in r_bin_java_bootstrap_methods_attr_new /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:6995:10
+    #2 0x7fe4c132f770 in r_bin_java_read_next_attr_from_buffer /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2099:15
+    #3 0x7fe4c132a0c7 in r_bin_java_read_next_attr /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #4 0x7fe4c1331bcd in r_bin_java_parse_attrs /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2263:29
+    #5 0x7fe4c1333003 in r_bin_java_load_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2386:9
+    #6 0x7fe4c13329a4 in r_bin_java_new_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2336:9
+    #7 0x7fe4c1339dbd in r_bin_java_new_buf /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:3111:7
+    #8 0x7fe4c1153026 in load_bytes /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #9 0x7fe4c104acad in r_bin_object_new /home/hongxu/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #10 0x7fe4c104286e in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2-fuzz/libr/bin/file.c:515:6
+    #11 0x7fe4c101b841 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:486:13
+    #12 0x7fe4c1019c26 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:500:12
+    #13 0x7fe4c1019a1f in r_bin_load_io /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:384:9
+    #14 0x7fe4c241c282 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:425:7
+    #15 0x7fe4c2417a99 in r_core_bin_load /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:583:4
+    #16 0x555cb8ab63e3 in main /home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2.c:1072:15
+    #17 0x7fe4baf8cb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x555cb89b9f29 in _start (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0x22f29)
+
+0x602000054b5d is located 0 bytes to the right of 13-byte region [0x602000054b50,0x602000054b5d)
+allocated by thread T0 here:
+    #0 0x555cb8a7a028 in calloc (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0xe3028)
+    #1 0x7fe4c132e7e5 in r_bin_java_get_attr_buf /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7fe4c132a09d in r_bin_java_read_next_attr /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2055:11
+    #3 0x7fe4c1331bcd in r_bin_java_parse_attrs /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2263:29
+    #4 0x7fe4c1333003 in r_bin_java_load_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2386:9
+    #5 0x7fe4c13329a4 in r_bin_java_new_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2336:9
+    #6 0x7fe4c1339dbd in r_bin_java_new_buf /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:3111:7
+    #7 0x7fe4c1153026 in load_bytes /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #8 0x7fe4c104acad in r_bin_object_new /home/hongxu/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #9 0x7fe4c104286e in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2-fuzz/libr/bin/file.c:515:6
+    #10 0x7fe4c101b841 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:486:13
+    #11 0x7fe4c1019c26 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:500:12
+    #12 0x7fe4c1019a1f in r_bin_load_io /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:384:9
+    #13 0x7fe4c241c282 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:425:7
+    #14 0x7fe4c2417a99 in r_core_bin_load /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:583:4
+    #15 0x555cb8ab63e3 in main /home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2.c:1072:15
+    #16 0x7fe4baf8cb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:6882:30 in r_bin_java_bootstrap_method_new
+Shadow bytes around the buggy address:
+  0x0c0480002910: fa fa 06 fa fa fa 06 fa fa fa 00 fa fa fa 06 fa
+  0x0c0480002920: fa fa 06 fa fa fa 06 fa fa fa 06 fa fa fa 06 fa
+  0x0c0480002930: fa fa 06 fa fa fa 06 fa fa fa 06 fa fa fa 06 fa
+  0x0c0480002940: fa fa 00 03 fa fa 06 fa fa fa 00 fa fa fa 06 fa
+  0x0c0480002950: fa fa 00 fa fa fa 06 fa fa fa 06 fa fa fa 00 fa
+=>0x0c0480002960: fa fa 00 01 fa fa 06 fa fa fa 00[05]fa fa fa fa
+  0x0c0480002970: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0480002980: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0480002990: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c04800029a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c04800029b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==11690==ABORTING

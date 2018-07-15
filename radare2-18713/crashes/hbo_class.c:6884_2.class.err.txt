@@ -1,0 +1,85 @@
+Invalid tag '64' at offset 0x0000036f
+Annotation Default Attribute Information:
+   Attribute Offset: 0x00000383
+   Attribute Name Index: 13 (AnnotationDefault)
+   Attribute Length: 39
+Element Value information:
+   EV Pair File Offset: 0x00000389
+   EV Value Type (0): Unknown
+r_bin_java_default_attr_new: Unable to find the name for 16 index.
+=================================================================
+==11696==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60600000767b at pc 0x7fa1401627ad bp 0x7ffc8d3ba420 sp 0x7ffc8d3ba418
+READ of size 1 at 0x60600000767b thread T0
+    #0 0x7fa1401627ac in r_bin_java_bootstrap_method_new /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:6884:33
+    #1 0x7fa140163765 in r_bin_java_bootstrap_methods_attr_new /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:6995:10
+    #2 0x7fa14012e770 in r_bin_java_read_next_attr_from_buffer /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2099:15
+    #3 0x7fa1401290c7 in r_bin_java_read_next_attr /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2058:10
+    #4 0x7fa140130bcd in r_bin_java_parse_attrs /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2263:29
+    #5 0x7fa140132003 in r_bin_java_load_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2386:9
+    #6 0x7fa1401319a4 in r_bin_java_new_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2336:9
+    #7 0x7fa140138dbd in r_bin_java_new_buf /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:3111:7
+    #8 0x7fa13ff52026 in load_bytes /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #9 0x7fa13fe49cad in r_bin_object_new /home/hongxu/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #10 0x7fa13fe4186e in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2-fuzz/libr/bin/file.c:515:6
+    #11 0x7fa13fe1a841 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:486:13
+    #12 0x7fa13fe18c26 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:500:12
+    #13 0x7fa13fe18a1f in r_bin_load_io /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:384:9
+    #14 0x7fa14121b282 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:425:7
+    #15 0x7fa141216a99 in r_core_bin_load /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:583:4
+    #16 0x5641a3b3f3e3 in main /home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2.c:1072:15
+    #17 0x7fa139d8bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x5641a3a42f29 in _start (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0x22f29)
+
+0x60600000767b is located 0 bytes to the right of 59-byte region [0x606000007640,0x60600000767b)
+allocated by thread T0 here:
+    #0 0x5641a3b03028 in calloc (/home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2+0xe3028)
+    #1 0x7fa14012d7e5 in r_bin_java_get_attr_buf /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:1977:21
+    #2 0x7fa14012909d in r_bin_java_read_next_attr /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2055:11
+    #3 0x7fa140130bcd in r_bin_java_parse_attrs /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2263:29
+    #4 0x7fa140132003 in r_bin_java_load_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2386:9
+    #5 0x7fa1401319a4 in r_bin_java_new_bin /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:2336:9
+    #6 0x7fa140138dbd in r_bin_java_new_buf /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:3111:7
+    #7 0x7fa13ff52026 in load_bytes /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86:18
+    #8 0x7fa13fe49cad in r_bin_object_new /home/hongxu/FOT/radare2-fuzz/libr/bin/obj.c:58:16
+    #9 0x7fa13fe4186e in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2-fuzz/libr/bin/file.c:515:6
+    #10 0x7fa13fe1a841 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:486:13
+    #11 0x7fa13fe18c26 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:500:12
+    #12 0x7fa13fe18a1f in r_bin_load_io /home/hongxu/FOT/radare2-fuzz/libr/bin/bin.c:384:9
+    #13 0x7fa14121b282 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:425:7
+    #14 0x7fa141216a99 in r_core_bin_load /home/hongxu/FOT/radare2-fuzz/libr/core/file.c:583:4
+    #15 0x5641a3b3f3e3 in main /home/hongxu/FOT/radare2-fuzz/binr/radare2/radare2.c:1072:15
+    #16 0x7fa139d8bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/radare2-fuzz/shlr/java/class.c:6884:33 in r_bin_java_bootstrap_method_new
+Shadow bytes around the buggy address:
+  0x0c0c7fff8e70: fa fa fa fa 00 00 00 00 00 00 00 00 fa fa fa fa
+  0x0c0c7fff8e80: 00 00 00 00 00 00 00 00 fa fa fa fa 00 00 00 00
+  0x0c0c7fff8e90: 00 00 00 00 fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c0c7fff8ea0: fa fa fa fa 00 00 00 00 00 00 00 fa fa fa fa fa
+  0x0c0c7fff8eb0: 00 00 00 00 00 00 00 00 fa fa fa fa 00 00 00 00
+=>0x0c0c7fff8ec0: 00 00 00 fa fa fa fa fa 00 00 00 00 00 00 00[03]
+  0x0c0c7fff8ed0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8ee0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8ef0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8f00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8f10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==11696==ABORTING
