@@ -1,0 +1,42 @@
+=================================================================
+==10851==ERROR: AddressSanitizer: memcpy-param-overlap: memory ranges [0x612000000e4f,0x612000000f61) and [0x612000000e5b, 0x612000000f6d) overlap
+    #0 0x4d933c in __asan_memcpy (/home/hongxu/FOT/ImageMagick/utilities/.libs/magick+0x4d933c)
+    #1 0x7fccd1e4c78c in SVGStripString /home/hongxu/FOT/ImageMagick/coders/svg.c:578:16
+    #2 0x7fccd1e46e76 in SVGCharacters /home/hongxu/FOT/ImageMagick/coders/svg.c:2777:3
+    #3 0x7fcccb2c9f5a in xmlParseCharData (/usr/lib/x86_64-linux-gnu/libxml2.so.2+0x42f5a)
+    #4 0x7fcccb2ddb4d  (/usr/lib/x86_64-linux-gnu/libxml2.so.2+0x56b4d)
+    #5 0x7fcccb2de36d in xmlParseChunk (/usr/lib/x86_64-linux-gnu/libxml2.so.2+0x5736d)
+    #6 0x7fccd1e2c120 in ReadSVGImage /home/hongxu/FOT/ImageMagick/coders/svg.c:3497:10
+    #7 0x7fccd151d412 in ReadImage /home/hongxu/FOT/ImageMagick/MagickCore/constitute.c:500:13
+    #8 0x7fccd1520e92 in ReadImages /home/hongxu/FOT/ImageMagick/MagickCore/constitute.c:870:9
+    #9 0x7fccd0df12c4 in CLINoImageOperator /home/hongxu/FOT/ImageMagick/MagickWand/operation.c:4724:22
+    #10 0x7fccd0df556c in CLIOption /home/hongxu/FOT/ImageMagick/MagickWand/operation.c:5219:7
+    #11 0x7fccd0c3c3f5 in ProcessCommandOptions /home/hongxu/FOT/ImageMagick/MagickWand/magick-cli.c:424:13
+    #12 0x7fccd0c3da98 in MagickImageCommand /home/hongxu/FOT/ImageMagick/MagickWand/magick-cli.c:796:5
+    #13 0x7fccd0c845a0 in MagickCommandGenesis /home/hongxu/FOT/ImageMagick/MagickWand/mogrify.c:184:14
+    #14 0x513383 in MagickMain /home/hongxu/FOT/ImageMagick/utilities/magick.c:149:10
+    #15 0x512d81 in main /home/hongxu/FOT/ImageMagick/utilities/magick.c:180:10
+    #16 0x7fccc9697b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #17 0x41a999 in _start (/home/hongxu/FOT/ImageMagick/utilities/.libs/magick+0x41a999)
+
+0x612000000edd is located 0 bytes to the right of 285-byte region [0x612000000dc0,0x612000000edd)
+allocated by thread T0 here:
+    #0 0x4da850 in __interceptor_malloc (/home/hongxu/FOT/ImageMagick/utilities/.libs/magick+0x4da850)
+    #1 0x7fccd180ab36 in AcquireMagickMemory /home/hongxu/FOT/ImageMagick/MagickCore/memory.c:468:10
+    #2 0x7fccd180ab9f in AcquireQuantumMemory /home/hongxu/FOT/ImageMagick/MagickCore/memory.c:541:10
+    #3 0x7fccd1e46d38 in SVGCharacters /home/hongxu/FOT/ImageMagick/coders/svg.c:2770:17
+    #4 0x7fcccb2c9f5a in xmlParseCharData (/usr/lib/x86_64-linux-gnu/libxml2.so.2+0x42f5a)
+
+0x612000000edd is located 0 bytes to the right of 285-byte region [0x612000000dc0,0x612000000edd)
+allocated by thread T0 here:
+    #0 0x4da850 in __interceptor_malloc (/home/hongxu/FOT/ImageMagick/utilities/.libs/magick+0x4da850)
+    #1 0x7fccd180ab36 in AcquireMagickMemory /home/hongxu/FOT/ImageMagick/MagickCore/memory.c:468:10
+    #2 0x7fccd180ab9f in AcquireQuantumMemory /home/hongxu/FOT/ImageMagick/MagickCore/memory.c:541:10
+    #3 0x7fccd1e46d38 in SVGCharacters /home/hongxu/FOT/ImageMagick/coders/svg.c:2770:17
+    #4 0x7fcccb2c9f5a in xmlParseCharData (/usr/lib/x86_64-linux-gnu/libxml2.so.2+0x42f5a)
+
+SUMMARY: AddressSanitizer: memcpy-param-overlap (/home/hongxu/FOT/ImageMagick/utilities/.libs/magick+0x4d933c) in __asan_memcpy
+==10851==ABORTING
+==10851==WARNING: ASan is ignoring requested __asan_handle_no_return: stack top: 0x7fff0a2b4000; bottom 0x7fccd28b6000; size: 0x0032379fe000 (215681589248)
+False positive error reports may follow
+For details see https://github.com/google/sanitizers/issues/189
