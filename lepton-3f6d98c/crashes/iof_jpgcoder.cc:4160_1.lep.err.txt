@@ -1,0 +1,4 @@
+lepton v1.0-1.2.1-171-g3f6d98c
+START ACHIEVED 1531794366 328204
+src/lepton/jpgcoder.cc:4160:83: runtime error: signed integer overflow: -1509949439 * 2 cannot be represented in type 'int'
+Assert Failed: false && "Data not properly zlib coded" at (src/lepton/jpgcoder.cc:4162)
