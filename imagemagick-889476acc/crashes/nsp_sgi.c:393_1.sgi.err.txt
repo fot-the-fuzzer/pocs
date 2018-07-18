@@ -1,0 +1,38 @@
+=================================================================
+==13077==ERROR: AddressSanitizer: negative-size-param: (size=-2076214336)
+    #0 0x4d9bc2 in __asan_memset (/home/hongxu/FOT/ImageMagick/utilities/.libs/magick+0x4d9bc2)
+    #1 0x7f015c28600b in ReadSGIImage /home/hongxu/FOT/ImageMagick/coders/sgi.c:393:12
+    #2 0x7f015b99c412 in ReadImage /home/hongxu/FOT/ImageMagick/MagickCore/constitute.c:500:13
+    #3 0x7f015b99fe92 in ReadImages /home/hongxu/FOT/ImageMagick/MagickCore/constitute.c:870:9
+    #4 0x7f015b2702c4 in CLINoImageOperator /home/hongxu/FOT/ImageMagick/MagickWand/operation.c:4724:22
+    #5 0x7f015b27456c in CLIOption /home/hongxu/FOT/ImageMagick/MagickWand/operation.c:5219:7
+    #6 0x7f015b0bb3f5 in ProcessCommandOptions /home/hongxu/FOT/ImageMagick/MagickWand/magick-cli.c:424:13
+    #7 0x7f015b0bca98 in MagickImageCommand /home/hongxu/FOT/ImageMagick/MagickWand/magick-cli.c:796:5
+    #8 0x7f015b1035a0 in MagickCommandGenesis /home/hongxu/FOT/ImageMagick/MagickWand/mogrify.c:184:14
+    #9 0x513383 in MagickMain /home/hongxu/FOT/ImageMagick/utilities/magick.c:149:10
+    #10 0x512d81 in main /home/hongxu/FOT/ImageMagick/utilities/magick.c:180:10
+    #11 0x7f0153b16b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #12 0x41a999 in _start (/home/hongxu/FOT/ImageMagick/utilities/.libs/magick+0x41a999)
+
+0x7efeb64c4000 is located 0 bytes inside of 2218752960-byte region [0x7efeb64c4000,0x7eff3a8bbbc0)
+allocated by thread T0 here:
+    #0 0x4db488 in __interceptor_posix_memalign (/home/hongxu/FOT/ImageMagick/utilities/.libs/magick+0x4db488)
+    #1 0x7f015bc8994b in AcquireAlignedMemory /home/hongxu/FOT/ImageMagick/MagickCore/memory.c:266:7
+    #2 0x7f015bc89e43 in AcquireVirtualMemory /home/hongxu/FOT/ImageMagick/MagickCore/memory.c:611:25
+    #3 0x7f015c285e12 in ReadSGIImage /home/hongxu/FOT/ImageMagick/coders/sgi.c:388:16
+    #4 0x7f015b99c412 in ReadImage /home/hongxu/FOT/ImageMagick/MagickCore/constitute.c:500:13
+    #5 0x7f015b99fe92 in ReadImages /home/hongxu/FOT/ImageMagick/MagickCore/constitute.c:870:9
+    #6 0x7f015b2702c4 in CLINoImageOperator /home/hongxu/FOT/ImageMagick/MagickWand/operation.c:4724:22
+    #7 0x7f015b27456c in CLIOption /home/hongxu/FOT/ImageMagick/MagickWand/operation.c:5219:7
+    #8 0x7f015b0bb3f5 in ProcessCommandOptions /home/hongxu/FOT/ImageMagick/MagickWand/magick-cli.c:424:13
+    #9 0x7f015b0bca98 in MagickImageCommand /home/hongxu/FOT/ImageMagick/MagickWand/magick-cli.c:796:5
+    #10 0x7f015b1035a0 in MagickCommandGenesis /home/hongxu/FOT/ImageMagick/MagickWand/mogrify.c:184:14
+    #11 0x513383 in MagickMain /home/hongxu/FOT/ImageMagick/utilities/magick.c:149:10
+    #12 0x512d81 in main /home/hongxu/FOT/ImageMagick/utilities/magick.c:180:10
+    #13 0x7f0153b16b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: negative-size-param (/home/hongxu/FOT/ImageMagick/utilities/.libs/magick+0x4d9bc2) in __asan_memset
+==13077==ABORTING
+==13077==WARNING: ASan is ignoring requested __asan_handle_no_return: stack top: 0x7ffd8c267000; bottom 0x7f015cd35000; size: 0x00fc2f532000 (1083125735424)
+False positive error reports may follow
+For details see https://github.com/google/sanitizers/issues/189
