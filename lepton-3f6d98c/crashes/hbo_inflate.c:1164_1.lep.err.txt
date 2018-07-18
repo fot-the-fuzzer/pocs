@@ -1,0 +1,68 @@
+lepton v1.0-1.2.1-171-g3f6d98c
+START ACHIEVED 1531905816 318908
+=================================================================
+==131655==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61e00000fa86 at pc 0x78618a bp 0x7ffde7df2930 sp 0x7ffde7df2928
+WRITE of size 1 at 0x61e00000fa86 thread T0
+    #0 0x786189 in inflate dependencies/zlib/inflate.c:1164
+    #1 0x4d5a88 in Sirikata::ZlibDecoderDecompressionReader::Decompress(unsigned char const*, unsigned long, Sirikata::JpegAllocator<unsigned char> const&, unsigned long) src/io/ZlibCompression.cc:100
+    #2 0x4542af in read_ujpg() src/lepton/jpgcoder.cc:4146
+    #3 0x476b3b in std::_Function_handler<bool (), bool (*)()>::_M_invoke(std::_Any_data const&) (/home/hongxu/FOT/lepton/lepton+0x476b3b)
+    #4 0x471289 in std::function<bool ()>::operator()() const /usr/include/c++/4.9/functional:2440
+    #5 0x4431f7 in execute(std::function<bool ()> const&) src/lepton/jpgcoder.cc:2046
+    #6 0x4413d5 in process_file(IOUtil::FileReader*, IOUtil::FileWriter*, int, bool) src/lepton/jpgcoder.cc:1860
+    #7 0x438a59 in app_main(int, char**) src/lepton/jpgcoder.cc:939
+    #8 0x48994c in main src/lepton/main.cc:17
+    #9 0x7fa4adb51f44 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21f44)
+    #10 0x404008 (/home/hongxu/FOT/lepton/lepton+0x404008)
+
+0x61e00000fa86 is located 0 bytes to the right of 2566-byte region [0x61e00000f080,0x61e00000fa86)
+allocated by thread T0 here:
+    #0 0x7fa4af4a7dfb in posix_memalign (/usr/lib/x86_64-linux-gnu/libasan.so.1+0x54dfb)
+    #1 0x4e845c in custom_malloc src/vp8/util/memory.cc:68
+    #2 0x4158a8 in Sirikata::JpegAllocator<unsigned char>::malloc_wrapper(void*, unsigned long, unsigned long) src/io/Allocator.hh:50
+    #3 0x406909 in Sirikata::JpegAllocator<unsigned char>::allocate(unsigned long, void const*) src/vp8/encoder/../../io/Allocator.hh:132
+    #4 0x40639f in std::allocator_traits<Sirikata::JpegAllocator<unsigned char> >::allocate(Sirikata::JpegAllocator<unsigned char>&, unsigned long) /usr/include/c++/4.9/bits/alloc_traits.h:357
+    #5 0x4055db in std::_Vector_base<unsigned char, Sirikata::JpegAllocator<unsigned char> >::_M_allocate(unsigned long) /usr/include/c++/4.9/bits/stl_vector.h:170
+    #6 0x485cf3 in std::vector<unsigned char, Sirikata::JpegAllocator<unsigned char> >::_M_default_append(unsigned long) /usr/include/c++/4.9/bits/vector.tcc:557
+    #7 0x4854fa in std::vector<unsigned char, Sirikata::JpegAllocator<unsigned char> >::resize(unsigned long) /usr/include/c++/4.9/bits/stl_vector.h:676
+    #8 0x4d59a0 in Sirikata::ZlibDecoderDecompressionReader::Decompress(unsigned char const*, unsigned long, Sirikata::JpegAllocator<unsigned char> const&, unsigned long) src/io/ZlibCompression.cc:87
+    #9 0x4542af in read_ujpg() src/lepton/jpgcoder.cc:4146
+    #10 0x476b3b in std::_Function_handler<bool (), bool (*)()>::_M_invoke(std::_Any_data const&) (/home/hongxu/FOT/lepton/lepton+0x476b3b)
+    #11 0x471289 in std::function<bool ()>::operator()() const /usr/include/c++/4.9/functional:2440
+    #12 0x4431f7 in execute(std::function<bool ()> const&) src/lepton/jpgcoder.cc:2046
+    #13 0x4413d5 in process_file(IOUtil::FileReader*, IOUtil::FileWriter*, int, bool) src/lepton/jpgcoder.cc:1860
+    #14 0x438a59 in app_main(int, char**) src/lepton/jpgcoder.cc:939
+    #15 0x48994c in main src/lepton/main.cc:17
+    #16 0x7fa4adb51f44 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21f44)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow dependencies/zlib/inflate.c:1164 inflate
+Shadow bytes around the buggy address:
+  0x0c3c7fff9f00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3c7fff9f10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3c7fff9f20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3c7fff9f30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c3c7fff9f40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c3c7fff9f50:[06]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3c7fff9f60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3c7fff9f70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3c7fff9f80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3c7fff9f90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c3c7fff9fa0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Heap right redzone:      fb
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack partial redzone:   f4
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Contiguous container OOB:fc
+  ASan internal:           fe
+==131655==ABORTING
