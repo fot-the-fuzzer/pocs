@@ -1,0 +1,52 @@
+=================================================================
+==6549==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60d0000000d3 at pc 0x0000005270a1 bp 0x7ffdb2cc6390 sp 0x7ffdb2cc6388
+READ of size 1 at 0x60d0000000d3 thread T0
+    #0 0x5270a0 in get_8bit_row /home/hongxu/FOT/mozjpeg-clang/rdbmp.c:145:17
+    #1 0x526cb9 in preload_image /home/hongxu/FOT/mozjpeg-clang/rdbmp.c:270:10
+    #2 0x514cce in main /home/hongxu/FOT/mozjpeg-clang/cjpeg.c:810:21
+    #3 0x7f66c720bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #4 0x41b0f9 in _start (/home/hongxu/FOT/mozjpeg-clang/install/bin/cjpeg+0x41b0f9)
+
+0x60d0000000d3 is located 12 bytes to the right of 135-byte region [0x60d000000040,0x60d0000000c7)
+allocated by thread T0 here:
+    #0 0x4dafb0 in malloc (/home/hongxu/FOT/mozjpeg-clang/install/bin/cjpeg+0x4dafb0)
+    #1 0x7f66c8794358 in jpeg_get_large /home/hongxu/FOT/mozjpeg-clang/jmemnobs.c:56:19
+    #2 0x7f66c878deca in alloc_large /home/hongxu/FOT/mozjpeg-clang/jmemmgr.c:393:30
+    #3 0x7f66c878e3a7 in alloc_sarray /home/hongxu/FOT/mozjpeg-clang/jmemmgr.c:477:28
+    #4 0x524fea in start_input_bmp /home/hongxu/FOT/mozjpeg-clang/rdbmp.c:401:24
+    #5 0x514059 in main /home/hongxu/FOT/mozjpeg-clang/cjpeg.c:753:3
+    #6 0x7f66c720bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/mozjpeg-clang/rdbmp.c:145:17 in get_8bit_row
+Shadow bytes around the buggy address:
+  0x0c1a7fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c1a7fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c1a7fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c1a7fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c1a7fff8000: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+=>0x0c1a7fff8010: 00 00 00 00 00 00 00 00 07 fa[fa]fa fa fa fa fa
+  0x0c1a7fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1a7fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1a7fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1a7fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1a7fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==6549==ABORTING
