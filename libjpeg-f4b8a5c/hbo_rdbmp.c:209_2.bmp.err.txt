@@ -1,0 +1,46 @@
+=================================================================
+==27826==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x61100000013b at pc 0x000000524062 bp 0x7ffe27aa0a40 sp 0x7ffe27aa0a38
+READ of size 1 at 0x61100000013b thread T0
+    #0 0x524061 in get_8bit_row /home/hongxu/FOT/libjpeg-turbo/rdbmp.c:209:26
+    #1 0x513497 in main /home/hongxu/FOT/libjpeg-turbo/cjpeg.c:664:21
+    #2 0x7f1d35ac5b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #3 0x41aa49 in _start (/home/hongxu/FOT/libjpeg-turbo/cjpeg+0x41aa49)
+
+0x61100000013b is located 4 bytes to the right of 247-byte region [0x611000000040,0x611000000137)
+allocated by thread T0 here:
+    #0 0x4da900 in malloc (/home/hongxu/FOT/libjpeg-turbo/cjpeg+0x4da900)
+    #1 0x7f1d36b73e77 in alloc_large /home/hongxu/FOT/libjpeg-turbo/jmemmgr.c:391:29
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/libjpeg-turbo/rdbmp.c:209:26 in get_8bit_row
+Shadow bytes around the buggy address:
+  0x0c227fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff8000: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c227fff8010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c227fff8020: 00 00 00 00 00 00 07[fa]fa fa fa fa fa fa fa fa
+  0x0c227fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==27826==ABORTING
