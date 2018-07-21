@@ -1,0 +1,36 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy sigtrap_icc_transform.c_1262_2.tiff /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+(vips:31833): VIPS-WARNING **: 21:50:30.367: corrupt profile
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x00007ffff467fc41 in ?? () from /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#0  0x00007ffff467fc41 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#1  0x00007ffff4680f2b in g_logv () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff468107f in g_log () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007ffff7360dec in vips_icc_is_compatible_profile (image=0x6250000124c0, data=0x615000007380, data_length=0x1cc) at icc_transform.c:1262
+#4  0x00007ffff75dec88 in vips__foreign_convert_saveable (in=0x6250000124c0, ready=0x7fffffff8960, saveable=VIPS_SAVEABLE_RGB, format=0x7ffff7b76cc0 <bandfmt_ppm>, coding=0x6140000079c8, background=0x606000003680) at foreign.c:1526
+#5  0x00007ffff75e2fbc in vips_foreign_save_build (object=0x621000044020) at foreign.c:1545
+#6  0x00007ffff75c9a5f in vips_foreign_save_ppm_build (object=0x621000044020) at ppmsave.c:73
+#7  0x00007ffff76c586c in vips_object_build (object=0x621000044020) at object.c:367
+#8  0x00007ffff76f75ca in vips_cache_operation_buildp (operation=0x7fffffff8f40) at cache.c:866
+#9  0x00007ffff771351a in vips_call_required_optional (operation=0x7fffffff8f40, required=0x7fffffff9080, optional=0x7fffffff92e0) at operation.c:880
+#10 0x00007ffff7719a9d in vips_call_by_name (operation_name=0x7ffff785ffc0 <.str.1> "ppmsave", option_string=0x0, required=0x7fffffff9080, optional=0x7fffffff92e0) at operation.c:920
+#11 0x00007ffff7719e2e in vips_call_split (operation_name=0x7ffff785ffc0 <.str.1> "ppmsave", optional=0x7fffffff92e0) at operation.c:1024
+#12 0x00007ffff75c9511 in vips_ppmsave (in=0x6250000121a0, filename=0x7fffffff9560 "/tmp/test.pbm") at ppmsave.c:187
+#13 0x00007ffff75a68e9 in im_vips2ppm (in=0x6250000121a0, filename=0x602000009a30 "/tmp/test.pbm") at im_vips2ppm.c:71
+#14 0x00007ffff75002c6 in vips_image_save_cb (image=0x6250000121a0, result=0x7fffffffbc20, sb=0x602000009a10) at lazy.c:261
+#15 0x00007ffff4953f6d in g_closure_invoke () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#16 0x00007ffff4966d3e in  () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#17 0x00007ffff496f3f5 in g_signal_emit_valist () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#18 0x00007ffff496fe0f in g_signal_emit () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#19 0x00007ffff76ddbec in vips_image_written (image=0x6250000121a0) at image.c:1398
+#20 0x00007ffff76f462f in vips_image_generate (image=0x6250000121a0, start_fn=0x7ffff76f3610 <vips_start_one>, generate_fn=0x7ffff76e2e10 <vips_image_write_gen>, stop_fn=0x7ffff76f3640 <vips_stop_one>, a=0x625000012010, b=0x0) at generate.c:725
+#21 0x00007ffff76e2ac2 in vips_image_write (image=0x625000012010, out=0x6250000121a0) at image.c:2531
+#22 0x00007ffff7558c1d in im_copy (in=0x625000012010, out=0x6250000121a0) at vips7compat.c:1206
+#23 0x00007ffff75a86c8 in copy_vec (argv=0x7ffff7ce38e0 <im_run_command.object_array>) at conver_dispatch.c:724
+#24 0x00007ffff75808b9 in dispatch_function (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc410) at package.c:1147
+#25 0x00007ffff7580535 in im_run_command (name=0x7fffffffc986 "im_copy", argc=0x2, argv=0x7fffffffc410) at package.c:1186
+#26 0x00000000005147c6 in main (argc=0x3, argv=0x7fffffffc408) at vips.c:1246

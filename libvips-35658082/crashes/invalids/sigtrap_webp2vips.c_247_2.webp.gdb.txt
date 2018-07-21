@@ -1,0 +1,23 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy sigtrap_webp2vips.c_247_2.webp /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+(vips:32176): VIPS-WARNING **: 21:50:37.613: unable to read image metadata
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x00007ffff467fc41 in ?? () from /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#0  0x00007ffff467fc41 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#1  0x00007ffff4680f2b in g_logv () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff468107f in g_log () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007ffff7625c1b in read_header (read=0x612000001240, out=0x625000012010) at webp2vips.c:247
+#4  0x00007ffff76249da in vips__webp_read_file_header (filename=0x7fffffff9b40 "sigtrap_webp2vips.c_247_2.webp", out=0x625000012010, shrink=0x1) at webp2vips.c:289
+#5  0x00007ffff75a3c13 in webp2vips (name=0x7fffffffc993 "sigtrap_webp2vips.c_247_2.webp", out=0x625000012010, header_only=0x1) at im_webp2vips.c:55
+#6  0x00007ffff75a4032 in im_webp2vips_header (name=0x7fffffffc993 "sigtrap_webp2vips.c_247_2.webp", out=0x625000012010) at im_webp2vips.c:83
+#7  0x00007ffff74ff2a4 in vips_image_open_lazy (image=0x625000012010, format=0x613000000900, filename=0x7fffffffc993 "sigtrap_webp2vips.c_247_2.webp", sequential=0x0) at lazy.c:219
+#8  0x00007ffff74fef4c in vips__deprecated_open_read (filename=0x7fffffffc993 "sigtrap_webp2vips.c_247_2.webp", sequential=0x0) at lazy.c:301
+#9  0x00007ffff757ca55 in input_image_init (obj=0x7ffff7ce38e0 <im_run_command.object_array>, str=0x7fffffffc993 "sigtrap_webp2vips.c_247_2.webp") at dispatch_types.c:95
+#10 0x00007ffff7582159 in build_args (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc420) at package.c:1008
+#11 0x00007ffff75805fe in dispatch_function (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc420) at package.c:1118
+#12 0x00007ffff7580535 in im_run_command (name=0x7fffffffc98b "im_copy", argc=0x2, argv=0x7fffffffc420) at package.c:1186
+#13 0x00000000005147c6 in main (argc=0x3, argv=0x7fffffffc418) at vips.c:1246

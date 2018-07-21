@@ -1,0 +1,50 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy sigtrap_tilecache.c_706_2.tiff /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe94ad700 (LWP 31946)]
+[New Thread 0x7fffe8cac700 (LWP 31947)]
+[New Thread 0x7fffe84ab700 (LWP 31948)]
+[New Thread 0x7fffe7caa700 (LWP 31949)]
+[New Thread 0x7fffe74a9700 (LWP 31950)]
+[New Thread 0x7fffe6ca8700 (LWP 31951)]
+[New Thread 0x7fffe64a7700 (LWP 31952)]
+[New Thread 0x7fffe5ca6700 (LWP 31953)]
+[New Thread 0x7fffe54a5700 (LWP 31954)]
+[New Thread 0x7fffe4ca4700 (LWP 31955)]
+[New Thread 0x7fffe44a3700 (LWP 31956)]
+[New Thread 0x7fffe3ca2700 (LWP 31957)]
+[New Thread 0x7fffe34a1700 (LWP 31958)]
+[New Thread 0x7fffe2ca0700 (LWP 31959)]
+
+(vips:31942): VIPS-WARNING **: 21:50:33.143: error in tile 0 x 0
+[New Thread 0x7fffe249f700 (LWP 31960)]
+[New Thread 0x7fffe1c96700 (LWP 31961)]
+
+Thread 15 "worker" received signal SIGTRAP, Trace/breakpoint trap.
+[Switching to Thread 0x7fffe2ca0700 (LWP 31959)]
+0x00007ffff467fc41 in ?? () from /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#0  0x00007ffff467fc41 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#1  0x00007ffff4680f2b in g_logv () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff468107f in g_log () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007ffff73b90ac in vips_tile_cache_gen (or=0x6210000b0c30, seq=0x6210000b0ce0, a=0x625000012e20, b=0x621000051b80, stop=0x7fffe2c9e5c0) at tilecache.c:706
+#4  0x00007ffff73bc859 in vips_line_cache_gen (or=0x6210000b0c30, seq=0x6210000b0ce0, a=0x625000012e20, b=0x621000051b80, stop=0x7fffe2c9e5c0) at tilecache.c:910
+#5  0x00007ffff772d4aa in vips_region_generate (reg=0x6210000b0c30) at region.c:1568
+#6  0x00007ffff7724f8b in vips_region_fill (reg=0x6210000b0c30, r=0x6210000b0bd8, fn=0x7ffff772d200 <vips_region_generate>, a=0x0) at region.c:905
+#7  0x00007ffff772d006 in vips_region_prepare (reg=0x6210000b0c30, r=0x6210000b0bd8) at region.c:1637
+#8  0x00007ffff73bf6a5 in vips_sequential_generate (or=0x6210000b0b80, seq=0x6210000b0c30, a=0x625000030190, b=0x621000045560, stop=0x7fffe2c9ed00) at sequential.c:167
+#9  0x00007ffff772d4aa in vips_region_generate (reg=0x6210000b0b80) at region.c:1568
+#10 0x00007ffff7724f8b in vips_region_fill (reg=0x6210000b0b80, r=0x6210000b0b28, fn=0x7ffff772d200 <vips_region_generate>, a=0x0) at region.c:905
+#11 0x00007ffff772d006 in vips_region_prepare (reg=0x6210000b0b80, r=0x6210000b0b28) at region.c:1637
+#12 0x00007ffff76e2e50 in vips_image_write_gen (or=0x6210000b0ad0, seq=0x6210000b0b80, a=0x625000030000, b=0x0, stop=0x7fffe2c9f160) at image.c:2497
+#13 0x00007ffff772d4aa in vips_region_generate (reg=0x6210000b0ad0) at region.c:1568
+#14 0x00007ffff772f361 in vips_region_prepare_to_generate (reg=0x6210000b0ad0, dest=0x621000051c30, r=0x7fffe2c9f4e0, x=0x0, y=0x0) at region.c:1694
+#15 0x00007ffff772ec71 in vips_region_prepare_to (reg=0x6210000b0ad0, dest=0x621000051c30, r=0x6210000afc20, x=0x0, y=0x0) at region.c:1834
+#16 0x00007ffff7701304 in sink_memory_area_work_fn (state=0x6210000afbc0, a=0x7fffe84a59a0) at sinkmemory.c:266
+#17 0x00007ffff7745bd0 in vips_thread_work_unit (thr=0x60300001b9a0) at threadpool.c:658
+#18 0x00007ffff774511a in vips_thread_main_loop (a=0x60300001b9a0) at threadpool.c:681
+#19 0x00007ffff7742223 in vips_thread_run (data=0x60300001b9d0) at threadpool.c:207
+#20 0x00007ffff46a1e05 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#21 0x00000000004e8ecf in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) ()
+#22 0x00007ffff31b86db in start_thread (arg=0x7fffe2ca0700) at pthread_create.c:463
+#23 0x00007ffff20ac88f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95

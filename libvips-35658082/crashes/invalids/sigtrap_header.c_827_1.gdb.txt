@@ -1,0 +1,35 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy sigtrap_header.c_827_1 /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+(vips:31776): GLib-GObject-WARNING **: 21:50:28.716: value "0" of type 'gint' is invalid or out of range for property 'width' of type 'gint'
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x00007ffff467fc41 in ?? () from /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#0  0x00007ffff467fc41 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#1  0x00007ffff4680f2b in g_logv () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff468107f in g_log () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007ffff495bffe in g_object_set_valist () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#4  0x00007ffff495c86c in g_object_set () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#5  0x00007ffff770da63 in vips_image_init_fields (image=0x6250000121a0, xsize=0x0, ysize=0x3, bands=0x3, format=VIPS_FORMAT_FLOAT, coding=VIPS_CODING_NONE, interpretation=VIPS_INTERPRETATION_sRGB, xres=1, yres=1) at header.c:827
+#6  0x00007ffff75c34f3 in read_header (fp=0x616000000c80, out=0x6250000121a0, bits=0x7fffffffafe0, ascii=0x7fffffffaff0, msb_first=0x7fffffffb000) at ppm.c:276
+#7  0x00007ffff75c3efe in isppmmmap (filename=0x603000015040 "sigtrap_header.c_827_1") at ppm.c:479
+#8  0x00007ffff75c3d6c in vips__ppm_flags (filename=0x603000015040 "sigtrap_header.c_827_1") at ppm.c:537
+#9  0x00007ffff75c8bc5 in vips_foreign_load_ppm_get_flags_filename (filename=0x603000015040 "sigtrap_header.c_827_1") at ppmload.c:72
+#10 0x00007ffff75c8c1c in vips_foreign_load_ppm_get_flags (load=0x621000041820) at ppmload.c:80
+#11 0x00007ffff75e08e5 in vips_foreign_load_build (object=0x621000041820) at foreign.c:908
+#12 0x00007ffff76c586c in vips_object_build (object=0x621000041820) at object.c:367
+#13 0x00007ffff76f75ca in vips_cache_operation_buildp (operation=0x7fffffffb620) at cache.c:866
+#14 0x00007ffff771351a in vips_call_required_optional (operation=0x7fffffffb620, required=0x7fffffffb760, optional=0x7fffffffb9c0) at operation.c:880
+#15 0x00007ffff7719a9d in vips_call_by_name (operation_name=0x7ffff785fdc0 <.str.1> "ppmload", option_string=0x0, required=0x7fffffffb760, optional=0x7fffffffb9c0) at operation.c:920
+#16 0x00007ffff7719e2e in vips_call_split (operation_name=0x7ffff785fdc0 <.str.1> "ppmload", optional=0x7fffffffb9c0) at operation.c:1024
+#17 0x00007ffff75c8771 in vips_ppmload (filename=0x7fffffffc99b "sigtrap_header.c_827_1", out=0x7fffffffbc40) at ppmload.c:172
+#18 0x00007ffff75a4171 in im_ppm2vips (filename=0x7fffffffc99b "sigtrap_header.c_827_1", out=0x625000012010) at im_ppm2vips.c:47
+#19 0x00007ffff74ff3ea in vips_image_open_lazy (image=0x625000012010, format=0x613000000c80, filename=0x7fffffffc99b "sigtrap_header.c_827_1", sequential=0x0) at lazy.c:232
+#20 0x00007ffff74fef4c in vips__deprecated_open_read (filename=0x7fffffffc99b "sigtrap_header.c_827_1", sequential=0x0) at lazy.c:301
+#21 0x00007ffff757ca55 in input_image_init (obj=0x7ffff7ce38e0 <im_run_command.object_array>, str=0x7fffffffc99b "sigtrap_header.c_827_1") at dispatch_types.c:95
+#22 0x00007ffff7582159 in build_args (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc420) at package.c:1008
+#23 0x00007ffff75805fe in dispatch_function (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc420) at package.c:1118
+#24 0x00007ffff7580535 in im_run_command (name=0x7fffffffc993 "im_copy", argc=0x2, argv=0x7fffffffc420) at package.c:1186
+#25 0x00000000005147c6 in main (argc=0x3, argv=0x7fffffffc418) at vips.c:1246

@@ -1,0 +1,94 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy hbo_radiance.c_389_2 /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+=================================================================
+==31664==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7fffffff95c8 at pc 0x7ffff75b9d19 bp 0x7fffffff9060 sp 0x7fffffff9058
+WRITE of size 1 at 0x7fffffff95c8 thread T0
+    #0 0x7ffff75b9d18 in formatval /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:389:8
+    #1 0x7ffff75b8e9b in mycheck /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:452:7
+    #2 0x7ffff75b8d9a in getheader /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:432:20
+    #3 0x7ffff75b52a3 in checkheader /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:540:6
+    #4 0x7ffff75b4fd5 in vips__rad_israd /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:945:11
+    #5 0x7ffff75dc2f1 in vips_foreign_is_a /home/hongxu/FOT/libvips/libvips/foreign/foreign.c:642:3
+    #6 0x7ffff75ae90e in israd /home/hongxu/FOT/libvips/libvips/deprecated/radiance.c:61:10
+    #7 0x7ffff759f2c5 in format_for_file_sub /home/hongxu/FOT/libvips/libvips/deprecated/format.c:319:7
+    #8 0x7ffff77461f8 in vips_slist_map2 /home/hongxu/FOT/libvips/libvips/iofuncs/util.c:128:33
+    #9 0x7ffff759e54b in vips_format_map /home/hongxu/FOT/libvips/libvips/deprecated/format.c:91:11
+    #10 0x7ffff759f157 in vips_format_for_file /home/hongxu/FOT/libvips/libvips/deprecated/format.c:355:37
+    #11 0x7ffff74feeda in vips__deprecated_open_read /home/hongxu/FOT/libvips/libvips/deprecated/lazy.c:285:17
+    #12 0x7ffff757ca54 in input_image_init /home/hongxu/FOT/libvips/libvips/deprecated/dispatch_types.c:95:18
+    #13 0x7ffff7582158 in build_args /home/hongxu/FOT/libvips/libvips/deprecated/package.c:1008:22
+    #14 0x7ffff75805fd in dispatch_function /home/hongxu/FOT/libvips/libvips/deprecated/package.c:1118:6
+    #15 0x7ffff7580534 in im_run_command /home/hongxu/FOT/libvips/libvips/deprecated/package.c:1186:6
+    #16 0x5147c5 in main /home/hongxu/FOT/libvips/tools/vips.c:1246:7
+    #17 0x7ffff1facb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x41b3e9 in _start (/home/hongxu/FOT/libvips/install/bin/vips+0x41b3e9)
+
+Address 0x7fffffff95c8 is located in stack of thread T0 at offset 104 in frame
+    #0 0x7ffff75b50cf in checkheader /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:534
+
+  This frame has 1 object(s):
+    [32, 104) 'cdat' (line 535) <== Memory access at offset 104 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:389:8 in formatval
+Shadow bytes around the buggy address:
+  0x10007fff7260: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fff7270: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fff7280: f3 f3 f3 f3 f3 f3 f3 f3 00 00 00 00 00 00 00 00
+  0x10007fff7290: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fff72a0: 00 00 00 00 00 00 00 00 00 00 00 00 f1 f1 f1 f1
+=>0x10007fff72b0: 00 00 00 00 00 00 00 00 00[f3]f3 f3 f3 f3 f3 f3
+  0x10007fff72c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fff72d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fff72e0: 00 00 00 00 00 00 00 00 f1 f1 f1 f1 00 00 00 00
+  0x10007fff72f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007fff7300: 00 00 00 00 00 00 00 00 00 00 00 00 f3 f3 f3 f3
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==31664==ABORTING
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  0x00007ffff1fc9e97 in __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff1fcb801 in __GI_abort () at abort.c:79
+#2  0x000000000050491b in __sanitizer::Abort() ()
+#3  0x0000000000501c48 in __sanitizer::Die() ()
+#4  0x00000000004e3ecd in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x00000000004e486b in __asan_report_store1 ()
+#6  0x00007ffff75b9d19 in formatval (r=0x7fffffff95c9 "", s=0x7fffffff9248 "\322\316̎\312\006\314", <incomplete sequence \317>) at radiance.c:389
+#7  0x00007ffff75b8e9c in mycheck (s=0x7fffffff9200 "FORMAT=32-bit_rle_rgbe\355\210\006\200\355\331\001\340\232\200\002\002\001\032\006\200\355\331\322\316̎\312\006\314\317\321\331\355\200\006\200\355\331\322\316̎\312\006\314\317\321\331\355\200\006\200\355\331\322\316̎\312\006\314", <incomplete sequence \317>, cp=0x7fffffff9580) at radiance.c:452
+#8  0x00007ffff75b8d9b in getheader (fp=0x616000000c80, f=0x7ffff75b8e70 <mycheck>, p=0x7fffffff9580) at radiance.c:432
+#9  0x00007ffff75b52a4 in checkheader (fin=0x616000000c80, fmt=0x7fffffff9760 "32-bit_rle_???e", fout=0x0) at radiance.c:540
+#10 0x00007ffff75b4fd6 in vips__rad_israd (filename=0x7fffffff9be0 "hbo_radiance.c_389_2") at radiance.c:945
+#11 0x00007ffff75dc2f2 in vips_foreign_is_a (loader=0x7ffff785ca00 <.str.3> "radload", filename=0x7fffffff9be0 "hbo_radiance.c_389_2") at foreign.c:642
+#12 0x00007ffff75ae90f in israd (filename=0x7fffffff9be0 "hbo_radiance.c_389_2") at radiance.c:61
+#13 0x00007ffff759f2c6 in format_for_file_sub (format=0x6130000011c0, name=0x7fffffffc99d "hbo_radiance.c_389_2", filename=0x7fffffff9be0 "hbo_radiance.c_389_2") at format.c:319
+#14 0x00007ffff77461f9 in vips_slist_map2 (list=0x615000001240, fn=0x7ffff759f240 <format_for_file_sub>, a=0x7fffffffc99d, b=0x7fffffff9be0) at util.c:128
+#15 0x00007ffff759e54c in vips_format_map (fn=0x7ffff759f240 <format_for_file_sub>, a=0x7fffffffc99d, b=0x7fffffff9be0) at format.c:91
+#16 0x00007ffff759f158 in vips_format_for_file (filename=0x7fffffffc99d "hbo_radiance.c_389_2") at format.c:355
+#17 0x00007ffff74feedb in vips__deprecated_open_read (filename=0x7fffffffc99d "hbo_radiance.c_389_2", sequential=0x0) at lazy.c:285
+#18 0x00007ffff757ca55 in input_image_init (obj=0x7ffff7ce38e0 <im_run_command.object_array>, str=0x7fffffffc99d "hbo_radiance.c_389_2") at dispatch_types.c:95
+#19 0x00007ffff7582159 in build_args (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc420) at package.c:1008
+#20 0x00007ffff75805fe in dispatch_function (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc420) at package.c:1118
+#21 0x00007ffff7580535 in im_run_command (name=0x7fffffffc995 "im_copy", argc=0x2, argv=0x7fffffffc420) at package.c:1186
+#22 0x00000000005147c6 in main (argc=0x3, argv=0x7fffffffc418) at vips.c:1246

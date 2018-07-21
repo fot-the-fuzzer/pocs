@@ -1,0 +1,59 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy sigtrap_vipspng.c_593_2.png /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe94ad700 (LWP 32127)]
+[New Thread 0x7fffe8cac700 (LWP 32128)]
+[New Thread 0x7fffe84ab700 (LWP 32129)]
+[New Thread 0x7fffe7caa700 (LWP 32130)]
+[New Thread 0x7fffe74a9700 (LWP 32131)]
+[New Thread 0x7fffe6ca8700 (LWP 32132)]
+[New Thread 0x7fffe64a7700 (LWP 32133)]
+[New Thread 0x7fffe5ca6700 (LWP 32134)]
+[New Thread 0x7fffe54a5700 (LWP 32135)]
+[New Thread 0x7fffe4ca4700 (LWP 32136)]
+[New Thread 0x7fffe44a3700 (LWP 32137)]
+[New Thread 0x7fffe3ca2700 (LWP 32138)]
+[New Thread 0x7fffe34a1700 (LWP 32139)]
+
+(vips:32123): VIPS-WARNING **: 21:50:36.512: tEX[FF]: invalid chunk type
+[New Thread 0x7fffe2ca0700 (LWP 32140)]
+[New Thread 0x7fffe249f700 (LWP 32141)]
+
+Thread 12 "worker" received signal SIGTRAP, Trace/breakpoint trap.
+[Switching to Thread 0x7fffe44a3700 (LWP 32137)]
+0x00007ffff467fc41 in ?? () from /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#0  0x00007ffff467fc41 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#1  0x00007ffff4680f2b in g_logv () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff468107f in g_log () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007ffff75ece7b in user_error_function (png_ptr=0x61a00000fc80, error_msg=0x7fffe44a0740 "tEX[FF]: invalid chunk type") at vipspng.c:136
+#4  0x00007ffff6e8363d in png_error () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#5  0x00007ffff6e83710 in png_chunk_error () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#6  0x00007ffff6e95498 in  () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#7  0x00007ffff6e95606 in  () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#8  0x00007ffff6e8a7f0 in png_read_end () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#9  0x00007ffff75ee516 in png2vips_generate (or=0x6210000b0cf0, seq=0x0, a=0x60700003ffe0, b=0x0, stop=0x7fffe44a0b80) at vipspng.c:593
+#10 0x00007ffff772d4aa in vips_region_generate (reg=0x6210000b0cf0) at region.c:1568
+#11 0x00007ffff772f361 in vips_region_prepare_to_generate (reg=0x6210000b0cf0, dest=0x6210000b0e50, r=0x7fffe44a0f00, x=0x0, y=0x10) at region.c:1694
+#12 0x00007ffff772eb86 in vips_region_prepare_to (reg=0x6210000b0cf0, dest=0x6210000b0e50, r=0x60400001642c, x=0x0, y=0x10) at region.c:1812
+#13 0x00007ffff73b8df9 in vips_tile_cache_gen (or=0x6210000b0c40, seq=0x6210000b0cf0, a=0x625000012e20, b=0x621000051af0, stop=0x7fffe44a15c0) at tilecache.c:679
+#14 0x00007ffff73bc859 in vips_line_cache_gen (or=0x6210000b0c40, seq=0x6210000b0cf0, a=0x625000012e20, b=0x621000051af0, stop=0x7fffe44a15c0) at tilecache.c:910
+#15 0x00007ffff772d4aa in vips_region_generate (reg=0x6210000b0c40) at region.c:1568
+#16 0x00007ffff7724f8b in vips_region_fill (reg=0x6210000b0c40, r=0x6210000b0be8, fn=0x7ffff772d200 <vips_region_generate>, a=0x0) at region.c:905
+#17 0x00007ffff772d006 in vips_region_prepare (reg=0x6210000b0c40, r=0x6210000b0be8) at region.c:1637
+#18 0x00007ffff73bf6a5 in vips_sequential_generate (or=0x6210000b0b90, seq=0x6210000b0c40, a=0x6250000301a0, b=0x621000045560, stop=0x7fffe44a1d00) at sequential.c:167
+#19 0x00007ffff772d4aa in vips_region_generate (reg=0x6210000b0b90) at region.c:1568
+#20 0x00007ffff7724f8b in vips_region_fill (reg=0x6210000b0b90, r=0x6210000b0b38, fn=0x7ffff772d200 <vips_region_generate>, a=0x0) at region.c:905
+#21 0x00007ffff772d006 in vips_region_prepare (reg=0x6210000b0b90, r=0x6210000b0b38) at region.c:1637
+#22 0x00007ffff76e2e50 in vips_image_write_gen (or=0x6210000b0ae0, seq=0x6210000b0b90, a=0x625000030010, b=0x0, stop=0x7fffe44a2160) at image.c:2497
+#23 0x00007ffff772d4aa in vips_region_generate (reg=0x6210000b0ae0) at region.c:1568
+#24 0x00007ffff772f361 in vips_region_prepare_to_generate (reg=0x6210000b0ae0, dest=0x621000051ba0, r=0x7fffe44a24e0, x=0x0, y=0x10) at region.c:1694
+#25 0x00007ffff772ec71 in vips_region_prepare_to (reg=0x6210000b0ae0, dest=0x621000051ba0, r=0x6210000afc30, x=0x0, y=0x10) at region.c:1834
+#26 0x00007ffff7701304 in sink_memory_area_work_fn (state=0x6210000afbd0, a=0x7fffe84a5f60) at sinkmemory.c:266
+#27 0x00007ffff7745bd0 in vips_thread_work_unit (thr=0x603000019c90) at threadpool.c:658
+#28 0x00007ffff774511a in vips_thread_main_loop (a=0x603000019c90) at threadpool.c:681
+#29 0x00007ffff7742223 in vips_thread_run (data=0x603000019cc0) at threadpool.c:207
+#30 0x00007ffff46a1e05 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#31 0x00000000004e8ecf in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) ()
+#32 0x00007ffff31b86db in start_thread (arg=0x7fffe44a3700) at pthread_create.c:463
+#33 0x00007ffff20ac88f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95

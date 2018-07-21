@@ -1,0 +1,29 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy sigtrap_tiff.c_166_1.tiff /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+(vips:31852): VIPS-WARNING **: 21:50:30.933: Invalid TIFF directory; tags are not sorted in ascending order
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x00007ffff467fc41 in ?? () from /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#0  0x00007ffff467fc41 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#1  0x00007ffff4680f2b in g_logv () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff75f37ba in vips__thandler_warning (module=0x7ffff6a2f5f0 "TIFFReadDirectoryCheckOrder", fmt=0x7ffff6a2e588 "Invalid TIFF directory; tags are not sorted in ascending order", ap=0x7fffffff9780) at tiff.c:77
+#3  0x00007ffff6a2a1bc in TIFFWarningExt () at /usr/lib/x86_64-linux-gnu/libtiff.so.5
+#4  0x00007ffff69fadcc in TIFFReadDirectory () at /usr/lib/x86_64-linux-gnu/libtiff.so.5
+#5  0x00007ffff6a1ecfa in TIFFClientOpen () at /usr/lib/x86_64-linux-gnu/libtiff.so.5
+#6  0x00007ffff6a2c485 in TIFFFdOpen () at /usr/lib/x86_64-linux-gnu/libtiff.so.5
+#7  0x00007ffff6a2c55d in TIFFOpen () at /usr/lib/x86_64-linux-gnu/libtiff.so.5
+#8  0x00007ffff75f3884 in vips__tiff_openin (path=0x7fffffff9ae0 "sigtrap_tiff.c_166_1.tiff") at tiff.c:166
+#9  0x00007ffff7605af3 in rtiff_new_filename (filename=0x7fffffff9ae0 "sigtrap_tiff.c_166_1.tiff", out=0x625000012010, page=0x0, n=0x1, autorotate=0x0) at tiff2vips.c:2219
+#10 0x00007ffff7606f26 in vips__tiff_read_header (filename=0x7fffffff9ae0 "sigtrap_tiff.c_166_1.tiff", out=0x625000012010, page=0x0, n=0x1, autorotate=0x0) at tiff2vips.c:2322
+#11 0x00007ffff75a49e9 in tiff2vips (name=0x7fffffffc998 "sigtrap_tiff.c_166_1.tiff", out=0x625000012010, header_only=0x1) at im_tiff2vips.c:98
+#12 0x00007ffff75a5082 in im_tiff2vips_header (name=0x7fffffffc998 "sigtrap_tiff.c_166_1.tiff", out=0x625000012010) at im_tiff2vips.c:126
+#13 0x00007ffff74ff2a4 in vips_image_open_lazy (image=0x625000012010, format=0x613000001380, filename=0x7fffffffc998 "sigtrap_tiff.c_166_1.tiff", sequential=0x0) at lazy.c:219
+#14 0x00007ffff74fef4c in vips__deprecated_open_read (filename=0x7fffffffc998 "sigtrap_tiff.c_166_1.tiff", sequential=0x0) at lazy.c:301
+#15 0x00007ffff757ca55 in input_image_init (obj=0x7ffff7ce38e0 <im_run_command.object_array>, str=0x7fffffffc998 "sigtrap_tiff.c_166_1.tiff") at dispatch_types.c:95
+#16 0x00007ffff7582159 in build_args (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc420) at package.c:1008
+#17 0x00007ffff75805fe in dispatch_function (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc420) at package.c:1118
+#18 0x00007ffff7580535 in im_run_command (name=0x7fffffffc990 "im_copy", argc=0x2, argv=0x7fffffffc420) at package.c:1186
+#19 0x00000000005147c6 in main (argc=0x3, argv=0x7fffffffc418) at vips.c:1246
