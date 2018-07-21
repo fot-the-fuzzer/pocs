@@ -1,0 +1,56 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy sigtrap_image.c_1009_2.pnm /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe94ad700 (LWP 11628)]
+[New Thread 0x7fffe8cac700 (LWP 11629)]
+[New Thread 0x7fffe84ab700 (LWP 11631)]
+
+(vips:11330): VIPS-WARNING **: 20:30:17.958: sigtrap_image.c_1009_2.pnm is longer than expected
+
+Thread 4 "worker" received signal SIGTRAP, Trace/breakpoint trap.
+[Switching to Thread 0x7fffe84ab700 (LWP 11631)]
+0x00007ffff467fc41 in ?? () from /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#0  0x00007ffff467fc41 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#1  0x00007ffff4680f2b in g_logv () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff468107f in g_log () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007ffff76ead7a in vips_image_build (object=0x625000012b00) at image.c:1009
+#4  0x00007ffff76c586c in vips_object_build (object=0x625000012b00) at object.c:367
+#5  0x00007ffff76dfd25 in vips_image_new_from_file_raw (filename=0x603000019690 "sigtrap_image.c_1009_2.pnm", xsize=0x10, ysize=0x10, bands=0x1, offset=0xd) at image.c:1983
+#6  0x00007ffff75d3f30 in vips_foreign_load_raw_header (load=0x621000054030) at rawload.c:82
+#7  0x00007ffff75e0ccc in vips_foreign_load_build (object=0x621000054030) at foreign.c:951
+#8  0x00007ffff76c586c in vips_object_build (object=0x621000054030) at object.c:367
+#9  0x00007ffff76f75ca in vips_cache_operation_buildp (operation=0x7fffe84a88e0) at cache.c:866
+#10 0x00007ffff771351a in vips_call_required_optional (operation=0x7fffe84a88e0, required=0x7fffe84a8a20, optional=0x7fffe84a8ca0) at operation.c:880
+#11 0x00007ffff7719a9d in vips_call_by_name (operation_name=0x7ffff7861d20 <.str.1> "rawload", option_string=0x0, required=0x7fffe84a8a20, optional=0x7fffe84a8ca0) at operation.c:920
+#12 0x00007ffff7719e2e in vips_call_split (operation_name=0x7ffff7861d20 <.str.1> "rawload", optional=0x7fffe84a8ca0) at operation.c:1024
+#13 0x00007ffff75d3609 in vips_rawload (filename=0x603000015040 "sigtrap_image.c_1009_2.pnm", out=0x603000019570, width=0x10, height=0x10, bands=0x1) at rawload.c:190
+#14 0x00007ffff75c586e in read_mmap (fp=0x61600000ff80, filename=0x603000015040 "sigtrap_image.c_1009_2.pnm", msb_first=0x0, out=0x625000012650) at ppm.c:293
+#15 0x00007ffff75c38db in parse_ppm (fp=0x61600000ff80, filename=0x603000015040 "sigtrap_image.c_1009_2.pnm", out=0x625000012650) at ppm.c:434
+#16 0x00007ffff75c3624 in vips__ppm_load (filename=0x603000015040 "sigtrap_image.c_1009_2.pnm", out=0x625000012650) at ppm.c:502
+#17 0x00007ffff75c9107 in vips_foreign_load_ppm_load (load=0x621000041820) at ppmload.c:101
+#18 0x00007ffff75e16ea in vips_foreign_load_start (out=0x625000012330, a=0x0, b=0x621000041820) at foreign.c:850
+#19 0x00007ffff771f81e in vips__region_start (region=0x6210000518b0) at region.c:232
+#20 0x00007ffff772d33c in vips_region_generate (reg=0x6210000518b0) at region.c:1562
+#21 0x00007ffff7724f8b in vips_region_fill (reg=0x6210000518b0, r=0x621000051858, fn=0x7ffff772d200 <vips_region_generate>, a=0x0) at region.c:905
+#22 0x00007ffff772d006 in vips_region_prepare (reg=0x6210000518b0, r=0x621000051858) at region.c:1637
+#23 0x00007ffff76e2e50 in vips_image_write_gen (or=0x621000051800, seq=0x6210000518b0, a=0x625000012330, b=0x0, stop=0x7fffe84a98a0) at image.c:2497
+#24 0x00007ffff772d4aa in vips_region_generate (reg=0x621000051800) at region.c:1568
+#25 0x00007ffff7724f8b in vips_region_fill (reg=0x621000051800, r=0x621000045738, fn=0x7ffff772d200 <vips_region_generate>, a=0x0) at region.c:905
+#26 0x00007ffff772d006 in vips_region_prepare (reg=0x621000051800, r=0x621000045738) at region.c:1637
+#27 0x00007ffff76e2e50 in vips_image_write_gen (or=0x6210000456e0, seq=0x621000051800, a=0x625000012010, b=0x0, stop=0x7fffe84a9d00) at image.c:2497
+#28 0x00007ffff772d4aa in vips_region_generate (reg=0x6210000456e0) at region.c:1568
+#29 0x00007ffff7724f8b in vips_region_fill (reg=0x6210000456e0, r=0x621000045688, fn=0x7ffff772d200 <vips_region_generate>, a=0x0) at region.c:905
+#30 0x00007ffff772d006 in vips_region_prepare (reg=0x6210000456e0, r=0x621000045688) at region.c:1637
+#31 0x00007ffff76e2e50 in vips_image_write_gen (or=0x621000045630, seq=0x6210000456e0, a=0x6250000124c0, b=0x0, stop=0x7fffe84aa160) at image.c:2497
+#32 0x00007ffff772d4aa in vips_region_generate (reg=0x621000045630) at region.c:1568
+#33 0x00007ffff772f361 in vips_region_prepare_to_generate (reg=0x621000045630, dest=0x6210000450b0, r=0x7fffe84aa4e0, x=0x0, y=0x0) at region.c:1694
+#34 0x00007ffff772eb86 in vips_region_prepare_to (reg=0x621000045630, dest=0x6210000450b0, r=0x621000041ec0, x=0x0, y=0x0) at region.c:1812
+#35 0x00007ffff7703cb4 in wbuffer_work_fn (state=0x621000041e60, a=0x7fffffff8660) at sinkdisc.c:425
+#36 0x00007ffff7745bd0 in vips_thread_work_unit (thr=0x603000015c70) at threadpool.c:658
+#37 0x00007ffff774511a in vips_thread_main_loop (a=0x603000015c70) at threadpool.c:681
+#38 0x00007ffff7742223 in vips_thread_run (data=0x603000015ca0) at threadpool.c:207
+#39 0x00007ffff46a1e05 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#40 0x00000000004e8ecf in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) ()
+#41 0x00007ffff31b86db in start_thread (arg=0x7fffe84ab700) at pthread_create.c:463
+#42 0x00007ffff20ac88f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95

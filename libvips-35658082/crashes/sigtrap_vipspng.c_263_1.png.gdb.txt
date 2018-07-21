@@ -1,0 +1,29 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy sigtrap_vipspng.c_263_1.png /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+(vips:28287): VIPS-WARNING **: 20:35:06.577: IHDR: CRC error
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x00007ffff467fc41 in ?? () from /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#0  0x00007ffff467fc41 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#1  0x00007ffff4680f2b in g_logv () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff468107f in g_log () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007ffff75ece7b in user_error_function (png_ptr=0x61a000000680, error_msg=0x7fffffff9420 "IHDR: CRC error") at vipspng.c:136
+#4  0x00007ffff6e8363d in png_error () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#5  0x00007ffff6e83710 in png_chunk_error () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#6  0x00007ffff6e91cfd in  () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#7  0x00007ffff6e9241e in  () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#8  0x00007ffff6e8857e in png_read_info () at /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#9  0x00007ffff75e88f3 in read_new_filename (out=0x625000012010, name=0x7fffffff9ae0 "sigtrap_vipspng.c_263_1.png", fail=0x1) at vipspng.c:263
+#10 0x00007ffff75e8642 in vips__png_header (name=0x7fffffff9ae0 "sigtrap_vipspng.c_263_1.png", out=0x625000012010) at vipspng.c:460
+#11 0x00007ffff75a3573 in png2vips (name=0x7fffffffc9a8 "sigtrap_vipspng.c_263_1.png", out=0x625000012010, header_only=0x1) at im_png2vips.c:87
+#12 0x00007ffff75a39e2 in im_png2vips_header (name=0x7fffffffc9a8 "sigtrap_vipspng.c_263_1.png", out=0x625000012010) at im_png2vips.c:115
+#13 0x00007ffff74ff2a4 in vips_image_open_lazy (image=0x625000012010, format=0x613000000740, filename=0x7fffffffc9a8 "sigtrap_vipspng.c_263_1.png", sequential=0x0) at lazy.c:219
+#14 0x00007ffff74fef4c in vips__deprecated_open_read (filename=0x7fffffffc9a8 "sigtrap_vipspng.c_263_1.png", sequential=0x0) at lazy.c:301
+#15 0x00007ffff757ca55 in input_image_init (obj=0x7ffff7ce38e0 <im_run_command.object_array>, str=0x7fffffffc9a8 "sigtrap_vipspng.c_263_1.png") at dispatch_types.c:95
+#16 0x00007ffff7582159 in build_args (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc430) at package.c:1008
+#17 0x00007ffff75805fe in dispatch_function (fn=0x7ffff7b6d7c0 <copy_desc>, vargv=0x7ffff7ce38e0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc430) at package.c:1118
+#18 0x00007ffff7580535 in im_run_command (name=0x7fffffffc9a0 "im_copy", argc=0x2, argv=0x7fffffffc430) at package.c:1186
+#19 0x00000000005147c6 in main (argc=0x3, argv=0x7fffffffc428) at vips.c:1246

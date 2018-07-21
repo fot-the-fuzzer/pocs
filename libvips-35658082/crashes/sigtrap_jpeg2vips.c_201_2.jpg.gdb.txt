@@ -1,0 +1,84 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy sigtrap_jpeg2vips.c_201_2.jpg /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe94ad700 (LWP 2235)]
+[New Thread 0x7fffe8cac700 (LWP 2236)]
+[New Thread 0x7fffe84ab700 (LWP 2237)]
+[New Thread 0x7fffe7caa700 (LWP 2238)]
+[New Thread 0x7fffe74a9700 (LWP 2239)]
+[New Thread 0x7fffe6ca8700 (LWP 2240)]
+[Thread 0x7fffe74a9700 (LWP 2239) exited]
+[New Thread 0x7fffe64a7700 (LWP 2241)]
+[Thread 0x7fffe6ca8700 (LWP 2240) exited]
+[Thread 0x7fffe64a7700 (LWP 2241) exited]
+[New Thread 0x7fffe5ca6700 (LWP 2243)]
+[New Thread 0x7fffe54a5700 (LWP 2244)]
+[New Thread 0x7fffe4ca4700 (LWP 2245)]
+[Thread 0x7fffe54a5700 (LWP 2244) exited]
+[New Thread 0x7fffe44a3700 (LWP 2246)]
+[Thread 0x7fffe4ca4700 (LWP 2245) exited]
+[Thread 0x7fffe5ca6700 (LWP 2243) exited]
+[Thread 0x7fffe44a3700 (LWP 2246) exited]
+[New Thread 0x7fffe3ca2700 (LWP 2247)]
+[Thread 0x7fffe3ca2700 (LWP 2247) exited]
+[New Thread 0x7fffe34a1700 (LWP 2248)]
+[Thread 0x7fffe34a1700 (LWP 2248) exited]
+[New Thread 0x7fffe2ca0700 (LWP 2249)]
+[Thread 0x7fffe2ca0700 (LWP 2249) exited]
+[Thread 0x7fffe84ab700 (LWP 2237) exited]
+[Thread 0x7fffe7caa700 (LWP 2238) exited]
+[Thread 0x7fffe94ad700 (LWP 2235) exited]
+[Thread 0x7fffe8cac700 (LWP 2236) exited]
+
+(vips:2003): VIPS-WARNING **: 20:25:20.425: read gave 11 warnings
+
+Thread 1 "vips" received signal SIGTRAP, Trace/breakpoint trap.
+0x00007ffff467fc41 in ?? () from /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#0  0x00007ffff467fc41 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#1  0x00007ffff4680f2b in g_logv () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#2  0x00007ffff468107f in g_log () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#3  0x00007ffff762ebd5 in readjpeg_free (jpeg=0x61900000ff80) at jpeg2vips.c:201
+#4  0x00007ffff762f679 in readjpeg_close (object=0x625000012650, jpeg=0x61900000ff80) at jpeg2vips.c:229
+#5  0x00007ffff4953f6d in g_closure_invoke () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#6  0x00007ffff4966d3e in  () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#7  0x00007ffff496f3f5 in g_signal_emit_valist () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#8  0x00007ffff496fe0f in g_signal_emit () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#9  0x00007ffff76d8647 in vips_object_close (object=0x625000012650) at object.c:291
+#10 0x00007ffff76d7914 in vips_object_dispose (gobject=0x625000012650) at object.c:1022
+#11 0x00007ffff76e87cb in vips_image_dispose (gobject=0x625000012650) at image.c:540
+#12 0x00007ffff4958e03 in g_object_unref () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#13 0x00007ffff74ffd29 in lazy_free_cb (image=0x625000012010, lazy=0x6040000019d0) at lazy.c:79
+#14 0x00007ffff4953f6d in g_closure_invoke () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#15 0x00007ffff4966d3e in  () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#16 0x00007ffff496f3f5 in g_signal_emit_valist () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#17 0x00007ffff496fe0f in g_signal_emit () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#18 0x00007ffff76d8647 in vips_object_close (object=0x625000012010) at object.c:291
+#19 0x00007ffff76d7914 in vips_object_dispose (gobject=0x625000012010) at object.c:1022
+#20 0x00007ffff76e87cb in vips_image_dispose (gobject=0x625000012010) at image.c:540
+#21 0x00007ffff4958e03 in g_object_unref () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#22 0x00007ffff76d5967 in vips_object_local_cb (vobject=0x6250000121a0, gobject=0x625000012010) at object.c:2897
+#23 0x00007ffff4953f6d in g_closure_invoke () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#24 0x00007ffff4966d3e in  () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#25 0x00007ffff496f3f5 in g_signal_emit_valist () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#26 0x00007ffff496fe0f in g_signal_emit () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#27 0x00007ffff76d8647 in vips_object_close (object=0x6250000121a0) at object.c:291
+#28 0x00007ffff76d7914 in vips_object_dispose (gobject=0x6250000121a0) at object.c:1022
+#29 0x00007ffff76e87cb in vips_image_dispose (gobject=0x6250000121a0) at image.c:540
+#30 0x00007ffff4958e03 in g_object_unref () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#31 0x00007ffff76c9325 in vips_object_clear_member (argument_instance=0x604000003d90) at object.c:889
+#32 0x00007ffff76c8bdd in vips__object_set_member (object=0x621000044080, pspec=0x61d000014490, member=0x6210000440e8, argument=0x0) at object.c:1098
+#33 0x00007ffff76ca63c in vips_object_set_property (gobject=0x621000044080, property_id=0xe3, value=0x7fffffffbb90, pspec=0x61d000014490) at object.c:1254
+#34 0x00007ffff495be8e in g_object_set_valist () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#35 0x00007ffff495c86c in g_object_set () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#36 0x00007ffff76d8b67 in vips_object_dispose_argument (object=0x621000044080, pspec=0x61d000014490, argument_class=0x603000007ba0, argument_instance=0x604000003d90, a=0x0, b=0x0) at object.c:927
+#37 0x00007ffff76c5c57 in vips_argument_map (object=0x621000044080, fn=0x7ffff76d8770 <vips_object_dispose_argument>, a=0x0, b=0x0) at object.c:606
+#38 0x00007ffff76d8573 in vips_argument_dispose_all (object=0x621000044080) at object.c:953
+#39 0x00007ffff76d790b in vips_object_dispose (gobject=0x621000044080) at object.c:1020
+#40 0x00007ffff771be29 in vips_operation_dispose (gobject=0x621000044080) at operation.c:230
+#41 0x00007ffff4958e03 in g_object_unref () at /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0
+#42 0x00007ffff76fa834 in vips_cache_unref (operation=0x621000044080) at cache.c:541
+#43 0x00007ffff76f6c93 in vips_cache_remove (operation=0x621000044080) at cache.c:564
+#44 0x00007ffff76f6a58 in vips_cache_drop_all () at cache.c:678
+#45 0x00007ffff774eebd in vips_shutdown () at init.c:566
+#46 0x0000000000514c0c in main (argc=0x3, argv=0x7fffffffc428) at vips.c:1324

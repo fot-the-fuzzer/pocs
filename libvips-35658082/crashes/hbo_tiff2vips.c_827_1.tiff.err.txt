@@ -1,0 +1,98 @@
+=================================================================
+==26510==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x617000000380 at pc 0x7f76a36e7c16 bp 0x7f768e56d110 sp 0x7f768e56d108
+READ of size 1 at 0x617000000380 thread T15 (worker)
+    #0 0x7f76a36e7c15 in rtiff_greyscale_line /home/hongxu/FOT/libvips/libvips/foreign/tiff2vips.c:827:3
+    #1 0x7f76a36e3278 in rtiff_stripwise_generate /home/hongxu/FOT/libvips/libvips/foreign/tiff2vips.c:1850:5
+    #2 0x7f76a37fe4a9 in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1568:6
+    #3 0x7f76a3800360 in vips_region_prepare_to_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1694:6
+    #4 0x7f76a37ffb85 in vips_region_prepare_to /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1812:7
+    #5 0x7f76a3489df8 in vips_tile_cache_gen /home/hongxu/FOT/libvips/libvips/conversion/tilecache.c:679:14
+    #6 0x7f76a348d858 in vips_line_cache_gen /home/hongxu/FOT/libvips/libvips/conversion/tilecache.c:910:10
+    #7 0x7f76a37fe4a9 in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1568:6
+    #8 0x7f76a37f5f8a in vips_region_fill /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:905:7
+    #9 0x7f76a37fe005 in vips_region_prepare /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1637:7
+    #10 0x7f76a34906a4 in vips_sequential_generate /home/hongxu/FOT/libvips/libvips/conversion/sequential.c:167:6
+    #11 0x7f76a37fe4a9 in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1568:6
+    #12 0x7f76a37f5f8a in vips_region_fill /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:905:7
+    #13 0x7f76a37fe005 in vips_region_prepare /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1637:7
+    #14 0x7f76a37b3e4f in vips_image_write_gen /home/hongxu/FOT/libvips/libvips/iofuncs/image.c:2497:6
+    #15 0x7f76a37fe4a9 in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1568:6
+    #16 0x7f76a3800360 in vips_region_prepare_to_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1694:6
+    #17 0x7f76a37ffc70 in vips_region_prepare_to /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1834:8
+    #18 0x7f76a37d2303 in sink_memory_area_work_fn /home/hongxu/FOT/libvips/libvips/iofuncs/sinkmemory.c:266:11
+    #19 0x7f76a3816bcf in vips_thread_work_unit /home/hongxu/FOT/libvips/libvips/iofuncs/threadpool.c:658:6
+    #20 0x7f76a3816119 in vips_thread_main_loop /home/hongxu/FOT/libvips/libvips/iofuncs/threadpool.c:681:3
+    #21 0x7f76a3813222 in vips_thread_run /home/hongxu/FOT/libvips/libvips/iofuncs/threadpool.c:207:11
+    #22 0x7f76a0772e04  (/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0+0x73e04)
+    #23 0x4e8ece in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) (/home/hongxu/FOT/libvips/install/bin/vips+0x4e8ece)
+    #24 0x7f769f2896da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #25 0x7f769e17d88e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+0x617000000380 is located 0 bytes to the right of 768-byte region [0x617000000080,0x617000000380)
+allocated by thread T3 (worker) here:
+    #0 0x4db2a0 in __interceptor_malloc (/home/hongxu/FOT/libvips/install/bin/vips+0x4db2a0)
+    #1 0x7f76a0750858 in g_malloc (/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0+0x51858)
+    #2 0x7f76a36d7c50 in rtiff_read_stripwise /home/hongxu/FOT/libvips/libvips/foreign/tiff2vips.c:1948:4
+    #3 0x7f76a36d6a69 in vips__tiff_read /home/hongxu/FOT/libvips/libvips/foreign/tiff2vips.c:2284:7
+    #4 0x7f76a3675a2d in tiff2vips /home/hongxu/FOT/libvips/libvips/deprecated/im_tiff2vips.c:102:7
+    #5 0x7f76a367567e in im_tiff2vips /home/hongxu/FOT/libvips/libvips/deprecated/im_tiff2vips.c:118:10
+    #6 0x7f76a35d0981 in open_lazy_start /home/hongxu/FOT/libvips/libvips/deprecated/lazy.c:170:4
+    #7 0x7f76a37f081d in vips__region_start /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:232:31
+    #8 0x7f76a37fe33b in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1562:13
+    #9 0x7f76a37f5f8a in vips_region_fill /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:905:7
+    #10 0x7f76a37fe005 in vips_region_prepare /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1637:7
+    #11 0x7f76a37b3e4f in vips_image_write_gen /home/hongxu/FOT/libvips/libvips/iofuncs/image.c:2497:6
+    #12 0x7f76a37fe4a9 in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1568:6
+    #13 0x7f76a37f5f8a in vips_region_fill /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:905:7
+    #14 0x7f76a37fe005 in vips_region_prepare /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1637:7
+    #15 0x7f76a37b3e4f in vips_image_write_gen /home/hongxu/FOT/libvips/libvips/iofuncs/image.c:2497:6
+    #16 0x7f76a37fe4a9 in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1568:6
+    #17 0x7f76a3800360 in vips_region_prepare_to_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1694:6
+    #18 0x7f76a37ffb85 in vips_region_prepare_to /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1812:7
+    #19 0x7f76a37d4cb3 in wbuffer_work_fn /home/hongxu/FOT/libvips/libvips/iofuncs/sinkdisc.c:425:11
+    #20 0x7f76a3816bcf in vips_thread_work_unit /home/hongxu/FOT/libvips/libvips/iofuncs/threadpool.c:658:6
+    #21 0x7f76a3816119 in vips_thread_main_loop /home/hongxu/FOT/libvips/libvips/iofuncs/threadpool.c:681:3
+    #22 0x7f76a3813222 in vips_thread_run /home/hongxu/FOT/libvips/libvips/iofuncs/threadpool.c:207:11
+    #23 0x7f76a0772e04  (/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0+0x73e04)
+
+Thread T15 (worker) created by T3 (worker) here:
+    #0 0x434470 in pthread_create (/home/hongxu/FOT/libvips/install/bin/vips+0x434470)
+    #1 0x7f76a0790abf  (/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0+0x91abf)
+
+Thread T3 (worker) created by T0 here:
+    #0 0x434470 in pthread_create (/home/hongxu/FOT/libvips/install/bin/vips+0x434470)
+    #1 0x7f76a0790abf  (/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0+0x91abf)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/libvips/libvips/foreign/tiff2vips.c:827:3 in rtiff_greyscale_line
+Shadow bytes around the buggy address:
+  0x0c2e7fff8020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2e7fff8030: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2e7fff8040: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2e7fff8050: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c2e7fff8060: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c2e7fff8070:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff80a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff80b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2e7fff80c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==26510==ABORTING
