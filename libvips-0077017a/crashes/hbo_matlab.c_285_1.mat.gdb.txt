@@ -1,0 +1,116 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy hbo_matlab.c_285_1.mat /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe02d9700 (LWP 11594)]
+[New Thread 0x7fffdfad8700 (LWP 11595)]
+[New Thread 0x7fffdf2d7700 (LWP 11597)]
+=================================================================
+==11456==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60200001c597 at pc 0x7ffff75ab9d2 bp 0x7fffdf2d4f60 sp 0x7fffdf2d4f58
+READ of size 1 at 0x60200001c597 thread T3 (worker)
+    #0 0x7ffff75ab9d1 in mat2vips_get_data /home/hongxu/FOT/libvips/libvips/foreign/matlab.c:285:13
+    #1 0x7ffff75ab3e8 in vips__mat_load /home/hongxu/FOT/libvips/libvips/foreign/matlab.c:312:3
+    #2 0x7ffff75acab6 in vips_foreign_load_mat_load /home/hongxu/FOT/libvips/libvips/foreign/matload.c:103:6
+    #3 0x7ffff75a8759 in vips_foreign_load_start /home/hongxu/FOT/libvips/libvips/foreign/foreign.c:850:7
+    #4 0x7ffff770282d in vips__region_start /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:232:31
+    #5 0x7ffff771034b in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1562:13
+    #6 0x7ffff7707f9a in vips_region_fill /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:905:7
+    #7 0x7ffff7710015 in vips_region_prepare /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1637:7
+    #8 0x7ffff76c5e7f in vips_image_write_gen /home/hongxu/FOT/libvips/libvips/iofuncs/image.c:2497:6
+    #9 0x7ffff77104b9 in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1568:6
+    #10 0x7ffff7707f9a in vips_region_fill /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:905:7
+    #11 0x7ffff7710015 in vips_region_prepare /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1637:7
+    #12 0x7ffff76c5e7f in vips_image_write_gen /home/hongxu/FOT/libvips/libvips/iofuncs/image.c:2497:6
+    #13 0x7ffff77104b9 in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1568:6
+    #14 0x7ffff7707f9a in vips_region_fill /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:905:7
+    #15 0x7ffff7710015 in vips_region_prepare /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1637:7
+    #16 0x7ffff76c5e7f in vips_image_write_gen /home/hongxu/FOT/libvips/libvips/iofuncs/image.c:2497:6
+    #17 0x7ffff77104b9 in vips_region_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1568:6
+    #18 0x7ffff7712370 in vips_region_prepare_to_generate /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1694:6
+    #19 0x7ffff7711b95 in vips_region_prepare_to /home/hongxu/FOT/libvips/libvips/iofuncs/region.c:1812:7
+    #20 0x7ffff76e6cc3 in wbuffer_work_fn /home/hongxu/FOT/libvips/libvips/iofuncs/sinkdisc.c:425:11
+    #21 0x7ffff7728bdf in vips_thread_work_unit /home/hongxu/FOT/libvips/libvips/iofuncs/threadpool.c:658:6
+    #22 0x7ffff7728129 in vips_thread_main_loop /home/hongxu/FOT/libvips/libvips/iofuncs/threadpool.c:681:3
+    #23 0x7ffff7725232 in vips_thread_run /home/hongxu/FOT/libvips/libvips/iofuncs/threadpool.c:207:11
+    #24 0x7ffff3474e04  (/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0+0x73e04)
+    #25 0x4e8fae in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) (/home/hongxu/FOT/libvips/install/bin/vips+0x4e8fae)
+    #26 0x7ffff198d6da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #27 0x7fffef9af88e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Address 0x60200001c597 is a wild pointer.
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/libvips/libvips/foreign/matlab.c:285:13 in mat2vips_get_data
+Shadow bytes around the buggy address:
+  0x0c047fffb860: fa fa fd fd fa fa 00 03 fa fa 00 fa fa fa fd fa
+  0x0c047fffb870: fa fa fd fa fa fa fd fa fa fa 07 fa fa fa fd fa
+  0x0c047fffb880: fa fa fd fa fa fa 02 fa fa fa fd fa fa fa fd fa
+  0x0c047fffb890: fa fa 06 fa fa fa fd fd fa fa fd fd fa fa 00 04
+  0x0c047fffb8a0: fa fa 00 fa fa fa 00 00 fa fa 00 00 fa fa 00 00
+=>0x0c047fffb8b0: fa fa[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffb8c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffb8d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffb8e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffb8f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fffb900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+Thread T3 (worker) created by T0 here:
+    #0 0x434550 in __interceptor_pthread_create (/home/hongxu/FOT/libvips/install/bin/vips+0x434550)
+    #1 0x7ffff3492abf  (/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0+0x91abf)
+
+==11456==ABORTING
+
+Thread 4 "worker" received signal SIGABRT, Aborted.
+[Switching to Thread 0x7fffdf2d7700 (LWP 11597)]
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  0x00007fffef8cce97 in __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007fffef8ce801 in __GI_abort () at abort.c:79
+#2  0x00000000005049fb in __sanitizer::Abort() ()
+#3  0x0000000000501d28 in __sanitizer::Die() ()
+#4  0x00000000004e3fad in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x00000000004e4678 in __asan_report_load1 ()
+#6  0x00007ffff75ab9d2 in mat2vips_get_data (mat=0x608000008020, var=0x6070000437e0, im=0x625000012650) at matlab.c:285
+#7  0x00007ffff75ab3e9 in vips__mat_load (filename=0x603000017d40 "hbo_matlab.c_285_1.mat", out=0x625000012650) at matlab.c:312
+#8  0x00007ffff75acab7 in vips_foreign_load_mat_load (load=0x62100004c840) at matload.c:103
+#9  0x00007ffff75a875a in vips_foreign_load_start (out=0x6250000121a0, a=0x0, b=0x62100004c840) at foreign.c:850
+#10 0x00007ffff770282e in vips__region_start (region=0x6210000608c0) at region.c:232
+#11 0x00007ffff771034c in vips_region_generate (reg=0x6210000608c0) at region.c:1562
+#12 0x00007ffff7707f9b in vips_region_fill (reg=0x6210000608c0, r=0x621000060868, fn=0x7ffff7710210 <vips_region_generate>, a=0x0) at region.c:905
+#13 0x00007ffff7710016 in vips_region_prepare (reg=0x6210000608c0, r=0x621000060868) at region.c:1637
+#14 0x00007ffff76c5e80 in vips_image_write_gen (or=0x621000060810, seq=0x6210000608c0, a=0x6250000121a0, b=0x0, stop=0x7fffdf2d5820) at image.c:2497
+#15 0x00007ffff77104ba in vips_region_generate (reg=0x621000060810) at region.c:1568
+#16 0x00007ffff7707f9b in vips_region_fill (reg=0x621000060810, r=0x621000050f68, fn=0x7ffff7710210 <vips_region_generate>, a=0x0) at region.c:905
+#17 0x00007ffff7710016 in vips_region_prepare (reg=0x621000060810, r=0x621000050f68) at region.c:1637
+#18 0x00007ffff76c5e80 in vips_image_write_gen (or=0x621000050f10, seq=0x621000060810, a=0x625000012010, b=0x0, stop=0x7fffdf2d5c80) at image.c:2497
+#19 0x00007ffff77104ba in vips_region_generate (reg=0x621000050f10) at region.c:1568
+#20 0x00007ffff7707f9b in vips_region_fill (reg=0x621000050f10, r=0x621000050eb8, fn=0x7ffff7710210 <vips_region_generate>, a=0x0) at region.c:905
+#21 0x00007ffff7710016 in vips_region_prepare (reg=0x621000050f10, r=0x621000050eb8) at region.c:1637
+#22 0x00007ffff76c5e80 in vips_image_write_gen (or=0x621000050e60, seq=0x621000050f10, a=0x625000012330, b=0x0, stop=0x7fffdf2d60e0) at image.c:2497
+#23 0x00007ffff77104ba in vips_region_generate (reg=0x621000050e60) at region.c:1568
+#24 0x00007ffff7712371 in vips_region_prepare_to_generate (reg=0x621000050e60, dest=0x6210000508e0, r=0x7fffdf2d6460, x=0x0, y=0x0) at region.c:1694
+#25 0x00007ffff7711b96 in vips_region_prepare_to (reg=0x621000050e60, dest=0x6210000508e0, r=0x62100004cee0, x=0x0, y=0x0) at region.c:1812
+#26 0x00007ffff76e6cc4 in wbuffer_work_fn (state=0x62100004ce80, a=0x7fffffff86e0) at sinkdisc.c:425
+#27 0x00007ffff7728be0 in vips_thread_work_unit (thr=0x603000018940) at threadpool.c:658
+#28 0x00007ffff772812a in vips_thread_main_loop (a=0x603000018940) at threadpool.c:681
+#29 0x00007ffff7725233 in vips_thread_run (data=0x603000018970) at threadpool.c:207
+#30 0x00007ffff3474e05 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#31 0x00000000004e8faf in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) ()
+#32 0x00007ffff198d6db in start_thread (arg=0x7fffdf2d7700) at pthread_create.c:463
+#33 0x00007fffef9af88f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95

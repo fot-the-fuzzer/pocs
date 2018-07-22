@@ -1,0 +1,63 @@
+=================================================================
+==20549==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffc67812728 at pc 0x7f9b06f0d999 bp 0x7ffc678121c0 sp 0x7ffc678121b8
+WRITE of size 1 at 0x7ffc67812728 thread T0
+    #0 0x7f9b06f0d998 in formatval /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:389:8
+    #1 0x7f9b06f0cb1b in mycheck /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:452:7
+    #2 0x7f9b06f0ca1a in getheader /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:432:20
+    #3 0x7f9b06f08f23 in checkheader /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:540:6
+    #4 0x7f9b06f08c55 in vips__rad_israd /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:945:11
+    #5 0x7f9b06f44291 in vips_foreign_is_a /home/hongxu/FOT/libvips/libvips/foreign/foreign.c:642:3
+    #6 0x7f9b06ee47fe in israd /home/hongxu/FOT/libvips/libvips/deprecated/radiance.c:61:10
+    #7 0x7f9b06ed51b5 in format_for_file_sub /home/hongxu/FOT/libvips/libvips/deprecated/format.c:319:7
+    #8 0x7f9b070ca208 in vips_slist_map2 /home/hongxu/FOT/libvips/libvips/iofuncs/util.c:128:33
+    #9 0x7f9b06ed442b in vips_format_map /home/hongxu/FOT/libvips/libvips/deprecated/format.c:91:11
+    #10 0x7f9b06ed5047 in vips_format_for_file /home/hongxu/FOT/libvips/libvips/deprecated/format.c:355:37
+    #11 0x7f9b06e34dba in vips__deprecated_open_read /home/hongxu/FOT/libvips/libvips/deprecated/lazy.c:285:17
+    #12 0x7f9b06eb3104 in input_image_init /home/hongxu/FOT/libvips/libvips/deprecated/dispatch_types.c:95:18
+    #13 0x7f9b06eb8038 in build_args /home/hongxu/FOT/libvips/libvips/deprecated/package.c:1008:22
+    #14 0x7f9b06eb64dd in dispatch_function /home/hongxu/FOT/libvips/libvips/deprecated/package.c:1118:6
+    #15 0x7f9b06eb6414 in im_run_command /home/hongxu/FOT/libvips/libvips/deprecated/package.c:1186:6
+    #16 0x5148a5 in main /home/hongxu/FOT/libvips/tools/vips.c:1246:7
+    #17 0x7f9aff250b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x41b4c9 in _start (/home/hongxu/FOT/libvips/install/bin/vips+0x41b4c9)
+
+Address 0x7ffc67812728 is located in stack of thread T0 at offset 104 in frame
+    #0 0x7f9b06f08d4f in checkheader /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:534
+
+  This frame has 1 object(s):
+    [32, 104) 'cdat' (line 535) <== Memory access at offset 104 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /home/hongxu/FOT/libvips/libvips/foreign/radiance.c:389:8 in formatval
+Shadow bytes around the buggy address:
+  0x10000cefa490: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000cefa4a0: 00 00 00 00 00 00 00 00 00 00 00 00 f3 f3 f3 f3
+  0x10000cefa4b0: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000cefa4c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000cefa4d0: 00 00 00 00 00 00 00 00 f1 f1 f1 f1 00 00 00 00
+=>0x10000cefa4e0: 00 00 00 00 00[f3]f3 f3 f3 f3 f3 f3 00 00 00 00
+  0x10000cefa4f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000cefa500: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000cefa510: 00 00 00 00 f1 f1 f1 f1 00 00 00 00 00 00 00 00
+  0x10000cefa520: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000cefa530: 00 00 00 00 00 00 00 00 f3 f3 f3 f3 f3 f3 f3 f3
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==20549==ABORTING

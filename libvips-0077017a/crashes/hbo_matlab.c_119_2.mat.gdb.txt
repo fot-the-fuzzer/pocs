@@ -1,0 +1,34 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy hbo_matlab.c_119_2.mat /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  0x00007fffef8cce97 in __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007fffef8ce801 in __GI_abort () at abort.c:79
+#2  0x00007fffef917897 in __libc_message (action=action@entry=(do_abort | do_backtrace), fmt=fmt@entry=0x7fffefa44988 "*** %s ***: %s terminated\n") at ../sysdeps/posix/libc_fatal.c:181
+#3  0x00007fffef9c2cff in __GI___fortify_fail_abort (need_backtrace=need_backtrace@entry=0x1, msg=msg@entry=0x7fffefa44905 "buffer overflow detected") at fortify_fail.c:33
+#4  0x00007fffef9c2d21 in __GI___fortify_fail (msg=msg@entry=0x7fffefa44905 "buffer overflow detected") at fortify_fail.c:44
+#5  0x00007fffef9c0a10 in __GI___chk_fail () at chk_fail.c:28
+#6  0x00007fffef9c115d in __fread_chk (ptr=<optimized out>, ptrlen=<optimized out>, size=0x4, n=0x80e9e02, stream=0x616000006680) at fread_chk.c:39
+#7  0x00007ffff12ffc06 in  () at /usr/lib/x86_64-linux-gnu/libmatio.so.4
+#8  0x00007ffff75aa8cf in read_new (filename=0x603000017d40 "hbo_matlab.c_119_2.mat", out=0x6250000121a0) at matlab.c:119
+#9  0x00007ffff75aa5fd in vips__mat_header (filename=0x603000017d40 "hbo_matlab.c_119_2.mat", out=0x6250000121a0) at matlab.c:235
+#10 0x00007ffff75ac667 in vips_foreign_load_mat_header (load=0x62100004e040) at matload.c:90
+#11 0x00007ffff75a7d3c in vips_foreign_load_build (object=0x62100004e040) at foreign.c:951
+#12 0x00007ffff76a889c in vips_object_build (object=0x62100004e040) at object.c:367
+#13 0x00007ffff76da5da in vips_cache_operation_buildp (operation=0x7fffffffb6a0) at cache.c:866
+#14 0x00007ffff76f652a in vips_call_required_optional (operation=0x7fffffffb6a0, required=0x7fffffffb7e0, optional=0x7fffffffba40) at operation.c:880
+#15 0x00007ffff76fcaad in vips_call_by_name (operation_name=0x7ffff78501a0 <.str.1> "matload", option_string=0x0, required=0x7fffffffb7e0, optional=0x7fffffffba40) at operation.c:920
+#16 0x00007ffff76fce3e in vips_call_split (operation_name=0x7ffff78501a0 <.str.1> "matload", optional=0x7fffffffba40) at operation.c:1024
+#17 0x00007ffff75ac191 in vips_matload (filename=0x7fffffffc9fd "hbo_matlab.c_119_2.mat", out=0x7fffffffbcc0) at matload.c:171
+#18 0x00007ffff7542e31 in im_mat2vips (filename=0x7fffffffc9fd "hbo_matlab.c_119_2.mat", out=0x625000012010) at matlab.c:47
+#19 0x00007ffff74942ca in vips_image_open_lazy (image=0x625000012010, format=0x6130000011c0, filename=0x7fffffffc9fd "hbo_matlab.c_119_2.mat", sequential=0x0) at lazy.c:232
+#20 0x00007ffff7493e2c in vips__deprecated_open_read (filename=0x7fffffffc9fd "hbo_matlab.c_119_2.mat", sequential=0x0) at lazy.c:301
+#21 0x00007ffff7512105 in input_image_init (obj=0x7ffff7ce29a0 <im_run_command.object_array>, str=0x7fffffffc9fd "hbo_matlab.c_119_2.mat") at dispatch_types.c:95
+#22 0x00007ffff7517039 in build_args (fn=0x7ffff7b61ec0 <copy_desc>, vargv=0x7ffff7ce29a0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc4a0) at package.c:1008
+#23 0x00007ffff75154de in dispatch_function (fn=0x7ffff7b61ec0 <copy_desc>, vargv=0x7ffff7ce29a0 <im_run_command.object_array>, argc=0x2, argv=0x7fffffffc4a0) at package.c:1118
+#24 0x00007ffff7515415 in im_run_command (name=0x7fffffffc9f5 "im_copy", argc=0x2, argv=0x7fffffffc4a0) at package.c:1186
+#25 0x00000000005148a6 in main (argc=0x3, argv=0x7fffffffc498) at vips.c:1246

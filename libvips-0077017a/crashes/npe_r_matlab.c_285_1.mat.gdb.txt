@@ -1,0 +1,44 @@
+Reading symbols from /home/hongxu/FOT/libvips/install/bin/vips...done.
+Starting program: /home/hongxu/FOT/libvips/install/bin/vips im_copy npe_r_matlab.c_285_1.mat /tmp/test.pbm
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7fffe02d9700 (LWP 12009)]
+[New Thread 0x7fffdfad8700 (LWP 12010)]
+[New Thread 0x7fffde4d2700 (LWP 12011)]
+[New Thread 0x7fffddcd1700 (LWP 12012)]
+[New Thread 0x7fffdd4d0700 (LWP 12013)]
+[New Thread 0x7fffdcccf700 (LWP 12014)]
+==11885==WARNING: AddressSanitizer failed to allocate 0xffffffffc0982c7b bytes
+
+Thread 4 "worker" received signal SIGSEGV, Segmentation fault.
+[Switching to Thread 0x7fffde4d2700 (LWP 12011)]
+0x00007ffff75ab9d9 in mat2vips_get_data (mat=0x608000008020, var=0x6070000437e0, im=0x625000012650) at matlab.c:285
+285						q[z] = p2[z];
+#0  0x00007ffff75ab9d9 in mat2vips_get_data (mat=0x608000008020, var=0x6070000437e0, im=0x625000012650) at matlab.c:285
+#1  0x00007ffff75ab3e9 in vips__mat_load (filename=0x603000017d10 "npe_r_matlab.c_285_1.mat", out=0x625000012650) at matlab.c:312
+#2  0x00007ffff75acab7 in vips_foreign_load_mat_load (load=0x62100004c840) at matload.c:103
+#3  0x00007ffff75a875a in vips_foreign_load_start (out=0x6250000121a0, a=0x0, b=0x62100004c840) at foreign.c:850
+#4  0x00007ffff770282e in vips__region_start (region=0x6210000608c0) at region.c:232
+#5  0x00007ffff771034c in vips_region_generate (reg=0x6210000608c0) at region.c:1562
+#6  0x00007ffff7707f9b in vips_region_fill (reg=0x6210000608c0, r=0x621000060868, fn=0x7ffff7710210 <vips_region_generate>, a=0x0) at region.c:905
+#7  0x00007ffff7710016 in vips_region_prepare (reg=0x6210000608c0, r=0x621000060868) at region.c:1637
+#8  0x00007ffff76c5e80 in vips_image_write_gen (or=0x621000060810, seq=0x6210000608c0, a=0x6250000121a0, b=0x0, stop=0x7fffde4d0820) at image.c:2497
+#9  0x00007ffff77104ba in vips_region_generate (reg=0x621000060810) at region.c:1568
+#10 0x00007ffff7707f9b in vips_region_fill (reg=0x621000060810, r=0x621000050f68, fn=0x7ffff7710210 <vips_region_generate>, a=0x0) at region.c:905
+#11 0x00007ffff7710016 in vips_region_prepare (reg=0x621000060810, r=0x621000050f68) at region.c:1637
+#12 0x00007ffff76c5e80 in vips_image_write_gen (or=0x621000050f10, seq=0x621000060810, a=0x625000012010, b=0x0, stop=0x7fffde4d0c80) at image.c:2497
+#13 0x00007ffff77104ba in vips_region_generate (reg=0x621000050f10) at region.c:1568
+#14 0x00007ffff7707f9b in vips_region_fill (reg=0x621000050f10, r=0x621000050eb8, fn=0x7ffff7710210 <vips_region_generate>, a=0x0) at region.c:905
+#15 0x00007ffff7710016 in vips_region_prepare (reg=0x621000050f10, r=0x621000050eb8) at region.c:1637
+#16 0x00007ffff76c5e80 in vips_image_write_gen (or=0x621000050e60, seq=0x621000050f10, a=0x625000012330, b=0x0, stop=0x7fffde4d10e0) at image.c:2497
+#17 0x00007ffff77104ba in vips_region_generate (reg=0x621000050e60) at region.c:1568
+#18 0x00007ffff7712371 in vips_region_prepare_to_generate (reg=0x621000050e60, dest=0x6210000508e0, r=0x7fffde4d1460, x=0x0, y=0x0) at region.c:1694
+#19 0x00007ffff7711b96 in vips_region_prepare_to (reg=0x621000050e60, dest=0x6210000508e0, r=0x62100004cee0, x=0x0, y=0x0) at region.c:1812
+#20 0x00007ffff76e6cc4 in wbuffer_work_fn (state=0x62100004ce80, a=0x7fffffff86e0) at sinkdisc.c:425
+#21 0x00007ffff7728be0 in vips_thread_work_unit (thr=0x603000018910) at threadpool.c:658
+#22 0x00007ffff772812a in vips_thread_main_loop (a=0x603000018910) at threadpool.c:681
+#23 0x00007ffff7725233 in vips_thread_run (data=0x603000018940) at threadpool.c:207
+#24 0x00007ffff3474e05 in  () at /usr/lib/x86_64-linux-gnu/libglib-2.0.so.0
+#25 0x00000000004e8faf in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) ()
+#26 0x00007ffff198d6db in start_thread (arg=0x7fffde4d2700) at pthread_create.c:463
+#27 0x00007fffef9af88f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
