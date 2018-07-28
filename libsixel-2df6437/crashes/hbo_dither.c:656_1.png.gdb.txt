@@ -1,0 +1,84 @@
+Reading symbols from /home/hongxu/FOT/libsixel/install/bin/img2sixel...done.
+Starting program: /home/hongxu/FOT/libsixel/install/bin/img2sixel hbo_dither.c:656_1.png -o /tmp/test.six
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+paletted PNG(PNG_COLOR_TYPE_PALETTE)
+palette colors: 1
+bitdepth: 8
+=================================================================
+==24686==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000004df3 at pc 0x0000004d8fb2 bp 0x7fffffffa590 sp 0x7fffffff9d40
+READ of size 6 at 0x602000004df3 thread T0
+    #0 0x4d8fb1  (/home/hongxu/FOT/libsixel/install/bin/img2sixel+0x4d8fb1)
+    #1 0x7ffff7afed6c  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0x73d6c)
+    #2 0x7ffff7b6c4a8  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0xe14a8)
+    #3 0x7ffff7b6a6f5  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0xdf6f5)
+    #4 0x7ffff7b6a0bb  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0xdf0bb)
+    #5 0x7ffff7b11795  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0x86795)
+    #6 0x7ffff7b10116  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0x85116)
+    #7 0x7ffff7b69d98  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0xded98)
+    #8 0x515787  (/home/hongxu/FOT/libsixel/install/bin/img2sixel+0x515787)
+    #9 0x7ffff61a6b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #10 0x41a239  (/home/hongxu/FOT/libsixel/install/bin/img2sixel+0x41a239)
+
+0x602000004df3 is located 0 bytes to the right of 3-byte region [0x602000004df0,0x602000004df3)
+allocated by thread T0 here:
+    #0 0x4da0f0  (/home/hongxu/FOT/libsixel/install/bin/img2sixel+0x4da0f0)
+    #1 0x7ffff7b82599  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0xf7599)
+    #2 0x7ffff7b54b02  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0xc9b02)
+    #3 0x7ffff7b10f54  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0x85f54)
+    #4 0x7ffff7b10116  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0x85116)
+    #5 0x7ffff7b69d98  (/home/hongxu/FOT/libsixel/install/lib/libsixel.so.1+0xded98)
+    #6 0x515787  (/home/hongxu/FOT/libsixel/install/bin/img2sixel+0x515787)
+    #7 0x7ffff61a6b96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/hongxu/FOT/libsixel/install/bin/img2sixel+0x4d8fb1) 
+Shadow bytes around the buggy address:
+  0x0c047fff8960: fa fa fd fd fa fa fd fd fa fa fd fd fa fa fd fd
+  0x0c047fff8970: fa fa fd fd fa fa fd fd fa fa fd fd fa fa fd fd
+  0x0c047fff8980: fa fa fd fd fa fa fd fd fa fa fd fd fa fa fd fd
+  0x0c047fff8990: fa fa fd fd fa fa fd fd fa fa fd fd fa fa fd fd
+  0x0c047fff89a0: fa fa fd fd fa fa fd fd fa fa fd fd fa fa fd fd
+=>0x0c047fff89b0: fa fa fd fd fa fa fd fd fa fa fd fd fa fa[03]fa
+  0x0c047fff89c0: fa fa fd fa fa fa fd fd fa fa fa fa fa fa fa fa
+  0x0c047fff89d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff89e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff89f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8a00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==24686==ABORTING
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff61c5801 in __GI_abort () at abort.c:79
+#2  0x000000000050376b in __sanitizer::Abort() ()
+#3  0x0000000000500a98 in __sanitizer::Die() ()
+#4  0x00000000004e2d1d in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
+#5  0x00000000004d8fd1 in __asan_memcpy ()
+#6  0x00007ffff7afed6d in sixel_dither_set_palette (dither=0x608000000220, palette=0x602000004df0 "\347\350", <incomplete sequence \345>) at dither.c:656
+#7  0x00007ffff7b6c4a9 in sixel_encoder_prepare_palette (encoder=0x610000000040, frame=0x607000000020, dither=0x7fffffffa900) at encoder.c:526
+#8  0x00007ffff7b6a6f6 in sixel_encoder_encode_frame (encoder=0x610000000040, frame=0x607000000020, output=0x0) at encoder.c:975
+#9  0x00007ffff7b6a0bc in load_image_callback (frame=0x607000000020, data=0x610000000040) at encoder.c:1673
+#10 0x00007ffff7b11796 in load_with_builtin (pchunk=0x603000000e20, fstatic=0x0, fuse_palette=0x1, reqcolors=0x100, bgcolor=0x0, loop_control=0x0, fn_load=0x7ffff7b6a090 <load_image_callback>, context=0x610000000040) at loader.c:913
+#11 0x00007ffff7b10117 in sixel_helper_load_image_file (filename=0x7fffffffc9b9 "hbo_dither.c:656_1.png", fstatic=0x0, fuse_palette=0x1, reqcolors=0x100, bgcolor=0x0, loop_control=0x0, fn_load=0x7ffff7b6a090 <load_image_callback>, finsecure=0x0, cancel_flag=0x13b61c0 <signaled>, context=0x610000000040, allocator=0x604000000190) at loader.c:1352
+#12 0x00007ffff7b69d99 in sixel_encoder_encode (encoder=0x610000000040, filename=0x7fffffffc9b9 "hbo_dither.c:656_1.png") at encoder.c:1737
+#13 0x0000000000515788 in main (argc=0x4, argv=0x7fffffffc438) at img2sixel.c:457

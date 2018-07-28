@@ -1,0 +1,22 @@
+Reading symbols from /home/hongxu/FOT/libsixel/install/bin/img2sixel...done.
+Starting program: /home/hongxu/FOT/libsixel/install/bin/img2sixel sigabrt_loader.c:312_1.png -o /tmp/test.six
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+libpng error: IHDR: CRC error
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff61c5801 in __GI_abort () at abort.c:79
+#2  0x00007ffff7247618 in png_longjmp () from /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#3  0x00007ffff7247687 in png_error () from /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#4  0x00007ffff7247710 in png_chunk_error () from /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#5  0x00007ffff7255cfd in ?? () from /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#6  0x00007ffff725641e in ?? () from /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#7  0x00007ffff724c57e in png_read_info () from /usr/lib/x86_64-linux-gnu/libpng16.so.16
+#8  0x00007ffff7b52f4c in load_png (result=0x607000000028, buffer=0x62d000000400 "\211PNG\r\n\032\n", size=0x125, psx=0x607000000038, psy=0x60700000003c, ppalette=0x607000000030, pncolors=0x607000000040, reqcolors=0x100, pixelformat=0x607000000044, bgcolor=0x0, transparent=0x607000000058, allocator=0x604000000190) at loader.c:312
+#9  0x00007ffff7b10f55 in load_with_builtin (pchunk=0x603000000e20, fstatic=0x0, fuse_palette=0x1, reqcolors=0x100, bgcolor=0x0, loop_control=0x0, fn_load=0x7ffff7b6a090 <load_image_callback>, context=0x610000000040) at loader.c:839
+#10 0x00007ffff7b10117 in sixel_helper_load_image_file (filename=0x7fffffffc9b5 "sigabrt_loader.c:312_1.png", fstatic=0x0, fuse_palette=0x1, reqcolors=0x100, bgcolor=0x0, loop_control=0x0, fn_load=0x7ffff7b6a090 <load_image_callback>, finsecure=0x0, cancel_flag=0x13b61c0 <signaled>, context=0x610000000040, allocator=0x604000000190) at loader.c:1352
+#11 0x00007ffff7b69d99 in sixel_encoder_encode (encoder=0x610000000040, filename=0x7fffffffc9b5 "sigabrt_loader.c:312_1.png") at encoder.c:1737
+#12 0x0000000000515788 in main (argc=0x4, argv=0x7fffffffc438) at img2sixel.c:457

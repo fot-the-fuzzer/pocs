@@ -1,0 +1,16 @@
+Reading symbols from /home/hongxu/FOT/libsixel/install/bin/img2sixel...done.
+Starting program: /home/hongxu/FOT/libsixel/install/bin/img2sixel sigsegv_stb_image.h:5669_1.psd -o /tmp/test.six
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Program received signal SIGINT, Interrupt.
+stbi__psd_decode_rle (s=0x7fffffffada0, p=0x7fffb4fe7759 "", pixelCount=0x1e000096) at ./stb_image.h:5668
+5668	   while ((nleft = pixelCount - count) > 0) {
+#0  stbi__psd_decode_rle (s=0x7fffffffada0, p=0x7fffb4fe7759 "", pixelCount=0x1e000096) at ./stb_image.h:5668
+#1  0x00007ffff7b164af in stbi__psd_load (s=0x7fffffffada0, x=0x607000000038, y=0x60700000003c, comp=0x7fffffffaec0, req_comp=0x3, ri=0x7fffffffaa40, bpc=0x8) at ./stb_image.h:5809
+#2  0x00007ffff7b11af5 in stbi__load_main (s=0x7fffffffada0, x=0x607000000038, y=0x60700000003c, comp=0x7fffffffaec0, req_comp=0x3, ri=0x7fffffffaa40, bpc=0x8) at ./stb_image.h:992
+#3  0x00007ffff7b0c77e in stbi__load_and_postprocess_8bit (s=0x7fffffffada0, x=0x607000000038, y=0x60700000003c, comp=0x7fffffffaec0, req_comp=0x3) at ./stb_image.h:1090
+#4  0x00007ffff7b113ad in load_with_builtin (pchunk=0x603000000e20, fstatic=0x0, fuse_palette=0x1, reqcolors=0x100, bgcolor=0x0, loop_control=0x0, fn_load=0x7ffff7b6a090 <load_image_callback>, context=0x610000000040) at loader.c:882
+#5  0x00007ffff7b10117 in sixel_helper_load_image_file (filename=0x7fffffffc9b1 "sigsegv_stb_image.h:5669_1.psd", fstatic=0x0, fuse_palette=0x1, reqcolors=0x100, bgcolor=0x0, loop_control=0x0, fn_load=0x7ffff7b6a090 <load_image_callback>, finsecure=0x0, cancel_flag=0x13b61c0 <signaled>, context=0x610000000040, allocator=0x604000000190) at loader.c:1352
+#6  0x00007ffff7b69d99 in sixel_encoder_encode (encoder=0x610000000040, filename=0x7fffffffc9b1 "sigsegv_stb_image.h:5669_1.psd") at encoder.c:1737
+#7  0x0000000000515788 in main (argc=0x4, argv=0x7fffffffc438) at img2sixel.c:457
