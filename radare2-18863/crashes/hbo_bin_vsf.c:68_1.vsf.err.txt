@@ -1,0 +1,63 @@
+=================================================================
+==2403==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6080000124f6 at pc 0x555d81370c17 bp 0x7ffd9918c020 sp 0x7ffd9918b7d0
+READ of size 66 at 0x6080000124f6 thread T0
+    #0 0x555d81370c16 in printf_common(void*, char const*, __va_list_tag*) (/home/exp/FOT/radare2/binr/radare2/radare2+0x4ec16)
+    #1 0x555d8137185b in __interceptor_vfprintf (/home/exp/FOT/radare2/binr/radare2/radare2+0x4f85b)
+    #2 0x555d81371926 in __interceptor_fprintf (/home/exp/FOT/radare2/binr/radare2/radare2+0x4f926)
+    #3 0x7f83b712243b in load_bytes /home/exp/FOT/radare2/libr/..//libr/bin/p/bin_vsf.c:68:4
+    #4 0x7f83b6eb6c8d in r_bin_object_new /home/exp/FOT/radare2/libr/bin/obj.c:58:16
+    #5 0x7f83b6eae84e in r_bin_file_new_from_bytes /home/exp/FOT/radare2/libr/bin/file.c:515:6
+    #6 0x7f83b6e87821 in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2/libr/bin/bin.c:486:13
+    #7 0x7f83b6e85c06 in r_bin_load_io_at_offset_as /home/exp/FOT/radare2/libr/bin/bin.c:500:12
+    #8 0x7f83b6e859ff in r_bin_load_io /home/exp/FOT/radare2/libr/bin/bin.c:384:9
+    #9 0x7f83b828fba2 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2/libr/core/file.c:425:7
+    #10 0x7f83b828b3b9 in r_core_bin_load /home/exp/FOT/radare2/libr/core/file.c:583:4
+    #11 0x555d814413e2 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1077:15
+    #12 0x7f83b0dfcb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #13 0x555d81344fa9 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22fa9)
+
+0x6080000124f6 is located 0 bytes to the right of 86-byte region [0x6080000124a0,0x6080000124f6)
+allocated by thread T0 here:
+    #0 0x555d81405088 in calloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3088)
+    #1 0x7f83b6e86f30 in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2/libr/bin/bin.c:442:15
+    #2 0x7f83b6e85c06 in r_bin_load_io_at_offset_as /home/exp/FOT/radare2/libr/bin/bin.c:500:12
+    #3 0x7f83b6e859ff in r_bin_load_io /home/exp/FOT/radare2/libr/bin/bin.c:384:9
+    #4 0x7f83b828fba2 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2/libr/core/file.c:425:7
+    #5 0x7f83b828b3b9 in r_core_bin_load /home/exp/FOT/radare2/libr/core/file.c:583:4
+    #6 0x555d814413e2 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1077:15
+    #7 0x7f83b0dfcb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/exp/FOT/radare2/binr/radare2/radare2+0x4ec16) in printf_common(void*, char const*, __va_list_tag*)
+Shadow bytes around the buggy address:
+  0x0c107fffa440: fa fa fa fa fd fd fd fd fd fd fd fd fd fd fd fa
+  0x0c107fffa450: fa fa fa fa fd fd fd fd fd fd fd fd fd fd fd fa
+  0x0c107fffa460: fa fa fa fa fd fd fd fd fd fd fd fd fd fd fd fa
+  0x0c107fffa470: fa fa fa fa fd fd fd fd fd fd fd fd fd fd fd fa
+  0x0c107fffa480: fa fa fa fa fd fd fd fd fd fd fd fd fd fd fd fd
+=>0x0c107fffa490: fa fa fa fa 00 00 00 00 00 00 00 00 00 00[06]fa
+  0x0c107fffa4a0: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 fa
+  0x0c107fffa4b0: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 fa
+  0x0c107fffa4c0: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 fa
+  0x0c107fffa4d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fffa4e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==2403==ABORTING
+Aborted
