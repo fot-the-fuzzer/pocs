@@ -1,0 +1,184 @@
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 927006782
+[WARN] Invalid or unsupported enumeration encountered 4608
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 16777216
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 16777216
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 16777216
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 16777216
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 16777216
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 16777235
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 4608
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 241
+[WARN] Invalid or unsupported enumeration encountered 4608
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 33554432
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 16777216
+[WARN] Invalid or unsupported enumeration encountered 8192
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 16777457
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 32768
+[WARN] Invalid or unsupported enumeration encountered 2147418112
+[WARN] Invalid or unsupported enumeration encountered -67108864
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[WARN] Invalid or unsupported enumeration encountered 70672
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+[ERROR] Size Mismatch - Stream data is larger than file size!
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==7465==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f2fdca911c3 bp 0x7ffd08fcc0e0 sp 0x7ffd08fcb858 T0)
+==7465==The signal is caused by a WRITE memory access.
+==7465==Hint: address points to the zero page.
+    #0 0x7f2fdca911c2  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcpy-sse2-unaligned.S:637
+    #1 0x5635f643bb4b in strncpy (/home/exp/FOT/radare2/binr/radare2/radare2+0x4db4b)
+    #2 0x7f2fe2c433e9 in info /home/exp/FOT/radare2/libr/..//libr/bin/p/bin_mdmp.c:111:4
+    #3 0x7f2fe2ab7c0b in r_bin_object_set_items /home/exp/FOT/radare2/libr/bin/obj.c:183:22
+    #4 0x7f2fe2ab652b in r_bin_object_new /home/exp/FOT/radare2/libr/bin/obj.c:95:2
+    #5 0x7f2fe2aada2e in r_bin_file_new_from_bytes /home/exp/FOT/radare2/libr/bin/file.c:515:6
+    #6 0x7f2fe2a86a01 in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2/libr/bin/bin.c:486:13
+    #7 0x7f2fe2a84de6 in r_bin_load_io_at_offset_as /home/exp/FOT/radare2/libr/bin/bin.c:500:12
+    #8 0x7f2fe2a84bdf in r_bin_load_io /home/exp/FOT/radare2/libr/bin/bin.c:384:9
+    #9 0x7f2fe3e8fde2 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2/libr/core/file.c:425:7
+    #10 0x7f2fe3e8b5f9 in r_core_bin_load /home/exp/FOT/radare2/libr/core/file.c:583:4
+    #11 0x5635f650d3e2 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1077:15
+    #12 0x7f2fdc9fbb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #13 0x5635f6410fa9 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22fa9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strcpy-sse2-unaligned.S:637 
+==7465==ABORTING
+Aborted
