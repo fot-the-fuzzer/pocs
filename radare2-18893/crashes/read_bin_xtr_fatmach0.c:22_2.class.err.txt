@@ -1,0 +1,18 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==31731==ERROR: AddressSanitizer: SEGV on unknown address 0x61f10000627f (pc 0x7f48c1c3447b bp 0x000000000c6a sp 0x7ffd2c451140 T0)
+==31731==The signal is caused by a READ memory access.
+    #0 0x7f48c1c3447a in checkHeader /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_xtr_fatmach0.c:22:4
+    #1 0x7f48c1c3447a in check_bytes /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_xtr_fatmach0.c:38
+    #2 0x7f48c16a5a1b in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:457:15
+    #3 0x7f48c16a418a in r_bin_load_io_at_offset_as /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:500:12
+    #4 0x7f48c16a418a in r_bin_load_io /home/exp/FOT/radare2-fuzz/libr/bin/bin.c:384
+    #5 0x7f48c2f1cd63 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2-fuzz/libr/core/file.c:425:7
+    #6 0x7f48c2f1cd63 in r_core_bin_load /home/exp/FOT/radare2-fuzz/libr/core/file.c:583
+    #7 0x55ab8a3660c4 in main /home/exp/FOT/radare2-fuzz/binr/radare2/radare2.c:1077:15
+    #8 0x7f48bb0c5b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #9 0x55ab8a2672f9 in _start (/home/exp/FOT/radare2-fuzz/binr/radare2/radare2+0x232f9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_xtr_fatmach0.c:22:4 in checkHeader
+==31731==ABORTING
