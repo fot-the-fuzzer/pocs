@@ -1,0 +1,39 @@
+gdb$ info breakpoints
+Num     Type           Disp Enb Address            What
+17      breakpoint     keep y   <MULTIPLE>
+        breakpoint already hit 3 times
+17.1                        y     0x0000000000c09a04 in dev::bytesRequired<boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<0u, 0u, (boost::multiprecision::cpp_integer_type)1, (boost::multiprecision::cpp_int_check_type)0, std::allocator<unsigned long long> >, (boost::multiprecision::expression_template_option)1> >(boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<0u, 0u, (boost::multiprecision::cpp_integer_type)1, (boost::multiprecision::cpp_int_check_type)0, std::allocator<unsigned long long> >, (boost::multiprecision::expression_template_option)1>) at /home/hongxu/FOT/solidity-clang/libdevcore/CommonData.h:184
+17.2                        y     0x0000000000c0cbbf in dev::bytesRequired<unsigned long>(unsigned long) at /home/hongxu/FOT/solidity-clang/libdevcore/CommonData.h:184
+17.3                        y     0x0000000000fb582e in dev::bytesRequired<unsigned int>(unsigned int) at /home/hongxu/FOT/solidity-clang/libdevcore/CommonData.h:184
+17.4                        y     0x0000000000fb75f4 in dev::bytesRequired<boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<256u, 256u, (boost::multiprecision::cpp_integer_type)0, (boost::multiprecision::cpp_int_check_type)0, void>, (boost::multiprecision::expression_template_option)0> >(boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<256u, 256u, (boost::multiprecision::cpp_integer_type)0, (boost::multiprecision::cpp_int_check_type)0, void>, (boost::multiprecision::expression_template_option)0>) at /home/hongxu/FOT/solidity-clang/libdevcore/CommonData.h:184
+gdb$ r
+Starting program: /home/hongxu/FOT/solidity-clang/solc/solc /home/hongxu/FOT/ALL/solidity-009a55c8/hangs/t2.sol
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Breakpoint 17, dev::bytesRequired<boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<0u, 0u, (boost::multiprecision::cpp_integer_type)1, (boost::multiprecision::cpp_int_check_type)0, std::allocator<unsigned long long> >, (boost::multiprecision::expression_template_option)1> > (_i=...) at /home/hongxu/FOT/solidity-clang/libdevcore/CommonData.h:184
+184             for (; _i != 0; ++i, _i >>= 8) {}
+gdb$ p _i
+$36 = {m_backend = {<boost::multiprecision::backends::cpp_int_base<0, 4294967295, boost::multiprecision::signed_magnitude, boost::multiprecision::unchecked, std::allocator<unsigned long long>, false>> = {<std::allocator<unsigned long long>> = {<__gnu_cxx::new_allocator<unsigned long long>> = {<No data fields>}, <No data fields>}, static limb_bits = 0x40, static max_limb_value = 0xffffffffffffffff, static sign_bit_mask = 0x8000000000000000, static internal_limb_count = 0x2, static variable = 0x1, m_data = {ld = {capacity = 0x2, data = 0x6060000027f0}, la = {0x2, 0x6060000027f0}, first = 0x2, double_first = 0x6060000027f00000000000000002}, m_limbs = 0x1, m_sign = 0x1, m_internal = 0x1}, <No data fields>}}
+gdb$ c 1000
+Will ignore next 4095 crossings of breakpoint 17.  Continuing.
+Breakpoint 17, dev::bytesRequired<boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<0u, 0u, (boost::multiprecision::cpp_integer_type)1, (boost::multiprecision::cpp_int_check_type)0, std::allocator<unsigned long long> >, (boost::multiprecision::expression_template_option)1> > (_i=...) at /home/hongxu/FOT/solidity-clang/libdevcore/CommonData.h:184
+184             for (; _i != 0; ++i, _i >>= 8) {}
+gdb$ p _i
+$37 = {m_backend = {<boost::multiprecision::backends::cpp_int_base<0, 4294967295, boost::multiprecision::signed_magnitude, boost::multiprecision::unchecked, std::allocator<unsigned long long>, false>> = {<std::allocator<unsigned long long>> = {<__gnu_cxx::new_allocator<unsigned long long>> = {<No data fields>}, <No data fields>}, static limb_bits = 0x40, static max_limb_value = 0xffffffffffffffff, static sign_bit_mask = 0x8000000000000000, static internal_limb_count = 0x2, static variable = 0x1, m_data = {ld = {capacity = 0x1, data = 0x6060000027f0}, la = {0x1, 0x6060000027f0}, first = 0x1, double_first = 0x6060000027f00000000000000001}, m_limbs = 0x1, m_sign = 0x1, m_internal = 0x1}, <No data fields>}}
+gdb$ bt
+#0  dev::bytesRequired<boost::multiprecision::number<boost::multiprecision::backends::cpp_int_backend<0u, 0u, (boost::multiprecision::cpp_integer_type)1, (boost::multiprecision::cpp_int_check_type)0, std::allocator<unsigned long long> >, (boost::multiprecision::expression_template_option)1> > (_i=...) at /home/hongxu/FOT/solidity-clang/libdevcore/CommonData.h:184
+#1  0x0000000000bdf1ba in dev::solidity::RationalNumberType::fixedPointType (this=0x60e000000590) at /home/hongxu/FOT/solidity-clang/libsolidity/ast/Types.cpp:1261
+#2  0x0000000000be39f1 in dev::solidity::RationalNumberType::mobileType (this=0x60e000000590) at /home/hongxu/FOT/solidity-clang/libsolidity/ast/Types.cpp:1215
+#3  0x0000000000dcffd2 in dev::solidity::ReferencesResolver::endVisit (this=0x7fffffffa6d8, _typeName=...) at /home/hongxu/FOT/solidity-clang/libsolidity/analysis/ReferencesResolver.cpp:222
+#4  0x0000000000e2e008 in dev::solidity::ArrayTypeName::accept (this=0x608000004d30, _visitor=...) at /home/hongxu/FOT/solidity-clang/libsolidity/ast/AST_accept.h:381
+#5  0x0000000000e2d6ac in dev::solidity::VariableDeclaration::accept (this=0x60d000000120, _visitor=...) at /home/hongxu/FOT/solidity-clang/libsolidity/ast/AST_accept.h:235
+#6  0x0000000000dcdb7b in dev::solidity::ReferencesResolver::resolve (this=0x7fffffffa6d8, _root=...) at /home/hongxu/FOT/solidity-clang/libsolidity/analysis/ReferencesResolver.cpp:42
+#7  0x0000000000db5001 in dev::solidity::NameAndTypeResolver::resolveNamesAndTypesInternal (this=0x7fffffffb1d0, _node=..., _resolveInsideCode=0x0) at /home/hongxu/FOT/solidity-clang/libsolidity/analysis/NameAndTypeResolver.cpp:325
+#8  0x0000000000db478d in dev::solidity::NameAndTypeResolver::resolveNamesAndTypes (this=0x7fffffffb1d0, _node=..., _resolveInsideCode=0x0) at /home/hongxu/FOT/solidity-clang/libsolidity/analysis/NameAndTypeResolver.cpp:130
+#9  0x0000000000db4e1b in dev::solidity::NameAndTypeResolver::resolveNamesAndTypesInternal (this=0x7fffffffb1d0, _node=..., _resolveInsideCode=0x1) at /home/hongxu/FOT/solidity-clang/libsolidity/analysis/NameAndTypeResolver.cpp:297
+#10 0x0000000000db478d in dev::solidity::NameAndTypeResolver::resolveNamesAndTypes (this=0x7fffffffb1d0, _node=..., _resolveInsideCode=0x1) at /home/hongxu/FOT/solidity-clang/libsolidity/analysis/NameAndTypeResolver.cpp:130
+#11 0x0000000000c8da22 in dev::solidity::CompilerStack::analyze (this=0x614000000240) at /home/hongxu/FOT/solidity-clang/libsolidity/interface/CompilerStack.cpp:203
+#12 0x0000000000c8ea86 in dev::solidity::CompilerStack::parseAndAnalyze (this=0x614000000240) at /home/hongxu/FOT/solidity-clang/libsolidity/interface/CompilerStack.cpp:297
+#13 0x0000000000c8ec50 in dev::solidity::CompilerStack::compile (this=0x614000000240) at /home/hongxu/FOT/solidity-clang/libsolidity/interface/CompilerStack.cpp:311
+#14 0x0000000000b5fde1 in dev::solidity::CommandLineInterface::processInput (this=0x7fffffffbc18) at /home/hongxu/FOT/solidity-clang/solc/CommandLineInterface.cpp:837
+#15 0x0000000000ba392a in main (argc=0x2, argv=0x7fffffffbe58) at /home/hongxu/FOT/solidity-clang/solc/main.cpp:59
