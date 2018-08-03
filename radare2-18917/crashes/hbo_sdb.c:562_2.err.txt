@@ -1,0 +1,60 @@
+Error: LC_UNIXTHREAD with other threads
+Warning: Cannot initialize items
+=================================================================
+==3134==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6110000058c0 at pc 0x55f8d65e7a4c bp 0x7ffd37df82b0 sp 0x7ffd37df7a60
+READ of size 257 at 0x6110000058c0 thread T0
+    #0 0x55f8d65e7a4b in __interceptor_strlen.part.30 (/home/exp/FOT/radare2/binr/radare2/radare2+0x9fa4b)
+    #1 0x7fa8a561065c in sdb_set_internal /home/exp/FOT/radare2/shlr/sdb/src/sdb.c:562:9
+    #2 0x7fa8a560e93f in sdb_set /home/exp/FOT/radare2/shlr/sdb/src/sdb.c:631:9
+    #3 0x7fa8aa86143d in get_libs_64 /home/exp/FOT/radare2/libr/..//libr/bin/p/../format/mach0/mach0.c:2043:3
+    #4 0x7fa8aa851073 in libs /home/exp/FOT/radare2/libr/..//libr/bin/p/bin_mach0.c:481:14
+    #5 0x7fa8aa6f6cfc in r_bin_object_set_items /home/exp/FOT/radare2/libr/bin/obj.c:185:13
+    #6 0x7fa8aa6f552b in r_bin_object_new /home/exp/FOT/radare2/libr/bin/obj.c:95:2
+    #7 0x7fa8aa6eca2e in r_bin_file_new_from_bytes /home/exp/FOT/radare2/libr/bin/file.c:515:6
+    #8 0x7fa8aa6c5a01 in r_bin_load_io_at_offset_as_sz /home/exp/FOT/radare2/libr/bin/bin.c:486:13
+    #9 0x7fa8aa6c3de6 in r_bin_load_io_at_offset_as /home/exp/FOT/radare2/libr/bin/bin.c:500:12
+    #10 0x7fa8aa6c3bdf in r_bin_load_io /home/exp/FOT/radare2/libr/bin/bin.c:384:9
+    #11 0x7fa8abad13e2 in r_core_file_do_load_for_io_plugin /home/exp/FOT/radare2/libr/core/file.c:385:7
+    #12 0x7fa8abaccdb9 in r_core_bin_load /home/exp/FOT/radare2/libr/core/file.c:543:4
+    #13 0x55f8d66673e2 in main /home/exp/FOT/radare2/binr/radare2/radare2.c:1077:15
+    #14 0x7fa8a463ab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #15 0x55f8d656afa9 in _start (/home/exp/FOT/radare2/binr/radare2/radare2+0x22fa9)
+
+0x6110000058c0 is located 0 bytes to the right of 256-byte region [0x6110000057c0,0x6110000058c0)
+allocated by thread T0 here:
+    #0 0x55f8d662b380 in realloc (/home/exp/FOT/radare2/binr/radare2/radare2+0xe3380)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/exp/FOT/radare2/binr/radare2/radare2+0x9fa4b) in __interceptor_strlen.part.30
+Shadow bytes around the buggy address:
+  0x0c227fff8ac0: 00 00 00 00 00 00 fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8ad0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c227fff8ae0: fd fd fd fd fd fd fd fd fd fd fd fa fa fa fa fa
+  0x0c227fff8af0: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c227fff8b00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c227fff8b10: 00 00 00 00 00 00 00 00[fa]fa fa fa fa fa fa fa
+  0x0c227fff8b20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8b30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8b40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8b50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8b60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==3134==ABORTING
+Aborted
