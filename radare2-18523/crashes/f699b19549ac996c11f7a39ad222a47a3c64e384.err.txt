@@ -1,0 +1,72 @@
+[ ] [33mAnalyze all flags starting with sym. and entry0 (aa)[[0m[32m[x][0m Analyze all flags starting with sym. and entry0 (aa)
+[0K[ ] [33m
+Analyze value pointers (aav)[[0mValue from 0x00008000 to 0x00010000
+aav: 0x00008000-0x00010000 in 0x8000-0x10000
+[ ] [33mAnalyze function calls (aac)[[0m[32m[x][0m Analyze function calls (aac)
+[ ] [33mAnalyze len bytes of instructions for references (aar)[[0m=================================================================
+==25496==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000009740 at pc 0x7f243bf9c381 bp 0x7ffedb7cbc50 sp 0x7ffedb7cbc48
+READ of size 1 at 0x611000009740 thread T0
+    #0 0x7f243bf9c380 in _6502_anal_esil_get_addr_pattern1 /home/hongxu/FOT/radare2/libr/..//libr/anal/p/anal_6502.c:55:41
+    #1 0x7f243bf97d34 in _6502_op /home/hongxu/FOT/radare2/libr/..//libr/anal/p/anal_6502.c:509:3
+    #2 0x7f243c3534fc in r_anal_op /home/hongxu/FOT/radare2/libr/anal/op.c:106:13
+    #3 0x7f243ea9c93b in r_core_anal_search_xrefs /home/hongxu/FOT/radare2/libr/core/canal.c:3130:10
+    #4 0x7f243e821117 in r_core_anal_refs /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:6337:6
+    #5 0x7f243e9077e6 in cmd_anal_all /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:6734:11
+    #6 0x7f243e8544e0 in cmd_anal /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:7086:8
+    #7 0x7f243ea7d3e3 in r_cmd_call /home/hongxu/FOT/radare2/libr/core/cmd_api.c:237:10
+    #8 0x7f243e8c28a0 in r_core_cmd_subst_i /home/hongxu/FOT/radare2/libr/core/cmd.c:2843:12
+    #9 0x7f243e83973c in r_core_cmd_subst /home/hongxu/FOT/radare2/libr/core/cmd.c:1872:9
+    #10 0x7f243e82f41f in r_core_cmd /home/hongxu/FOT/radare2/libr/core/cmd.c:3538:9
+    #11 0x7f243e815999 in r_core_cmd0 /home/hongxu/FOT/radare2/libr/core/cmd.c:3713:9
+    #12 0x557e677bf2ce in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1292:11
+    #13 0x7f243753cb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #14 0x557e676c0ef9 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22ef9)
+
+0x611000009740 is located 0 bytes to the right of 256-byte region [0x611000009640,0x611000009740)
+allocated by thread T0 here:
+    #0 0x557e67780db0 in malloc (/home/hongxu/FOT/radare2/binr/radare2/radare2+0xe2db0)
+    #1 0x7f243ea9c555 in r_core_anal_search_xrefs /home/hongxu/FOT/radare2/libr/core/canal.c:3092:8
+    #2 0x7f243e821117 in r_core_anal_refs /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:6337:6
+    #3 0x7f243e9077e6 in cmd_anal_all /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:6734:11
+    #4 0x7f243e8544e0 in cmd_anal /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:7086:8
+    #5 0x7f243ea7d3e3 in r_cmd_call /home/hongxu/FOT/radare2/libr/core/cmd_api.c:237:10
+    #6 0x7f243e8c28a0 in r_core_cmd_subst_i /home/hongxu/FOT/radare2/libr/core/cmd.c:2843:12
+    #7 0x7f243e83973c in r_core_cmd_subst /home/hongxu/FOT/radare2/libr/core/cmd.c:1872:9
+    #8 0x7f243e82f41f in r_core_cmd /home/hongxu/FOT/radare2/libr/core/cmd.c:3538:9
+    #9 0x7f243e815999 in r_core_cmd0 /home/hongxu/FOT/radare2/libr/core/cmd.c:3713:9
+    #10 0x557e677bf2ce in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1292:11
+    #11 0x7f243753cb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/radare2/libr/..//libr/anal/p/anal_6502.c:55:41 in _6502_anal_esil_get_addr_pattern1
+Shadow bytes around the buggy address:
+  0x0c227fff9290: fd fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff92a0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c227fff92b0: fd fd fd fd fd fd fd fd fd fa fa fa fa fa fa fa
+  0x0c227fff92c0: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c227fff92d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c227fff92e0: 00 00 00 00 00 00 00 00[fa]fa fa fa fa fa fa fa
+  0x0c227fff92f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff9300: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff9310: fa fa fa fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x0c227fff9320: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c227fff9330: fd fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==25496==ABORTING

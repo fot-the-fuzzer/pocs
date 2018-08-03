@@ -1,0 +1,67 @@
+Warning: Cannot initialize program headers
+Cannot find NOTE section
+Warning: read (init_offset)
+Warning: read (get_fini)
+=================================================================
+==24362==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60400001c03f at pc 0x7fd98b29a43e bp 0x7fff57098ff0 sp 0x7fff57098fe8
+READ of size 1 at 0x60400001c03f thread T0
+    #0 0x7fd98b29a43d in r_read_le32 /home/hongxu/FOT/radare2/libr/include/r_endian.h:176:17
+    #1 0x7fd98b29a86b in r_read_at_le32 /home/hongxu/FOT/radare2/libr/include/r_endian.h:185:9
+    #2 0x7fd98b29a7fb in r_read_le64 /home/hongxu/FOT/radare2/libr/include/r_endian.h:199:21
+    #3 0x7fd98b2966ed in fields /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_elf.c:1154:4
+    #4 0x7fd98b20d195 in r_bin_object_set_items /home/hongxu/FOT/radare2/libr/bin/obj.c:157:15
+    #5 0x7fd98b20c3fb in r_bin_object_new /home/hongxu/FOT/radare2/libr/bin/obj.c:95:2
+    #6 0x7fd98b203bbe in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2/libr/bin/file.c:497:6
+    #7 0x7fd98b1dcc51 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:463:14
+    #8 0x7fd98b1db036 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:480:12
+    #9 0x7fd98b1dae2f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:360:9
+    #10 0x7fd98c5d0a22 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:412:7
+    #11 0x7fd98c5cc439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #12 0x55a593a553e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #13 0x7fd985157b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #14 0x55a593958ef9 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22ef9)
+
+0x60400001c03f is located 2 bytes to the right of 45-byte region [0x60400001c010,0x60400001c03d)
+allocated by thread T0 here:
+    #0 0x55a593a18fd8 in calloc (/home/hongxu/FOT/radare2/binr/radare2/radare2+0xe2fd8)
+    #1 0x7fd98b1dc360 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:418:15
+    #2 0x7fd98b1db036 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:480:12
+    #3 0x7fd98b1dae2f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:360:9
+    #4 0x7fd98c5d0a22 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:412:7
+    #5 0x7fd98c5cc439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #6 0x55a593a553e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #7 0x7fd985157b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/radare2/libr/include/r_endian.h:176:17 in r_read_le32
+Shadow bytes around the buggy address:
+  0x0c087fffb7b0: fa fa fd fd fd fd fd fa fa fa fd fd fd fd fd fd
+  0x0c087fffb7c0: fa fa fd fd fd fd fd fa fa fa fd fd fd fd fd fd
+  0x0c087fffb7d0: fa fa 00 00 00 00 05 fa fa fa fd fd fd fd fd fa
+  0x0c087fffb7e0: fa fa fd fd fd fd fd fa fa fa 00 00 00 00 05 fa
+  0x0c087fffb7f0: fa fa 00 00 00 00 05 fa fa fa fd fd fd fd fd fa
+=>0x0c087fffb800: fa fa 00 00 00 00 00[05]fa fa 00 00 00 00 05 fa
+  0x0c087fffb810: fa fa 00 00 00 00 00 00 fa fa 00 00 00 00 00 00
+  0x0c087fffb820: fa fa 00 00 00 00 00 fa fa fa 00 00 00 00 00 00
+  0x0c087fffb830: fa fa 00 00 00 00 00 00 fa fa 00 00 00 00 00 00
+  0x0c087fffb840: fa fa 00 00 00 00 00 00 fa fa 00 00 00 00 00 00
+  0x0c087fffb850: fa fa 00 00 00 00 00 00 fa fa 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==24362==ABORTING

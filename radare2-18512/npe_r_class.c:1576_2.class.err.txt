@@ -1,0 +1,36 @@
+[X] r_bin_java_code_attr_new: Error unable to parse remainder of classfile after Method's Code Attribute: 1.
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==11376==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7fc1c54355a1 bp 0x7ffdba650770 sp 0x7ffdba64fef8 T0)
+==11376==The signal is caused by a READ memory access.
+==11376==Hint: address points to the zero page.
+    #0 0x7fc1c54355a0  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen-avx2.S:59
+    #1 0x562edf76950f in __interceptor_strdup (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x3f50f)
+    #2 0x7fc1cb66255f in r_bin_java_clone_cp_item /home/hongxu/FOT/radare2/shlr/java/class.c:1576:21
+    #3 0x7fc1cb66239c in r_bin_java_clone_cp_idx /home/hongxu/FOT/radare2/shlr/java/class.c:1563:9
+    #4 0x7fc1cb69413f in r_bin_java_element_value_new /home/hongxu/FOT/radare2/shlr/java/class.c:6658:57
+    #5 0x7fc1cb694b89 in r_bin_java_element_value_new /home/hongxu/FOT/radare2/shlr/java/class.c:6691:39
+    #6 0x7fc1cb693a2e in r_bin_java_element_pair_new /home/hongxu/FOT/radare2/shlr/java/class.c:6232:19
+    #7 0x7fc1cb6983f8 in r_bin_java_annotation_new /home/hongxu/FOT/radare2/shlr/java/class.c:6485:14
+    #8 0x7fc1cb69b48d in r_bin_java_rtv_annotations_attr_new /home/hongxu/FOT/radare2/shlr/java/class.c:7040:37
+    #9 0x7fc1cb665c34 in r_bin_java_read_next_attr_from_buffer /home/hongxu/FOT/radare2/shlr/java/class.c:2100:15
+    #10 0x7fc1cb6605f7 in r_bin_java_read_next_attr /home/hongxu/FOT/radare2/shlr/java/class.c:2058:10
+    #11 0x7fc1cb66809d in r_bin_java_parse_attrs /home/hongxu/FOT/radare2/shlr/java/class.c:2264:29
+    #12 0x7fc1cb6694d3 in r_bin_java_load_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2387:9
+    #13 0x7fc1cb668e74 in r_bin_java_new_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2337:9
+    #14 0x7fc1cb67028d in r_bin_java_new_buf /home/hongxu/FOT/radare2/shlr/java/class.c:3112:7
+    #15 0x7fc1cb486cc6 in load_bytes /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_java.c:86:18
+    #16 0x7fc1cb37ce6d in r_bin_object_new /home/hongxu/FOT/radare2/libr/bin/obj.c:58:16
+    #17 0x7fc1cb374bbe in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2/libr/bin/file.c:497:6
+    #18 0x7fc1cb34dc51 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:463:14
+    #19 0x7fc1cb34c036 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:480:12
+    #20 0x7fc1cb34be2f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:360:9
+    #21 0x7fc1cc741a22 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:412:7
+    #22 0x7fc1cc73d439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #23 0x562edf8493e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #24 0x7fc1c52c8b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #25 0x562edf74cef9 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22ef9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen-avx2.S:59 
+==11376==ABORTING

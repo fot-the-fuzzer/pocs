@@ -1,0 +1,26 @@
+Unsupported relocation type for imports 0
+Unsupported relocation type for imports 0
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==7144==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000099 (pc 0x7fbec97465a1 bp 0x7ffeca0bb350 sp 0x7ffeca0baad8 T0)
+==7144==The signal is caused by a READ memory access.
+==7144==Hint: address points to the zero page.
+    #0 0x7fbec97465a0  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen-avx2.S:59
+    #1 0x55b405cb47fc in __interceptor_strlen.part.30 (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x9f7fc)
+    #2 0x7fbeca5ab67c in sdb_set_internal /home/hongxu/FOT/radare2/shlr/sdb/src/sdb.c:562:9
+    #3 0x7fbeca5a995f in sdb_set /home/hongxu/FOT/radare2/shlr/sdb/src/sdb.c:631:9
+    #4 0x7fbecf676695 in r_bin_dwarf_parse_comp_unit /home/hongxu/FOT/radare2/libr/bin/dwarf.c:1364:5
+    #5 0x7fbecf674f26 in r_bin_dwarf_parse_info_raw /home/hongxu/FOT/radare2/libr/bin/dwarf.c:1435:9
+    #6 0x7fbecf677c04 in r_bin_dwarf_parse_info /home/hongxu/FOT/radare2/libr/bin/dwarf.c:1566:9
+    #7 0x7fbed0ae792f in bin_dwarf /home/hongxu/FOT/radare2/libr/core/cbin.c:835:3
+    #8 0x7fbed0ae06f9 in r_core_bin_info /home/hongxu/FOT/radare2/libr/core/cbin.c:3357:46
+    #9 0x7fbed0ae0494 in r_core_bin_set_env /home/hongxu/FOT/radare2/libr/core/cbin.c:120:3
+    #10 0x7fbed0a52a89 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:417:2
+    #11 0x7fbed0a4e439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #12 0x55b405d343e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #13 0x7fbec95d9b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #14 0x55b405c37ef9 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22ef9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen-avx2.S:59 
+==7144==ABORTING

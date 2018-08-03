@@ -1,0 +1,53 @@
+=================================================================
+==7229==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x616000005588 at pc 0x7f095129e543 bp 0x7ffd582e9ed0 sp 0x7ffd582e9ec8
+READ of size 4 at 0x616000005588 thread T0
+    #0 0x7f095129e542 in r_bin_mdmp_init_directory_entry /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:364:22
+    #1 0x7f095129d074 in r_bin_mdmp_init_directory /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:663:3
+    #2 0x7f095129bc79 in r_bin_mdmp_init /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:786:7
+    #3 0x7f095129b9f9 in r_bin_mdmp_new_buf /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:832:7
+    #4 0x7f09512941d6 in load_bytes /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_mdmp.c:195:13
+    #5 0x7f0951109e6d in r_bin_object_new /home/hongxu/FOT/radare2/libr/bin/obj.c:58:16
+    #6 0x7f0951101bbe in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2/libr/bin/file.c:497:6
+    #7 0x7f09510dac51 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:463:14
+    #8 0x7f09510d9036 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:480:12
+    #9 0x7f09510d8e2f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:360:9
+    #10 0x7f09524cea22 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:412:7
+    #11 0x7f09524ca439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #12 0x559e41c633e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #13 0x7f094b055b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #14 0x559e41b66ef9 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22ef9)
+
+Address 0x616000005588 is a wild pointer.
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:364:22 in r_bin_mdmp_init_directory_entry
+Shadow bytes around the buggy address:
+  0x0c2c7fff8a60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8a70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8a80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8a90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8aa0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c2c7fff8ab0: fa[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8ac0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8ad0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8ae0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8af0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c2c7fff8b00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7229==ABORTING

@@ -1,0 +1,62 @@
+Checksum: 0x0824
+ProductCode: 128348
+Console: Sega Master System
+Region: Export
+RomSize: 256KB
+[ ] [33mAnalyze all flags starting with sym. and entry0 (aa)[[0m[32m[x][0m Analyze all flags starting with sym. and entry0 (aa)
+[0K[ ] [33m
+Analyze value pointers (aav)[[0mValue from 0x00000000 to 0x00005334
+aav: 0x00000000-0x00005334 in 0x0-0x5334
+[ ] [33mAnalyze function calls (aac)[[0m=================================================================
+==3252==ERROR: AddressSanitizer: global-buffer-overflow on address 0x7f80e4f48830 at pc 0x7f80e4562c0b bp 0x7ffd28548f90 sp 0x7ffd28548f88
+READ of size 4 at 0x7f80e4f48830 thread T0
+    #0 0x7f80e4562c0a in z80_op_size /home/hongxu/FOT/radare2/libr/..//libr/anal/p/anal_z80.c:15:47
+    #1 0x7f80e455f99b in z80_anal_op /home/hongxu/FOT/radare2/libr/..//libr/anal/p/anal_z80.c:50:2
+    #2 0x7f80e45714fc in r_anal_op /home/hongxu/FOT/radare2/libr/anal/op.c:106:13
+    #3 0x7f80e6b3869e in _anal_calls /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:4808:7
+    #4 0x7f80e6b349e1 in cmd_anal_calls /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:4895:6
+    #5 0x7f80e6b25787 in cmd_anal_all /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:6724:12
+    #6 0x7f80e6a724e0 in cmd_anal /home/hongxu/FOT/radare2/libr/core/./cmd_anal.c:7086:8
+    #7 0x7f80e6c9b3e3 in r_cmd_call /home/hongxu/FOT/radare2/libr/core/cmd_api.c:237:10
+    #8 0x7f80e6ae08a0 in r_core_cmd_subst_i /home/hongxu/FOT/radare2/libr/core/cmd.c:2843:12
+    #9 0x7f80e6a5773c in r_core_cmd_subst /home/hongxu/FOT/radare2/libr/core/cmd.c:1872:9
+    #10 0x7f80e6a4d41f in r_core_cmd /home/hongxu/FOT/radare2/libr/core/cmd.c:3538:9
+    #11 0x7f80e6a33999 in r_core_cmd0 /home/hongxu/FOT/radare2/libr/core/cmd.c:3713:9
+    #12 0x5642d81182ce in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1292:11
+    #13 0x7f80df75ab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #14 0x5642d8019ef9 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22ef9)
+
+0x7f80e4f48830 is located 8 bytes to the right of global variable 'ed' defined in '/home/hongxu/FOT/radare2/libr/..//libr/anal/p/../../asm/arch/z80/z80_tab.h:933:19' (0x7f80e4f482a0) of size 1416
+SUMMARY: AddressSanitizer: global-buffer-overflow /home/hongxu/FOT/radare2/libr/..//libr/anal/p/anal_z80.c:15:47 in z80_op_size
+Shadow bytes around the buggy address:
+  0x0ff09c9e10b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff09c9e10c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff09c9e10d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff09c9e10e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff09c9e10f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0ff09c9e1100: 00 00 00 00 00 f9[f9]f9 f9 f9 f9 f9 f9 f9 f9 f9
+  0x0ff09c9e1110: f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9
+  0x0ff09c9e1120: f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9
+  0x0ff09c9e1130: f9 f9 f9 f9 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff09c9e1140: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff09c9e1150: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==3252==ABORTING

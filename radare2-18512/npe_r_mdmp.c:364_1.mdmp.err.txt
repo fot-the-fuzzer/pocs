@@ -1,0 +1,23 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==3919==ERROR: AddressSanitizer: SEGV on unknown address 0x616001004488 (pc 0x7f33bb01d598 bp 0x7ffeb4ddc350 sp 0x7ffeb4ddb740 T0)
+==3919==The signal is caused by a READ memory access.
+    #0 0x7f33bb01d597 in r_bin_mdmp_init_directory_entry /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:364:22
+    #1 0x7f33bb01c074 in r_bin_mdmp_init_directory /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:663:3
+    #2 0x7f33bb01ac79 in r_bin_mdmp_init /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:786:7
+    #3 0x7f33bb01a9f9 in r_bin_mdmp_new_buf /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:832:7
+    #4 0x7f33bb0131d6 in load_bytes /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_mdmp.c:195:13
+    #5 0x7f33bae88e6d in r_bin_object_new /home/hongxu/FOT/radare2/libr/bin/obj.c:58:16
+    #6 0x7f33bae80bbe in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2/libr/bin/file.c:497:6
+    #7 0x7f33bae59c51 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:463:14
+    #8 0x7f33bae58036 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:480:12
+    #9 0x7f33bae57e2f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:360:9
+    #10 0x7f33bc24da22 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:412:7
+    #11 0x7f33bc249439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #12 0x55f0fa82b3e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #13 0x7f33b4dd4b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #14 0x55f0fa72eef9 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22ef9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/radare2/libr/..//libr/bin/p/../format/mdmp/mdmp.c:364:22 in r_bin_mdmp_init_directory_entry
+==3919==ABORTING

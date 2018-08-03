@@ -1,0 +1,82 @@
+Invalid tag '99' at offset 0x00000271
+[X] r_bin_java: Error unable to parse remainder of classfile in Attribute len (0x44617467) + offset (0x483) exceeds length of buffer (0xb56).
+[X] r_bin_java: Error unable to parse remainder of classfile after Field Attribute: 0.
+...
+[X] r_bin_java: Error unable to parse remainder of classfile after Method Attribute: 0.
+=================================================================
+==11525==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6180000047a3 at pc 0x7f35f35d4d48 bp 0x7ffe68943440 sp 0x7ffe68943438
+READ of size 1 at 0x6180000047a3 thread T0
+    #0 0x7f35f35d4d47 in r_bin_java_exceptions_attr_new /home/hongxu/FOT/radare2/shlr/java/class.c:3652:55
+    #1 0x7f35f35c5c34 in r_bin_java_read_next_attr_from_buffer /home/hongxu/FOT/radare2/shlr/java/class.c:2100:15
+    #2 0x7f35f35c05f7 in r_bin_java_read_next_attr /home/hongxu/FOT/radare2/shlr/java/class.c:2058:10
+    #3 0x7f35f35bfb9e in r_bin_java_read_next_method /home/hongxu/FOT/radare2/shlr/java/class.c:1430:11
+    #4 0x7f35f35c86c7 in r_bin_java_parse_methods /home/hongxu/FOT/radare2/shlr/java/class.c:2301:12
+    #5 0x7f35f35c9453 in r_bin_java_load_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2382:9
+    #6 0x7f35f35c8e74 in r_bin_java_new_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2337:9
+    #7 0x7f35f35d028d in r_bin_java_new_buf /home/hongxu/FOT/radare2/shlr/java/class.c:3112:7
+    #8 0x7f35f33e6cc6 in load_bytes /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_java.c:86:18
+    #9 0x7f35f32dce6d in r_bin_object_new /home/hongxu/FOT/radare2/libr/bin/obj.c:58:16
+    #10 0x7f35f32d4bbe in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2/libr/bin/file.c:497:6
+    #11 0x7f35f32adc51 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:463:14
+    #12 0x7f35f32ac036 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:480:12
+    #13 0x7f35f32abe2f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:360:9
+    #14 0x7f35f46a1a22 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:412:7
+    #15 0x7f35f469d439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #16 0x5558553423e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #17 0x7f35ed228b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #18 0x555855245ef9 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22ef9)
+
+0x6180000047a3 is located 0 bytes to the right of 803-byte region [0x618000004480,0x6180000047a3)
+allocated by thread T0 here:
+    #0 0x555855305fd8 in calloc (/home/hongxu/FOT/radare2/binr/radare2/radare2+0xe2fd8)
+    #1 0x7f35f35c4ca5 in r_bin_java_get_attr_buf /home/hongxu/FOT/radare2/shlr/java/class.c:1977:21
+    #2 0x7f35f35c05cd in r_bin_java_read_next_attr /home/hongxu/FOT/radare2/shlr/java/class.c:2055:11
+    #3 0x7f35f35bfb9e in r_bin_java_read_next_method /home/hongxu/FOT/radare2/shlr/java/class.c:1430:11
+    #4 0x7f35f35c86c7 in r_bin_java_parse_methods /home/hongxu/FOT/radare2/shlr/java/class.c:2301:12
+    #5 0x7f35f35c9453 in r_bin_java_load_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2382:9
+    #6 0x7f35f35c8e74 in r_bin_java_new_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2337:9
+    #7 0x7f35f35d028d in r_bin_java_new_buf /home/hongxu/FOT/radare2/shlr/java/class.c:3112:7
+    #8 0x7f35f33e6cc6 in load_bytes /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_java.c:86:18
+    #9 0x7f35f32dce6d in r_bin_object_new /home/hongxu/FOT/radare2/libr/bin/obj.c:58:16
+    #10 0x7f35f32d4bbe in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2/libr/bin/file.c:497:6
+    #11 0x7f35f32adc51 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:463:14
+    #12 0x7f35f32ac036 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:480:12
+    #13 0x7f35f32abe2f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:360:9
+    #14 0x7f35f46a1a22 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:412:7
+    #15 0x7f35f469d439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #16 0x5558553423e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #17 0x7f35ed228b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/radare2/shlr/java/class.c:3652:55 in r_bin_java_exceptions_attr_new
+Shadow bytes around the buggy address:
+  0x0c307fff88a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c307fff88b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c307fff88c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c307fff88d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c307fff88e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c307fff88f0: 00 00 00 00[03]fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8910: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8920: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8930: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c307fff8940: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==11525==ABORTING

@@ -1,47 +1,62 @@
-Reading symbols from /home/hongxu/bin/prefix/radare2/bin/r2...done.
-Starting program: /home/hongxu/bin/prefix/radare2/bin/r2 -Q hbo_class.c:3794_1.class
-[Thread debugging using libthread_db enabled]
-Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 =================================================================
-==2236==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x606000007556 at pc 0x7ffff63a2052 bp 0x7fffffffa740 sp 0x7fffffffa738
-READ of size 1 at 0x606000007556 thread T0
-    #0 0x7ffff63a2051  (/usr/lib/libr_bin.so+0x6d1051)
-    #1 0x7ffff6384661  (/usr/lib/libr_bin.so+0x6b3661)
-    #2 0x7ffff639a800  (/usr/lib/libr_bin.so+0x6c9800)
-    #3 0x7ffff6384661  (/usr/lib/libr_bin.so+0x6b3661)
-    #4 0x7ffff6379bc9  (/usr/lib/libr_bin.so+0x6a8bc9)
-    #5 0x7ffff6376c39  (/usr/lib/libr_bin.so+0x6a5c39)
-    #6 0x7ffff6388916  (/usr/lib/libr_bin.so+0x6b7916)
-    #7 0x7ffff638a514  (/usr/lib/libr_bin.so+0x6b9514)
-    #8 0x7ffff6397250  (/usr/lib/libr_bin.so+0x6c6250)
-    #9 0x7ffff5fcffd2  (/usr/lib/libr_bin.so+0x2fefd2)
-    #10 0x7ffff5de6813  (/usr/lib/libr_bin.so+0x115813)
-    #11 0x7ffff5dda738  (/usr/lib/libr_bin.so+0x109738)
-    #12 0x7ffff5daa204  (/usr/lib/libr_bin.so+0xd9204)
-    #13 0x7ffff5da8d37  (/usr/lib/libr_bin.so+0xd7d37)
-    #14 0x7ffff759d873  (/usr/lib/libr_core.so+0x3e8873)
-    #15 0x5555556733e3  (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x11f3e3)
-    #16 0x7fffef87eb96  (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
-    #17 0x555555576f29  (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22f29)
+==10965==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x606000005d56 at pc 0x7f81c415a6c7 bp 0x7fff35b880e0 sp 0x7fff35b880d8
+READ of size 1 at 0x606000005d56 thread T0
+    #0 0x7f81c415a6c6 in r_bin_java_line_number_table_attr_new /home/hongxu/FOT/radare2/shlr/java/class.c:3794:25
+    #1 0x7f81c4149c34 in r_bin_java_read_next_attr_from_buffer /home/hongxu/FOT/radare2/shlr/java/class.c:2100:15
+    #2 0x7f81c4156e69 in r_bin_java_code_attr_new /home/hongxu/FOT/radare2/shlr/java/class.c:3487:12
+    #3 0x7f81c4149c34 in r_bin_java_read_next_attr_from_buffer /home/hongxu/FOT/radare2/shlr/java/class.c:2100:15
+    #4 0x7f81c41445f7 in r_bin_java_read_next_attr /home/hongxu/FOT/radare2/shlr/java/class.c:2058:10
+    #5 0x7f81c4143b9e in r_bin_java_read_next_method /home/hongxu/FOT/radare2/shlr/java/class.c:1430:11
+    #6 0x7f81c414c6c7 in r_bin_java_parse_methods /home/hongxu/FOT/radare2/shlr/java/class.c:2301:12
+    #7 0x7f81c414d453 in r_bin_java_load_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2382:9
+    #8 0x7f81c414ce74 in r_bin_java_new_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2337:9
+    #9 0x7f81c415428d in r_bin_java_new_buf /home/hongxu/FOT/radare2/shlr/java/class.c:3112:7
+    #10 0x7f81c3f6acc6 in load_bytes /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_java.c:86:18
+    #11 0x7f81c3e60e6d in r_bin_object_new /home/hongxu/FOT/radare2/libr/bin/obj.c:58:16
+    #12 0x7f81c3e58bbe in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2/libr/bin/file.c:497:6
+    #13 0x7f81c3e31c51 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:463:14
+    #14 0x7f81c3e30036 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:480:12
+    #15 0x7f81c3e2fe2f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:360:9
+    #16 0x7f81c5225a22 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:412:7
+    #17 0x7f81c5221439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #18 0x555c8c24e3e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #19 0x7f81bddacb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #20 0x555c8c151ef9 in _start (/home/hongxu/FOT/radare2/binr/radare2/radare2+0x22ef9)
 
-0x606000007556 is located 0 bytes to the right of 54-byte region [0x606000007520,0x606000007556)
+0x606000005d56 is located 0 bytes to the right of 54-byte region [0x606000005d20,0x606000005d56)
 allocated by thread T0 here:
-    #0 0x555555637028  (/home/hongxu/FOT/radare2/binr/radare2/radare2+0xe3028)
-    #1 0x7ffff6379ae4  (/usr/lib/libr_bin.so+0x6a8ae4)
+    #0 0x555c8c211fd8 in calloc (/home/hongxu/FOT/radare2/binr/radare2/radare2+0xe2fd8)
+    #1 0x7f81c4148ca5 in r_bin_java_get_attr_buf /home/hongxu/FOT/radare2/shlr/java/class.c:1977:21
+    #2 0x7f81c41445cd in r_bin_java_read_next_attr /home/hongxu/FOT/radare2/shlr/java/class.c:2055:11
+    #3 0x7f81c4143b9e in r_bin_java_read_next_method /home/hongxu/FOT/radare2/shlr/java/class.c:1430:11
+    #4 0x7f81c414c6c7 in r_bin_java_parse_methods /home/hongxu/FOT/radare2/shlr/java/class.c:2301:12
+    #5 0x7f81c414d453 in r_bin_java_load_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2382:9
+    #6 0x7f81c414ce74 in r_bin_java_new_bin /home/hongxu/FOT/radare2/shlr/java/class.c:2337:9
+    #7 0x7f81c415428d in r_bin_java_new_buf /home/hongxu/FOT/radare2/shlr/java/class.c:3112:7
+    #8 0x7f81c3f6acc6 in load_bytes /home/hongxu/FOT/radare2/libr/..//libr/bin/p/bin_java.c:86:18
+    #9 0x7f81c3e60e6d in r_bin_object_new /home/hongxu/FOT/radare2/libr/bin/obj.c:58:16
+    #10 0x7f81c3e58bbe in r_bin_file_new_from_bytes /home/hongxu/FOT/radare2/libr/bin/file.c:497:6
+    #11 0x7f81c3e31c51 in r_bin_load_io_at_offset_as_sz /home/hongxu/FOT/radare2/libr/bin/bin.c:463:14
+    #12 0x7f81c3e30036 in r_bin_load_io_at_offset_as /home/hongxu/FOT/radare2/libr/bin/bin.c:480:12
+    #13 0x7f81c3e2fe2f in r_bin_load_io /home/hongxu/FOT/radare2/libr/bin/bin.c:360:9
+    #14 0x7f81c5225a22 in r_core_file_do_load_for_io_plugin /home/hongxu/FOT/radare2/libr/core/file.c:412:7
+    #15 0x7f81c5221439 in r_core_bin_load /home/hongxu/FOT/radare2/libr/core/file.c:569:4
+    #16 0x555c8c24e3e5 in main /home/hongxu/FOT/radare2/binr/radare2/radare2.c:1070:15
+    #17 0x7f81bddacb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
 
-SUMMARY: AddressSanitizer: heap-buffer-overflow (/usr/lib/libr_bin.so+0x6d1051) 
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/radare2/shlr/java/class.c:3794:25 in r_bin_java_line_number_table_attr_new
 Shadow bytes around the buggy address:
-  0x0c0c7fff8e50: 00 00 00 00 00 00 00 00 fa fa fa fa 00 00 00 00
-  0x0c0c7fff8e60: 00 00 00 fa fa fa fa fa 00 00 00 00 00 00 00 00
-  0x0c0c7fff8e70: fa fa fa fa fd fd fd fd fd fd fd fd fa fa fa fa
-  0x0c0c7fff8e80: fd fd fd fd fd fd fd fd fa fa fa fa 00 00 00 00
-  0x0c0c7fff8e90: 00 00 00 04 fa fa fa fa 00 00 00 00 00 00 00 04
-=>0x0c0c7fff8ea0: fa fa fa fa 00 00 00 00 00 00[06]fa fa fa fa fa
-  0x0c0c7fff8eb0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c0c7fff8ec0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c0c7fff8ed0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c0c7fff8ee0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
-  0x0c0c7fff8ef0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8b50: fd fd fd fd fd fd fd fd fa fa fa fa fd fd fd fd
+  0x0c0c7fff8b60: fd fd fd fd fa fa fa fa 00 00 00 00 00 00 03 fa
+  0x0c0c7fff8b70: fa fa fa fa fd fd fd fd fd fd fd fa fa fa fa fa
+  0x0c0c7fff8b80: fd fd fd fd fd fd fd fd fa fa fa fa 00 00 00 00
+  0x0c0c7fff8b90: 00 00 00 fa fa fa fa fa 00 00 00 00 00 00 00 00
+=>0x0c0c7fff8ba0: fa fa fa fa 00 00 00 00 00 00[06]fa fa fa fa fa
+  0x0c0c7fff8bb0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8bc0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8bd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8be0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8bf0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
 Shadow byte legend (one shadow byte represents 8 application bytes):
   Addressable:           00
   Partially addressable: 01 02 03 04 05 06 07 
@@ -61,33 +76,4 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
   ASan internal:           fe
   Left alloca redzone:     ca
   Right alloca redzone:    cb
-==2236==ABORTING
-
-Program received signal SIGABRT, Aborted.
-__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
-51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
-#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
-#1  0x00007fffef89d801 in __GI_abort () at abort.c:79
-#2  0x000055555566047b in __sanitizer::Abort() ()
-#3  0x000055555565d7a8 in __sanitizer::Die() ()
-#4  0x000055555563fa2d in __asan::ReportGenericError(unsigned long, unsigned long, unsigned long, unsigned long, bool, unsigned long, unsigned int, bool) ()
-#5  0x00005555556400f8 in __asan_report_load1 ()
-#6  0x00007ffff63a2052 in r_bin_java_line_number_table_attr_new (buffer=0x60600000753b "", sz=<optimized out>, buf_offset=<optimized out>) at class.c:3794
-#7  0x00007ffff6384662 in r_bin_java_read_next_attr_from_buffer (buffer=0x60600000753b "", sz=<optimized out>, buf_offset=<optimized out>) at class.c:2100
-#8  0x00007ffff639a801 in r_bin_java_code_attr_new (buffer=0x606000007520 "", sz=<optimized out>, buf_offset=<optimized out>) at class.c:3487
-#9  0x00007ffff6384662 in r_bin_java_read_next_attr_from_buffer (buffer=0x606000007520 "", sz=<optimized out>, buf_offset=<optimized out>) at class.c:2100
-#10 0x00007ffff6379bca in r_bin_java_read_next_attr (bin=<optimized out>, offset=0x175, buf=<optimized out>, buf_len=0x1aa) at class.c:2058
-#11 0x00007ffff6376c3a in r_bin_java_read_next_method (bin=<optimized out>, offset=<optimized out>, buf=<optimized out>, len=<optimized out>) at class.c:1430
-#12 0x00007ffff6388917 in r_bin_java_parse_methods (bin=0x613000007580, offset=<optimized out>, buf=<optimized out>, len=0x1aa) at class.c:2301
-#13 0x00007ffff638a515 in r_bin_java_load_bin (bin=0x613000007580, buf=0x614000001640 "\312\376\272\276", buf_sz=0x1aa) at class.c:2382
-#14 0x00007ffff6397251 in r_bin_java_new_bin (loadaddr=0x0, kv=<optimized out>, buf=0x614000001640 "\312\376\272\276", len=0x1aa, bin=<optimized out>) at class.c:2337
-#15 r_bin_java_new_buf (buf=0x60b000000e00, loadaddr=0x0, kv=<optimized out>) at class.c:3112
-#16 0x00007ffff5fcffd3 in load_bytes (bf=0x60e000000f20, buf=0x614000001440 "\312\376\272\276", sz=<optimized out>, loadaddr=0x0, sdb=0x62600006f100) at /home/hongxu/FOT/radare2-fuzz/libr/..//libr/bin/p/bin_java.c:86
-#17 0x00007ffff5de6814 in r_bin_object_new (binfile=0x60e000000f20, plugin=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>, offset=<optimized out>, sz=<optimized out>) at obj.c:58
-#18 0x00007ffff5dda739 in r_bin_file_new_from_bytes (bin=0x614000000040, file=<optimized out>, bytes=<optimized out>, sz=0x1aa, file_sz=<optimized out>, rawstr=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>, fd=<optimized out>, pluginname=<optimized out>, xtrname=<optimized out>, offset=<optimized out>, steal_ptr=<optimized out>) at file.c:514
-#19 0x00007ffff5daa205 in r_bin_load_io_at_offset_as_sz (bin=<optimized out>, fd=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>, xtr_idx=<optimized out>, offset=<optimized out>, name=<optimized out>, sz=0x1aa) at bin.c:463
-#20 0x00007ffff5da8d38 in r_bin_load_io_at_offset_as (bin=0x2, fd=0xffff9790, baseaddr=0x0, loadaddr=0x7fffef89be97, xtr_idx=0x0, offset=0x0, name=<optimized out>) at bin.c:480
-#21 r_bin_load_io (bin=0x2, fd=0xffff9790, baseaddr=0x0, loadaddr=0x7fffef89be97, xtr_idx=0x0) at bin.c:360
-#22 0x00007ffff759d874 in r_core_file_do_load_for_io_plugin (r=<optimized out>, baseaddr=<optimized out>, loadaddr=<optimized out>) at file.c:412
-#23 r_core_bin_load (r=0x55555651bb40 <r>, filenameuri=0x60300003c820 "hbo_class.c:3794_1.class", baddr=0xffffffffffffffff) at file.c:569
-#24 0x00005555556733e4 in main (argc=0x3, argv=0x7fffffffc4b8, envp=0x7fffffffc4d8) at radare2.c:1070
+==10965==ABORTING
