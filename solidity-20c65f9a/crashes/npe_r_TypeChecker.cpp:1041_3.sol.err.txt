@@ -1,0 +1,26 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==23466==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x000000df8dd5 bp 0x7ffedc2eb0e0 sp 0x7ffedc2eafa0 T0)
+==23466==The signal is caused by a READ memory access.
+==23466==Hint: address points to the zero page.
+    #0 0xdf8dd4 in (anonymous namespace)::createTupleDecl[abi:cxx11](std::vector<std::shared_ptr<dev::solidity::VariableDeclaration>, std::allocator<std::shared_ptr<dev::solidity::VariableDeclaration> > > const&) /home/hongxu/FOT/solidity-clang/libsolidity/analysis/TypeChecker.cpp:1041:28
+    #1 0xdf89c1 in dev::solidity::TypeChecker::visit(dev::solidity::VariableDeclarationStatement const&) /home/hongxu/FOT/solidity-clang/libsolidity/analysis/TypeChecker.cpp:1246:36
+    #2 0xe2ee3f in dev::solidity::VariableDeclarationStatement::accept(dev::solidity::ASTConstVisitor&) const /home/hongxu/FOT/solidity-clang/libsolidity/ast/AST_accept.h:593:15
+    #3 0xe36941 in void dev::solidity::ASTNode::listAccept<std::shared_ptr<dev::solidity::Statement> >(std::vector<std::shared_ptr<dev::solidity::Statement>, std::allocator<std::shared_ptr<dev::solidity::Statement> > > const&, dev::solidity::ASTConstVisitor&) /home/hongxu/FOT/solidity-clang/libsolidity/ast/AST.h:81:13
+    #4 0xe2e155 in dev::solidity::Block::accept(dev::solidity::ASTConstVisitor&) const /home/hongxu/FOT/solidity-clang/libsolidity/ast/AST_accept.h:406:3
+    #5 0xdf0ab4 in dev::solidity::TypeChecker::visit(dev::solidity::FunctionDefinition const&) /home/hongxu/FOT/solidity-clang/libsolidity/analysis/TypeChecker.cpp:679:20
+    #6 0xe2d471 in dev::solidity::FunctionDefinition::accept(dev::solidity::ASTConstVisitor&) const /home/hongxu/FOT/solidity-clang/libsolidity/ast/AST_accept.h:206:15
+    #7 0xde9006 in dev::solidity::TypeChecker::visit(dev::solidity::ContractDefinition const&) /home/hongxu/FOT/solidity-clang/libsolidity/analysis/TypeChecker.cpp:135:7
+    #8 0xe2cd11 in dev::solidity::ContractDefinition::accept(dev::solidity::ASTConstVisitor&) const /home/hongxu/FOT/solidity-clang/libsolidity/ast/AST_accept.h:84:15
+    #9 0xde7d1a in dev::solidity::TypeChecker::checkTypeRequirements(dev::solidity::ASTNode const&) /home/hongxu/FOT/solidity-clang/libsolidity/analysis/TypeChecker.cpp:64:12
+    #10 0xc8de14 in dev::solidity::CompilerStack::analyze() /home/hongxu/FOT/solidity-clang/libsolidity/interface/CompilerStack.cpp:222:23
+    #11 0xc8ea85 in dev::solidity::CompilerStack::parseAndAnalyze() /home/hongxu/FOT/solidity-clang/libsolidity/interface/CompilerStack.cpp:297:20
+    #12 0xc8ec4f in dev::solidity::CompilerStack::compile() /home/hongxu/FOT/solidity-clang/libsolidity/interface/CompilerStack.cpp:311:8
+    #13 0xb5fde0 in dev::solidity::CommandLineInterface::processInput() /home/hongxu/FOT/solidity-clang/solc/CommandLineInterface.cpp:837:33
+    #14 0xba3929 in main /home/hongxu/FOT/solidity-clang/solc/main.cpp:59:11
+    #15 0x7f9c4d82bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #16 0xa5d239 in _start (/home/hongxu/FOT/solidity-clang/solc/solc+0xa5d239)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/solidity-clang/libsolidity/analysis/TypeChecker.cpp:1041:28 in (anonymous namespace)::createTupleDecl[abi:cxx11](std::vector<std::shared_ptr<dev::solidity::VariableDeclaration>, std::allocator<std::shared_ptr<dev::solidity::VariableDeclaration> > > const&)
+==23466==ABORTING
