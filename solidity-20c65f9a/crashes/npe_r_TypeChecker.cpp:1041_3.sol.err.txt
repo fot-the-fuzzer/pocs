@@ -1,8 +1,8 @@
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==23466==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x000000df8dd5 bp 0x7ffedc2eb0e0 sp 0x7ffedc2eafa0 T0)
-==23466==The signal is caused by a READ memory access.
-==23466==Hint: address points to the zero page.
+==30363==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x000000df8dd5 bp 0x7ffeaf4f0220 sp 0x7ffeaf4f00e0 T0)
+==30363==The signal is caused by a READ memory access.
+==30363==Hint: address points to the zero page.
     #0 0xdf8dd4 in (anonymous namespace)::createTupleDecl[abi:cxx11](std::vector<std::shared_ptr<dev::solidity::VariableDeclaration>, std::allocator<std::shared_ptr<dev::solidity::VariableDeclaration> > > const&) /home/hongxu/FOT/solidity-clang/libsolidity/analysis/TypeChecker.cpp:1041:28
     #1 0xdf89c1 in dev::solidity::TypeChecker::visit(dev::solidity::VariableDeclarationStatement const&) /home/hongxu/FOT/solidity-clang/libsolidity/analysis/TypeChecker.cpp:1246:36
     #2 0xe2ee3f in dev::solidity::VariableDeclarationStatement::accept(dev::solidity::ASTConstVisitor&) const /home/hongxu/FOT/solidity-clang/libsolidity/ast/AST_accept.h:593:15
@@ -18,9 +18,9 @@ AddressSanitizer:DEADLYSIGNAL
     #12 0xc8ec4f in dev::solidity::CompilerStack::compile() /home/hongxu/FOT/solidity-clang/libsolidity/interface/CompilerStack.cpp:311:8
     #13 0xb5fde0 in dev::solidity::CommandLineInterface::processInput() /home/hongxu/FOT/solidity-clang/solc/CommandLineInterface.cpp:837:33
     #14 0xba3929 in main /home/hongxu/FOT/solidity-clang/solc/main.cpp:59:11
-    #15 0x7f9c4d82bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #15 0x7f0544d4eb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
     #16 0xa5d239 in _start (/home/hongxu/FOT/solidity-clang/solc/solc+0xa5d239)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/solidity-clang/libsolidity/analysis/TypeChecker.cpp:1041:28 in (anonymous namespace)::createTupleDecl[abi:cxx11](std::vector<std::shared_ptr<dev::solidity::VariableDeclaration>, std::allocator<std::shared_ptr<dev::solidity::VariableDeclaration> > > const&)
-==23466==ABORTING
+==30363==ABORTING

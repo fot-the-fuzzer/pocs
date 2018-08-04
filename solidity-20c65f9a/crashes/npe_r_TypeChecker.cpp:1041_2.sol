@@ -1,5 +1,5 @@
 contract C {
     function f() {
-        var (a, b) = (2- "troi");
+        var (a, b) = (1> "troi");
     }
 }
