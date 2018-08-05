@@ -1,0 +1,1 @@
+program G{version R{l J(b)=0;s T(m)=0;i K(d)=4;c P(c)=0;}=0;

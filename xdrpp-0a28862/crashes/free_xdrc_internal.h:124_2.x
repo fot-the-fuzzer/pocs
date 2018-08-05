@@ -1,0 +1,1 @@
+program G{version R{l T(b)=0;}=0;version R{b P(b)=6;s T(d)=0;}=0;

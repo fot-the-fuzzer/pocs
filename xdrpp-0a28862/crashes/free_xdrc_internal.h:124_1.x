@@ -1,0 +1,1 @@
+program G{version R{o O(d)=7;p P(b)=0;}=0;

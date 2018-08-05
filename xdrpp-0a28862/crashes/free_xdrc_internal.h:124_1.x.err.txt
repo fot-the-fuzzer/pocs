@@ -1,0 +1,42 @@
+free_xdrc_internal.h:124_1.x:2: syntax error
+=================================================================
+==15829==ERROR: AddressSanitizer: attempting free on address which was not malloc()-ed: 0x6100000000f0 in thread T0
+    #0 0x5174f8 in operator delete(void*) (/home/hongxu/FOT/xdrpp-clang/install/bin/xdrc+0x5174f8)
+    #1 0x55c1a2 in rpc_proc::~rpc_proc() /home/hongxu/FOT/xdrpp-clang/./xdrc/xdrc_internal.h:124:8
+    #2 0x55c174 in void std::_Destroy<rpc_proc>(rpc_proc*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:98:19
+    #3 0x55c13e in void std::_Destroy_aux<false>::__destroy<rpc_proc*>(rpc_proc*, rpc_proc*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:108:6
+    #4 0x55af8c in void std::_Destroy<rpc_proc*>(rpc_proc*, rpc_proc*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:136:7
+    #5 0x55c460 in void std::_Destroy<rpc_proc*, rpc_proc>(rpc_proc*, rpc_proc*, std::allocator<rpc_proc>&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:206:7
+    #6 0x55c3ef in std::vector<rpc_proc, std::allocator<rpc_proc> >::~vector() /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_vector.h:567:2
+    #7 0x55c354 in vec<rpc_proc>::~vec() /home/hongxu/FOT/xdrpp-clang/./xdrc/xdrc_internal.h:28:29
+    #8 0x55c322 in rpc_vers::~rpc_vers() /home/hongxu/FOT/xdrpp-clang/./xdrc/xdrc_internal.h:131:8
+    #9 0x55c2f4 in void std::_Destroy<rpc_vers>(rpc_vers*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:98:19
+    #10 0x55c2be in void std::_Destroy_aux<false>::__destroy<rpc_vers*>(rpc_vers*, rpc_vers*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:108:6
+    #11 0x559b6c in void std::_Destroy<rpc_vers*>(rpc_vers*, rpc_vers*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:136:7
+    #12 0x55ccf0 in void std::_Destroy<rpc_vers*, rpc_vers>(rpc_vers*, rpc_vers*, std::allocator<rpc_vers>&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:206:7
+    #13 0x55cc7f in std::vector<rpc_vers, std::allocator<rpc_vers> >::~vector() /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_vector.h:567:2
+    #14 0x55cbe4 in vec<rpc_vers>::~vec() /home/hongxu/FOT/xdrpp-clang/./xdrc/xdrc_internal.h:28:29
+    #15 0x55cbb2 in rpc_program::~rpc_program() /home/hongxu/FOT/xdrpp-clang/./xdrc/xdrc_internal.h:137:8
+    #16 0x55850c in union_entry<rpc_program>::~union_entry() /home/hongxu/FOT/xdrpp-clang/xdrc/union.h:124:28
+    #17 0x5534cd in union_entry_base::destroy() volatile /home/hongxu/FOT/xdrpp-clang/xdrc/union.h:111:35
+    #18 0x55f834 in rpc_sym::~rpc_sym() /home/hongxu/FOT/xdrpp-clang/./xdrc/xdrc_internal.h:160:23
+    #19 0x55f804 in void std::_Destroy<rpc_sym>(rpc_sym*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:98:19
+    #20 0x55f7ce in void std::_Destroy_aux<false>::__destroy<rpc_sym*>(rpc_sym*, rpc_sym*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:108:6
+    #21 0x55f78c in void std::_Destroy<rpc_sym*>(rpc_sym*, rpc_sym*) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:136:7
+    #22 0x55f640 in void std::_Destroy<rpc_sym*, rpc_sym>(rpc_sym*, rpc_sym*, std::allocator<rpc_sym>&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_construct.h:206:7
+    #23 0x55f5cf in std::vector<rpc_sym, std::allocator<rpc_sym> >::~vector() /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_vector.h:567:2
+    #24 0x553184 in vec<rpc_sym>::~vec() /home/hongxu/FOT/xdrpp-clang/./xdrc/xdrc_internal.h:28:29
+    #25 0x7f24c4709040 in __run_exit_handlers /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:108
+    #26 0x7f24c4709139 in exit /build/glibc-OTsEL5/glibc-2.27/stdlib/exit.c:139
+    #27 0x544fbb in yyerror(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) /home/hongxu/FOT/xdrpp-clang/xdrc/scan.ll:88:3
+    #28 0x54f07a in yyparse() /home/hongxu/FOT/xdrpp-clang/xdrc/parse.cc:1976:7
+    #29 0x51c875 in main /home/hongxu/FOT/xdrpp-clang/xdrc/xdrc.cc:204:3
+    #30 0x7f24c46e7b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #31 0x41e269 in _start (/home/hongxu/FOT/xdrpp-clang/install/bin/xdrc+0x41e269)
+
+0x6100000000f0 is located 176 bytes inside of 192-byte region [0x610000000040,0x610000000100)
+allocated by thread T0 here:
+    #0 0x516780 in operator new(unsigned long) (/home/hongxu/FOT/xdrpp-clang/install/bin/xdrc+0x516780)
+
+SUMMARY: AddressSanitizer: bad-free (/home/hongxu/FOT/xdrpp-clang/install/bin/xdrc+0x5174f8) in operator delete(void*)
+==15829==ABORTING
