@@ -1,0 +1,13 @@
+Criteria to confirm it is a crash: special commands lead to crash, while driver does not capture that
+
+# swiftc -parse $FILE
+assert_SourceMgr.cpp:299_1.swift
+
+# swiftc -ast-dump $FILE
+read_Types.h:2875_1.swift
+read_Types.h:2875_2.swift
+assert_Type.cpp:1165_1.swift
+
+# swiftc -emit-bc $FILE
+assert_Casting.h:255_1.swift
+assert_GenericSignature.cpp:974_1.swift
