@@ -1,0 +1,550 @@
+28870-swift-associatedtypedecl-getoverriddendecls-const.swift:1:14: error: type alias is missing an assigned type; use 'associatedtype' to define an associated type requirement
+protocol A:a{typealias a}protocol a:A{typealias a
+             ^~~~~~~~~
+             associatedtype
+28870-swift-associatedtypedecl-getoverriddendecls-const.swift:1:26: error: consecutive statements on a line must be separated by ';'
+protocol A:a{typealias a}protocol a:A{typealias a
+                         ^
+                         ;
+28870-swift-associatedtypedecl-getoverriddendecls-const.swift:1:39: error: type alias is missing an assigned type; use 'associatedtype' to define an associated type requirement
+protocol A:a{typealias a}protocol a:A{typealias a
+                                      ^~~~~~~~~
+                                      associatedtype
+28870-swift-associatedtypedecl-getoverriddendecls-const.swift:2:8: error: expected '{' in class
+class a
+       ^
+28870-swift-associatedtypedecl-getoverriddendecls-const.swift:3:1: error: expected '}' in protocol
+
+^
+28870-swift-associatedtypedecl-getoverriddendecls-const.swift:1:38: note: to match this opening '{'
+protocol A:a{typealias a}protocol a:A{typealias a
+                                     ^
+#0 0x000000000088b4d1 __interceptor_backtrace.part.117 (/home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift+0x88b4d1)
+#1 0x000000001a25eaad llvm::sys::PrintStackTrace(llvm::raw_ostream&) /home/hongxu/FOT/SWIFT/llvm/lib/Support/Unix/Signals.inc:487:13
+#2 0x000000001a25eaad PrintStackTraceSignalHandler(void*) /home/hongxu/FOT/SWIFT/llvm/lib/Support/Unix/Signals.inc:550:0
+#3 0x000000001a25046a llvm::sys::RunSignalHandlers() /home/hongxu/FOT/SWIFT/llvm/lib/Support/Signals.cpp:68:18
+#4 0x000000001a25f49f SignalHandler(int) /home/hongxu/FOT/SWIFT/llvm/lib/Support/Unix/Signals.inc:340:3
+#5 0x00007ff5257a7890 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x12890)
+#6 0x00000000084fc838 llvm::PointerIntPair<void*, 1u, bool, llvm::PointerUnionUIntTraits<swift::ValueDecl*, llvm::SmallVector<swift::ValueDecl*, 4u>*>, llvm::PointerIntPairInfo<void*, 1u, llvm::PointerUnionUIntTraits<swift::ValueDecl*, llvm::SmallVector<swift::ValueDecl*, 4u>*> > >::getAddrOfPointer() /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/PointerIntPair.h:82:5
+#7 0x00000000084fc838 llvm::PointerUnion<swift::ValueDecl*, llvm::SmallVector<swift::ValueDecl*, 4u>*>::getAddrOfPtr1() /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/PointerUnion.h:162:0
+#8 0x00000000084fc838 llvm::TinyPtrVector<swift::ValueDecl*>::begin() /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/TinyPtrVector.h:178:0
+#9 0x00000000084fc838 swift::ValueDecl** llvm::TinyPtrVector<swift::ValueDecl*>::insert<swift::ValueDecl* const*>(swift::ValueDecl**, swift::ValueDecl* const*, swift::ValueDecl* const*) /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/TinyPtrVector.h:323:0
+#10 0x00000000084fc282 llvm::Optional<llvm::TinyPtrVector<swift::ValueDecl*> >::Optional(llvm::TinyPtrVector<swift::ValueDecl*>&&) /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/Optional.h:47:21
+#11 0x00000000084fc282 swift::OverriddenDeclsRequest::getCachedResult() const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTContext.cpp:1610:0
+#12 0x00000000089f6ed5 swift::AssociatedTypeDecl::getOverriddenDecls() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3072:29
+#13 0x00000000089f8e46 llvm::PointerIntPair<void*, 1u, bool, llvm::PointerUnionUIntTraits<swift::AssociatedTypeDecl*, llvm::SmallVector<swift::AssociatedTypeDecl*, 4u>*>, llvm::PointerIntPairInfo<void*, 1u, llvm::PointerUnionUIntTraits<swift::AssociatedTypeDecl*, llvm::SmallVector<swift::AssociatedTypeDecl*, 4u>*> > >::getPointer() const /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/PointerIntPair.h:56:58
+#14 0x00000000089f8e46 llvm::PointerUnion<swift::AssociatedTypeDecl*, llvm::SmallVector<swift::AssociatedTypeDecl*, 4u>*>::isNull() const /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/PointerUnion.h:117:0
+#15 0x00000000089f8e46 llvm::TinyPtrVector<swift::AssociatedTypeDecl*>::empty() const /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/TinyPtrVector.h:157:0
+#16 0x00000000089f8e46 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3089:0
+#17 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#18 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#19 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#20 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#21 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#22 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#23 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#24 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#25 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#26 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#27 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#28 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#29 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#30 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#31 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#32 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#33 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#34 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#35 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#36 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#37 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#38 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#39 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#40 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#41 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#42 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#43 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#44 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#45 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#46 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#47 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#48 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#49 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#50 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#51 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#52 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#53 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#54 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#55 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#56 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#57 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#58 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#59 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#60 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#61 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#62 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#63 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#64 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#65 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#66 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#67 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#68 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#69 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#70 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#71 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#72 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#73 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#74 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#75 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#76 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#77 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#78 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#79 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#80 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#81 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#82 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#83 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#84 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#85 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#86 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#87 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#88 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#89 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#90 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#91 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#92 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#93 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#94 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#95 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#96 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#97 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#98 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#99 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#100 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#101 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#102 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#103 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#104 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#105 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#106 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#107 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#108 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#109 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#110 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#111 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#112 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#113 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#114 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#115 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#116 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#117 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#118 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#119 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#120 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#121 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#122 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#123 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#124 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#125 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#126 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#127 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#128 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#129 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#130 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#131 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#132 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#133 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#134 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#135 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#136 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#137 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#138 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#139 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#140 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#141 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#142 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#143 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#144 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#145 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#146 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#147 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#148 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#149 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#150 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#151 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#152 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#153 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#154 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#155 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#156 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#157 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#158 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#159 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#160 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#161 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#162 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#163 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#164 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#165 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#166 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#167 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#168 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#169 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#170 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#171 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#172 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#173 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#174 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#175 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#176 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#177 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#178 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#179 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#180 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#181 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#182 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#183 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#184 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#185 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#186 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#187 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#188 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#189 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#190 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#191 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#192 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#193 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#194 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#195 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#196 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#197 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#198 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#199 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#200 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#201 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#202 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#203 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#204 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#205 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#206 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#207 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#208 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#209 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#210 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#211 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#212 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#213 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#214 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#215 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#216 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#217 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#218 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#219 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#220 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#221 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#222 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#223 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#224 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#225 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#226 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#227 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#228 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#229 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#230 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#231 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#232 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#233 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#234 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#235 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#236 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#237 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#238 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#239 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#240 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#241 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#242 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#243 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#244 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#245 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#246 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#247 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#248 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#249 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#250 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#251 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#252 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#253 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#254 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#255 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#256 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#257 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#258 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#259 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#260 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#261 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#262 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+#263 0x00000000089f90b5 swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+Stack dump:
+0.	Program arguments: /home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift -frontend -typecheck -primary-file 28870-swift-associatedtypedecl-getoverriddendecls-const.swift -target x86_64-unknown-linux-gnu -disable-objc-interop -module-name main 
+1.	While type-checking 'A' at 28870-swift-associatedtypedecl-getoverriddendecls-const.swift:1:1
+2.	While validating 'A' at 28870-swift-associatedtypedecl-getoverriddendecls-const.swift:1:1
+3.	While validating 'a' at 28870-swift-associatedtypedecl-getoverriddendecls-const.swift:2:1
+4.	While validating 'a' at 28870-swift-associatedtypedecl-getoverriddendecls-const.swift:1:26
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==23674==ERROR: AddressSanitizer: stack-overflow on address 0x7ffe1cc23fc8 (pc 0x0000084fc838 bp 0x7ffe1cc240b0 sp 0x7ffe1cc23fc8 T0)
+    #0 0x84fc837 in llvm::PointerIntPair<void*, 1u, bool, llvm::PointerUnionUIntTraits<swift::ValueDecl*, llvm::SmallVector<swift::ValueDecl*, 4u>*>, llvm::PointerIntPairInfo<void*, 1u, llvm::PointerUnionUIntTraits<swift::ValueDecl*, llvm::SmallVector<swift::ValueDecl*, 4u>*> > >::getAddrOfPointer() /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/PointerIntPair.h:82:5
+    #1 0x84fc837 in llvm::PointerUnion<swift::ValueDecl*, llvm::SmallVector<swift::ValueDecl*, 4u>*>::getAddrOfPtr1() /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/PointerUnion.h:162
+    #2 0x84fc837 in llvm::TinyPtrVector<swift::ValueDecl*>::begin() /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/TinyPtrVector.h:178
+    #3 0x84fc837 in swift::ValueDecl** llvm::TinyPtrVector<swift::ValueDecl*>::insert<swift::ValueDecl* const*>(swift::ValueDecl**, swift::ValueDecl* const*, swift::ValueDecl* const*) /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/TinyPtrVector.h:323
+    #4 0x84fc281 in swift::OverriddenDeclsRequest::getCachedResult() const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTContext.cpp:1608:14
+    #5 0x89f6ed4 in swift::AssociatedTypeDecl::getOverriddenDecls() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3072:29
+    #6 0x89f8e45 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3085:21
+    #7 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #8 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #9 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #10 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #11 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #12 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #13 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #14 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #15 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #16 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #17 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #18 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #19 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #20 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #21 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #22 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #23 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #24 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #25 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #26 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #27 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #28 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #29 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #30 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #31 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #32 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #33 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #34 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #35 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #36 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #37 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #38 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #39 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #40 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #41 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #42 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #43 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #44 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #45 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #46 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #47 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #48 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #49 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #50 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #51 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #52 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #53 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #54 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #55 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #56 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #57 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #58 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #59 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #60 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #61 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #62 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #63 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #64 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #65 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #66 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #67 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #68 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #69 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #70 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #71 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #72 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #73 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #74 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #75 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #76 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #77 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #78 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #79 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #80 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #81 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #82 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #83 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #84 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #85 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #86 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #87 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #88 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #89 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #90 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #91 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #92 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #93 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #94 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #95 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #96 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #97 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #98 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #99 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #100 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #101 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #102 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #103 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #104 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #105 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #106 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #107 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #108 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #109 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #110 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #111 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #112 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #113 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #114 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #115 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #116 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #117 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #118 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #119 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #120 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #121 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #122 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #123 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #124 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #125 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #126 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #127 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #128 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #129 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #130 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #131 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #132 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #133 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #134 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #135 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #136 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #137 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #138 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #139 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #140 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #141 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #142 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #143 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #144 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #145 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #146 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #147 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #148 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #149 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #150 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #151 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #152 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #153 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #154 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #155 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #156 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #157 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #158 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #159 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #160 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #161 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #162 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #163 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #164 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #165 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #166 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #167 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #168 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #169 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #170 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #171 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #172 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #173 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #174 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #175 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #176 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #177 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #178 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #179 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #180 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #181 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #182 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #183 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #184 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #185 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #186 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #187 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #188 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #189 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #190 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #191 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #192 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #193 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #194 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #195 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #196 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #197 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #198 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #199 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #200 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #201 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #202 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #203 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #204 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #205 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #206 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #207 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #208 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #209 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #210 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #211 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #212 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #213 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #214 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #215 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #216 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #217 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #218 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #219 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #220 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #221 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #222 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #223 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #224 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #225 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #226 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #227 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #228 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #229 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #230 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #231 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #232 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #233 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #234 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #235 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #236 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #237 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #238 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #239 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #240 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #241 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #242 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #243 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #244 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #245 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #246 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #247 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #248 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #249 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #250 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #251 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+    #252 0x89f90b4 in swift::AssociatedTypeDecl::getAssociatedTypeAnchor() const /home/hongxu/FOT/SWIFT/swift/lib/AST/Decl.cpp:3094:30
+
+SUMMARY: AddressSanitizer: stack-overflow /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/PointerIntPair.h:82:5 in llvm::PointerIntPair<void*, 1u, bool, llvm::PointerUnionUIntTraits<swift::ValueDecl*, llvm::SmallVector<swift::ValueDecl*, 4u>*>, llvm::PointerIntPairInfo<void*, 1u, llvm::PointerUnionUIntTraits<swift::ValueDecl*, llvm::SmallVector<swift::ValueDecl*, 4u>*> > >::getAddrOfPointer()
+==23674==ABORTING

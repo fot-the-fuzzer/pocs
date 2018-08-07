@@ -1,0 +1,52 @@
+Reading symbols from /home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift-demangle...done.
+(gdb) run '$SRd80000000__%'
+Starting program: /home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift-demangle '$SRd80000000__%'
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+swift-demangle: /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:369: void swift::Demangle::CharVector::append(int, swift::Demangle::NodeFactory &): Assertion `Length > 0 && Length < MaxIntPrintSize' failed.
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51      ../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+(gdb) bt
+#0  __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6264801 in __GI_abort () at abort.c:79
+#2  0x00007ffff625439a in __assert_fail_base (fmt=0x7ffff63db7d8 "%s%s%s:%u: %s%sAssertion `%s' failed.\n%n", assertion=assertion@entry=0xa14e20 <.str.16> "Length > 0 && Length < MaxIntPrintSize", 
+    file=file@entry=0xa149c0 <.str.8> "/home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp", line=line@entry=369, 
+    function=function@entry=0xa14e80 <__PRETTY_FUNCTION__._ZN5swift8Demangle10CharVector6appendEiRNS0_11NodeFactoryE> "void swift::Demangle::CharVector::append(int, swift::Demangle::NodeFactory &)") at assert.c:92
+#3  0x00007ffff6254412 in __GI___assert_fail (assertion=0xa14e20 <.str.16> "Length > 0 && Length < MaxIntPrintSize", file=0xa149c0 <.str.8> "/home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp", line=369, 
+    function=0xa14e80 <__PRETTY_FUNCTION__._ZN5swift8Demangle10CharVector6appendEiRNS0_11NodeFactoryE> "void swift::Demangle::CharVector::append(int, swift::Demangle::NodeFactory &)") at assert.c:101
+#4  0x000000000053f678 in swift::Demangle::CharVector::append (this=0x7fffffffb140, Number=<optimized out>, Factory=...) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:369
+#5  0x000000000058c6bb in swift::Demangle::Demangler::getDependentGenericParamType (this=<optimized out>, depth=80000002, index=<optimized out>) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:1660
+#6  0x0000000000568e00 in swift::Demangle::Demangler::demangleGenericRequirement (this=0x616000000080) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:2570
+#7  0x0000000000540fa8 in swift::Demangle::Demangler::parseAndPushNodes (this=<optimized out>) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:452
+#8  swift::Demangle::Demangler::demangleSymbol (this=<optimized out>, MangledName=...) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:410
+#9  0x000000000052a827 in demangle (os=..., name=..., DCtx=..., options=...) at /home/hongxu/FOT/SWIFT/swift/tools/swift-demangle/swift-demangle.cpp:93
+#10 0x0000000000527c7f in main (argc=<optimized out>, argv=<optimized out>) at /home/hongxu/FOT/SWIFT/swift/tools/swift-demangle/swift-demangle.cpp:219
+(gdb) run '$SRd40000000__%'
+The program being debugged has been started already.
+Start it from the beginning? (y or n) y
+Starting program: /home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift-demangle '$SRd40000000__%'
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+swift-demangle: /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:369: void swift::Demangle::CharVector::append(int, swift::Demangle::NodeFactory &): Assertion `Length > 0 && Length < MaxIntPrintSize' failed.
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51      ../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+(gdb) bt
+#0  __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6264801 in __GI_abort () at abort.c:79
+#2  0x00007ffff625439a in __assert_fail_base (fmt=0x7ffff63db7d8 "%s%s%s:%u: %s%sAssertion `%s' failed.\n%n", assertion=assertion@entry=0xa14e20 <.str.16> "Length > 0 && Length < MaxIntPrintSize", 
+    file=file@entry=0xa149c0 <.str.8> "/home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp", line=line@entry=369, 
+    function=function@entry=0xa14e80 <__PRETTY_FUNCTION__._ZN5swift8Demangle10CharVector6appendEiRNS0_11NodeFactoryE> "void swift::Demangle::CharVector::append(int, swift::Demangle::NodeFactory &)") at assert.c:92
+#3  0x00007ffff6254412 in __GI___assert_fail (assertion=0xa14e20 <.str.16> "Length > 0 && Length < MaxIntPrintSize", file=0xa149c0 <.str.8> "/home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp", line=369, 
+    function=0xa14e80 <__PRETTY_FUNCTION__._ZN5swift8Demangle10CharVector6appendEiRNS0_11NodeFactoryE> "void swift::Demangle::CharVector::append(int, swift::Demangle::NodeFactory &)") at assert.c:101
+#4  0x000000000053f678 in swift::Demangle::CharVector::append (this=0x7fffffffb140, Number=<optimized out>, Factory=...) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:369
+#5  0x000000000058c6bb in swift::Demangle::Demangler::getDependentGenericParamType (this=<optimized out>, depth=40000002, index=<optimized out>) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:1660
+#6  0x0000000000568e00 in swift::Demangle::Demangler::demangleGenericRequirement (this=0x616000000080) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:2570
+#7  0x0000000000540fa8 in swift::Demangle::Demangler::parseAndPushNodes (this=<optimized out>) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:452
+#8  swift::Demangle::Demangler::demangleSymbol (this=<optimized out>, MangledName=...) at /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:410
+#9  0x000000000052a827 in demangle (os=..., name=..., DCtx=..., options=...) at /home/hongxu/FOT/SWIFT/swift/tools/swift-demangle/swift-demangle.cpp:93
+#10 0x0000000000527c7f in main (argc=<optimized out>, argv=<optimized out>) at /home/hongxu/FOT/SWIFT/swift/tools/swift-demangle/swift-demangle.cpp:219
+(gdb)
