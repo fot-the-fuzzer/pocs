@@ -1,0 +1,91 @@
+read_Types.h:2875_0.swift:1:10: error: expected expression in list of expressions
+let h={0(
+         ^
+read_Types.h:2875_0.swift:1:10: error: expected '}' at end of closure
+let h={0(
+         ^
+read_Types.h:2875_0.swift:1:7: note: to match this opening '{'
+let h={0(
+      ^
+read_Types.h:2875_0.swift:1:9: error: cannot call value of non-function type 'Int'
+let h={0(
+       ~^
+        
+(source_file "read_Types.h:2875_0.swift"
+  (top_level_code_decl range=[read_Types.h:2875_0.swift:1:1 - line:1:9]
+    (brace_stmt implicit range=[read_Types.h:2875_0.swift:1:1 - line:1:9]
+      (pattern_binding_decl range=[read_Types.h:2875_0.swift:1:1 - line:1:9]
+        (pattern_named type='<<error type>>' 'h')
+        (closure_expr type='<<error type>>' location=read_Types.h:2875_0.swift:1:7 range=[read_Types.h:2875_0.swift:1:7 - line:1:9] discriminator=0#0 0x000000000088b4d1 __interceptor_backtrace.part.117 (/home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift+0x88b4d1)
+#1 0x000000001a25eaad llvm::sys::PrintStackTrace(llvm::raw_ostream&) /home/hongxu/FOT/SWIFT/llvm/lib/Support/Unix/Signals.inc:487:13
+#2 0x000000001a25eaad PrintStackTraceSignalHandler(void*) /home/hongxu/FOT/SWIFT/llvm/lib/Support/Unix/Signals.inc:550:0
+#3 0x000000001a25046a llvm::sys::RunSignalHandlers() /home/hongxu/FOT/SWIFT/llvm/lib/Support/Signals.cpp:68:18
+#4 0x000000001a25f49f SignalHandler(int) /home/hongxu/FOT/SWIFT/llvm/lib/Support/Unix/Signals.inc:340:3
+#5 0x00007f503fd47890 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x12890)
+#6 0x0000000008713324 (anonymous namespace)::PrintExpr::printClosure(swift::AbstractClosureExpr*, char const*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:2324:11
+#7 0x000000000863d73c llvm::PointerIntPair<swift::BraceStmt*, 1u, bool, llvm::PointerLikeTypeTraits<swift::BraceStmt*>, llvm::PointerIntPairInfo<swift::BraceStmt*, 1u, llvm::PointerLikeTypeTraits<swift::BraceStmt*> > >::getInt() const /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/PointerIntPair.h:58:57
+#8 0x000000000863d73c swift::ClosureExpr::hasSingleExpressionBody() const /home/hongxu/FOT/SWIFT/swift/include/swift/AST/Expr.h:3625:0
+#9 0x000000000863d73c (anonymous namespace)::PrintExpr::visitClosureExpr(swift::ClosureExpr*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:2332:0
+#10 0x000000000863d73c swift::ASTVisitor<(anonymous namespace)::PrintExpr, void, void, void, void, void, void>::visit(swift::Expr*) /home/hongxu/FOT/SWIFT/swift/include/swift/AST/ExprNodes.def:121:0
+#11 0x00000000085f7a42 swift::Expr::print(llvm::raw_ostream&, llvm::function_ref<swift::Type (swift::Expr const*)>, llvm::function_ref<swift::Type (swift::TypeLoc const&)>, unsigned int) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:2672:8
+#12 0x00000000085f7a42 swift::Expr::print(llvm::raw_ostream&, unsigned int) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:2680:0
+#13 0x00000000085f7a42 (anonymous namespace)::PrintDecl::printRec(swift::Expr*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:575:0
+#14 0x00000000085f7a42 (anonymous namespace)::PrintDecl::visitPatternBindingDecl(swift::PatternBindingDecl*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:910:0
+#15 0x00000000085f7a42 swift::ASTVisitor<(anonymous namespace)::PrintDecl, void, void, void, void, void, void>::visit(swift::Decl*) /home/hongxu/FOT/SWIFT/swift/include/swift/AST/DeclNodes.def:184:0
+#16 0x00000000085f0e66 swift::Decl::dump(llvm::raw_ostream&, unsigned int) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1254:25
+#17 0x00000000087065f6 (anonymous namespace)::PrintStmt::printASTNodes(llvm::ArrayRef<swift::ASTNode> const&) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1400:31
+#18 0x0000000008628677 (anonymous namespace)::PrintStmt::visitBraceStmt(swift::BraceStmt*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1473:24
+#19 0x0000000008628677 swift::ASTVisitor<(anonymous namespace)::PrintStmt, void, void, void, void, void, void>::visit(swift::Stmt*) /home/hongxu/FOT/SWIFT/swift/include/swift/AST/StmtNodes.def:47:0
+#20 0x00000000085ff536 swift::Stmt::print(llvm::raw_ostream&, swift::ASTContext const*, unsigned int) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1679:30
+#21 0x00000000085ff536 (anonymous namespace)::PrintDecl::printRec(swift::Stmt*, swift::ASTContext const&) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:576:0
+#22 0x00000000085ff536 (anonymous namespace)::PrintDecl::visitTopLevelCodeDecl(swift::TopLevelCodeDecl*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1100:0
+#23 0x00000000085ff536 swift::ASTVisitor<(anonymous namespace)::PrintDecl, void, void, void, void, void, void>::visit(swift::Decl*) /home/hongxu/FOT/SWIFT/swift/include/swift/AST/DeclNodes.def:178:0
+#24 0x000000000861827f (anonymous namespace)::PrintDecl::printRec(swift::Decl*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:574:30
+#25 0x000000000861827f (anonymous namespace)::PrintDecl::visitSourceFile(swift::SourceFile const&) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:805:0
+#26 0x000000000861827f swift::SourceFile::dump(llvm::raw_ostream&) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1366:0
+#27 0x0000000000b9456e dumpASTIfNeeded(swift::CompilerInvocation&, swift::CompilerInstance&) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:758:18
+#28 0x0000000000b9456e performCompile(swift::CompilerInstance&, swift::CompilerInvocation&, llvm::ArrayRef<char const*>, int&, swift::FrontendObserver*, swift::UnifiedStatsReporter*) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:971:0
+#29 0x0000000000b83c4f swift::performFrontend(llvm::ArrayRef<char const*>, char const*, void*, swift::FrontendObserver*) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:1857:5
+#30 0x0000000000915c59 run_driver(llvm::StringRef, llvm::ArrayRef<char const*>) /home/hongxu/FOT/SWIFT/swift/tools/driver/driver.cpp:122:14
+#31 0x0000000000910973 main /home/hongxu/FOT/SWIFT/swift/tools/driver/driver.cpp:251:12
+#32 0x00007f503e18db97 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:344:0
+#33 0x0000000000808efa _start (/home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift+0x808efa)
+Stack dump:
+0.	Program arguments: /home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift -frontend -dump-ast -primary-file read_Types.h:2875_0.swift -target x86_64-unknown-linux-gnu -disable-objc-interop -module-name main 
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==13606==ERROR: AddressSanitizer: SEGV on unknown address 0x00000000000b (pc 0x000008713324 bp 0x7fff5f7cd9b0 sp 0x7fff5f7cd960 T0)
+==13606==The signal is caused by a READ memory access.
+==13606==Hint: address points to the zero page.
+    #0 0x8713323 in swift::AnyFunctionType::getExtInfo() const /home/hongxu/FOT/SWIFT/swift/include/swift/AST/Types.h:2875:41
+    #1 0x8713323 in (anonymous namespace)::PrintExpr::printClosure(swift::AbstractClosureExpr*, char const*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:2324
+    #2 0x863d73b in (anonymous namespace)::PrintExpr::visitClosureExpr(swift::ClosureExpr*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:2331:5
+    #3 0x863d73b in swift::ASTVisitor<(anonymous namespace)::PrintExpr, void, void, void, void, void, void>::visit(swift::Expr*) /home/hongxu/FOT/SWIFT/swift/include/swift/AST/ExprNodes.def:121
+    #4 0x85f7a41 in swift::Expr::print(llvm::raw_ostream&, llvm::function_ref<swift::Type (swift::Expr const*)>, llvm::function_ref<swift::Type (swift::TypeLoc const&)>, unsigned int) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:2672:8
+    #5 0x85f7a41 in swift::Expr::print(llvm::raw_ostream&, unsigned int) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:2680
+    #6 0x85f7a41 in (anonymous namespace)::PrintDecl::printRec(swift::Expr*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:575
+    #7 0x85f7a41 in (anonymous namespace)::PrintDecl::visitPatternBindingDecl(swift::PatternBindingDecl*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:910
+    #8 0x85f7a41 in swift::ASTVisitor<(anonymous namespace)::PrintDecl, void, void, void, void, void, void>::visit(swift::Decl*) /home/hongxu/FOT/SWIFT/swift/include/swift/AST/DeclNodes.def:184
+    #9 0x85f0e65 in swift::Decl::dump(llvm::raw_ostream&, unsigned int) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1254:25
+    #10 0x87065f5 in (anonymous namespace)::PrintStmt::printRec(swift::Decl*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1400:31
+    #11 0x87065f5 in (anonymous namespace)::PrintStmt::printASTNodes(llvm::ArrayRef<swift::ASTNode> const&) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1484
+    #12 0x8628676 in (anonymous namespace)::PrintStmt::visitBraceStmt(swift::BraceStmt*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1472:5
+    #13 0x8628676 in swift::ASTVisitor<(anonymous namespace)::PrintStmt, void, void, void, void, void, void>::visit(swift::Stmt*) /home/hongxu/FOT/SWIFT/swift/include/swift/AST/StmtNodes.def:47
+    #14 0x85ff535 in swift::Stmt::print(llvm::raw_ostream&, swift::ASTContext const*, unsigned int) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1679:30
+    #15 0x85ff535 in (anonymous namespace)::PrintDecl::printRec(swift::Stmt*, swift::ASTContext const&) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:576
+    #16 0x85ff535 in (anonymous namespace)::PrintDecl::visitTopLevelCodeDecl(swift::TopLevelCodeDecl*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1100
+    #17 0x85ff535 in swift::ASTVisitor<(anonymous namespace)::PrintDecl, void, void, void, void, void, void>::visit(swift::Decl*) /home/hongxu/FOT/SWIFT/swift/include/swift/AST/DeclNodes.def:178
+    #18 0x861827e in (anonymous namespace)::PrintDecl::printRec(swift::Decl*) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:574:56
+    #19 0x861827e in (anonymous namespace)::PrintDecl::visitSourceFile(swift::SourceFile const&) /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:805
+    #20 0x861827e in swift::SourceFile::dump(llvm::raw_ostream&) const /home/hongxu/FOT/SWIFT/swift/lib/AST/ASTDumper.cpp:1366
+    #21 0xb9456d in dumpASTIfNeeded(swift::CompilerInvocation&, swift::CompilerInstance&) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:751:55
+    #22 0xb9456d in performCompile(swift::CompilerInstance&, swift::CompilerInvocation&, llvm::ArrayRef<char const*>, int&, swift::FrontendObserver*, swift::UnifiedStatsReporter*) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:971
+    #23 0xb83c4e in swift::performFrontend(llvm::ArrayRef<char const*>, char const*, void*, swift::FrontendObserver*) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:1857:5
+    #24 0x915c58 in run_driver(llvm::StringRef, llvm::ArrayRef<char const*>) /home/hongxu/FOT/SWIFT/swift/tools/driver/driver.cpp:122:14
+    #25 0x910972 in main /home/hongxu/FOT/SWIFT/swift/tools/driver/driver.cpp:251:12
+    #26 0x7f503e18db96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #27 0x808ef9 in _start (/home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift+0x808ef9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/SWIFT/swift/include/swift/AST/Types.h:2875:41 in swift::AnyFunctionType::getExtInfo() const
+==13606==ABORTING

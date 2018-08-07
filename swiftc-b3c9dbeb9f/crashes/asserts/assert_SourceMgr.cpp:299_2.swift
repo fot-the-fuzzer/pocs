@@ -1,1 +1,0 @@
-class 0<c where g=i

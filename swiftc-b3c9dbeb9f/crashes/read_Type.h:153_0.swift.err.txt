@@ -1,0 +1,94 @@
+read_Type.h:153_0.swift:1:10: error: expected '{' in class
+class C:P@objc protocol P{func f:a{}typealias a
+         ^
+read_Type.h:153_0.swift:1:33: error: expected '(' in argument list of function declaration
+class C:P@objc protocol P{func f:a{}typealias a
+                                ^
+read_Type.h:153_0.swift:1:33: error: expected '->' after function parameter tuple
+class C:P@objc protocol P{func f:a{}typealias a
+                                ^
+                                 -> 
+read_Type.h:153_0.swift:1:35: error: protocol methods must not have bodies
+class C:P@objc protocol P{func f:a{}typealias a
+                                  ^
+read_Type.h:153_0.swift:1:37: error: consecutive declarations on a line must be separated by ';'
+class C:P@objc protocol P{func f:a{}typealias a
+                                    ^
+                                    ;
+read_Type.h:153_0.swift:1:37: error: type alias is missing an assigned type; use 'associatedtype' to define an associated type requirement
+class C:P@objc protocol P{func f:a{}typealias a
+                                    ^~~~~~~~~
+                                    associatedtype
+read_Type.h:153_0.swift:2:1: error: expected '}' in protocol
+
+^
+read_Type.h:153_0.swift:1:26: note: to match this opening '{'
+class C:P@objc protocol P{func f:a{}typealias a
+                         ^
+read_Type.h:153_0.swift:1:47: error: associated type 'a' cannot be declared inside '@objc' protocol 'P'
+class C:P@objc protocol P{func f:a{}typealias a
+                                              ^
+#0 0x000000000088b4d1 __interceptor_backtrace.part.117 (/home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift+0x88b4d1)
+#1 0x000000001a25eaad llvm::sys::PrintStackTrace(llvm::raw_ostream&) /home/hongxu/FOT/SWIFT/llvm/lib/Support/Unix/Signals.inc:487:13
+#2 0x000000001a25eaad PrintStackTraceSignalHandler(void*) /home/hongxu/FOT/SWIFT/llvm/lib/Support/Unix/Signals.inc:550:0
+#3 0x000000001a25046a llvm::sys::RunSignalHandlers() /home/hongxu/FOT/SWIFT/llvm/lib/Support/Signals.cpp:68:18
+#4 0x000000001a25f49f SignalHandler(int) /home/hongxu/FOT/SWIFT/llvm/lib/Support/Unix/Signals.inc:340:3
+#5 0x00007f1510ce4890 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x12890)
+#6 0x000000000703b44d std::_Function_base::~_Function_base() /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:256:11
+#7 0x000000000703b44d swift::SubstOptions::~SubstOptions() /home/hongxu/FOT/SWIFT/swift/include/swift/AST/Type.h:153:0
+#8 0x000000000703b44d swift::ConformanceChecker::resolveWitnessViaLookup(swift::ValueDecl*) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:2682:0
+#9 0x0000000007025ee2 swift::ConformanceChecker::checkConformance(swift::MissingWitnessDiagnosisKind) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:3590:5
+#10 0x0000000007014c4f swift::MultiConformanceChecker::checkIndividualConformance(swift::NormalProtocolConformance*, bool) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:1651:10
+#11 0x0000000007006bfc swift::MultiConformanceChecker::checkAllConformances() /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:1271:5
+#12 0x000000000705c6e5 swift::TypeChecker::checkConformancesInContext(swift::DeclContext*, swift::IterableDeclContext*) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:4652:7
+#13 0x000000000722905e typeCheckFunctionsAndExternalDecls(swift::SourceFile&, swift::TypeChecker&) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeChecker.cpp:504:17
+#14 0x00000000072302e9 llvm::Optional<llvm::NamedRegionTimer>::reset() /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/Optional.h:113:9
+#15 0x00000000072302e9 llvm::Optional<llvm::NamedRegionTimer>::~Optional() /home/hongxu/FOT/SWIFT/llvm/include/llvm/ADT/Optional.h:56:0
+#16 0x00000000072302e9 swift::SharedTimer::~SharedTimer() /home/hongxu/FOT/SWIFT/swift/include/swift/Basic/Timer.h:23:0
+#17 0x00000000072302e9 swift::performTypeChecking(swift::SourceFile&, swift::TopLevelContext&, swift::OptionSet<swift::TypeCheckingFlags, unsigned int>, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeChecker.cpp:757:0
+#18 0x0000000005c6e490 swift::CompilerInstance::parseAndTypeCheckMainFileUpTo(swift::SourceFile::ASTStage_t, swift::PersistentParserState&, swift::DelayedParsingCallbacks*, swift::OptionSet<swift::TypeCheckingFlags, unsigned int>) /home/hongxu/FOT/SWIFT/swift/lib/Frontend/Frontend.cpp:836:9
+#19 0x0000000005c6533a swift::CompilerInstance::parseAndCheckTypesUpTo(swift::CompilerInstance::ImplicitImports const&, swift::SourceFile::ASTStage_t) /home/hongxu/FOT/SWIFT/swift/lib/Frontend/Frontend.cpp:687:3
+#20 0x0000000005c5ff0a swift::CompilerInstance::performSemaUpTo(swift::SourceFile::ASTStage_t) /home/hongxu/FOT/SWIFT/swift/lib/Frontend/Frontend.cpp:529:3
+#21 0x0000000000b9283b std::_Head_base<0ul, swift::ASTContext*, false>::_M_head(std::_Head_base<0ul, swift::ASTContext*, false> const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/tuple:163:60
+#22 0x0000000000b9283b std::_Tuple_impl<0ul, swift::ASTContext*, std::default_delete<swift::ASTContext> >::_M_head(std::_Tuple_impl<0ul, swift::ASTContext*, std::default_delete<swift::ASTContext> > const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/tuple:198:0
+#23 0x0000000000b9283b swift::ASTContext* const& std::__get_helper<0ul, swift::ASTContext*, std::default_delete<swift::ASTContext> >(std::_Tuple_impl<0ul, swift::ASTContext*, std::default_delete<swift::ASTContext> > const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/tuple:1309:0
+#24 0x0000000000b9283b std::tuple_element<0ul, std::tuple<swift::ASTContext*, std::default_delete<swift::ASTContext> > >::type const& std::get<0ul, swift::ASTContext*, std::default_delete<swift::ASTContext> >(std::tuple<swift::ASTContext*, std::default_delete<swift::ASTContext> > const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/tuple:1321:0
+#25 0x0000000000b9283b std::__uniq_ptr_impl<swift::ASTContext, std::default_delete<swift::ASTContext> >::_M_ptr() const /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/unique_ptr.h:150:0
+#26 0x0000000000b9283b std::unique_ptr<swift::ASTContext, std::default_delete<swift::ASTContext> >::get() const /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/unique_ptr.h:343:0
+#27 0x0000000000b9283b std::unique_ptr<swift::ASTContext, std::default_delete<swift::ASTContext> >::operator*() const /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/unique_ptr.h:329:0
+#28 0x0000000000b9283b swift::CompilerInstance::getASTContext() /home/hongxu/FOT/SWIFT/swift/include/swift/Frontend/Frontend.h:416:0
+#29 0x0000000000b9283b performCompile(swift::CompilerInstance&, swift::CompilerInvocation&, llvm::ArrayRef<char const*>, int&, swift::FrontendObserver*, swift::UnifiedStatsReporter*) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:937:0
+#30 0x0000000000b83c4f swift::performFrontend(llvm::ArrayRef<char const*>, char const*, void*, swift::FrontendObserver*) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:1857:5
+#31 0x0000000000915c59 run_driver(llvm::StringRef, llvm::ArrayRef<char const*>) /home/hongxu/FOT/SWIFT/swift/tools/driver/driver.cpp:122:14
+#32 0x0000000000910973 main /home/hongxu/FOT/SWIFT/swift/tools/driver/driver.cpp:251:12
+#33 0x00007f150f12ab97 __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:344:0
+#34 0x0000000000808efa _start (/home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift+0x808efa)
+Stack dump:
+0.	Program arguments: /home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift -frontend -typecheck -primary-file read_Type.h:153_0.swift -target x86_64-unknown-linux-gnu -disable-objc-interop -module-name main 
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==13920==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000008 (pc 0x00000703b44d bp 0x7ffc12d17230 sp 0x7ffc12d166a0 T0)
+==13920==The signal is caused by a READ memory access.
+==13920==Hint: address points to the zero page.
+    #0 0x703b44c in std::_Function_base::~_Function_base() /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:256:11
+    #1 0x703b44c in swift::SubstOptions::~SubstOptions() /home/hongxu/FOT/SWIFT/swift/include/swift/AST/Type.h:153
+    #2 0x703b44c in swift::ConformanceChecker::resolveWitnessViaLookup(swift::ValueDecl*) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:2682
+    #3 0x7025ee1 in swift::ConformanceChecker::checkConformance(swift::MissingWitnessDiagnosisKind) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:3590:13
+    #4 0x7014c4e in swift::MultiConformanceChecker::checkIndividualConformance(swift::NormalProtocolConformance*, bool) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:1648:26
+    #5 0x7006bfb in swift::MultiConformanceChecker::checkAllConformances() /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:1271:5
+    #6 0x705c6e4 in swift::TypeChecker::checkConformancesInContext(swift::DeclContext*, swift::IterableDeclContext*) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeCheckProtocol.cpp:4650:16
+    #7 0x722905d in typeCheckFunctionsAndExternalDecls(swift::SourceFile&, swift::TypeChecker&) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeChecker.cpp:508:12
+    #8 0x72302e8 in swift::performTypeChecking(swift::SourceFile&, swift::TopLevelContext&, swift::OptionSet<swift::TypeCheckingFlags, unsigned int>, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) /home/hongxu/FOT/SWIFT/swift/lib/Sema/TypeChecker.cpp:756:5
+    #9 0x5c6e48f in swift::CompilerInstance::parseAndTypeCheckMainFileUpTo(swift::SourceFile::ASTStage_t, swift::PersistentParserState&, swift::DelayedParsingCallbacks*, swift::OptionSet<swift::TypeCheckingFlags, unsigned int>) /home/hongxu/FOT/SWIFT/swift/lib/Frontend/Frontend.cpp:836:9
+    #10 0x5c65339 in swift::CompilerInstance::parseAndCheckTypesUpTo(swift::CompilerInstance::ImplicitImports const&, swift::SourceFile::ASTStage_t) /home/hongxu/FOT/SWIFT/swift/lib/Frontend/Frontend.cpp:683:5
+    #11 0x5c5ff09 in swift::CompilerInstance::performSemaUpTo(swift::SourceFile::ASTStage_t) /home/hongxu/FOT/SWIFT/swift/lib/Frontend/Frontend.cpp:529:3
+    #12 0xb9283a in performCompile(swift::CompilerInstance&, swift::CompilerInvocation&, llvm::ArrayRef<char const*>, int&, swift::FrontendObserver*, swift::UnifiedStatsReporter*) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:923:14
+    #13 0xb83c4e in swift::performFrontend(llvm::ArrayRef<char const*>, char const*, void*, swift::FrontendObserver*) /home/hongxu/FOT/SWIFT/swift/lib/FrontendTool/FrontendTool.cpp:1857:5
+    #14 0x915c58 in run_driver(llvm::StringRef, llvm::ArrayRef<char const*>) /home/hongxu/FOT/SWIFT/swift/tools/driver/driver.cpp:122:14
+    #15 0x910972 in main /home/hongxu/FOT/SWIFT/swift/tools/driver/driver.cpp:251:12
+    #16 0x7f150f12ab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #17 0x808ef9 in _start (/home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift+0x808ef9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:256:11 in std::_Function_base::~_Function_base()
+==13920==ABORTING

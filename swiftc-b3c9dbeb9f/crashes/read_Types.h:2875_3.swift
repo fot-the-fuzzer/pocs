@@ -1,1 +1,1 @@
-var:Int->Int={
+var:Int->Int={}
