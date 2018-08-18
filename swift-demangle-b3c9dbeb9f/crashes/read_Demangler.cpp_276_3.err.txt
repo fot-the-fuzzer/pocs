@@ -1,0 +1,17 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==17720==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000020 (pc 0x00000055e92c bp 0x7ffdb9079e70 sp 0x7ffdb9079cc0 T0)
+==17720==The signal is caused by a READ memory access.
+==17720==Hint: address points to the zero page.
+    #0 0x55e92b in swift::Demangle::Node::addChild(swift::Demangle::Node*, swift::Demangle::NodeFactory&) /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:276:22
+    #1 0x55e92b in swift::Demangle::Demangler::demangleBoundGenericType() /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:1253
+    #2 0x540fa7 in swift::Demangle::Demangler::parseAndPushNodes() /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:452:24
+    #3 0x540fa7 in swift::Demangle::Demangler::demangleSymbol(llvm::StringRef) /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:410
+    #4 0x52a826 in demangle(llvm::raw_ostream&, llvm::StringRef, swift::Demangle::Context&, swift::Demangle::DemangleOptions const&) /home/hongxu/FOT/SWIFT/swift/tools/swift-demangle/swift-demangle.cpp:93:47
+    #5 0x5291f9 in main /home/hongxu/FOT/SWIFT/swift/tools/swift-demangle/swift-demangle.cpp:186:7
+    #6 0x7f239462fb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x42a009 in _start (/home/hongxu/FOT/SWIFT/build/Ninja-RelWithDebInfoAssert+asan/swift-linux-x86_64/bin/swift-demangle+0x42a009)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/SWIFT/swift/lib/Demangling/Demangler.cpp:276:22 in swift::Demangle::Node::addChild(swift::Demangle::Node*, swift::Demangle::NodeFactory&)
+==17720==ABORTING
