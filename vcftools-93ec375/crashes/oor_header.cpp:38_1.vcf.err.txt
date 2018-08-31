@@ -1,0 +1,28 @@
+Reading symbols from /home/exp/FOT/vcftools/install/bin/vcftools...done.
+Starting program: /home/exp/FOT/vcftools/install/bin/vcftools --vcf oor_header.cpp:38_1.vcf
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf oor_header.cpp:38_1.vcf
+
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  basic_string::substr: __pos (which is 10) > this->size() (which is 9)
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6ec8801 in __GI_abort () at abort.c:79
+#2  0x00007ffff78bb8b7 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#3  0x00007ffff78c1a06 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#4  0x00007ffff78c1a41 in std::terminate() () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff78c1c74 in __cxa_throw () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007ffff78bd7b5 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#7  0x00007ffff79565b7 in std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::substr(unsigned long, unsigned long) const () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#8  0x0000000000448aa8 in header::parse_meta (this=0x75e730, line=Python Exception <class 'gdb.error'> There is no member named _M_dataplus.: 
+, line_index=@0x7fffffffb744: 0x1) at header.cpp:38
+#9  0x00000000004e35fe in vcf_file::read_header (this=0x75e4e0) at vcf_file.cpp:62
+#10 0x00000000004e33d7 in vcf_file::vcf_file (this=0x75e4e0, p=..., diff=0x0) at vcf_file.cpp:42
+#11 0x00000000004e5c3c in main (argc=0x3, argv=0x7fffffffc568) at vcftools.cpp:31

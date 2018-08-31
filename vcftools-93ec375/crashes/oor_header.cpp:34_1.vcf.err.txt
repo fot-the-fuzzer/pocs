@@ -1,0 +1,13 @@
+Reading symbols from /home/exp/FOT/vcftools/install/bin/vcftools...done.
+Starting program: /home/exp/FOT/vcftools/install/bin/vcftools --vcf oor_header.cpp:34_1.vcf
+
+VCFtools - 0.1.16
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf oor_header.cpp:34_1.vcf
+
+stat error: No such file or directory
+Error: Can't determine file type of oor_header.cpp:34_1.vcf
+[Inferior 1 (process 21818) exited normally]
+No stack.
