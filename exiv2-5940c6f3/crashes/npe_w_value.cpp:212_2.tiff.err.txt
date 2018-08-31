@@ -1,0 +1,38 @@
+Error: Directory Image: Next pointer is out of bounds; ignored.
+Error: Directory Image, entry 0x0136 has invalid size 774778414*8; skipping entry.
+Warning: Directory Image, entry 0x2e2e has unknown Exif (TIFF) type 11822; setting type size 1.
+Error: Directory Image, entry 0x2e2e has invalid size 774778414*1; skipping entry.
+Warning: Directory Image, entry 0x8773 has unknown Exif (TIFF) type 1031; setting type size 1.
+Warning: Directory Image, entry 0x0080 has unknown Exif (TIFF) type 0; setting type size 1.
+Error: Offset of directory Image, entry 0x0080 is out of bounds: Offset = 0x66669999; truncating the entry
+Warning: Directory Image, entry 0x3933 has unknown Exif (TIFF) type 46670; setting type size 1.
+Error: Directory Image, entry 0x3933 has invalid size 557284846*1; skipping entry.
+Warning: Directory Image, entry 0xcf81 has unknown Exif (TIFF) type 52861; setting type size 1.
+Error: Offset of directory Image, entry 0xcf81 is out of bounds: Offset = 0x6e47f249; truncating the entry
+Warning: Directory Image, entry 0x2e6e has unknown Exif (TIFF) type 37650; setting type size 1.
+Error: Directory Image, entry 0x2e6e has invalid size 3704803474*1; skipping entry.
+Warning: Directory Image, entry 0xce87 has unknown Exif (TIFF) type 22277; setting type size 1.
+Error: Directory Image, entry 0xce87 has invalid size 2780938210*1; skipping entry.
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==30094==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x00000051196a bp 0x7ffc9d9e6a00 sp 0x7ffc9d9e6180 T0)
+==30094==The signal is caused by a WRITE memory access.
+==30094==Hint: address points to the zero page.
+    #0 0x511969 in __sanitizer::internal_memmove(void*, void const*, unsigned long) (/home/hongxu/FOT/exiv2/install/bin/exiv2+0x511969)
+    #1 0x4f4ff4 in __asan_memmove (/home/hongxu/FOT/exiv2/install/bin/exiv2+0x4f4ff4)
+    #2 0x7f9c4d293295 in unsigned char* std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<unsigned char>(unsigned char const*, unsigned char const*, unsigned char*) /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/bits/stl_algobase.h:368:6
+    #3 0x7f9c4d312b88 in unsigned char* std::__copy_move_a<false, unsigned char const*, unsigned char*>(unsigned char const*, unsigned char const*, unsigned char*) /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/bits/stl_algobase.h:385:14
+    #4 0x7f9c4d39ffeb in unsigned char* std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/bits/stl_algobase.h:422:18
+    #5 0x7f9c4d38c5af in unsigned char* std::copy<__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*>(__gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, __gnu_cxx::__normal_iterator<unsigned char const*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char*) /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/bits/stl_algobase.h:454:15
+    #6 0x7f9c4d37bd94 in Exiv2::DataValue::copy(unsigned char*, Exiv2::ByteOrder) const /home/hongxu/FOT/exiv2/src/value.cpp:212:13
+    #7 0x7f9c4d227d65 in Exiv2::Exifdatum::copy(unsigned char*, Exiv2::ByteOrder) const /home/hongxu/FOT/exiv2/src/exif.cpp:358:48
+    #8 0x7f9c4d3687f9 in Exiv2::TiffImage::readMetadata() /home/hongxu/FOT/exiv2/src/tiffimage.cpp:196:18
+    #9 0x55b70c in Action::Print::printSummary() /home/hongxu/FOT/exiv2/src/actions.cpp:288:16
+    #10 0x55a19a in Action::Print::run(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/hongxu/FOT/exiv2/src/actions.cpp:248:48
+    #11 0x532dcb in main /home/hongxu/FOT/exiv2/src/exiv2.cpp:166:29
+    #12 0x7f9c4b8a5b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #13 0x435ac9 in _start (/home/hongxu/FOT/exiv2/install/bin/exiv2+0x435ac9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/hongxu/FOT/exiv2/install/bin/exiv2+0x511969) in __sanitizer::internal_memmove(void*, void const*, unsigned long)
+==30094==ABORTING
