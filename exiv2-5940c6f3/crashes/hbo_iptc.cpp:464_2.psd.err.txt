@@ -1,0 +1,56 @@
+=================================================================
+==7743==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x611000000140 at pc 0x7f3dba3744a2 bp 0x7fff85be77f0 sp 0x7fff85be77e8
+READ of size 1 at 0x611000000140 thread T0
+    #0 0x7f3dba3744a1 in Exiv2::IptcParser::decode(Exiv2::IptcData&, unsigned char const*, unsigned int) /home/hongxu/FOT/exiv2/src/iptc.cpp:464:33
+    #1 0x7f3dba4032d3 in Exiv2::PsdImage::readResourceBlock(unsigned short, unsigned int) /home/hongxu/FOT/exiv2/src/psdimage.cpp:246:21
+    #2 0x7f3dba402675 in Exiv2::PsdImage::readMetadata() /home/hongxu/FOT/exiv2/src/psdimage.cpp:229:13
+    #3 0x55b70c in Action::Print::printSummary() /home/hongxu/FOT/exiv2/src/actions.cpp:288:16
+    #4 0x55a19a in Action::Print::run(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/hongxu/FOT/exiv2/src/actions.cpp:248:48
+    #5 0x532dcb in main /home/hongxu/FOT/exiv2/src/exiv2.cpp:166:29
+    #6 0x7f3db8976b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x435ac9 in _start (/home/hongxu/FOT/exiv2/install/bin/exiv2+0x435ac9)
+
+0x611000000140 is located 0 bytes to the right of 256-byte region [0x611000000040,0x611000000140)
+allocated by thread T0 here:
+    #0 0x52e0f0 in operator new[](unsigned long) (/home/hongxu/FOT/exiv2/install/bin/exiv2+0x52e0f0)
+    #1 0x58c8df in Exiv2::DataBuf::DataBuf(long) /home/hongxu/FOT/exiv2/include/exiv2/types.hpp:215:46
+    #2 0x7f3dba402f58 in Exiv2::PsdImage::readResourceBlock(unsigned short, unsigned int) /home/hongxu/FOT/exiv2/src/psdimage.cpp:243:25
+    #3 0x7f3dba402675 in Exiv2::PsdImage::readMetadata() /home/hongxu/FOT/exiv2/src/psdimage.cpp:229:13
+    #4 0x55b70c in Action::Print::printSummary() /home/hongxu/FOT/exiv2/src/actions.cpp:288:16
+    #5 0x55a19a in Action::Print::run(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/hongxu/FOT/exiv2/src/actions.cpp:248:48
+    #6 0x532dcb in main /home/hongxu/FOT/exiv2/src/exiv2.cpp:166:29
+    #7 0x7f3db8976b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/exiv2/src/iptc.cpp:464:33 in Exiv2::IptcParser::decode(Exiv2::IptcData&, unsigned char const*, unsigned int)
+Shadow bytes around the buggy address:
+  0x0c227fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c227fff8000: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c227fff8010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c227fff8020: 00 00 00 00 00 00 00 00[fa]fa fa fa fa fa fa fa
+  0x0c227fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c227fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==7743==ABORTING
