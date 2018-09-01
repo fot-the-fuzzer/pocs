@@ -1,0 +1,72 @@
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+warning: invalid UTF-8. Assuming Latin-1.
+=================================================================
+==19982==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffdb24986e0 at pc 0x7f23c39b7c91 bp 0x7ffdb2494b70 sp 0x7ffdb2494b68
+READ of size 2 at 0x7ffdb24986e0 thread T0
+    #0 0x7f23c39b7c90 in matchCurrentInput /home/exp/FOT/liblouis/liblouis/lou_translateString.c:358:7
+    #1 0x7f23c39b29b7 in passDoTest /home/exp/FOT/liblouis/liblouis/lou_translateString.c:745:14
+    #2 0x7f23c39b15ae in findForPassRule /home/exp/FOT/liblouis/liblouis/lou_translateString.c:206:7
+    #3 0x7f23c39a27b6 in makeCorrections /home/exp/FOT/liblouis/liblouis/lou_translateString.c:255:8
+    #4 0x7f23c399f51c in _lou_translateWithTracing /home/exp/FOT/liblouis/liblouis/lou_translateString.c:1222:16
+    #5 0x7f23c399d238 in lou_translate /home/exp/FOT/liblouis/liblouis/lou_translateString.c:1070:9
+    #6 0x7f23c399d153 in lou_translateString /home/exp/FOT/liblouis/liblouis/lou_translateString.c:1062:9
+    #7 0x51338b in translate_input /home/exp/FOT/liblouis/tools/lou_translate.c:73:13
+    #8 0x512d3e in main /home/exp/FOT/liblouis/tools/lou_translate.c:199:2
+    #9 0x7f23c29aab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #10 0x41a209 in _start (/home/exp/FOT/liblouis/install/bin/lou_translate+0x41a209)
+
+Address 0x7ffdb24986e0 is located in stack of thread T0 at offset 6336 in frame
+    #0 0x512edf in translate_input /home/exp/FOT/liblouis/tools/lou_translate.c:53
+
+  This frame has 6 object(s):
+    [32, 2080) 'charbuf' (line 54)
+    [2208, 2216) 'outlen' (line 56)
+    [2240, 6336) 'inbuf' (line 57) <== Memory access at offset 6336 overflows this variable
+    [6464, 10560) 'transbuf' (line 58)
+    [10688, 10692) 'inlen' (line 59)
+    [10704, 10708) 'translen' (line 60)
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /home/exp/FOT/liblouis/liblouis/lou_translateString.c:358:7 in matchCurrentInput
+Shadow bytes around the buggy address:
+  0x10003648b080: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003648b090: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003648b0a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003648b0b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003648b0c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x10003648b0d0: 00 00 00 00 00 00 00 00 00 00 00 00[f2]f2 f2 f2
+  0x10003648b0e0: f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 00 00 00 00
+  0x10003648b0f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003648b100: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003648b110: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10003648b120: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==19982==ABORTING

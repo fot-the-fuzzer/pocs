@@ -1,0 +1,7 @@
+lou_translate hu-hu-g2.ctb < so_lou_translateString.c:358_1
+lou_translate hu-hu-g2.ctb < so_lou_translateString.c:358_2
+lou_translate afr-za-g1.ctb < so_lou_translateString.c:358_3
+lou_translate afr-za-g1.ctb < so_lou_translateString.c:358_4
+lou_translate zhcn-g2.ctb < so_lou_translateString.c:358_5
+lou_translate zhcn-g2.ctb < so_lou_translateString.c:358_6
+
