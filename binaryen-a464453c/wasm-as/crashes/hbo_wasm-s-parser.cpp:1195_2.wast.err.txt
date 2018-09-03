@@ -1,0 +1,54 @@
+=================================================================
+==8931==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6030000056a0 at pc 0x00000062f917 bp 0x7ffe3f59f010 sp 0x7ffe3f59f008
+READ of size 1 at 0x6030000056a0 thread T0
+    #0 0x62f916 in wasm::SExpressionWasmBuilder::makeLoad(wasm::Element&, wasm::Type, bool) /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp:1195:30
+    #1 0x61f2a7 in wasm::SExpressionWasmBuilder::makeExpression(wasm::Element&) /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp
+    #2 0x61b6a1 in wasm::SExpressionWasmBuilder::parseExpression(wasm::Element&) /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp:631:24
+    #3 0x61e6bf in wasm::SExpressionWasmBuilder::parseExpression(wasm::Element*) /home/exp/FOT/binaryen/src/wasm-s-parser.h:158:12
+    #4 0x61e6bf in wasm::SExpressionWasmBuilder::makeDrop(wasm::Element&) /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp:970
+    #5 0x61e6bf in wasm::SExpressionWasmBuilder::makeExpression(wasm::Element&) /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp:819
+    #6 0x61b6a1 in wasm::SExpressionWasmBuilder::parseExpression(wasm::Element&) /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp:631:24
+    #7 0x608f53 in wasm::SExpressionWasmBuilder::parseFunction(wasm::Element&, bool) /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp:559:24
+    #8 0x6025f8 in wasm::SExpressionWasmBuilder::parseModuleElement(wasm::Element&) /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp:318:26
+    #9 0x5fdde6 in wasm::SExpressionWasmBuilder::SExpressionWasmBuilder(wasm::Module&, wasm::Element&, wasm::Name*) /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp:290:5
+    #10 0x5e7d12 in main /home/exp/FOT/binaryen/src/tools/wasm-as.cpp:88:28
+    #11 0x7f6306892b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #12 0x4e8669 in _start (/home/exp/FOT/binaryen/bin/wasm-as+0x4e8669)
+
+0x6030000056a0 is located 0 bytes to the right of 32-byte region [0x603000005680,0x6030000056a0)
+allocated by thread T0 here:
+    #0 0x5e0b80 in operator new(unsigned long) (/home/exp/FOT/binaryen/bin/wasm-as+0x5e0b80)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/binaryen/src/wasm/wasm-s-parser.cpp:1195:30 in wasm::SExpressionWasmBuilder::makeLoad(wasm::Element&, wasm::Type, bool)
+Shadow bytes around the buggy address:
+  0x0c067fff8a80: fa fa fd fd fd fd fa fa 00 00 00 00 fa fa fd fd
+  0x0c067fff8a90: fd fa fa fa 00 00 01 fa fa fa fd fd fd fd fa fa
+  0x0c067fff8aa0: 00 00 00 00 fa fa 00 00 00 fa fa fa 00 00 00 fa
+  0x0c067fff8ab0: fa fa fd fd fd fd fa fa fd fd fd fd fa fa 00 00
+  0x0c067fff8ac0: 00 00 fa fa 00 00 00 fa fa fa 00 00 00 fa fa fa
+=>0x0c067fff8ad0: 00 00 00 00[fa]fa 00 00 00 fa fa fa 00 00 00 fa
+  0x0c067fff8ae0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8af0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8b00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8b10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c067fff8b20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==8931==ABORTING

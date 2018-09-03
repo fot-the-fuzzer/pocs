@@ -1,0 +1,1 @@
+(module(type())(func(lo(i32.atomic.l))(0))(0))

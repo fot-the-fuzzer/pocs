@@ -1,0 +1,1 @@
+(module(type(()))(func(type 0)(local i32)(dr(i32.atomic.r00.cmpxchg(ge00l 0)(lo)(ge00l 0)))(dr(i32.atomic.r()))))

@@ -1,0 +1,1 @@
+asm2wasm: /home/exp/FOT/binaryen/src/mixed_arena.h:169: T &ArenaVectorBase<cashew::ArrayStorage, cashew::Ref>::operator[](size_t) const [SubType = cashew::ArrayStorage, T = cashew::Ref]: Assertion `index < usedElements' failed.

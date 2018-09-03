@@ -1,0 +1,1 @@
+(module(type(()))(func $0(type 0)(dr(i32.atomic.r())))(0))

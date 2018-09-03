@@ -1,0 +1,1 @@
+(module(type(()))(type(()))(type(()(result i32)))(func(type 2)(pa)(result i32)))

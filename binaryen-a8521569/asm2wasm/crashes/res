@@ -1,0 +1,276 @@
+
+=====================
+block.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+br.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+break-drop.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+br_if.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+call.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+call_import_error.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/asm2wasm.h:741: void wasm::Asm2WasmBuilder::processAsm(cashew::Ref): Assertion `asmFunction[0] == DEFUN' failed.
+
+=====================
+calls.post.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:843: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseExpression(cashew::Parser::ExpressionElement, char *&, const char *) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `parts.size() == 1' failed.
+
+=====================
+comments.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+control_flow.post.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:843: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseExpression(cashew::Parser::ExpressionElement, char *&, const char *) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `parts.size() == 1' failed.
+
+=====================
+conversions-modified.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+empty_table.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+endianness.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+f32.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+f32_cmp.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+f64.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+f64_cmp.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+fac.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+float_misc.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+float-ops.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+float_ops.post.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:843: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseExpression(cashew::Parser::ExpressionElement, char *&, const char *) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `parts.size() == 1' failed.
+
+=====================
+forward.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+func.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+func-ptr-offset.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+get_local.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+get-set-local.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+grow_memory.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:322: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::ExpressionElement::getNode() [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `isNode' failed.
+
+=====================
+grow-memory-tricky.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:322: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::ExpressionElement::getNode() [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `isNode' failed.
+
+=====================
+hello_world.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+hello-world.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/simple_ast.h:1625: static cashew::Ref cashew::ValueBuilder::makeDot(cashew::Ref, cashew::Ref): Assertion `key->isString()' failed.
+
+=====================
+i32.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+i64-add-sub.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+i64-ctz.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+i64-lowering.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+i64-rotate.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+i64-setTempRet0.asm.js.err.txt
+invalid call target: invalid call target: $i64_const$i64
+
+    #0 0x5c65a9 in __sanitizer_print_stack_trace (/home/exp/FOT/binaryen/bin/asm2wasm+0x5c65a9)
+    #0 0x5c65a9 in __sanitizer_print_stack_trace (/home/exp/FOT/binaryen/bin/asm2wasm+0x5c65a9)
+    #1 0x619e54 in wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls::visitCall(wasm::Call*) /home/exp/FOT/binaryen/src/asm2wasm.h
+    #2 0x619e54 in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::doVisitCall(wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls*, wasm::Expression**) /home/exp/FOT/binaryen/src/wasm-traversal.h:407
+    #1 0x619e54 in wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls::visitCall(wasm::Call*) /home/exp/FOT/binaryen/src/asm2wasm.h
+    #2 0x619e54 in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::doVisitCall(wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls*, wasm::Expression**) /home/exp/FOT/binaryen/src/wasm-traversal.h:407
+    #3 0x614370 in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::walk(wasm::Expression*&) /home/exp/FOT/binaryen/src/wasm-traversal.h:393:7
+    #3 0x614370 in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::walk(wasm::Expression*&) /home/exp/FOT/binaryen/src/wasm-traversal.h:393:7
+    #4 0x613c7f in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::doWalkFunction(wasm::Function*) /home/exp/FOT/binaryen/src/wasm-traversal.h:312:5
+    #5 0x613c7f in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::walkFunction(wasm::Function*) /home/exp/FOT/binaryen/src/wasm-traversal.h:296
+    #4 0x613c7f in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::doWalkFunction(wasm::Function*) /home/exp/FOT/binaryen/src/wasm-traversal.h:312:5
+    #5 0x613c7f in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::walkFunction(wasm::Function*) /home/exp/FOT/binaryen/src/wasm-traversal.h:296
+    #6 0x6f7c09 in wasm::PassRunner::runPassOnFunction(wasm::Pass*, wasm::Function*) /home/exp/FOT/binaryen/src/passes/pass.cpp:473:13
+    #6 0x6f7c09 in wasm::PassRunner::runPassOnFunction(wasm::Pass*, wasm::Function*) /home/exp/FOT/binaryen/src/passes/pass.cpp:473:13
+    #7 0x6f960d in wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}::operator()() const /home/exp/FOT/binaryen/src/passes/pass.cpp:319:15
+    #8 0x6f960d in std::_Function_handler<wasm::ThreadWorkState (), wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}>::_M_invoke(std::_Any_data const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:282
+    #7 0x6f960d in wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}::operator()() const /home/exp/FOT/binaryen/src/passes/pass.cpp:319:15
+    #8 0x6f960d in std::_Function_handler<wasm::ThreadWorkState (), wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}>::_M_invoke(std::_Any_data const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:282
+    #9 0xdf7c49 in std::function<wasm::ThreadWorkState ()>::operator()() const /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:687:14
+    #9 0xdf7c49 in std::function<wasm::ThreadWorkState ()>::operator()() const /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:687:14
+    #10 0xdf7c49 in wasm::Thread::mainLoop(void*) /home/exp/FOT/binaryen/src/support/threads.cpp:80
+    #10 0xdf7c49 in wasm::Thread::mainLoop(void*) /home/exp/FOT/binaryen/src/support/threads.cpp:80
+    #11 0x7f0782e0c56e  (/usr/lib/x86_64-linux-gnu/libstdc++.so.6+0xbd56e)
+    #11 0x7f0782e0c56e  (/usr/lib/x86_64-linux-gnu/libstdc++.so.6+0xbd56e)
+    #12 0x5c84fe in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) (/home/exp/FOT/binaryen/bin/asm2wasm+0x5c84fe)
+    #12 0x5c84fe in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) (/home/exp/FOT/binaryen/bin/asm2wasm+0x5c84fe)
+    #13 0x7f07827996da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #13 0x7f07827996da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #14 0x7f0781e9e88e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+    #14 0x7f0781e9e88e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+=====================
+i64-shifts.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+int_exprs.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+int_literals.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+int_ops.post.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:843: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseExpression(cashew::Parser::ExpressionElement, char *&, const char *) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `parts.size() == 1' failed.
+
+=====================
+labels.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+loop.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+mem.post.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:843: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseExpression(cashew::Parser::ExpressionElement, char *&, const char *) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `parts.size() == 1' failed.
+
+=====================
+noffi_i64.asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/wasm-builder.h:378: static wasm::Index wasm::Builder::addVar(wasm::Function *, wasm::Name, wasm::Type): Assertion `isConcreteType(type)' failed.
+
+=====================
+reinterpret.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+select.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+set_local.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+sourcemap.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:437: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseVar(char *&, const char *, bool) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `name.type == IDENT' failed.
+
+=====================
+stack-modified.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+switch.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+tee_local.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+threads.wasm-only.asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/wasm-builder.h:378: static wasm::Index wasm::Builder::addVar(wasm::Function *, wasm::Name, wasm::Type): Assertion `isConcreteType(type)' failed.
+
+=====================
+unaligned.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+unary-ops.2asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+unreachable-import_wasm-only.asm.js.err.txt
+invalid call target: $store4
+    #0 0x5c65a9 in __sanitizer_print_stack_trace (/home/exp/FOT/binaryen/bin/asm2wasm+0x5c65a9)
+    #1 0x619e54 in wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls::visitCall(wasm::Call*) /home/exp/FOT/binaryen/src/asm2wasm.h
+    #2 0x619e54 in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::doVisitCall(wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls*, wasm::Expression**) /home/exp/FOT/binaryen/src/wasm-traversal.h:407
+    #3 0x614370 in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::walk(wasm::Expression*&) /home/exp/FOT/binaryen/src/wasm-traversal.h:393:7
+    #4 0x613c7f in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::doWalkFunction(wasm::Function*) /home/exp/FOT/binaryen/src/wasm-traversal.h:312:5
+    #5 0x613c7f in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::walkFunction(wasm::Function*) /home/exp/FOT/binaryen/src/wasm-traversal.h:296
+    #6 0x6f7c09 in wasm::PassRunner::runPassOnFunction(wasm::Pass*, wasm::Function*) /home/exp/FOT/binaryen/src/passes/pass.cpp:473:13
+    #7 0x6f960d in wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}::operator()() const /home/exp/FOT/binaryen/src/passes/pass.cpp:319:15
+    #8 0x6f960d in std::_Function_handler<wasm::ThreadWorkState (), wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}>::_M_invoke(std::_Any_data const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:282
+    #9 0xdf7c49 in std::function<wasm::ThreadWorkState ()>::operator()() const /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:687:14
+    #10 0xdf7c49 in wasm::Thread::mainLoop(void*) /home/exp/FOT/binaryen/src/support/threads.cpp:80
+    #11 0x7fc21b80c56e  (/usr/lib/x86_64-linux-gnu/libstdc++.so.6+0xbd56e)
+    #12 0x5c84fe in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) (/home/exp/FOT/binaryen/bin/asm2wasm+0x5c84fe)
+    #13 0x7fc21b1996da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #14 0x7fc21a89e88e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+
+=====================
+wasm2js.asserts.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+wasm2js.traps.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.
+
+=====================
+wasm-only.asm.js.err.txt
+asm2wasm: /home/exp/FOT/binaryen/src/wasm-builder.h:378: static wasm::Index wasm::Builder::addVar(wasm::Function *, wasm::Name, wasm::Type): Assertion `isConcreteType(type)' failed.

@@ -1,0 +1,33 @@
+Reading symbols from /home/exp/FOT/binaryen-noasan/bin/wasm-as...done.
+Starting program: /home/exp/FOT/binaryen-noasan/bin/wasm-as sigabrt_wasm-stack.h:1108_2.wast -o /dev/null
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff6e85700 (LWP 31939)]
+[New Thread 0x7ffff6684700 (LWP 31940)]
+[New Thread 0x7ffff5e83700 (LWP 31941)]
+[New Thread 0x7ffff5682700 (LWP 31945)]
+[New Thread 0x7ffff4e81700 (LWP 31946)]
+[New Thread 0x7ffff4680700 (LWP 31947)]
+[New Thread 0x7ffff3e7f700 (LWP 31948)]
+[New Thread 0x7ffff367e700 (LWP 31950)]
+[New Thread 0x7ffff2e7d700 (LWP 31951)]
+[New Thread 0x7ffff267c700 (LWP 31952)]
+[New Thread 0x7ffff1e7b700 (LWP 31953)]
+[New Thread 0x7ffff167a700 (LWP 31954)]
+
+Thread 1 "wasm-as" received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6ec6801 in __GI_abort () at abort.c:79
+#2  0x000000000052b278 in wasm::StackWriter<(wasm::StackWriterMode)0, wasm::WasmBinaryWriter>::visitHost (this=0x7fffffffb400, curr=0x96dc40) at /home/exp/FOT/binaryen-noasan/src/wasm-stack.h:1108
+#3  0x000000000052b451 in wasm::StackWriter<(wasm::StackWriterMode)0, wasm::WasmBinaryWriter>::visit (this=<optimized out>, curr=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/wasm-stack.h:312
+#4  wasm::StackWriter<(wasm::StackWriterMode)0, wasm::WasmBinaryWriter>::visitChild (this=<optimized out>, curr=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/wasm-stack.h:338
+#5  wasm::StackWriter<(wasm::StackWriterMode)0, wasm::WasmBinaryWriter>::visitPossibleBlockContents (this=0x7fffffffb400, curr=0x96dc40) at /home/exp/FOT/binaryen-noasan/src/wasm-stack.h:320
+#6  0x00000000005262e6 in wasm::FunctionStackWriter<wasm::WasmBinaryWriter>::FunctionStackWriter (this=0x7fffffffb400, funcInit=<optimized out>, parent=..., o=..., sourceMap=<optimized out>, debug=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/wasm-stack.h:206
+#7  0x0000000000512b9c in wasm::WasmBinaryWriter::writeFunctions (this=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/wasm/wasm-binary.cpp:245
+#8  0x0000000000510f36 in wasm::WasmBinaryWriter::write (this=0x7fffffffb568) at /home/exp/FOT/binaryen-noasan/src/wasm/wasm-binary.cpp:58
+#9  0x00000000004d4e0b in wasm::ModuleWriter::writeBinary (this=<optimized out>, wasm=..., output=...) at /home/exp/FOT/binaryen-noasan/src/wasm/wasm-io.cpp:103
+#10 0x00000000004d4fdd in wasm::ModuleWriter::writeBinary (this=0x7fffffffbe08, wasm=..., filename=<incomplete type>) at /home/exp/FOT/binaryen-noasan/src/wasm/wasm-io.cpp:113
+#11 0x00000000004d519f in wasm::ModuleWriter::write (this=0x7fffffffbe08, wasm=..., filename=...) at /home/exp/FOT/binaryen-noasan/src/wasm/wasm-io.cpp:126
+#12 0x00000000004d0ed6 in main (argc=0x4, argv=0x7fffffffc538) at /home/exp/FOT/binaryen-noasan/src/tools/wasm-as.cpp:114
