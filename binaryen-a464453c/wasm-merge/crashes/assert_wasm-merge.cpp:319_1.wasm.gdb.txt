@@ -1,0 +1,20 @@
+Reading symbols from /home/exp/FOT/binaryen/bin/wasm-merge...done.
+Starting program: /home/exp/FOT/binaryen/bin/wasm-merge /home/exp/FOT/wasm-dis-tests/unreachable-pops.wasm assert_wasm-merge.cpp:319_1.wasm -o /dev/null
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+wasm-merge: /home/exp/FOT/binaryen/src/tools/wasm-merge.cpp:319: void InputMergeable::visitGetGlobal(wasm::GetGlobal *): Assertion `curr->name.is()' failed.
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6aba801 in __GI_abort () at abort.c:79
+#2  0x00007ffff6aaa39a in __assert_fail_base (fmt=0x7ffff6c317d8 "%s%s%s:%u: %s%sAssertion `%s' failed.\n%n", assertion=assertion@entry=0xd64200 <.str> "curr->name.is()", file=file@entry=0xd63ec0 <.str> "/home/exp/FOT/binaryen/src/tools/wasm-merge.cpp", line=line@entry=0x13f, function=function@entry=0xd64620 <__PRETTY_FUNCTION__._ZN14InputMergeable14visitGetGlobalEPN4wasm9GetGlobalE> "void InputMergeable::visitGetGlobal(wasm::GetGlobal *)") at assert.c:92
+#3  0x00007ffff6aaa412 in __GI___assert_fail (assertion=0xd64200 <.str> "curr->name.is()", file=0xd63ec0 <.str> "/home/exp/FOT/binaryen/src/tools/wasm-merge.cpp", line=0x13f, function=0xd64620 <__PRETTY_FUNCTION__._ZN14InputMergeable14visitGetGlobalEPN4wasm9GetGlobalE> "void InputMergeable::visitGetGlobal(wasm::GetGlobal *)") at assert.c:101
+#4  0x000000000061ccdc in InputMergeable::visitGetGlobal (this=<optimized out>, curr=<optimized out>) at /home/exp/FOT/binaryen/src/tools/wasm-merge.cpp:319
+#5  0x00000000006131f0 in wasm::Walker<InputMergeable, wasm::Visitor<InputMergeable, void> >::walk (this=0x7ffff4328f90, root=<optimized out>) at /home/exp/FOT/binaryen/src/wasm-traversal.h:393
+#6  0x0000000000612eab in wasm::Walker<InputMergeable, wasm::Visitor<InputMergeable, void> >::walkMemory (this=<optimized out>, memory=<optimized out>) at /home/exp/FOT/binaryen/src/wasm-traversal.h:324
+#7  wasm::Walker<InputMergeable, wasm::Visitor<InputMergeable, void> >::doWalkModule (this=0x7ffff4328f90, module=<optimized out>) at /home/exp/FOT/binaryen/src/wasm-traversal.h:356
+#8  0x00000000005f70dd in wasm::Walker<InputMergeable, wasm::Visitor<InputMergeable, void> >::walkModule (this=<optimized out>, module=0x7fffffffbc20) at /home/exp/FOT/binaryen/src/wasm-traversal.h:331
+#9  InputMergeable::merge (this=0x7ffff4328f90) at /home/exp/FOT/binaryen/src/tools/wasm-merge.cpp:432
+#10 0x00000000005eb51a in main (argc=0xf4328cf0, argv=0x7ffff4329168) at /home/exp/FOT/binaryen/src/tools/wasm-merge.cpp:622

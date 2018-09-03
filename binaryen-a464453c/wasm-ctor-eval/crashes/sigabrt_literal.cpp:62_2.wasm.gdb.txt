@@ -1,0 +1,37 @@
+Reading symbols from /home/exp/FOT/binaryen-noasan/bin/wasm-ctor-eval...done.
+Starting program: /home/exp/FOT/binaryen-noasan/bin/wasm-ctor-eval sigabrt_literal.cpp:62_2.wasm -o /dev/null
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff6e85700 (LWP 32285)]
+[New Thread 0x7ffff6684700 (LWP 32286)]
+[New Thread 0x7ffff5e83700 (LWP 32287)]
+[New Thread 0x7ffff5682700 (LWP 32288)]
+[New Thread 0x7ffff4e81700 (LWP 32289)]
+[New Thread 0x7ffff4680700 (LWP 32290)]
+[New Thread 0x7ffff3e7f700 (LWP 32291)]
+[New Thread 0x7ffff367e700 (LWP 32292)]
+[New Thread 0x7ffff2e7d700 (LWP 32294)]
+[New Thread 0x7ffff267c700 (LWP 32295)]
+[New Thread 0x7ffff1e7b700 (LWP 32296)]
+[New Thread 0x7ffff167a700 (LWP 32297)]
+
+Thread 7 "wasm-ctor-eval" received signal SIGABRT, Aborted.
+[Switching to Thread 0x7ffff4680700 (LWP 32290)]
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6ec6801 in __GI_abort () at abort.c:79
+#2  0x00000000006477ef in wasm::Literal::getInteger (this=0x2) at /home/exp/FOT/binaryen-noasan/src/wasm/literal.cpp:62
+#3  0x0000000000647061 in wasm::Vacuum::visitIf (this=0x7fffc4000d50, curr=0x978a28) at /home/exp/FOT/binaryen-noasan/src/passes/Vacuum.cpp:218
+#4  0x0000000000643f6e in wasm::Walker<wasm::Vacuum, wasm::Visitor<wasm::Vacuum, void> >::walk (this=0x7fffc4000d78, root=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/wasm-traversal.h:393
+#5  0x0000000000643c8c in wasm::Vacuum::doWalkFunction (this=0x7fffc4000d50, func=0x981ee0) at /home/exp/FOT/binaryen-noasan/src/passes/Vacuum.cpp:47
+#6  wasm::Walker<wasm::Vacuum, wasm::Visitor<wasm::Vacuum, void> >::walkFunction (this=0x7fffc4000d78, func=0x981ee0) at /home/exp/FOT/binaryen-noasan/src/wasm-traversal.h:296
+#7  wasm::WalkerPass<wasm::PostWalker<wasm::Vacuum, wasm::Visitor<wasm::Vacuum, void> > >::runOnFunction (this=0x7fffc4000d50, runner=<optimized out>, module=<optimized out>, func=0x981ee0) at /home/exp/FOT/binaryen-noasan/src/pass.h:282
+#8  0x00000000004e7669 in wasm::PassRunner::runPassOnFunction (this=0x7fffffffc2d8, pass=0x970240, func=0x981ee0) at /home/exp/FOT/binaryen-noasan/src/passes/pass.cpp:473
+#9  0x00000000004e7f2e in wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}::operator()() const (this=0x985040) at /home/exp/FOT/binaryen-noasan/src/passes/pass.cpp:319
+#10 std::_Function_handler<wasm::ThreadWorkState (), wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}>::_M_invoke(std::_Any_data const&) (__functor=...) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:282
+#11 0x00000000006d0ae9 in std::function<wasm::ThreadWorkState ()>::operator()() const (this=<optimized out>) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:687
+#12 wasm::Thread::mainLoop (self_=0x983db0) at /home/exp/FOT/binaryen-noasan/src/support/threads.cpp:80
+#13 0x00007ffff7b0956f in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#14 0x00007ffff727e6db in start_thread (arg=0x7ffff4680700) at pthread_create.c:463
+#15 0x00007ffff6fa788f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95

@@ -1,0 +1,37 @@
+Reading symbols from /home/exp/FOT/binaryen-noasan/bin/wasm-ctor-eval...done.
+Starting program: /home/exp/FOT/binaryen-noasan/bin/wasm-ctor-eval sigabrt_DeadCodeElimination.cpp:399_1.wasm -o /dev/null
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff6e85700 (LWP 28052)]
+[New Thread 0x7ffff6684700 (LWP 28053)]
+[New Thread 0x7ffff5e83700 (LWP 28054)]
+[New Thread 0x7ffff5682700 (LWP 28055)]
+[New Thread 0x7ffff4e81700 (LWP 28056)]
+[New Thread 0x7ffff4680700 (LWP 28061)]
+[New Thread 0x7ffff3e7f700 (LWP 28064)]
+[New Thread 0x7ffff367e700 (LWP 28065)]
+[New Thread 0x7ffff2e7d700 (LWP 28066)]
+[New Thread 0x7ffff267c700 (LWP 28067)]
+[New Thread 0x7ffff1e7b700 (LWP 28068)]
+[New Thread 0x7ffff167a700 (LWP 28069)]
+wasm-ctor-eval: /home/exp/FOT/binaryen-noasan/src/passes/DeadCodeElimination.cpp:399: void wasm::DeadCodeElimination::visitFunction(wasm::Function *): Assertion `reachableBreaks.size() == 0' failed.
+
+Thread 8 "wasm-ctor-eval" received signal SIGABRT, Aborted.
+[Switching to Thread 0x7ffff3e7f700 (LWP 28064)]
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6ec6801 in __GI_abort () at abort.c:79
+#2  0x00007ffff6eb639a in __assert_fail_base (fmt=0x7ffff703d7d8 "%s%s%s:%u: %s%sAssertion `%s' failed.\n%n", assertion=assertion@entry=0x6da007 "reachableBreaks.size() == 0", file=file@entry=0x6d9a7d "/home/exp/FOT/binaryen-noasan/src/passes/DeadCodeElimination.cpp", line=line@entry=0x18f, function=function@entry=0x6da023 "void wasm::DeadCodeElimination::visitFunction(wasm::Function *)") at assert.c:92
+#3  0x00007ffff6eb6412 in __GI___assert_fail (assertion=0x6da007 "reachableBreaks.size() == 0", file=0x6d9a7d "/home/exp/FOT/binaryen-noasan/src/passes/DeadCodeElimination.cpp", line=0x18f, function=0x6da023 "void wasm::DeadCodeElimination::visitFunction(wasm::Function *)") at assert.c:101
+#4  0x000000000052473e in wasm::DeadCodeElimination::visitFunction (curr=<optimized out>, this=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/passes/DeadCodeElimination.cpp:399
+#5  wasm::Walker<wasm::DeadCodeElimination, wasm::Visitor<wasm::DeadCodeElimination, void> >::walkFunction (this=0x7fffc4001658, func=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/wasm-traversal.h:297
+#6  wasm::WalkerPass<wasm::PostWalker<wasm::DeadCodeElimination, wasm::Visitor<wasm::DeadCodeElimination, void> > >::runOnFunction (this=0x7fffc4001630, runner=<optimized out>, module=<optimized out>, func=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/pass.h:282
+#7  0x00000000004e7669 in wasm::PassRunner::runPassOnFunction (this=0x7fffffffc2c8, pass=0x9831e0, func=0x981f10) at /home/exp/FOT/binaryen-noasan/src/passes/pass.cpp:473
+#8  0x00000000004e7f2e in wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}::operator()() const (this=0x985000) at /home/exp/FOT/binaryen-noasan/src/passes/pass.cpp:319
+#9  std::_Function_handler<wasm::ThreadWorkState (), wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}>::_M_invoke(std::_Any_data const&) (__functor=...) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:282
+#10 0x00000000006d0ae9 in std::function<wasm::ThreadWorkState ()>::operator()() const (this=<optimized out>) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:687
+#11 wasm::Thread::mainLoop (self_=0x983f60) at /home/exp/FOT/binaryen-noasan/src/support/threads.cpp:80
+#12 0x00007ffff7b0956f in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#13 0x00007ffff727e6db in start_thread (arg=0x7ffff3e7f700) at pthread_create.c:463
+#14 0x00007ffff6fa788f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95

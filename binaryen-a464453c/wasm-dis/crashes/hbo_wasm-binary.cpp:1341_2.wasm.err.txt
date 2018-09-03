@@ -1,0 +1,49 @@
+=================================================================
+==19175==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x619000001d90 at pc 0x000000ba148c bp 0x7ffc3f3ee990 sp 0x7ffc3f3ee988
+READ of size 1 at 0x619000001d90 thread T0
+    #0 0xba148b in wasm::WasmBinaryBuilder::processExpressions() /home/exp/FOT/binaryen/src/wasm/wasm-binary.cpp:1341:19
+    #1 0xb9e0f0 in wasm::WasmBinaryBuilder::getBlockOrSingleton(wasm::Type) /home/exp/FOT/binaryen/src/wasm/wasm-binary.cpp:1799:3
+    #2 0xb8c862 in wasm::WasmBinaryBuilder::readFunctions() /home/exp/FOT/binaryen/src/wasm/wasm-binary.cpp:1100:20
+    #3 0xb7f1b5 in wasm::WasmBinaryBuilder::read() /home/exp/FOT/binaryen/src/wasm/wasm-binary.cpp:675:41
+    #4 0xc2123b in wasm::ModuleReader::readBinary(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, wasm::Module&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) /home/exp/FOT/binaryen/src/wasm/wasm-io.cpp:52:10
+    #5 0x5e6122 in main /home/exp/FOT/binaryen/src/tools/wasm-dis.cpp:51:20
+    #6 0x7f777ffa9b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x4e8529 in _start (/home/exp/FOT/binaryen/bin/wasm-dis+0x4e8529)
+
+0x619000001d90 is located 0 bytes to the right of 1040-byte region [0x619000001980,0x619000001d90)
+allocated by thread T0 here:
+    #0 0x5e0a40 in operator new(unsigned long) (/home/exp/FOT/binaryen/bin/wasm-dis+0x5e0a40)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/binaryen/src/wasm/wasm-binary.cpp:1341:19 in wasm::WasmBinaryBuilder::processExpressions()
+Shadow bytes around the buggy address:
+  0x0c327fff8360: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8370: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8380: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff8390: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c327fff83a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c327fff83b0: 00 00[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff83c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c327fff83d0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c327fff83e0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c327fff83f0: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c327fff8400: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==19175==ABORTING

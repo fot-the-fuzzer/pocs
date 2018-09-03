@@ -1,0 +1,28 @@
+Reading symbols from /home/exp/FOT/binaryen-noasan/bin/wasm-ctor-eval...done.
+Starting program: /home/exp/FOT/binaryen-noasan/bin/wasm-ctor-eval alloc_memory-utils.h:42_1.wasm -o /dev/null
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+terminate called after throwing an instance of 'std::bad_alloc'
+  what():  std::bad_alloc
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6ec6801 in __GI_abort () at abort.c:79
+#2  0x00007ffff7ad88b7 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#3  0x00007ffff7adea06 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#4  0x00007ffff7adea41 in std::terminate() () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff7adec74 in __cxa_throw () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x00007ffff7adf1ec in operator new(unsigned long) () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#7  0x00000000004e0919 in __gnu_cxx::new_allocator<char>::allocate (__n=0x2, this=<optimized out>) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/ext/new_allocator.h:111
+#8  std::allocator_traits<std::allocator<char> >::allocate (__n=0x2, __a=...) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/alloc_traits.h:436
+#9  std::_Vector_base<char, std::allocator<char> >::_M_allocate (__n=0x2, this=<optimized out>) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_vector.h:296
+#10 std::vector<char, std::allocator<char> >::_M_default_append (__n=0xfffffffffffffff4, this=<optimized out>) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/vector.tcc:605
+#11 std::vector<char, std::allocator<char> >::resize (__new_size=0xfffffffffffffff4, this=<optimized out>) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/stl_vector.h:827
+#12 wasm::MemoryUtils::flatten (memory=...) at /home/exp/FOT/binaryen-noasan/src/ir/memory-utils.h:42
+#13 0x00000000004d35d5 in EvallingModuleInstance::flattenMemory (this=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/tools/wasm-ctor-eval.cpp:160
+#14 evalCtors (wasm=..., ctors=warning: Type size unknown, assuming 1. Try casting to a known type, or void *.
+warning: Type size unknown, assuming 1. Try casting to a known type, or void *.
+std::vector of length 0, capacity 0) at /home/exp/FOT/binaryen-noasan/src/tools/wasm-ctor-eval.cpp:317
+#15 0x00000000004d48aa in main (argc=<optimized out>, argv=0x7fffffffc4c8) at /home/exp/FOT/binaryen-noasan/src/tools/wasm-ctor-eval.cpp:422

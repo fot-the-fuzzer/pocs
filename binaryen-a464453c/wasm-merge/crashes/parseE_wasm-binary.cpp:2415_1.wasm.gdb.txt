@@ -1,0 +1,24 @@
+Reading symbols from /home/exp/FOT/binaryen/bin/wasm-merge...done.
+Starting program: /home/exp/FOT/binaryen/bin/wasm-merge /home/exp/FOT/wasm-dis-tests/unreachable-pops.wasm parseE_wasm-binary.cpp:2415_1.wasm -o /dev/null
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+terminate called after throwing an instance of 'wasm::ParseException'
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6aba801 in __GI_abort () at abort.c:79
+#2  0x00007ffff7ad88b7 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#3  0x00007ffff7adea06 in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#4  0x00007ffff7adea41 in std::terminate() () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#5  0x00007ffff7adec74 in __cxa_throw () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#6  0x000000000065d46e in wasm::WasmBinaryBuilder::throwError (this=<optimized out>, text=...) at /home/exp/FOT/binaryen/src/wasm/wasm-binary.cpp:2415
+#7  0x000000000066f6e8 in wasm::WasmBinaryBuilder::getInt8 (this=<optimized out>) at /home/exp/FOT/binaryen/src/wasm/wasm-binary.cpp:725
+#8  0x0000000000690216 in std::function<unsigned char ()>::operator()() const (this=<optimized out>) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:687
+#9  wasm::LEB<unsigned int, unsigned char>::read(std::function<unsigned char ()>) (this=0x7ffff3d2da20, get=...) at /home/exp/FOT/binaryen/src/wasm-binary.h:102
+#10 0x000000000065cac2 in wasm::WasmBinaryBuilder::getU32LEB (this=0xffffe7a5b40) at /home/exp/FOT/binaryen/src/wasm/wasm-binary.cpp:773
+#11 0x00000000005fac1a in Mergeable::findSizes (this=0x7ffff4328fd8) at /home/exp/FOT/binaryen/src/tools/wasm-merge.cpp:112
+#12 0x00000000005f9f2d in Mergeable::Mergeable (this=0x7ffff4328fd8, wasm=...) at /home/exp/FOT/binaryen/src/tools/wasm-merge.cpp:66
+#13 0x00000000005eb261 in InputMergeable::InputMergeable (this=0x7ffff4328f90, wasm=..., outputMergeable=...) at /home/exp/FOT/binaryen/src/tools/wasm-merge.cpp:279
+#14 main (argc=0xf4328cf0, argv=0x7ffff4329168) at /home/exp/FOT/binaryen/src/tools/wasm-merge.cpp:621

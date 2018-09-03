@@ -1,0 +1,40 @@
+Reading symbols from /home/exp/FOT/binaryen-noasan/bin/wasm-ctor-eval...done.
+Starting program: /home/exp/FOT/binaryen-noasan/bin/wasm-ctor-eval assert_mixed_arena.h:193_1.wasm -o /dev/null
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+[New Thread 0x7ffff6e85700 (LWP 26621)]
+[New Thread 0x7ffff6684700 (LWP 26622)]
+[New Thread 0x7ffff5e83700 (LWP 26623)]
+[New Thread 0x7ffff5682700 (LWP 26624)]
+[New Thread 0x7ffff4e81700 (LWP 26625)]
+[New Thread 0x7ffff4680700 (LWP 26626)]
+[New Thread 0x7ffff3e7f700 (LWP 26627)]
+[New Thread 0x7ffff367e700 (LWP 26628)]
+[New Thread 0x7ffff2e7d700 (LWP 26629)]
+[New Thread 0x7ffff267c700 (LWP 26630)]
+[New Thread 0x7ffff1e7b700 (LWP 26631)]
+[New Thread 0x7ffff167a700 (LWP 26632)]
+wasm-ctor-eval: /home/exp/FOT/binaryen-noasan/src/mixed_arena.h:193: T &ArenaVectorBase<ArenaVector<wasm::Expression *>, wasm::Expression *>::back() const [SubType = ArenaVector<wasm::Expression *>, T = wasm::Expression *]: Assertion `usedElements > 0' failed.
+
+Thread 12 "wasm-ctor-eval" received signal SIGABRT, Aborted.
+[Switching to Thread 0x7ffff1e7b700 (LWP 26631)]
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff6ec6801 in __GI_abort () at abort.c:79
+#2  0x00007ffff6eb639a in __assert_fail_base (fmt=0x7ffff703d7d8 "%s%s%s:%u: %s%sAssertion `%s' failed.\n%n", assertion=assertion@entry=0x6d741a "usedElements > 0", file=file@entry=0x6d2d65 "/home/exp/FOT/binaryen-noasan/src/mixed_arena.h", line=line@entry=0xc1, function=function@entry=0x6d742b "T &ArenaVectorBase<ArenaVector<wasm::Expression *>, wasm::Expression *>::back() const [SubType = ArenaVector<wasm::Expression *>, T = wasm::Expression *]") at assert.c:92
+#3  0x00007ffff6eb6412 in __GI___assert_fail (assertion=0x6d741a "usedElements > 0", file=0x6d2d65 "/home/exp/FOT/binaryen-noasan/src/mixed_arena.h", line=0xc1, function=0x6d742b "T &ArenaVectorBase<ArenaVector<wasm::Expression *>, wasm::Expression *>::back() const [SubType = ArenaVector<wasm::Expression *>, T = wasm::Expression *]") at assert.c:101
+#4  0x0000000000571c6f in ArenaVectorBase<ArenaVector<wasm::Expression*>, wasm::Expression*>::back (this=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/mixed_arena.h:193
+#5  wasm::optimizeBlock (curr=0x9791d8, module=0x7fffffffbbb0, passOptions=...) at /home/exp/FOT/binaryen-noasan/src/passes/MergeBlocks.cpp:223
+#6  0x000000000057648e in wasm::Walker<wasm::MergeBlocks, wasm::Visitor<wasm::MergeBlocks, void> >::walk (this=0x7fffcc003328, root=<optimized out>) at /home/exp/FOT/binaryen-noasan/src/wasm-traversal.h:393
+#7  0x0000000000576272 in wasm::Walker<wasm::MergeBlocks, wasm::Visitor<wasm::MergeBlocks, void> >::doWalkFunction (this=0x2, func=0x7ffff6ec4e97 <__GI_raise+199>) at /home/exp/FOT/binaryen-noasan/src/wasm-traversal.h:312
+#8  wasm::Walker<wasm::MergeBlocks, wasm::Visitor<wasm::MergeBlocks, void> >::walkFunction (this=0x2, func=0x7ffff6ec4e97 <__GI_raise+199>) at /home/exp/FOT/binaryen-noasan/src/wasm-traversal.h:296
+#9  wasm::WalkerPass<wasm::PostWalker<wasm::MergeBlocks, wasm::Visitor<wasm::MergeBlocks, void> > >::runOnFunction (this=0x7fffcc003300, runner=<optimized out>, module=0x0, func=0x7ffff6ec4e97 <__GI_raise+199>) at /home/exp/FOT/binaryen-noasan/src/pass.h:282
+#10 0x00000000004e7669 in wasm::PassRunner::runPassOnFunction (this=0x7fffffffc2d8, pass=0x98a770, func=0x983830) at /home/exp/FOT/binaryen-noasan/src/passes/pass.cpp:473
+#11 0x00000000004e7f2e in wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}::operator()() const (this=0x98c700) at /home/exp/FOT/binaryen-noasan/src/passes/pass.cpp:319
+#12 std::_Function_handler<wasm::ThreadWorkState (), wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}>::_M_invoke(std::_Any_data const&) (__functor=...) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:282
+#13 0x00000000006d0ae9 in std::function<wasm::ThreadWorkState ()>::operator()() const (this=<optimized out>) at /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:687
+#14 wasm::Thread::mainLoop (self_=0x98bbe0) at /home/exp/FOT/binaryen-noasan/src/support/threads.cpp:80
+#15 0x00007ffff7b0956f in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#16 0x00007ffff727e6db in start_thread (arg=0x7ffff1e7b700) at pthread_create.c:463
+#17 0x00007ffff6fa788f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
