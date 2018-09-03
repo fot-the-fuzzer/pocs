@@ -1,0 +1,1 @@
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/simple_ast.h:1625: static cashew::Ref cashew::ValueBuilder::makeDot(cashew::Ref, cashew::Ref): Assertion `key->isString()' failed.

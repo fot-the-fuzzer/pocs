@@ -1,0 +1,1 @@
+asm2wasm: /home/exp/FOT/binaryen/src/asm2wasm.h:741: void wasm::Asm2WasmBuilder::processAsm(cashew::Ref): Assertion `asmFunction[0] == DEFUN' failed.

@@ -1,0 +1,1 @@
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:720: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseAfterCurly(char *&) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `*src == ':'' failed.

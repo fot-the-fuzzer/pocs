@@ -1,0 +1,1 @@
+asm2wasm: /home/exp/FOT/binaryen/src/wasm-builder.h:378: static wasm::Index wasm::Builder::addVar(wasm::Function *, wasm::Name, wasm::Type): Assertion `isConcreteType(type)' failed.

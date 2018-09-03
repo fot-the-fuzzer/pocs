@@ -1,0 +1,1 @@
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:437: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseVar(char *&, const char *, bool) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `name.type == IDENT' failed.

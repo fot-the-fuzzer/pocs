@@ -1,0 +1,1 @@
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:843: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::parseExpression(cashew::Parser::ExpressionElement, char *&, const char *) [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `parts.size() == 1' failed.

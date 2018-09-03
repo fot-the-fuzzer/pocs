@@ -1,0 +1,17 @@
+invalid call target: $store4
+    #0 0x5c65a9 in __sanitizer_print_stack_trace (/home/exp/FOT/binaryen/bin/asm2wasm+0x5c65a9)
+    #1 0x619e54 in wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls::visitCall(wasm::Call*) /home/exp/FOT/binaryen/src/asm2wasm.h
+    #2 0x619e54 in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::doVisitCall(wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls*, wasm::Expression**) /home/exp/FOT/binaryen/src/wasm-traversal.h:407
+    #3 0x614370 in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::walk(wasm::Expression*&) /home/exp/FOT/binaryen/src/wasm-traversal.h:393:7
+    #4 0x613c7f in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::doWalkFunction(wasm::Function*) /home/exp/FOT/binaryen/src/wasm-traversal.h:312:5
+    #5 0x613c7f in wasm::Walker<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, wasm::Visitor<wasm::Asm2WasmBuilder::processAsm(cashew::Ref)::FinalizeCalls, void> >::walkFunction(wasm::Function*) /home/exp/FOT/binaryen/src/wasm-traversal.h:296
+    #6 0x6f7c09 in wasm::PassRunner::runPassOnFunction(wasm::Pass*, wasm::Function*) /home/exp/FOT/binaryen/src/passes/pass.cpp:473:13
+    #7 0x6f960d in wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}::operator()() const /home/exp/FOT/binaryen/src/passes/pass.cpp:319:15
+    #8 0x6f960d in std::_Function_handler<wasm::ThreadWorkState (), wasm::PassRunner::run()::$_0::operator()() const::{lambda()#1}>::_M_invoke(std::_Any_data const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:282
+    #9 0xdf7c49 in std::function<wasm::ThreadWorkState ()>::operator()() const /usr/bin/../lib/gcc/x86_64-linux-gnu/8.1.0/../../../../include/c++/8.1.0/bits/std_function.h:687:14
+    #10 0xdf7c49 in wasm::Thread::mainLoop(void*) /home/exp/FOT/binaryen/src/support/threads.cpp:80
+    #11 0x7fc21b80c56e  (/usr/lib/x86_64-linux-gnu/libstdc++.so.6+0xbd56e)
+    #12 0x5c84fe in __asan::AsanThread::ThreadStart(unsigned long, __sanitizer::atomic_uintptr_t*) (/home/exp/FOT/binaryen/bin/asm2wasm+0x5c84fe)
+    #13 0x7fc21b1996da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #14 0x7fc21a89e88e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+

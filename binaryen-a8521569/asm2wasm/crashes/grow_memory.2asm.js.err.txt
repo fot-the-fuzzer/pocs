@@ -1,0 +1,1 @@
+asm2wasm: /home/exp/FOT/binaryen/src/emscripten-optimizer/parser.h:322: NodeRef cashew::Parser<cashew::Ref, cashew::DotZeroValueBuilder>::ExpressionElement::getNode() [NodeRef = cashew::Ref, Builder = cashew::DotZeroValueBuilder]: Assertion `isNode' failed.
