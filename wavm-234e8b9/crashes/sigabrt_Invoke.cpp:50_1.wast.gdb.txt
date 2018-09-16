@@ -1,0 +1,74 @@
+Reading symbols from /home/hongxu/FOT/WAVM/bin/wavm...done.
+Starting program: /home/hongxu/FOT/WAVM/bin/wavm sigabrt_Invoke.cpp:50_1.wast
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Dumped LLVM module to: llvmDump0.ll
+Verified LLVM module
+Dumped LLVM module to: llvmOptimizedDump1.ll
+Dumped object file to: jitObject0.o
+Generated stub for missing import . : func i32->i32
+Dumped LLVM module to: llvmDump2.ll
+Verified LLVM module
+Dumped LLVM module to: llvmOptimizedDump3.ll
+Dumped object file to: jitObject1.o
+Unhandled runtime exception: wavm.reachedUnreachable
+Call stack:
+  host!/home/hongxu/FOT/WAVM/bin/wavm!Runtime::throwException(Runtime::ExceptionTypeInstance*, std::vector<IR::UntaggedValue, std::allocator<IR::UntaggedValue> >&&)+379
+  host!/home/hongxu/FOT/WAVM/bin/wavm!<unknown>
+  <unknown function>
+  wasm!sigabrt_Invoke.cpp:50_1.wast!main+4
+  thnk!()->i32+9
+  host!/home/hongxu/FOT/WAVM/bin/wavm!Runtime::invokeFunctionUnchecked(Runtime::Context*, Runtime::FunctionInstance*, IR::UntaggedValue const*)+1195
+  host!/home/hongxu/FOT/WAVM/bin/wavm!Runtime::invokeFunctionChecked(Runtime::Context*, Runtime::FunctionInstance*, std::vector<IR::Value, std::allocator<IR::Value> > const&)+742
+  host!/home/hongxu/FOT/WAVM/bin/wavm!<unknown>
+  host!/home/hongxu/FOT/WAVM/bin/wavm!main+3144
+  host!/lib/x86_64-linux-gnu/libc.so.6!__libc_start_main+231
+  host!/home/hongxu/FOT/WAVM/bin/wavm!_start+42
+
+Call stack:
+  host!/home/hongxu/FOT/WAVM/bin/wavm!<unknown>
+  host!/home/hongxu/FOT/WAVM/bin/wavm!<unknown>
+  host!/home/hongxu/FOT/WAVM/bin/wavm!<unknown>
+  host!/home/hongxu/FOT/WAVM/bin/wavm!<unknown>
+  host!/home/hongxu/FOT/WAVM/bin/wavm!<unknown>
+  host!/usr/lib/x86_64-linux-gnu/libstdc++.so.6!<unknown>
+  host!/usr/lib/x86_64-linux-gnu/libstdc++.so.6!std::terminate()+21
+  host!/usr/lib/x86_64-linux-gnu/libstdc++.so.6!__cxa_throw+72
+  host!/home/hongxu/FOT/WAVM/bin/wavm!Platform::raisePlatformException(void*)+149
+  host!/home/hongxu/FOT/WAVM/bin/wavm!Runtime::throwException(Runtime::ExceptionTypeInstance*, std::vector<IR::UntaggedValue, std::allocator<IR::UntaggedValue> >&&)+379
+  host!/home/hongxu/FOT/WAVM/bin/wavm!<unknown>
+  <unknown function>
+  <unknown function>
+  <unknown function>
+  host!/home/hongxu/FOT/WAVM/bin/wavm!Runtime::invokeFunctionUnchecked(Runtime::Context*, Runtime::FunctionInstance*, IR::UntaggedValue const*)+1195
+  host!/home/hongxu/FOT/WAVM/bin/wavm!Runtime::invokeFunctionChecked(Runtime::Context*, Runtime::FunctionInstance*, std::vector<IR::Value, std::allocator<IR::Value> > const&)+742
+  host!/home/hongxu/FOT/WAVM/bin/wavm!<unknown>
+  host!/home/hongxu/FOT/WAVM/bin/wavm!main+3144
+  host!/lib/x86_64-linux-gnu/libc.so.6!__libc_start_main+231
+  host!/home/hongxu/FOT/WAVM/bin/wavm!_start+42
+
+Program received signal SIGABRT, Aborted.
+__GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+51	../sysdeps/unix/sysv/linux/raise.c: No such file or directory.
+#0  __GI_raise (sig=sig@entry=0x6) at ../sysdeps/unix/sysv/linux/raise.c:51
+#1  0x00007ffff666e801 in __GI_abort () at abort.c:79
+#2  0x0000000001aff2ad in Platform::handleFatalError (messageFormat=0x1b351c0 <.str.13> "Unhandled runtime exception: %s\n", varArgs=0x7fffffffaf80) at /home/hongxu/FOT/WAVM/Lib/Platform/POSIX.cpp:160
+#3  0x000000000089f959 in Errors::fatalf (messageFormat=0x1b351c0 <.str.13> "Unhandled runtime exception: %s\n") at /home/hongxu/FOT/WAVM/Include/Inline/Errors.h:14
+#4  0x000000000089f56d in main::$_0::operator() (this=0x89f500 <main::$_0::__invoke(Runtime::Exception&&)>, exception=...) at /home/hongxu/FOT/WAVM/Programs/wavm/wavm.cpp:401
+#5  0x000000000089f511 in main::$_0::__invoke (exception=...) at /home/hongxu/FOT/WAVM/Programs/wavm/wavm.cpp:400
+#6  0x0000000000b56f80 in globalSignalHandler (signal=..., callStack=...) at /home/hongxu/FOT/WAVM/Lib/Runtime/Exception.cpp:274
+#7  0x0000000001b039b5 in deliverSignal (signal=..., callStack=...) at /home/hongxu/FOT/WAVM/Lib/Platform/POSIX.cpp:454
+#8  0x0000000001b0107e in terminateHandler () at /home/hongxu/FOT/WAVM/Lib/Platform/POSIX.cpp:560
+#9  0x00007ffff6cc9d3a in ?? () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#10 0x00007ffff6cc9d95 in std::terminate() () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#11 0x00007ffff6cc9fe8 in __cxa_throw () from /usr/lib/x86_64-linux-gnu/libstdc++.so.6
+#12 0x0000000001b01955 in Platform::raisePlatformException (data=0x6020000deff0) at /home/hongxu/FOT/WAVM/Lib/Platform/POSIX.cpp:675
+#13 0x0000000000b568ab in Runtime::throwException (typeInstance=0x6060000002c0, arguments=...) at /home/hongxu/FOT/WAVM/Lib/Runtime/Exception.cpp:167
+#14 0x0000000000bcf2fd in unreachableTrap (contextRuntimeData=0x7ffe00001000) at /home/hongxu/FOT/WAVM/Lib/Runtime/WAVMIntrinsics.cpp:187
+#15 0x00007ffff7e0301d in functionDef0 ()
+#16 0x00007ffff7e0101f in functionDef0 () at unknown:1
+#17 0x00007ffff7dff009 in thunk ()
+#18 0x0000000000b841eb in Runtime::invokeFunctionUnchecked (context=0x60400001a890, function=0x608000011420, arguments=0x7fffffffb5b0) at /home/hongxu/FOT/WAVM/Lib/Runtime/Invoke.cpp:50
+#19 0x0000000000b844f6 in Runtime::invokeFunctionChecked (context=0x60400001a890, function=0x608000011420, arguments=std::vector of length 0, capacity 0) at /home/hongxu/FOT/WAVM/Lib/Runtime/Invoke.cpp:81
+#20 0x000000000089f158 in run (options=...) at /home/hongxu/FOT/WAVM/Programs/wavm/wavm.cpp:302
+#21 0x000000000089d0a8 in main (argc=0x2, argv=0x7fffffffc518) at /home/hongxu/FOT/WAVM/Programs/wavm/wavm.cpp:404
