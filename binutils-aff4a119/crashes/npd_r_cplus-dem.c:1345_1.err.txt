@@ -1,0 +1,20 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==23610==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f67702435a1 bp 0x7ffe2a376680 sp 0x7ffe2a375e08 T0)
+==23610==The signal is caused by a READ memory access.
+==23610==Hint: address points to the zero page.
+    #0 0x7f67702435a0  /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen-avx2.S:59
+    #1 0x49728c in __interceptor_strlen.part.30 (/home/hongxu/FOT/binutils/BUILD/install/bin/c++filt+0x49728c)
+    #2 0x8c9caa in work_stuff_copy_to_from /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:1345:17
+    #3 0x8c553c in iterate_demangle_function /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:2731:3
+    #4 0x8b77ec in demangle_prefix /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:2971:14
+    #5 0x8b2d00 in internal_cplus_demangle /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:1253:14
+    #6 0x8afe53 in cplus_demangle /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:918:9
+    #7 0x513dd5 in demangle_it /home/hongxu/FOT/binutils/BUILD/binutils/../../binutils/cxxfilt.c:62:12
+    #8 0x5139c9 in main /home/hongxu/FOT/binutils/BUILD/binutils/../../binutils/cxxfilt.c:276:4
+    #9 0x7f67700d6b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #10 0x41a989 in _start (/home/hongxu/FOT/binutils/BUILD/install/bin/c++filt+0x41a989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /build/glibc-OTsEL5/glibc-2.27/string/../sysdeps/x86_64/multiarch/strlen-avx2.S:59 
+==23610==ABORTING

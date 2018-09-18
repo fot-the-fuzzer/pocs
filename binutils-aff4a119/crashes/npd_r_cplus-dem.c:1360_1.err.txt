@@ -1,0 +1,18 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==23847==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x0000008ca218 bp 0x7ffe44bfad50 sp 0x7ffe44bfaa10 T0)
+==23847==The signal is caused by a READ memory access.
+==23847==Hint: address points to the zero page.
+    #0 0x8ca217 in work_stuff_copy_to_from /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:1360:25
+    #1 0x8c553c in iterate_demangle_function /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:2731:3
+    #2 0x8b77ec in demangle_prefix /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:2971:14
+    #3 0x8b2d00 in internal_cplus_demangle /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:1253:14
+    #4 0x8afe53 in cplus_demangle /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:918:9
+    #5 0x513dd5 in demangle_it /home/hongxu/FOT/binutils/BUILD/binutils/../../binutils/cxxfilt.c:62:12
+    #6 0x5139c9 in main /home/hongxu/FOT/binutils/BUILD/binutils/../../binutils/cxxfilt.c:276:4
+    #7 0x7ff52abf2b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #8 0x41a989 in _start (/home/hongxu/FOT/binutils/BUILD/install/bin/c++filt+0x41a989)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/binutils/BUILD/libiberty/../../libiberty/cplus-dem.c:1360:25 in work_stuff_copy_to_from
+==23847==ABORTING
