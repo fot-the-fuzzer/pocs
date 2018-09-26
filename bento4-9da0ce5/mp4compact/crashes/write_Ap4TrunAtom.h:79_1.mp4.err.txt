@@ -1,0 +1,16 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==27329==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000028 (pc 0x0000005daa43 bp 0x7ffd5b4bd0b0 sp 0x7ffd5b4bd090 T0)
+==27329==The signal is caused by a WRITE memory access.
+==27329==Hint: address points to the zero page.
+    #0 0x5daa42 in AP4_TrunAtom::SetDataOffset(int) /home/exp/FOT/Bento4/Source/C++/Core/Ap4TrunAtom.h:79:75
+    #1 0x5d2b1f in AP4_Processor::ProcessFragments(AP4_MoovAtom*, AP4_List<AP4_AtomLocator>&, AP4_ContainerAtom*, AP4_SidxAtom*, unsigned long long, AP4_ByteStream&, AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:285:19
+    #2 0x5d86cc in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_ByteStream*, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:711:18
+    #3 0x5d9114 in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:761:12
+    #4 0x55e2ef in main /home/exp/FOT/Bento4/Source/C++/Apps/Mp4Compact/Mp4Compact.cpp:220:25
+    #5 0x7fbca7dfab96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #6 0x460409 in _start (/home/exp/FOT/Bento4/mp4compact+0x460409)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/Bento4/Source/C++/Core/Ap4TrunAtom.h:79:75 in AP4_TrunAtom::SetDataOffset(int)
+==27329==ABORTING

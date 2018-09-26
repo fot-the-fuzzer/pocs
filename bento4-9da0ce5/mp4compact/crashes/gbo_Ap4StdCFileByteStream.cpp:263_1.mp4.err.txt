@@ -1,0 +1,31 @@
+==27250==AddressSanitizer's allocator is terminating the process instead of returning 0
+==27250==If you don't like this behavior set allocator_may_return_null=1
+==27250==AddressSanitizer CHECK failed: /build/llvm-toolchain-6.0-QjOn7h/llvm-toolchain-6.0-6.0/projects/compiler-rt/lib/sanitizer_common/sanitizer_allocator.cc:225 "((0)) != (0)" (0x0, 0x0)
+    #0 0x529415 in __asan::AsanCheckFailed(char const*, int, char const*, unsigned long long, unsigned long long) (/home/exp/FOT/Bento4/mp4compact+0x529415)
+    #1 0x546cc5 in __sanitizer::CheckFailed(char const*, int, char const*, unsigned long long, unsigned long long) (/home/exp/FOT/Bento4/mp4compact+0x546cc5)
+    #2 0x52f806 in __sanitizer::ReportAllocatorCannotReturnNull() (/home/exp/FOT/Bento4/mp4compact+0x52f806)
+    #3 0x52f88f in __sanitizer::DieOnFailure::OnOOM() (/home/exp/FOT/Bento4/mp4compact+0x52f88f)
+    #4 0x558984 in operator new(unsigned long) (/home/exp/FOT/Bento4/mp4compact+0x558984)
+    #5 0x63f7b1 in AP4_Array<AP4_TrunAtom::Entry>::EnsureCapacity(unsigned int) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Array.h:172:25
+    #6 0x63f3b7 in AP4_Array<AP4_TrunAtom::Entry>::SetItemCount(unsigned int) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Array.h:210:25
+    #7 0x63cda9 in AP4_TrunAtom::AP4_TrunAtom(unsigned int, unsigned char, unsigned int, AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4TrunAtom.cpp:127:15
+    #8 0x63c3cb in AP4_TrunAtom::Create(unsigned int, AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4TrunAtom.cpp:51:16
+    #9 0x570de8 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:404:20
+    #10 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #11 0x584d38 in AP4_ContainerAtom::ReadChildren(AP4_AtomFactory&, AP4_ByteStream&, unsigned long long) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194:12
+    #12 0x584aca in AP4_ContainerAtom::AP4_ContainerAtom(unsigned int, unsigned long long, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139:5
+    #13 0x5843ee in AP4_ContainerAtom::Create(unsigned int, unsigned long long, bool, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:88:20
+    #14 0x57317f in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:764:20
+    #15 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #16 0x584d38 in AP4_ContainerAtom::ReadChildren(AP4_AtomFactory&, AP4_ByteStream&, unsigned long long) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194:12
+    #17 0x584aca in AP4_ContainerAtom::AP4_ContainerAtom(unsigned int, unsigned long long, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139:5
+    #18 0x5843ee in AP4_ContainerAtom::Create(unsigned int, unsigned long long, bool, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:88:20
+    #19 0x57317f in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:764:20
+    #20 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #21 0x56d9ea in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:151:12
+    #22 0x5d4e09 in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_ByteStream*, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:441:9
+    #23 0x5d9114 in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:761:12
+    #24 0x55e2ef in main /home/exp/FOT/Bento4/Source/C++/Apps/Mp4Compact/Mp4Compact.cpp:220:25
+    #25 0x7f410857db96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #26 0x460409 in _start (/home/exp/FOT/Bento4/mp4compact+0x460409)
+

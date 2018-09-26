@@ -1,0 +1,58 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==27269==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x00000051ef69 bp 0x7fff819c8410 sp 0x7fff819c7ba0 T0)
+==27269==The signal is caused by a READ memory access.
+==27269==Hint: address points to the zero page.
+    #0 0x51ef68 in __asan_memcpy (/home/exp/FOT/Bento4/mp4compact+0x51ef68)
+    #1 0x5901d5 in AP4_DataBuffer::SetData(unsigned char const*, unsigned int) /home/exp/FOT/Bento4/Source/C++/Core/Ap4DataBuffer.cpp:175:5
+    #2 0x578247 in AP4_AvccAtom::AP4_AvccAtom(unsigned int, unsigned char const*) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AvccAtom.cpp:173:40
+    #3 0x576484 in AP4_AvccAtom::Create(unsigned int, AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AvccAtom.cpp:95:16
+    #4 0x57159c in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:479:20
+    #5 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #6 0x584d38 in AP4_ContainerAtom::ReadChildren(AP4_AtomFactory&, AP4_ByteStream&, unsigned long long) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194:12
+    #7 0x5fefdd in AP4_SampleEntry::Read(AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4SampleEntry.cpp:115:9
+    #8 0x604276 in AP4_VisualSampleEntry::AP4_VisualSampleEntry(unsigned int, unsigned int, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4SampleEntry.cpp:742:5
+    #9 0x5df9fc in AP4_EncvSampleEntry::AP4_EncvSampleEntry(unsigned int, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Protection.cpp:173:5
+    #10 0x56f5bf in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:289:24
+    #11 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #12 0x61ad3b in AP4_StsdAtom::AP4_StsdAtom(unsigned int, unsigned char, unsigned int, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4StsdAtom.cpp:101:13
+    #13 0x61a151 in AP4_StsdAtom::Create(unsigned int, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4StsdAtom.cpp:57:16
+    #14 0x570ffb in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:424:20
+    #15 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #16 0x584d38 in AP4_ContainerAtom::ReadChildren(AP4_AtomFactory&, AP4_ByteStream&, unsigned long long) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194:12
+    #17 0x584aca in AP4_ContainerAtom::AP4_ContainerAtom(unsigned int, unsigned long long, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139:5
+    #18 0x5843ee in AP4_ContainerAtom::Create(unsigned int, unsigned long long, bool, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:88:20
+    #19 0x57317f in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:764:20
+    #20 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #21 0x584d38 in AP4_ContainerAtom::ReadChildren(AP4_AtomFactory&, AP4_ByteStream&, unsigned long long) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194:12
+    #22 0x584aca in AP4_ContainerAtom::AP4_ContainerAtom(unsigned int, unsigned long long, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139:5
+    #23 0x5843ee in AP4_ContainerAtom::Create(unsigned int, unsigned long long, bool, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:88:20
+    #24 0x57317f in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:764:20
+    #25 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #26 0x584d38 in AP4_ContainerAtom::ReadChildren(AP4_AtomFactory&, AP4_ByteStream&, unsigned long long) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194:12
+    #27 0x584aca in AP4_ContainerAtom::AP4_ContainerAtom(unsigned int, unsigned long long, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139:5
+    #28 0x5843ee in AP4_ContainerAtom::Create(unsigned int, unsigned long long, bool, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:88:20
+    #29 0x57317f in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:764:20
+    #30 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #31 0x584d38 in AP4_ContainerAtom::ReadChildren(AP4_AtomFactory&, AP4_ByteStream&, unsigned long long) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194:12
+    #32 0x584aca in AP4_ContainerAtom::AP4_ContainerAtom(unsigned int, unsigned long long, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139:5
+    #33 0x638b24 in AP4_TrakAtom::AP4_TrakAtom(unsigned int, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4TrakAtom.cpp:165:5
+    #34 0x5746cd in AP4_TrakAtom::Create(unsigned int, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4TrakAtom.h:58:20
+    #35 0x570b59 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:379:20
+    #36 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #37 0x584d38 in AP4_ContainerAtom::ReadChildren(AP4_AtomFactory&, AP4_ByteStream&, unsigned long long) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194:12
+    #38 0x584aca in AP4_ContainerAtom::AP4_ContainerAtom(unsigned int, unsigned long long, bool, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139:5
+    #39 0x5bc9f5 in AP4_MoovAtom::AP4_MoovAtom(unsigned int, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4MoovAtom.cpp:79:5
+    #40 0x57464d in AP4_MoovAtom::Create(unsigned int, AP4_ByteStream&, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4MoovAtom.h:56:20
+    #41 0x570946 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned int, unsigned int, unsigned long long, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:359:20
+    #42 0x56e738 in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, unsigned long long&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221:14
+    #43 0x56d9ea in AP4_AtomFactory::CreateAtomFromStream(AP4_ByteStream&, AP4_Atom*&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:151:12
+    #44 0x5d4e09 in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_ByteStream*, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:441:9
+    #45 0x5d9114 in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:761:12
+    #46 0x55e2ef in main /home/exp/FOT/Bento4/Source/C++/Apps/Mp4Compact/Mp4Compact.cpp:220:25
+    #47 0x7fb4aefe4b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #48 0x460409 in _start (/home/exp/FOT/Bento4/mp4compact+0x460409)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/exp/FOT/Bento4/mp4compact+0x51ef68) in __asan_memcpy
+==27269==ABORTING

@@ -1,0 +1,1 @@
+mp4compact: /home/exp/FOT/Bento4/Source/C++/Core/Ap4Atom.cpp:759: virtual AP4_Result AP4_AtomListWriter::Action(AP4_Atom *) const: Assertion `bytes_written <= atom->GetSize()' failed.

@@ -1,0 +1,15 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==27298==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x0000005d2abd bp 0x7ffd3ec0dc80 sp 0x7ffd3ec0cf00 T0)
+==27298==The signal is caused by a READ memory access.
+==27298==Hint: address points to the zero page.
+    #0 0x5d2abc in AP4_Processor::ProcessFragments(AP4_MoovAtom*, AP4_List<AP4_AtomLocator>&, AP4_ContainerAtom*, AP4_SidxAtom*, unsigned long long, AP4_ByteStream&, AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:284:34
+    #1 0x5d86cc in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_ByteStream*, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:711:18
+    #2 0x5d9114 in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:761:12
+    #3 0x55e2ef in main /home/exp/FOT/Bento4/Source/C++/Apps/Mp4Compact/Mp4Compact.cpp:220:25
+    #4 0x7f415da1fb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #5 0x460409 in _start (/home/exp/FOT/Bento4/mp4compact+0x460409)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:284:34 in AP4_Processor::ProcessFragments(AP4_MoovAtom*, AP4_List<AP4_AtomLocator>&, AP4_ContainerAtom*, AP4_SidxAtom*, unsigned long long, AP4_ByteStream&, AP4_ByteStream&)
+==27298==ABORTING

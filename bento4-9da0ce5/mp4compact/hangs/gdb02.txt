@@ -1,0 +1,47 @@
+Reading symbols from /home/exp/FOT/Bento4/mp4compact...done.
+gdb$ run
+Starting program: /home/exp/FOT/Bento4/mp4compact h02.mp4 /dev/null
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+^C
+Program received signal SIGINT, Interrupt.
+0x0000000000589313 in AP4_CttsTableEntry::AP4_CttsTableEntry (this=0x7ffe8cb5c000) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4CttsAtom.h:50
+50              m_SampleCount(0), 
+gdb$ bt
+#0  0x0000000000589313 in AP4_CttsTableEntry::AP4_CttsTableEntry (this=0x7ffe8cb5c000) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4CttsAtom.h:50
+#1  0x00000000005886ce in AP4_Array<AP4_CttsTableEntry>::SetItemCount (this=0x607000000668, item_count=0x40000002) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4Array.h:215
+#2  0x0000000000587068 in AP4_CttsAtom::AP4_CttsAtom (this=0x607000000640, size=0x20, version=0x0, flags=0x0, stream=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4CttsAtom.cpp:79
+#3  0x0000000000586aac in AP4_CttsAtom::Create (size=0x20, stream=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4CttsAtom.cpp:52
+#4  0x0000000000571391 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., type=0x63747473, size_32=0x20, size_64=0x20, atom=@0x7fffffff5120: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:459
+#5  0x000000000056e739 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., bytes_available=@0x7fffffff5140: 0x20, atom=@0x7fffffff5120: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221
+#6  0x0000000000584d39 in AP4_ContainerAtom::ReadChildren (this=0x607000000330, atom_factory=..., stream=..., size=0x143) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194
+#7  0x0000000000584acb in AP4_ContainerAtom::AP4_ContainerAtom (this=0x607000000330, type=0x7374626c, size=0x14b, force_64=0x0, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139
+#8  0x00000000005843ef in AP4_ContainerAtom::Create (type=0x7374626c, size=0x14b, is_full=0x0, force_64=0x0, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:88
+#9  0x0000000000573180 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., type=0x7374626c, size_32=0x14b, size_64=0x14b, atom=@0x7fffffff6520: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:764
+#10 0x000000000056e739 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., bytes_available=@0x7fffffff6540: 0x14b, atom=@0x7fffffff6520: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221
+#11 0x0000000000584d39 in AP4_ContainerAtom::ReadChildren (this=0x6070000001e0, atom_factory=..., stream=..., size=0x17f) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194
+#12 0x0000000000584acb in AP4_ContainerAtom::AP4_ContainerAtom (this=0x6070000001e0, type=0x6d696e66, size=0x187, force_64=0x0, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139
+#13 0x00000000005843ef in AP4_ContainerAtom::Create (type=0x6d696e66, size=0x187, is_full=0x0, force_64=0x0, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:88
+#14 0x0000000000573180 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., type=0x6d696e66, size_32=0x187, size_64=0x187, atom=@0x7fffffff7920: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:764
+#15 0x000000000056e739 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., bytes_available=@0x7fffffff7940: 0x187, atom=@0x7fffffff7920: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221
+#16 0x0000000000584d39 in AP4_ContainerAtom::ReadChildren (this=0x607000000170, atom_factory=..., stream=..., size=0x1c8) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194
+#17 0x0000000000584acb in AP4_ContainerAtom::AP4_ContainerAtom (this=0x607000000170, type=0x6d646961, size=0x1d0, force_64=0x0, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139
+#18 0x00000000005843ef in AP4_ContainerAtom::Create (type=0x6d646961, size=0x1d0, is_full=0x0, force_64=0x0, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:88
+#19 0x0000000000573180 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., type=0x6d646961, size_32=0x1d0, size_64=0x1d0, atom=@0x7fffffff8d20: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:764
+#20 0x000000000056e739 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., bytes_available=@0x7fffffff8d40: 0x1d0, atom=@0x7fffffff8d20: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221
+#21 0x0000000000584d39 in AP4_ContainerAtom::ReadChildren (this=0x6080000001a0, atom_factory=..., stream=..., size=0x22c) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194
+#22 0x0000000000584acb in AP4_ContainerAtom::AP4_ContainerAtom (this=0x6080000001a0, type=0x7472616b, size=0x234, force_64=0x0, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139
+#23 0x0000000000638b25 in AP4_TrakAtom::AP4_TrakAtom (this=0x6080000001a0, size=0x234, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4TrakAtom.cpp:165
+#24 0x00000000005746ce in AP4_TrakAtom::Create (size=0x234, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4TrakAtom.h:58
+#25 0x0000000000570b5a in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., type=0x7472616b, size_32=0x234, size_64=0x234, atom=@0x7fffffff9fc0: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:379
+#26 0x000000000056e739 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., bytes_available=@0x7fffffff9fe0: 0x2ab, atom=@0x7fffffff9fc0: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221
+#27 0x0000000000584d39 in AP4_ContainerAtom::ReadChildren (this=0x60c000000040, atom_factory=..., stream=..., size=0x32f) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:194
+#28 0x0000000000584acb in AP4_ContainerAtom::AP4_ContainerAtom (this=0x60c000000040, type=0x6d6f6f76, size=0x337, force_64=0x0, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:139
+#29 0x00000000005bc9f6 in AP4_MoovAtom::AP4_MoovAtom (this=0x60c000000040, size=0x337, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4MoovAtom.cpp:79
+#30 0x000000000057464e in AP4_MoovAtom::Create (size=0x337, stream=..., atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4MoovAtom.h:56
+#31 0x0000000000570947 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., type=0x6d6f6f76, size_32=0x337, size_64=0x337, atom=@0x7fffffffb510: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:359
+#32 0x000000000056e739 in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., bytes_available=@0x7fffffffb320: 0x337, atom=@0x7fffffffb510: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:221
+#33 0x000000000056d9eb in AP4_AtomFactory::CreateAtomFromStream (this=0x1677d60 <AP4_DefaultAtomFactory::Instance_>, stream=..., atom=@0x7fffffffb510: 0x0) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4AtomFactory.cpp:151
+#34 0x00000000005d4e0a in AP4_Processor::Process (this=0x608000000020, input=..., output=..., fragments=0x0, listener=0x0, atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:441
+#35 0x00000000005d9115 in AP4_Processor::Process (this=0x608000000020, input=..., output=..., listener=0x0, atom_factory=...) at /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:761
+#36 0x000000000055e2f0 in main (argc=0x3, argv=0x7fffffffc580) at /home/exp/FOT/Bento4/Source/C++/Apps/Mp4Compact/Mp4Compact.cpp:220

@@ -1,0 +1,64 @@
+=================================================================
+==27254==ERROR: AddressSanitizer: global-buffer-overflow on address 0x000001677ea1 at pc 0x0000004e271c bp 0x7ffd235404d0 sp 0x7ffd2353fc80
+READ of size 244 at 0x000001677ea1 thread T0
+    #0 0x4e271b in __interceptor_fwrite.part.51 (/home/exp/FOT/Bento4/mp4compact+0x4e271b)
+    #1 0x6739c3 in AP4_StdcFileByteStream::WritePartial(void const*, unsigned int, unsigned int&) /home/exp/FOT/Bento4/Source/C++/System/StdC/Ap4StdCFileByteStream.cpp:263:17
+    #2 0x57b099 in AP4_ByteStream::Write(void const*, unsigned int) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ByteStream.cpp:78:29
+    #3 0x59c9bd in AP4_HdlrAtom::WriteFields(AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4HdlrAtom.cpp:141:29
+    #4 0x560f59 in AP4_Atom::Write(AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Atom.cpp:229:14
+    #5 0x565840 in AP4_AtomListWriter::Action(AP4_Atom*) const /home/exp/FOT/Bento4/Source/C++/Core/Ap4Atom.cpp:753:11
+    #6 0x5861d7 in AP4_List<AP4_Atom>::Apply(AP4_List<AP4_Atom>::Item::Operator const&) const /home/exp/FOT/Bento4/Source/C++/Core/Ap4List.h:353:12
+    #7 0x585826 in AP4_ContainerAtom::WriteFields(AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:232:23
+    #8 0x560f59 in AP4_Atom::Write(AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Atom.cpp:229:14
+    #9 0x565840 in AP4_AtomListWriter::Action(AP4_Atom*) const /home/exp/FOT/Bento4/Source/C++/Core/Ap4Atom.cpp:753:11
+    #10 0x5861d7 in AP4_List<AP4_Atom>::Apply(AP4_List<AP4_Atom>::Item::Operator const&) const /home/exp/FOT/Bento4/Source/C++/Core/Ap4List.h:353:12
+    #11 0x585826 in AP4_ContainerAtom::WriteFields(AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:232:23
+    #12 0x560f59 in AP4_Atom::Write(AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Atom.cpp:229:14
+    #13 0x565840 in AP4_AtomListWriter::Action(AP4_Atom*) const /home/exp/FOT/Bento4/Source/C++/Core/Ap4Atom.cpp:753:11
+    #14 0x5861d7 in AP4_List<AP4_Atom>::Apply(AP4_List<AP4_Atom>::Item::Operator const&) const /home/exp/FOT/Bento4/Source/C++/Core/Ap4List.h:353:12
+    #15 0x585826 in AP4_ContainerAtom::WriteFields(AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4ContainerAtom.cpp:232:23
+    #16 0x560f59 in AP4_Atom::Write(AP4_ByteStream&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Atom.cpp:229:14
+    #17 0x565840 in AP4_AtomListWriter::Action(AP4_Atom*) const /home/exp/FOT/Bento4/Source/C++/Core/Ap4Atom.cpp:753:11
+    #18 0x5861d7 in AP4_List<AP4_Atom>::Apply(AP4_List<AP4_Atom>::Item::Operator const&) const /home/exp/FOT/Bento4/Source/C++/Core/Ap4List.h:353:12
+    #19 0x5d7d1e in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_ByteStream*, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:644:33
+    #20 0x5d9114 in AP4_Processor::Process(AP4_ByteStream&, AP4_ByteStream&, AP4_Processor::ProgressListener*, AP4_AtomFactory&) /home/exp/FOT/Bento4/Source/C++/Core/Ap4Processor.cpp:761:12
+    #21 0x55e2ef in main /home/exp/FOT/Bento4/Source/C++/Apps/Mp4Compact/Mp4Compact.cpp:220:25
+    #22 0x7f2c47292b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #23 0x460409 in _start (/home/exp/FOT/Bento4/mp4compact+0x460409)
+
+0x000001677ea1 is located 63 bytes to the left of global variable 'AP4_GlobalOptions::g_Entries' defined in '/home/exp/FOT/Bento4/Source/C++/Core/Ap4Utils.cpp:37:56' (0x1677ee0) of size 8
+0x000001677ea1 is located 0 bytes to the right of global variable 'AP4_String::EmptyString' defined in '/home/exp/FOT/Bento4/Source/C++/Core/Ap4String.cpp:39:18' (0x1677ea0) of size 1
+  'AP4_String::EmptyString' is ascii string ''
+SUMMARY: AddressSanitizer: global-buffer-overflow (/home/exp/FOT/Bento4/mp4compact+0x4e271b) in __interceptor_fwrite.part.51
+Shadow bytes around the buggy address:
+  0x0000802c6f80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000802c6f90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000802c6fa0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000802c6fb0: 00 00 00 00 00 f9 f9 f9 f9 f9 f9 f9 00 00 00 00
+  0x0000802c6fc0: 00 00 00 00 00 f9 f9 f9 f9 f9 f9 f9 00 00 f9 f9
+=>0x0000802c6fd0: f9 f9 f9 f9[01]f9 f9 f9 f9 f9 f9 f9 00 f9 f9 f9
+  0x0000802c6fe0: f9 f9 f9 f9 00 00 00 f9 f9 f9 f9 f9 00 00 00 00
+  0x0000802c6ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000802c7000: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000802c7010: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000802c7020: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==27254==ABORTING
