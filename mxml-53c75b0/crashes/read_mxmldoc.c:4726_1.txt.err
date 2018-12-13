@@ -1,0 +1,14 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==26693==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000038 (pc 0x000000525ae6 bp 0x7fff143be710 sp 0x7fff143be390 T0)
+==26693==The signal is caused by a READ memory access.
+==26693==Hint: address points to the zero page.
+    #0 0x525ae5 in write_html_body /home/exp/FOT/mxml-asan-O0/mxmldoc.c:4726:42
+    #1 0x51ee10 in write_html /home/exp/FOT/mxml-asan-O0/mxmldoc.c:4551:3
+    #2 0x514c90 in main /home/exp/FOT/mxml-asan-O0/mxmldoc.c:602:9
+    #3 0x7efe33ba6b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #4 0x41a919 in _start (/home/exp/FOT/mxml-asan-O0/install/bin/mxmldoc+0x41a919)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/mxml-asan-O0/mxmldoc.c:4726:42 in write_html_body
+==26693==ABORTING

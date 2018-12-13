@@ -1,0 +1,48 @@
+=================================================================
+==26865==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffc191abba0 at pc 0x00000051a80d bp 0x7ffc1919aed0 sp 0x7ffc1919aec8
+WRITE of size 1 at 0x7ffc191abba0 thread T0
+    #0 0x51a80c in scan_file /home/exp/FOT/mxml-asan-O0/mxmldoc.c:2971:14
+    #1 0x5144ef in main /home/exp/FOT/mxml-asan-O0/mxmldoc.c:503:11
+    #2 0x7fbc38c28b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #3 0x41a919 in _start (/home/exp/FOT/mxml-asan-O0/install/bin/mxmldoc+0x41a919)
+
+Address 0x7ffc191abba0 is located in stack of thread T0 at offset 65568 in frame
+    #0 0x51512f in scan_file /home/exp/FOT/mxml-asan-O0/mxmldoc.c:1820
+
+  This frame has 1 object(s):
+    [32, 65568) 'buffer' (line 1825) <== Memory access at offset 65568 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /home/exp/FOT/mxml-asan-O0/mxmldoc.c:2971:14 in scan_file
+Shadow bytes around the buggy address:
+  0x10000322d720: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000322d730: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000322d740: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000322d750: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000322d760: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x10000322d770: 00 00 00 00[f3]f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
+  0x10000322d780: f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3
+  0x10000322d790: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000322d7a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10000322d7b0: 00 00 00 00 f1 f1 f1 f1 00 f3 f3 f3 00 00 00 00
+  0x10000322d7c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==26865==ABORTING
