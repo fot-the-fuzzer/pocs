@@ -12,7 +12,9 @@ pbzip2 -r -f -k -p2 FILE
 
 The root cause is that at pbzip2.cpp:4126, the `blockSize` is 0 since it is initially calculated at Line 4087 as:
 
+```C
 4086                // determine block size to try and spread data equally over # CPUs
 4087                blockSize = InFileSize / numCPU;
+```
 
 Given that the default number of processors to be used for compression is the core count, many larger files may cause this exception.
