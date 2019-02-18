@@ -1,4 +1,4 @@
-# Decompression in multithreading mode causes SIGSEGV
+# [Decompression in multithreading mode causes SIGSEGV](https://bugs.launchpad.net/pbzip2/+bug/1815028)
 
 # Description
 
