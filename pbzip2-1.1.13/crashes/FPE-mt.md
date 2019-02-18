@@ -1,4 +1,4 @@
-# Floating point exception when processors are more than file size<Paste>
+# [FPE when processors are more than file size](https://bugs.launchpad.net/pbzip2/+bug/1815157)
 
 # Description:
 
