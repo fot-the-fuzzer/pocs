@@ -5,8 +5,9 @@
 There is a heap-buffer-overflow issue inside x264. Here is an error reported by AddressSanitizer when executing
 
 ```
-x264 --threads 1 --quiet --output /dev/null hbo_internal.c:34_2
+x264 --threads 1 --quiet --output /dev/null $FILE
 ```
+POC files: [file1](https://github.com/ntu-sec/pocs/blob/master/x264-545de2ff/crashes/hbo_internal.c_34_1?raw=true), [file2](https://github.com/ntu-sec/pocs/blob/master/x264-545de2ff/crashes/hbo_internal.c_34_2?raw=true) and [another](https://github.com/ntu-sec/pocs/blob/master/x264-545de2ff/crashes/another_poc?raw=true).
 
 ```
 =================================================================
