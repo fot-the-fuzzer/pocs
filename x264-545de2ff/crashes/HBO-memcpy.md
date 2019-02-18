@@ -2,7 +2,7 @@
 
 # Description
 
-There is a heap-buffer-overflow issue inside x264. Here is an error reported by AddressSanitizer when executing
+There is a heap-buffer-overflow issue inside x264 (both the release git commit 545de2ff and the sandbox development commit 1210d2e9). Here is an error reported by AddressSanitizer when executing
 
 ```
 x264 --threads 1 --quiet --output /dev/null $FILE
