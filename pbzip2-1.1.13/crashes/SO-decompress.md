@@ -7,8 +7,10 @@ As of pbzip2-1.1.13 (latest version for Linux distributions such as Debian/Ubunt
 When executing
 
 ```bash
-./pbzip2 -f -k -p2 -S16 -d ./c01.bz2
+./pbzip2 -f -k -p2 -S16 -d $FILE
 ```
+
+Where the POC files can be [c01.bz2](https://github.com/ntu-sec/pocs/blob/master/pbzip2-1.1.13/crashes/c01.bz2?raw=true) and [c02.bz2](https://raw.githubusercontent.com/ntu-sec/pocs/master/pbzip2-1.1.13/crashes/c02.bz2).
 
 It may termininate unexpectedly with the following message:
 
