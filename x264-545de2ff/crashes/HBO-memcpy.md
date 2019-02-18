@@ -2,12 +2,14 @@
 
 # Description
 
-There is a heap-buffer-overflow issue inside x264 (both the release git commit 545de2ff and the sandbox development commit 1210d2e9). Here is an error reported by AddressSanitizer when executing
+There is a heap-buffer-overflow issue inside x264 (both the release git commit 545de2ff and the sandbox development commit 1210d2e9). 
+This was previously detected when fuzzing with `x264 --threads 4 --quiet --output /dev/null $FILE` however it can be triggered when thread is 1.
 
 ```
-x264 --threads 1 --quiet --output /dev/null $FILE
+`x264 --threads 1 --quiet --output /dev/null $FILE`
 ```
-POC files: [file1](https://github.com/ntu-sec/pocs/blob/master/x264-545de2ff/crashes/hbo_internal.c_34_1?raw=true), [file2](https://github.com/ntu-sec/pocs/blob/master/x264-545de2ff/crashes/hbo_internal.c_34_2?raw=true) and [another](https://github.com/ntu-sec/pocs/blob/master/x264-545de2ff/crashes/another_poc?raw=true).
+
+Where the POC `$FILE` can be: [file1](https://github.com/ntu-sec/pocs/blob/master/x264-545de2ff/crashes/hbo_internal.c_34_1?raw=true), [file2](https://github.com/ntu-sec/pocs/blob/master/x264-545de2ff/crashes/hbo_internal.c_34_2?raw=true) and [another](https://github.com/ntu-sec/pocs/blob/master/x264-545de2ff/crashes/another_poc?raw=true).
 
 ```
 =================================================================
