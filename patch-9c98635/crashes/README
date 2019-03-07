@@ -1,0 +1,9 @@
+# patch: util.c:627: copy_file: Assertion `S_ISREG (mode)' failed<Paste>
+./src/patch -R -o /tmp/patch.out -r /tmp/patch.rej -t < poc0.diff
+
+https://savannah.gnu.org/bugs/?55846
+
+# patch: patch.c:1430: apply_hunk: Assertion `outstate->after_newline' failed. 
+./src/patch -o /tmp/patch.out -r /tmp/patch.rej -t < poc1.diff
+
+https://savannah.gnu.org/bugs/?55847

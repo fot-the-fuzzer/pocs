@@ -1,0 +1,5 @@
+The next patch would delete the file 0,
+which does not exist!  Assuming -R.
+patching file /tmp/patch.out (read from 0)
+patching file /tmp/patch.out (read from 0)
+patch: patch.c:1430: apply_hunk: Assertion `outstate->after_newline' failed.
