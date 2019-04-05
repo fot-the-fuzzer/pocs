@@ -1,0 +1,126 @@
+/^$/d;G
+G;G
+n;d
+/regex/{x;p;x;}
+/regex/G
+/regex/{x;p;x;G;}
+N;s/\n/\t/
+N; s/^/     /; s/ *\(.\{6,\}\)\n/\1  /
+/./=
+/./N; s/\n/ /
+s/.$//
+s/^M$//
+s/\x0D$//
+"s/$/`echo -e \\\r`/"
+'s/$'"/`echo \\\r`/"
+"s/$/`echo \\\r`/"
+'s/$/\r/'
+"s/$//"
+"s/\r//" infile >outfile
+'s/^[ \t]*//'
+'s/[ \t]*$//'
+'s/^[ \t]*//;s/[ \t]*$//'
+'s/^/     /'
+'s/foo/bar/'
+'s/foo/bar/4'
+'s/foo/bar/g'
+'s/\(.*\)foo\(.*foo\)/\1bar\2/'
+'s/\(.*\)foo/\1bar/'
+'/baz/s/foo/bar/g'
+'/baz/!s/foo/bar/g'
+'s/scarlet/red/g;s/ruby/red/g;s/puce/red/g'
+'s/scarlet\|ruby\|puce/red/g'
+'1!G;h;$!d'
+-n '1!G;h;$p'
+'/\n/!G;s/\(.\)\(.*\n\)/&\2\1/;//D;s/.//'
+'$!N;s/\n/ /'
+-e :a -e '/\\$/N; s/\\\n//; ta'
+-e :a -e '$!N;s/\n=/ /;ta' -e 'P;D'
+':a;s/\B[0-9]\{3\}\>/,&/;ta'
+-e :a -e 's/\(.*[0-9]\)\([0-9]\{3\}\)/\1,\2/;ta'
+-r ':a;s/(^|[^0-9.])([0-9]+)([0-9]{3})/\1\2,\3/g;ta'
+'0~5G'
+'n;n;n;n;G;'
+10q
+q
+-e :a -e '$q;N;11,$D;ba'
+'$!N;$!D'
+'$!d'
+-n '$p'
+-e '$!{h;d;}' -e x
+-e '1{$q;}' -e '$!{h;d;}' -e x
+-e '1{$d;}' -e '$!{h;d;}' -e x
+-n '/regexp/p'
+'/regexp/!d'
+-n '/regexp/!p'
+'/regexp/d'
+-n '/regexp/{g;1!p;};h'
+-n '/regexp/{n;p;}'
+-n -e '/regexp/{=;x;1!p;g;$!N;p;D;}' -e h
+'/AAA/!d; /BBB/!d; /CCC/!d'
+'/AAA.*BBB.*CCC/!d'
+-e '/AAA/b' -e '/BBB/b' -e '/CCC/b' -e d
+'/AAA\|BBB\|CCC/!d'
+-e '/./{H;$!d;}' -e 'x;/AAA/!d;'
+-e '/./{H;$!d;}' -e 'x;/AAA/!d;/BBB/!d;/CCC/!d'
+-e '/./{H;$!d;}' -e 'x;/AAA/b' -e '/BBB/b' -e '/CCC/b' -e d
+'/./{H;$!d;};x;/AAA\|BBB\|CCC/b;d'
+-n '/^.\{65\}/p'
+-n '/^.\{65\}/!p'
+'/^.\{65\}/d'
+-n '/regexp/,$p'
+-n '8,12p'
+'8,12!d'
+-n '52p'
+'52!d'
+'52q;d'
+-n '3~7p'
+-n '3,${p;n;n;n;n;n;n;}'
+-n '/Iowa/,/Montana/p'
+'/Iowa/,/Montana/d'
+'$!N; /^\(.*\)\n\1$/!P; D'
+-n 'G; s/\n/&&/; /^\([ -~]*\n\).*\n\1/d; s/\n//; h; P'
+'$!N; s/^\(.*\)\n\1$/\1/; t; D'
+'1,10d'
+'$d'
+'N;$!P;$!D;$d'
+-e :a -e '$d;N;2,10ba' -e 'P;D'
+-n -e :a -e '1,10!{P;N;D;};N;ba'
+'0~8d'
+'n;n;n;n;n;n;n;d;'
+'/pattern/d'
+'/^$/d'
+'/./!d'
+'/./,/^$/!d'
+'/^$/N;/\n$/D'
+'/^$/N;/\n$/N;//D'
+'/./,$!d'
+-e :a -e '/^\n*$/{$d;N;ba' -e '}'
+-e :a -e '/^\n*$/N;/\n$/ba'
+-n '/^$/{p;h;};/./{x;/./p;}'
+"s/.`echo \\\b`//g"
+'s/.^H//g'
+'s/.\x08//g'
+'/^$/q'
+'1,/^$/d'
+'/^Subject: */!d; s///;q'
+'/^Reply-To:/q; /^From:/h; /./d;g;q'
+'s/ *(.*)//; s/>.*//; s/.*[:<] *//'
+'s/^/> /'
+'s/^> //'
+-e :a -e 's/<[^>]*>//g;/</N;//ba'
+'/^end/,/^begin/d' file1 file2 ... fileX | uudecode
+'/^end/,/^begin/d' "$@" | uudecode
+'/./{H;d;};x;s/\n/={NL}=/g' file | sort | sed '1s/={NL}=//;s/={NL}=/\n/g'
+'/./{H;d};x;y/\n/\v/' file | sort | sed '1s/\v//;y/\v/\n/'
+"s/^\(.*\)\.TXT/pkzip -mo \1 \1.TXT/" >>zipup.bat
+'10q' filename
+'10q' filename > newfile
+-e '/AAA/b' -e '/BBB/b' -e '/CCC/b' -e d
+'/AAA/b;/BBB/b;/CCC/b;d'
+'/AAA\|BBB\|CCC/b;d'
+'s/foo/bar/g' filename
+'/foo/ s/foo/bar/g' filename
+'/foo/ s//bar/g' filename
+-n '45,50p' filename
+-n '51q;45,50p' filename
