@@ -1,0 +1,15 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==15504==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000001 (pc 0x561a047508e4 bp 0x7fff7e880970 sp 0x7fff7e8808a0 T0)
+==15504==The signal is caused by a READ memory access.
+==15504==Hint: address points to the zero page.
+    #0 0x561a047508e3 in tune_jb2image /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/jb2tune.cpp:294
+    #1 0x561a04751078 in tune_jb2image_lossless(JB2Image*) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/jb2tune.cpp:377
+    #2 0x561a0474928a in cjb2(GURL const&, GURL const&, cjb2opts&) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/cjb2.cpp:864
+    #3 0x561a0474a6c6 in main /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/cjb2.cpp:985
+    #4 0x7f52a0787b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #5 0x561a047429d9 in _start (/home/hongxu/FOT/djvulibre/djvu-djvulibre-git/install/bin/cjb2+0x79d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/jb2tune.cpp:294 in tune_jb2image
+==15504==ABORTING

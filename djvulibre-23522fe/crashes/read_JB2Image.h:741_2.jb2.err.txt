@@ -1,0 +1,20 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==11561==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000001 (pc 0x7efff79859d2 bp 0x7fffc1b6ca80 sp 0x7fffc1b6ca60 T0)
+==11561==The signal is caused by a READ memory access.
+==11561==Hint: address points to the zero page.
+    #0 0x7efff79859d1 in JB2Dict::JB2Codec::get_direct_context(unsigned char const*, unsigned char const*, unsigned char const*, int) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/JB2Image.h:741
+    #1 0x7efff7983ab4 in JB2Dict::JB2Codec::Encode::code_bitmap_directly(GBitmap&, int, int, unsigned char*, unsigned char*, unsigned char*) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/JB2EncodeCodec.cpp:304
+    #2 0x7efff798c2a0 in JB2Dict::JB2Codec::code_bitmap_directly(GBitmap&) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/JB2Image.cpp:815
+    #3 0x7efff798e78b in JB2Dict::JB2Codec::code_record(int&, GP<JB2Image> const&, JB2Shape*, JB2Blit*) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/JB2Image.cpp:1143
+    #4 0x7efff7984e2d in JB2Dict::JB2Codec::Encode::code(GP<JB2Image> const&) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/JB2EncodeCodec.cpp:494
+    #5 0x7efff79860bd in JB2Dict::JB2Codec::Encode::code(JB2Image*) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/JB2EncodeCodec.cpp:100
+    #6 0x7efff7982fa8 in JB2Image::encode(GP<ByteStream> const&) const /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/JB2EncodeCodec.cpp:152
+    #7 0x55e7bfb44800 in cjb2(GURL const&, GURL const&, cjb2opts&) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/cjb2.cpp:894
+    #8 0x55e7bfb456c6 in main /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/cjb2.cpp:985
+    #9 0x7efff6776b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #10 0x55e7bfb3d9d9 in _start (/home/hongxu/FOT/djvulibre/djvu-djvulibre-git/install/bin/cjb2+0x79d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/JB2Image.h:741 in JB2Dict::JB2Codec::get_direct_context(unsigned char const*, unsigned char const*, unsigned char const*, int)
+==11561==ABORTING
