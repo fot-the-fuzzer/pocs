@@ -1,0 +1,22 @@
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1511_1: bad e_shentsize (60736 != 64)
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1511_1: bad e_shentsize (60736 != 64)
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1511_1: section_header_offset: bad shndx 10 >= 10
+ASAN:DEADLYSIGNAL
+=================================================================
+==20287==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55f97c34430c bp 0x7ffff3437490 sp 0x7ffff3437480 T0)
+==20287==The signal is caused by a READ memory access.
+==20287==Hint: address points to the zero page.
+    #0 0x55f97c34430b in elfcpp::Sym<64, false>::get_st_name() const ../elfcpp/elfcpp.h:1511
+    #1 0x55f97c5370c0 in gold::Sized_relobj_file<64, false>::include_section_group(gold::Symbol_table*, gold::Layout*, unsigned int, char const*, unsigned char const*, char const*, unsigned long, std::vector<bool, std::allocator<bool> >*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:1013
+    #2 0x55f97c52fcd0 in gold::Sized_relobj_file<64, false>::do_layout(gold::Symbol_table*, gold::Layout*, gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:1652
+    #3 0x55f97c37623c in gold::Object::layout(gold::Symbol_table*, gold::Layout*, gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:653
+    #4 0x55f97c6894d4 in gold::Add_symbols::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:634
+    #5 0x55f97c7c2a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #6 0x55f97c7c3731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #7 0x55f97be38393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #8 0x7facde5d6b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #9 0x55f97be377d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ../elfcpp/elfcpp.h:1511 in elfcpp::Sym<64, false>::get_st_name() const
+==20287==ABORTING

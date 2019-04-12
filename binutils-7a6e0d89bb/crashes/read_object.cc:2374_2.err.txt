@@ -1,0 +1,22 @@
+./ld-new: error: ../../pocs/read_object.cc:2374_2: section_contents: bad shndx 21 >= 11
+./ld-new: error: ../../pocs/read_object.cc:2374_2: section_header_offset: bad shndx 21 >= 11
+./ld-new: error: ../../pocs/read_object.cc:2374_2: local symbol 3 section name out of range: 836995400 >= 409
+ASAN:DEADLYSIGNAL
+=================================================================
+==21611==ERROR: AddressSanitizer: SEGV on unknown address 0x608000040d60 (pc 0x55aeb8e1555b bp 0x7ffdfa428690 sp 0x7ffdfa4284a0 T0)
+==21611==The signal is caused by a READ memory access.
+    #0 0x55aeb8e1555a in gold::Sized_relobj_file<64, false>::do_count_local_symbols(gold::Stringpool_template<char>*, gold::Stringpool_template<char>*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:2374
+    #1 0x55aeb8da8447 in gold::Relobj::count_local_symbols(gold::Stringpool_template<char>*, gold::Stringpool_template<char>*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:1244
+    #2 0x55aeb8d9cdf3 in gold::Layout::count_local_symbols(gold::Task const*, gold::Input_objects const*) /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:4340
+    #3 0x55aeb8d94d8f in gold::Layout::finalize(gold::Input_objects const*, gold::Symbol_table*, gold::Target*, gold::Task const*) /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:2989
+    #4 0x55aeb8d890e6 in gold::Layout_task_runner::run(gold::Workqueue*, gold::Task const*) /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:378
+    #5 0x55aeb8cf4649 in gold::Task_function::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.h:178
+    #6 0x55aeb90a2a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #7 0x55aeb90a3731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #8 0x55aeb8718393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #9 0x7fd4924b1b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #10 0x55aeb87177d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/binutils/binutils-asan/gold/object.cc:2374 in gold::Sized_relobj_file<64, false>::do_count_local_symbols(gold::Stringpool_template<char>*, gold::Stringpool_template<char>*)
+==21611==ABORTING

@@ -1,0 +1,25 @@
+==21697==WARNING: AddressSanitizer failed to allocate 0x55555555555554a0 bytes
+ASAN:DEADLYSIGNAL
+=================================================================
+==21697==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x555886baf01b bp 0x7ffd88511b60 sp 0x7ffd88511b30 T0)
+==21697==The signal is caused by a WRITE memory access.
+==21697==Hint: address points to the zero page.
+    #0 0x555886baf01a in __gnu_cxx::__enable_if<std::__is_scalar<gold::Symbol*>::__value, gold::Symbol**>::__type std::__fill_n_a<gold::Symbol**, unsigned long, gold::Symbol*>(gold::Symbol**, unsigned long, gold::Symbol* const&) /usr/include/c++/7/bits/stl_algobase.h:754
+    #1 0x555886bae4dc in gold::Symbol** std::fill_n<gold::Symbol**, unsigned long, gold::Symbol*>(gold::Symbol**, unsigned long, gold::Symbol* const&) /usr/include/c++/7/bits/stl_algobase.h:789
+    #2 0x555886baee3a in gold::Symbol** std::__uninitialized_default_n_1<true>::__uninit_default_n<gold::Symbol**, unsigned long>(gold::Symbol**, unsigned long) /usr/include/c++/7/bits/stl_uninitialized.h:548
+    #3 0x555886bae47b in gold::Symbol** std::__uninitialized_default_n<gold::Symbol**, unsigned long>(gold::Symbol**, unsigned long) /usr/include/c++/7/bits/stl_uninitialized.h:583
+    #4 0x555886bad503 in gold::Symbol** std::__uninitialized_default_n_a<gold::Symbol**, unsigned long, gold::Symbol*>(gold::Symbol**, unsigned long, std::allocator<gold::Symbol*>&) /usr/include/c++/7/bits/stl_uninitialized.h:645
+    #5 0x555886ba766d in std::vector<gold::Symbol*, std::allocator<gold::Symbol*> >::_M_default_append(unsigned long) /usr/include/c++/7/bits/vector.tcc:575
+    #6 0x555886b9f070 in std::vector<gold::Symbol*, std::allocator<gold::Symbol*> >::resize(unsigned long) /usr/include/c++/7/bits/stl_vector.h:692
+    #7 0x555886d0204c in gold::Sized_relobj_file<64, false>::do_add_symbols(gold::Symbol_table*, gold::Read_symbols_data*, gold::Layout*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:2103
+    #8 0x555886b442b8 in gold::Object::add_symbols(gold::Symbol_table*, gold::Read_symbols_data*, gold::Layout*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:658
+    #9 0x555886e57592 in gold::Add_symbols::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:635
+    #10 0x555886f90a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #11 0x555886f91731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #12 0x555886606393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #13 0x7fc950ed5b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #14 0x5558866057d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /usr/include/c++/7/bits/stl_algobase.h:754 in __gnu_cxx::__enable_if<std::__is_scalar<gold::Symbol*>::__value, gold::Symbol**>::__type std::__fill_n_a<gold::Symbol**, unsigned long, gold::Symbol*>(gold::Symbol**, unsigned long, gold::Symbol* const&)
+==21697==ABORTING

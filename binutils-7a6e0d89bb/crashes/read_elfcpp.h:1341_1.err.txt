@@ -1,0 +1,21 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==19805==ERROR: AddressSanitizer: SEGV on unknown address 0x7cb9eedb310c (pc 0x555cd920009b bp 0x7fffc60a7d40 sp 0x7fffc60a7d30 T0)
+==19805==The signal is caused by a READ memory access.
+    #0 0x555cd920009a in elfcpp::Chdr<64, false>::get_ch_size() const (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x8e409a)
+    #1 0x555cd91f6564 in std::map<unsigned int, gold::Compressed_section_info, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, gold::Compressed_section_info> > >* gold::build_compressed_section_map<64, false>(unsigned char const*, unsigned int, char const*, unsigned long, gold::Object*, bool) (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x8da564)
+    #2 0x555cd91dc4b3 in gold::Sized_relobj_file<64, false>::do_find_special_sections(gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:811
+    #3 0x555cd91d35b9 in gold::Sized_relobj_file<64, false>::base_read_symbols(gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:847
+    #4 0x555cd91d3414 in gold::Sized_relobj_file<64, false>::do_read_symbols(gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:831
+    #5 0x555cd901c1c0 in gold::Object::read_symbols(gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:647
+    #6 0x555cd932d351 in gold::Read_symbols::do_read_symbols(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:401
+    #7 0x555cd932b709 in gold::Read_symbols::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:167
+    #8 0x555cd9468a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #9 0x555cd9469731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #10 0x555cd8ade393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #11 0x7fb9ed512b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #12 0x555cd8add7d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x8e409a) in elfcpp::Chdr<64, false>::get_ch_size() const
+==19805==ABORTING

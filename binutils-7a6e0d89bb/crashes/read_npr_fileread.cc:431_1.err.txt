@@ -1,0 +1,23 @@
+./ld-new: error: ../../pocs/read_npr_fileread.cc:431_1: bad section name offset for section 8: 2560
+ASAN:DEADLYSIGNAL
+=================================================================
+==20487==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f31189e3527 bp 0x7ffc5aebd010 sp 0x7ffc5aebc780 T0)
+==20487==The signal is caused by a READ memory access.
+==20487==Hint: address points to the zero page.
+    #0 0x7f31189e3526  (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x79526)
+    #1 0x55d88c9ec532 in gold::File_read::read(long, unsigned long, void*) /home/exp/FOT/binutils/binutils-asan/gold/fileread.cc:431
+    #2 0x55d88c9edf8b in gold::File_read::read_multiple(long, std::vector<gold::File_read::Read_multiple_entry, std::allocator<gold::File_read::Read_multiple_entry> > const&) /home/exp/FOT/binutils/binutils-asan/gold/fileread.cc:733
+    #3 0x55d88cc98374 in gold::Object::read_multiple(std::vector<gold::File_read::Read_multiple_entry, std::allocator<gold::File_read::Read_multiple_entry> > const&) /home/exp/FOT/binutils/binutils-asan/gold/object.h:749
+    #4 0x55d88ccb0660 in gold::Sized_relobj_file<64, false>::write_sections(gold::Layout const*, unsigned char const*, gold::Output_file*, std::vector<gold::Sized_relobj_file<64, false>::View_size, std::allocator<gold::Sized_relobj_file<64, false>::View_size> >*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:858
+    #5 0x55d88cca19e6 in gold::Sized_relobj_file<64, false>::do_relocate(gold::Symbol_table const*, gold::Layout const*, gold::Output_file*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:605
+    #6 0x55d88cc985aa in gold::Relobj::relocate(gold::Symbol_table const*, gold::Layout const*, gold::Output_file*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:1285
+    #7 0x55d88cc97e59 in gold::Relocate_task::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:239
+    #8 0x55d88cdc4a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #9 0x55d88cdc5731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #10 0x55d88c43a393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #11 0x7f3118177b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #12 0x55d88c4397d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x79526) 
+==20487==ABORTING

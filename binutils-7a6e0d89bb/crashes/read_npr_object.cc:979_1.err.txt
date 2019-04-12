@@ -1,0 +1,21 @@
+./ld-new: error: ../../pocs/read_npr_object.cc:979_1: bad e_shentsize (60736 != 64)
+./ld-new: error: ../../pocs/read_npr_object.cc:979_1: bad e_shentsize (60736 != 64)
+ASAN:DEADLYSIGNAL
+=================================================================
+==20787==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x5610b90a343a bp 0x7ffe0e06f870 sp 0x7ffe0e06f860 T0)
+==20787==The signal is caused by a READ memory access.
+==20787==Hint: address points to the zero page.
+    #0 0x5610b90a3439 in elfcpp::Swap<32, false>::readval(unsigned int const*) ../elfcpp/elfcpp_swap.h:233
+    #1 0x5610b9758efb in gold::Sized_relobj_file<64, false>::include_section_group(gold::Symbol_table*, gold::Layout*, unsigned int, char const*, unsigned char const*, char const*, unsigned long, std::vector<bool, std::allocator<bool> >*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:979
+    #2 0x5610b9751cd0 in gold::Sized_relobj_file<64, false>::do_layout(gold::Symbol_table*, gold::Layout*, gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:1652
+    #3 0x5610b959823c in gold::Object::layout(gold::Symbol_table*, gold::Layout*, gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:653
+    #4 0x5610b98ab4d4 in gold::Add_symbols::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:634
+    #5 0x5610b99e4a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #6 0x5610b99e5731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #7 0x5610b905a393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #8 0x7f4417a1cb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #9 0x5610b90597d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ../elfcpp/elfcpp_swap.h:233 in elfcpp::Swap<32, false>::readval(unsigned int const*)
+==20787==ABORTING

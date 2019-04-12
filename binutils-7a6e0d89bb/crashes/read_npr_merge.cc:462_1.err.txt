@@ -1,0 +1,23 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==20785==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x5594c7891098 bp 0x7ffcf9284c80 sp 0x7ffcf9284950 T0)
+==20785==The signal is caused by a READ memory access.
+==20785==Hint: address points to the zero page.
+    #0 0x5594c7891097 in gold::Output_merge_string<char>::do_add_input_section(gold::Relobj*, unsigned int) /home/exp/FOT/binutils/binutils-asan/gold/merge.cc:462
+    #1 0x5594c75e6f65 in gold::Output_section_data::add_input_section(gold::Relobj*, unsigned int) /home/exp/FOT/binutils/binutils-asan/gold/output.h:789
+    #2 0x5594c75d6189 in gold::Output_section::add_merge_input_section(gold::Relobj*, unsigned int, unsigned long, unsigned long, unsigned long, bool) /home/exp/FOT/binutils/binutils-asan/gold/output.cc:2771
+    #3 0x5594c75ed678 in long gold::Output_section::add_input_section<64, false>(gold::Layout*, gold::Sized_relobj_file<64, false>*, unsigned int, char const*, elfcpp::Shdr<64, false> const&, unsigned int, bool) /home/exp/FOT/binutils/binutils-asan/gold/output.cc:2498
+    #4 0x5594c74fa601 in gold::Output_section* gold::Layout::layout<64, false>(gold::Sized_relobj_file<64, false>*, unsigned int, char const*, elfcpp::Shdr<64, false> const&, unsigned int, unsigned int, unsigned int, long*) /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:1287
+    #5 0x5594c75605fc in gold::Sized_relobj_file<64, false>::layout_section(gold::Layout*, unsigned int, char const*, elfcpp::Shdr<64, false> const&, unsigned int, unsigned int, unsigned int) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:1230
+    #6 0x5594c75599f4 in gold::Sized_relobj_file<64, false>::do_layout(gold::Symbol_table*, gold::Layout*, gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:1850
+    #7 0x5594c739e23c in gold::Object::layout(gold::Symbol_table*, gold::Layout*, gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:653
+    #8 0x5594c76b14d4 in gold::Add_symbols::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:634
+    #9 0x5594c77eaa3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #10 0x5594c77eb731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #11 0x5594c6e60393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #12 0x7fecd40efb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #13 0x5594c6e5f7d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/binutils/binutils-asan/gold/merge.cc:462 in gold::Output_merge_string<char>::do_add_input_section(gold::Relobj*, unsigned int)
+==20785==ABORTING

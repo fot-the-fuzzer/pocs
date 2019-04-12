@@ -1,0 +1,20 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==21608==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x5603d7fe87f9 bp 0x7fff1aa9c410 sp 0x7fff1aa9c220 T0)
+==21608==The signal is caused by a READ memory access.
+==21608==Hint: address points to the zero page.
+    #0 0x5603d7fe87f8 in local /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:3697
+    #1 0x5603d7fe294e in scan_relocs<64, false, (anonymous namespace)::Target_x86_64<64>, (anonymous namespace)::Target_x86_64<64>::Scan, gold::Default_classify_reloc<4, 64, false> > /home/exp/FOT/binutils/binutils-asan/gold/target-reloc.h:100
+    #2 0x5603d7fd4664 in scan_relocs /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:4486
+    #3 0x5603d87c5900 in gold::Sized_relobj_file<64, false>::do_scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:462
+    #4 0x5603d87be52c in gold::Relobj::scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:1161
+    #5 0x5603d87bd9bc in gold::Scan_relocs::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:188
+    #6 0x5603d88eaa3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #7 0x5603d88eb731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #8 0x5603d7f60393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #9 0x7f2984ce2b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #10 0x5603d7f5f7d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:3697 in local
+==21608==ABORTING

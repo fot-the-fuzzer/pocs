@@ -1,0 +1,21 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==20478==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x5653663fbf72 bp 0x7ffeed8317a0 sp 0x7ffeed831790 T0)
+==20478==The signal is caused by a READ memory access.
+==20478==Hint: address points to the zero page.
+    #0 0x5653663fbf71 in elfcpp::Rela<64, false>::get_r_info() const ../elfcpp/elfcpp.h:1675
+    #1 0x5653663f8b0c in gold::Default_classify_reloc<4, 64, false>::get_r_sym(elfcpp::Rela<64, false> const*) /home/exp/FOT/binutils/binutils-asan/gold/target-reloc.h:536
+    #2 0x5653663d5782 in scan_relocs<64, false, (anonymous namespace)::Target_x86_64<64>, (anonymous namespace)::Target_x86_64<64>::Scan, gold::Default_classify_reloc<4, 64, false> > /home/exp/FOT/binutils/binutils-asan/gold/target-reloc.h:72
+    #3 0x5653663c7664 in scan_relocs /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:4486
+    #4 0x565366bb8900 in gold::Sized_relobj_file<64, false>::do_scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:462
+    #5 0x565366bb152c in gold::Relobj::scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:1161
+    #6 0x565366bb09bc in gold::Scan_relocs::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:188
+    #7 0x565366cdda3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #8 0x565366cde731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #9 0x565366353393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #10 0x7fc4f7822b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #11 0x5653663527d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ../elfcpp/elfcpp.h:1675 in elfcpp::Rela<64, false>::get_r_info() const
+==20478==ABORTING

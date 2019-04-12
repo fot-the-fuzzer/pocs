@@ -1,0 +1,25 @@
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1547_2: bad section name offset for section 5: 12
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1547_2: bad section name offset for section 6: 31
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1547_2: bad section name offset for section 1: 90
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1547_2: size of symbols is not multiple of symbol size
+ASAN:DEADLYSIGNAL
+=================================================================
+==20291==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55f6bb826bda bp 0x7ffd9f6bd050 sp 0x7ffd9f6bd040 T0)
+==20291==The signal is caused by a READ memory access.
+==20291==Hint: address points to the zero page.
+    #0 0x55f6bb826bd9 in elfcpp::Sym<64, false>::get_st_shndx() const ../elfcpp/elfcpp.h:1547
+    #1 0x55f6bbe7e072 in gold::Sized_relobj_file<64, false>::do_count_local_symbols(gold::Stringpool_template<char>*, gold::Stringpool_template<char>*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:2296
+    #2 0x55f6bbe11447 in gold::Relobj::count_local_symbols(gold::Stringpool_template<char>*, gold::Stringpool_template<char>*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:1244
+    #3 0x55f6bbe05df3 in gold::Layout::count_local_symbols(gold::Task const*, gold::Input_objects const*) /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:4340
+    #4 0x55f6bbdfdd8f in gold::Layout::finalize(gold::Input_objects const*, gold::Symbol_table*, gold::Target*, gold::Task const*) /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:2989
+    #5 0x55f6bbdf20e6 in gold::Layout_task_runner::run(gold::Workqueue*, gold::Task const*) /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:378
+    #6 0x55f6bbd5d649 in gold::Task_function::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.h:178
+    #7 0x55f6bc10ba3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #8 0x55f6bc10c731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #9 0x55f6bb781393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #10 0x7fd2498d7b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #11 0x55f6bb7807d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ../elfcpp/elfcpp.h:1547 in elfcpp::Sym<64, false>::get_st_shndx() const
+==20291==ABORTING

@@ -1,0 +1,24 @@
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1675_1: section name section has wrong type: 0
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1675_1: symbol table name section has wrong type: 0
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1675_1: relocation section 8 uses unexpected symbol table 4294639626
+ASAN:DEADLYSIGNAL
+=================================================================
+==20374==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x558c770acf72 bp 0x7fffaafa68a0 sp 0x7fffaafa6890 T0)
+==20374==The signal is caused by a READ memory access.
+==20374==Hint: address points to the zero page.
+    #0 0x558c770acf71 in elfcpp::Rela<64, false>::get_r_info() const ../elfcpp/elfcpp.h:1675
+    #1 0x558c770a9b0c in gold::Default_classify_reloc<4, 64, false>::get_r_sym(elfcpp::Rela<64, false> const*) /home/exp/FOT/binutils/binutils-asan/gold/target-reloc.h:536
+    #2 0x558c77086782 in scan_relocs<64, false, (anonymous namespace)::Target_x86_64<64>, (anonymous namespace)::Target_x86_64<64>::Scan, gold::Default_classify_reloc<4, 64, false> > /home/exp/FOT/binutils/binutils-asan/gold/target-reloc.h:72
+    #3 0x558c77078664 in scan_relocs /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:4486
+    #4 0x558c77869900 in gold::Sized_relobj_file<64, false>::do_scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:462
+    #5 0x558c7786252c in gold::Relobj::scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:1161
+    #6 0x558c778619bc in gold::Scan_relocs::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:188
+    #7 0x558c7798ea3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #8 0x558c7798f731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #9 0x558c77004393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #10 0x7f49d712db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #11 0x558c770037d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ../elfcpp/elfcpp.h:1675 in elfcpp::Rela<64, false>::get_r_info() const
+==20374==ABORTING

@@ -1,0 +1,22 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==19857==ERROR: AddressSanitizer: SEGV on unknown address 0x7fd766dd513e (pc 0x55bc31752c00 bp 0x7ffd0ac66580 sp 0x7ffd0ac66570 T0)
+==19857==The signal is caused by a READ memory access.
+    #0 0x55bc31752bff in elfcpp::Sym<64, false>::get_st_shndx() const ../elfcpp/elfcpp.h:1547
+    #1 0x55bc320bd93a in bool gold::Eh_frame::read_fde<64, false>(gold::Sized_relobj_file<64, false>*, unsigned int, unsigned char const*, unsigned long, unsigned char const*, unsigned int, unsigned char const*, unsigned char const*, gold::Track_relocs<64, false>*, std::map<unsigned long, gold::Cie*, std::less<unsigned long>, std::allocator<std::pair<unsigned long const, gold::Cie*> > >*) /home/exp/FOT/binutils/binutils-asan/gold/ehframe.cc:1100
+    #2 0x55bc320b2fb8 in bool gold::Eh_frame::do_add_ehframe_input_section<64, false>(gold::Sized_relobj_file<64, false>*, unsigned char const*, unsigned long, unsigned char const*, unsigned long, unsigned int, unsigned int, unsigned int, unsigned char const*, unsigned long, std::vector<std::pair<gold::Cie*, bool>, std::allocator<std::pair<gold::Cie*, bool> > >*) /home/exp/FOT/binutils/binutils-asan/gold/ehframe.cc:730
+    #3 0x55bc320a4df4 in gold::Eh_frame::Eh_frame_section_disposition gold::Eh_frame::add_ehframe_input_section<64, false>(gold::Sized_relobj_file<64, false>*, unsigned char const*, unsigned long, unsigned char const*, unsigned long, unsigned int, unsigned int, unsigned int) /home/exp/FOT/binutils/binutils-asan/gold/ehframe.cc:622
+    #4 0x55bc31d4b4bf in gold::Output_section* gold::Layout::layout_eh_frame<64, false>(gold::Sized_relobj_file<64, false>*, unsigned char const*, long, unsigned char const*, long, unsigned int, elfcpp::Shdr<64, false> const&, unsigned int, unsigned int, long*) /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:1459
+    #5 0x55bc31dad951 in gold::Sized_relobj_file<64, false>::layout_eh_frame_section(gold::Layout*, unsigned char const*, unsigned long, unsigned char const*, unsigned long, unsigned int, elfcpp::Shdr<64, false> const&, unsigned int, unsigned int) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:1264
+    #6 0x55bc31da6ecf in gold::Sized_relobj_file<64, false>::do_layout(gold::Symbol_table*, gold::Layout*, gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:1887
+    #7 0x55bc31beb23c in gold::Object::layout(gold::Symbol_table*, gold::Layout*, gold::Read_symbols_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:653
+    #8 0x55bc31efe4d4 in gold::Add_symbols::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:634
+    #9 0x55bc32037a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #10 0x55bc32038731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #11 0x55bc316ad393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #12 0x7fef65534b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #13 0x55bc316ac7d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ../elfcpp/elfcpp.h:1547 in elfcpp::Sym<64, false>::get_st_shndx() const
+==19857==ABORTING

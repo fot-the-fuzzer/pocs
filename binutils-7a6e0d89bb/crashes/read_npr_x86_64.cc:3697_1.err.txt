@@ -1,0 +1,23 @@
+./ld-new: warning: ../../pocs/read_npr_x86_64.cc:3697_1: section  contains incorrectly aligned strings; the alignment of those strings won't be preserved
+./ld-new: error: ../../pocs/read_npr_x86_64.cc:3697_1: invalid alignment 5910974510923777 for section ""
+./ld-new: error: ../../pocs/read_npr_x86_64.cc:3697_1: unsupported reloc 16711690 against local symbol
+ASAN:DEADLYSIGNAL
+=================================================================
+==21580==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x562f8b8737f9 bp 0x7ffdc66b80c0 sp 0x7ffdc66b7ed0 T0)
+==21580==The signal is caused by a READ memory access.
+==21580==Hint: address points to the zero page.
+    #0 0x562f8b8737f8 in local /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:3697
+    #1 0x562f8b86d94e in scan_relocs<64, false, (anonymous namespace)::Target_x86_64<64>, (anonymous namespace)::Target_x86_64<64>::Scan, gold::Default_classify_reloc<4, 64, false> > /home/exp/FOT/binutils/binutils-asan/gold/target-reloc.h:100
+    #2 0x562f8b85f664 in scan_relocs /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:4486
+    #3 0x562f8c050900 in gold::Sized_relobj_file<64, false>::do_scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:462
+    #4 0x562f8c04952c in gold::Relobj::scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:1161
+    #5 0x562f8c0489bc in gold::Scan_relocs::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:188
+    #6 0x562f8c175a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #7 0x562f8c176731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #8 0x562f8b7eb393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #9 0x7fc666183b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #10 0x562f8b7ea7d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:3697 in local
+==21580==ABORTING

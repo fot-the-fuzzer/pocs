@@ -1,0 +1,22 @@
+./ld-new: error: ../../pocs/read_dynobj.cc:749_1: section name section has wrong type: 0
+./ld-new: error: ../../pocs/read_dynobj.cc:749_1: unexpected duplicate type 6 section: 7, 8
+./ld-new: error: ../../pocs/read_dynobj.cc:749_1: dynamic symbol table name section has wrong type: 0
+./ld-new: error: ../../pocs/read_dynobj.cc:749_1: bad section name offset for section 1: 0
+ASAN:DEADLYSIGNAL
+=================================================================
+==19802==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000010 (pc 0x5640895d5179 bp 0x7ffd4f208d20 sp 0x7ffd4f208d10 T0)
+==19802==The signal is caused by a READ memory access.
+==19802==Hint: address points to the zero page.
+    #0 0x5640895d5178 in gold::File_view::data() const /home/exp/FOT/binutils/binutils-asan/gold/fileread.h:461
+    #1 0x5640899841c9 in gold::Sized_dynobj<64, false>::do_add_symbols(gold::Symbol_table*, gold::Read_symbols_data*, gold::Layout*) /home/exp/FOT/binutils/binutils-asan/gold/dynobj.cc:747
+    #2 0x56408993f2b8 in gold::Object::add_symbols(gold::Symbol_table*, gold::Read_symbols_data*, gold::Layout*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:658
+    #3 0x564089c52592 in gold::Add_symbols::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:635
+    #4 0x564089d8ba3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #5 0x564089d8c731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #6 0x564089401393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #7 0x7f6e6c0d0b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #8 0x5640894007d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/binutils/binutils-asan/gold/fileread.h:461 in gold::File_view::data() const
+==19802==ABORTING

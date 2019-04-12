@@ -1,0 +1,21 @@
+./ld-new: warning: ../../pocs/read_npr_symtab.cc:1201_1: last entry in mergeable string section '.rodata.str1.16' not null terminated
+./ld-new: warning: ../../pocs/read_npr_symtab.cc:1201_1: section .rodata.str1.16 contains incorrectly aligned strings; the alignment of those strings won't be preserved
+ASAN:DEADLYSIGNAL
+=================================================================
+==21579==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55e95dbd530c bp 0x7ffc6b71bb00 sp 0x7ffc6b71baf0 T0)
+==21579==The signal is caused by a READ memory access.
+==21579==Hint: address points to the zero page.
+    #0 0x55e95dbd530b in elfcpp::Sym<64, false>::get_st_name() const ../elfcpp/elfcpp.h:1511
+    #1 0x55e95e00bdaf in void gold::Symbol_table::add_from_relobj<64, false>(gold::Sized_relobj_file<64, false>*, unsigned char const*, unsigned long, unsigned long, char const*, unsigned long, gold::Sized_relobj_file<64, false>::Symbols*, unsigned long*) /home/exp/FOT/binutils/binutils-asan/gold/symtab.cc:1203
+    #2 0x55e95ddc51a0 in gold::Sized_relobj_file<64, false>::do_add_symbols(gold::Symbol_table*, gold::Read_symbols_data*, gold::Layout*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:2107
+    #3 0x55e95dc072b8 in gold::Object::add_symbols(gold::Symbol_table*, gold::Read_symbols_data*, gold::Layout*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:658
+    #4 0x55e95df1a592 in gold::Add_symbols::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:635
+    #5 0x55e95e053a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #6 0x55e95e054731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #7 0x55e95d6c9393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #8 0x7f1c8eee8b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #9 0x55e95d6c87d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ../elfcpp/elfcpp.h:1511 in elfcpp::Sym<64, false>::get_st_name() const
+==21579==ABORTING

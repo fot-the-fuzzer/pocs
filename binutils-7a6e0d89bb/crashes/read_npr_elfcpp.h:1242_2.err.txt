@@ -1,0 +1,28 @@
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1242_2: bad e_ehsize (59615 != 64)
+./ld-new: error: ../../pocs/read_npr_elfcpp.h:1242_2: bad e_shentsize (191 != 64)
+ASAN:DEADLYSIGNAL
+=================================================================
+==20284==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x5565a743f292 bp 0x7ffe1e933da0 sp 0x7ffe1e933d90 T0)
+==20284==The signal is caused by a READ memory access.
+==20284==Hint: address points to the zero page.
+    #0 0x5565a743f291 in elfcpp::Shdr<64, false>::get_sh_size() const ../elfcpp/elfcpp.h:1242
+    #1 0x5565a743ed54 in elfcpp::Elf_file<64, false, gold::Sniff_file>::initialize_shnum() (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x226d54)
+    #2 0x5565a743c593 in elfcpp::Elf_file<64, false, gold::Sniff_file>::shnum() ../elfcpp/elfcpp_file.h:143
+    #3 0x5565a744a673 in do_recognize_nacl_file<64, false> /home/exp/FOT/binutils/binutils-asan/gold/nacl.h:199
+    #4 0x5565a7447608 in recognize_nacl_file /home/exp/FOT/binutils/binutils-asan/gold/nacl.h:186
+    #5 0x5565a7443fea in do_recognize /home/exp/FOT/binutils/binutils-asan/gold/nacl.h:116
+    #6 0x5565a7d62dea in gold::Target_selector::recognize(gold::Input_file*, long, int, int, int) /home/exp/FOT/binutils/binutils-asan/gold/target-select.h:82
+    #7 0x5565a7d6291c in gold::select_target(gold::Input_file*, long, int, int, bool, int, int) /home/exp/FOT/binutils/binutils-asan/gold/target-select.cc:113
+    #8 0x5565a7aa7bc3 in make_elf_sized_object<64, false> /home/exp/FOT/binutils/binutils-asan/gold/object.cc:3342
+    #9 0x5565a7aa71d7 in gold::make_elf_object(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, gold::Input_file*, long, unsigned char const*, long, bool*) /home/exp/FOT/binutils/binutils-asan/gold/object.cc:3467
+    #10 0x5565a7c28d77 in gold::Read_symbols::do_read_symbols(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:336
+    #11 0x5565a7c27709 in gold::Read_symbols::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/readsyms.cc:167
+    #12 0x5565a7d64a3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #13 0x5565a7d65731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #14 0x5565a73da393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #15 0x7f4c242d2b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #16 0x5565a73d97d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV ../elfcpp/elfcpp.h:1242 in elfcpp::Shdr<64, false>::get_sh_size() const
+==20284==ABORTING

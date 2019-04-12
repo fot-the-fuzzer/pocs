@@ -1,0 +1,20 @@
+./ld-new: error: ../../pocs/read_layout.h:914_2: reloc section 8 size 139637976785944 uneven
+ASAN:DEADLYSIGNAL
+=================================================================
+==20236==ERROR: AddressSanitizer: SEGV on unknown address 0x5f009121d054 (pc 0x55dd8b68881c bp 0x7ffc1ee76320 sp 0x7ffc1ee76130 T0)
+==20236==The signal is caused by a READ memory access.
+    #0 0x55dd8b68881b in local /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:3697
+    #1 0x55dd8b68294e in scan_relocs<64, false, (anonymous namespace)::Target_x86_64<64>, (anonymous namespace)::Target_x86_64<64>::Scan, gold::Default_classify_reloc<4, 64, false> > /home/exp/FOT/binutils/binutils-asan/gold/target-reloc.h:100
+    #2 0x55dd8b674664 in scan_relocs /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:4486
+    #3 0x55dd8be65900 in gold::Sized_relobj_file<64, false>::do_scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:462
+    #4 0x55dd8be5e52c in gold::Relobj::scan_relocs(gold::Symbol_table*, gold::Layout*, gold::Read_relocs_data*) /home/exp/FOT/binutils/binutils-asan/gold/object.h:1161
+    #5 0x55dd8be5d9bc in gold::Scan_relocs::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/reloc.cc:188
+    #6 0x55dd8bf8aa3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #7 0x55dd8bf8b731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #8 0x55dd8b600393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #9 0x7f008f97cb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #10 0x55dd8b5ff7d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/binutils/binutils-asan/gold/x86_64.cc:3697 in local
+==20236==ABORTING

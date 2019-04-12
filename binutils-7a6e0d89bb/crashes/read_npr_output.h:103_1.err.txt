@@ -1,0 +1,25 @@
+./ld-new: error: ../../pocs/read_npr_output.h:103_1: invalid alignment 611222911927189736 for section ".text"
+./ld-new: error: invalid STB_LOCAL symbol in external symbols
+ASAN:DEADLYSIGNAL
+=================================================================
+==20789==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7fc70e8b0634 bp 0x7ffc6f8f1500 sp 0x7ffc6f8f0c70 T0)
+==20789==The signal is caused by a READ memory access.
+==20789==Hint: address points to the zero page.
+    #0 0x7fc70e8b0633  (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x79633)
+    #1 0x55f3acf548bb in gold::Output_file::write(long, void const*, unsigned long) /home/exp/FOT/binutils/binutils-asan/gold/output.h:103
+    #2 0x55f3ad428063 in gold::Output_data_const_buffer::do_write(gold::Output_file*) /home/exp/FOT/binutils/binutils-asan/gold/output.cc:661
+    #3 0x55f3acf5492e in gold::Output_data::write(gold::Output_file*) /home/exp/FOT/binutils/binutils-asan/gold/output.h:374
+    #4 0x55f3ad429909 in gold::Output_section::Input_section::write(gold::Output_file*) /home/exp/FOT/binutils/binutils-asan/gold/output.cc:2302
+    #5 0x55f3ad43078b in gold::Output_section::do_write(gold::Output_file*) /home/exp/FOT/binutils/binutils-asan/gold/output.cc:3764
+    #6 0x55f3acf5492e in gold::Output_data::write(gold::Output_file*) /home/exp/FOT/binutils/binutils-asan/gold/output.h:374
+    #7 0x55f3ad3407ba in gold::Layout::write_output_sections(gold::Output_file*) const /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:5757
+    #8 0x55f3ad342b00 in gold::Write_sections_task::run(gold::Workqueue*) /home/exp/FOT/binutils/binutils-asan/gold/layout.cc:6004
+    #9 0x55f3ad63fa3e in gold::Workqueue::find_and_run_task(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:319
+    #10 0x55f3ad640731 in gold::Workqueue::process(int) /home/exp/FOT/binutils/binutils-asan/gold/workqueue.cc:495
+    #11 0x55f3accb5393 in main /home/exp/FOT/binutils/binutils-asan/gold/main.cc:252
+    #12 0x7fc70e044b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #13 0x55f3accb47d9 in _start (/home/exp/FOT/binutils/binutils-asan/gold/ld-new+0x1c17d9)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x79633) 
+==20789==ABORTING
