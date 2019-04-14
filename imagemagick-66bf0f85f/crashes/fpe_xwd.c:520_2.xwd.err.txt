@@ -1,0 +1,17 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==21476==ERROR: AddressSanitizer: FPE on unknown address 0x7f2e84c91210 (pc 0x7f2e84c91210 bp 0x000000000000 sp 0x7ffd274a4720 T0)
+    #0 0x7f2e84c9120f  (/usr/lib/x86_64-linux-gnu/libX11.so.6+0x2720f)
+    #1 0x7f2e890796c9 in ReadXWDImage coders/xwd.c:520
+    #2 0x7f2e88962854 in ReadImage MagickCore/constitute.c:547
+    #3 0x7f2e8896578b in ReadImages MagickCore/constitute.c:917
+    #4 0x7f2e8810fe56 in ConvertImageCommand MagickWand/convert.c:644
+    #5 0x7f2e8828bde0 in MagickCommandGenesis MagickWand/mogrify.c:184
+    #6 0x5613ffd4ff00 in MagickMain utilities/magick.c:149
+    #7 0x5613ffd50186 in main utilities/magick.c:180
+    #8 0x7f2e879e8b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #9 0x5613ffd4f979 in _start (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x1979)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: FPE (/usr/lib/x86_64-linux-gnu/libX11.so.6+0x2720f) 
+==21476==ABORTING
