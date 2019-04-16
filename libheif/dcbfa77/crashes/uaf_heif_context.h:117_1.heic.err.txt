@@ -1,0 +1,57 @@
+==16294==ERROR: AddressSanitizer: heap-use-after-free on address 0x6030000004a0 at pc 0x7ffff78fe3f6 bp 0x7fffffff89a0 sp 0x7fffffff8998
+WRITE of size 8 at 0x6030000004a0 thread T0
+    #0 0x7ffff78fe3f5 in std::__shared_ptr<heif::HeifContext::Image, (__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_ptr<heif::HeifContext::Image, (__gnu_cxx::_Lock_policy)2> const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/bits/shared_ptr_base.h:1122:69
+    #1 0x7ffff78fb156 in std::shared_ptr<heif::HeifContext::Image>::operator=(std::shared_ptr<heif::HeifContext::Image> const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/bits/shared_ptr.h:296:65
+    #2 0x7ffff792a808 in heif::HeifContext::Image::set_alpha_channel(std::shared_ptr<heif::HeifContext::Image>) /home/hongxu/FOT/libheif/libheif-asan/libheif/./heif_context.h:117:75
+    #3 0x7ffff790cba1 in heif::HeifContext::interpret_heif_file() /home/hongxu/FOT/libheif/libheif-asan/libheif/heif_context.cc:584:34
+    #4 0x7ffff79103b4 in heif::HeifContext::read_from_file(char const*) /home/hongxu/FOT/libheif/libheif-asan/libheif/heif_context.cc:351:10
+    #5 0x7ffff78e3ec6 in heif_context_read_from_file /home/hongxu/FOT/libheif/libheif-asan/libheif/heif.cc:184:29
+    #6 0x4f84bd in main /home/hongxu/FOT/libheif/libheif-asan/examples/heif_convert.cc:164:9
+    #7 0x7ffff5dd5b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #8 0x41cf49 in _start (/home/hongxu/FOT/libheif/libheif-asan/install/bin/heif-convert+0x41cf49)
+
+Address 0x6020000005b8 is a wild pointer.
+SUMMARY: AddressSanitizer: heap-buffer-overflow /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/bits/shared_ptr_base.h:1122:69 in std::__shared_ptr<heif::HeifContext::Image, (__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_ptr<heif::HeifContext::Image, (__gnu_cxx::_Lock_policy)2> const&)
+Shadow bytes around the buggy address:
+  0x0c047fff8060: fa fa 00 04 fa fa fd fa fa fa fd fa fa fa 00 fa
+  0x0c047fff8070: fa fa fd fd fa fa fd fa fa fa fd fa fa fa fd fa
+  0x0c047fff8080: fa fa fd fa fa fa 00 00 fa fa fd fa fa fa fd fa
+  0x0c047fff8090: fa fa fd fd fa fa 00 04 fa fa fd fd fa fa fd fa
+  0x0c047fff80a0: fa fa 00 fa fa fa 00 00 fa fa 04 fa fa fa 04 fa
+=>0x0c047fff80b0: fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa fa fa
+  0x0c047fff80c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff80d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff80e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff80f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8100: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==2336==ABORTING
+
+
+id:000038,sig:06,src:003922,op:havoc,rep:2.err.SIG06
+=================================================================
+==2374==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000538 at pc 0x7ffff78fe476 bp 0x7fffffff86a0 sp 0x7fffffff8698
+WRITE of size 8 at 0x602000000538 thread T0
+    #0 0x7ffff78fe475 in std::__shared_ptr<heif::HeifContext::Image, (__gnu_cxx::_Lock_policy)2>::operator=(std::__shared_ptr<heif::HeifContext::Image, (__gnu_cxx::_Lock_policy)2> const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/bits/shared_ptr_base.h:1122:69
+    #1 0x7ffff78fb1d6 in std::shared_ptr<heif::HeifContext::Image>::operator=(std::shared_ptr<heif::HeifContext::Image> const&) /usr/bin/../lib/gcc/x86_64-linux-gnu/7.3.0/../../../../include/c++/7.3.0/bits/shared_ptr.h:296:65
+    #2 0x7ffff792ab5b in heif::HeifContext::Image::set_depth_channel(std::shared_ptr<heif::HeifContext::Image>) /home/hongxu/FOT/libheif/libheif-asan/libheif/./heif_context.h:126:75
+    #3 0x7ffff790d188 in heif::HeifContext::interpret_heif_file() /home/hongxu/FOT/libheif/libheif-asan/libheif/heif_context.cc:604:34
