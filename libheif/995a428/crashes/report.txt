@@ -1,0 +1,15 @@
+
+=== Replay Configurations ===
+ReplayDirs: [/media/fuzz/heif/s0/crashes, /media/fuzz/heif/s1/crashes, /media/fuzz/heif/s2/crashes, /media/fuzz/heif/s3/crashes, ]
+Symbolizer: /usr/bin/llvm-symbolizer-7
+Debugger: gdb
+Args: ["/home/hongxu/FOT/libheif/libheif-asan/install/bin/heif-convert", "@@", "/tmp/test.png"]
+Timeout: 2s
+Del Orignial: false
+Replay Dir: replay_out
+Threads: MAX
+ASAN_OPTIONS=symbolize=true:abort_on_error=true:detect_leaks=false:allocator_may_return_null=true:detect_odr_violation=0
+MSAN_OPTIONS=detect_leaks=false:abort_on_error=true:symbolize=true
+LSAN_OPTIONS=symbolize=true:detect_leaks=false:malloc_context_size=1:abort_on_error=true
+TSAN_OPTIONS=halt_on_error=1:detect_leaks=false:symbolize=true:second_deadlock_stack=1:abort_on_error=true:detect_deadlocks=1
+
