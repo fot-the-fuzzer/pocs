@@ -1,0 +1,21 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==9815==ERROR: AddressSanitizer: SEGV on unknown address 0x602000c133d0 (pc 0x7f8963e8ca6a bp 0x7ffc262760d0 sp 0x7ffc26275338 T0)
+==9815==The signal is caused by a READ memory access.
+    #0 0x7f8963e8ca69  (/usr/lib/x86_64-linux-gnu/libX11.so.6+0x27a69)
+    #1 0x7f896b247c89 in ReadXWDImage /home/hongxu/work/imagemagick/ImageMagick-asan/coders/xwd.c:573:21
+    #2 0x7f896a8008c9 in ReadImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:547:15
+    #3 0x7f896a8042d4 in ReadImages /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:917:9
+    #4 0x7f8969d969a4 in ConvertImageCommand /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/convert.c:644:18
+    #5 0x7f8969f7e021 in MagickCommandGenesis /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/mogrify.c:185:14
+    #6 0x50c8a7 in MagickMain /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:149:10
+    #7 0x50c301 in main /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:180:10
+    #8 0x7f8962befb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #9 0x41ce19 in _start (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x41ce19)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/usr/lib/x86_64-linux-gnu/libX11.so.6+0x27a69) 
+==9815==ABORTING
+==9815==WARNING: ASan is ignoring requested __asan_handle_no_return: stack top: 0x7ffc26295000; bottom 0x7f896bb3a000; size: 0x0072ba75b000 (492754546688)
+False positive error reports may follow
+For details see https://github.com/google/sanitizers/issues/189
