@@ -1,0 +1,74 @@
+=================================================================
+==1962==ERROR: AddressSanitizer: heap-use-after-free on address 0x62700003811c at pc 0x7f2584984c25 bp 0x7ffe24e14170 sp 0x7ffe24e14168
+WRITE of size 4 at 0x62700003811c thread T0
+    #0 0x7f2584984c24 in ReadImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:659:16
+    #1 0x7f2584987a94 in ReadImages /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:917:9
+    #2 0x7f2583f5a9a4 in ConvertImageCommand /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/convert.c:644:18
+    #3 0x7f2584142021 in MagickCommandGenesis /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/mogrify.c:185:14
+    #4 0x50c8a7 in MagickMain /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:149:10
+    #5 0x50c301 in main /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:180:10
+    #6 0x7f257cdb3b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #7 0x41ce19 in _start (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x41ce19)
+
+0x62700003811c is located 28 bytes inside of 13504-byte region [0x627000038100,0x62700003b5c0)
+freed by thread T0 here:
+    #0 0x4d22b8 in __interceptor_free.localalias.0 (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x4d22b8)
+    #1 0x7f2584c5b8d0 in RelinquishMagickMemory /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/memory.c:1074:3
+    #2 0x7f2584bfa716 in DestroyImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/image.c:1225:19
+    #3 0x7f25850c3a8a in ReadMATImage /home/hongxu/work/imagemagick/ImageMagick-asan/coders/mat.c:1479:12
+    #4 0x7f2584984089 in ReadImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:547:15
+    #5 0x7f2584987a94 in ReadImages /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:917:9
+    #6 0x7f2583f5a9a4 in ConvertImageCommand /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/convert.c:644:18
+    #7 0x7f2584142021 in MagickCommandGenesis /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/mogrify.c:185:14
+    #8 0x50c8a7 in MagickMain /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:149:10
+    #9 0x50c301 in main /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:180:10
+    #10 0x7f257cdb3b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+previously allocated by thread T0 here:
+    #0 0x4d2470 in __interceptor_malloc (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x4d2470)
+    #1 0x7f2584c59fe6 in AcquireMagickMemory /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/memory.c:478:10
+    #2 0x7f2584bf2d04 in AcquireCriticalMemory /home/hongxu/work/imagemagick/ImageMagick-asan/./MagickCore/memory-private.h:64:10
+    #3 0x7f2584bf075b in AcquireImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/image.c:172:19
+    #4 0x7f2584bf572b in AcquireNextImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/image.c:396:15
+    #5 0x7f25850c2f97 in ReadMATImage /home/hongxu/work/imagemagick/ImageMagick-asan/coders/mat.c:1391:5
+    #6 0x7f2584984089 in ReadImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:547:15
+    #7 0x7f2584987a94 in ReadImages /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:917:9
+    #8 0x7f2583f5a9a4 in ConvertImageCommand /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/convert.c:644:18
+    #9 0x7f2584142021 in MagickCommandGenesis /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/mogrify.c:185:14
+    #10 0x50c8a7 in MagickMain /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:149:10
+    #11 0x50c301 in main /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:180:10
+    #12 0x7f257cdb3b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-use-after-free /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:659:16 in ReadImage
+Shadow bytes around the buggy address:
+  0x0c4e7fffefd0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4e7fffefe0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4e7fffeff0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4e7ffff000: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4e7ffff010: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c4e7ffff020: fd fd fd[fd]fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c4e7ffff030: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c4e7ffff040: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c4e7ffff050: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c4e7ffff060: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+  0x0c4e7ffff070: fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd fd
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==1962==ABORTING
