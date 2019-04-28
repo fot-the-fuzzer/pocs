@@ -1,0 +1,77 @@
+./ImageMagick-asan/install/bin/convert: /home/hongxu/work/imagemagick/libtiff-asan/install/lib/libtiff.so.5: no version information available (required by /home/hongxu/work/imagemagick/ImageMagick-asan/install/lib/libMagickCore-7.Q16HDRI.so.6)
+=================================================================
+==4531==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000045d4 at pc 0x0000004bd4c1 bp 0x7fff58a5ee00 sp 0x7fff58a5e5b0
+READ of size 131072 at 0x6020000045d4 thread T0
+    #0 0x4bd4c0 in __asan_memcpy (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x4bd4c0)
+    #1 0x7f2cce3ec1f4 in _TIFFmemcpy /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_unix.c:346:2
+    #2 0x7f2cce2ec909 in TIFFWriteDirectoryTagColormap /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_dirwrite.c:1853:2
+    #3 0x7f2cce2e2591 in TIFFWriteDirectorySec /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_dirwrite.c:566:10
+    #4 0x7f2cce2e01af in TIFFWriteDirectory /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_dirwrite.c:181:9
+    #5 0x7f2cce2e7a60 in TIFFRewriteDirectory /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_dirwrite.c:221:10
+    #6 0x7f2cce3148f6 in TIFFFlush /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_flush.c:81:13
+    #7 0x7f2cce2803eb in TIFFCleanup /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_close.c:51:3
+    #8 0x7f2cce280db2 in TIFFClose /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_close.c:126:2
+    #9 0x7f2cd010ecac in WriteTIFFImage /home/hongxu/work/imagemagick/ImageMagick-asan/coders/tiff.c:4324:3
+    #10 0x7f2ccf6f9dc2 in WriteImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:1159:16
+    #11 0x7f2ccf6fae4b in WriteImages /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:1376:13
+    #12 0x7f2cced61a72 in ConvertImageCommand /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/convert.c:3305:11
+    #13 0x7f2cceeb3021 in MagickCommandGenesis /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/mogrify.c:185:14
+    #14 0x50c8a7 in MagickMain /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:149:10
+    #15 0x50c301 in main /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:180:10
+    #16 0x7f2cc7986b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #17 0x41ce19 in _start (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x41ce19)
+
+0x6020000045d4 is located 0 bytes to the right of 4-byte region [0x6020000045d0,0x6020000045d4)
+allocated by thread T0 here:
+    #0 0x4d2470 in __interceptor_malloc (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x4d2470)
+    #1 0x7f2cce3ec0dc in _TIFFmalloc /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_unix.c:314:10
+    #2 0x7f2cce287a2d in setByteArray /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_dir.c:51:19
+    #3 0x7f2cce287b76 in _TIFFsetShortArray /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_dir.c:63:7
+    #4 0x7f2cce2908e5 in _TIFFVSetField /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_dir.c:375:3
+    #5 0x7f2cce287f46 in TIFFVSetField /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_dir.c:868:6
+    #6 0x7f2cce287e6b in TIFFSetField /home/hongxu/work/imagemagick/libtiff-asan/libtiff/tif_dir.c:812:11
+    #7 0x7f2cd010e808 in WriteTIFFImage /home/hongxu/work/imagemagick/ImageMagick-asan/coders/tiff.c:4262:16
+    #8 0x7f2ccf6f9dc2 in WriteImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:1159:16
+    #9 0x7f2ccf6fae4b in WriteImages /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:1376:13
+    #10 0x7f2cced61a72 in ConvertImageCommand /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/convert.c:3305:11
+    #11 0x7f2cceeb3021 in MagickCommandGenesis /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/mogrify.c:185:14
+    #12 0x50c8a7 in MagickMain /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:149:10
+    #13 0x50c301 in main /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:180:10
+    #14 0x7f2cc7986b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x4bd4c0) in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x0c047fff8860: fa fa fd fa fa fa 00 00 fa fa fd fa fa fa fd fd
+  0x0c047fff8870: fa fa 00 05 fa fa 00 04 fa fa 04 fa fa fa 00 03
+  0x0c047fff8880: fa fa 00 04 fa fa 00 07 fa fa 00 04 fa fa 00 04
+  0x0c047fff8890: fa fa 00 04 fa fa 00 04 fa fa 00 04 fa fa 00 04
+  0x0c047fff88a0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+=>0x0c047fff88b0: fa fa fd fa fa fa 00 fa fa fa[04]fa fa fa 04 fa
+  0x0c047fff88c0: fa fa 04 fa fa fa 00 fa fa fa 00 fa fa fa fd fa
+  0x0c047fff88d0: fa fa fd fa fa fa fd fa fa fa fd fd fa fa 00 00
+  0x0c047fff88e0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fa fa
+  0x0c047fff88f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==4531==ABORTING
+==4531==WARNING: ASan is ignoring requested __asan_handle_no_return: stack top: 0x7fff58a80000; bottom 0x7f2cd09fe000; size: 0x00d288082000 (904225366016)
+False positive error reports may follow
+For details see https://github.com/google/sanitizers/issues/189

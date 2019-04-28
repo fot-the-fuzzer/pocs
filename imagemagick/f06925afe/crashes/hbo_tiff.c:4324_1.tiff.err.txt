@@ -1,0 +1,60 @@
+=================================================================
+==18301==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000045d4 at pc 0x000000473b42 bp 0x7ffe98d84b40 sp 0x7ffe98d842f0
+READ of size 131072 at 0x6020000045d4 thread T0
+    #0 0x473b41 in __interceptor_memcpy.part.43 (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x473b41)
+    #1 0x7f07f4677d60  (/usr/lib/x86_64-linux-gnu/libtiff.so.5+0x18d60)
+    #2 0x7f07f4678c9c in TIFFRewriteDirectory (/usr/lib/x86_64-linux-gnu/libtiff.so.5+0x19c9c)
+    #3 0x7f07f4680596 in TIFFFlush (/usr/lib/x86_64-linux-gnu/libtiff.so.5+0x21596)
+    #4 0x7f07f46675f4 in TIFFCleanup (/usr/lib/x86_64-linux-gnu/libtiff.so.5+0x85f4)
+    #5 0x7f07f4667618 in TIFFClose (/usr/lib/x86_64-linux-gnu/libtiff.so.5+0x8618)
+    #6 0x7f07f638dcac in WriteTIFFImage /home/hongxu/work/imagemagick/ImageMagick-asan/coders/tiff.c:4324:3
+    #7 0x7f07f5978dc2 in WriteImage /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:1159:16
+    #8 0x7f07f5979e4b in WriteImages /home/hongxu/work/imagemagick/ImageMagick-asan/MagickCore/constitute.c:1376:13
+    #9 0x7f07f4fe0a72 in ConvertImageCommand /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/convert.c:3305:11
+    #10 0x7f07f5132021 in MagickCommandGenesis /home/hongxu/work/imagemagick/ImageMagick-asan/MagickWand/mogrify.c:185:14
+    #11 0x50c8a7 in MagickMain /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:149:10
+    #12 0x50c301 in main /home/hongxu/work/imagemagick/ImageMagick-asan/utilities/magick.c:180:10
+    #13 0x7f07edda3b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #14 0x41ce19 in _start (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x41ce19)
+
+0x6020000045d4 is located 0 bytes to the right of 4-byte region [0x6020000045d0,0x6020000045d4)
+allocated by thread T0 here:
+    #0 0x4d2470 in __interceptor_malloc (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x4d2470)
+    #1 0x7f07f4668737  (/usr/lib/x86_64-linux-gnu/libtiff.so.5+0x9737)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/hongxu/work/imagemagick/ImageMagick-asan/install/bin/magick+0x473b41) in __interceptor_memcpy.part.43
+Shadow bytes around the buggy address:
+  0x0c047fff8860: fa fa fd fa fa fa 00 00 fa fa fd fa fa fa fd fd
+  0x0c047fff8870: fa fa 00 05 fa fa 00 04 fa fa 04 fa fa fa 00 03
+  0x0c047fff8880: fa fa 00 04 fa fa 00 07 fa fa 00 04 fa fa 00 04
+  0x0c047fff8890: fa fa 00 04 fa fa 00 04 fa fa 00 04 fa fa 00 04
+  0x0c047fff88a0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fd fa
+=>0x0c047fff88b0: fa fa fd fa fa fa 00 fa fa fa[04]fa fa fa 04 fa
+  0x0c047fff88c0: fa fa 04 fa fa fa 00 fa fa fa 00 fa fa fa fd fa
+  0x0c047fff88d0: fa fa fd fa fa fa fd fa fa fa fd fd fa fa 00 00
+  0x0c047fff88e0: fa fa fd fa fa fa fd fa fa fa fd fa fa fa fa fa
+  0x0c047fff88f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==18301==ABORTING
+==18301==WARNING: ASan is ignoring requested __asan_handle_no_return: stack top: 0x7ffe98da4000; bottom 0x7f07f6c7d000; size: 0x00f6a2127000 (1059281072128)
+False positive error reports may follow
+For details see https://github.com/google/sanitizers/issues/189
