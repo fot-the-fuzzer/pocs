@@ -1,0 +1,29 @@
+error: cannot recognize version marker
+warning: trying to repair broken xref
+warning: repairing PDF document
+error: invalid key in dict
+error: invalid key in dict
+warning: non-page object in page tree ()
+ASAN:DEADLYSIGNAL
+=================================================================
+==14323==ERROR: AddressSanitizer: SEGV on unknown address 0x7ffff1afd000 (pc 0x7ffff64fa487 bp 0x000000000d68 sp 0x7fffffffba60 T0)
+==14323==The signal is caused by a READ memory access.
+    #0 0x7ffff64fa486 in _IO_default_xsputn (/lib/x86_64-linux-gnu/libc.so.6+0x8e486)
+    #1 0x7ffff64f7a32 in _IO_file_xsputn (/lib/x86_64-linux-gnu/libc.so.6+0x8ba32)
+    #2 0x7ffff64eb976 in _IO_fwrite (/lib/x86_64-linux-gnu/libc.so.6+0x7f976)
+    #3 0x555555791235 in file_write source/fitz/output.c:146
+    #4 0x55555579137f in std_write source/fitz/output.c:155
+    #5 0x555555792f96 in fz_write_data source/fitz/output.c:515
+    #6 0x55555578e10e in pnm_write_band source/fitz/output-pnm.c:72
+    #7 0x555555794696 in fz_write_band source/fitz/output.c:710
+    #8 0x5555556952f1 in dodrawpage source/tools/muraster.c:664
+    #9 0x555555695cd2 in try_render_page source/tools/muraster.c:743
+    #10 0x555555697f00 in drawpage source/tools/muraster.c:1202
+    #11 0x555555698230 in drawrange source/tools/muraster.c:1254
+    #12 0x55555569a521 in main source/tools/muraster.c:1672
+    #13 0x7ffff648db96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #14 0x555555693b39 in _start (/home/hongxu/FOT/mupdf/mupdf-asan/build/sanitize/muraster+0x13fb39)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/lib/x86_64-linux-gnu/libc.so.6+0x8e486) in _IO_default_xsputn
+==14323==ABORTING
