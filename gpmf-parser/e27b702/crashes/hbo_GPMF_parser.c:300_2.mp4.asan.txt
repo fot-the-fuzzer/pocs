@@ -1,0 +1,51 @@
+=================================================================
+==4594==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6220000436b4 at pc 0x00000050f60a bp 0x7ffd1f983050 sp 0x7ffd1f983048
+READ of size 4 at 0x6220000436b4 thread T0
+    #0 0x50f609 in GPMF_Next /home/exp/FOT/gpmf/gpmf-asan/GPMF_parser.c:300:11
+    #1 0x510488 in GPMF_FindNext /home/exp/FOT/gpmf/gpmf-asan/GPMF_parser.c:344:16
+    #2 0x558c3a in GetGPMFSampleRate /home/exp/FOT/gpmf/gpmf-asan/demo/GPMF_mp4reader.c:774:39
+    #3 0x549d03 in main /home/exp/FOT/gpmf/gpmf-asan/demo/GPMF_demo.c:242:19
+    #4 0x7fc728550b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #5 0x41c209 in _start (/home/exp/FOT/gpmf/gpmf-asan/BUILD/gpmf-parser+0x41c209)
+
+0x6220000436b4 is located 0 bytes to the right of 5556-byte region [0x622000042100,0x6220000436b4)
+allocated by thread T0 here:
+    #0 0x4d1c85 in realloc (/home/exp/FOT/gpmf/gpmf-asan/BUILD/gpmf-parser+0x4d1c85)
+    #1 0x54a0a6 in GetPayload /home/exp/FOT/gpmf/gpmf-asan/demo/GPMF_mp4reader.c:62:27
+    #2 0x558b9e in GetGPMFSampleRate /home/exp/FOT/gpmf/gpmf-asan/demo/GPMF_mp4reader.c:762:22
+    #3 0x549d03 in main /home/exp/FOT/gpmf/gpmf-asan/demo/GPMF_demo.c:242:19
+    #4 0x7fc728550b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/gpmf/gpmf-asan/GPMF_parser.c:300:11 in GPMF_Next
+Shadow bytes around the buggy address:
+  0x0c4480000680: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c4480000690: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c44800006a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c44800006b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c44800006c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c44800006d0: 00 00 00 00 00 00[04]fa fa fa fa fa fa fa fa fa
+  0x0c44800006e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c44800006f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4480000700: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4480000710: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4480000720: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==4594==ABORTING

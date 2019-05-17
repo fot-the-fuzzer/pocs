@@ -1,0 +1,13 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==4642==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x00000054a09a bp 0x7ffea718e230 sp 0x7ffea718e160 T0)
+==4642==The signal is caused by a READ memory access.
+==4642==Hint: address points to the zero page.
+    #0 0x54a099 in GetPayload /home/exp/FOT/gpmf/gpmf-asan/demo/GPMF_mp4reader.c:62:56
+    #1 0x54936f in main /home/exp/FOT/gpmf/gpmf-asan/demo/GPMF_demo.c:94:14
+    #2 0x7f5b84f40b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #3 0x41c209 in _start (/home/exp/FOT/gpmf/gpmf-asan/BUILD/gpmf-parser+0x41c209)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/gpmf/gpmf-asan/demo/GPMF_mp4reader.c:62:56 in GetPayload
+==4642==ABORTING

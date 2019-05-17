@@ -1,0 +1,13 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==4765==ERROR: AddressSanitizer: SEGV on unknown address 0x7f3da3bad5c8 (pc 0x00000050d821 bp 0x7ffeeced2c90 sp 0x7ffeeced25c0 T0)
+==4765==The signal is caused by a READ memory access.
+    #0 0x50d820 in GPMF_Next /home/exp/FOT/gpmf/gpmf-asan/GPMF_parser.c:224:25
+    #1 0x510488 in GPMF_FindNext /home/exp/FOT/gpmf/gpmf-asan/GPMF_parser.c:344:16
+    #2 0x549cba in main /home/exp/FOT/gpmf/gpmf-asan/demo/GPMF_demo.c:237:21
+    #3 0x7f3da29d0b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #4 0x41c209 in _start (/home/exp/FOT/gpmf/gpmf-asan/BUILD/gpmf-parser+0x41c209)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/gpmf/gpmf-asan/GPMF_parser.c:224:25 in GPMF_Next
+==4765==ABORTING
