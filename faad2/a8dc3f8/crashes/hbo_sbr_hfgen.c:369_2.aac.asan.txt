@@ -1,0 +1,86 @@
+ *********** Ahead Software MPEG-4 AAC Decoder V2.8.8 ******************
+
+ Build: May 17 2019
+ Copyright 2002-2004: Ahead Software AG
+ http://www.audiocoding.com
+ bug tracking: https://sourceforge.net/p/faac/bugs/
+ Floating point version
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License.
+
+ **************************************************************************
+
+hbo_sbr_hfgen.c:369_2.aac file info:
+ADTS, 0.012 sec, 177 kbps, 88200 Hz
+
+=================================================================
+==17072==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62f00000d6f0 at pc 0x7ffff7b8aba4 bp 0x7fffffff8a00 sp 0x7fffffff89f8
+READ of size 4 at 0x62f00000d6f0 thread T0
+    #0 0x7ffff7b8aba3 in auto_correlation /home/hongxu/FOT/faac/faad2-asan/libfaad/sbr_hfgen.c:369:19
+    #1 0x7ffff7b89208 in calc_prediction_coef /home/hongxu/FOT/faac/faad2-asan/libfaad/sbr_hfgen.c:420:5
+    #2 0x7ffff7b86782 in hf_generation /home/hongxu/FOT/faac/faad2-asan/libfaad/sbr_hfgen.c:123:17
+    #3 0x7ffff7ba1d02 in sbr_process_channel /home/hongxu/FOT/faac/faad2-asan/libfaad/sbr_dec.c:344:9
+    #4 0x7ffff7ba15c5 in sbrDecodeCoupleFrame /home/hongxu/FOT/faac/faad2-asan/libfaad/sbr_dec.c:488:17
+    #5 0x7ffff7b4672a in reconstruct_channel_pair /home/hongxu/FOT/faac/faad2-asan/libfaad/specrec.c:1314:18
+    #6 0x7ffff7b5672e in channel_pair_element /home/hongxu/FOT/faac/faad2-asan/libfaad/syntax.c:771:19
+    #7 0x7ffff7b4cf10 in decode_cpe /home/hongxu/FOT/faac/faad2-asan/libfaad/syntax.c:414:20
+    #8 0x7ffff7b4afd5 in raw_data_block /home/hongxu/FOT/faac/faad2-asan/libfaad/syntax.c:460:17
+    #9 0x7ffff7af35ed in aac_frame_decode /home/hongxu/FOT/faac/faad2-asan/libfaad/decoder.c:990:9
+    #10 0x7ffff7af2f81 in NeAACDecDecode /home/hongxu/FOT/faac/faad2-asan/libfaad/decoder.c:821:12
+    #11 0x508197 in decodeAACfile /home/hongxu/FOT/faac/faad2-asan/frontend/main.c:679:25
+    #12 0x5027aa in faad_main /home/hongxu/FOT/faac/faad2-asan/frontend/main.c:1323:18
+    #13 0x500f71 in main /home/hongxu/FOT/faac/faad2-asan/frontend/main.c:1366:12
+    #14 0x7ffff6b16b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #15 0x41acb9 in _start (/home/hongxu/FOT/faac/faad2-asan/install/bin/faad+0x41acb9)
+
+0x62f00000d6f0 is located 352 bytes to the right of 53648-byte region [0x62f000000400,0x62f00000d590)
+allocated by thread T0 here:
+    #0 0x4c2b03 in malloc (/home/hongxu/FOT/faac/faad2-asan/install/bin/faad+0x4c2b03)
+    #1 0x7ffff7b68094 in faad_malloc /home/hongxu/FOT/faac/faad2-asan/libfaad/common.c:180:12
+    #2 0x7ffff7b9df8e in sbrDecodeInit /home/hongxu/FOT/faac/faad2-asan/libfaad/sbr_dec.c:60:21
+    #3 0x7ffff7b4d77d in fill_element /home/hongxu/FOT/faac/faad2-asan/libfaad/syntax.c:1086:42
+    #4 0x7ffff7b566cd in channel_pair_element /home/hongxu/FOT/faac/faad2-asan/libfaad/syntax.c:763:23
+    #5 0x7ffff7b4cf10 in decode_cpe /home/hongxu/FOT/faac/faad2-asan/libfaad/syntax.c:414:20
+    #6 0x7ffff7b4afd5 in raw_data_block /home/hongxu/FOT/faac/faad2-asan/libfaad/syntax.c:460:17
+    #7 0x7ffff7af35ed in aac_frame_decode /home/hongxu/FOT/faac/faad2-asan/libfaad/decoder.c:990:9
+    #8 0x7ffff7af2f81 in NeAACDecDecode /home/hongxu/FOT/faac/faad2-asan/libfaad/decoder.c:821:12
+    #9 0x508197 in decodeAACfile /home/hongxu/FOT/faac/faad2-asan/frontend/main.c:679:25
+    #10 0x5027aa in faad_main /home/hongxu/FOT/faac/faad2-asan/frontend/main.c:1323:18
+    #11 0x500f71 in main /home/hongxu/FOT/faac/faad2-asan/frontend/main.c:1366:12
+    #12 0x7ffff6b16b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/faac/faad2-asan/libfaad/sbr_hfgen.c:369:19 in auto_correlation
+Shadow bytes around the buggy address:
+  0x0c5e7fff9a80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c5e7fff9a90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c5e7fff9aa0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c5e7fff9ab0: 00 00 fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5e7fff9ac0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c5e7fff9ad0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]fa
+  0x0c5e7fff9ae0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5e7fff9af0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5e7fff9b00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5e7fff9b10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c5e7fff9b20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==17072==ABORTING
