@@ -1,0 +1,12 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==30501==ERROR: AddressSanitizer: SEGV on unknown address 0x602c00000004 (pc 0x00000054f145 bp 0x7ffdff46ccf0 sp 0x7ffdff46b580 T0)
+==30501==The signal is caused by a READ memory access.
+    #0 0x54f144 in OpenMP4Source /home/exp/FOT/gpmf/gpmf-parser/demo/GPMF_mp4reader.c:298:42
+    #1 0x549106 in main /home/exp/FOT/gpmf/gpmf-parser/demo/GPMF_demo.c:48:15
+    #2 0x7fadf0e89b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #3 0x41c209 in _start (/home/exp/FOT/gpmf/gpmf-parser/BUILD/gpmf-parser+0x41c209)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/gpmf/gpmf-parser/demo/GPMF_mp4reader.c:298:42 in OpenMP4Source
+==30501==ABORTING
