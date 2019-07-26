@@ -1,0 +1,893 @@
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 2048. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 28160. Skip block.
+
+Skip unknown record type 0
+
+Skip unknown record type 238
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Skip unknown record type 0
+
+Can't process block type 28160. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+Skip unknown record type 1
+
+=================================================================
+==10520==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6020000000a0 at pc 0x7ffff7cd3a51 bp 0x7fffffffafd0 sp 0x7fffffffafc8
+READ of size 2 at 0x6020000000a0 thread T0
+    #0 0x7ffff7cd3a50 in Insert_Extension_Map /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfx.c:216:12
+    #1 0x4f8caf in send_data /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:399:11
+    #2 0x4f6e03 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:649:2
+    #3 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+    #4 0x41e569 in _start (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfreplay+0x41e569)
+
+0x6020000000a0 is located 0 bytes to the right of 16-byte region [0x602000000090,0x6020000000a0)
+allocated by thread T0 here:
+    #0 0x4c63b3 in malloc (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfreplay+0x4c63b3)
+    #1 0x7ffff7cd471f in Insert_Extension_Map /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfx.c:262:33
+    #2 0x4f8caf in send_data /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:399:11
+    #3 0x4f6e03 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:649:2
+    #4 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfx.c:216:12 in Insert_Extension_Map
+Shadow bytes around the buggy address:
+  0x0c047fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff8000: fa fa fd fa fa fa 00 fa fa fa 04 fa fa fa 00 00
+=>0x0c047fff8010: fa fa 00 00[fa]fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==10520==ABORTING

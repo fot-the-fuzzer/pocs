@@ -1,0 +1,97 @@
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+Can't process block type 12336. Skip block.
+
+=================================================================
+==10514==ERROR: AddressSanitizer: global-buffer-overflow on address 0x0000005be4dc at pc 0x7ffff7cd4fc5 bp 0x7fffffffaf30 sp 0x7fffffffaf28
+READ of size 4 at 0x0000005be4dc thread T0
+    #0 0x7ffff7cd4fc4 in PrintExtensionMap /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfx.c:473:63
+    #1 0x7ffff7cd377d in Insert_Extension_Map /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfx.c:203:2
+    #2 0x4f8caf in send_data /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:399:11
+    #3 0x4f6e03 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:649:2
+    #4 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+    #5 0x41e569 in _start (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfreplay+0x41e569)
+
+0x0000005be4dc is located 244 bytes to the right of global variable 'extension_descriptor' defined in 'nfx.c:71:24' (0x5bdf20) of size 1224
+SUMMARY: AddressSanitizer: global-buffer-overflow /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfx.c:473:63 in PrintExtensionMap
+Shadow bytes around the buggy address:
+  0x0000800afc40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800afc50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800afc60: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800afc70: 00 00 00 00 00 00 00 00 00 00 00 00 00 f9 f9 f9
+  0x0000800afc80: f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9
+=>0x0000800afc90: f9 f9 f9 f9 f9 f9 f9 f9 f9 f9 f9[f9]f9 f9 f9 f9
+  0x0000800afca0: f9 f9 f9 f9 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800afcb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800afcc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800afcd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0000800afce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==10514==ABORTING

@@ -1,0 +1,33 @@
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Can't process block type 0. Skip block.
+
+Exporter SysID: 4057065472 not found! - Skip stat record record.
+
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==26814==ERROR: AddressSanitizer: SEGV on unknown address 0x10013d408bbe (pc 0x7ffff7d16f43 bp 0x7fffffffadb0 sp 0x7fffffffac50 T0)
+==26814==The signal is caused by a READ memory access.
+    #0 0x7ffff7d16f42 in AddExporterStat /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/exporter.c:245:9
+    #1 0x4fc075 in process_data /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:656:6
+    #2 0x4f9648 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:1207:13
+    #3 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+    #4 0x41f629 in _start (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfdump+0x41f629)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/exporter.c:245:9 in AddExporterStat
+==26814==ABORTING

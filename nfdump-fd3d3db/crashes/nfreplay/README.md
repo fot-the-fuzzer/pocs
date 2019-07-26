@@ -1,0 +1,1 @@
+nfreplay -r $FILE

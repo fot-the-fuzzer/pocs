@@ -1,0 +1,53 @@
+Can't process block type 0. Skip block.
+
+=================================================================
+==26810==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x631000010800 at pc 0x0000004c6668 bp 0x7fffffffacc0 sp 0x7fffffffa470
+WRITE of size 65507 at 0x631000010800 thread T0
+    #0 0x4c6667 in __asan_memcpy (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfdump+0x4c6667)
+    #1 0x4fd216 in ConvertCommonV0 /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/./nffile_inline.c:85:2
+    #2 0x4faf82 in process_data /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:544:12
+    #3 0x4f9648 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:1207:13
+    #4 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+    #5 0x41f629 in _start (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfdump+0x41f629)
+
+0x631000010800 is located 0 bytes to the right of 65536-byte region [0x631000000800,0x631000010800)
+allocated by thread T0 here:
+    #0 0x4c7473 in malloc (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfdump+0x4c7473)
+    #1 0x4faebc in process_data /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:538:23
+    #2 0x4f9648 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:1207:13
+    #3 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfdump+0x4c6667) in __asan_memcpy
+Shadow bytes around the buggy address:
+  0x0c627fffa0b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c627fffa0c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c627fffa0d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c627fffa0e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c627fffa0f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c627fffa100:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c627fffa110: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c627fffa120: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c627fffa130: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c627fffa140: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c627fffa150: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==26810==ABORTING

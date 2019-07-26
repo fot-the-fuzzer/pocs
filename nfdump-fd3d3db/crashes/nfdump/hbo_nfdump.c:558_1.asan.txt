@@ -1,0 +1,51 @@
+Can't process block type 0. Skip block.
+
+=================================================================
+==26802==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7ffff41a67f8 at pc 0x0000004fb129 bp 0x7fffffffadb0 sp 0x7fffffffada8
+READ of size 8 at 0x7ffff41a67f8 thread T0
+    #0 0x4fb128 in process_data /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:558:17
+    #1 0x4f9648 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:1207:13
+    #2 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+    #3 0x41f629 in _start (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfdump+0x41f629)
+
+0x7ffff41a67f8 is located 0 bytes to the right of 524280-byte region [0x7ffff4126800,0x7ffff41a67f8)
+allocated by thread T0 here:
+    #0 0x4c766a in calloc (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfdump+0x4c766a)
+    #1 0x7ffff7d14dfa in InitExporterList /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/exporter.c:87:18
+    #2 0x4f7d45 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:1007:8
+    #3 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfdump.c:558:17 in process_data
+Shadow bytes around the buggy address:
+  0x10007e82cca0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007e82ccb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007e82ccc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007e82ccd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x10007e82cce0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x10007e82ccf0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00[fa]
+  0x10007e82cd00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e82cd10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e82cd20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e82cd30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e82cd40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==26802==ABORTING

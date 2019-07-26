@@ -1,0 +1,1 @@
+nfdump -y -a < $FILE

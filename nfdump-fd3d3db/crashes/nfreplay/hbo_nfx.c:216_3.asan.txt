@@ -1,0 +1,55 @@
+=================================================================
+==10522==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7ffff2cfd2c1 at pc 0x7ffff7c88632 bp 0x7fffffffab10 sp 0x7fffffffab08
+READ of size 1 at 0x7ffff2cfd2c1 thread T0
+    #0 0x7ffff7c88631 in lzo1x_decompress /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/minilzo.c:5459:25
+    #1 0x7ffff7ccd7e8 in Uncompress_Block_LZO /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nffile.c:222:6
+    #2 0x7ffff7cccdd1 in ReadBlock /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nffile.c:1089:10
+    #3 0x4f80df in send_data /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:261:9
+    #4 0x4f6e03 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:649:2
+    #5 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+    #6 0x41e569 in _start (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfreplay+0x41e569)
+
+0x7ffff2cfd2c1 is located 1343 bytes to the left of 10485760-byte region [0x7ffff2cfd800,0x7ffff36fd800)
+allocated by thread T0 here:
+    #0 0x4c63b3 in malloc (/home/hongxu/FOT/Targets/nfdump/nfdump-asan/install/bin/nfreplay+0x4c63b3)
+    #1 0x7ffff7cc74f1 in NewFile /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nffile.c:645:26
+    #2 0x7ffff7cc60c1 in OpenFile /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nffile.c:392:12
+    #3 0x7ffff7cdc9cd in GetNextFile /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/flist.c:1027:12
+    #4 0x4f7c91 in send_data /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:225:11
+    #5 0x4f6e03 in main /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/nfreplay.c:649:2
+    #6 0x7ffff78adb6a in __libc_start_main /build/glibc-KRRWSm/glibc-2.29/csu/../csu/libc-start.c:308:16
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/Targets/nfdump/nfdump-asan/bin/minilzo.c:5459:25 in lzo1x_decompress
+Shadow bytes around the buggy address:
+  0x10007e597a00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e597a10: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e597a20: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e597a30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e597a40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x10007e597a50: fa fa fa fa fa fa fa fa[fa]fa fa fa fa fa fa fa
+  0x10007e597a60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e597a70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e597a80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e597a90: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x10007e597aa0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==10522==ABORTING
