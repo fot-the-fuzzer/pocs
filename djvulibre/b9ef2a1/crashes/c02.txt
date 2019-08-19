@@ -1,0 +1,64 @@
+=================================================================
+==13759==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x625000002101 at pc 0x7f415250a66e bp 0x7fff6a09fef0 sp 0x7fff6a09f698
+READ of size 1 at 0x625000002101 thread T0
+    #0 0x7f415250a66d  (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x5166d)
+    #1 0x7f4152145d5b in GStringRep::strdup(char const*) const /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/GString.cpp:1017
+    #2 0x7f415213f474 in GStringRep::UTF8::create(char const*) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/GString.cpp:160
+    #3 0x7f41521564fd in GUTF8String::operator=(char const*) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/GString.cpp:2626
+    #4 0x7f4151ff4dbb in DjVmDir::decode(GP<ByteStream> const&) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVmDir.cpp:315
+    #5 0x7f4152060b54 in display_djvm_dirm /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVuDumpHelper.cpp:172
+    #6 0x7f4152062a64 in display_chunks /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVuDumpHelper.cpp:335
+    #7 0x7f4152062b1f in display_chunks /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVuDumpHelper.cpp:342
+    #8 0x7f41520631f0 in DjVuDumpHelper::dump(GP<ByteStream>) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVuDumpHelper.cpp:361
+    #9 0x5566861ccba7 in display(GURL const&) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/djvudump.cpp:128
+    #10 0x5566861cd35d in main /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/djvudump.cpp:178
+    #11 0x7f415159bb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #12 0x5566861cc909 in _start (/home/hongxu/FOT/djvulibre/djvu-djvulibre-git/install/bin/djvudump+0x3909)
+
+0x625000002101 is located 0 bytes to the right of 8193-byte region [0x625000000100,0x625000002101)
+allocated by thread T0 here:
+    #0 0x7f4152599458 in operator new(unsigned long) (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xe0458)
+    #1 0x7f41520fc17c in GArrayBase::resize(int, int) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/GContainer.cpp:220
+    #2 0x7f4151ffede4 in GArrayTemplate<char>::resize(int) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/GContainer.h:496
+    #3 0x7f4151ff4aff in DjVmDir::decode(GP<ByteStream> const&) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVmDir.cpp:298
+    #4 0x7f4152060b54 in display_djvm_dirm /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVuDumpHelper.cpp:172
+    #5 0x7f4152062a64 in display_chunks /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVuDumpHelper.cpp:335
+    #6 0x7f4152062b1f in display_chunks /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVuDumpHelper.cpp:342
+    #7 0x7f41520631f0 in DjVuDumpHelper::dump(GP<ByteStream>) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/libdjvu/DjVuDumpHelper.cpp:361
+    #8 0x5566861ccba7 in display(GURL const&) /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/djvudump.cpp:128
+    #9 0x5566861cd35d in main /home/hongxu/FOT/djvulibre/djvu-djvulibre-git/tools/djvudump.cpp:178
+    #10 0x7f415159bb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x5166d) 
+Shadow bytes around the buggy address:
+  0x0c4a7fff83d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c4a7fff83e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c4a7fff83f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c4a7fff8400: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c4a7fff8410: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c4a7fff8420:[01]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4a7fff8430: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4a7fff8440: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4a7fff8450: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4a7fff8460: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c4a7fff8470: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==13759==ABORTING
