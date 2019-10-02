@@ -1,0 +1,23 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==13309==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f23497f3525 bp 0x7ffd32f34b20 sp 0x7ffd32f34ad0 T0)
+==13309==The signal is caused by a READ memory access.
+==13309==Hint: address points to the zero page.
+    #0 0x7f23497f3524  (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x26524)
+    #1 0x7f23498ab782 in __interceptor_free (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xde782)
+    #2 0x5606d6e96d5a in gf_free utils/alloc.c:165
+    #3 0x5606d7b63163 in ssix_del isomedia/box_code_base.c:9020
+    #4 0x5606d7316504 in gf_isom_box_del isomedia/box_funcs.c:1508
+    #5 0x5606d731258d in gf_isom_box_parse_ex isomedia/box_funcs.c:219
+    #6 0x5606d7311093 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #7 0x5606d7338bcc in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #8 0x5606d733dc33 in gf_isom_open_file isomedia/isom_intern.c:615
+    #9 0x5606d73494fc in gf_isom_open isomedia/isom_read.c:414
+    #10 0x5606d6e0ef75 in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4767
+    #11 0x5606d6e18ed9 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942
+    #12 0x7f2347cdcb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #13 0x5606d6de4449 in _start (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x1074449)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x26524) 
+==13309==ABORTING

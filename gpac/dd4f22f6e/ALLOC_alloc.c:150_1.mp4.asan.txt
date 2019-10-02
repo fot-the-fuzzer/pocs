@@ -1,0 +1,130 @@
+[32m[iso file] Unknown box type 1000686D in parent sinf
+[0m==20936==ERROR: AddressSanitizer failed to allocate 0xffff83000 (68718964736) bytes of LargeMmapAllocator (error code: 12)
+==20936==Process memory map follows:
+	0x000000400000-0x0000009d3000	/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box
+	0x000000bd3000-0x000000bdb000	/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box
+	0x000000bdb000-0x000000be9000	/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box
+	0x000000be9000-0x000001851000	
+	0x00007fff7000-0x00008fff7000	
+	0x00008fff7000-0x02008fff7000	
+	0x02008fff7000-0x10007fff8000	
+	0x600000000000-0x602000000000	
+	0x602000000000-0x602000010000	
+	0x602000010000-0x602e00000000	
+	0x602e00000000-0x602e00010000	
+	0x602e00010000-0x603000000000	
+	0x603000000000-0x603000010000	
+	0x603000010000-0x603e00000000	
+	0x603e00000000-0x603e00010000	
+	0x603e00010000-0x604000000000	
+	0x604000000000-0x604000010000	
+	0x604000010000-0x604e00000000	
+	0x604e00000000-0x604e00010000	
+	0x604e00010000-0x606000000000	
+	0x606000000000-0x606000010000	
+	0x606000010000-0x606e00000000	
+	0x606e00000000-0x606e00010000	
+	0x606e00010000-0x607000000000	
+	0x607000000000-0x607000010000	
+	0x607000010000-0x607e00000000	
+	0x607e00000000-0x607e00010000	
+	0x607e00010000-0x608000000000	
+	0x608000000000-0x608000010000	
+	0x608000010000-0x608e00000000	
+	0x608e00000000-0x608e00010000	
+	0x608e00010000-0x60b000000000	
+	0x60b000000000-0x60b000010000	
+	0x60b000010000-0x60be00000000	
+	0x60be00000000-0x60be00010000	
+	0x60be00010000-0x611000000000	
+	0x611000000000-0x611000010000	
+	0x611000010000-0x611e00000000	
+	0x611e00000000-0x611e00010000	
+	0x611e00010000-0x612000000000	
+	0x612000000000-0x612000010000	
+	0x612000010000-0x612e00000000	
+	0x612e00000000-0x612e00010000	
+	0x612e00010000-0x616000000000	
+	0x616000000000-0x616000010000	
+	0x616000010000-0x616e00000000	
+	0x616e00000000-0x616e00010000	
+	0x616e00010000-0x619000000000	
+	0x619000000000-0x619000010000	
+	0x619000010000-0x619e00000000	
+	0x619e00000000-0x619e00010000	
+	0x619e00010000-0x621000000000	
+	0x621000000000-0x621000010000	
+	0x621000010000-0x621e00000000	
+	0x621e00000000-0x621e00010000	
+	0x621e00010000-0x624000000000	
+	0x624000000000-0x624000010000	
+	0x624000010000-0x624e00000000	
+	0x624e00000000-0x624e00010000	
+	0x624e00010000-0x640000000000	
+	0x640000000000-0x640000003000	
+	0x7f3fd7412000-0x7f3fd9764000	
+	0x7f3fd9764000-0x7f3fd994b000	/lib/x86_64-linux-gnu/libc-2.27.so
+	0x7f3fd994b000-0x7f3fd9b4b000	/lib/x86_64-linux-gnu/libc-2.27.so
+	0x7f3fd9b4b000-0x7f3fd9b4f000	/lib/x86_64-linux-gnu/libc-2.27.so
+	0x7f3fd9b4f000-0x7f3fd9b51000	/lib/x86_64-linux-gnu/libc-2.27.so
+	0x7f3fd9b51000-0x7f3fd9b55000	
+	0x7f3fd9b55000-0x7f3fd9b6c000	/lib/x86_64-linux-gnu/libgcc_s.so.1
+	0x7f3fd9b6c000-0x7f3fd9d6b000	/lib/x86_64-linux-gnu/libgcc_s.so.1
+	0x7f3fd9d6b000-0x7f3fd9d6c000	/lib/x86_64-linux-gnu/libgcc_s.so.1
+	0x7f3fd9d6c000-0x7f3fd9d6d000	/lib/x86_64-linux-gnu/libgcc_s.so.1
+	0x7f3fd9d6d000-0x7f3fd9d74000	/lib/x86_64-linux-gnu/librt-2.27.so
+	0x7f3fd9d74000-0x7f3fd9f73000	/lib/x86_64-linux-gnu/librt-2.27.so
+	0x7f3fd9f73000-0x7f3fd9f74000	/lib/x86_64-linux-gnu/librt-2.27.so
+	0x7f3fd9f74000-0x7f3fd9f75000	/lib/x86_64-linux-gnu/librt-2.27.so
+	0x7f3fd9f75000-0x7f3fd9f91000	/lib/x86_64-linux-gnu/libz.so.1.2.11
+	0x7f3fd9f91000-0x7f3fda190000	/lib/x86_64-linux-gnu/libz.so.1.2.11
+	0x7f3fda190000-0x7f3fda191000	/lib/x86_64-linux-gnu/libz.so.1.2.11
+	0x7f3fda191000-0x7f3fda192000	/lib/x86_64-linux-gnu/libz.so.1.2.11
+	0x7f3fda192000-0x7f3fda32f000	/lib/x86_64-linux-gnu/libm-2.27.so
+	0x7f3fda32f000-0x7f3fda52e000	/lib/x86_64-linux-gnu/libm-2.27.so
+	0x7f3fda52e000-0x7f3fda52f000	/lib/x86_64-linux-gnu/libm-2.27.so
+	0x7f3fda52f000-0x7f3fda530000	/lib/x86_64-linux-gnu/libm-2.27.so
+	0x7f3fda530000-0x7f3fda554000	/lib/x86_64-linux-gnu/liblzma.so.5.2.2
+	0x7f3fda554000-0x7f3fda754000	/lib/x86_64-linux-gnu/liblzma.so.5.2.2
+	0x7f3fda754000-0x7f3fda755000	/lib/x86_64-linux-gnu/liblzma.so.5.2.2
+	0x7f3fda755000-0x7f3fda756000	/lib/x86_64-linux-gnu/liblzma.so.5.2.2
+	0x7f3fda756000-0x7f3fda759000	/lib/x86_64-linux-gnu/libdl-2.27.so
+	0x7f3fda759000-0x7f3fda958000	/lib/x86_64-linux-gnu/libdl-2.27.so
+	0x7f3fda958000-0x7f3fda959000	/lib/x86_64-linux-gnu/libdl-2.27.so
+	0x7f3fda959000-0x7f3fda95a000	/lib/x86_64-linux-gnu/libdl-2.27.so
+	0x7f3fda95a000-0x7f3fda974000	/lib/x86_64-linux-gnu/libpthread-2.27.so
+	0x7f3fda974000-0x7f3fdab73000	/lib/x86_64-linux-gnu/libpthread-2.27.so
+	0x7f3fdab73000-0x7f3fdab74000	/lib/x86_64-linux-gnu/libpthread-2.27.so
+	0x7f3fdab74000-0x7f3fdab75000	/lib/x86_64-linux-gnu/libpthread-2.27.so
+	0x7f3fdab75000-0x7f3fdab79000	
+	0x7f3fdab79000-0x7f3fdaba0000	/lib/x86_64-linux-gnu/ld-2.27.so
+	0x7f3fdac1b000-0x7f3fdad82000	
+	0x7f3fdad84000-0x7f3fdada0000	
+	0x7f3fdada0000-0x7f3fdada1000	/lib/x86_64-linux-gnu/ld-2.27.so
+	0x7f3fdada1000-0x7f3fdada2000	/lib/x86_64-linux-gnu/ld-2.27.so
+	0x7f3fdada2000-0x7f3fdada3000	
+	0x7fffa84bf000-0x7fffa84e2000	[stack]
+	0x7fffa8535000-0x7fffa8538000	[vvar]
+	0x7fffa8538000-0x7fffa853a000	[vdso]
+	0xffffffffff600000-0xffffffffff601000	[vsyscall]
+==20936==End of process memory map.
+==20936==AddressSanitizer CHECK failed: /build/llvm-toolchain-4.0-iMkWTm/llvm-toolchain-4.0-4.0.1/projects/compiler-rt/lib/sanitizer_common/sanitizer_common.cc:120 "((0 && "unable to mmap")) != (0)" (0x0, 0x0)
+    #0 0x4dc955 in __asan::AsanCheckFailed(char const*, int, char const*, unsigned long long, unsigned long long) (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x4dc955)
+    #1 0x4f84f5 in __sanitizer::CheckFailed(char const*, int, char const*, unsigned long long, unsigned long long) (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x4f84f5)
+    #2 0x4e7292 in __sanitizer::ReportMmapFailureAndDie(unsigned long, char const*, char const*, int, bool) (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x4e7292)
+    #3 0x4f1715 in __sanitizer::MmapOrDie(unsigned long, char const*, bool) (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x4f1715)
+    #4 0x424fdd in __asan::asan_malloc(unsigned long, __sanitizer::BufferedStackTrace*) (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x424fdd)
+    #5 0x4d374b in malloc (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x4d374b)
+    #6 0x552594 in gf_malloc /home/exp/FOT/Targets/gpac/gpac-orig/src/utils/alloc.c:150:9
+    #7 0x8d19b4 in pssh_Read /home/exp/FOT/Targets/gpac/gpac-orig/src/isomedia/box_code_drm.c:904:16
+    #8 0x686a9a in gf_isom_box_read /home/exp/FOT/Targets/gpac/gpac-orig/src/isomedia/box_funcs.c:1528:9
+    #9 0x686124 in gf_isom_box_parse_ex /home/exp/FOT/Targets/gpac/gpac-orig/src/isomedia/box_funcs.c:208:15
+    #10 0x685a27 in gf_isom_parse_root_box /home/exp/FOT/Targets/gpac/gpac-orig/src/isomedia/box_funcs.c:42:8
+    #11 0x68f178 in gf_isom_parse_movie_boxes /home/exp/FOT/Targets/gpac/gpac-orig/src/isomedia/isom_intern.c:206:7
+    #12 0x69078a in gf_isom_open_file /home/exp/FOT/Targets/gpac/gpac-orig/src/isomedia/isom_intern.c:615:19
+    #13 0x6931e6 in gf_isom_open /home/exp/FOT/Targets/gpac/gpac-orig/src/isomedia/isom_read.c:414:11
+    #14 0x51e03c in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4767:11
+    #15 0x524ed1 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942:9
+    #16 0x7f3fd9785b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #17 0x41e119 in _start (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x41e119)
+

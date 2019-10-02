@@ -1,0 +1,142 @@
+[31mAVCC: Not enough bits to parse. Aborting.
+[0m[31m[iso file] Read Box "avcC" (start 738) failed (Invalid IsoMedia File) - skipping
+[0m[32m[iso file] Unknown box type trak in parent stbl
+[0m[32m[iso file] Unknown box type udta in parent stbl
+[0m[32m[iso file] Unknown box type styp in parent stbl
+[0m[32m[iso file] Unknown box type sidx in parent stbl
+[0m[32m[iso file] Unknown box type moof in parent stbl
+[0m[32m[iso file] Unknown box type 13FDE00D in parent stbl
+[0m[33m[iso file] Box "stbl" (start 628) has 5250 extra bytes
+[0m=================================================================
+==31171==ERROR: AddressSanitizer: heap-use-after-free on address 0x606000000218 at pc 0x5618b294e313 bp 0x7ffeae9d2420 sp 0x7ffeae9d2410
+READ of size 8 at 0x606000000218 thread T0
+    #0 0x5618b294e312 in gf_isom_box_del isomedia/box_funcs.c:1500
+    #1 0x5618b294aa41 in gf_isom_box_array_del isomedia/box_funcs.c:270
+    #2 0x5618b294e5c8 in gf_isom_box_del isomedia/box_funcs.c:1516
+    #3 0x5618b294d0a5 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1421
+    #4 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #5 0x5618b315637b in minf_Read isomedia/box_code_base.c:3500
+    #6 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #7 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #8 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #9 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #10 0x5618b3150ec7 in mdia_Read isomedia/box_code_base.c:3021
+    #11 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #12 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #13 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #14 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #15 0x5618b3186e49 in trak_Read isomedia/box_code_base.c:7129
+    #16 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #17 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #18 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #19 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #20 0x5618b315915e in moov_Read isomedia/box_code_base.c:3745
+    #21 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #22 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #23 0x5618b2949093 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #24 0x5618b2970bcc in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #25 0x5618b2975c33 in gf_isom_open_file isomedia/isom_intern.c:615
+    #26 0x5618b29814fc in gf_isom_open isomedia/isom_read.c:414
+    #27 0x5618b2446f75 in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4767
+    #28 0x5618b2450ed9 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942
+    #29 0x7ff94133cb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #30 0x5618b241c449 in _start (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x1074449)
+
+0x606000000218 is located 24 bytes inside of 56-byte region [0x606000000200,0x606000000238)
+freed by thread T0 here:
+    #0 0x7ff942f0b7b8 in __interceptor_free (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xde7b8)
+    #1 0x5618b24ced5a in gf_free utils/alloc.c:165
+    #2 0x5618b3171916 in stco_del isomedia/box_code_base.c:5586
+    #3 0x5618b294e504 in gf_isom_box_del isomedia/box_funcs.c:1508
+    #4 0x5618b316dd8a in stbl_AddBox isomedia/box_code_base.c:5314
+    #5 0x5618b294dfd4 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1471
+    #6 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #7 0x5618b316ef91 in stbl_Read isomedia/box_code_base.c:5381
+    #8 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #9 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #10 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #11 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #12 0x5618b315637b in minf_Read isomedia/box_code_base.c:3500
+    #13 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #14 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #15 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #16 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #17 0x5618b3150ec7 in mdia_Read isomedia/box_code_base.c:3021
+    #18 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #19 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #20 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #21 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #22 0x5618b3186e49 in trak_Read isomedia/box_code_base.c:7129
+    #23 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #24 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #25 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #26 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #27 0x5618b315915e in moov_Read isomedia/box_code_base.c:3745
+    #28 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #29 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+
+previously allocated by thread T0 here:
+    #0 0x7ff942f0bb50 in __interceptor_malloc (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xdeb50)
+    #1 0x5618b24cecf6 in gf_malloc utils/alloc.c:150
+    #2 0x5618b317201f in stco_New isomedia/box_code_base.c:5616
+    #3 0x5618b294cba0 in gf_isom_box_new_ex isomedia/box_funcs.c:1384
+    #4 0x5618b294a02e in gf_isom_box_parse_ex isomedia/box_funcs.c:182
+    #5 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #6 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #7 0x5618b316ef91 in stbl_Read isomedia/box_code_base.c:5381
+    #8 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #9 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #10 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #11 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #12 0x5618b315637b in minf_Read isomedia/box_code_base.c:3500
+    #13 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #14 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #15 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #16 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #17 0x5618b3150ec7 in mdia_Read isomedia/box_code_base.c:3021
+    #18 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #19 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #20 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #21 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #22 0x5618b3186e49 in trak_Read isomedia/box_code_base.c:7129
+    #23 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #24 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #25 0x5618b294d060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #26 0x5618b294aae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #27 0x5618b315915e in moov_Read isomedia/box_code_base.c:3745
+    #28 0x5618b294e79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #29 0x5618b294a459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+
+SUMMARY: AddressSanitizer: heap-use-after-free isomedia/box_funcs.c:1500 in gf_isom_box_del
+Shadow bytes around the buggy address:
+  0x0c0c7fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c0c7fff8000: fa fa fa fa 00 00 00 00 00 00 00 00 fa fa fa fa
+  0x0c0c7fff8010: 00 00 00 00 00 00 00 fa fa fa fa fa 00 00 00 00
+  0x0c0c7fff8020: 00 00 03 fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c0c7fff8030: fa fa fa fa fd fd fd fd fd fd fd fd fa fa fa fa
+=>0x0c0c7fff8040: fd fd fd[fd]fd fd fd fa fa fa fa fa 00 00 00 00
+  0x0c0c7fff8050: 00 00 00 fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0c7fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==31171==ABORTING

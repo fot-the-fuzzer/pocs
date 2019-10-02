@@ -1,0 +1,94 @@
+[31m[iso file] Read Box type 10808080 (0x10808080) at position 2548 has size 0 but is not at root/file level, skipping
+[0m[33m[iso file] Box "moov" (start 2424) has 691 extra bytes
+[0m[32m[iso file] Unknown top-level box type ABLE
+[0m[31m[iso file] Incomplete box ABLE - start 3247 size 1431196492
+[0m[31m[iso file] Incomplete file while reading for dump - aborting parsing
+[0m=================================================================
+==8750==ERROR: AddressSanitizer: heap-use-after-free on address 0x604000000020 at pc 0x55e48b1122ee bp 0x7ffc5d028240 sp 0x7ffc5d028230
+READ of size 8 at 0x604000000020 thread T0
+    #0 0x55e48b1122ed in gf_isom_box_dump_ex isomedia/box_funcs.c:1734
+    #1 0x55e48b0c77eb in gf_isom_box_dump isomedia/box_dump.c:97
+    #2 0x55e48b0c78e4 in gf_isom_box_array_dump isomedia/box_dump.c:107
+    #3 0x55e48b11250f in gf_isom_box_dump_done isomedia/box_funcs.c:1747
+    #4 0x55e48b0c8fb8 in moov_dump isomedia/box_dump.c:232
+    #5 0x55e48b11244c in gf_isom_box_dump_ex isomedia/box_funcs.c:1738
+    #6 0x55e48b0c77eb in gf_isom_box_dump isomedia/box_dump.c:97
+    #7 0x55e48b0c7efd in gf_isom_dump isomedia/box_dump.c:139
+    #8 0x55e48ac26599 in dump_isom_xml /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/filedump.c:1920
+    #9 0x55e48ac09436 in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4982
+    #10 0x55e48ac11ed9 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942
+    #11 0x7fa10ed76b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #12 0x55e48abdd449 in _start (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x1074449)
+
+0x604000000020 is located 16 bytes inside of 48-byte region [0x604000000010,0x604000000040)
+freed by thread T0 here:
+    #0 0x7fa1109457b8 in __interceptor_free (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xde7b8)
+    #1 0x55e48ac8fd5a in gf_free utils/alloc.c:165
+    #2 0x55e48b90f383 in iods_del isomedia/box_code_base.c:2766
+    #3 0x55e48b10f504 in gf_isom_box_del isomedia/box_funcs.c:1508
+    #4 0x55e48b91948f in moov_AddBox isomedia/box_code_base.c:3704
+    #5 0x55e48b10efd4 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1471
+    #6 0x55e48b10bae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #7 0x55e48b91a15e in moov_Read isomedia/box_code_base.c:3745
+    #8 0x55e48b10f79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #9 0x55e48b10b459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #10 0x55e48b10a093 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #11 0x55e48b131bcc in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #12 0x55e48b136c33 in gf_isom_open_file isomedia/isom_intern.c:615
+    #13 0x55e48b1424fc in gf_isom_open isomedia/isom_read.c:414
+    #14 0x55e48ac07f75 in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4767
+    #15 0x55e48ac11ed9 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942
+    #16 0x7fa10ed76b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+previously allocated by thread T0 here:
+    #0 0x7fa110945b50 in __interceptor_malloc (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xdeb50)
+    #1 0x55e48ac8fcf6 in gf_malloc utils/alloc.c:150
+    #2 0x55e48b90f459 in iods_New isomedia/box_code_base.c:2789
+    #3 0x55e48b10dba0 in gf_isom_box_new_ex isomedia/box_funcs.c:1384
+    #4 0x55e48b10b02e in gf_isom_box_parse_ex isomedia/box_funcs.c:182
+    #5 0x55e48b10e060 in gf_isom_box_array_read_ex isomedia/box_funcs.c:1419
+    #6 0x55e48b10bae0 in gf_isom_box_array_read isomedia/box_funcs.c:278
+    #7 0x55e48b91a15e in moov_Read isomedia/box_code_base.c:3745
+    #8 0x55e48b10f79a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #9 0x55e48b10b459 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #10 0x55e48b10a093 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #11 0x55e48b131bcc in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #12 0x55e48b136c33 in gf_isom_open_file isomedia/isom_intern.c:615
+    #13 0x55e48b1424fc in gf_isom_open isomedia/isom_read.c:414
+    #14 0x55e48ac07f75 in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4767
+    #15 0x55e48ac11ed9 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942
+    #16 0x7fa10ed76b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: heap-use-after-free isomedia/box_funcs.c:1734 in gf_isom_box_dump_ex
+Shadow bytes around the buggy address:
+  0x0c087fff7fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c087fff8000: fa fa fd fd[fd]fd fd fd fa fa fd fd fd fd fd fd
+  0x0c087fff8010: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==8750==ABORTING
