@@ -1,0 +1,74 @@
+[33m[iso file] Movie fragment but no moov (yet) - possibly broken parsing!
+[0m=================================================================
+==6177==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000091 at pc 0x56374aa8320a bp 0x7ffe39ae1490 sp 0x7ffe39ae1480
+READ of size 1 at 0x602000000091 thread T0
+    #0 0x56374aa83209 in DumpData odf/ipmpx_dump.c:165
+    #1 0x56374aa88281 in gf_ipmpx_dump_WatermarkingInit odf/ipmpx_dump.c:723
+    #2 0x56374aa899ab in gf_ipmpx_dump_data odf/ipmpx_dump.c:877
+    #3 0x56374a3f8403 in gf_odf_dump_ipmp odf/odf_dump.c:1240
+    #4 0x56374a3ebc20 in gf_odf_dump_desc odf/odf_dump.c:139
+    #5 0x56374a1b9c80 in m4ds_dump isomedia/box_dump.c:1752
+    #6 0x56374a1ef83c in gf_isom_box_dump_ex isomedia/box_funcs.c:1738
+    #7 0x56374a1a4bdb in gf_isom_box_dump isomedia/box_dump.c:97
+    #8 0x56374a1a52ed in gf_isom_dump isomedia/box_dump.c:139
+    #9 0x563749d037ee in dump_isom_xml /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/filedump.c:1930
+    #10 0x563749ce6286 in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4982
+    #11 0x563749ceed29 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942
+    #12 0x7effe4462b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #13 0x563749cba299 in _start (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x1076299)
+
+0x602000000091 is located 0 bytes to the right of 1-byte region [0x602000000090,0x602000000091)
+allocated by thread T0 here:
+    #0 0x7effe6031b50 in __interceptor_malloc (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xdeb50)
+    #1 0x563749d6d0e6 in gf_malloc utils/alloc.c:150
+    #2 0x56374a3e6ac4 in ReadGF_IPMPX_WatermarkingInit odf/ipmpx_code.c:1516
+    #3 0x56374a3eafcb in GF_IPMPX_ReadData odf/ipmpx_code.c:2020
+    #4 0x56374a3d7f8a in gf_ipmpx_data_parse odf/ipmpx_code.c:293
+    #5 0x56374a3bbdf8 in gf_odf_read_ipmp odf/odf_code.c:2426
+    #6 0x56374aa7ad73 in gf_odf_read_descriptor odf/desc_private.c:310
+    #7 0x56374a395e8a in gf_odf_parse_descriptor odf/descriptors.c:159
+    #8 0x56374a3c8910 in gf_odf_desc_list_read odf/odf_codec.c:487
+    #9 0x56374a19764b in m4ds_Read isomedia/avc_ext.c:2262
+    #10 0x56374a1ecb8a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #11 0x56374a1e8849 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #12 0x56374a1e7483 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #13 0x56374a20efbc in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #14 0x56374a214023 in gf_isom_open_file isomedia/isom_intern.c:615
+    #15 0x56374a21f8ec in gf_isom_open isomedia/isom_read.c:414
+    #16 0x563749ce4dc5 in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4767
+    #17 0x563749ceed29 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942
+    #18 0x7effe4462b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow odf/ipmpx_dump.c:165 in DumpData
+Shadow bytes around the buggy address:
+  0x0c047fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff8000: fa fa 00 00 fa fa 00 00 fa fa 00 00 fa fa 00 00
+=>0x0c047fff8010: fa fa[01]fa fa fa 00 00 fa fa 00 00 fa fa 00 00
+  0x0c047fff8020: fa fa 00 00 fa fa 00 00 fa fa 00 00 fa fa 00 00
+  0x0c047fff8030: fa fa 00 00 fa fa 00 00 fa fa 00 00 fa fa 00 00
+  0x0c047fff8040: fa fa 00 00 fa fa 00 00 fa fa 00 00 fa fa 00 00
+  0x0c047fff8050: fa fa 00 00 fa fa 00 00 fa fa 00 00 fa fa 00 00
+  0x0c047fff8060: fa fa 00 00 fa fa 00 00 fa fa 00 00 fa fa 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==6177==ABORTING

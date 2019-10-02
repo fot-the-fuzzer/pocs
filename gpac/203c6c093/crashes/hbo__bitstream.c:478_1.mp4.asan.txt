@@ -1,0 +1,79 @@
+[31m[ODF] Error reading descriptor (tag 3 size 3): Invalid MPEG-4 Descriptor
+[0m=================================================================
+==5924==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000191 at pc 0x55a500445779 bp 0x7ffe0581c0b0 sp 0x7ffe0581c0a0
+WRITE of size 1 at 0x602000000191 thread T0
+    #0 0x55a500445778 in gf_bs_read_data utils/bitstream.c:478
+    #1 0x55a500ac9bbc in ReadGF_IPMPX_WatermarkingInit odf/ipmpx_code.c:1517
+    #2 0x55a500acdfcb in GF_IPMPX_ReadData odf/ipmpx_code.c:2020
+    #3 0x55a500abaf8a in gf_ipmpx_data_parse odf/ipmpx_code.c:293
+    #4 0x55a500a9edf8 in gf_odf_read_ipmp odf/odf_code.c:2426
+    #5 0x55a50115dd73 in gf_odf_read_descriptor odf/desc_private.c:310
+    #6 0x55a500a78e8a in gf_odf_parse_descriptor odf/descriptors.c:159
+    #7 0x55a500aab910 in gf_odf_desc_list_read odf/odf_codec.c:487
+    #8 0x55a50087a64b in m4ds_Read isomedia/avc_ext.c:2262
+    #9 0x55a5008cfb8a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #10 0x55a5008cb849 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #11 0x55a5008ca483 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #12 0x55a5008f1fbc in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #13 0x55a5008f7023 in gf_isom_open_file isomedia/isom_intern.c:615
+    #14 0x55a5009028ec in gf_isom_open isomedia/isom_read.c:414
+    #15 0x55a5003c7dc5 in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4767
+    #16 0x55a5003d1d29 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942
+    #17 0x7feb08598b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #18 0x55a50039d299 in _start (/home/exp/FOT/Targets/gpac/gpac-orig/install/bin/MP4Box+0x1076299)
+
+0x602000000191 is located 0 bytes to the right of 1-byte region [0x602000000190,0x602000000191)
+allocated by thread T0 here:
+    #0 0x7feb0a167b50 in __interceptor_malloc (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xdeb50)
+    #1 0x55a5004500e6 in gf_malloc utils/alloc.c:150
+    #2 0x55a500ac9ac4 in ReadGF_IPMPX_WatermarkingInit odf/ipmpx_code.c:1516
+    #3 0x55a500acdfcb in GF_IPMPX_ReadData odf/ipmpx_code.c:2020
+    #4 0x55a500abaf8a in gf_ipmpx_data_parse odf/ipmpx_code.c:293
+    #5 0x55a500a9edf8 in gf_odf_read_ipmp odf/odf_code.c:2426
+    #6 0x55a50115dd73 in gf_odf_read_descriptor odf/desc_private.c:310
+    #7 0x55a500a78e8a in gf_odf_parse_descriptor odf/descriptors.c:159
+    #8 0x55a500aab910 in gf_odf_desc_list_read odf/odf_codec.c:487
+    #9 0x55a50087a64b in m4ds_Read isomedia/avc_ext.c:2262
+    #10 0x55a5008cfb8a in gf_isom_box_read isomedia/box_funcs.c:1528
+    #11 0x55a5008cb849 in gf_isom_box_parse_ex isomedia/box_funcs.c:208
+    #12 0x55a5008ca483 in gf_isom_parse_root_box isomedia/box_funcs.c:42
+    #13 0x55a5008f1fbc in gf_isom_parse_movie_boxes isomedia/isom_intern.c:206
+    #14 0x55a5008f7023 in gf_isom_open_file isomedia/isom_intern.c:615
+    #15 0x55a5009028ec in gf_isom_open isomedia/isom_read.c:414
+    #16 0x55a5003c7dc5 in mp4boxMain /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:4767
+    #17 0x55a5003d1d29 in main /home/exp/FOT/Targets/gpac/gpac-orig/applications/mp4box/main.c:5942
+    #18 0x7feb08598b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow utils/bitstream.c:478 in gf_bs_read_data
+Shadow bytes around the buggy address:
+  0x0c047fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff8000: fa fa 00 00 fa fa 00 fa fa fa 00 00 fa fa 00 00
+  0x0c047fff8010: fa fa 00 00 fa fa 00 00 fa fa 00 00 fa fa 00 00
+  0x0c047fff8020: fa fa fd fd fa fa fd fd fa fa fd fd fa fa fd fd
+=>0x0c047fff8030: fa fa[01]fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==5924==ABORTING
