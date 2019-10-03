@@ -1,0 +1,29 @@
+AddressSanitizerAddressSanitizer:DEADLYSIGNAL
+:DEADLYSIGNAL
+=================================================================
+==1676==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x0000004928b2 bp 0x7ffff38fea70 sp 0x7ffff38fe228 T1)
+==1676==The signal is caused by a READ memory access.
+==1676==Hint: address points to the zero page.
+    #0 0x4928b1 in __asan::QuickCheckForUnpoisonedRegion(unsigned long, unsigned long) (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x4928b1)
+    #1 0x492a72 in __asan_memset (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x492a72)
+    #2 0x505d9a in mchar_async_cache_add /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:778:40
+    #3 0x506d84 in mchar_async_realloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:503:9
+    #4 0x501af0 in mycore_string_realloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:99:17
+    #5 0x501af0 in mycore_string_append /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:187:5
+    #6 0x501af0 in mycore_string_copy /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:220:5
+    #7 0x4d1d79 in myhtml_token_merged_two_token_string /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./token.c
+    #8 0x4ed2e1 in myhtml_tree_node_insert_text /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./tree.c:651:13
+    #9 0x4e68ea in myhtml_insertion_mode_in_foreign_content /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./rules.c:3746:17
+    #10 0x4e724e in myhtml_rules_tree_dispatcher /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./rules.c:3924:21
+    #11 0x4cb9ce in myhtml_parser_stream /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./parser.c:28:15
+    #12 0x4fd4ca in mythread_function_queue_stream /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./thread_queue.c:605:17
+    #13 0x7ffff781f6da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #14 0x7ffff6f2488e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x4928b1) in __asan::QuickCheckForUnpoisonedRegion(unsigned long, unsigned long)
+Thread T1 created by T0 here:
+    #0 0x47da3a in pthread_create (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x47da3a)
+    #1 0x4f997c in mythread_thread_create /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myport/posix/mycore/./thread.c:39:8
+
+==1676==ABORTING

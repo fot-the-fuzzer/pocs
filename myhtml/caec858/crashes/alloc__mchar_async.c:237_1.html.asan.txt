@@ -1,0 +1,13 @@
+=================================================================
+==7872==ERROR: AddressSanitizer: requested allocation size 0xbebebebebebf0ec7 (0xbebebebebebf1ec8 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T2)
+    #0 0x49333d in malloc (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x49333d)
+    #1 0x50490b in mchar_async_mem_malloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c
+    #2 0x50490b in mchar_async_chunk_malloc_without_lock /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:237:5
+
+==7872==HINT: if you don't care about these errors you may set allocator_may_return_null=1
+SUMMARY: AddressSanitizer: allocation-size-too-big (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x49333d) in malloc
+Thread T2 created by T0 here:
+    #0 0x47da3a in pthread_create (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x47da3a)
+    #1 0x4f997c in mythread_thread_create /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myport/posix/mycore/./thread.c:39:8
+
+==7872==ABORTING

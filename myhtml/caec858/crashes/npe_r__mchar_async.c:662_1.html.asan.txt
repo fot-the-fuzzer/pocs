@@ -1,0 +1,20 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==15634==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x000000504b87 bp 0x62e000018408 sp 0x7ffff30fdb20 T2)
+==15634==The signal is caused by a READ memory access.
+==15634==Hint: address points to the zero page.
+    #0 0x504b86 in mchar_async_cache_delete /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:662:33
+    #1 0x506694 in mchar_async_malloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:414:24
+    #2 0x500cdb in mycore_string_init /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:30:21
+    #3 0x4cc912 in myhtml_parser_worker /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./parser.c:232:9
+    #4 0x4fcf88 in mythread_function_queue_batch /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./thread_queue.c:549:17
+    #5 0x7ffff781f6da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #6 0x7ffff6f2488e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:662:33 in mchar_async_cache_delete
+Thread T2 created by T0 here:
+    #0 0x47da3a in pthread_create (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x47da3a)
+    #1 0x4f997c in mythread_thread_create /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myport/posix/mycore/./thread.c:39:8
+
+==15634==ABORTING

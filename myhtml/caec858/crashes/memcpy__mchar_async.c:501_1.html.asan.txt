@@ -1,0 +1,34 @@
+=================================================================
+==32633==ERROR: AddressSanitizer: memcpy-param-overlap: memory ranges [0x62a000009b07,0x62a000009c12) and [0x62a000009af0, 0x62a000009bfb) overlap
+    #0 0x492674 in __asan_memcpy (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x492674)
+    #1 0x506d6e in mchar_async_realloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:501:9
+    #2 0x501af0 in mycore_string_realloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:99:17
+    #3 0x501af0 in mycore_string_append /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:187:5
+    #4 0x501af0 in mycore_string_copy /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:220:5
+    #5 0x4d1d79 in myhtml_token_merged_two_token_string /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./token.c
+    #6 0x4ed2e1 in myhtml_tree_node_insert_text /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./tree.c:651:13
+    #7 0x4e68ea in myhtml_insertion_mode_in_foreign_content /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./rules.c:3746:17
+    #8 0x4e724e in myhtml_rules_tree_dispatcher /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./rules.c:3924:21
+    #9 0x4cb9ce in myhtml_parser_stream /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./parser.c:28:15
+    #10 0x4fd4ca in mythread_function_queue_stream /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./thread_queue.c:605:17
+    #11 0x7ffff781f6da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #12 0x7ffff6f2488e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+0x62a000009b07 is located 14599 bytes inside of 20480-byte region [0x62a000006200,0x62a00000b200)
+allocated by thread T0 here:
+    #0 0x49333d in malloc (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x49333d)
+    #1 0x50490b in mchar_async_mem_malloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c
+    #2 0x50490b in mchar_async_chunk_malloc_without_lock /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:237:5
+
+Thread T1 created by T0 here:
+    #0 0x47da3a in pthread_create (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x47da3a)
+    #1 0x4f997c in mythread_thread_create /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myport/posix/mycore/./thread.c:39:8
+
+0x62a000009af0 is located 14576 bytes inside of 20480-byte region [0x62a000006200,0x62a00000b200)
+allocated by thread T0 here:
+    #0 0x49333d in malloc (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x49333d)
+    #1 0x50490b in mchar_async_mem_malloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c
+    #2 0x50490b in mchar_async_chunk_malloc_without_lock /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:237:5
+
+SUMMARY: AddressSanitizer: memcpy-param-overlap (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x492674) in __asan_memcpy
+==32633==ABORTING

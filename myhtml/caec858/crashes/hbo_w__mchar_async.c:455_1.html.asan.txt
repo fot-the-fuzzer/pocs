@@ -1,0 +1,54 @@
+=================================================================
+==17019==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62a00003846a at pc 0x000000506b05 bp 0x7ffff30fd9f0 sp 0x7ffff30fd9e8
+WRITE of size 8 at 0x62a00003846a thread T2
+    #0 0x506b04 in mchar_async_malloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:455:5
+    #1 0x506d58 in mchar_async_realloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:498:17
+    #2 0x500f7d in mycore_string_realloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:99:17
+    #3 0x4d2b52 in myhtml_string_append_with_preprocessing /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./mystring.c:26:5
+    #4 0x4c9066 in myhtml_data_process_state_data /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./data_process.c:91:5
+    #5 0x4cb28a in myhtml_data_process /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./data_process.c:291:18
+    #6 0x4cc5de in myhtml_parser_token_data_to_string_charef /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./parser.c
+    #7 0x4ccf1e in myhtml_parser_worker /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./parser.c
+    #8 0x4fcf88 in mythread_function_queue_batch /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./thread_queue.c:549:17
+    #9 0x7ffff781f6da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #10 0x7ffff6f2488e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Address 0x62a00003846a is a wild pointer.
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:455:5 in mchar_async_malloc
+Shadow bytes around the buggy address:
+  0x0c547ffff030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547ffff040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547ffff050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547ffff060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547ffff070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+=>0x0c547ffff080: fa fa fa fa fa fa fa fa fa fa fa fa fa[fa]fa fa
+  0x0c547ffff090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547ffff0a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547ffff0b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547ffff0c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547ffff0d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+Thread T2 created by T0 here:
+    #0 0x47da3a in pthread_create (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x47da3a)
+    #1 0x4f997c in mythread_thread_create /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myport/posix/mycore/./thread.c:39:8
+
+==17019==ABORTING
