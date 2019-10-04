@@ -1,0 +1,56 @@
+=================================================================
+==25701==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x62a000023200 at pc 0x0000004d2f14 bp 0x7ffff30fdaa0 sp 0x7ffff30fda98
+WRITE of size 1 at 0x62a000023200 thread T2
+    #0 0x4d2f13 in myhtml_string_append_with_preprocessing /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./mystring.c:37:31
+    #1 0x4c9066 in myhtml_data_process_state_data /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./data_process.c:91:5
+    #2 0x4cb28a in myhtml_data_process /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./data_process.c:291:18
+    #3 0x4cc5de in myhtml_parser_token_data_to_string_charef /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./parser.c
+    #4 0x4ccf1e in myhtml_parser_worker /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./parser.c
+    #5 0x4fcf88 in mythread_function_queue_batch /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./thread_queue.c:549:17
+    #6 0x7ffff781f6da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #7 0x7ffff6f2488e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+0x62a000023200 is located 0 bytes to the right of 20480-byte region [0x62a00001e200,0x62a000023200)
+allocated by thread T2 here:
+    #0 0x49333d in malloc (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x49333d)
+    #1 0x50490b in mchar_async_mem_malloc /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c
+    #2 0x50490b in mchar_async_chunk_malloc_without_lock /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/utils/mchar_async.c:237:5
+
+Thread T2 created by T0 here:
+    #0 0x47da3a in pthread_create (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x47da3a)
+    #1 0x4f997c in mythread_thread_create /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myport/posix/mycore/./thread.c:39:8
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./mystring.c:37:31 in myhtml_string_append_with_preprocessing
+Shadow bytes around the buggy address:
+  0x0c547fffc5f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c547fffc600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c547fffc610: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c547fffc620: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c547fffc630: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c547fffc640:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547fffc650: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547fffc660: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547fffc670: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547fffc680: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c547fffc690: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==25701==ABORTING

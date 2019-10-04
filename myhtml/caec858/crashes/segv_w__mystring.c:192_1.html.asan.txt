@@ -1,0 +1,24 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==29749==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000a23 (pc 0x00000050126e bp 0x000000000a24 sp 0x7ffff38feaf0 T1)
+==29749==The signal is caused by a WRITE memory access.
+==29749==Hint: address points to the zero page.
+    #0 0x50126d in mycore_string_append /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:192:28
+    #1 0x4cee12 in myhtml_token_node_clone /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./token.c:290:9
+    #2 0x4eb323 in myhtml_tree_node_clone /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./tree.c:522:30
+    #3 0x4f109c in myhtml_tree_active_formatting_reconstruction /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./tree.c:1605:36
+    #4 0x4dfe22 in myhtml_insertion_mode_in_body /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./rules.c
+    #5 0x4e3261 in myhtml_insertion_mode_in_table /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./rules.c:2228:17
+    #6 0x4e6f08 in myhtml_rules_tree_dispatcher /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./rules.c
+    #7 0x4cb9ce in myhtml_parser_stream /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myhtml/./parser.c:28:15
+    #8 0x4fd4ca in mythread_function_queue_stream /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./thread_queue.c:605:17
+    #9 0x7ffff781f6da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #10 0x7ffff6f2488e in clone /build/glibc-OTsEL5/glibc-2.27/misc/../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/mycore/./mystring.c:192:28 in mycore_string_append
+Thread T1 created by T0 here:
+    #0 0x47da3a in pthread_create (/home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/bin/myhtml/callback_tree_node_high_level+0x47da3a)
+    #1 0x4f997c in mythread_thread_create /home/hongxu/fuzzing/Targets/myhtml/myhtml-orig/source/myport/posix/mycore/./thread.c:39:8
+
+==29749==ABORTING
