@@ -1,0 +1,58 @@
+=================================================================
+==18249==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x620000001f75 at pc 0x7ffff6e6b66e bp 0x7fffffff48b0 sp 0x7fffffff4058
+READ of size 20 at 0x620000001f75 thread T0
+    #0 0x7ffff6e6b66d  (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x5166d)
+    #1 0x7ffff68b080a in dwelf_strtab_add /home/hongxu/FOT/Targets/elfutils/eu-asan/libdwelf/dwelf_strtab.c:284
+    #2 0x555555569394 in copy_elided_sections /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:1845
+    #3 0x55555556bea1 in handle_file /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2162
+    #4 0x55555556c760 in handle_explicit_files /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2227
+    #5 0x55555556f1f6 in main /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2562
+    #6 0x7ffff63b2b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #7 0x555555559a89 in _start (/home/hongxu/FOT/Targets/elfutils/eu-asan/install/bin/eu-unstrip+0x5a89)
+
+0x620000001f75 is located 0 bytes to the right of 3829-byte region [0x620000001080,0x620000001f75)
+allocated by thread T0 here:
+    #0 0x7ffff6ef8b50 in __interceptor_malloc (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xdeb50)
+    #1 0x7ffff6be8287 in __libelf_set_rawdata_wrlock /home/hongxu/FOT/Targets/elfutils/eu-asan/libelf/elf_getdata.c:332
+    #2 0x7ffff6be8f06 in __elf_getdata_rdlock /home/hongxu/FOT/Targets/elfutils/eu-asan/libelf/elf_getdata.c:535
+    #3 0x7ffff6be8fb6 in elf_getdata /home/hongxu/FOT/Targets/elfutils/eu-asan/libelf/elf_getdata.c:562
+    #4 0x55555555f7d0 in collect_symbols /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:838
+    #5 0x555555568b94 in copy_elided_sections /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:1783
+    #6 0x55555556bea1 in handle_file /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2162
+    #7 0x55555556c760 in handle_explicit_files /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2227
+    #8 0x55555556f1f6 in main /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2562
+    #9 0x7ffff63b2b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/usr/lib/x86_64-linux-gnu/libasan.so.4+0x5166d) 
+Shadow bytes around the buggy address:
+  0x0c407fff8390: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c407fff83a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c407fff83b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c407fff83c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c407fff83d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c407fff83e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00[05]fa
+  0x0c407fff83f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c407fff8400: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c407fff8410: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c407fff8420: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c407fff8430: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==18249==ABORTING
