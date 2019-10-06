@@ -1,0 +1,58 @@
+=================================================================
+==3788==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x602000000219 at pc 0x5619d325b13e bp 0x7ffcd62c6c90 sp 0x7ffcd62c6c80
+READ of size 1 at 0x602000000219 thread T0
+    #0 0x5619d325b13d in x86_64_disasm /home/hongxu/FOT/Targets/elfutils/eu-asan/libcpu/i386_disasm.c:613
+    #1 0x7fece9369a4e in disasm_cb /home/hongxu/FOT/Targets/elfutils/eu-asan/libasm/disasm_cb.c:178
+    #2 0x5619d320c5c0 in show_disasm /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:737
+    #3 0x5619d320cd14 in handle_elf /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:783
+    #4 0x5619d32086c0 in process_file /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:251
+    #5 0x5619d32080ca in main /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:164
+    #6 0x7fece88f2b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #7 0x5619d3207d29 in _start (/home/hongxu/FOT/Targets/elfutils/eu-asan/install/bin/eu-objdump+0x41d29)
+
+0x602000000219 is located 0 bytes to the right of 9-byte region [0x602000000210,0x602000000219)
+allocated by thread T0 here:
+    #0 0x7fece964fb50 in __interceptor_malloc (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xdeb50)
+    #1 0x7fece8cea128 in convert_data /home/hongxu/FOT/Targets/elfutils/eu-asan/libelf/elf_getdata.c:151
+    #2 0x7fece8cebb26 in __libelf_set_data_list_rdlock /home/hongxu/FOT/Targets/elfutils/eu-asan/libelf/elf_getdata.c:437
+    #3 0x7fece8cebf4d in __elf_getdata_rdlock /home/hongxu/FOT/Targets/elfutils/eu-asan/libelf/elf_getdata.c:544
+    #4 0x7fece8cebfb6 in elf_getdata /home/hongxu/FOT/Targets/elfutils/eu-asan/libelf/elf_getdata.c:562
+    #5 0x5619d320bf20 in show_disasm /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:704
+    #6 0x5619d320cd14 in handle_elf /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:783
+    #7 0x5619d32086c0 in process_file /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:251
+    #8 0x5619d32080ca in main /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:164
+    #9 0x7fece88f2b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/FOT/Targets/elfutils/eu-asan/libcpu/i386_disasm.c:613 in x86_64_disasm
+Shadow bytes around the buggy address:
+  0x0c047fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c047fff8000: fa fa fd fa fa fa 00 04 fa fa 00 04 fa fa 00 04
+  0x0c047fff8010: fa fa 00 04 fa fa 00 04 fa fa 00 04 fa fa 00 04
+  0x0c047fff8020: fa fa 00 04 fa fa 00 04 fa fa 00 04 fa fa 00 04
+  0x0c047fff8030: fa fa 00 04 fa fa 00 04 fa fa 00 04 fa fa 00 01
+=>0x0c047fff8040: fa fa 00[01]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8060: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8070: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8080: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c047fff8090: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==3788==ABORTING

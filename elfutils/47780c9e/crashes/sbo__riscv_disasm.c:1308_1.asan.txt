@@ -1,0 +1,59 @@
+=================================================================
+==3792==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffca09e3582 at pc 0x7fd695648f09 bp 0x7ffca09e3100 sp 0x7ffca09e2890
+WRITE of size 5 at 0x7ffca09e3582 thread T0
+    #0 0x7fd695648f08 in __interceptor_vsnprintf (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xa0f08)
+    #1 0x7fd695649286 in snprintf (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xa1286)
+    #2 0x55e281ba4cd6 in riscv_disasm /home/hongxu/FOT/Targets/elfutils/eu-asan/libcpu/riscv_disasm.c:1308
+    #3 0x7fd6953a0a4e in disasm_cb /home/hongxu/FOT/Targets/elfutils/eu-asan/libasm/disasm_cb.c:178
+    #4 0x55e281b475c0 in show_disasm /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:737
+    #5 0x55e281b47d14 in handle_elf /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:783
+    #6 0x55e281b436c0 in process_file /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:251
+    #7 0x55e281b430ca in main /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:164
+    #8 0x7fd694929b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #9 0x55e281b42d29 in _start (/home/hongxu/FOT/Targets/elfutils/eu-asan/install/bin/eu-objdump+0x41d29)
+
+Address 0x7ffca09e3582 is located in stack of thread T0 at offset 226 in frame
+    #0 0x55e281b9cb9b in riscv_disasm /home/hongxu/FOT/Targets/elfutils/eu-asan/libcpu/riscv_disasm.c:117
+
+  This frame has 6 object(s):
+    [32, 48) 'key'
+    [96, 136) 'op'
+    [192, 224) 'mnebuf' <== Memory access at offset 226 overflows this variable
+    [256, 288) 'immbuf'
+    [320, 352) 'addrbuf'
+    [384, 896) 'initbuf'
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow (/usr/lib/x86_64-linux-gnu/libasan.so.4+0xa0f08) in __interceptor_vsnprintf
+Shadow bytes around the buggy address:
+  0x100014134660: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x100014134670: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x100014134680: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x100014134690: 00 00 00 00 f1 f1 f1 f1 f8 f8 f2 f2 f2 f2 f2 f2
+  0x1000141346a0: 00 00 00 00 00 f2 f2 f2 f2 f2 f2 f2 00 00 00 00
+=>0x1000141346b0:[f2]f2 f2 f2 00 00 00 00 f2 f2 f2 f2 00 00 00 00
+  0x1000141346c0: f2 f2 f2 f2 00 00 00 00 00 00 00 00 00 00 00 00
+  0x1000141346d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x1000141346e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x1000141346f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x100014134700: 00 00 00 00 f3 f3 f3 f3 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==3792==ABORTING

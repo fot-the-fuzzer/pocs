@@ -1,0 +1,47 @@
+=================================================================
+==3786==ERROR: AddressSanitizer: global-buffer-overflow on address 0x559089c85380 at pc 0x559089a313db bp 0x7ffea8446280 sp 0x7ffea8446270
+READ of size 8 at 0x559089c85380 thread T0
+    #0 0x559089a313da in riscv_disasm /home/hongxu/FOT/Targets/elfutils/eu-asan/libcpu/riscv_disasm.c:1103
+    #1 0x7fecb6826a4e in disasm_cb /home/hongxu/FOT/Targets/elfutils/eu-asan/libasm/disasm_cb.c:178
+    #2 0x5590899d45c0 in show_disasm /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:737
+    #3 0x5590899d4d14 in handle_elf /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:783
+    #4 0x5590899d06c0 in process_file /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:251
+    #5 0x5590899d00ca in main /home/hongxu/FOT/Targets/elfutils/eu-asan/src/objdump.c:164
+    #6 0x7fecb5dafb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #7 0x5590899cfd29 in _start (/home/hongxu/FOT/Targets/elfutils/eu-asan/install/bin/eu-objdump+0x41d29)
+
+0x559089c85380 is located 0 bytes to the right of global variable 'unprivrw' defined in 'riscv_disasm.c:1099:34' (0x559089c85360) of size 32
+0x559089c85380 is located 32 bytes to the left of global variable 'unprivrolow' defined in 'riscv_disasm.c:1107:34' (0x559089c853a0) of size 24
+SUMMARY: AddressSanitizer: global-buffer-overflow /home/hongxu/FOT/Targets/elfutils/eu-asan/libcpu/riscv_disasm.c:1103 in riscv_disasm
+Shadow bytes around the buggy address:
+  0x0ab291388a20: f9 f9 f9 f9 00 00 00 00 f9 f9 f9 f9 00 00 00 00
+  0x0ab291388a30: 00 00 00 00 f9 f9 f9 f9 00 00 00 00 f9 f9 f9 f9
+  0x0ab291388a40: 00 00 00 f9 f9 f9 f9 f9 00 00 00 f9 f9 f9 f9 f9
+  0x0ab291388a50: 00 00 00 f9 f9 f9 f9 f9 00 00 00 f9 f9 f9 f9 f9
+  0x0ab291388a60: 00 00 00 00 00 00 00 00 f9 f9 f9 f9 00 00 00 00
+=>0x0ab291388a70:[f9]f9 f9 f9 00 00 00 f9 f9 f9 f9 f9 00 00 00 00
+  0x0ab291388a80: f9 f9 f9 f9 00 00 00 00 f9 f9 f9 f9 00 00 00 00
+  0x0ab291388a90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ab291388aa0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ab291388ab0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ab291388ac0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==3786==ABORTING
