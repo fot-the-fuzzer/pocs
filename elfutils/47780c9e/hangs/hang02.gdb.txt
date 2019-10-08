@@ -1,0 +1,11 @@
+#0  0x00007ffff763e6e7 in __libc_pwrite64 (fd=fd@entry=5, buf=buf@entry=0x7fffffff1eb0, count=count@entry=4096, offset=offset@entry=335448928) at ../sysdeps/unix/sysv/linux/pwrite64.c:29
+#1  0x00007ffff7bcabd0 in pwrite_retry (off=335448928, len=4096, buf=0x7fffffff1eb0, fd=5) at ../lib/system.h:95
+#2  fill (fd=<optimized out>, pos=335448928, len=1000375230464, fillbuf=fillbuf@entry=0x7fffffff1eb0 "", filledp=filledp@entry=0x7fffffff1e60) at elf32_updatefile.c:518
+#3  0x00007ffff7bcbe86 in __elf64_updatefile (elf=elf@entry=0x5555557652b0, change_bo=change_bo@entry=0, shnum=shnum@entry=38) at elf32_updatefile.c:728
+#4  0x00007ffff7bc7e99 in write_file (shnum=38, change_bo=0, size=1000710765984, elf=0x5555557652b0) at elf_update.c:132
+#5  elf_update (elf=0x5555557652b0, cmd=<optimized out>) at elf_update.c:231
+#6  0x000055555555b64e in copy_elided_sections (unstripped=0x5555557652b0, stripped=<optimized out>, stripped_ehdr=<optimized out>, bias=<optimized out>) at unstrip.c:2074
+#7  0x000055555555bb82 in handle_file (output_file=<optimized out>, create_dirs=<optimized out>, stripped=0x555555761950, stripped_ehdr=0x7fffffffc0c0, unstripped=0x5555557632c0)
+    at unstrip.c:2162
+#8  0x000055555555be97 in handle_explicit_files (output_file=0x7fffffffc9e1 "/tmp/test.file", create_dirs=<optimized out>, force=<optimized out>) at unstrip.c:2227
+#9  0x0000555555557b4b in main (argc=<optimized out>, argv=0x7fffffffc428) at unstrip.c:2562
