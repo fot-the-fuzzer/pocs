@@ -1,0 +1,16 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==19901==ERROR: AddressSanitizer: SEGV on unknown address 0x100098ff6cb5 (pc 0x55555555c329 bp 0x7fffffff6010 sp 0x7fffffff5ff0 T0)
+==19901==The signal is caused by a READ memory access.
+    #0 0x55555555c328 in adjust_reloc /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:444
+    #1 0x55555555c83a in adjust_relocs /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:471
+    #2 0x55555556a62a in copy_elided_sections /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:1960
+    #3 0x55555556bea1 in handle_file /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2162
+    #4 0x55555556c760 in handle_explicit_files /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2227
+    #5 0x55555556f1f6 in main /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2562
+    #6 0x7ffff6596b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #7 0x555555559a89 in _start (/home/hongxu/FOT/Targets/elfutils/eu-asan/install/bin/eu-unstrip+0x5a89)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:444 in adjust_reloc
+==19901==ABORTING
