@@ -1,0 +1,16 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==18603==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000010 (pc 0x55555555fa04 bp 0x7fffffff4850 sp 0x7fffffff4640 T0)
+==18603==The signal is caused by a READ memory access.
+==18603==Hint: address points to the zero page.
+    #0 0x55555555fa03 in collect_symbols /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:851
+    #1 0x555555568b94 in copy_elided_sections /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:1783
+    #2 0x55555556bea1 in handle_file /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2162
+    #3 0x55555556c760 in handle_explicit_files /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2227
+    #4 0x55555556f1f6 in main /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2562
+    #5 0x7ffff63b2b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #6 0x555555559a89 in _start (/home/hongxu/FOT/Targets/elfutils/eu-asan/install/bin/eu-unstrip+0x5a89)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:851 in collect_symbols
+==18603==ABORTING

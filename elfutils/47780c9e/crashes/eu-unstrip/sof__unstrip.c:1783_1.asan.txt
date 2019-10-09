@@ -1,0 +1,12 @@
+ASAN:DEADLYSIGNAL
+=================================================================
+==18618==ERROR: AddressSanitizer: stack-overflow on address 0x7ffffeff4898 (pc 0x555555568ae9 bp 0x7fffffffbcd0 sp 0x7ffffeff48a0 T0)
+    #0 0x555555568ae8 in copy_elided_sections /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:1783
+    #1 0x55555556bea1 in handle_file /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2162
+    #2 0x55555556c760 in handle_explicit_files /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2227
+    #3 0x55555556f1f6 in main /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:2562
+    #4 0x7ffff63b2b96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96)
+    #5 0x555555559a89 in _start (/home/hongxu/FOT/Targets/elfutils/eu-asan/install/bin/eu-unstrip+0x5a89)
+
+SUMMARY: AddressSanitizer: stack-overflow /home/hongxu/FOT/Targets/elfutils/eu-asan/src/unstrip.c:1783 in copy_elided_sections
+==18618==ABORTING
