@@ -1,0 +1,54 @@
+"./hbo__captoinfo.c:320_1", line 2, col 7, terminal '0': Missing separator
+=================================================================
+==2711==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x621000002500 at pc 0x000000515729 bp 0x7fffffff9190 sp 0x7fffffff9188
+READ of size 1 at 0x621000002500 thread T0
+    #0 0x515728 in _nc_captoinfo /home/hongxu/fuzzing/ncurses/ncurses-asan/ncurses/../ncurses/./tinfo/captoinfo.c:320:12
+    #1 0x52e1ab in _nc_parse_entry /home/hongxu/fuzzing/ncurses/ncurses-asan/ncurses/../ncurses/./tinfo/parse_entry.c:547:13
+    #2 0x523d81 in _nc_read_entry_source /home/hongxu/fuzzing/ncurses/ncurses-asan/ncurses/../ncurses/./tinfo/comp_parse.c:225:6
+    #3 0x4c4a91 in main /home/hongxu/fuzzing/ncurses/ncurses-asan/progs/../progs/tic.c:961:5
+    #4 0x7ffff6e24b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #5 0x41b4f9 in _start (/home/hongxu/fuzzing/ncurses/ncurses-asan/install/bin/tic+0x41b4f9)
+
+0x621000002500 is located 0 bytes to the right of 4096-byte region [0x621000001500,0x621000002500)
+allocated by thread T0 here:
+    #0 0x49390d in malloc (/home/hongxu/fuzzing/ncurses/ncurses-asan/install/bin/tic+0x49390d)
+    #1 0x527946 in _nc_get_token /home/hongxu/fuzzing/ncurses/ncurses-asan/ncurses/../ncurses/./tinfo/comp_scan.c:447:16
+    #2 0x52b798 in _nc_parse_entry /home/hongxu/fuzzing/ncurses/ncurses-asan/ncurses/../ncurses/./tinfo/parse_entry.c:264:18
+    #3 0x523d81 in _nc_read_entry_source /home/hongxu/fuzzing/ncurses/ncurses-asan/ncurses/../ncurses/./tinfo/comp_parse.c:225:6
+    #4 0x4c4a91 in main /home/hongxu/fuzzing/ncurses/ncurses-asan/progs/../progs/tic.c:961:5
+    #5 0x7ffff6e24b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/fuzzing/ncurses/ncurses-asan/ncurses/../ncurses/./tinfo/captoinfo.c:320:12 in _nc_captoinfo
+Shadow bytes around the buggy address:
+  0x0c427fff8450: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8460: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8470: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8480: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c427fff8490: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c427fff84a0:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c427fff84f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==2711==ABORTING
