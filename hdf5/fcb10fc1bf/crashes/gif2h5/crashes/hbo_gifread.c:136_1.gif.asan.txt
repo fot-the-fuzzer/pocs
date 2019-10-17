@@ -1,0 +1,50 @@
+Error reading Graphic Control Extension
+Unknown Block Separator Character: 0x1
+=================================================================
+==1980==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x604000000036 at pc 0x00000051a28e bp 0x7ffd5fc1ce30 sp 0x7ffd5fc1ce28
+READ of size 1 at 0x604000000036 thread T0
+    #0 0x51a28d in ReadGifImageDesc /home/exp/FOT/Targets/hdf5/hdf5-asan/hl/tools/gif2h5/gifread.c:136:30
+    #1 0x51759a in Gif2Mem /home/exp/FOT/Targets/hdf5/hdf5-asan/hl/tools/gif2h5/gif2mem.c:180:21
+    #2 0x51617d in main /home/exp/FOT/Targets/hdf5/hdf5-asan/hl/tools/gif2h5/gif2hdf.c:100:5
+    #3 0x7f4d9fe7bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #4 0x41d689 in _start (/home/exp/FOT/Targets/hdf5/hdf5-asan/install/bin/gif2h5+0x41d689)
+
+0x604000000036 is located 0 bytes to the right of 38-byte region [0x604000000010,0x604000000036)
+allocated by thread T0 here:
+    #0 0x4dd5c0 in malloc /home/exp/Documents/llvm-6.0.1/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:88
+    #1 0x5160c3 in main /home/exp/FOT/Targets/hdf5/hdf5-asan/hl/tools/gif2h5/gif2hdf.c:84:39
+    #2 0x7f4d9fe7bb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/Targets/hdf5/hdf5-asan/hl/tools/gif2h5/gifread.c:136:30 in ReadGifImageDesc
+Shadow bytes around the buggy address:
+  0x0c087fff7fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c087fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c087fff8000: fa fa 00 00 00 00[06]fa fa fa fa fa fa fa fa fa
+  0x0c087fff8010: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c087fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==1980==ABORTING

@@ -1,0 +1,1 @@
+h5dump: H5HL.c:336: H5HL_t *H5HL_protect(H5F_t *, haddr_t, unsigned int): Assertion `((addr)!=((haddr_t)(long)(-1)))' failed.

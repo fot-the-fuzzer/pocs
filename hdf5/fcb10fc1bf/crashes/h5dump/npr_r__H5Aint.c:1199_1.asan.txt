@@ -1,0 +1,39 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==5555==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x7f7a491e180f bp 0x7ffd0f4a23f0 sp 0x7ffd0f4a2210 T0)
+==5555==The signal is caused by a READ memory access.
+==5555==Hint: address points to the zero page.
+    #0 0x7f7a491e180e in H5A__close /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Aint.c:1199:5
+    #1 0x7f7a491f85b1 in H5A__attr_release_table /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Aint.c:1904:36
+    #2 0x7f7a49c20e63 in H5O_attr_iterate_real /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Oattribute.c:1314:24
+    #3 0x7f7a49c2a1f0 in H5O__attr_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Oattribute.c:1350:21
+    #4 0x7f7a492056a2 in H5A__iterate_common /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Aint.c:2598:21
+    #5 0x7f7a492048bb in H5A__iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Aint.c:2657:21
+    #6 0x7f7a4a63920d in H5VL__native_attr_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLnative_attr.c:474:37
+    #7 0x7f7a4a5b3eb1 in H5VL__attr_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:1502:21
+    #8 0x7f7a4a5b3275 in H5VL_attr_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:1539:21
+    #9 0x7f7a491a6493 in H5Aiterate2 /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5A.c:1349:21
+    #10 0x523833 in attr_iteration /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump_ddl.c:603:16
+    #11 0x52d4b2 in dump_dataset /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump_ddl.c:1088:9
+    #12 0x525e00 in dump_all_cb /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump_ddl.c:370:17
+    #13 0x7f7a4992a7e6 in H5G_iterate_cb /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:762:29
+    #14 0x7f7a49955ef0 in H5G__node_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gnode.c:1002:25
+    #15 0x7f7a4923f671 in H5B__iterate_helper /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5B.c:1166:25
+    #16 0x7f7a4923e350 in H5B_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5B.c:1211:21
+    #17 0x7f7a49982c8e in H5G__stab_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gstab.c:556:25
+    #18 0x7f7a49966d88 in H5G__obj_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gobj.c:696:25
+    #19 0x7f7a49929d6d in H5G_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:819:21
+    #20 0x7f7a49b5682d in H5L_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5L.c:3527:21
+    #21 0x7f7a4a672e2f in H5VL__native_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLnative_link.c:368:41
+    #22 0x7f7a4a5e8ec1 in H5VL__link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4486:21
+    #23 0x7f7a4a5e8285 in H5VL_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4523:21
+    #24 0x7f7a49b3d7da in H5Literate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5L.c:1309:21
+    #25 0x523a46 in link_iteration /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump_ddl.c:629:9
+    #26 0x52b323 in dump_group /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump_ddl.c:910:9
+    #27 0x5184b4 in main /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump.c:1650:17
+    #28 0x7f7a47b65b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #29 0x41dd99 in _start (/home/exp/FOT/Targets/hdf5/hdf5-asan/install/bin/h5dump+0x41dd99)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Aint.c:1199:5 in H5A__close
+==5555==ABORTING

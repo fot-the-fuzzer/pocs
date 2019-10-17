@@ -1,0 +1,1 @@
+h5dump: H5Shyper.c:8474: H5S_hyper_span_info_t *H5S__hyper_make_spans(unsigned int, const hsize_t *, const hsize_t *, const hsize_t *, const hsize_t *): Assertion `rank > 0' failed.

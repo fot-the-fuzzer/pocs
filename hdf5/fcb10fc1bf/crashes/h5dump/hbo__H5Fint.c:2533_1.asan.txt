@@ -1,0 +1,94 @@
+=================================================================
+==4351==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x613000027950 at pc 0x7fca78d2335a bp 0x7ffe7056c490 sp 0x7ffe7056c488
+READ of size 1 at 0x613000027950 thread T0
+    #0 0x7fca78d23359 in H5F_addr_decode_len /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Fint.c:2533:13
+    #1 0x7fca78d236a5 in H5F_addr_decode /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Fint.c:2584:5
+    #2 0x7fca792ee02e in H5O__linfo_decode /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Olinfo.c:156:5
+    #3 0x7fca7930689b in H5O_msg_read_oh /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Omessage.c:541:5
+    #4 0x7fca79305b72 in H5O_msg_read /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Omessage.c:480:29
+    #5 0x7fca78f32cd4 in H5G__obj_get_linfo /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gobj.c:329:20
+    #6 0x7fca78efee51 in H5G_visit_cb /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:975:36
+    #7 0x7fca78f26ef0 in H5G__node_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gnode.c:1002:25
+    #8 0x7fca78810671 in H5B__iterate_helper /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5B.c:1166:25
+    #9 0x7fca7880f350 in H5B_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5B.c:1211:21
+    #10 0x7fca78f53c8e in H5G__stab_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gstab.c:556:25
+    #11 0x7fca78f37d88 in H5G__obj_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gobj.c:696:25
+    #12 0x7fca78efd19d in H5G_visit /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:1141:21
+    #13 0x7fca79c4405a in H5VL__native_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLnative_link.c:375:41
+    #14 0x7fca79bb9ec1 in H5VL__link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4486:21
+    #15 0x7fca79bb9285 in H5VL_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4523:21
+    #16 0x7fca79112c44 in H5Lvisit_by_name /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5L.c:1522:21
+    #17 0x5a77bf in traverse /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:291:16
+    #18 0x5aaef9 in h5trav_visit /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:1064:8
+    #19 0x5a3d62 in init_objs /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5tools_utils.c:805:21
+    #20 0x516527 in table_list_add /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump.c:429:8
+    #21 0x517558 in main /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump.c:1578:12
+    #22 0x7fca77136b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #23 0x41dd99 in _start (/home/exp/FOT/Targets/hdf5/hdf5-asan/install/bin/h5dump+0x41dd99)
+
+0x613000027950 is located 0 bytes to the right of 336-byte region [0x613000027800,0x613000027950)
+allocated by thread T0 here:
+    #0 0x4ddcd0 in malloc /home/exp/Documents/llvm-6.0.1/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:88
+    #1 0x7fca7917fdbf in H5MM_malloc /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5MM.c:292:45
+    #2 0x7fca78e4285f in H5FL_malloc /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5FL.c:243:25
+    #3 0x7fca78e43f4b in H5FL_blk_malloc /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5FL.c:921:47
+    #4 0x7fca7921e674 in H5O__chunk_deserialize /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Ocache.c:1351:44
+    #5 0x7fca7920becb in H5O__cache_deserialize /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Ocache.c:356:8
+    #6 0x7fca789147ec in H5C_load_entry /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5C.c:6698:25
+    #7 0x7fca78905f62 in H5C_protect /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5C.c:2343:29
+    #8 0x7fca787ec86e in H5AC_protect /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5AC.c:1311:25
+    #9 0x7fca792c1c39 in H5O_protect /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Oint.c:1060:31
+    #10 0x7fca792cc582 in H5O_get_info /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Oint.c:2173:22
+    #11 0x7fca78f10c2a in H5G_loc_info_cb /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gloc.c:712:8
+    #12 0x7fca78f6e1df in H5G__traverse_real /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gtraverse.c:625:16
+    #13 0x7fca78f6bbba in H5G_traverse /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gtraverse.c:850:8
+    #14 0x7fca78f107b2 in H5G_loc_info /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gloc.c:755:8
+    #15 0x7fca79c4d990 in H5VL__native_object_optional /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLnative_object.c:394:24
+    #16 0x7fca79bc6454 in H5VL__object_optional /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:5155:8
+    #17 0x7fca79bc5850 in H5VL_object_optional /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:5191:8
+    #18 0x7fca791921d7 in H5Oget_info_by_name2 /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5O.c:655:8
+    #19 0x5ac7c6 in traverse_cb /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:205:12
+    #20 0x7fca78efe241 in H5G_visit_cb /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:915:17
+    #21 0x7fca78f26ef0 in H5G__node_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gnode.c:1002:25
+    #22 0x7fca78810671 in H5B__iterate_helper /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5B.c:1166:25
+    #23 0x7fca7880f350 in H5B_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5B.c:1211:21
+    #24 0x7fca78f53c8e in H5G__stab_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gstab.c:556:25
+    #25 0x7fca78f37d88 in H5G__obj_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gobj.c:696:25
+    #26 0x7fca78efd19d in H5G_visit /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:1141:21
+    #27 0x7fca79c4405a in H5VL__native_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLnative_link.c:375:41
+    #28 0x7fca79bb9ec1 in H5VL__link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4486:21
+    #29 0x7fca79bb9285 in H5VL_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4523:21
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Fint.c:2533:13 in H5F_addr_decode_len
+Shadow bytes around the buggy address:
+  0x0c267fffced0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c267fffcee0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c267fffcef0: 00 fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fffcf00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c267fffcf10: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c267fffcf20: 00 00 00 00 00 00 00 00 00 00[fa]fa fa fa fa fa
+  0x0c267fffcf30: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fffcf40: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fffcf50: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fffcf60: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c267fffcf70: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==4351==ABORTING

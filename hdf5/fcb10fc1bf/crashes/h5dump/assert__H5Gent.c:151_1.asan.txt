@@ -1,0 +1,1 @@
+h5dump: H5Gent.c:151: herr_t H5G_ent_decode(const H5F_t *, const uint8_t **, H5G_entry_t *): Assertion `"bad sizeof size" && 0' failed.

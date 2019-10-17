@@ -1,0 +1,1 @@
+h5dump: H5Oshared.c:131: void *H5O__shared_read(H5F_t *, H5O_t *, unsigned int *, const H5O_shared_t *, const H5O_msg_class_t *): Assertion `((((shared->type) == 1) || ((shared->type) == 2)) ? 1 : 0)' failed.

@@ -1,0 +1,131 @@
+Error reading Graphic Control Extension
+Unknown Block Separator Character: 0x1
+Unknown Block Separator Character: 0xc
+Unknown Block Separator Character: 00
+Unknown Block Separator Character: 0xc
+Unknown Block Separator Character: 00
+Unknown Block Separator Character: 00
+Unknown Block Separator Character: 0x8
+Unknown Block Separator Character: 0x6c
+Unknown Block Separator Character: 00
+Unknown Block Separator Character: 0xff
+Unknown Block Separator Character: 0x9
+Unknown Block Separator Character: 0xfc
+Unknown Block Separator Character: 0xd7
+Unknown Block Separator Character: 0x4f
+Unknown Block Separator Character: 0x9c
+Unknown Block Separator Character: 0xba
+Unknown Block Separator Character: 0x81
+Unknown Block Separator Character: 0x8
+Unknown Block Separator Character: 0xf3
+Unknown Block Separator Character: 0xf9
+Unknown Block Separator Character: 0xa1
+Unknown Block Separator Character: 00
+Unknown Block Separator Character: 00
+Unknown Block Separator Character: 0x40
+Unknown Block Separator Character: 0x8a
+Unknown Block Separator Character: 0x59
+Unknown Block Separator Character: 0x8
+Unknown Block Separator Character: 0xfd
+Unknown Block Separator Character: 0x51
+Unknown Block Separator Character: 0xc9
+Unknown Block Separator Character: 0xe0
+Unknown Block Separator Character: 0x3
+Unknown Block Separator Character: 00
+Unknown Block Separator Character: 0x81
+Unknown Block Separator Character: 0x29
+Unknown Block Separator Character: 0x2
+Unknown Block Separator Character: 0x44
+Unknown Block Separator Character: 0xd
+Unknown Block Separator Character: 0xec
+Unknown Block Separator Character: 0x14
+Unknown Block Separator Character: 0x83
+Unknown Block Separator Character: 0x9a
+Unknown Block Separator Character: 0xab
+Unknown Block Separator Character: 0xc
+Unknown Block Separator Character: 0xaf
+Unknown Block Separator Character: 0xda
+Unknown Block Separator Character: 0x1
+Unknown Block Separator Character: 0x40
+Unknown Block Separator Character: 0xb0
+Unknown Block Separator Character: 0x4d
+Unknown Block Separator Character: 0x20
+Unknown Block Separator Character: 0x8d
+Unknown Block Separator Character: 0x4b
+Unknown Block Separator Character: 0xcd
+Unknown Block Separator Character: 0x5c
+Unknown Block Separator Character: 0xa5
+Unknown Block Separator Character: 0x11
+Unknown Block Separator Character: 0x26
+Unknown Block Separator Character: 0x12
+Unknown Block Separator Character: 0xc0
+Unknown Block Separator Character: 0x1e
+Unknown Block Separator Character: 0x81
+Unknown Block Separator Character: 0xf
+Unknown Block Separator Character: 0x2
+Unknown Block Separator Character: 0xe8
+Unknown Block Separator Character: 0x71
+Unknown Block Separator Character: 0x15
+Unknown Block Separator Character: 0x60
+Unknown Block Separator Character: 0x47
+Unknown Block Separator Character: 0x4b
+Unknown Block Separator Character: 0x2b
+Unknown Block Separator Character: 0x2
+Unknown Block Separator Character: 0x3d
+Unknown Block Separator Character: 00
+Unknown Block Separator Character: 0x98
+Unknown Block Separator Character: 0x9
+Unknown Block Separator Character: 0xc0
+Unknown Block Separator Character: 0x66
+Unknown Block Separator Character: 0xc3
+Unknown Block Separator Character: 0x32
+Unknown Block Separator Character: 0x2
+Unknown Block Separator Character: 0xd5
+Unknown Block Separator Character: 0xec
+Unknown Block Separator Character: 0x74
+Unknown Block Separator Character: 0xd5
+Unknown Block Separator Character: 0xb3
+Unknown Block Separator Character: 0x25
+Unknown Block Separator Character: 0xc4
+Unknown Block Separator Character: 0x7f
+Unknown Block Separator Character: 0xe5
+Unknown Block Separator Character: 0x24
+Unknown Block Separator Character: 0x34
+Unknown Block Separator Character: 0x5c
+Unknown Block Separator Character: 0xa
+Unknown Block Separator Character: 0x60
+Unknown Block Separator Character: 0x48
+Unknown Block Separator Character: 0xbf
+Unknown Block Separator Character: 0x81
+Unknown Block Separator Character: 0xc7
+Unknown Block Separator Character: 0x48
+Unknown Block Separator Character: 0x30
+Unknown Block Separator Character: 0x8d
+Unknown Block Separator Character: 0x2
+Unknown Block Separator Character: 0xf
+Unknown Block Separator Character: 0xe1
+Unknown Block Separator Character: 0xbf
+Unknown Block Separator Character: 0x7d
+Unknown Block Separator Character: 0xb8
+Unknown Block Separator Character: 0xc
+Unknown Block Separator Character: 0x3d
+Unknown Block Separator Character: 0x82
+Unknown Block Separator Character: 0x66
+Unknown Block Separator Character: 0xb5
+Unknown Block Separator Character: 0xab
+Unknown Block Separator Character: 0xd5
+Unknown Block Separator Character: 0x80
+Unknown Block Separator Character: 00
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==2150==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000008 (pc 0x00000051c246 bp 0x7fff9847a5e0 sp 0x7fff98479e80 T0)
+==2150==The signal is caused by a READ memory access.
+==2150==Hint: address points to the zero page.
+    #0 0x51c245 in WriteHDF /home/exp/FOT/Targets/hdf5/hdf5-asan/hl/tools/gif2h5/writehdf.c:98:33
+    #1 0x516200 in main /home/exp/FOT/Targets/hdf5/hdf5-asan/hl/tools/gif2h5/gif2hdf.c:113:9
+    #2 0x7f32c7a76b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #3 0x41d689 in _start (/home/exp/FOT/Targets/hdf5/hdf5-asan/install/bin/gif2h5+0x41d689)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV /home/exp/FOT/Targets/hdf5/hdf5-asan/hl/tools/gif2h5/writehdf.c:98:33 in WriteHDF
+==2150==ABORTING

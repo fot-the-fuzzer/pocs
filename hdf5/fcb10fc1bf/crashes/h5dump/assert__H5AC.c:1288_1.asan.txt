@@ -1,0 +1,1 @@
+h5dump: H5AC.c:1288: void *H5AC_protect(H5F_t *, const H5AC_class_t *, haddr_t, void *, unsigned int): Assertion `((addr)!=((haddr_t)(long)(-1)))' failed.

@@ -1,0 +1,78 @@
+=================================================================
+==5370==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7f3fb3d65320 at pc 0x0000004dcf1c bp 0x7ffc3818db30 sp 0x7ffc3818d2e0
+WRITE of size 134217728 at 0x7f3fb3d65320 thread T0
+    #0 0x4dcf1b in __asan_memset /home/exp/Documents/llvm-6.0.1/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:27
+    #1 0x7f3fb8df70f8 in H5S__point_deserialize /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Spoint.c:1432:15
+    #2 0x7f3fb8e14f36 in H5S_select_deserialize /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Sselect.c:568:25
+    #3 0x7f3fb8a7d201 in H5O__layout_decode /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Olayout.c:439:28
+    #4 0x7f3fb8aa489b in H5O_msg_read_oh /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Omessage.c:541:5
+    #5 0x7f3fb8aa3b72 in H5O_msg_read /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Omessage.c:480:29
+    #6 0x7f3fb832dc02 in H5D__layout_oh_read /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Dlayout.c:636:16
+    #7 0x7f3fb82f261a in H5D__open_oid /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Dint.c:1719:8
+    #8 0x7f3fb82efa68 in H5D_open /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Dint.c:1506:12
+    #9 0x7f3fb82eea1e in H5D__open_name /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Dint.c:1440:24
+    #10 0x7f3fb93b03cd in H5VL__native_dataset_open /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLnative_dataset.c:124:24
+    #11 0x7f3fb932a67b in H5VL__dataset_open /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:1923:29
+    #12 0x7f3fb9329abd in H5VL_dataset_open /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:1956:29
+    #13 0x7f3fb81ab8c4 in H5Dopen2 /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5D.c:298:24
+    #14 0x5a451a in find_objs_cb /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5tools_utils.c:730:28
+    #15 0x5acb10 in traverse_cb /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:220:16
+    #16 0x7f3fb869c241 in H5G_visit_cb /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:915:17
+    #17 0x7f3fb86c4ef0 in H5G__node_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gnode.c:1002:25
+    #18 0x7f3fb7fae671 in H5B__iterate_helper /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5B.c:1166:25
+    #19 0x7f3fb7fad350 in H5B_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5B.c:1211:21
+    #20 0x7f3fb86f1c8e in H5G__stab_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gstab.c:556:25
+    #21 0x7f3fb86d5d88 in H5G__obj_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gobj.c:696:25
+    #22 0x7f3fb869b19d in H5G_visit /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:1141:21
+    #23 0x7f3fb93e205a in H5VL__native_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLnative_link.c:375:41
+    #24 0x7f3fb9357ec1 in H5VL__link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4486:21
+    #25 0x7f3fb9357285 in H5VL_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4523:21
+    #26 0x7f3fb88b0c44 in H5Lvisit_by_name /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5L.c:1522:21
+    #27 0x5a77bf in traverse /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:291:16
+    #28 0x5aaef9 in h5trav_visit /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:1064:8
+    #29 0x5a3d62 in init_objs /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5tools_utils.c:805:21
+    #30 0x516527 in table_list_add /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump.c:429:8
+    #31 0x517558 in main /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump.c:1578:12
+    #32 0x7f3fb68d4b96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #33 0x41dd99 in _start (/home/exp/FOT/Targets/hdf5/hdf5-asan/install/bin/h5dump+0x41dd99)
+
+Address 0x7f3fb3d65320 is located in stack of thread T0 at offset 288 in frame
+    #0 0x7f3fb8df5f3f in H5S__point_deserialize /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Spoint.c:1379
+
+  This frame has 1 object(s):
+    [32, 288) 'dims' (line 1382) <== Memory access at offset 288 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism or swapcontext
+      (longjmp and C++ exceptions *are* supported)
+SUMMARY: AddressSanitizer: stack-buffer-overflow /home/exp/Documents/llvm-6.0.1/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:27 in __asan_memset
+Shadow bytes around the buggy address:
+  0x0fe8767a4a10: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fe8767a4a20: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fe8767a4a30: f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5 f5
+  0x0fe8767a4a40: f1 f1 f1 f1 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe8767a4a50: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0fe8767a4a60: 00 00 00 00[f3]f3 f3 f3 f3 f3 f3 f3 00 00 00 00
+  0x0fe8767a4a70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe8767a4a80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe8767a4a90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe8767a4aa0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0fe8767a4ab0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==5370==ABORTING

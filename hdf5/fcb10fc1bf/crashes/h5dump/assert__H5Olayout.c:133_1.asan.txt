@@ -1,0 +1,1 @@
+h5dump: H5Olayout.c:133: void *H5O__layout_decode(H5F_t *, H5O_t *, unsigned int, unsigned int *, size_t, const uint8_t *): Assertion `H5D_CONTIGUOUS == mesg->type || H5D_CHUNKED == mesg->type || H5D_COMPACT == mesg->type' failed.

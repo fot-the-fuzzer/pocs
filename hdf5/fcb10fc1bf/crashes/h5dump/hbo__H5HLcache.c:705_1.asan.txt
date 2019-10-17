@@ -1,0 +1,1 @@
+h5dump: H5HLcache.c:705: herr_t H5HL__cache_datablock_get_initial_load_size(void *, size_t *): Assertion `heap->dblk_size > 0' failed.

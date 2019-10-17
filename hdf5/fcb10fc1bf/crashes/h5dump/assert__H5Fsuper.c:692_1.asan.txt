@@ -1,0 +1,1 @@
+h5dump: H5Fsuper.c:692: herr_t H5F__super_read(H5F_t *, H5P_genplist_t *, hbool_t): Assertion `sblock->super_vers >= 2' failed.

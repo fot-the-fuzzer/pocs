@@ -1,0 +1,82 @@
+=================================================================
+==4424==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x60e000019c19 at pc 0x7ff445ceb324 bp 0x7ffd09ee1940 sp 0x7ffd09ee1938
+READ of size 1 at 0x60e000019c19 thread T0
+    #0 0x7ff445ceb323 in H5HL__fl_deserialize /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5HLcache.c:258:9
+    #1 0x7ff445cdf737 in H5HL__cache_prefix_deserialize /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5HLcache.c:471:16
+    #2 0x7ff44553c7ec in H5C_load_entry /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5C.c:6698:25
+    #3 0x7ff44552df62 in H5C_protect /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5C.c:2343:29
+    #4 0x7ff44541486e in H5AC_protect /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5AC.c:1311:25
+    #5 0x7ff445cd040c in H5HL_protect /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5HL.c:348:39
+    #6 0x7ff445b7b910 in H5G__stab_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gstab.c:540:24
+    #7 0x7ff445b5fd88 in H5G__obj_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gobj.c:696:25
+    #8 0x7ff445b2519d in H5G_visit /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:1141:21
+    #9 0x7ff44686c05a in H5VL__native_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLnative_link.c:375:41
+    #10 0x7ff4467e1ec1 in H5VL__link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4486:21
+    #11 0x7ff4467e1285 in H5VL_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4523:21
+    #12 0x7ff445d3ac44 in H5Lvisit_by_name /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5L.c:1522:21
+    #13 0x5a77bf in traverse /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:291:16
+    #14 0x5aaef9 in h5trav_visit /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:1064:8
+    #15 0x5a3d62 in init_objs /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5tools_utils.c:805:21
+    #16 0x516527 in table_list_add /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump.c:429:8
+    #17 0x517558 in main /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump.c:1578:12
+    #18 0x7ff443d5eb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+    #19 0x41dd99 in _start (/home/exp/FOT/Targets/hdf5/hdf5-asan/install/bin/h5dump+0x41dd99)
+
+0x60e000019c19 is located 1 bytes to the right of 152-byte region [0x60e000019b80,0x60e000019c18)
+allocated by thread T0 here:
+    #0 0x4ddcd0 in malloc /home/exp/Documents/llvm-6.0.1/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:88
+    #1 0x7ff445da7dbf in H5MM_malloc /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5MM.c:292:45
+    #2 0x7ff445a6a85f in H5FL_malloc /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5FL.c:243:25
+    #3 0x7ff445a6bf4b in H5FL_blk_malloc /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5FL.c:921:47
+    #4 0x7ff445cdf4d4 in H5HL__cache_prefix_deserialize /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5HLcache.c:459:44
+    #5 0x7ff44553c7ec in H5C_load_entry /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5C.c:6698:25
+    #6 0x7ff44552df62 in H5C_protect /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5C.c:2343:29
+    #7 0x7ff44541486e in H5AC_protect /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5AC.c:1311:25
+    #8 0x7ff445cd040c in H5HL_protect /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5HL.c:348:39
+    #9 0x7ff445b7b910 in H5G__stab_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gstab.c:540:24
+    #10 0x7ff445b5fd88 in H5G__obj_iterate /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gobj.c:696:25
+    #11 0x7ff445b2519d in H5G_visit /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5Gint.c:1141:21
+    #12 0x7ff44686c05a in H5VL__native_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLnative_link.c:375:41
+    #13 0x7ff4467e1ec1 in H5VL__link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4486:21
+    #14 0x7ff4467e1285 in H5VL_link_specific /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5VLcallback.c:4523:21
+    #15 0x7ff445d3ac44 in H5Lvisit_by_name /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5L.c:1522:21
+    #16 0x5a77bf in traverse /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:291:16
+    #17 0x5aaef9 in h5trav_visit /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5trav.c:1064:8
+    #18 0x5a3d62 in init_objs /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/lib/h5tools_utils.c:805:21
+    #19 0x516527 in table_list_add /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump.c:429:8
+    #20 0x517558 in main /home/exp/FOT/Targets/hdf5/hdf5-asan/tools/src/h5dump/h5dump.c:1578:12
+    #21 0x7ff443d5eb96 in __libc_start_main /build/glibc-OTsEL5/glibc-2.27/csu/../csu/libc-start.c:310
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/exp/FOT/Targets/hdf5/hdf5-asan/src/H5HLcache.c:258:9 in H5HL__fl_deserialize
+Shadow bytes around the buggy address:
+  0x0c1c7fffb330: fa fa fa fa fa fa fa fa 00 00 00 00 00 00 00 00
+  0x0c1c7fffb340: 00 00 00 00 00 00 00 00 00 00 00 00 fa fa fa fa
+  0x0c1c7fffb350: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c1c7fffb360: 00 00 00 00 00 00 00 00 fa fa fa fa fa fa fa fa
+  0x0c1c7fffb370: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c1c7fffb380: 00 00 00[fa]fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fffb390: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fffb3a0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fffb3b0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fffb3c0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c1c7fffb3d0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==4424==ABORTING
