@@ -1,0 +1,85 @@
+=================================================================
+==2049773==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x608000000078 at pc 0x7ffff7671d00 bp 0x7fffffff6410 sp 0x7fffffff5bb8
+READ of size 7 at 0x608000000078 thread T0
+    #0 0x7ffff7671cff  (/usr/lib/x86_64-linux-gnu/libasan.so.5+0xdacff)
+    #1 0x5555566442d9 in llvh::StringRef::compareMemory(char const*, char const*, unsigned long) /home/hongxu/work/hermes/hermes-asan/external/llvh/include/llvh/ADT/StringRef.h:69
+    #2 0x5555566442d9 in llvh::StringRef::equals(llvh::StringRef) const /home/hongxu/work/hermes/hermes-asan/external/llvh/include/llvh/ADT/StringRef.h:171
+    #3 0x5555566442d9 in llvh::operator==(llvh::StringRef, llvh::StringRef) /home/hongxu/work/hermes/hermes-asan/external/llvh/include/llvh/ADT/StringRef.h:899
+    #4 0x5555566442d9 in hermes::parser::JSLexer::advance(hermes::parser::JSLexer::GrammarContext) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSLexer.cpp:317
+    #5 0x5555566c93c5 in hermes::parser::detail::JSParserImpl::advance(hermes::parser::JSLexer::GrammarContext) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.h:333
+    #6 0x555556682300 in hermes::parser::detail::JSParserImpl::checkAndEat(hermes::parser::TokenKind, hermes::parser::JSLexer::GrammarContext) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:211
+    #7 0x55555669dadd in hermes::parser::detail::JSParserImpl::parsePropertyAssignment(bool) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:2714
+    #8 0x555556699cef in hermes::parser::detail::JSParserImpl::parseObjectLiteral() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:2346
+    #9 0x555556697f15 in hermes::parser::detail::JSParserImpl::parsePrimaryExpression() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:2164
+    #10 0x5555566a0459 in hermes::parser::detail::JSParserImpl::parseOptionalExpressionExceptNew(hermes::parser::detail::JSParserImpl::IsConstructorCall) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:2934
+    #11 0x5555566a35bc in hermes::parser::detail::JSParserImpl::parseNewExpressionOrOptionalExpression(hermes::parser::detail::JSParserImpl::IsConstructorCall) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3268
+    #12 0x5555566a4793 in hermes::parser::detail::JSParserImpl::parseLeftHandSideExpression() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3352
+    #13 0x5555566a4ddc in hermes::parser::detail::JSParserImpl::parsePostfixExpression() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3397
+    #14 0x5555566a5c74 in hermes::parser::detail::JSParserImpl::parseUnaryExpression() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3482
+    #15 0x5555566a6682 in hermes::parser::detail::JSParserImpl::parseBinaryExpression(hermes::parser::detail::Param) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3575
+    #16 0x5555566a6fd1 in hermes::parser::detail::JSParserImpl::parseConditionalExpression(hermes::parser::detail::Param, hermes::parser::detail::JSParserImpl::CoverTypedParameters) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3629
+    #17 0x5555566b3fb7 in hermes::parser::detail::JSParserImpl::parseAssignmentExpression(hermes::parser::detail::Param, hermes::parser::detail::JSParserImpl::AllowTypedArrowFunction, hermes::parser::detail::JSParserImpl::CoverTypedParameters, hermes::ESTree::Node*) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:4934
+    #18 0x55555668afd9 in hermes::parser::detail::JSParserImpl::parseVariableDeclaration(hermes::parser::detail::Param, llvh::SMLoc) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:1011
+    #19 0x55555668a52c in hermes::parser::detail::JSParserImpl::parseVariableDeclarationList(hermes::parser::detail::Param, llvh::simple_ilist<hermes::ESTree::Node>&, llvh::SMLoc) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:953
+    #20 0x555556689e94 in hermes::parser::detail::JSParserImpl::parseLexicalDeclaration(hermes::parser::detail::Param) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:907
+    #21 0x55555668a3cc in hermes::parser::detail::JSParserImpl::parseVariableStatement(hermes::parser::detail::Param) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:945
+    #22 0x555556685c5f in hermes::parser::detail::JSParserImpl::parseStatement(hermes::parser::detail::Param) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:581
+    #23 0x5555566889f8 in hermes::parser::detail::JSParserImpl::parseStatementListItem(hermes::parser::detail::Param, bool, hermes::parser::detail::JSParserImpl::AllowImportExport, llvh::simple_ilist<hermes::ESTree::Node>&) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:748
+    #24 0x5555566cb812 in llvh::Optional<bool> hermes::parser::detail::JSParserImpl::parseStatementList<>(hermes::parser::detail::Param, hermes::parser::TokenKind, bool, hermes::parser::detail::JSParserImpl::AllowImportExport, llvh::simple_ilist<hermes::ESTree::Node>&) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:775
+    #25 0x555556682ea1 in hermes::parser::detail::JSParserImpl::parseProgram() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:315
+    #26 0x55555668144b in hermes::parser::detail::JSParserImpl::parse() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:121
+    #27 0x55555667c3ba in hermes::parser::JSParser::parse() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParser.cpp:52
+    #28 0x555556112d43 in parseJS /home/hongxu/work/hermes/hermes-asan/lib/CompilerDriver/CompilerDriver.cpp:808
+    #29 0x55555611f0f5 in processSourceFiles /home/hongxu/work/hermes/hermes-asan/lib/CompilerDriver/CompilerDriver.cpp:1720
+    #30 0x555556123054 in hermes::driver::compileFromCommandLineOptions() /home/hongxu/work/hermes/hermes-asan/lib/CompilerDriver/CompilerDriver.cpp:2024
+    #31 0x55555589ba50 in main /home/hongxu/work/hermes/hermes-asan/tools/hermes/hermes.cpp:222
+    #32 0x7ffff6b270b2 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #33 0x555555899ead in _start (/home/hongxu/work/hermes/hermes-asan/BUILD/bin/hermes+0x345ead)
+
+0x608000000078 is located 0 bytes to the right of 88-byte region [0x608000000020,0x608000000078)
+allocated by thread T0 here:
+    #0 0x7ffff76a6d3f in operator new(unsigned long, std::nothrow_t const&) (/usr/lib/x86_64-linux-gnu/libasan.so.5+0x10fd3f)
+    #1 0x555555959f32 in llvh::WritableMemoryBuffer::getNewUninitMemBuffer(unsigned long, llvh::Twine const&) /home/hongxu/work/hermes/hermes-asan/external/llvh/lib/Support/MemoryBuffer.cpp:284
+    #2 0x55555595cb74 in getOpenFileImpl<llvh::MemoryBuffer> /home/hongxu/work/hermes/hermes-asan/external/llvh/lib/Support/MemoryBuffer.cpp:456
+    #3 0x55555595bde7 in getFileAux<llvh::MemoryBuffer> /home/hongxu/work/hermes/hermes-asan/external/llvh/lib/Support/MemoryBuffer.cpp:252
+    #4 0x555555959b90 in llvh::MemoryBuffer::getFile(llvh::Twine const&, long, bool, bool) /home/hongxu/work/hermes/hermes-asan/external/llvh/lib/Support/MemoryBuffer.cpp:233
+    #5 0x555555959373 in llvh::MemoryBuffer::getFileOrSTDIN(llvh::Twine const&, long, bool) /home/hongxu/work/hermes/hermes-asan/external/llvh/lib/Support/MemoryBuffer.cpp:151
+    #6 0x555556110f6e in memoryBufferFromFile /home/hongxu/work/hermes/hermes-asan/lib/CompilerDriver/CompilerDriver.cpp:601
+    #7 0x55555612270b in hermes::driver::compileFromCommandLineOptions() /home/hongxu/work/hermes/hermes-asan/lib/CompilerDriver/CompilerDriver.cpp:1993
+    #8 0x55555589ba50 in main /home/hongxu/work/hermes/hermes-asan/tools/hermes/hermes.cpp:222
+    #9 0x7ffff6b270b2 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow (/usr/lib/x86_64-linux-gnu/libasan.so.5+0xdacff) 
+Shadow bytes around the buggy address:
+  0x0c107fff7fb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff7fc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff7fd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff7fe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0c107fff7ff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x0c107fff8000: fa fa fa fa 00 00 00 00 00 00 00 00 00 00 00[fa]
+  0x0c107fff8010: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8020: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8030: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8040: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c107fff8050: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==2049773==ABORTING

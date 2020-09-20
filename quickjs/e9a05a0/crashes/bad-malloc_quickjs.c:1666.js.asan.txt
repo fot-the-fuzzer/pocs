@@ -1,0 +1,73 @@
+=================================================================
+==779846==ERROR: AddressSanitizer: attempting to call malloc_usable_size() for pointer which is not owned: 0x604000002310
+    #0 0x7ffff76808f5 in malloc_usable_size (/lib/x86_64-linux-gnu/libasan.so.5+0x10e8f5)
+    #1 0x555555738aae in js_def_malloc_usable_size /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:1666
+    #2 0x555555738aae in js_def_free /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:1698
+    #3 0x555555738aae in js_def_free /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:1692
+    #4 0x5555556cf81a in js_free_rt /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:1273
+    #5 0x5555556cf81a in async_func_free /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18749
+    #6 0x5555556d3068 in free_generator_stack_rt /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18788
+    #7 0x5555556d3068 in free_generator_stack /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18804
+    #8 0x5555556d3068 in js_generator_next /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18936
+    #9 0x5555556f90d2 in js_call_c_function /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:15918
+    #10 0x5555556d68fc in JS_CallInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:16055
+    #11 0x5555556d7a8d in JS_CallInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:16462
+    #12 0x5555556d00cc in JS_CallFree /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18514
+    #13 0x55555567563c in JS_EvalFunctionInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:32945
+    #14 0x555555694ed8 in __JS_EvalInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:33098
+    #15 0x555555675374 in JS_EvalInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:33116
+    #16 0x555555675374 in JS_Eval /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:33146
+    #17 0x555555749fcf in eval_buf /home/hongxu/work/qjs/QuickJS-asan/qjs.c:67
+    #18 0x55555574a1b2 in eval_file /home/hongxu/work/qjs/QuickJS-asan/qjs.c:99
+    #19 0x55555558a1d8 in main /home/hongxu/work/qjs/QuickJS-asan/qjs.c:503
+    #20 0x7ffff73a70b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #21 0x55555558a5ad in _start (/home/hongxu/work/qjs/QuickJS-asan/qjs+0x365ad)
+
+0x604000002310 is located 0 bytes inside of 48-byte region [0x604000002310,0x604000002340)
+freed by thread T0 here:
+    #0 0x7ffff767f7cf in __interceptor_free (/lib/x86_64-linux-gnu/libasan.so.5+0x10d7cf)
+    #1 0x5555556cf81a in js_free_rt /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:1273
+    #2 0x5555556cf81a in async_func_free /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18749
+    #3 0x5555556d3068 in free_generator_stack_rt /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18788
+    #4 0x5555556d3068 in free_generator_stack /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18804
+    #5 0x5555556d3068 in js_generator_next /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18936
+    #6 0x5555556f90d2 in js_call_c_function /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:15918
+    #7 0x5555556d68fc in JS_CallInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:16055
+    #8 0x5555556d7a8d in JS_CallInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:16462
+    #9 0x5555556fba98 in JS_Call /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18507
+    #10 0x5555556fba98 in JS_IteratorNext2 /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:15130
+    #11 0x5555556d30f9 in js_generator_next /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18875
+    #12 0x5555556f90d2 in js_call_c_function /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:15918
+    #13 0x5555556d68fc in JS_CallInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:16055
+    #14 0x5555556d7a8d in JS_CallInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:16462
+    #15 0x5555556d00cc in JS_CallFree /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18514
+    #16 0x55555567563c in JS_EvalFunctionInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:32945
+    #17 0x555555694ed8 in __JS_EvalInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:33098
+    #18 0x555555675374 in JS_EvalInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:33116
+    #19 0x555555675374 in JS_Eval /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:33146
+    #20 0x555555749fcf in eval_buf /home/hongxu/work/qjs/QuickJS-asan/qjs.c:67
+    #21 0x55555574a1b2 in eval_file /home/hongxu/work/qjs/QuickJS-asan/qjs.c:99
+    #22 0x55555558a1d8 in main /home/hongxu/work/qjs/QuickJS-asan/qjs.c:503
+    #23 0x7ffff73a70b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+
+previously allocated by thread T0 here:
+    #0 0x7ffff767fbc8 in malloc (/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
+    #1 0x555555738b56 in js_def_malloc /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:1683
+    #2 0x55555574532a in js_malloc_rt /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:1268
+    #3 0x55555574532a in js_malloc /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:1308
+    #4 0x5555556d3dce in async_func_init /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18697
+    #5 0x5555556d4375 in js_generator_function_call /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18996
+    #6 0x5555556d68fc in JS_CallInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:16055
+    #7 0x5555556d5ef5 in JS_CallInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:16426
+    #8 0x5555556d00cc in JS_CallFree /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:18514
+    #9 0x55555567563c in JS_EvalFunctionInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:32945
+    #10 0x555555694ed8 in __JS_EvalInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:33098
+    #11 0x555555675374 in JS_EvalInternal /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:33116
+    #12 0x555555675374 in JS_Eval /home/hongxu/work/qjs/QuickJS-asan/quickjs.c:33146
+    #13 0x555555749fcf in eval_buf /home/hongxu/work/qjs/QuickJS-asan/qjs.c:67
+    #14 0x55555574a1b2 in eval_file /home/hongxu/work/qjs/QuickJS-asan/qjs.c:99
+    #15 0x55555558a1d8 in main /home/hongxu/work/qjs/QuickJS-asan/qjs.c:503
+    #16 0x7ffff73a70b2 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+
+SUMMARY: AddressSanitizer: bad-malloc_usable_size (/lib/x86_64-linux-gnu/libasan.so.5+0x10e8f5) in malloc_usable_size
+==779846==ABORTING

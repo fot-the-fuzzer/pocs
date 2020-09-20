@@ -1,0 +1,1 @@
+hermes: /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/HandleRootOwner.h:413: hermes::vm::PinnedHermesValue* hermes::vm::GCScope::newHandle(hermes::vm::HermesValue): Assertion `getHandleCountDbg() < handlesLimit_ && "Too many handles allocated in GCScope"' failed.

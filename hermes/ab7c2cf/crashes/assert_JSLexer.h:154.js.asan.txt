@@ -1,0 +1,4 @@
+assert_JSLexer.h:154.js:1:14: error: 'identifier' expected in export clause
+export { a as+ }
+       ~~~~~~^
+hermes: /home/hongxu/work/hermes/hermes-asan/include/hermes/Parser/JSLexer.h:154: hermes::UniqueString* hermes::parser::Token::getResWordOrIdentifier() const: Assertion `getKind() == TokenKind::identifier || isResWord()' failed.

@@ -1,0 +1,22 @@
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==1746351==ERROR: AddressSanitizer: stack-overflow on address 0x7fffff7feff8 (pc 0x555555b065f4 bp 0x7fffff7ff000 sp 0x7fffff7feff0 T0)
+    #0 0x555555b065f3 in hermes::vm::BasedPointer::operator bool() const /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/PointerBase.h:142
+    #1 0x555555b066e8 in hermes::vm::PointerBase::basedToPointerNonNull(hermes::vm::BasedPointer) const /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/PointerBase.h:159
+    #2 0x555555b08b84 in hermes::vm::GCPointerBase::getNonNull(hermes::vm::PointerBase*) const /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/GCPointer-inline.h:38
+    #3 0x555555ba5534 in hermes::vm::GCPointer<hermes::vm::DictPropertyMap>::getNonNull(hermes::vm::PointerBase*) const /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/GCPointer.h:122
+    #4 0x555555b964db in hermes::vm::HiddenClass::findProperty(hermes::vm::PseudoHandle<hermes::vm::HiddenClass>, hermes::vm::Runtime*, hermes::vm::SymbolID, hermes::vm::PropertyFlags, hermes::vm::NamedPropertyDescriptor&) /home/hongxu/work/hermes/hermes-asan/lib/VM/HiddenClass.cpp:372
+    #5 0x555555b0d9dd in hermes::vm::JSObject::findProperty(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::SymbolID, hermes::vm::PropertyFlags, hermes::vm::NamedPropertyDescriptor&) /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/JSObject.h:1784
+    #6 0x555555c92ff9 in hermes::vm::JSObject::getNamedDescriptor(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::SymbolID, hermes::vm::PropertyFlags, hermes::vm::NamedPropertyDescriptor&) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSObject.cpp:902
+    #7 0x555555bd49b5 in hermes::vm::JSObject::getNamedDescriptor(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::SymbolID, hermes::vm::NamedPropertyDescriptor&) /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/JSObject.h:1704
+    #8 0x555555c95eb4 in hermes::vm::JSObject::getNamedWithReceiver_RJS(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::SymbolID, hermes::vm::Handle<hermes::vm::HermesValue>, hermes::vm::PropOpFlags, hermes::vm::PropertyCacheEntry*) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSObject.cpp:1051
+    #9 0x5555558c2c4a in hermes::vm::JSObject::getNamed_RJS(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::SymbolID, hermes::vm::PropOpFlags, hermes::vm::PropertyCacheEntry*) (/home/hongxu/work/hermes/hermes-asan/BUILD/bin/hermes+0x36ec4a)
+    #10 0x555555cc4bf3 in hermes::vm::detail::findTrap(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::Predefined::Str) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSProxy.cpp:47
+    #11 0x555555ccf13b in hermes::vm::JSProxy::hasComputed(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::Handle<hermes::vm::HermesValue>) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSProxy.cpp:831
+    #12 0x555555c999cd in hermes::vm::JSObject::hasComputed(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::Handle<hermes::vm::HermesValue>) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSObject.cpp:1264
+    ...
+    #247 0x555555ccf368 in hermes::vm::JSProxy::hasComputed(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::Handle<hermes::vm::HermesValue>) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSProxy.cpp:841
+    #248 0x555555c999cd in hermes::vm::JSObject::hasComputed(hermes::vm::Handle<hermes::vm::JSObject>, hermes::vm::Runtime*, hermes::vm::Handle<hermes::vm::HermesValue>) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSObject.cpp:1264
+
+SUMMARY: AddressSanitizer: stack-overflow /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/PointerBase.h:142 in hermes::vm::BasedPointer::operator bool() const
+==1746351==ABORTING

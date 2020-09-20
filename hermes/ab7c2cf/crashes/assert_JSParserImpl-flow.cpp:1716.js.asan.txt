@@ -1,0 +1,4 @@
+./assert_JSParserImpl-flow.cpp:1716.js:2:24: error: ':' expected in function type annotation
+        f() :<A = { () }
+                    ~~~^
+hermes: /home/hongxu/work/hermes/hermes-orig/external/llvh/include/llvh/ADT/Optional.h:176: T* llvh::Optional<T>::getPointer() [with T = hermes::ESTree::FunctionTypeAnnotationNode*]: Assertion `Storage.hasVal' failed.
