@@ -1,0 +1,92 @@
+=================================================================
+==2931873==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x607000000ed2 at pc 0x5555567e9411 bp 0x7fffffff4fe0 sp 0x7fffffff4fd0
+READ of size 2 at 0x607000000ed2 thread T0
+    #0 0x5555567e9410 in hermes::regex::Parser<hermes::regex::Regex<hermes::regex::UTF16RegexTraits>, char16_t const*>::consumeTerm() /home/hongxu/work/hermes/hermes-asan/lib/Regex/RegexParser.cpp:423
+    #1 0x5555567e5150 in hermes::regex::Parser<hermes::regex::Regex<hermes::regex::UTF16RegexTraits>, char16_t const*>::consumeDisjunction() /home/hongxu/work/hermes/hermes-asan/lib/Regex/RegexParser.cpp:391
+    #2 0x5555567e2715 in hermes::regex::Parser<hermes::regex::Regex<hermes::regex::UTF16RegexTraits>, char16_t const*>::performParse() /home/hongxu/work/hermes/hermes-asan/lib/Regex/RegexParser.cpp:1075
+    #3 0x5555567d90f7 in hermes::regex::constants::ErrorType hermes::regex::parseRegex<hermes::regex::Regex<hermes::regex::UTF16RegexTraits> >(char16_t const*, char16_t const*, hermes::regex::Regex<hermes::regex::UTF16RegexTraits>*, hermes::regex::SyntaxFlags, unsigned int, unsigned int*) (/home/hongxu/work/hermes/hermes-asan/BUILD/bin/hermes+0x12850f7)
+    #4 0x555555cf80af in hermes::regex::constants::ErrorType hermes::regex::Regex<hermes::regex::UTF16RegexTraits>::parseWithBackRefLimit<char16_t const*>(char16_t const*, char16_t const*, unsigned int, unsigned int*) /home/hongxu/work/hermes/hermes-asan/include/hermes/Regex/Regex.h:284
+    #5 0x555555cf1c35 in hermes::regex::constants::ErrorType hermes::regex::Regex<hermes::regex::UTF16RegexTraits>::parse<char16_t const*>(char16_t const*, char16_t const*) /home/hongxu/work/hermes/hermes-asan/include/hermes/Regex/Regex.h:234
+    #6 0x555555ceb300 in hermes::regex::Regex<hermes::regex::UTF16RegexTraits>::Regex(llvh::ArrayRef<char16_t>, llvh::ArrayRef<char16_t>) /home/hongxu/work/hermes/hermes-asan/include/hermes/Regex/Regex.h:151
+    #7 0x555555cdf06d in hermes::vm::JSRegExp::initialize(hermes::vm::Handle<hermes::vm::JSRegExp>, hermes::vm::Runtime*, hermes::vm::Handle<hermes::vm::StringPrimitive>, hermes::vm::Handle<hermes::vm::StringPrimitive>, hermes::OptValue<llvh::ArrayRef<unsigned char> >) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSRegExp.cpp:183
+    #8 0x555555fbf0a9 in regExpInitialize /home/hongxu/work/hermes/hermes-asan/lib/VM/JSLib/RegExp.cpp:231
+    #9 0x555555fbf5cc in hermes::vm::regExpCreate(hermes::vm::Runtime*, hermes::vm::Handle<hermes::vm::HermesValue>, hermes::vm::Handle<hermes::vm::HermesValue>) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSLib/RegExp.cpp:247
+    #10 0x555555f992d8 in hermes::vm::stringPrototypeMatch(void*, hermes::vm::Runtime*, hermes::vm::NativeArgs) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSLib/String.cpp:1751
+    #11 0x555555b0f557 in hermes::vm::NativeFunction::_nativeCall(hermes::vm::NativeFunction*, hermes::vm::Runtime*) /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/Callable.h:539
+    #12 0x555555bca441 in hermes::vm::Interpreter::handleCallSlowPath(hermes::vm::Runtime*, hermes::vm::PinnedHermesValue*) /home/hongxu/work/hermes/hermes-asan/lib/VM/Interpreter.cpp:318
+    #13 0x555555be12ec in hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false>(hermes::vm::Runtime*, hermes::vm::InterpreterState&) (/home/hongxu/work/hermes/hermes-asan/BUILD/bin/hermes+0x68d2ec)
+    #14 0x555555bd0b6d in hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*) /home/hongxu/work/hermes/hermes-asan/lib/VM/Interpreter.cpp:862
+    #15 0x555555bd0c31 in hermes::vm::Runtime::interpretFunction(hermes::vm::CodeBlock*) /home/hongxu/work/hermes/hermes-asan/lib/VM/Interpreter.cpp:873
+    #16 0x555555d6db7c in hermes::vm::Runtime::runBytecode(std::shared_ptr<hermes::hbc::BCProviderBase>&&, hermes::vm::RuntimeModuleFlags, llvh::StringRef, hermes::vm::Handle<hermes::vm::Environment>, hermes::vm::Handle<hermes::vm::HermesValue>) /home/hongxu/work/hermes/hermes-asan/lib/VM/Runtime.cpp:991
+    #17 0x555555d83329 in hermes::vm::Runtime::runBytecode(std::shared_ptr<hermes::hbc::BCProviderBase>&&, hermes::vm::RuntimeModuleFlags, llvh::StringRef, hermes::vm::Handle<hermes::vm::Environment>) /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/Runtime.h:202
+    #18 0x55555618384e in executeHBCBytecodeImpl /home/hongxu/work/hermes/hermes-asan/lib/ConsoleHost/ConsoleHost.cpp:389
+    #19 0x555556183e3b in operator() /home/hongxu/work/hermes/hermes-asan/lib/ConsoleHost/ConsoleHost.cpp:458
+    #20 0x555556184027 in maybeCatchException<hermes::executeHBCBytecode(std::shared_ptr<hermes::hbc::BCProviderBase>&&, const hermes::ExecuteOptions&, const string*)::<lambda()> > /home/hongxu/work/hermes/hermes-asan/lib/ConsoleHost/ConsoleHost.cpp:274
+    #21 0x555556183f9f in hermes::executeHBCBytecode(std::shared_ptr<hermes::hbc::BCProviderBase>&&, hermes::ExecuteOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*) /home/hongxu/work/hermes/hermes-asan/lib/ConsoleHost/ConsoleHost.cpp:457
+    #22 0x55555589bbe0 in executeHBCBytecodeFromCL /home/hongxu/work/hermes/hermes-asan/tools/hermes/hermes.cpp:154
+    #23 0x55555589cac4 in main /home/hongxu/work/hermes/hermes-asan/tools/hermes/hermes.cpp:224
+    #24 0x7ffff6b270b2 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+    #25 0x55555589aead in _start (/home/hongxu/work/hermes/hermes-asan/BUILD/bin/hermes+0x346ead)
+
+0x607000000ed2 is located 0 bytes to the right of 66-byte region [0x607000000e90,0x607000000ed2)
+allocated by thread T0 here:
+    #0 0x7ffff76a4bc8 in malloc (/usr/lib/x86_64-linux-gnu/libasan.so.5+0x10dbc8)
+    #1 0x5555558f96db in llvh::safe_malloc(unsigned long) /home/hongxu/work/hermes/hermes-asan/external/llvh/include/llvh/Support/MemAlloc.h:27
+    #2 0x5555559c391b in llvh::SmallVectorBase::grow_pod(void*, unsigned long, unsigned long) /home/hongxu/work/hermes/hermes-asan/external/llvh/lib/Support/SmallVector.cpp:55
+    #3 0x555555b200fd in llvh::SmallVectorTemplateCommon<char16_t, void>::grow_pod(unsigned long, unsigned long) /home/hongxu/work/hermes/hermes-asan/external/llvh/include/llvh/ADT/SmallVector.h:99
+    #4 0x555555b1b107 in llvh::SmallVectorTemplateBase<char16_t, true>::grow(unsigned long) /home/hongxu/work/hermes/hermes-asan/external/llvh/include/llvh/ADT/SmallVector.h:307
+    #5 0x555555e33b65 in void llvh::SmallVectorImpl<char16_t>::append<char const*, void>(char const*, char const*) /home/hongxu/work/hermes/hermes-asan/external/llvh/include/llvh/ADT/SmallVector.h:398
+    #6 0x555555e2b3a1 in hermes::vm::StringPrimitive::appendUTF16String(llvh::SmallVectorImpl<char16_t>&) const /home/hongxu/work/hermes/hermes-asan/lib/VM/StringPrimitive.cpp:435
+    #7 0x555555cdef80 in hermes::vm::JSRegExp::initialize(hermes::vm::Handle<hermes::vm::JSRegExp>, hermes::vm::Runtime*, hermes::vm::Handle<hermes::vm::StringPrimitive>, hermes::vm::Handle<hermes::vm::StringPrimitive>, hermes::OptValue<llvh::ArrayRef<unsigned char> >) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSRegExp.cpp:180
+    #8 0x555555fbf0a9 in regExpInitialize /home/hongxu/work/hermes/hermes-asan/lib/VM/JSLib/RegExp.cpp:231
+    #9 0x555555fbf5cc in hermes::vm::regExpCreate(hermes::vm::Runtime*, hermes::vm::Handle<hermes::vm::HermesValue>, hermes::vm::Handle<hermes::vm::HermesValue>) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSLib/RegExp.cpp:247
+    #10 0x555555f992d8 in hermes::vm::stringPrototypeMatch(void*, hermes::vm::Runtime*, hermes::vm::NativeArgs) /home/hongxu/work/hermes/hermes-asan/lib/VM/JSLib/String.cpp:1751
+    #11 0x555555b0f557 in hermes::vm::NativeFunction::_nativeCall(hermes::vm::NativeFunction*, hermes::vm::Runtime*) /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/Callable.h:539
+    #12 0x555555bca441 in hermes::vm::Interpreter::handleCallSlowPath(hermes::vm::Runtime*, hermes::vm::PinnedHermesValue*) /home/hongxu/work/hermes/hermes-asan/lib/VM/Interpreter.cpp:318
+    #13 0x555555be12ec in hermes::vm::CallResult<hermes::vm::HermesValue, (hermes::vm::detail::CallResultSpecialize)2> hermes::vm::Interpreter::interpretFunction<false>(hermes::vm::Runtime*, hermes::vm::InterpreterState&) (/home/hongxu/work/hermes/hermes-asan/BUILD/bin/hermes+0x68d2ec)
+    #14 0x555555bd0b6d in hermes::vm::Runtime::interpretFunctionImpl(hermes::vm::CodeBlock*) /home/hongxu/work/hermes/hermes-asan/lib/VM/Interpreter.cpp:862
+    #15 0x555555bd0c31 in hermes::vm::Runtime::interpretFunction(hermes::vm::CodeBlock*) /home/hongxu/work/hermes/hermes-asan/lib/VM/Interpreter.cpp:873
+    #16 0x555555d6db7c in hermes::vm::Runtime::runBytecode(std::shared_ptr<hermes::hbc::BCProviderBase>&&, hermes::vm::RuntimeModuleFlags, llvh::StringRef, hermes::vm::Handle<hermes::vm::Environment>, hermes::vm::Handle<hermes::vm::HermesValue>) /home/hongxu/work/hermes/hermes-asan/lib/VM/Runtime.cpp:991
+    #17 0x555555d83329 in hermes::vm::Runtime::runBytecode(std::shared_ptr<hermes::hbc::BCProviderBase>&&, hermes::vm::RuntimeModuleFlags, llvh::StringRef, hermes::vm::Handle<hermes::vm::Environment>) /home/hongxu/work/hermes/hermes-asan/include/hermes/VM/Runtime.h:202
+    #18 0x55555618384e in executeHBCBytecodeImpl /home/hongxu/work/hermes/hermes-asan/lib/ConsoleHost/ConsoleHost.cpp:389
+    #19 0x555556183e3b in operator() /home/hongxu/work/hermes/hermes-asan/lib/ConsoleHost/ConsoleHost.cpp:458
+    #20 0x555556184027 in maybeCatchException<hermes::executeHBCBytecode(std::shared_ptr<hermes::hbc::BCProviderBase>&&, const hermes::ExecuteOptions&, const string*)::<lambda()> > /home/hongxu/work/hermes/hermes-asan/lib/ConsoleHost/ConsoleHost.cpp:274
+    #21 0x555556183f9f in hermes::executeHBCBytecode(std::shared_ptr<hermes::hbc::BCProviderBase>&&, hermes::ExecuteOptions const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*) /home/hongxu/work/hermes/hermes-asan/lib/ConsoleHost/ConsoleHost.cpp:457
+    #22 0x55555589bbe0 in executeHBCBytecodeFromCL /home/hongxu/work/hermes/hermes-asan/tools/hermes/hermes.cpp:154
+    #23 0x55555589cac4 in main /home/hongxu/work/hermes/hermes-asan/tools/hermes/hermes.cpp:224
+    #24 0x7ffff6b270b2 in __libc_start_main (/usr/lib/x86_64-linux-gnu/libc.so.6+0x270b2)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /home/hongxu/work/hermes/hermes-asan/lib/Regex/RegexParser.cpp:423 in hermes::regex::Parser<hermes::regex::Regex<hermes::regex::UTF16RegexTraits>, char16_t const*>::consumeTerm()
+Shadow bytes around the buggy address:
+  0x0c0e7fff8180: fd fd fd fd fd fd fd fa fa fa fa fa fd fd fd fd
+  0x0c0e7fff8190: fd fd fd fd fd fa fa fa fa fa fd fd fd fd fd fd
+  0x0c0e7fff81a0: fd fd fd fa fa fa fa fa fd fd fd fd fd fd fd fd
+  0x0c0e7fff81b0: fd fa fa fa fa fa fd fd fd fd fd fd fd fd fd fa
+  0x0c0e7fff81c0: fa fa fa fa fd fd fd fd fd fd fd fd fd fa fa fa
+=>0x0c0e7fff81d0: fa fa 00 00 00 00 00 00 00 00[02]fa fa fa fa fa
+  0x0c0e7fff81e0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff81f0: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8200: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8210: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x0c0e7fff8220: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
+==2931873==ABORTING

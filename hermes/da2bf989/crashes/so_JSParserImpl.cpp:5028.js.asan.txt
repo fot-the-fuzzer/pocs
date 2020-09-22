@@ -1,0 +1,25 @@
+./so_JSParserImpl.cpp:5028.js:4:1: warning: Direct call to eval(), but lexical scope is not supported.
+eval(v)
+^~~~~~~
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==4144198==ERROR: AddressSanitizer: stack-overflow on address 0x7fffff7feff8 (pc 0x5555559cc557 bp 0x7fffff7ff000 sp 0x7fffff7ff000 T0)
+    #0 0x5555559cc556 in llvh::SMLoc::getFromPointer(char const*) /home/hongxu/work/hermes/hermes-asan/external/llvh/include/llvh/Support/SMLoc.h:37
+    #1 0x55555665e7b9 in hermes::parser::Token::setStart(char const*) (/home/hongxu/work/hermes/hermes-asan/BUILD/bin/hermes+0x110a7b9)
+    #2 0x555556643557 in hermes::parser::JSLexer::advance(hermes::parser::JSLexer::GrammarContext) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSLexer.cpp:190
+    #3 0x5555566ca595 in hermes::parser::detail::JSParserImpl::advance(hermes::parser::JSLexer::GrammarContext) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.h:333
+    #4 0x555556698a56 in hermes::parser::detail::JSParserImpl::parsePrimaryExpression() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:2132
+    #5 0x5555566a1569 in hermes::parser::detail::JSParserImpl::parseOptionalExpressionExceptNew(hermes::parser::detail::JSParserImpl::IsConstructorCall) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:2935
+    #6 0x5555566a46cc in hermes::parser::detail::JSParserImpl::parseNewExpressionOrOptionalExpression(hermes::parser::detail::JSParserImpl::IsConstructorCall) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3269
+    #7 0x5555566a58a3 in hermes::parser::detail::JSParserImpl::parseLeftHandSideExpression() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3353
+    #8 0x5555566a5eec in hermes::parser::detail::JSParserImpl::parsePostfixExpression() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3398
+    #9 0x5555566a6d84 in hermes::parser::detail::JSParserImpl::parseUnaryExpression() /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3483
+    #10 0x5555566a7792 in hermes::parser::detail::JSParserImpl::parseBinaryExpression(hermes::parser::detail::Param) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3576
+    #11 0x5555566a80e1 in hermes::parser::detail::JSParserImpl::parseConditionalExpression(hermes::parser::detail::Param, hermes::parser::detail::JSParserImpl::CoverTypedParameters) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:3630
+    #12 0x5555566b516f in hermes::parser::detail::JSParserImpl::parseAssignmentExpression(hermes::parser::detail::Param, hermes::parser::detail::JSParserImpl::AllowTypedArrowFunction, hermes::parser::detail::JSParserImpl::CoverTypedParameters, hermes::ESTree::Node*) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:4937
+    #13 0x5555566b5aff in hermes::parser::detail::JSParserImpl::parseAssignmentExpression(hermes::parser::detail::Param, hermes::parser::detail::JSParserImpl::AllowTypedArrowFunction, hermes::parser::detail::JSParserImpl::CoverTypedParameters, hermes::ESTree::Node*) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:5028
+    ...
+    #248 0x5555566b5aff in hermes::parser::detail::JSParserImpl::parseAssignmentExpression(hermes::parser::detail::Param, hermes::parser::detail::JSParserImpl::AllowTypedArrowFunction, hermes::parser::detail::JSParserImpl::CoverTypedParameters, hermes::ESTree::Node*) /home/hongxu/work/hermes/hermes-asan/lib/Parser/JSParserImpl.cpp:5028
+
+SUMMARY: AddressSanitizer: stack-overflow /home/hongxu/work/hermes/hermes-asan/external/llvh/include/llvh/Support/SMLoc.h:37 in llvh::SMLoc::getFromPointer(char const*)
+==4144198==ABORTING
