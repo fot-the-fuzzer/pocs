@@ -1,1 +1,1 @@
-A Curated List of the Detected Vulnerabilities/Bugs by CSL, SCSE, NTU.
+A curated list of the detected vulnerabilities/bugs by CSL, SCSE, NTU.
